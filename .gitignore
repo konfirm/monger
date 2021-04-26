@@ -1,0 +1,5 @@
+node_modules
+.nyc_output
+old
+package-lock.json
+dist/*

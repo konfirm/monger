@@ -1,0 +1,32 @@
+{
+	"name": "@konfirm/monger",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/cjs/main.js",
+	"module": "dist/esm/main.js",
+	"types": "dist/esm/main.d.ts",
+	"scripts": {
+		"test": "ts-node node_modules/.bin/tape 'test/**/*.ts'",
+		"test:coverage": "nyc --require ts-node/register tape 'test/**/*.ts'",
+		"test:pretty": "nyc --require ts-node/register tape 'test/**/*.ts' | tap-spec",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:esm": "tsc -p tsconfig.esm.json",
+		"build": "npm run build:cjs && npm run build:esm"
+	},
+	"keywords": [
+		"mongo",
+		"mongodb",
+		"query"
+	],
+	"author": "Rogier Spieker <rogier+npm@konfirm.eu>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/tape": "^4.13.0",
+		"nyc": "^15.1.0",
+		"tap-spec": "^5.0.0",
+		"tape": "^5.2.2",
+		"template-literal-each": "^2.0.0",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4"
+	}
+}
