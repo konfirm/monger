@@ -53,7 +53,7 @@ export function $mod(query: [number, number]): Evaluator {
  *          { <field>: { $regex: /pattern/<options> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/regex/
  */
-export function $regex(query: RegExp | string, _: any, context: Query): Evaluator {
+export function $regex(query: RegExp | string, _: any = undefined, context: Query = {}): Evaluator {
 	const { $options: flags } = context;
 	const regex = flags || typeof query === 'string' ? new RegExp(String(query), flags && String(flags)) : query;
 
