@@ -36,7 +36,7 @@ export function $jsonSchema(todo: any): Evaluator {
 /**
  * $mod
  * Performs a modulo operation on the value of a field and selects documents with a specified result.
- * @syntax
+ * @syntax  { field: { $mod: [ divisor, remainder ] } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/mod/
  */
 export function $mod(query: [number, number]): Evaluator {
@@ -48,7 +48,9 @@ export function $mod(query: [number, number]): Evaluator {
 /**
  * $regex
  * Selects documents where values match a specified regular expression.
- * @syntax
+ * @syntax  { <field>: { $regex: /pattern/, $options: '<options>' } }
+ *          { <field>: { $regex: 'pattern', $options: '<options>' } }
+ *          { <field>: { $regex: /pattern/<options> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/regex/
  */
 export function $regex(query: RegExp | string, _: any, context: Query): Evaluator {
