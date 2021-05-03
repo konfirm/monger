@@ -98,9 +98,105 @@ test('Domain/Operator/Evaluation - $regex', (t) => {
 
 test('Domain/Operator/Evaluation - $text', (t) => {
 	const { $text } = Evaluation;
-	const text = $text('@TODO');
 
-	t.throws(() => text('@TODO'), '$text is not implemented');
+	each`
+		search       | casing | diacritic | input                    | matches
+		-------------|--------|-----------|--------------------------|---------
+		a bar        | no     | no        | a foo walks into the bar | yes
+		a bar        | yes    | no        | a foo walks into the bar | yes
+		a bar        | no     | yes       | a foo walks into the bar | yes
+		a bar        | yes    | yes       | a foo walks into the bar | yes
+		ä bär        | no     | no        | a foo walks into the bar | yes
+		ä bär        | yes    | no        | a foo walks into the bar | yes
+		ä bär        | no     | yes       | a foo walks into the bar | no
+		ä bär        | yes    | yes       | a foo walks into the bar | no
+		a bar        | no     | no        | A FOO WALKS INTO THE BAR | yes
+		a bar        | yes    | no        | A FOO WALKS INTO THE BAR | no
+		a bar        | no     | yes       | A FOO WALKS INTO THE BAR | yes
+		a bar        | yes    | yes       | A FOO WALKS INTO THE BAR | no
+		ä bär        | no     | no        | A FOO WALKS INTO THE BAR | yes
+		ä bär        | yes    | no        | A FOO WALKS INTO THE BAR | no
+		ä bär        | no     | yes       | A FOO WALKS INTO THE BAR | no
+		ä bär        | yes    | yes       | A FOO WALKS INTO THE BAR | no
+		a bar        | no     | no        | á foo walks into the bār | yes
+		a bar        | yes    | no        | á foo walks into the bār | yes
+		a bar        | no     | yes       | á foo walks into the bār | no
+		a bar        | yes    | yes       | á foo walks into the bār | no
+		ä bär        | no     | no        | á foo walks into the bār | yes
+		ä bär        | yes    | no        | á foo walks into the bār | yes
+		ä bär        | no     | yes       | á foo walks into the bār | no
+		ä bär        | yes    | yes       | á foo walks into the bār | no
+		a bar        | no     | no        | Á FOO WALKS INTO THE BĀR | yes
+		a bar        | yes    | no        | Á FOO WALKS INTO THE BĀR | no
+		a bar        | no     | yes       | Á FOO WALKS INTO THE BĀR | no
+		a bar        | yes    | yes       | Á FOO WALKS INTO THE BĀR | no
+		ä bär        | no     | no        | Á FOO WALKS INTO THE BĀR | yes
+		ä bär        | yes    | no        | Á FOO WALKS INTO THE BĀR | no
+		ä bär        | no     | yes       | Á FOO WALKS INTO THE BĀR | no
+		ä bär        | yes    | yes       | Á FOO WALKS INTO THE BĀR | no
+
+		"a bar"      | no     | no        | a foo walks into the bar | no
+		"a bar"      | yes    | no        | a foo walks into the bar | no
+		"a bar"      | no     | yes       | a foo walks into the bar | no
+		"a bar"      | yes    | yes       | a foo walks into the bar | no
+		"ä bär"      | no     | no        | a foo walks into the bar | no
+		"ä bär"      | yes    | no        | a foo walks into the bar | no
+		"ä bär"      | no     | yes       | a foo walks into the bar | no
+		"ä bär"      | yes    | yes       | a foo walks into the bar | no
+
+		a "the bar"  | no     | no        | a foo walks into the bar | yes
+		a "the bar"  | yes    | no        | a foo walks into the bar | yes
+		a "the bar"  | no     | yes       | a foo walks into the bar | yes
+		a "the bar"  | yes    | yes       | a foo walks into the bar | yes
+		ä "the bär"  | no     | no        | a foo walks into the bar | yes
+		ä "the bär"  | yes    | no        | a foo walks into the bar | yes
+		ä "the bär"  | no     | yes       | a foo walks into the bar | no
+		ä "the bär"  | yes    | yes       | a foo walks into the bar | no
+		a "the bar"  | no     | no        | A FOO WALKS INTO THE BAR | yes
+		a "the bar"  | yes    | no        | A FOO WALKS INTO THE BAR | no
+		a "the bar"  | no     | yes       | A FOO WALKS INTO THE BAR | yes
+		a "the bar"  | yes    | yes       | A FOO WALKS INTO THE BAR | no
+		ä "the bär"  | no     | no        | A FOO WALKS INTO THE BAR | yes
+		ä "the bär"  | yes    | no        | A FOO WALKS INTO THE BAR | no
+		ä "the bär"  | no     | yes       | A FOO WALKS INTO THE BAR | no
+		ä "the bär"  | yes    | yes       | A FOO WALKS INTO THE BAR | no
+		a "the bar"  | no     | no        | á foo walks into the bār | yes
+		a "the bar"  | yes    | no        | á foo walks into the bār | yes
+		a "the bar"  | no     | yes       | á foo walks into the bār | no
+		a "the bar"  | yes    | yes       | á foo walks into the bār | no
+		ä "the bär"  | no     | no        | á foo walks into the bār | yes
+		ä "the bär"  | yes    | no        | á foo walks into the bār | yes
+		ä "the bär"  | no     | yes       | á foo walks into the bār | no
+		ä "the bär"  | yes    | yes       | á foo walks into the bār | no
+		a "the bar"  | no     | no        | Á FOO WALKS INTO THE BĀR | yes
+		a "the bar"  | yes    | no        | Á FOO WALKS INTO THE BĀR | no
+		a "the bar"  | no     | yes       | Á FOO WALKS INTO THE BĀR | no
+		a "the bar"  | yes    | yes       | Á FOO WALKS INTO THE BĀR | no
+		ä "the bär"  | no     | no        | Á FOO WALKS INTO THE BĀR | yes
+		ä "the bär"  | yes    | no        | Á FOO WALKS INTO THE BĀR | no
+		ä "the bär"  | no     | yes       | Á FOO WALKS INTO THE BĀR | no
+		ä "the bär"  | yes    | yes       | Á FOO WALKS INTO THE BĀR | no
+
+		-bar         | no     | no        | a foo walks into the bar | no
+		-foo -bar    | no     | no        | a foo walks into the bar | no
+
+		a -bar       | no     | no        | a foo walks into the bar | no
+		a -bar       | yes    | no        | a foo walks into the bar | no
+		a -bar       | no     | yes       | a foo walks into the bar | no
+		a -bar       | yes    | yes       | a foo walks into the bar | no
+	`((record) => {
+		const { search, casing, diacritic, input, matches } = record;
+		const options = {
+			$search: search as string,
+			$caseSensitive: casing === 'yes',
+			$diacriticSensitive: diacritic === 'yes',
+		};
+		const text = $text(options);
+		const verdict = matches === 'yes';
+		const message = verdict ? 'matches' : 'does not match';
+
+		t.equal(text(input), verdict, `${JSON.stringify(options)} ${message} ${input}`);
+	});
 
 	t.end();
 });

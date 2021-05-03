@@ -1,4 +1,6 @@
 import type { Query, Evaluator } from '../Query/Compiler';
+import { TextSearchOptions } from '../Search/Term';
+import { Term } from '../Search/Term';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];
@@ -63,13 +65,25 @@ export function $regex(query: RegExp | string, _: any = undefined, context: Quer
 /**
  * $text
  * Performs text search.
- * @syntax
+ * @syntax  { <field>: {
+ *              $text: {
+ *                $search: <string>,
+ *                $language?: <string 'none'>,
+ *                $caseSensitive?: <boolean false>,
+ *                $diacriticSensitive?: <boolean false>,
+ *              }
+ *          } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/text/
  */
-export function $text(todo: any): Evaluator {
-	return (input: unknown): boolean => {
-		throw new Error('$text not implemented');
-	}
+export function $text(query: TextSearchOptions): Evaluator {
+	const terms = Term.createTerms(query.$search, query);
+	const { length } = terms.filter(({ negated }) => negated);
+	const evalulate = length && terms.length === length
+		// text queries consisting of only negated searches always return false
+		? () => false
+		: (input: unknown): boolean => terms.every((term) => term.match(input));
+
+	return evalulate;
 }
 
 /**
