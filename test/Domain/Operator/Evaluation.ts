@@ -203,9 +203,18 @@ test('Domain/Operator/Evaluation - $text', (t) => {
 
 test('Domain/Operator/Evaluation - $where', (t) => {
 	const { $where } = Evaluation;
-	const where = $where('@TODO');
 
-	t.throws(() => where('@TODO'), '$where is not implemented');
+	const plain = $where(function (this: any) {
+		return this.foo === 'bar';
+	});
+
+	const fat = $where((obj: any) => obj.foo === 'baz');
+
+	t.true(plain({ foo: 'bar' }), 'has this.foo "bar"');
+	t.false(plain({ foo: 'baz' }), 'does not have this.foo "baz"');
+
+	t.false(fat({ foo: 'bar' }), 'does not have this.foo "bar"');
+	t.true(fat({ foo: 'baz' }), 'has this.foo "baz"');
 
 	t.end();
 });

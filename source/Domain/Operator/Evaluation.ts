@@ -92,8 +92,6 @@ export function $text(query: TextSearchOptions): Evaluator {
  * @syntax
  * @see     https://docs.mongodb.com/manual/reference/operator/query/where/
  */
-export function $where(todo: any): Evaluator {
-	return (input: unknown): boolean => {
-		throw new Error('$where not implemented');
-	}
+export function $where(query: Function): Evaluator {
+	return (input: unknown): boolean => Boolean(query.call(input, input));
 }
