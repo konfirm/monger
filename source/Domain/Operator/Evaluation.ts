@@ -1,6 +1,6 @@
 import type { Query, Evaluator } from '../Query/Compiler';
-import { TextSearchOptions } from '../Search/Term';
-import { Term } from '../Search/Term';
+import { TextSearchOptions } from '../Evaluation/Text';
+import { Term } from '../Evaluation/Text';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];

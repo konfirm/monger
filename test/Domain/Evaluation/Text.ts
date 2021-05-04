@@ -1,21 +1,21 @@
 import * as test from 'tape';
-import * as Terms from '../../../source/Domain/Search/Term';
+import * as Text from '../../../source/Domain/Evaluation/Text';
 
-test('Domain/Search/Term - exports', (t) => {
+test('Domain/Evaluation/Text - exports', (t) => {
 	const expected = ['Term'];
-	const actual = Object.keys(Terms);
+	const actual = Object.keys(Text);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
 	expected.forEach((key) => {
-		t.equal(typeof Terms[<keyof typeof Terms>key], 'function', `contains function ${key}`);
+		t.equal(typeof Text[<keyof typeof Text>key], 'function', `contains function ${key}`);
 	});
 
 	t.end();
 });
 
-const { Term } = Terms;
+const { Term } = Text;
 
-test('Domain/Search/Term - constructor', (t) => {
+test('Domain/Evaluation/Text - constructor', (t) => {
 	const term = new Term('foo');
 
 	t.true(term.match('foo'), 'matches "foo"');
@@ -26,7 +26,7 @@ test('Domain/Search/Term - constructor', (t) => {
 	t.end();
 });
 
-test('Domain/Search/Term - createTerms', (t) => {
+test('Domain/Evaluation/Text - createTerms', (t) => {
 	const terms = Term.createTerms('a foo');
 
 	t.true(terms.every((t) => t.match('a foo')), 'matches "a foo"');
