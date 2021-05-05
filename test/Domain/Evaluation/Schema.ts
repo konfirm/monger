@@ -51,3 +51,17 @@ test('Domain/Evaluation/Schema - schema/bsonType', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/enum', (t) => {
+	const { schema } = Schema;
+	const values = ['foo', 'bar', 'baz'];
+	const evaluate = schema({ enum: values });
+	const display = JSON.stringify(values);
+
+	t.true(evaluate('foo'), `enum ${display} matches "foo"`);
+	t.true(evaluate('bar'), `enum ${display} matches "bar"`);
+	t.true(evaluate('baz'), `enum ${display} matches "baz"`);
+	t.false(evaluate('qux'), `enum ${display} matches "qux"`);
+
+	t.end();
+});

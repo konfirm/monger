@@ -54,6 +54,7 @@ export type JSONSchema = {
 
 const rules: { [key: string]: (input: any) => Evaluator } = {
 	bsonType: (bsonType: JSONSchema['bsonType']): Evaluator => isBSONType(bsonType),
+	enum: (values: JSONSchema['enum']): Evaluator => $in(values),
 };
 
 
