@@ -1,3 +1,5 @@
+import type { Evaluator } from './Query/Compiler';
+
 type ECMAType
 	= 'bigint'
 	| 'boolean'
@@ -7,9 +9,42 @@ type ECMAType
 	| 'string'
 	| 'symbol'
 	| 'undefined';
+export type TypeAlias
+	= 'double'
+	| 'string'
+	| 'object'
+	| 'array'
+	| 'binData'
+	| 'undefined'
+	| 'objectId'
+	| 'bool'
+	| 'date'
+	| 'null'
+	| 'regex'
+	| 'dbPointer'
+	| 'javascript'
+	| 'symbol'
+	| 'javascriptWithScope'
+	| 'int'
+	| 'timestamp'
+	| 'long'
+	| 'decimal'
+	| 'minKey'
+	| 'maxKey';
+export type TypeAliasUnavailable
+	= 'binData'
+	& 'objectId'
+	& 'dbPointer'
+	& 'javascriptWithScope'
+	& 'timestamp'
+	& 'decimal'
+	& 'minKey'
+	& 'maxKey';
+export type TypeAliasAvailable = Omit<TypeAlias, TypeAliasUnavailable>;
+
 type TypeClassifier = {
 	id: number;
-	alias: string;
+	alias: TypeAliasAvailable;
 	group: ECMAType | 'unknown';
 	is: (input: unknown) => boolean;
 }
@@ -61,13 +96,13 @@ export function id(value: unknown): number {
 	return found && found.id;
 }
 
-export function alias(value: unknown): string {
+export function alias(value: unknown): TypeAliasAvailable {
 	const found = detect(value);
 
 	return found && found.alias;
 }
 
-export function is(type: TypeIdentifier | Array<TypeIdentifier>): (input: unknown) => boolean {
+export function is(type: TypeIdentifier | Array<TypeIdentifier>): Evaluator {
 	const list = ([] as Array<TypeIdentifier>).concat(type);
 	const includes = ({ id, alias }: TypeClassifier) => list.indexOf(id) >= 0 || list.indexOf(alias) >= 0;
 
