@@ -1,5 +1,4 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
 import type { JSONSchema } from '../../../source/Domain/Evaluation/Schema';
 import * as Schema from '../../../source/Domain/Evaluation/Schema';
 
@@ -62,6 +61,35 @@ test('Domain/Evaluation/Schema - schema/enum', (t) => {
 	t.true(evaluate('bar'), `enum ${display} matches "bar"`);
 	t.true(evaluate('baz'), `enum ${display} matches "baz"`);
 	t.false(evaluate('qux'), `enum ${display} matches "qux"`);
+
+	t.end();
+});
+
+test('Domain/Evaluation/Schema - schema/type', (t) => {
+	const { schema } = Schema;
+	const typed: Array<{ type: string, value: any }> = [
+		{ type: 'string', value: 'true' },
+		{ type: 'object', value: { one: 1 } },
+		{ type: 'array', value: [1, 2] },
+		{ type: 'boolean', value: false },
+		{ type: 'null', value: null },
+		{ type: 'number', value: 1.23 },
+	];
+	const keys = typed.map(({ type }) => type).filter((v, i, a) => a.indexOf(v) === i);
+
+	typed.forEach(({ type, value }) => {
+		const none = keys.filter((v) => v !== type);
+		const exact = schema({ type: type as JSONSchema['type'] });
+		const except = schema({ type: none as JSONSchema['type'] });
+		const display = typeof value === 'symbol'
+			? 'Symbol'
+			: typeof value === 'bigint'
+				? 'BigInt'
+				: JSON.stringify(value)
+
+		t.true(exact(value), `type ${type} matches ${display}`);
+		t.false(except(value), `type ${none} does not ${display}`);
+	});
 
 	t.end();
 });

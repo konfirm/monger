@@ -4,7 +4,9 @@ import { is as isBSONType } from '../BSON';
 import { $in } from '../Operator/Comparison';
 
 type JSONType
-	= 'boolean'
+	= 'array'
+	| 'boolean'
+	| 'null'
 	| 'number'
 	| 'object'
 	| 'string'
@@ -55,6 +57,20 @@ export type JSONSchema = {
 const rules: { [key: string]: (input: any) => Evaluator } = {
 	bsonType: (bsonType: JSONSchema['bsonType']): Evaluator => isBSONType(bsonType),
 	enum: (values: JSONSchema['enum']): Evaluator => $in(values),
+	type: (type: JSONSchema['type']): Evaluator => {
+		const list = ([] as Array<JSONType>).concat(type);
+		const typed = (input: unknown): JSONType => {
+			const type = input === null
+				? 'null'
+				: Array.isArray(input)
+					? 'array'
+					: typeof input;
+			return type as JSONType;
+		};
+
+		return (input: unknown) => list.includes(typed(input));
+	},
+	},
 };
 
 
