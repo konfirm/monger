@@ -160,5 +160,17 @@ test('Domain/Evaluation/Schema - schema/not', (t) => {
 	t.end();
 });
 
+test('Domain/Evaluation/Schema - schema/multipleOf', (t) => {
+	const { schema } = Schema;
+	const value = 4;
+	const multipleOf = schema({ multipleOf: value as JSONSchema['multipleOf'] });
+
+	t.true(multipleOf(0), '0 matches { multipleOf: 4 }');
+	t.false(multipleOf(2), '2 does not match { multipleOf: 4 }');
+	t.true(multipleOf(4), '4 matches { multipleOf: 4 }');
+	t.true(multipleOf(8), '8 matches { multipleOf: 4 }');
+	t.true(multipleOf(308), '308 matches { multipleOf: 4 }');
+	t.false(multipleOf(42), '42 does not match { multipleOf: 4 }');
+
 	t.end();
 });

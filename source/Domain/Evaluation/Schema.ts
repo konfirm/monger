@@ -19,6 +19,7 @@ type JSONSchemaOptions = {
 	anyOf: Array<JSONSchema>;
 	oneOf: Array<JSONSchema>;
 	not: JSONSchema;
+	multipleOf: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -92,6 +93,13 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 		const evaluate = schema(struct);
 
 		return (input: unknown) => !evaluate(input);
+	},
+
+	// Numbers
+	multipleOf: (value: JSONSchemaOptions['multipleOf']): Evaluator => {
+		const isNumber = rules.type('number');
+
+		return (input: unknown) => isNumber(input) && (Number(input) % value) === 0;
 	},
 };
 
