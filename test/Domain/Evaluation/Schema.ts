@@ -174,3 +174,18 @@ test('Domain/Evaluation/Schema - schema/multipleOf', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/maximum', (t) => {
+	const { schema } = Schema;
+	const value = 4;
+	const maximum = schema({ maximum: value as JSONSchema['maximum'] });
+
+	t.true(maximum(0), '0 matches { maximum: 4 }');
+	t.true(maximum(2), '2 matches { maximum: 4 }');
+	t.true(maximum(4), '4 matches { maximum: 4 }');
+	t.false(maximum(8), '8 does not match { maximum: 4 }');
+	t.false(maximum(308), '308 does not match { maximum: 4 }');
+	t.false(maximum(42), '42 does not match { maximum: 4 }');
+
+	t.end();
+});
