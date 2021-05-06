@@ -73,6 +73,11 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 
 		return (input: unknown) => list.includes(typed(input));
 	},
+	allOf: (list: JSONSchemaOptions['allOf']): Evaluator => {
+		const evaluators = list.map(schema);
+
+		return (input: unknown) => evaluators.every((evaluate) => evaluate(input));
+	},
 	},
 };
 

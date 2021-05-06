@@ -93,3 +93,21 @@ test('Domain/Evaluation/Schema - schema/type', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/allOf', (t) => {
+	const { schema } = Schema;
+	const values = [
+		{ enum: ['foo', 'bar', 'baz'], },
+		{ type: ['string', 'number'] },
+	];
+	const allOf = schema({ allOf: values as JSONSchema['allOf'] });
+
+	t.true(allOf('foo'), '"foo" matches allOf');
+	t.true(allOf('bar'), '"bar" matches allOf');
+	t.true(allOf('baz'), '"baz" matches allOf');
+	t.false(allOf('qux'), '"qux" does not match allOf');
+	t.false(allOf(42), '42 does not match allOf');
+	t.false(allOf(true), 'true does not match allOf');
+
+	t.end();
+});
