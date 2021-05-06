@@ -129,3 +129,21 @@ test('Domain/Evaluation/Schema - schema/anyOf', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/oneOf', (t) => {
+	const { schema } = Schema;
+	const values = [
+		{ enum: ['foo', 'bar', 'baz'], },
+		{ type: ['string', 'number'] },
+	];
+	const oneOf = schema({ oneOf: values as JSONSchema['oneOf'] });
+
+	t.false(oneOf('foo'), '"foo" does not match oneOf');
+	t.false(oneOf('bar'), '"bar" does not match oneOf');
+	t.false(oneOf('baz'), '"baz" does not match oneOf');
+	t.true(oneOf('qux'), '"qux" matches oneOf');
+	t.true(oneOf(42), '42 matches oneOf');
+	t.false(oneOf(true), 'true does not match oneOf');
+
+	t.end();
+});

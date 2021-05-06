@@ -83,6 +83,10 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 
 		return (input: unknown) => evaluators.some((evaluate) => evaluate(input));
 	},
+	oneOf: (list: JSONSchemaOptions['oneOf']): Evaluator => {
+		const evaluators = list.map(schema);
+
+		return (input: unknown) => evaluators.filter((evaluate) => evaluate(input)).length === 1;
 	},
 };
 
