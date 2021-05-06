@@ -204,3 +204,18 @@ test('Domain/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/minimum', (t) => {
+	const { schema } = Schema;
+	const value = 4;
+	const minimum = schema({ minimum: value as JSONSchema['minimum'] });
+
+	t.false(minimum(0), '0 does not match { minimum: 4 }');
+	t.false(minimum(2), '2 does not match { minimum: 4 }');
+	t.true(minimum(4), '4 matches { minimum: 4 }');
+	t.true(minimum(8), '8 matches { minimum: 4 }');
+	t.true(minimum(308), '308 matches { minimum: 4 }');
+	t.true(minimum(42), '42 matches { minimum: 4 }');
+
+	t.end();
+});
