@@ -147,3 +147,18 @@ test('Domain/Evaluation/Schema - schema/oneOf', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/not', (t) => {
+	const { schema } = Schema;
+	const values = { type: ['string', 'number'] };
+	const not = schema({ not: values as JSONSchema['not'] });
+
+	t.true(not(true), 'true matches not { type: ["string", "number" ] }');
+	t.false(not(42), '42 does not match { type: ["string", "number" ] }');
+	t.false(not('hello'), '"hello" does not match { type: ["string", "number" ] }');
+
+	t.end();
+});
+
+	t.end();
+});

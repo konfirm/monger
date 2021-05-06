@@ -88,6 +88,11 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 
 		return (input: unknown) => evaluators.filter((evaluate) => evaluate(input)).length === 1;
 	},
+	not: (struct: JSONSchemaOptions['not']): Evaluator => {
+		const evaluate = schema(struct);
+
+		return (input: unknown) => !evaluate(input);
+	},
 };
 
 
