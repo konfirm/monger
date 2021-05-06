@@ -11,14 +11,17 @@ type JSONType
 	| 'object'
 	| 'string'
 	| 'undefined';
-export type JSONSchema = {
+type JSONSchemaOptions = {
 	bsonType: TypeAliasAvailable | Array<TypeAliasAvailable>;
 	enum: Array<any>;
 	type: JSONType | Array<JSONType>;
 	allOf: Array<JSONSchema>;
 	anyOf: Array<JSONSchema>;
 	oneOf: Array<JSONSchema>;
+	not: JSONSchema;
 };
+export type JSONSchema = Partial<JSONSchemaOptions>;
+
 /*
 | Keyword              | Type      | Definition                              | Behavior                                                                                                                                                                                                                                                                            |
 | -------------------- | --------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,9 +58,9 @@ export type JSONSchema = {
 */
 
 const rules: { [key: string]: (input: any) => Evaluator } = {
-	bsonType: (bsonType: JSONSchema['bsonType']): Evaluator => isBSONType(bsonType),
-	enum: (values: JSONSchema['enum']): Evaluator => $in(values),
-	type: (type: JSONSchema['type']): Evaluator => {
+	bsonType: (bsonType: JSONSchemaOptions['bsonType']): Evaluator => isBSONType(bsonType),
+	enum: (values: JSONSchemaOptions['enum']): Evaluator => $in(values),
+	type: (type: JSONSchemaOptions['type']): Evaluator => {
 		const list = ([] as Array<JSONType>).concat(type);
 		const typed = (input: unknown): JSONType => {
 			const type = input === null
