@@ -21,6 +21,7 @@ type JSONSchemaOptions = {
 	not: JSONSchema;
 	multipleOf: number,
 	maximum: number,
+	exclusiveMaximum: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -106,6 +107,11 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 		const isNumber = rules.type('number');
 
 		return (input: unknown) => isNumber(input) && Number(input) <= value;
+	},
+	exclusiveMaximum: (value: JSONSchemaOptions['exclusiveMaximum']): Evaluator => {
+		const isNumber = rules.type('number');
+
+		return (input: unknown) => isNumber(input) && Number(input) < value;
 	},
 };
 

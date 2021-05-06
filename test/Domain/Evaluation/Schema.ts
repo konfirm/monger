@@ -189,3 +189,18 @@ test('Domain/Evaluation/Schema - schema/maximum', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
+	const { schema } = Schema;
+	const value = 4;
+	const exclusiveMaximum = schema({ exclusiveMaximum: value as JSONSchema['exclusiveMaximum'] });
+
+	t.true(exclusiveMaximum(0), '0 matches { exclusiveMaximum: 4 }');
+	t.true(exclusiveMaximum(2), '2 matches { exclusiveMaximum: 4 }');
+	t.false(exclusiveMaximum(4), '4 does not match { exclusiveMaximum: 4 }');
+	t.false(exclusiveMaximum(8), '8 does not match { exclusiveMaximum: 4 }');
+	t.false(exclusiveMaximum(308), '308 does not match { exclusiveMaximum: 4 }');
+	t.false(exclusiveMaximum(42), '42 does not match { exclusiveMaximum: 4 }');
+
+	t.end();
+});
