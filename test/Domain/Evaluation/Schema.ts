@@ -531,3 +531,27 @@ test('Domain/Evaluation/Schema - schema/patternProperties', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/dependencies', (t) => {
+	const { schema } = Schema;
+	const dependencies = {
+		bar: ['baz'],
+		qux: {
+			properties: {
+				foo: { bsonType: 'string' },
+			},
+		}
+	};
+	const deps = schema({ dependencies });
+
+	t.true(deps({}), `{} matches ${JSON.stringify({ dependencies })}`);
+	t.true(deps({ foo: 'bar' }), `{foo: 'bar'} matches ${JSON.stringify({ dependencies })}`);
+	t.true(deps({ foo: 1 }), `{foo: 1} matches ${JSON.stringify({ dependencies })}`);
+	t.false(deps({ foo: 1, bar: 2 }), `{foo: 1, bar: 2} does not match ${JSON.stringify({ dependencies })}`);
+	t.true(deps({ foo: 'yes', bar: 2, baz: 3 }), `{foo: 1, bar: 2, baz: 3} matches ${JSON.stringify({ dependencies })}`);
+	t.true(deps({ foo: 'yes', qux: 4 }), `{foo: 'yes', qux: 4} matches ${JSON.stringify({ dependencies })}`);
+	t.false(deps({ foo: true, qux: 4 }), `{foo: true, qux: 4} does not match ${JSON.stringify({ dependencies })}`);
+	t.false(deps({ foo: 1, qux: 4 }), `{foo: 1, qux: 4} does not match ${JSON.stringify({ dependencies })}`);
+
+	t.end();
+});
