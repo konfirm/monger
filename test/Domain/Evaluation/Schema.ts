@@ -329,20 +329,15 @@ test('Domain/Evaluation/Schema - schema/exclusiveMinimum', (t) => {
 test('Domain/Evaluation/Schema - schema/maxLength', (t) => {
 	const { schema } = Schema;
 	const maxLength = schema({ maxLength: 7 });
+	const string = 'abcdefghijklm';
 
-	t.true(maxLength('a'), '"a" matches { maxLength: 7 }');
-	t.true(maxLength('ab'), '"ab" matches { maxLength: 7 }');
-	t.true(maxLength('abc'), '"abc" matches { maxLength: 7 }');
-	t.true(maxLength('abcd'), '"abcd" matches { maxLength: 7 }');
-	t.true(maxLength('abcde'), '"abcde" matches { maxLength: 7 }');
-	t.true(maxLength('abcdef'), '"abcdef" matches { maxLength: 7 }');
-	t.true(maxLength('abcdefg'), '"abcdefg" matches { maxLength: 7 }');
-	t.false(maxLength('abcdefgh'), '"abcdefgh" does not { maxLength: 7 }');
-	t.false(maxLength('abcdefghi'), '"abcdefghi" does not { maxLength: 7 }');
-	t.false(maxLength('abcdefghij'), '"abcdefghij" does not { maxLength: 7 }');
-	t.false(maxLength('abcdefghijk'), '"abcdefghijk" does not { maxLength: 7 }');
-	t.false(maxLength('abcdefghijkl'), '"abcdefghijkl" does not { maxLength: 7 }');
-	t.false(maxLength('abcdefghijklm'), '"abcdefghijklm" does not { maxLength: 7 }');
+	for (let i = 1; i < string.length; ++i) {
+		const isMatch = i <= 7;
+		const message = isMatch ? 'matches' : 'does not match';
+		const input = string.slice(0, i);
+
+		t.equal(maxLength(input), isMatch, `${input} ${message} { maxLength: 7 }`);
+	}
 
 	t.end();
 });
@@ -350,20 +345,16 @@ test('Domain/Evaluation/Schema - schema/maxLength', (t) => {
 test('Domain/Evaluation/Schema - schema/minLength', (t) => {
 	const { schema } = Schema;
 	const minLength = schema({ minLength: 7 });
+	const string = 'abcdefghijklm';
 
-	t.false(minLength('a'), '"a" matches { minLength: 7 }');
-	t.false(minLength('ab'), '"ab" matches { minLength: 7 }');
-	t.false(minLength('abc'), '"abc" matches { minLength: 7 }');
-	t.false(minLength('abcd'), '"abcd" matches { minLength: 7 }');
-	t.false(minLength('abcde'), '"abcde" matches { minLength: 7 }');
-	t.false(minLength('abcdef'), '"abcdef" matches { minLength: 7 }');
-	t.true(minLength('abcdefg'), '"abcdefg" matches { minLength: 7 }');
-	t.true(minLength('abcdefgh'), '"abcdefgh" does not { minLength: 7 }');
-	t.true(minLength('abcdefghi'), '"abcdefghi" does not { minLength: 7 }');
-	t.true(minLength('abcdefghij'), '"abcdefghij" does not { minLength: 7 }');
-	t.true(minLength('abcdefghijk'), '"abcdefghijk" does not { minLength: 7 }');
-	t.true(minLength('abcdefghijkl'), '"abcdefghijkl" does not { minLength: 7 }');
-	t.true(minLength('abcdefghijklm'), '"abcdefghijklm" does not { minLength: 7 }');
+	for (let i = 1; i < string.length; ++i) {
+		const isMatch = i >= 7;
+		const message = isMatch ? 'matches' : 'does not match';
+		const input = string.slice(0, i);
+
+		t.equal(minLength(input), isMatch, `${input} ${message} { minLength: 7 }`);
+	}
+
 
 	t.end();
 });
