@@ -28,6 +28,7 @@ type JSONSchemaOptions = {
 	minLength: number,
 	pattern: string | RegExp,
 	maxProperties: number,
+	minProperties: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -176,6 +177,9 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 	// Objects
 	maxProperties: (value: JSONSchemaOptions['maxProperties']): Evaluator => {
 		return (input: unknown) => isObject(input) && Object.keys(input as object).length <= value;
+	},
+	minProperties: (value: JSONSchemaOptions['minProperties']): Evaluator => {
+		return (input: unknown) => isObject(input) && Object.keys(input as object).length >= value;
 	},
 };
 

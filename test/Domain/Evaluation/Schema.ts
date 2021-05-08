@@ -395,3 +395,20 @@ test('Domain/Evaluation/Schema - schema/maxProperties', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/minProperties', (t) => {
+	const { schema } = Schema;
+	const minProperties = schema({ minProperties: 3 });
+	const input: { [key: string]: unknown } = {};
+
+	for (let i = 1; i < 7; ++i) {
+		const isMatch = i >= 3;
+		const message = isMatch ? 'matches' : 'does not match';
+
+		input[`p${i}`] = i;
+
+		t.equal(minProperties(input), isMatch, `${JSON.stringify(input)} ${message} { minProperties: 3 }`);
+	}
+
+	t.end();
+});
