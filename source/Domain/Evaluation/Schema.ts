@@ -24,6 +24,7 @@ type JSONSchemaOptions = {
 	exclusiveMaximum: boolean | number,
 	minimum: number,
 	exclusiveMinimum: boolean | number,
+	maxLength: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -77,6 +78,7 @@ function is(...types: Array<JSONType>): Evaluator {
 }
 
 const isNumber = is('number');
+const isString = is('string');
 const isBoolean = is('boolean');
 const isUndefined = is('undefined');
 
@@ -152,6 +154,11 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 		const compare = isNumber(value) ? value : minimum || -Infinity;
 
 		return (input: unknown) => isNumber(input) && Number(input) > compare;
+	},
+
+	// Strings
+	maxLength: (value: JSONSchemaOptions['maxLength']): Evaluator => {
+		return (input: unknown) => isString(input) && (input as string).length <= value;
 	},
 };
 
