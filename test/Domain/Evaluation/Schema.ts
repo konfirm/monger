@@ -494,9 +494,12 @@ test('Domain/Evaluation/Schema - schema/properties', (t) => {
 	}
 	const props = schema(properties);
 
-	t.true(props({ foo: 1 }), `{ foo: 1 } matches ${JSON.stringify({ properties })}`);
-	t.false(props({ bar: 1 }), `{ bar: 1 } does not match ${JSON.stringify({ properties })}`);
-	t.true(props({ foo: 1, bar: 2 }), `{ foo: 1, bar: 2 } matches ${JSON.stringify({ properties })}`);
+	t.true(props({}), `{} matches ${JSON.stringify(properties)}`);
+	t.true(props({ foo: 1 }), `{ foo: 1 } matches ${JSON.stringify(properties)}`);
+	t.false(props({ foo: 1.1 }), `{ foo: 1.1 } does not match ${JSON.stringify(properties)}`);
+	t.true(props({ bar: 1 }), `{ bar: 1 } match ${JSON.stringify(properties)}`);
+	t.true(props({ foo: 1, bar: 2 }), `{ foo: 1, bar: 2 } matches ${JSON.stringify(properties)}`);
+	t.false(props({ foo: 'yes', bar: 2 }), `{ foo: "yes", bar: 2 } does not match ${JSON.stringify(properties)}`);
 
 	t.end();
 });

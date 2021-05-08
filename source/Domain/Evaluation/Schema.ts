@@ -211,18 +211,17 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			isObject(input) &&
 			(Object.keys(input as object).every((key) => known.includes(key)) || (value as boolean));
 	},
-	properties: (value: JSONSchemaOptions['properties'], schematic: JSONSchema): Evaluator => {
-		const required = Object.keys(value);
-		const delegates = required.map((key) => {
-			const evaluate = schema(value[key]);
+	properties: (value: JSONSchemaOptions['properties']): Evaluator => {
+		const evaluators = Object.keys(value)
+			.map((key) => {
+				const evaluate = schema(value[key]);
 
-			return (input: { [key: string]: unknown }) => evaluate(input[key] || undefined);
-		})
-		const evaluators = ([] as Array<Evaluator>)
-			.concat(rules.required(required, schematic))
-			.concat(delegates);
+				return (input: { [key: string]: unknown }) => !(key in input) || evaluate(input[key]);
+			})
 
-		return (input: unknown) => isObject(input) && evaluators.every((evaluate) => evaluate(input));
+		return (input: unknown) =>
+			isObject(input) &&
+			evaluators.every((evaluate) => evaluate(input as { [key: string]: unknown }));
 	},
 };
 
