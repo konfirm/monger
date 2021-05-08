@@ -27,6 +27,7 @@ type JSONSchemaOptions = {
 	maxLength: number,
 	minLength: number,
 	pattern: string | RegExp,
+	maxProperties: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -82,6 +83,7 @@ function is(...types: Array<JSONType>): Evaluator {
 const isNumber = is('number');
 const isString = is('string');
 const isBoolean = is('boolean');
+const isObject = is('object');
 const isUndefined = is('undefined');
 
 const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = {
@@ -169,6 +171,11 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 		const pattern: RegExp = isString(value) ? new RegExp(value) : value as RegExp;
 
 		return (input: unknown) => isString(input) && pattern.test(String(input));
+	},
+
+	// Objects
+	maxProperties: (value: JSONSchemaOptions['maxProperties']): Evaluator => {
+		return (input: unknown) => isObject(input) && Object.keys(input as object).length <= value;
 	},
 };
 

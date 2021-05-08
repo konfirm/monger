@@ -378,3 +378,20 @@ test('Domain/Evaluation/Schema - schema/pattern', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/maxProperties', (t) => {
+	const { schema } = Schema;
+	const maxProperties = schema({ maxProperties: 3 });
+	const input: { [key: string]: unknown } = {};
+
+	for (let i = 1; i < 7; ++i) {
+		const isMatch = i <= 3;
+		const message = isMatch ? 'matches' : 'does not match';
+
+		input[`p${i}`] = i;
+
+		t.equal(maxProperties(input), isMatch, `${JSON.stringify(input)} ${message} { maxProperties: 3 }`);
+	}
+
+	t.end();
+});
