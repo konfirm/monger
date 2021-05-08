@@ -412,3 +412,20 @@ test('Domain/Evaluation/Schema - schema/minProperties', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/required', (t) => {
+	const { schema } = Schema;
+	const required = schema({ required: ['p2', 'p4'] });
+	const input: { [key: string]: unknown } = {};
+
+	for (let i = 1; i < 7; ++i) {
+		const isMatch = i >= 4;
+		const message = isMatch ? 'matches' : 'does not match';
+
+		input[`p${i}`] = i;
+
+		t.equal(required(input), isMatch, `${JSON.stringify(input)} ${message} { required: ["p2", "p4"] }`);
+	}
+
+	t.end();
+});

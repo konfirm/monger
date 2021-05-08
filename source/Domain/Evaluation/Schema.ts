@@ -29,6 +29,7 @@ type JSONSchemaOptions = {
 	pattern: string | RegExp,
 	maxProperties: number,
 	minProperties: number,
+	required: Array<string>,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -180,6 +181,17 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 	},
 	minProperties: (value: JSONSchemaOptions['minProperties']): Evaluator => {
 		return (input: unknown) => isObject(input) && Object.keys(input as object).length >= value;
+	},
+	required: (value: JSONSchemaOptions['required']): Evaluator => {
+		return (input: unknown) => {
+			if (isObject(input)) {
+				const keys = Object.keys(input as object);
+
+				return value.every((key) => keys.includes(key));
+			}
+
+			return false;
+		}
 	},
 };
 
