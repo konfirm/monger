@@ -34,6 +34,7 @@ type JSONSchemaOptions = {
 	properties: { [key: string]: JSONSchema },
 	patternProperties: { [key: string]: JSONSchema },
 };
+type SimpleObject = { [key: string]: unknown };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
 /*
@@ -217,12 +218,12 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			.map((key) => {
 				const evaluate = schema(value[key]);
 
-				return (input: { [key: string]: unknown }) => !(key in input) || evaluate(input[key]);
+				return (input: SimpleObject) => !(key in input) || evaluate(input[key]);
 			})
 
 		return (input: unknown) =>
 			isObject(input) &&
-			evaluators.every((evaluate) => evaluate(input as { [key: string]: unknown }));
+			evaluators.every((evaluate) => evaluate(input as SimpleObject));
 	},
 	patternProperties: (value: JSONSchemaOptions['patternProperties']): Evaluator => {
 		const evaluators = Object.keys(value)
@@ -237,7 +238,7 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			isObject(input) &&
 			Object.keys(input as object)
 				.every((key) => evaluators
-					.every((evaluate) => evaluate(key, (input as { [key: string]: unknown })[key]))
+					.every((evaluate) => evaluate(key, (input as SimpleObject)[key]))
 				);
 	},
 };
