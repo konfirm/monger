@@ -346,3 +346,24 @@ test('Domain/Evaluation/Schema - schema/maxLength', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/minLength', (t) => {
+	const { schema } = Schema;
+	const minLength = schema({ minLength: 7 });
+
+	t.false(minLength('a'), '"a" matches { minLength: 7 }');
+	t.false(minLength('ab'), '"ab" matches { minLength: 7 }');
+	t.false(minLength('abc'), '"abc" matches { minLength: 7 }');
+	t.false(minLength('abcd'), '"abcd" matches { minLength: 7 }');
+	t.false(minLength('abcde'), '"abcde" matches { minLength: 7 }');
+	t.false(minLength('abcdef'), '"abcdef" matches { minLength: 7 }');
+	t.true(minLength('abcdefg'), '"abcdefg" matches { minLength: 7 }');
+	t.true(minLength('abcdefgh'), '"abcdefgh" does not { minLength: 7 }');
+	t.true(minLength('abcdefghi'), '"abcdefghi" does not { minLength: 7 }');
+	t.true(minLength('abcdefghij'), '"abcdefghij" does not { minLength: 7 }');
+	t.true(minLength('abcdefghijk'), '"abcdefghijk" does not { minLength: 7 }');
+	t.true(minLength('abcdefghijkl'), '"abcdefghijkl" does not { minLength: 7 }');
+	t.true(minLength('abcdefghijklm'), '"abcdefghijklm" does not { minLength: 7 }');
+
+	t.end();
+});

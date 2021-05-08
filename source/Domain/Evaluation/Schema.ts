@@ -25,6 +25,7 @@ type JSONSchemaOptions = {
 	minimum: number,
 	exclusiveMinimum: boolean | number,
 	maxLength: number,
+	minLength: number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -159,6 +160,9 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 	// Strings
 	maxLength: (value: JSONSchemaOptions['maxLength']): Evaluator => {
 		return (input: unknown) => isString(input) && (input as string).length <= value;
+	},
+	minLength: (value: JSONSchemaOptions['minLength']): Evaluator => {
+		return (input: unknown) => isString(input) && (input as string).length >= value;
 	},
 };
 
