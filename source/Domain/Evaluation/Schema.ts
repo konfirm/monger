@@ -32,6 +32,7 @@ type JSONSchemaOptions = {
 	required: Array<string>,
 	additionalProperties: boolean | { [key: string]: unknown },
 	properties: { [key: string]: JSONSchema },
+	patternProperties: { [key: string]: JSONSchema },
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -222,6 +223,22 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 		return (input: unknown) =>
 			isObject(input) &&
 			evaluators.every((evaluate) => evaluate(input as { [key: string]: unknown }));
+	},
+	patternProperties: (value: JSONSchemaOptions['patternProperties']): Evaluator => {
+		const evaluators = Object.keys(value)
+			.map((key) => {
+				const pattern = new RegExp(key);
+				const evaluate = schema(value[key]);
+
+				return (key: string, value: unknown) => !pattern.test(key) || evaluate(value);
+			});
+
+		return (input: unknown) =>
+			isObject(input) &&
+			Object.keys(input as object)
+				.every((key) => evaluators
+					.every((evaluate) => evaluate(key, (input as { [key: string]: unknown })[key]))
+				);
 	},
 };
 

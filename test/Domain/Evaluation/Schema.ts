@@ -503,3 +503,31 @@ test('Domain/Evaluation/Schema - schema/properties', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/patternProperties', (t) => {
+	const { schema } = Schema;
+	const patternProperties = {
+		patternProperties: {
+			'^iso(?:639|3166)': { minLength: 2, maxLength: 3 },
+			'^iso639': { pattern: '^[a-z]+$' },
+			'^iso3166': { pattern: '^[A-Z]+$' },
+		},
+	}
+	const props = schema(patternProperties);
+
+	t.true(props({}), `{} matches ${JSON.stringify(patternProperties)}`);
+	t.true(props({ iso639: 'nl' }), `{iso639: 'nl'} matches ${JSON.stringify(patternProperties)}`);
+	t.true(props({ iso639: 'nld' }), `{iso639: 'nld'} matches ${JSON.stringify(patternProperties)}`);
+	t.true(props({ iso639: 'dut' }), `{iso639: 'dut'} matches ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso639: 'NL' }), `{iso639: 'NL'} does not match ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso639: 'NLD' }), `{iso639: 'NLD'} does not match ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso639: 'DUT' }), `{iso639: 'DUT'} does not match ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso639: 'dutch' }), `{iso639: 'dutch'} does not match ${JSON.stringify(patternProperties)}`);
+	t.true(props({ iso3166: 'NL' }), `{iso3166: 'NL'} matches ${JSON.stringify(patternProperties)}`);
+	t.true(props({ iso3166: 'NLD' }), `{iso3166: 'NLD'} matches ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso3166: 'nl' }), `{iso3166: 'nl'} does not match ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso3166: 'nld' }), `{iso3166: 'nld'} does not match ${JSON.stringify(patternProperties)}`);
+	t.false(props({ iso3166: 'Netherlands' }), `{iso3166: 'Netherlands'} does not match ${JSON.stringify(patternProperties)}`);
+
+	t.end();
+});
