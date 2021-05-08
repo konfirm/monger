@@ -427,6 +427,10 @@ test('Domain/Evaluation/Schema - schema/required', (t) => {
 		t.equal(required(input), isMatch, `${JSON.stringify(input)} ${message} { required: ["p2", "p4"] }`);
 	}
 
+	t.false(required(null), 'null does not match { required: ["p2", "p4"] }');
+	t.false(required('foo'), '"foo" does not match { required: ["p2", "p4"] }');
+	t.false(required(1), '"foo" does not match { required: ["p2", "p4"] }');
+
 	t.end();
 });
 

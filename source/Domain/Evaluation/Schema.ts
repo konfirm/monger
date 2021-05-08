@@ -142,9 +142,9 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			return rules.maximum(maximum, schema);
 		}
 
-		const compare = isNumber(value) ? value : maximum || Infinity;
+		const compare = isNumber(value) ? value : maximum;
 
-		return (input: unknown) => isNumber(input) && Number(input) < compare;
+		return (input: unknown) => isNumber(input) && Number(input) < Number(compare);
 	},
 	minimum: (value: JSONSchemaOptions['minimum'], schema: JSONSchema): Evaluator => {
 		const { exclusiveMinimum } = schema;
@@ -162,9 +162,9 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			return rules.minimum(minimum, schema);
 		}
 
-		const compare = isNumber(value) ? value : minimum || -Infinity;
+		const compare = isNumber(value) ? value : minimum;
 
-		return (input: unknown) => isNumber(input) && Number(input) > compare;
+		return (input: unknown) => isNumber(input) && Number(input) > Number(compare);
 	},
 
 	// Strings
