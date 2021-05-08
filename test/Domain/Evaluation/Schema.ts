@@ -430,6 +430,61 @@ test('Domain/Evaluation/Schema - schema/required', (t) => {
 	t.end();
 });
 
+test('Domain/Evaluation/Schema - schema/additionalProperties', (t) => {
+	const { schema } = Schema;
+	const foo: JSONSchema['properties'] = { foo: { bsonType: 'int' } };
+	const bar: JSONSchema['properties'] = { bar: { bsonType: 'int' } };
+	const baz: JSONSchema['properties'] = { baz: { bsonType: 'int' } };
+	const all: JSONSchema['properties'] = { ...foo, ...bar, ...baz };
+	const input = { foo: 1, bar: 2, baz: 3 };
+
+	each`
+		additional | required                 | properties            | matches
+		-----------|--------------------------|-----------------------|---------
+		${true}    |                          |                       | yes
+		${true}    | ${['bar']}               |                       | yes
+		${true}    | ${['bar']}               | ${baz}                | yes
+		${true}    | ${['bar']}               | ${foo}                | yes
+		${true}    | ${['foo', 'bar']}        |                       | yes
+		${true}    | ${['foo', 'bar']}        | ${baz}                | yes
+		${true}    | ${['foo', 'bar', 'baz']} |                       | yes
+		${true}    |                          | ${all}                | yes
+		${false}   |                          |                       | no
+		${false}   | ${['bar']}               |                       | no
+		${false}   | ${['bar']}               | ${baz}                | no
+		${false}   | ${['bar']}               | ${foo}                | no
+		${false}   | ${['foo', 'bar']}        |                       | no
+		${false}   | ${['foo', 'bar']}        | ${baz}                | yes
+		${false}   | ${['foo', 'bar', 'baz']} |                       | yes
+		${false}   |                          | ${all}                | yes
+		${foo}     |                          |                       | no
+		${foo}     |                          | ${{ ...bar, ...baz }} | yes
+		${foo}     | ${['bar']}               | ${baz}                | yes
+		${bar}     |                          |                       | no
+		${bar}     |                          | ${{ ...foo, ...baz }} | yes
+		${bar}     | ${['foo']}               | ${baz}                | yes
+		${baz}     |                          |                       | no
+		${baz}     |                          | ${{ ...foo, ...bar }} | yes
+		${baz}     | ${['foo']}               | ${bar}                | yes
+		${all}     |                          |                       | yes
+	`((record) => {
+		const { additional, required, properties, matches } = record as {
+			additional: JSONSchema['additionalProperties'];
+			required: JSONSchema['required'];
+			properties: JSONSchema['properties'];
+			matches: 'yes' | 'no';
+		};
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const jsonSchema = { additionalProperties: additional, required, properties };
+		const evaluate = schema(jsonSchema);
+
+		t.equal(evaluate(input), isMatch, `${JSON.stringify(input)} ${message} ${JSON.stringify(jsonSchema)}`);
+	});
+
+	t.end();
+});
+
 test('Domain/Evaluation/Schema - schema/properties', (t) => {
 	const { schema } = Schema;
 	const properties = {

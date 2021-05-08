@@ -30,6 +30,7 @@ type JSONSchemaOptions = {
 	maxProperties: number,
 	minProperties: number,
 	required: Array<string>,
+	additionalProperties: boolean | { [key: string]: unknown },
 	properties: { [key: string]: JSONSchema },
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
@@ -193,6 +194,22 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 
 			return false;
 		}
+	},
+	additionalProperties: (value: JSONSchemaOptions['additionalProperties'], schema: JSONSchema): Evaluator => {
+		const { properties = {}, required = [] } = schema;
+		const known = ([] as Array<string>).concat(Object.keys(properties), required);
+
+		if (isObject(value)) {
+			const allowed: Array<string> = Object.keys(value as object);
+			return (input: unknown) => isObject(input) &&
+				Object.keys(input as object)
+					.filter((key) => !known.includes(key))
+					.every((key) => allowed.includes(key));
+		}
+
+		return (input: unknown) =>
+			isObject(input) &&
+			(Object.keys(input as object).every((key) => known.includes(key)) || (value as boolean));
 	},
 	properties: (value: JSONSchemaOptions['properties'], schematic: JSONSchema): Evaluator => {
 		const required = Object.keys(value);
