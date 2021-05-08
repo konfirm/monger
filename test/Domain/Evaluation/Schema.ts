@@ -1,4 +1,5 @@
 import * as test from 'tape';
+import each from 'template-literal-each';
 import type { JSONSchema } from '../../../source/Domain/Evaluation/Schema';
 import * as Schema from '../../../source/Domain/Evaluation/Schema';
 
@@ -177,60 +178,150 @@ test('Domain/Evaluation/Schema - schema/multipleOf', (t) => {
 
 test('Domain/Evaluation/Schema - schema/maximum', (t) => {
 	const { schema } = Schema;
-	const value = 4;
-	const maximum = schema({ maximum: value as JSONSchema['maximum'] });
 
-	t.true(maximum(0), '0 matches { maximum: 4 }');
-	t.true(maximum(2), '2 matches { maximum: 4 }');
-	t.true(maximum(4), '4 matches { maximum: 4 }');
-	t.false(maximum(8), '8 does not match { maximum: 4 }');
-	t.false(maximum(308), '308 does not match { maximum: 4 }');
-	t.false(maximum(42), '42 does not match { maximum: 4 }');
+	each`
+		maximum      | exclusive | input        | matches
+		-------------|-----------|--------------|---------
+		${4}         |           | ${2}         | yes
+		${4}         |           | ${4}         | yes
+		${4}         |           | ${8}         | no
+		${4}         | ${false}  | ${2}         | yes
+		${4}         | ${false}  | ${4}         | yes
+		${4}         | ${false}  | ${8}         | no
+		${4}         | ${true}   | ${2}         | yes
+		${4}         | ${true}   | ${4}         | no
+		${4}         | ${true}   | ${8}         | no
+		${4}         | ${5}      | ${2}         | yes
+		${4}         | ${5}      | ${4}         | yes
+		${4}         | ${5}      | ${8}         | no
+		${4}         | ${4}      | ${2}         | yes
+		${4}         | ${4}      | ${4}         | no
+		${4}         | ${4}      | ${8}         | no
+		${undefined} |           | ${0}         | yes
+		${undefined} |           | ${Infinity}  | yes
+		${undefined} |           | ${-Infinity} | yes
+	`((record) => {
+		const { maximum, exclusive, input, matches } = record as { maximum: JSONSchema['maximum'], exclusive: JSONSchema['exclusiveMaximum'], input: any, matches: 'yes' | 'no' };
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const evaluate = schema({ maximum: maximum as JSONSchema['maximum'], exclusiveMaximum: exclusive });
+
+		t.equal(evaluate(input), isMatch, `${input} ${message} { maximum: ${maximum}, exclusiveMaximum: ${exclusive} }`);
+	});
 
 	t.end();
 });
 
 test('Domain/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
 	const { schema } = Schema;
-	const value = 4;
-	const exclusiveMaximum = schema({ exclusiveMaximum: value as JSONSchema['exclusiveMaximum'] });
 
-	t.true(exclusiveMaximum(0), '0 matches { exclusiveMaximum: 4 }');
-	t.true(exclusiveMaximum(2), '2 matches { exclusiveMaximum: 4 }');
-	t.false(exclusiveMaximum(4), '4 does not match { exclusiveMaximum: 4 }');
-	t.false(exclusiveMaximum(8), '8 does not match { exclusiveMaximum: 4 }');
-	t.false(exclusiveMaximum(308), '308 does not match { exclusiveMaximum: 4 }');
-	t.false(exclusiveMaximum(42), '42 does not match { exclusiveMaximum: 4 }');
+	each`
+		exclusive    | maximum |input         | matches
+		-------------|---------|--------------|---------
+		${5}         |         | ${2}         | yes
+		${5}         |         | ${4}         | yes
+		${5}         |         | ${8}         | no
+		${4}         |         | ${2}         | yes
+		${4}         |         | ${4}         | no
+		${4}         |         | ${8}         | no
+		${5}         | ${4}    | ${2}         | yes
+		${5}         | ${4}    | ${4}         | yes
+		${5}         | ${4}    | ${8}         | no
+		${4}         | ${4}    | ${2}         | yes
+		${4}         | ${4}    | ${4}         | no
+		${4}         | ${4}    | ${8}         | no
+		${false}     | ${4}    | ${2}         | yes
+		${false}     | ${4}    | ${4}         | yes
+		${false}     | ${4}    | ${8}         | no
+		${true}      | ${4}    | ${2}         | yes
+		${true}      | ${4}    | ${4}         | no
+		${true}      | ${4}    | ${8}         | no
+		${undefined} |         | ${0}         | yes
+		${undefined} |         | ${Infinity}  | yes
+		${undefined} |         | ${-Infinity} | yes
+	`((record) => {
+		const { exclusive, maximum, input, matches } = record as { maximum: JSONSchema['maximum'], exclusive: JSONSchema['exclusiveMaximum'], input: any, matches: 'yes' | 'no' };
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const evaluate = schema({ maximum: maximum as JSONSchema['maximum'], exclusiveMaximum: exclusive });
+
+		t.equal(evaluate(input), isMatch, `${input} ${message} { maximum: ${maximum}, exclusiveMaximum: ${exclusive} }`);
+	});
 
 	t.end();
 });
 
 test('Domain/Evaluation/Schema - schema/minimum', (t) => {
 	const { schema } = Schema;
-	const value = 4;
-	const minimum = schema({ minimum: value as JSONSchema['minimum'] });
 
-	t.false(minimum(0), '0 does not match { minimum: 4 }');
-	t.false(minimum(2), '2 does not match { minimum: 4 }');
-	t.true(minimum(4), '4 matches { minimum: 4 }');
-	t.true(minimum(8), '8 matches { minimum: 4 }');
-	t.true(minimum(308), '308 matches { minimum: 4 }');
-	t.true(minimum(42), '42 matches { minimum: 4 }');
+	each`
+		minimum      | exclusive | input        | matches
+		-------------|-----------|--------------|---------
+		${4}         |           | ${2}         | no
+		${4}         |           | ${4}         | yes
+		${4}         |           | ${8}         | yes
+		${4}         | ${false}  | ${2}         | no
+		${4}         | ${false}  | ${4}         | yes
+		${4}         | ${false}  | ${8}         | yes
+		${4}         | ${true}   | ${2}         | no
+		${4}         | ${true}   | ${4}         | no
+		${4}         | ${true}   | ${8}         | yes
+		${4}         | ${5}      | ${2}         | no
+		${4}         | ${5}      | ${4}         | no
+		${4}         | ${5}      | ${8}         | yes
+		${4}         | ${4}      | ${2}         | no
+		${4}         | ${4}      | ${4}         | no
+		${4}         | ${4}      | ${8}         | yes
+		${undefined} |           | ${0}         | yes
+		${undefined} |           | ${Infinity}  | yes
+		${undefined} |           | ${-Infinity} | yes
+	`((record) => {
+		const { minimum, exclusive, input, matches } = record as { minimum: JSONSchema['minimum'], exclusive: JSONSchema['exclusiveMinimum'], input: any, matches: 'yes' | 'no' };
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const evaluate = schema({ minimum: minimum as JSONSchema['minimum'], exclusiveMinimum: exclusive });
+
+		t.equal(evaluate(input), isMatch, `${input} ${message} { minimum: ${minimum}, exclusiveMinimum: ${exclusive} }`);
+	});
 
 	t.end();
 });
 
 test('Domain/Evaluation/Schema - schema/exclusiveMinimum', (t) => {
 	const { schema } = Schema;
-	const value = 4;
-	const exclusiveMinimum = schema({ exclusiveMinimum: value as JSONSchema['exclusiveMinimum'] });
 
-	t.false(exclusiveMinimum(0), '0 does not match { exclusiveMinimum: 4 }');
-	t.false(exclusiveMinimum(2), '2 does not match { exclusiveMinimum: 4 }');
-	t.false(exclusiveMinimum(4), '4 does not match { exclusiveMinimum: 4 }');
-	t.true(exclusiveMinimum(8), '8 matches { exclusiveMinimum: 4 }');
-	t.true(exclusiveMinimum(308), '308 matches { exclusiveMinimum: 4 }');
-	t.true(exclusiveMinimum(42), '42 matches { exclusiveMinimum: 4 }');
+	each`
+		exclusive    | minimum   |input | matches
+		-------------|-----------|------|---------
+		${5}         |           |${2}  | no
+		${5}         |           |${4}  | no
+		${5}         |           |${8}  | yes
+		${4}         |           |${2}  | no
+		${4}         |           |${4}  | no
+		${4}         |           |${8}  | yes
+		${5}         | ${4}      |${2}  | no
+		${5}         | ${4}      |${4}  | no
+		${5}         | ${4}      |${8}  | yes
+		${4}         | ${4}      |${2}  | no
+		${4}         | ${4}      |${4}  | no
+		${4}         | ${4}      |${8}  | yes
+		${false}     | ${4}      |${2}  | no
+		${false}     | ${4}      |${4}  | yes
+		${false}     | ${4}      |${8}  | yes
+		${true}      | ${4}      |${2}  | no
+		${true}      | ${4}      |${4}  | no
+		${true}      | ${4}      |${8}  | yes
+		${undefined} |           | ${0}         | yes
+		${undefined} |           | ${Infinity}  | yes
+		${undefined} |           | ${-Infinity} | yes
+	`((record) => {
+		const { exclusive, minimum, input, matches } = record as { minimum: JSONSchema['minimum'], exclusive: JSONSchema['exclusiveMinimum'], input: any, matches: 'yes' | 'no' };
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const evaluate = schema({ minimum: minimum as JSONSchema['minimum'], exclusiveMinimum: exclusive });
+
+		t.equal(evaluate(input), isMatch, `${input} ${message} { minimum: ${minimum}, exclusiveMinimum: ${exclusive} }`);
+	});
 
 	t.end();
 });

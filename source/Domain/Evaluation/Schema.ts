@@ -21,9 +21,9 @@ type JSONSchemaOptions = {
 	not: JSONSchema;
 	multipleOf: number,
 	maximum: number,
-	exclusiveMaximum: number,
+	exclusiveMaximum: boolean | number,
 	minimum: number,
-	exclusiveMinimum: number,
+	exclusiveMinimum: boolean | number,
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -62,21 +62,31 @@ export type JSONSchema = Partial<JSONSchemaOptions>;
 
 */
 
-const rules: { [key: string]: (input: any) => Evaluator } = {
+function getJSONType(input: unknown): JSONType {
+	const type = input === null
+		? 'null'
+		: Array.isArray(input)
+			? 'array'
+			: typeof input;
+
+	return type as JSONType;
+}
+
+function is(...types: Array<JSONType>): Evaluator {
+	return (input: unknown) => types.includes(getJSONType(input));
+}
+
+const isNumber = is('number');
+const isBoolean = is('boolean');
+const isUndefined = is('undefined');
+
+const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = {
 	bsonType: (bsonType: JSONSchemaOptions['bsonType']): Evaluator => isBSONType(bsonType),
 	enum: (values: JSONSchemaOptions['enum']): Evaluator => $in(values),
 	type: (type: JSONSchemaOptions['type']): Evaluator => {
 		const list = ([] as Array<JSONType>).concat(type);
-		const typed = (input: unknown): JSONType => {
-			const type = input === null
-				? 'null'
-				: Array.isArray(input)
-					? 'array'
-					: typeof input;
-			return type as JSONType;
-		};
 
-		return (input: unknown) => list.includes(typed(input));
+		return is(...list);
 	},
 	allOf: (list: JSONSchemaOptions['allOf']): Evaluator => {
 		const evaluators = list.map(schema);
@@ -101,36 +111,55 @@ const rules: { [key: string]: (input: any) => Evaluator } = {
 
 	// Numbers
 	multipleOf: (value: JSONSchemaOptions['multipleOf']): Evaluator => {
-		const isNumber = rules.type('number');
-
 		return (input: unknown) => isNumber(input) && (Number(input) % value) === 0;
 	},
-	maximum: (value: JSONSchemaOptions['maximum']): Evaluator => {
-		const isNumber = rules.type('number');
+	maximum: (value: JSONSchemaOptions['maximum'], schema: JSONSchema): Evaluator => {
+		const { exclusiveMaximum } = schema;
+
+		if (isBoolean(exclusiveMaximum) && exclusiveMaximum) {
+			return rules.exclusiveMaximum(value, schema);
+		}
 
 		return (input: unknown) => isNumber(input) && Number(input) <= value;
 	},
-	exclusiveMaximum: (value: JSONSchemaOptions['exclusiveMaximum']): Evaluator => {
-		const isNumber = rules.type('number');
+	exclusiveMaximum: (value: JSONSchemaOptions['exclusiveMaximum'], schema: JSONSchema): Evaluator => {
+		const { maximum } = schema;
 
-		return (input: unknown) => isNumber(input) && Number(input) < value;
+		if (isBoolean(value) && !value) {
+			return rules.maximum(maximum, schema);
+		}
+
+		const compare = isNumber(value) ? value : maximum || Infinity;
+
+		return (input: unknown) => isNumber(input) && Number(input) < compare;
 	},
-	minimum: (value: JSONSchemaOptions['minimum']): Evaluator => {
-		const isNumber = rules.type('number');
+	minimum: (value: JSONSchemaOptions['minimum'], schema: JSONSchema): Evaluator => {
+		const { exclusiveMinimum } = schema;
+
+		if (isBoolean(exclusiveMinimum) && exclusiveMinimum) {
+			return rules.exclusiveMinimum(value, schema);
+		}
 
 		return (input: unknown) => isNumber(input) && Number(input) >= value;
 	},
-	exclusiveMinimum: (value: JSONSchemaOptions['exclusiveMinimum']): Evaluator => {
-		const isNumber = rules.type('number');
+	exclusiveMinimum: (value: JSONSchemaOptions['exclusiveMinimum'], schema: JSONSchema): Evaluator => {
+		const { minimum } = schema;
 
-		return (input: unknown) => isNumber(input) && Number(input) > value;
+		if (isBoolean(value) && !value) {
+			return rules.minimum(minimum, schema);
+		}
+
+		const compare = isNumber(value) ? value : minimum || -Infinity;
+
+		return (input: unknown) => isNumber(input) && Number(input) > compare;
 	},
 };
 
 
 export function schema(schema: Partial<JSONSchema>): Evaluator {
-	const evaluators = Object.keys(schema)
-		.map((key) => rules[key](schema[key as keyof typeof schema]));
+	const evaluators = (Object.keys(schema) as Array<keyof typeof schema>)
+		.filter((key) => !isUndefined(schema[key]))
+		.map((key) => rules[key](schema[key], schema));
 
 	return (input: unknown) => evaluators.every((evaluate) => evaluate(input));
 }
