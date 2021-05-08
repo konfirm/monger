@@ -30,6 +30,7 @@ type JSONSchemaOptions = {
 	maxProperties: number,
 	minProperties: number,
 	required: Array<string>,
+	properties: { [key: string]: JSONSchema },
 };
 export type JSONSchema = Partial<JSONSchemaOptions>;
 
@@ -192,6 +193,19 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 
 			return false;
 		}
+	},
+	properties: (value: JSONSchemaOptions['properties'], schematic: JSONSchema): Evaluator => {
+		const required = Object.keys(value);
+		const delegates = required.map((key) => {
+			const evaluate = schema(value[key]);
+
+			return (input: { [key: string]: unknown }) => evaluate(input[key] || undefined);
+		})
+		const evaluators = ([] as Array<Evaluator>)
+			.concat(rules.required(required, schematic))
+			.concat(delegates);
+
+		return (input: unknown) => isObject(input) && evaluators.every((evaluate) => evaluate(input));
 	},
 };
 

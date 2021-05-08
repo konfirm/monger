@@ -429,3 +429,19 @@ test('Domain/Evaluation/Schema - schema/required', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/properties', (t) => {
+	const { schema } = Schema;
+	const properties = {
+		properties: {
+			foo: { bsonType: 'int' },
+		},
+	}
+	const props = schema(properties);
+
+	t.true(props({ foo: 1 }), `{ foo: 1 } matches ${JSON.stringify({ properties })}`);
+	t.false(props({ bar: 1 }), `{ bar: 1 } does not match ${JSON.stringify({ properties })}`);
+	t.true(props({ foo: 1, bar: 2 }), `{ foo: 1, bar: 2 } matches ${JSON.stringify({ properties })}`);
+
+	t.end();
+});
