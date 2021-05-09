@@ -34,6 +34,7 @@ type JSONSchemaOptions = {
 	properties: { [key: string]: JSONSchema },
 	patternProperties: { [key: string]: JSONSchema },
 	dependencies: { [key: string]: Array<string> | JSONSchema },
+	items: JSONSchema | Array<JSONSchema>,
 };
 type SimpleObject = { [key: string]: unknown };
 export type JSONSchema = Partial<JSONSchemaOptions>;
@@ -91,6 +92,7 @@ const isNumber = is('number');
 const isString = is('string');
 const isBoolean = is('boolean');
 const isObject = is('object');
+const isArray = is('array');
 const isUndefined = is('undefined');
 
 const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = {
@@ -254,6 +256,21 @@ const rules: { [key: string]: (input: any, schame: JSONSchema) => Evaluator } = 
 			});
 
 		return (input: unknown) => isObject(input) && evaluators.every((evaluate) => evaluate(input as SimpleObject))
+	},
+
+	// Arrays
+	items: (value: JSONSchemaOptions['items']): Evaluator => {
+		if (isObject(value)) {
+			const evaluate = schema(value as JSONSchema);
+
+			return (input: unknown) => isArray(input) && (input as Array<any>).every(evaluate);
+		}
+
+		const evaluators = (value as Array<JSONSchema>).map(schema);
+
+		return (input: unknown) =>
+			isArray(input) &&
+			(input as Array<any>).every((item) => evaluators.some((evaluate) => evaluate(item)));
 	},
 };
 

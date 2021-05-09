@@ -559,3 +559,38 @@ test('Domain/Evaluation/Schema - schema/dependencies', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/items', (t) => {
+	const { schema } = Schema;
+	const singleSchematic = { items: { type: 'string' } };
+	const multipleSchematic = { items: [{ type: 'string' }, { type: 'object', required: ['name'] }] };
+	const singleItem = schema(singleSchematic as JSONSchema);
+	const multipleItems = schema(multipleSchematic as JSONSchema);
+
+	each`
+		input                         | single | multiple
+		------------------------------|--------|----------
+		${[]}                         | yes    | yes
+		${['one']}                    | yes    | yes
+		${['one', 'two']}             | yes    | yes
+		${['one', 'two', 3]}          | no     | no
+		${['one', 2]}                 | no     | no
+		${[{ name: 'one' }]}          | no     | yes
+		${['one', { name: 'two' }]}   | no     | yes
+		${['one', { name: 2 }]}       | no     | yes
+		${[{ name: 1 }, 'two']}       | no     | yes
+		${[{ name: 1 }, { name: 2 }]} | no     | yes
+		${[{ num: 1 }]}               | no     | no
+	`((record) => {
+		const { input, single, multiple } = record as { input: any, single: string, multiple: string };
+		const isSingleMatch = single === 'yes';
+		const isMultipleMatch = multiple === 'yes';
+		const singleMessage = isSingleMatch ? 'matches' : 'does not match';
+		const multipleMessage = isMultipleMatch ? 'matches' : 'does not match';
+
+		t.equal(singleItem(input), isSingleMatch, `${JSON.stringify(input)} ${singleMessage} ${JSON.stringify(singleSchematic)}`);
+		t.equal(multipleItems(input), isMultipleMatch, `${JSON.stringify(input)} ${multipleMessage} ${JSON.stringify(multipleSchematic)}`);
+	});
+
+	t.end();
+});
