@@ -1,6 +1,7 @@
 import type { Evaluator, Builder, Compiler } from './Common';
 
 export type JSONSchema = {
+	additionalItems: Parameters<typeof Rules.additionalItems>[0];
 	items: Parameters<typeof Rules.items>[0];
 };
 
@@ -23,7 +24,10 @@ function isArray(input: unknown): boolean {
 */
 
 export const Rules: { [key: string]: Builder<JSONSchema> } = {
-	items: <T extends JSONSchema>(value: Partial<T> | Array<Partial<T>>, _: Partial<T>, compile: Compiler): Evaluator => {
+	additionalItems: <T extends JSONSchema>(value: boolean | Partial<T>): Evaluator => {
+		return (input: unknown) => true;
+	},
+	items: <T extends JSONSchema>(value: Partial<T> | Array<Partial<T>>, schematic: Partial<T>, compile: Compiler): Evaluator => {
 		if (isObject(value)) {
 			const evaluate = compile(value as JSONSchema);
 
@@ -31,9 +35,15 @@ export const Rules: { [key: string]: Builder<JSONSchema> } = {
 		}
 
 		const evaluators = (value as Array<JSONSchema>).map(compile);
+		const { additionalItems = true } = schematic;
+		const additional =
+			isObject(additionalItems)
+				? compile(additionalItems)
+				: () => additionalItems;
 
 		return (input: unknown) =>
 			isArray(input) &&
-			(input as Array<any>).every((item, index) => evaluators.length > index && evaluators[index](item));
+			(input as Array<any>)
+				.every((item, index) => index < evaluators.length ? evaluators[index](item) : additional(item));
 	},
 };
