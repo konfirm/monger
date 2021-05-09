@@ -131,3 +131,37 @@ test('Domain/Evaluation/Schema - schema/minItems', (t) => {
 
 	t.end();
 });
+
+
+test('Domain/Evaluation/Schema - schema/uniqueItems', (t) => {
+	const { schema } = Schema;
+
+	each`
+		input                | unique   | matches
+		---------------------|----------|---------
+		${[]}                | ${true}  | yes
+		${[]}                | ${false} | yes
+		${[1]}               | ${true}  | yes
+		${[1]}               | ${false} | yes
+		${[1, 2]}            | ${true}  | yes
+		${[1, 2]}            | ${false} | yes
+		${[1, 1]}            | ${true}  | no
+		${[1, 1]}            | ${false} | yes
+		${['one', 1]}        | ${true} | yes
+		${['one', 1]}        | ${false} | yes
+		${['one', 'two']}    | ${true} | yes
+		${['one', 'two']}    | ${false} | yes
+		${['one', 'one']}    | ${true} | no
+		${['one', 'one']}    | ${false} | yes
+	`((record) => {
+		const { input, unique, matches } = record as { input: any, unique: boolean, matches: string };
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match';
+		const schematic = { uniqueItems: unique };
+		const uniqueItems = schema(schematic);
+
+		t.equal(uniqueItems(input), isMatch, `${JSON.stringify(input)} ${message} ${JSON.stringify(schematic)}`);
+	});
+
+	t.end();
+});
