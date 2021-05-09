@@ -3,3 +3,4 @@ node_modules
 old
 package-lock.json
 dist/*
+coverage
