@@ -4,6 +4,7 @@ export type JSONSchema = {
 	additionalItems: Parameters<typeof Rules.additionalItems>[0];
 	items: Parameters<typeof Rules.items>[0];
 	maxItems: Parameters<typeof Rules.maxItems>[0];
+	minItems: Parameters<typeof Rules.minItems>[0];
 };
 
 function isObject(input: unknown): boolean {
@@ -49,5 +50,8 @@ export const Rules: { [key: string]: Builder<JSONSchema> } = {
 	},
 	maxItems: <T>(value: number): Evaluator => {
 		return (input: unknown) => isArray(input) && (input as Array<any>).length <= value;
+	},
+	minItems: <T>(value: number): Evaluator => {
+		return (input: unknown) => isArray(input) && (input as Array<any>).length >= value;
 	},
 };

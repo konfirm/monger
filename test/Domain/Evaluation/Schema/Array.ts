@@ -114,3 +114,20 @@ test('Domain/Evaluation/Schema - schema/maxItems', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/minItems', (t) => {
+	const { schema } = Schema;
+	const minItems = schema({ minItems: 3 });
+	const input: Array<any> = [];
+
+	for (let i = 1; i < 7; ++i) {
+		const isMatch = i >= 3;
+		const message = isMatch ? 'matches' : 'does not match';
+
+		input.push(`p${i}`);
+
+		t.equal(minItems(input), isMatch, `${JSON.stringify(input)} ${message} { minItems: 3 }`);
+	}
+
+	t.end();
+});
