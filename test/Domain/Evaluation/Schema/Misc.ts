@@ -15,3 +15,16 @@ test('Domain/Evaluation/Schema - schema/title', (t) => {
 	t.end();
 });
 
+test('Domain/Evaluation/Schema - schema/description', (t) => {
+	const { schema } = Schema;
+	const description = schema({ description: 'some description' });
+
+	t.true(description(0), '0 matches { description: "some description" }');
+	t.true(description('one'), '"one" matches { description: "some description" }');
+	t.true(description(true), 'true matches { description: "some description" }');
+	t.true(description(null), 'null matches { description: "some description" }');
+	t.true(description([]), '[] matches { description: "some description" }');
+	t.true(description({}), '{} matches { description: "some description" }');
+
+	t.end();
+});
