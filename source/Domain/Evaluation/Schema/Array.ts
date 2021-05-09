@@ -34,6 +34,6 @@ export const Rules: { [key: string]: Builder<JSONSchema> } = {
 
 		return (input: unknown) =>
 			isArray(input) &&
-			(input as Array<any>).every((item) => evaluators.some((evaluate) => evaluate(item)));
+			(input as Array<any>).every((item, index) => evaluators.length > index && evaluators[index](item));
 	},
 };

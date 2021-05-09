@@ -11,19 +11,22 @@ test('Domain/Evaluation/Schema - schema/items', (t) => {
 	const multipleItems = schema(multipleSchematic as JSONSchema);
 
 	each`
-		input                         | single | multiple
-		------------------------------|--------|----------
-		${[]}                         | yes    | yes
-		${['one']}                    | yes    | yes
-		${['one', 'two']}             | yes    | yes
-		${['one', 'two', 3]}          | no     | no
-		${['one', 2]}                 | no     | no
-		${[{ name: 'one' }]}          | no     | yes
-		${['one', { name: 'two' }]}   | no     | yes
-		${['one', { name: 2 }]}       | no     | yes
-		${[{ name: 1 }, 'two']}       | no     | yes
-		${[{ name: 1 }, { name: 2 }]} | no     | yes
-		${[{ num: 1 }]}               | no     | no
+		input                                | single | multiple
+		-------------------------------------|--------|----------
+		${[]}                                | yes    | yes
+		${['one']}                           | yes    | yes
+		${['one', 'two']}                    | yes    | no
+		${['one', 'two', 3]}                 | no     | no
+		${['one', 2]}                        | no     | no
+		${[{ name: 'one' }]}                 | no     | no
+		${['one', { name: 'two' }]}          | no     | yes
+		${['one', { name: 2 }]}              | no     | yes
+		${['one', 'two', { name: 'three' }]} | no     | no
+		${['one', 'two', { name: 3 }]}       | no     | no
+		${[{ name: 1 }, 'two']}              | no     | no
+		${[{ name: 1 }, { name: 2 }]}        | no     | no
+		${[{ num: 1 }]}                      | no     | no
+		${['one', { num: 2 }]}               | no     | no
 	`((record) => {
 		const { input, single, multiple } = record as { input: any, single: string, multiple: string };
 		const isSingleMatch = single === 'yes';
