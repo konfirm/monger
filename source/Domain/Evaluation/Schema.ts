@@ -4,6 +4,7 @@ import * as NumberSchema from './Schema/Number';
 import * as StringSchema from './Schema/String';
 import * as ObjectSchema from './Schema/Object';
 import * as ArraySchema from './Schema/Array';
+import * as MiscSchema from './Schema/Misc';
 
 export type JSONSchema
 	= GenericSchema.JSONSchema
@@ -11,6 +12,7 @@ export type JSONSchema
 	& StringSchema.JSONSchema
 	& ObjectSchema.JSONSchema
 	& ArraySchema.JSONSchema
+	& MiscSchema.JSONSchema;
 
 function isUndefined(input: unknown): boolean {
 	return typeof input === 'undefined';
@@ -22,6 +24,7 @@ const rules: { [key: string]: Builder<JSONSchema> } = {
 	...StringSchema.Rules,
 	...ObjectSchema.Rules,
 	...ArraySchema.Rules,
+	...MiscSchema.Rules,
 };
 
 export function schema(schematic: Partial<JSONSchema>): Evaluator {
