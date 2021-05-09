@@ -97,3 +97,20 @@ test('Domain/Evaluation/Schema - schema/items', (t) => {
 
 	t.end();
 });
+
+test('Domain/Evaluation/Schema - schema/maxItems', (t) => {
+	const { schema } = Schema;
+	const maxItems = schema({ maxItems: 3 });
+	const input: Array<any> = [];
+
+	for (let i = 1; i < 7; ++i) {
+		const isMatch = i <= 3;
+		const message = isMatch ? 'matches' : 'does not match';
+
+		input.push(`p${i}`);
+
+		t.equal(maxItems(input), isMatch, `${JSON.stringify(input)} ${message} { maxItems: 3 }`);
+	}
+
+	t.end();
+});

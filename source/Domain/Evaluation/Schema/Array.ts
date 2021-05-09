@@ -3,6 +3,7 @@ import type { Evaluator, Builder, Compiler } from './Common';
 export type JSONSchema = {
 	additionalItems: Parameters<typeof Rules.additionalItems>[0];
 	items: Parameters<typeof Rules.items>[0];
+	maxItems: Parameters<typeof Rules.maxItems>[0];
 };
 
 function isObject(input: unknown): boolean {
@@ -45,5 +46,8 @@ export const Rules: { [key: string]: Builder<JSONSchema> } = {
 			isArray(input) &&
 			(input as Array<any>)
 				.every((item, index) => index < evaluators.length ? evaluators[index](item) : additional(item));
+	},
+	maxItems: <T>(value: number): Evaluator => {
+		return (input: unknown) => isArray(input) && (input as Array<any>).length <= value;
 	},
 };
