@@ -26,9 +26,42 @@ test('Domain/Operator/Evaluation - $expr', (t) => {
 
 test('Domain/Operator/Evaluation - $jsonSchema', (t) => {
 	const { $jsonSchema } = Evaluation;
-	const jsonSchema = $jsonSchema('@TODO');
+	const schema = $jsonSchema({
+		type: 'object',
+		required: ['foo'],
+		properties: {
+			foo: {
+				type: 'string',
+				minLength: 2,
+				maxLength: 7,
+			},
+		},
+		dependencies: {
+			bar: ['baz'],
+			qux: {
+				properties: {
+					foo: {
+						maxLength: 5,
+					}
+				},
+			}
+		},
+	});
 
-	t.throws(() => jsonSchema('@TODO'), '$jsonSchema is not implemented');
+	t.false(schema({}), `{} does not match schema`);
+	t.false(schema({ foo: 1 }), `{foo: 1} does not match schema`);
+	t.false(schema({ foo: 'a' }), `{foo: 'a'} does not match schema`);
+	t.true(schema({ foo: 'hi' }), `{foo: 'hi'} matches schema`);
+	t.false(schema({ bar: 'hi' }), `{bar: 'hi'} does not match schema`);
+	t.true(schema({ foo: 'hello' }), `{foo: 'hello'} matches schema`);
+	t.true(schema({ foo: 'hellooo' }), `{foo: 'hellooo'} matches schema`);
+	t.false(schema({ foo: 'helloooo' }), `{foo: 'helloooo'} does not match schema`);
+	t.false(schema({ foo: 'hello world' }), `{foo: 'hello world'} does not match schema`);
+	t.false(schema({ foo: 'hello', bar: 1 }), `{foo: 'hello', bar: 1} does not match schema`);
+	t.true(schema({ foo: 'hello', bar: 1, baz: 2 }), `{foo: 'hello', bar: 1, baz: 1} matches schema`);
+	t.true(schema({ foo: 'hello', qux: 3 }), `{foo: 'hello', qux: 3} matches schema`);
+	t.false(schema({ foo: 'helloo', qux: 3 }), `{foo: 'helloo', qux: 3} does not match schema`);
+	t.false(schema({ foo: 'hellooo', qux: 3 }), `{foo: 'hellooo', qux: 3} does not match schema`);
 
 	t.end();
 });
