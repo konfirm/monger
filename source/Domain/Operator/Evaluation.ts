@@ -1,6 +1,7 @@
 import type { Query, Evaluator } from '../Query/Compiler';
 import { TextSearchOptions } from '../Evaluation/Text';
 import { Term } from '../Evaluation/Text';
+import { schema as jsonSchema } from '../Evaluation/Schema';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];
@@ -26,13 +27,11 @@ export function $expr(todo: any): Evaluator {
 /**
  * $jsonSchema
  * Validate documents against the given JSON Schema.
- * @syntax
+ * @syntax  { $jsonSchema: <JSONSchema> }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/jsonSchema/
  */
-export function $jsonSchema(todo: any): Evaluator {
-	return (input: unknown): boolean => {
-		throw new Error('$jsonSchema not implemented');
-	}
+export function $jsonSchema(...args: Parameters<typeof jsonSchema>): Evaluator {
+	return jsonSchema(...args);
 }
 
 /**
@@ -89,7 +88,7 @@ export function $text(query: TextSearchOptions): Evaluator {
 /**
  * $where
  * Matches documents that satisfy a JavaScript expression.
- * @syntax
+ * @syntax  { $where: Function }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/where/
  */
 export function $where(query: Function): Evaluator {
