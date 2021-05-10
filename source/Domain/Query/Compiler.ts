@@ -2,6 +2,7 @@ import type { Operation as BitwiseOperation } from '../Operator/Bitwise';
 import type { Operation as ComparisonOperation } from '../Operator/Comparison';
 import type { Operation as ElementOperation } from '../Operator/Element';
 import type { Operation as LogicalOperation } from '../Operator/Logical';
+import type { Operation as EvaluationOperation } from '../Operator/Evaluation';
 
 export type Evaluator = (input: any) => boolean;
 export type CompileStep = (query: any) => Evaluator;
@@ -15,7 +16,8 @@ type Operation
 	= BitwiseOperation
 	& ComparisonOperation
 	& ElementOperation
-	& LogicalOperation;
+	& LogicalOperation
+	& EvaluationOperation;
 
 export type Query = { [key: string]: Partial<Query | Operation> };
 
