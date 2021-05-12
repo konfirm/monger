@@ -25,7 +25,7 @@ export const Compiler = {
 	Query: QueryCompiler,
 };
 
-export function compile<T extends Query = Query>(query: T): Evaluator {
+export function compile<T extends Partial<Query> = Partial<Query>>(query: T): Evaluator {
 	const instance = new QueryCompiler<T>(Bitwise, Comparison, Element, Logical, Evaluation);
 
 	return instance.compile(query);

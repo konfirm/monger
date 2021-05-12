@@ -40,14 +40,19 @@ test('main - compile', (t) => {
 	const { compile } = main;
 	const query = compile({
 		name: { $eq: 'Sample' },
-		counter: {
-			$or: [
-				{ $in: [1] },
-				{ $gt: 2 }
-			],
-		},
+		$and: [
+			{
+				$or: [
+					{ counter: { $in: [1] } },
+					{ counter: { $gt: 2 } },
+				]
+			}
+		],
 	});
 
+	t.false(query({}));
+	t.false(query({ name: 'Sample' }));
+	t.false(query({ counter: 1 }));
 	t.true(query({ name: 'Sample', counter: 1 }));
 	t.false(query({ name: 'Sample', counter: 2 }));
 	t.true(query({ name: 'Sample', counter: 3 }));

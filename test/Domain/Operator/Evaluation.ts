@@ -118,7 +118,7 @@ test('Domain/Operator/Evaluation - $regex', (t) => {
 		${'PART'}  | ${'i'}  | partial | yes
 	`((record) => {
 		const { query, options, input, matches } = record;
-		const regex = $regex(query as unknown as QueryType, undefined, { $options: options } as ContextType);
+		const regex = $regex(query as unknown as QueryType, () => () => true, { $options: options } as ContextType);
 		const verdict = matches === 'yes';
 		const message = verdict ? 'matches' : 'does not match';
 		const type = query instanceof RegExp ? 'RegExp' : 'string';

@@ -1,4 +1,4 @@
-import type { Query, Evaluator } from '../Query/Compiler';
+import type { Query, CompileStep, Evaluator } from '../Query/Compiler';
 import { TextSearchOptions } from '../Evaluation/Text';
 import { Term } from '../Evaluation/Text';
 import { schema as jsonSchema } from '../Evaluation/Schema';
@@ -10,6 +10,8 @@ export type Operation = {
 	$regex: Parameters<typeof $regex>[0];
 	$text: Parameters<typeof $text>[0];
 	$where: Parameters<typeof $where>[0];
+	// non-operations
+	$options: string; // options for $regex
 };
 
 /**
@@ -54,8 +56,8 @@ export function $mod(query: [number, number]): Evaluator {
  *          { <field>: { $regex: /pattern/<options> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/regex/
  */
-export function $regex(query: RegExp | string, _: any = undefined, context: Query = {}): Evaluator {
-	const { $options: flags } = context;
+export function $regex(query: RegExp | string, _: CompileStep, context: Partial<Query>): Evaluator {
+	const { $options: flags } = context as Operation;
 	const regex = flags || typeof query === 'string' ? new RegExp(String(query), flags && String(flags)) : query;
 
 	return (input: unknown): boolean => regex.test(String(input));
