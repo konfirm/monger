@@ -50,17 +50,17 @@ test('main - compile', (t) => {
 		],
 	});
 
-	t.false(query({}));
-	t.false(query({ name: 'Sample' }));
-	t.false(query({ counter: 1 }));
-	t.true(query({ name: 'Sample', counter: 1 }));
-	t.false(query({ name: 'Sample', counter: 2 }));
-	t.true(query({ name: 'Sample', counter: 3 }));
-	t.true(query({ name: 'Sample', counter: 4 }));
-	t.false(query({ name: 'Test', counter: 4 }));
-	t.false(query({ name: 'Test', counter: 3 }));
-	t.false(query({ name: 'Test', counter: 2 }));
-	t.false(query({ name: 'Test', counter: 1 }));
+	t.false(query({}), 'does not match empty object');
+	t.false(query({ name: 'Sample' }), 'does not match object with only name');
+	t.false(query({ counter: 1 }), 'does not match object with only counter');
+	t.true(query({ name: 'Sample', counter: 1 }), 'matches object with name "Sample" and counter: 1');
+	t.false(query({ name: 'Sample', counter: 2 }), 'does not match object with name "Sample" and counter: 2');
+	t.true(query({ name: 'Sample', counter: 3 }), 'matches object with name "Sample" and counter: 3');
+	t.true(query({ name: 'Sample', counter: 4 }), 'matches object with name "Sample" and counter: 4');
+	t.false(query({ name: 'Test', counter: 4 }), 'does not match object with name "Test" and counter: 4');
+	t.false(query({ name: 'Test', counter: 3 }), 'does not match object with name "Test" and counter: 3');
+	t.false(query({ name: 'Test', counter: 2 }), 'does not match object with name "Test" and counter: 2');
+	t.false(query({ name: 'Test', counter: 1 }), 'does not match object with name "Test" and counter: 1');
 
 	t.end();
 });
