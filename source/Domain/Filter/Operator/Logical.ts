@@ -1,4 +1,4 @@
-import type { Evaluator, CompileStep } from '../Query/Compiler';
+import type { Evaluator, CompileStep } from '../Compiler';
 
 export type Operation = {
 	$and: Parameters<typeof $and>[0];
@@ -9,7 +9,7 @@ export type Operation = {
 
 /**
   * $and
-  * Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.
+  * Joins query clauses with a logical AND returns all documents that match the conditions of all clauses.
   * @syntax  { $and: [{ <expression1> }, { <expression2> }, ...] }
   * @see     https://docs.mongodb.com/manual/reference/operator/query/and/
   */
@@ -33,7 +33,7 @@ export function $not<T = unknown>(query: T, compile: CompileStep): Evaluator {
 
 /**
   * $nor
-  * Joins query clauses with a logical NOR returns all documents that fail to match both clauses.
+  * Joins query clauses with a logical NOR returns all documents that fail to match all clauses.
   * @syntax  { $nor: [ { <expression1> }, { <expression2> }, ...] }
   * @see     https://docs.mongodb.com/manual/reference/operator/query/nor/
   */
@@ -45,7 +45,7 @@ export function $nor<T = unknown>(value: Array<T>, compile: CompileStep): Evalua
 
 /**
  * $or
- * Joins query clauses with a logical OR returns all documents that match the conditions of either clause.
+ * Joins query clauses with a logical OR returns all documents that match the conditions of any clause.
  * @syntax  { $or: [ { <expression1> }, { <expression2> }, ...} ] }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/or/
  */

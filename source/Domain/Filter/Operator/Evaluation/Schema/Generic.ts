@@ -1,7 +1,7 @@
 import type { Evaluator, Builder, Compiler } from './Common';
-import type { TypeAliasAvailable } from '../../BSON';
-import { is as isBSONType } from '../../BSON';
-import { $in } from '../../Operator/Comparison';
+import type { TypeAliasAvailable } from '../../../../BSON';
+import { is as isBSONType } from '../../../../BSON';
+import { $in } from '../../Comparison';
 
 type JSONType
 	= 'array'

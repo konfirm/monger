@@ -1,8 +1,8 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Evaluation from '../../../source/Domain/Operator/Evaluation';
+import * as Evaluation from '../../../../source/Domain/Filter/Operator/Evaluation';
 
-test('Domain/Operator/Evaluation - exports', (t) => {
+test('Domain/Filter/Operator/Evaluation - exports', (t) => {
 	const expected = ['$expr', '$jsonSchema', '$mod', '$regex', '$text', '$where'];
 	const actual = Object.keys(Evaluation);
 
@@ -15,7 +15,7 @@ test('Domain/Operator/Evaluation - exports', (t) => {
 });
 
 
-test('Domain/Operator/Evaluation - $expr', (t) => {
+test('Domain/Filter/Operator/Evaluation - $expr', (t) => {
 	const { $expr } = Evaluation;
 	const expr = $expr('@TODO');
 
@@ -24,7 +24,7 @@ test('Domain/Operator/Evaluation - $expr', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Evaluation - $jsonSchema', (t) => {
+test('Domain/Filter/Operator/Evaluation - $jsonSchema', (t) => {
 	const { $jsonSchema } = Evaluation;
 	const schema = $jsonSchema({
 		type: 'object',
@@ -66,7 +66,7 @@ test('Domain/Operator/Evaluation - $jsonSchema', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Evaluation - $mod', (t) => {
+test('Domain/Filter/Operator/Evaluation - $mod', (t) => {
 	const { $mod } = Evaluation;
 
 	each`
@@ -100,7 +100,7 @@ test('Domain/Operator/Evaluation - $mod', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Evaluation - $regex', (t) => {
+test('Domain/Filter/Operator/Evaluation - $regex', (t) => {
 	const { $regex } = Evaluation;
 
 	type RegexArgs = Parameters<typeof $regex>;
@@ -129,7 +129,7 @@ test('Domain/Operator/Evaluation - $regex', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Evaluation - $text', (t) => {
+test('Domain/Filter/Operator/Evaluation - $text', (t) => {
 	const { $text } = Evaluation;
 
 	each`
@@ -234,7 +234,7 @@ test('Domain/Operator/Evaluation - $text', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Evaluation - $where', (t) => {
+test('Domain/Filter/Operator/Evaluation - $where', (t) => {
 	const { $where } = Evaluation;
 
 	const plain = $where(function (this: any) {

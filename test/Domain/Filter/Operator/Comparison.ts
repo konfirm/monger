@@ -1,8 +1,8 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Comparison from '../../../source/Domain/Operator/Comparison';
+import * as Comparison from '../../../../source/Domain/Filter/Operator/Comparison';
 
-test('Domain/Operator/Comparison - exports', (t) => {
+test('Domain/Filter/Operator/Comparison - exports', (t) => {
 	const expected = ['$eq', '$gt', '$gte', '$in', '$lt', '$lte', '$ne', '$nin'];
 	const actual = Object.keys(Comparison);
 
@@ -14,7 +14,7 @@ test('Domain/Operator/Comparison - exports', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $eq', (t) => {
+test('Domain/Filter/Operator/Comparison - $eq', (t) => {
 	const { $eq } = Comparison;
 
 	each`
@@ -42,7 +42,7 @@ test('Domain/Operator/Comparison - $eq', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $ne', (t) => {
+test('Domain/Filter/Operator/Comparison - $ne', (t) => {
 	const { $ne } = Comparison;
 
 	each`
@@ -70,7 +70,7 @@ test('Domain/Operator/Comparison - $ne', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $gt', (t) => {
+test('Domain/Filter/Operator/Comparison - $gt', (t) => {
 	const { $gt } = Comparison;
 
 	each`
@@ -98,7 +98,7 @@ test('Domain/Operator/Comparison - $gt', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $gte', (t) => {
+test('Domain/Filter/Operator/Comparison - $gte', (t) => {
 	const { $gte } = Comparison;
 
 	each`
@@ -126,7 +126,7 @@ test('Domain/Operator/Comparison - $gte', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $lt', (t) => {
+test('Domain/Filter/Operator/Comparison - $lt', (t) => {
 	const { $lt } = Comparison;
 
 	each`
@@ -154,7 +154,7 @@ test('Domain/Operator/Comparison - $lt', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $lte', (t) => {
+test('Domain/Filter/Operator/Comparison - $lte', (t) => {
 	const { $lte } = Comparison;
 
 	each`
@@ -182,7 +182,7 @@ test('Domain/Operator/Comparison - $lte', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $in', (t) => {
+test('Domain/Filter/Operator/Comparison - $in', (t) => {
 	const { $in } = Comparison;
 
 	each`
@@ -214,7 +214,7 @@ test('Domain/Operator/Comparison - $in', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Comparison - $nin', (t) => {
+test('Domain/Filter/Operator/Comparison - $nin', (t) => {
 	const { $nin } = Comparison;
 
 	each`

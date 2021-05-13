@@ -1,8 +1,8 @@
-import type { JSONSchema } from '../../../../source/Domain/Evaluation/Schema';
+import type { JSONSchema } from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 import * as test from 'tape';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/bsonType', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/bsonType', (t) => {
 	const { schema } = Schema;
 	const typed: Array<{ type: string, value: any }> = [
 		{ type: 'double', value: 1.2 },
@@ -39,7 +39,7 @@ test('Domain/Evaluation/Schema - schema/bsonType', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/enum', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/enum', (t) => {
 	const { schema } = Schema;
 	const values = ['foo', 'bar', 'baz'];
 	const evaluate = schema({ enum: values });
@@ -53,7 +53,7 @@ test('Domain/Evaluation/Schema - schema/enum', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/type', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/type', (t) => {
 	const { schema } = Schema;
 	const typed: Array<{ type: string, value: any }> = [
 		{ type: 'string', value: 'true' },
@@ -82,7 +82,7 @@ test('Domain/Evaluation/Schema - schema/type', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/allOf', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/allOf', (t) => {
 	const { schema } = Schema;
 	const values = [
 		{ enum: ['foo', 'bar', 'baz'], },
@@ -100,7 +100,7 @@ test('Domain/Evaluation/Schema - schema/allOf', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/anyOf', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/anyOf', (t) => {
 	const { schema } = Schema;
 	const values = [
 		{ enum: ['foo', 'bar', 'baz'], },
@@ -118,7 +118,7 @@ test('Domain/Evaluation/Schema - schema/anyOf', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/oneOf', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/oneOf', (t) => {
 	const { schema } = Schema;
 	const values = [
 		{ enum: ['foo', 'bar', 'baz'], },
@@ -136,7 +136,7 @@ test('Domain/Evaluation/Schema - schema/oneOf', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/not', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/not', (t) => {
 	const { schema } = Schema;
 	const values = { type: ['string', 'number'] };
 	const not = schema({ not: values as JSONSchema['not'] });

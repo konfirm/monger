@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/maxLength', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/maxLength', (t) => {
 	const { schema } = Schema;
 	const maxLength = schema({ maxLength: 7 });
 	const string = 'abcdefghijklm';
@@ -17,7 +17,7 @@ test('Domain/Evaluation/Schema - schema/maxLength', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/minLength', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/minLength', (t) => {
 	const { schema } = Schema;
 	const minLength = schema({ minLength: 7 });
 	const string = 'abcdefghijklm';
@@ -33,7 +33,7 @@ test('Domain/Evaluation/Schema - schema/minLength', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/pattern', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/pattern', (t) => {
 	const { schema } = Schema;
 	const pattern = schema({ pattern: '^[a-z]{2,}$' });
 	const regex = schema({ pattern: /^[a-z]{2,}$/i });

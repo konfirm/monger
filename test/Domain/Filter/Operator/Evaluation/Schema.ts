@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import * as Schema from '../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - exports', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - exports', (t) => {
 	const expected = ['schema'];
 	const actual = Object.keys(Schema);
 

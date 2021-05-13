@@ -1,5 +1,5 @@
-import type { Evaluator } from '../Query/Compiler';
-import { is } from '../BSON';
+import type { Evaluator } from '../Compiler';
+import { is } from '../../BSON';
 
 type TypeArg = number | string;
 

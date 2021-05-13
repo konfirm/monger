@@ -1,9 +1,9 @@
-import type { JSONSchema } from '../../../../source/Domain/Evaluation/Schema';
+import type { JSONSchema } from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/maxProperties', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/maxProperties', (t) => {
 	const { schema } = Schema;
 	const maxProperties = schema({ maxProperties: 3 });
 	const input: { [key: string]: unknown } = {};
@@ -20,7 +20,7 @@ test('Domain/Evaluation/Schema - schema/maxProperties', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/minProperties', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/minProperties', (t) => {
 	const { schema } = Schema;
 	const minProperties = schema({ minProperties: 3 });
 	const input: { [key: string]: unknown } = {};
@@ -37,7 +37,7 @@ test('Domain/Evaluation/Schema - schema/minProperties', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/required', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/required', (t) => {
 	const { schema } = Schema;
 	const required = schema({ required: ['p2', 'p4'] });
 	const input: { [key: string]: unknown } = {};
@@ -58,7 +58,7 @@ test('Domain/Evaluation/Schema - schema/required', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/additionalProperties', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/additionalProperties', (t) => {
 	const { schema } = Schema;
 	const foo: JSONSchema['properties'] = { foo: { bsonType: 'int' } };
 	const bar: JSONSchema['properties'] = { bar: { bsonType: 'int' } };
@@ -113,7 +113,7 @@ test('Domain/Evaluation/Schema - schema/additionalProperties', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/properties', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/properties', (t) => {
 	const { schema } = Schema;
 	const properties = {
 		properties: {
@@ -132,7 +132,7 @@ test('Domain/Evaluation/Schema - schema/properties', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/patternProperties', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/patternProperties', (t) => {
 	const { schema } = Schema;
 	const patternProperties = {
 		patternProperties: {
@@ -160,7 +160,7 @@ test('Domain/Evaluation/Schema - schema/patternProperties', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/dependencies', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/dependencies', (t) => {
 	const { schema } = Schema;
 	const dependencies = {
 		bar: ['baz'],

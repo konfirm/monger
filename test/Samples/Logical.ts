@@ -1,6 +1,6 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import { compile } from '../../source/main';
+import { filter } from '../../source/main';
 
 test('Samples/Logical - $and', (t) => {
 	const query = {
@@ -9,7 +9,7 @@ test('Samples/Logical - $and', (t) => {
 			{ age: { $gte: 21 } },
 		]
 	};
-	const and = compile(query);
+	const and = filter(query);
 
 	each`
 		name     | age   | matches
@@ -43,7 +43,7 @@ test('Samples/Logical - $not', (t) => {
 			age: { $gte: 21 },
 		}
 	};
-	const not = compile(query);
+	const not = filter(query);
 
 	each`
 		name     | age   | matches
@@ -77,7 +77,7 @@ test('Samples/Logical - $nor', (t) => {
 			{ age: { $gte: 21 } },
 		]
 	};
-	const nor = compile(query);
+	const nor = filter(query);
 
 	each`
 		name     | age   | matches
@@ -111,7 +111,7 @@ test('Samples/Logical - $or', (t) => {
 			{ age: { $gte: 21 } },
 		]
 	};
-	const or = compile(query);
+	const or = filter(query);
 
 	each`
 		name     | age   | matches

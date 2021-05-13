@@ -1,7 +1,7 @@
-import type { Query, CompileStep, Evaluator } from '../Query/Compiler';
-import { TextSearchOptions } from '../Evaluation/Text';
-import { Term } from '../Evaluation/Text';
-import { schema as jsonSchema } from '../Evaluation/Schema';
+import type { Query, CompileStep, Evaluator } from '../Compiler';
+import { TextSearchOptions } from './Evaluation/Text';
+import { Term } from './Evaluation/Text';
+import { schema as jsonSchema } from './Evaluation/Schema';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];

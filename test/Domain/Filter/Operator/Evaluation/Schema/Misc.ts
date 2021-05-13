@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/title', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/title', (t) => {
 	const { schema } = Schema;
 	const title = schema({ title: 'some title' });
 
@@ -15,7 +15,7 @@ test('Domain/Evaluation/Schema - schema/title', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/description', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/description', (t) => {
 	const { schema } = Schema;
 	const description = schema({ description: 'some description' });
 

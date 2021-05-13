@@ -1,10 +1,10 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Bitwise from '../../../source/Domain/Operator/Bitwise';
+import * as Bitwise from '../../../../source/Domain/Filter/Operator/Bitwise';
 
 type TestRecord = { query: number | Array<number>, input: number, matches: string };
 
-test('Domain/Operator/Bitwise - exports', (t) => {
+test('Domain/Filter/Operator/Bitwise - exports', (t) => {
 	const expected = ['$bitsAllClear', '$bitsAllSet', '$bitsAnyClear', '$bitsAnySet'];
 	const actual = Object.keys(Bitwise);
 
@@ -16,7 +16,7 @@ test('Domain/Operator/Bitwise - exports', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Bitwise - $bitsAllClear', (t) => {
+test('Domain/Filter/Operator/Bitwise - $bitsAllClear', (t) => {
 	const { $bitsAllClear } = Bitwise;
 
 	each`
@@ -54,7 +54,7 @@ test('Domain/Operator/Bitwise - $bitsAllClear', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Bitwise - $bitsAllSet', (t) => {
+test('Domain/Filter/Operator/Bitwise - $bitsAllSet', (t) => {
 	const { $bitsAllSet } = Bitwise;
 
 	each`
@@ -92,7 +92,7 @@ test('Domain/Operator/Bitwise - $bitsAllSet', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Bitwise - $bitsAnyClear', (t) => {
+test('Domain/Filter/Operator/Bitwise - $bitsAnyClear', (t) => {
 	const { $bitsAnyClear } = Bitwise;
 
 	each`
@@ -130,7 +130,7 @@ test('Domain/Operator/Bitwise - $bitsAnyClear', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Bitwise - $bitsAnySet', (t) => {
+test('Domain/Filter/Operator/Bitwise - $bitsAnySet', (t) => {
 	const { $bitsAnySet } = Bitwise;
 
 	each`

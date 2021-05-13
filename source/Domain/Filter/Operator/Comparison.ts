@@ -1,4 +1,4 @@
-import type { Evaluator } from '../Query/Compiler';
+import type { Evaluator } from '../Compiler';
 
 type Primitive = string | number | boolean;
 

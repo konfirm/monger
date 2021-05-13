@@ -1,4 +1,4 @@
-import type { Evaluator as QCEvaluator } from '../../Query/Compiler';
+import type { Evaluator as QCEvaluator } from '../../../Compiler';
 
 export type Evaluator = QCEvaluator;
 export type JSONSchema = { [key: string]: unknown };

@@ -1,8 +1,8 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Element from '../../../source/Domain/Operator/Element';
+import * as Element from '../../../../source/Domain/Filter/Operator/Element';
 
-test('Domain/Operator/Element - exports', (t) => {
+test('Domain/Filter/Operator/Element - exports', (t) => {
 	const expected = ['$exists', '$type'];
 	const actual = Object.keys(Element);
 
@@ -14,7 +14,7 @@ test('Domain/Operator/Element - exports', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Element - $exists', (t) => {
+test('Domain/Filter/Operator/Element - $exists', (t) => {
 	const { $exists } = Element;
 
 	each`
@@ -52,7 +52,7 @@ test('Domain/Operator/Element - $exists', (t) => {
 	t.end();
 });
 
-test('Domain/Operator/Element - $type', (t) => {
+test('Domain/Filter/Operator/Element - $type', (t) => {
 	const { $type } = Element;
 	const types = {
 		double: 1,

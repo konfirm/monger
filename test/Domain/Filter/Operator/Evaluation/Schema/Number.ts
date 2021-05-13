@@ -1,9 +1,9 @@
-import type { JSONSchema } from '../../../../source/Domain/Evaluation/Schema';
+import type { JSONSchema } from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/multipleOf', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/multipleOf', (t) => {
 	const { schema } = Schema;
 	const value = 4;
 	const multipleOf = schema({ multipleOf: value as JSONSchema['multipleOf'] });
@@ -18,7 +18,7 @@ test('Domain/Evaluation/Schema - schema/multipleOf', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/maximum', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/maximum', (t) => {
 	const { schema } = Schema;
 
 	each`
@@ -54,7 +54,7 @@ test('Domain/Evaluation/Schema - schema/maximum', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
 	const { schema } = Schema;
 
 	each`
@@ -93,7 +93,7 @@ test('Domain/Evaluation/Schema - schema/exclusiveMaximum', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/minimum', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/minimum', (t) => {
 	const { schema } = Schema;
 
 	each`
@@ -129,7 +129,7 @@ test('Domain/Evaluation/Schema - schema/minimum', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/exclusiveMinimum', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/exclusiveMinimum', (t) => {
 	const { schema } = Schema;
 
 	each`

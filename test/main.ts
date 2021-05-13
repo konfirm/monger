@@ -2,8 +2,8 @@ import * as test from 'tape';
 import * as main from '../source/main';
 
 test('main - exports', (t) => {
-	const functions: Array<keyof typeof main> = ['compile'];
-	const objects: Array<keyof typeof main> = ['Operator', 'Compiler'];
+	const functions: Array<keyof typeof main> = ['filter'];
+	const objects: Array<keyof typeof main> = ['Filter'];
 	const expected = functions.concat(objects);
 	const actual = Object.keys(main);
 
@@ -20,25 +20,29 @@ test('main - exports', (t) => {
 	t.end();
 });
 
-test('main - Operator', (t) => {
-	const { Operator } = main;
+test('main - Filter', (t) => {
+	const { Filter } = main;
+	const functions: Array<keyof typeof Filter> = ['Compiler', 'filter'];
+	const objects: Array<keyof typeof Filter> = ['Operator'];
+	const expected = functions.concat(objects);
+	const actual = Object.keys(Filter);
 
-	// console.log(Operator);
+	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
+
+	functions.forEach((key) => {
+		t.equal(typeof Filter[key], 'function', `contains function ${key}`);
+	});
+
+	objects.forEach((key) => {
+		t.equal(typeof Filter[key], 'object', `contains object ${key}`);
+	});
 
 	t.end();
 });
 
-test('main - Compiler', (t) => {
-	const { Compiler } = main;
-
-	// console.log(Compiler);
-
-	t.end();
-});
-
-test('main - compile', (t) => {
-	const { compile } = main;
-	const query = compile({
+test('main - filter', (t) => {
+	const { filter } = main;
+	const query = filter({
 		name: { $eq: 'Sample' },
 		$and: [
 			{

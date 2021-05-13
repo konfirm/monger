@@ -1,4 +1,4 @@
-import type { Evaluator } from './Query/Compiler';
+import type { Evaluator } from './Filter/Compiler';
 
 type ECMAType
 	= 'bigint'

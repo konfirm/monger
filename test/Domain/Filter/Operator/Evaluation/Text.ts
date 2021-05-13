@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import * as Text from '../../../source/Domain/Evaluation/Text';
+import * as Text from '../../../../../source/Domain/Filter/Operator/Evaluation/Text';
 
-test('Domain/Evaluation/Text - exports', (t) => {
+test('Domain/Filter/Operator/Evaluation/Text - exports', (t) => {
 	const expected = ['Term'];
 	const actual = Object.keys(Text);
 
@@ -15,7 +15,7 @@ test('Domain/Evaluation/Text - exports', (t) => {
 
 const { Term } = Text;
 
-test('Domain/Evaluation/Text - constructor', (t) => {
+test('Domain/Filter/Operator/Evaluation/Text - constructor', (t) => {
 	const term = new Term('foo');
 
 	t.true(term.match('foo'), 'matches "foo"');
@@ -26,7 +26,7 @@ test('Domain/Evaluation/Text - constructor', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Text - createTerms', (t) => {
+test('Domain/Filter/Operator/Evaluation/Text - createTerms', (t) => {
 	const terms = Term.createTerms('a foo');
 
 	t.true(terms.every((t) => t.match('a foo')), 'matches "a foo"');

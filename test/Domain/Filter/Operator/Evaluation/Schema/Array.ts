@@ -1,9 +1,9 @@
-import type { JSONSchema } from '../../../../source/Domain/Evaluation/Schema';
+import type { JSONSchema } from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 import * as test from 'tape';
 import each from 'template-literal-each';
-import * as Schema from '../../../../source/Domain/Evaluation/Schema';
+import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
-test('Domain/Evaluation/Schema - schema/additionalItems', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/additionalItems', (t) => {
 	const { schema } = Schema;
 
 	each`
@@ -60,7 +60,7 @@ test('Domain/Evaluation/Schema - schema/additionalItems', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/items', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/items', (t) => {
 	const { schema } = Schema;
 	const singleSchematic = { items: { type: 'string' } };
 	const multipleSchematic = { items: [{ type: 'string' }, { type: 'object', required: ['name'] }] };
@@ -98,7 +98,7 @@ test('Domain/Evaluation/Schema - schema/items', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/maxItems', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/maxItems', (t) => {
 	const { schema } = Schema;
 	const maxItems = schema({ maxItems: 3 });
 	const input: Array<any> = [];
@@ -115,7 +115,7 @@ test('Domain/Evaluation/Schema - schema/maxItems', (t) => {
 	t.end();
 });
 
-test('Domain/Evaluation/Schema - schema/minItems', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/minItems', (t) => {
 	const { schema } = Schema;
 	const minItems = schema({ minItems: 3 });
 	const input: Array<any> = [];
@@ -133,7 +133,7 @@ test('Domain/Evaluation/Schema - schema/minItems', (t) => {
 });
 
 
-test('Domain/Evaluation/Schema - schema/uniqueItems', (t) => {
+test('Domain/Filter/Operator/Evaluation/Schema - schema/uniqueItems', (t) => {
 	const { schema } = Schema;
 
 	each`
