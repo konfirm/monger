@@ -46,60 +46,44 @@ type TypeClassifier = {
 	id: number;
 	alias: TypeAliasAvailable;
 	group: ECMAType | 'unknown';
+	priority: number,
 	is: (input: unknown) => boolean;
 }
 type TypeIdentifier = TypeClassifier['id'] | TypeClassifier['alias'];
 
 const detectors: Array<TypeClassifier> = [
-	{ id: 1, alias: 'double', group: 'number', is: (v) => !Number.isInteger(v) },
-	{ id: 2, alias: 'string', group: 'string', is: () => true },
-	{ id: 3, alias: 'object', group: 'object', is: () => true },
-	{ id: 4, alias: 'array', group: 'object', is: (v) => Array.isArray(v) },
-	// { id: 5, alias: 'binData', group: 'unknown', is: () => false },
-	{ id: 6, alias: 'undefined', group: 'undefined', is: () => true },
-	// { id: 7, alias: 'objectId', group: 'unknown', is: () => false },
-	{ id: 8, alias: 'bool', group: 'boolean', is: () => true },
-	{ id: 9, alias: 'date', group: 'object', is: (v) => v instanceof Date },
-	{ id: 10, alias: 'null', group: 'object', is: (v) => v === null },
-	{ id: 11, alias: 'regex', group: 'object', is: (v) => v instanceof RegExp },
-	// { id: 12, alias: 'dbPointer', group: 'unknown', is: () => false },
-	{ id: 13, alias: 'javascript', group: 'function', is: () => true },
-	{ id: 14, alias: 'symbol', group: 'symbol', is: () => true },
-	// { id: 15, alias: 'javascriptWithScope', group: 'unknown', is: () => false },
-	{ id: 16, alias: 'int', group: 'number', is: (v) => Number.isInteger(v) },
-	// { id: 17, alias: 'timestamp', group: 'unknown', is: () => false },
-	{ id: 18, alias: 'long', group: 'number', is: (v) => Number.isInteger(v) && !Number.isSafeInteger(v) },
-	{ id: 18, alias: 'long', group: 'bigint', is: (v) => true },
-	// { id: 19, alias: 'decimal', group: 'unknown', is: () => false },
-	// { id: -1, alias: 'minKey', group: 'unknown', is: () => false },
-	// { id: 127, alias: 'maxKey', group: 'unknown', is: () => false },
+	{ id: 1, alias: 'double', group: 'number', is: (v) => !Number.isInteger(v), priority: 1 },
+	{ id: 2, alias: 'string', group: 'string', is: () => true, priority: 0 },
+	{ id: 3, alias: 'object', group: 'object', is: () => true, priority: 0 },
+	{ id: 4, alias: 'array', group: 'object', is: (v) => Array.isArray(v), priority: 1 },
+	// { id: 5, alias: 'binData', group: 'unknown', is: () => false, priority: 1 },
+	{ id: 6, alias: 'undefined', group: 'undefined', is: () => true, priority: 0 },
+	// { id: 7, alias: 'objectId', group: 'unknown', is: () => false, priority: 1 },
+	{ id: 8, alias: 'bool', group: 'boolean', is: () => true, priority: 0 },
+	{ id: 9, alias: 'date', group: 'object', is: (v) => v instanceof Date, priority: 1 },
+	{ id: 10, alias: 'null', group: 'object', is: (v) => v === null, priority: 1 },
+	{ id: 11, alias: 'regex', group: 'object', is: (v) => v instanceof RegExp, priority: 1 },
+	// { id: 12, alias: 'dbPointer', group: 'unknown', is: () => false, priority: 1 },
+	{ id: 13, alias: 'javascript', group: 'function', is: () => true, priority: 0 },
+	{ id: 14, alias: 'symbol', group: 'symbol', is: () => true, priority: 0 },
+	// { id: 15, alias: 'javascriptWithScope', group: 'unknown', is: () => false, priority: 1 },
+	{ id: 16, alias: 'int', group: 'number', is: (v) => Number.isInteger(v), priority: 1 },
+	// { id: 17, alias: 'timestamp', group: 'unknown', is: () => false, priority: 1 },
+	{ id: 18, alias: 'long', group: 'number', is: (v) => Number.isInteger(v) && !Number.isSafeInteger(v), priority: 1 },
+	{ id: 18, alias: 'long', group: 'bigint', is: () => true, priority: 0 },
+	// { id: 19, alias: 'decimal', group: 'unknown', is: () => false, priority: 1 },
+	// { id: -1, alias: 'minKey', group: 'unknown', is: () => false, priority: 1 },
+	// { id: 127, alias: 'maxKey', group: 'unknown', is: () => false, priority: 1 },
 ];
+const ordered: Array<TypeClassifier> = detectors
+	.sort(({ priority: one }, { priority: two }) => one > two ? -1 : Number(one < two));
 
 function detect(value: unknown): TypeClassifier {
 	const type: ECMAType = typeof value;
-	const types: Array<TypeClassifier> = detectors
-		.filter((tc) => tc.group === type && tc.is(value))
-		.sort((one, two) => {
-			const a = Number(one.alias === String(one.group));
-			const b = Number(two.alias === String(two.group));
-
-			return a < b ? -1 : Number(a > b);
-		});
-	const [found] = types;
+	const [found]: Array<TypeClassifier> = ordered
+		.filter((tc) => tc.group === type && tc.is(value));
 
 	return found;
-}
-
-export function id(value: unknown): number {
-	const found = detect(value);
-
-	return found && found.id;
-}
-
-export function alias(value: unknown): TypeAliasAvailable {
-	const found = detect(value);
-
-	return found && found.alias;
 }
 
 export function is(type: TypeIdentifier | Array<TypeIdentifier>): Evaluator {
