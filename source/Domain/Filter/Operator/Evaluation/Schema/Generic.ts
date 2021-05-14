@@ -49,9 +49,9 @@ function is(...types: Array<JSONType>): Evaluator {
 */
 
 export const Rules: { [key: string]: Builder<JSONSchema> } = {
-	bsonType: <T>(bsonType: TypeAliasAvailable | Array<TypeAliasAvailable>): Evaluator => isBSONType(bsonType),
+	bsonType: <T>(bsonType: TypeAliasAvailable | [TypeAliasAvailable, ...Array<TypeAliasAvailable>]): Evaluator => isBSONType(bsonType as Parameters<typeof isBSONType>[0]),
 	enum: <T>(values: Array<any>): Evaluator => $in(values),
-	type: <T>(type: JSONType | Array<JSONType>): Evaluator => {
+	type: <T>(type: JSONType | [JSONType, ...Array<JSONType>]): Evaluator => {
 		const list = ([] as Array<JSONType>).concat(type);
 
 		return is(...list);

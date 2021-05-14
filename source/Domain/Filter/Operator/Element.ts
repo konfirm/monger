@@ -1,7 +1,9 @@
 import type { Evaluator } from '../Compiler';
 import { is } from '../../BSON';
 
-type TypeArg = number | string;
+const isArray = is('array');
+
+type TypeIdentifier = Parameters<typeof is>[0];
 
 export type Operation = {
 	$exists: Parameters<typeof $exists>[0];
@@ -27,8 +29,8 @@ export function $exists(query: boolean): Evaluator {
  * @syntax  { <field>: { $type: <BSON type> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/type/
  */
-export function $type(query: TypeArg | Array<TypeArg>): Evaluator {
-	const type = is(query);
+export function $type(query: TypeIdentifier | Array<TypeIdentifier>): Evaluator {
+	const type = isArray(query) ? is(...(query as Array<TypeIdentifier>)) : is(query as TypeIdentifier);
 
 	return (input: unknown) => type(input);
 };

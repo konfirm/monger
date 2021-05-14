@@ -86,9 +86,8 @@ function detect(value: unknown): TypeClassifier {
 	return found;
 }
 
-export function is(type: TypeIdentifier | Array<TypeIdentifier>): Evaluator {
-	const list = ([] as Array<TypeIdentifier>).concat(type);
-	const includes = ({ id, alias }: TypeClassifier) => list.indexOf(id) >= 0 || list.indexOf(alias) >= 0;
+export function is(...type: Array<TypeIdentifier>): Evaluator {
+	const includes = ({ id, alias }: TypeClassifier) => type.indexOf(id) >= 0 || type.indexOf(alias) >= 0;
 
 	return (input: unknown): boolean => includes(detect(input));
 }
