@@ -3,6 +3,7 @@ import type { Operation as ComparisonOperation } from './Operator/Comparison';
 import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as LogicalOperation } from './Operator/Logical';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
+import { dotted } from '../Field';
 
 export type Evaluator = (input: any) => boolean;
 export type CompileStep = (query: any) => Evaluator;
@@ -29,8 +30,9 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private delegate(name: K, query: T): Evaluator {
 		const compiled = this.compile(query[name] as unknown as T);
+		const accessor = dotted(name as string);
 
-		return (input: any) => compiled(name in input ? input[name] : undefined);
+		return (input: any) => compiled(accessor(input));
 	}
 
 	private operation(name: K, query: T): Evaluator {
