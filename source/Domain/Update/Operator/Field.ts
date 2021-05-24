@@ -12,6 +12,7 @@ export type Operation = {
 	$currentDate: Parameters<typeof $currentDate>[0];
 	$inc: Parameters<typeof $inc>[0];
 	$min: Parameters<typeof $min>[0];
+	$max: Parameters<typeof $max>[0];
 };
 
 /**
@@ -76,6 +77,31 @@ export function $min(query: Increment): (input: Target) => unknown {
 			return (target: Target) => {
 				const current = accessor(target);
 				if (typeof current !== 'number' || current < value) {
+					accessor(target, value);
+				}
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
+
+/**
+ * $max
+ * Only updates the field if the specified value is greater than the existing field value.
+ * @syntax  { $max: { <field1>: <value1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/max/
+ */
+export function $max(query: Increment): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const value = query[key];
+			const accessor = dotted(key);
+
+			return (target: Target) => {
+				const current = accessor(target);
+				if (typeof current !== 'number' || current > value) {
 					accessor(target, value);
 				}
 
