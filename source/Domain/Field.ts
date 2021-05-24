@@ -1,53 +1,62 @@
 import { is } from './BSON';
 
-const isObject = is('object');
-const isUndefined = is('undefined');
-const isObjectable = is('undefined', 'null');
-
 type Nest = {
-	value: any;
-	key?: string;
+	value: unknown;
+	key?: string | number;
 	parent?: Nest;
 };
-type FieldTarget = (target: unknown) => Nest;
+type Nesting = (target: unknown) => Nest;
+type Target = { [key: string]: unknown };
 
-function tail(tail?: FieldTarget, key?: string): FieldTarget {
+const isObject = is('object');
+const isUndefined = is('undefined');
+
+function read({ value }: Nest): unknown {
+	return value;
+}
+
+function all(condition: (value: unknown) => boolean, ...nest: Array<Nest>): boolean {
+	return nest.every(({ value }) => condition(value));
+}
+
+function element({ key, value }: Nest): unknown {
+	return JSON.stringify(key ? { [key]: value } : value)
+		.replace(/"([^"]+)"\s*(:|$)/, '$1$2');
+}
+
+function write(nest: Nest, value: unknown): void {
+	const { parent: scope, key } = nest;
+	const parent = scope as Nest;
+
+	if (!all(isObject, parent) && all(isUndefined, nest, parent)) {
+		write(parent, {});
+	}
+	if (!all(isObject, parent)) {
+		throw new Error(`Cannot create field '${key}' in element ${element(parent)}`);
+	}
+
+	(parent.value as Target)[key as string] = value;
+	nest.value = value;
+}
+
+function nest(nesting: Nesting, key: Nest['key']): Nesting {
 	return (target: unknown): Nest => {
-		if (tail) {
-			const parent = tail(target);
-			const { value: { [key as string]: value } = {} } = parent;
+		const parent = nesting(target);
+		const { value: scope = {} } = parent;
+		const { [key as keyof typeof scope]: value } = scope;
 
-			return { key, value, parent };
-		}
-
-		return { value: target };
+		return { value, key, parent }
 	};
+
 }
 
-function canContainKey({ value }: Nest): boolean {
-	return isObject(value) || isObjectable(value);
-}
+export function dotted(key: string) {
+	const nesting = key.split('.')
+		.reduce(nest, (value: unknown) => ({ value }));
 
-function reachable({ parent }: Nest): boolean {
-	return !parent || (canContainKey(parent) && reachable(parent));
-}
+	return (target: unknown, ...values: Array<unknown>): unknown => {
+		const nested = nesting(target);
 
-function exit({ key, parent }: Nest): void {
-	const { parent: { value } = {} } = parent as Nest;
-	const element = JSON.stringify(value || 'undefined').replace(/"([^"]+)"(:|$)/g, '$1$2');
-
-	throw new Error(`Cannot create field '${key}' in element ${element}`)
-}
-
-export function dotted(dotted: string): (target: unknown, value?: unknown) => unknown {
-	const path: FieldTarget = dotted.split('.').reduce(tail, tail());
-
-	return (target: unknown, ...values: Array<unknown>) => {
-		const tree = path(target);
-
-		if (values.length) {
-		}
-
-		return tree.value;
-	};
+		return values.length ? write(nested, values[0]) : read(nested);
+	}
 }
