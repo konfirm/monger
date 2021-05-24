@@ -1,4 +1,5 @@
 import type { Evaluator } from '../Compiler';
+import { isArray } from '../../BSON';
 
 type BitMask = number;
 type BitPosition = Array<number>;
@@ -18,8 +19,8 @@ export type Operation = {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAllClear/
  */
 export function $bitsAllClear(query: BitMask | BitPosition): Evaluator {
-	if (Array.isArray(query)) {
-		const shifted = query.map((shift) => 1 << shift);
+	if (isArray(query)) {
+		const shifted = (query as BitPosition).map((shift) => 1 << shift);
 
 		return (input: unknown): boolean => shifted.every((bit) => (Number(input) & bit) === 0);
 	}
@@ -35,8 +36,9 @@ export function $bitsAllClear(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAllSet/
  */
 export function $bitsAllSet(query: BitMask | BitPosition): Evaluator {
-	if (Array.isArray(query)) {
-		return (input: unknown): boolean => query.every((shift) => Number(input) & 1 << shift);
+	if (isArray(query)) {
+		return (input: unknown): boolean => (query as BitPosition)
+			.every((shift) => Number(input) & 1 << shift);
 	}
 
 	return (input: unknown): boolean => (Number(input) & Number(query)) === query;
@@ -50,8 +52,9 @@ export function $bitsAllSet(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAnyClear/
  */
 export function $bitsAnyClear(query: BitMask | BitPosition): Evaluator {
-	if (Array.isArray(query)) {
-		return (input: unknown): boolean => query.some((shift) => (Number(input) & 1 << shift) !== 1 << shift);
+	if (isArray(query)) {
+		return (input: unknown): boolean => (query as BitPosition)
+			.some((shift) => (Number(input) & 1 << shift) !== 1 << shift);
 	}
 
 	return (input: unknown): boolean => (Number(input) & Number(query)) !== query;
@@ -65,8 +68,9 @@ export function $bitsAnyClear(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAnySet/
  */
 export function $bitsAnySet(query: BitMask | BitPosition): Evaluator {
-	if (Array.isArray(query)) {
-		return (input: unknown): boolean => query.some((shift) => (Number(input) & 1 << shift));
+	if (isArray(query)) {
+		return (input: unknown): boolean => (query as BitPosition)
+			.some((shift) => (Number(input) & 1 << shift));
 	}
 
 	return (input: unknown): boolean => (Number(input) & Number(query)) !== 0;

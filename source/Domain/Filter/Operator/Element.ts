@@ -1,7 +1,5 @@
 import type { Evaluator } from '../Compiler';
-import { is } from '../../BSON';
-
-const isArray = is('array');
+import { is, isArray } from '../../BSON';
 
 type TypeIdentifier = Parameters<typeof is>[0];
 

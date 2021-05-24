@@ -1,4 +1,5 @@
 import type { Evaluator, Builder, Compiler } from './Common';
+import { isObject } from '../../../../BSON';
 
 export type JSONSchema = {
 	maxProperties: Parameters<typeof Rules.maxProperties>[0],
@@ -11,10 +12,6 @@ export type JSONSchema = {
 };
 
 type SimpleObject = { [key: string]: unknown };
-
-function isObject(input: unknown): boolean {
-	return typeof input === 'object' && !(Array.isArray(input) || input === null);
-}
 
 /*
 | Keyword              | Type    | Definition              | Behavior                                                                                                                                                                          |

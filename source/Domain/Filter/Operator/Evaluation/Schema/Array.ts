@@ -1,4 +1,5 @@
 import type { Evaluator, Builder, Compiler } from './Common';
+import { isArray, isObject } from '../../../../BSON';
 
 export type JSONSchema = {
 	additionalItems: Parameters<typeof Rules.additionalItems>[0];
@@ -7,14 +8,6 @@ export type JSONSchema = {
 	minItems: Parameters<typeof Rules.minItems>[0];
 	uniqueItems: Parameters<typeof Rules.uniqueItems>[0];
 };
-
-function isObject(input: unknown): boolean {
-	return typeof input === 'object' && !(Array.isArray(input) || input === null);
-}
-
-function isArray(input: unknown): boolean {
-	return Array.isArray(input);
-}
 
 /*
 | Keyword         | Type   | Definition        | Behavior                                                                                         |
