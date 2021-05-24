@@ -4,6 +4,8 @@ import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as LogicalOperation } from './Operator/Logical';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
 import { dotted } from '../Field';
+import { isObject } from '../BSON';
+
 
 export type Evaluator = (input: any) => boolean;
 export type CompileStep = (query: any) => Evaluator;
@@ -18,8 +20,9 @@ type Operation
 	& ComparisonOperation
 	& ElementOperation
 	& EvaluationOperation;
+type ImplicitEqual = ComparisonOperation['$eq'];
 
-export type Query = LogicalOperation | { [key: string]: Partial<Query | Operation> }
+export type Query = LogicalOperation | { [key: string]: ImplicitEqual | Partial<Query | Operation> }
 
 export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof T = keyof T> {
 	private readonly operators: Operators;
@@ -28,8 +31,15 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 		this.operators = operators.reduce((carry, opers) => Object.assign(carry, opers), {});
 	}
 
+	private condition(name: K, query: T): Evaluator {
+		const { [name]: value } = query;
+		const condition = !isObject(value) ? { $eq: value } : value;
+
+		return this.compile(condition as unknown as T);
+	}
+
 	private delegate(name: K, query: T): Evaluator {
-		const compiled = this.compile(query[name] as unknown as T);
+		const compiled = this.condition(name, query);
 		const accessor = dotted(name as string);
 
 		return (input: any) => compiled(accessor(input));

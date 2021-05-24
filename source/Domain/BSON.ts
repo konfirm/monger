@@ -91,3 +91,8 @@ export function is(...type: Array<TypeIdentifier>): Evaluator {
 
 	return (input: unknown): boolean => includes(detect(input));
 }
+
+//  Common type detectors
+export const isArray = is('array');
+export const isObject = is('object');
+export const isNULL = is('null');
