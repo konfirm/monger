@@ -20,30 +20,32 @@ function all(condition: (value: unknown) => boolean, ...nest: Array<Nest>): bool
 }
 
 function element({ key, value }: Nest): unknown {
-	return JSON.stringify(key ? { [key]: value } : value)
-		.replace(/"([^"]+)"\s*(:|$)/, '$1$2');
+	const element = key ? { [key]: value } : value;
+
+	return element && JSON.stringify(element).replace(/"([^"]+)"\s*:/, '$1:');
 }
 
 function write(nest: Nest, value: unknown): void {
-	const { parent: scope, key } = nest;
-	const parent = scope as Nest;
+	const { parent, key } = nest;
 
-	if (!all(isObject, parent) && all(isUndefined, nest, parent)) {
-		write(parent, {});
-	}
-	if (!all(isObject, parent)) {
-		throw new Error(`Cannot create field '${key}' in element ${element(parent)}`);
-	}
+	if (parent) {
+		if (!all(isObject, parent) && all(isUndefined, nest, parent)) {
+			write(parent, {});
+		}
+		if (!all(isObject, parent)) {
+			throw new Error(`Cannot create field '${key}' in element ${element(parent)}`);
+		}
 
-	(parent.value as Target)[key as string] = value;
-	nest.value = value;
+		(parent.value as Target)[key as string] = value;
+		nest.value = value;
+	}
 }
 
 function nest(nesting: Nesting, key: Nest['key']): Nesting {
 	return (target: unknown): Nest => {
 		const parent = nesting(target);
-		const { value: scope = {} } = parent;
-		const { [key as keyof typeof scope]: value } = scope;
+		const { value: scope } = parent;
+		const { [key as keyof typeof scope]: value } = scope || {};
 
 		return { value, key, parent }
 	};

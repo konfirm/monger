@@ -19,7 +19,12 @@ test('Domain/Field - dotted read', (t) => {
 		path            | target                                        | expect
 		----------------|-----------------------------------------------|-------
 		foo             | ${undefined}                                  | ${undefined}
+		foo             | ${'null'}                                     | ${undefined}
+		foo             | ${true}                                       | ${undefined}
+		foo             | ${false}                                      | ${undefined}
+		foo             | ${'one'}                                      | ${undefined}
 		foo             | ${1}                                          | ${undefined}
+		foo             | ${[1]}                                        | ${undefined}
 		foo             | ${{}}                                         | ${undefined}
 		foo             | ${{ foo: 1 }}                                 | ${1}
 		foo             | ${{ foo: 'one' }}                             | ${'one'}
@@ -61,7 +66,13 @@ test('Domain/Field - dotted write', (t) => {
 	each`
 		path            | target                                        | error
 		----------------|-----------------------------------------------|-------
+		foo             | ${undefined}                                  | Cannot create field 'foo' in element undefined
+		foo             | ${null}                                       | Cannot create field 'foo' in element null
+		foo             | ${true}                                       | Cannot create field 'foo' in element true
+		foo             | ${false}                                      | Cannot create field 'foo' in element false
+		foo             | ${'one'}                                      | Cannot create field 'foo' in element "one"
 		foo             | ${1}                                          | Cannot create field 'foo' in element 1
+		foo             | ${[1]}                                        | Cannot create field 'foo' in element [1]
 		foo             | ${{}}                                         |
 		foo             | ${{ foo: 1 }}                                 |
 		foo             | ${{ foo: 'one' }}                             |
@@ -94,7 +105,7 @@ test('Domain/Field - dotted write', (t) => {
 		const poke = Field.dotted(path);
 
 		if (error) {
-			const match = new RegExp(error.replace(/([\{\}])/g, '\\$1'));
+			const match = new RegExp(error.replace(/([\{\}\[\]])/g, '\\$1'));
 			t.throws(() => poke(target, 'written'), match, `writing '${path}' of ${JSON.stringify(target)} throws '${error}'`);
 		}
 		else {
