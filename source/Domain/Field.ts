@@ -1,4 +1,4 @@
-import { isObject, isUndefined } from './BSON';
+import { isObject, isArray, isUndefined } from './BSON';
 
 type Nest = {
 	value: unknown;
@@ -8,6 +8,9 @@ type Nest = {
 type Nesting = (target: unknown) => Nest;
 type Target = { [key: string]: unknown };
 
+function normalize(key: string): string | number {
+	return /^[0-9]+$/.test(key) ? Number(key) : key;
+}
 
 function read({ value }: Nest): unknown {
 	return value;
@@ -20,18 +23,26 @@ function all(condition: (value: unknown) => boolean, ...nest: Array<Nest>): bool
 function element({ key, value }: Nest): unknown {
 	const element = key ? { [key]: value } : value;
 
-	return element && JSON.stringify(element).replace(/"([^"]+)"\s*:/, '$1:');
+	return element && JSON.stringify(element).replace(/"([^"]+)"\s*:/g, '$1:');
+}
+
+function exit(key: unknown, parent: Nest): void {
+	const field = JSON.stringify(key).replace(/"/g, '\'');
+
+	throw new Error(`Cannot create field ${field} in element ${element(parent)}`);
 }
 
 function write(nest: Nest, value: unknown): void {
 	const { parent, key } = nest;
 
 	if (parent) {
-		if (!all(isObject, parent) && all(isUndefined, nest, parent)) {
-			write(parent, {});
+		const [detect, create] = typeof key === 'number' ? [isArray, []] : [isObject, {}];
+
+		if (!all(detect, parent) && all(isUndefined, nest, parent)) {
+			write(parent, create);
 		}
-		if (!all(isObject, parent)) {
-			throw new Error(`Cannot create field '${key}' in element ${element(parent)}`);
+		if (!all(detect, parent)) {
+			exit(key, parent);
 		}
 
 		(parent.value as Target)[key as string] = value;
@@ -52,6 +63,7 @@ function nest(nesting: Nesting, key: Nest['key']): Nesting {
 
 export function dotted(key: string) {
 	const nesting = key.split('.')
+		.map(normalize)
 		.reduce(nest, (value: unknown) => ({ value }));
 
 	return (target: unknown, ...values: Array<unknown>): unknown => {

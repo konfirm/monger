@@ -17,7 +17,7 @@ test('Domain/Field - exports', (t) => {
 test('Domain/Field - dotted read', (t) => {
 	each`
 		path            | target                                        | expect
-		----------------|-----------------------------------------------|-------
+		----------------|-----------------------------------------------|--------
 		foo             | ${undefined}                                  | ${undefined}
 		foo             | ${'null'}                                     | ${undefined}
 		foo             | ${true}                                       | ${undefined}
@@ -52,6 +52,11 @@ test('Domain/Field - dotted read', (t) => {
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: 'three' } } }}         | ${undefined}
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: { qux: 4 } } } }}      | ${4}
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: { qux: 'four' } } } }} | ${'four'}
+		foo.0.bar       | ${{}}                                         | ${undefined}
+		foo.0.bar       | ${{ foo: 1 }}                                 | ${undefined}
+		foo.0.bar       | ${{ foo: { bar: 1 } }}                        | ${undefined}
+		foo.0.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          | ${1}
+		foo.1.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          | ${2}
 	`((record) => {
 		const { path, target, expect } = record as { path: string, [key: string]: unknown };
 		const peek = Field.dotted(path);
@@ -100,6 +105,12 @@ test('Domain/Field - dotted write', (t) => {
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: 'three' } } }}         | Cannot create field 'qux' in element {baz:"three"}
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: { qux: 4 } } } }}      |
 		foo.bar.baz.qux | ${{ foo: { bar: { baz: { qux: 'four' } } } }} |
+		foo.0.bar       | ${1}                                          | Cannot create field 'foo' in element 1
+		foo.0.bar       | ${{}}                                         |
+		foo.0.bar       | ${{ foo: 1 }}                                 | Cannot create field 0 in element {foo:1}
+		foo.0.bar       | ${{ foo: { bar: 1 } }}                        | Cannot create field 0 in element {foo:{bar:1}}
+		foo.0.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          |
+		foo.1.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          |
 	`((record) => {
 		const { path, target, error } = record as { path: string, target: unknown, error?: string };
 		const poke = Field.dotted(path);
