@@ -1,4 +1,4 @@
-import { is } from './BSON';
+import { isObject, isUndefined } from './BSON';
 
 type Nest = {
 	value: unknown;
@@ -8,8 +8,6 @@ type Nest = {
 type Nesting = (target: unknown) => Nest;
 type Target = { [key: string]: unknown };
 
-const isObject = is('object');
-const isUndefined = is('undefined');
 
 function read({ value }: Nest): unknown {
 	return value;

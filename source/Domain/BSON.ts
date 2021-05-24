@@ -96,3 +96,4 @@ export function is(...type: Array<TypeIdentifier>): Evaluator {
 export const isArray = is('array');
 export const isObject = is('object');
 export const isNULL = is('null');
+export const isUndefined = is('undefined');

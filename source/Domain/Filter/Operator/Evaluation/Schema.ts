@@ -5,6 +5,7 @@ import * as StringSchema from './Schema/String';
 import * as ObjectSchema from './Schema/Object';
 import * as ArraySchema from './Schema/Array';
 import * as MiscSchema from './Schema/Misc';
+import { isUndefined } from '../../../BSON';
 
 export type JSONSchema
 	= GenericSchema.JSONSchema
@@ -13,10 +14,6 @@ export type JSONSchema
 	& ObjectSchema.JSONSchema
 	& ArraySchema.JSONSchema
 	& MiscSchema.JSONSchema;
-
-function isUndefined(input: unknown): boolean {
-	return typeof input === 'undefined';
-}
 
 const rules: { [key: string]: Builder<JSONSchema> } = {
 	...GenericSchema.Rules,
