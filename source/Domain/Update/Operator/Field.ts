@@ -6,7 +6,7 @@ type Target = { [key: string]: unknown };
 
 type CurrentDateType = { $type: 'date' | 'timestamp' };
 type CurrentDate = { [key: string]: true | CurrentDateType };
-type Increment = { [key: string]: number };
+type Numeric = { [key: string]: number };
 
 export type Operation = {
 	$currentDate: Parameters<typeof $currentDate>[0];
@@ -15,6 +15,22 @@ export type Operation = {
 	$max: Parameters<typeof $max>[0];
 	$mul: Parameters<typeof $mul>[0];
 };
+
+function numericOperation(query: Numeric, modify: (value: number, current: unknown) => unknown) {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const value = query[key];
+			const accessor = dotted(key);
+
+			return (target: Target) => {
+				accessor(target, modify(value, accessor(target)));
+
+				return target;
+			}
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
 
 /**
  * $currentDate
@@ -47,20 +63,12 @@ export function $currentDate(query: CurrentDate): (input: Target) => unknown {
  * @syntax  { $inc: { <field1>: <amount1>, <field2>: <amount2>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/inc/
  */
-export function $inc(query: Increment): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const amount = query[key];
-			const accessor = dotted(key);
-
-			return (target: Target) => {
-				accessor(target, (accessor(target) as number || 0) + amount);
-
-				return target;
-			};
-		});
-
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+export function $inc(query: Numeric): (input: Target) => unknown {
+	return numericOperation(
+		query,
+		(value: number, current: unknown) =>
+			((current || 0) as number) + value
+	);
 }
 
 /**
@@ -69,23 +77,12 @@ export function $inc(query: Increment): (input: Target) => unknown {
  * @syntax  { $min: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/min/
  */
-export function $min(query: Increment): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const value = query[key];
-			const accessor = dotted(key);
-
-			return (target: Target) => {
-				const current = accessor(target);
-				if (typeof current !== 'number' || current < value) {
-					accessor(target, value);
-				}
-
-				return target;
-			};
-		});
-
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+export function $min(query: Numeric): (input: Target) => unknown {
+	return numericOperation(
+		query,
+		(value: number, current: unknown) =>
+			typeof current !== 'number' || current < value ? value : current
+	);
 }
 
 /**
@@ -94,23 +91,12 @@ export function $min(query: Increment): (input: Target) => unknown {
  * @syntax  { $max: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/max/
  */
-export function $max(query: Increment): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const value = query[key];
-			const accessor = dotted(key);
-
-			return (target: Target) => {
-				const current = accessor(target);
-				if (typeof current !== 'number' || current > value) {
-					accessor(target, value);
-				}
-
-				return target;
-			};
-		});
-
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+export function $max(query: Numeric): (input: Target) => unknown {
+	return numericOperation(
+		query,
+		(value: number, current: unknown) =>
+			typeof current !== 'number' || current > value ? value : current
+	);
 }
 
 /**
@@ -119,20 +105,11 @@ export function $max(query: Increment): (input: Target) => unknown {
  * @syntax  { $mul: { <field1>: <number1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/mul/
  */
-export function $mul(query: Increment): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const value = query[key];
-			const accessor = dotted(key);
-
-			return (target: Target) => {
-				const current = accessor(target);
-				accessor(target, typeof current !== 'number' ? 0 : current * value);
-
-				return target;
-			};
-		});
-
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+export function $mul(query: Numeric): (input: Target) => unknown {
+	return numericOperation(
+		query,
+		(value: number, current: unknown) =>
+			typeof current !== 'number' ? 0 : value * current
+	);
 }
 
