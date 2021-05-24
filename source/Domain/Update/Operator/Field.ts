@@ -11,6 +11,7 @@ type Increment = { [key: string]: number };
 export type Operation = {
 	$currentDate: Parameters<typeof $currentDate>[0];
 	$inc: Parameters<typeof $inc>[0];
+	$min: Parameters<typeof $min>[0];
 };
 
 /**
@@ -59,3 +60,29 @@ export function $inc(query: Increment): (input: Target) => unknown {
 
 	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
 }
+
+/**
+ * $min
+ * Only updates the field if the specified value is less than the existing field value.
+ * @syntax  { $min: { <field1>: <value1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/min/
+ */
+export function $min(query: Increment): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const value = query[key];
+			const accessor = dotted(key);
+
+			return (target: Target) => {
+				const current = accessor(target);
+				if (typeof current !== 'number' || current < value) {
+					accessor(target, value);
+				}
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
+

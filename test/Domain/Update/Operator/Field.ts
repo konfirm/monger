@@ -2,7 +2,7 @@ import * as test from 'tape';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate', '$inc'];
+	const expected = ['$currentDate', '$inc', '$min'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -68,3 +68,47 @@ test('Domain/Update/Operator/Field - $inc', (t) => {
 
 	t.end();
 });
+
+test('Domain/Update/Operator/Field - $min', (t) => {
+	const { $min } = Field;
+	const query = {
+		'one': 1,
+		'nested.two': 2,
+		'nested.nested.three': 3
+	};
+	const target = {} as any;
+	const update = $min(query);
+
+	update(target);
+
+	t.equal(target.one, 1, 'one is 1');
+	t.equal(target.nested.two, 2, 'nested.two is 2');
+	t.equal(target.nested.nested.three, 3, 'nested.nested.three is 3');
+
+	const lower = update({
+		one: 0,
+		nested: {
+			two: 1,
+			nested: { three: 2 },
+		},
+	}) as any;
+
+	t.equal(lower.one, 1, 'one is 1');
+	t.equal(lower.nested.two, 2, 'nested.two is 2');
+	t.equal(lower.nested.nested.three, 3, 'nested.nested.three is 3');
+
+	const higher = update({
+		one: 10,
+		nested: {
+			two: 10,
+			nested: { three: 10 },
+		},
+	}) as any;
+
+	t.equal(higher.one, 10, 'one is 10');
+	t.equal(higher.nested.two, 10, 'nested.two is 10');
+	t.equal(higher.nested.nested.three, 10, 'nested.nested.three is 10');
+
+	t.end();
+});
+
