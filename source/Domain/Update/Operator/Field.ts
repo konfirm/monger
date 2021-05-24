@@ -13,6 +13,7 @@ export type Operation = {
 	$inc: Parameters<typeof $inc>[0];
 	$min: Parameters<typeof $min>[0];
 	$max: Parameters<typeof $max>[0];
+	$mul: Parameters<typeof $mul>[0];
 };
 
 /**
@@ -104,6 +105,29 @@ export function $max(query: Increment): (input: Target) => unknown {
 				if (typeof current !== 'number' || current > value) {
 					accessor(target, value);
 				}
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
+
+/**
+ * $mul
+ * Multiplies the value of the field by the specified amount.
+ * @syntax  { $mul: { <field1>: <number1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/mul/
+ */
+export function $mul(query: Increment): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const value = query[key];
+			const accessor = dotted(key);
+
+			return (target: Target) => {
+				const current = accessor(target);
+				accessor(target, typeof current !== 'number' ? 0 : current * value);
 
 				return target;
 			};

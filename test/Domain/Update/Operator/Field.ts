@@ -3,6 +3,7 @@ import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
 	const expected = ['$currentDate', '$inc', '$min', '$max'];
+	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -155,3 +156,33 @@ test('Domain/Update/Operator/Field - $max', (t) => {
 	t.end();
 });
 
+test('Domain/Update/Operator/Field - $mul', (t) => {
+	const { $mul } = Field;
+	const query = {
+		'one': 1,
+		'nested.two': 2,
+		'nested.nested.three': 3
+	};
+	const target = {} as any;
+	const update = $mul(query);
+
+	update(target);
+
+	t.equal(target.one, 0, 'one created 0');
+	t.equal(target.nested.two, 0, 'nested.two created 0');
+	t.equal(target.nested.nested.three, 0, 'nested.nested.three created 0');
+
+	const lower = update({
+		one: 10,
+		nested: {
+			two: 20,
+			nested: { three: 30 },
+		},
+	}) as any;
+
+	t.equal(lower.one, 10, 'one is 10');
+	t.equal(lower.nested.two, 40, 'nested.two is 40');
+	t.equal(lower.nested.nested.three, 90, 'nested.nested.three is 90');
+
+	t.end();
+});
