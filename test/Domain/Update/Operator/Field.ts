@@ -2,7 +2,7 @@ import * as test from 'tape';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate'];
+	const expected = ['$currentDate', '$inc'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -40,6 +40,31 @@ test('Domain/Update/Operator/Field - $currentDate', (t) => {
 
 	t.true(typeof target.cancellation.time === 'number', 'cancellation.time is set to a number');
 	t.equal(target.cancellation.time, lastModified.getTime(), 'it represents the correct time');
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Field - $inc', (t) => {
+	const { $inc } = Field;
+	const query = {
+		'one': 1,
+		'nested.two': 2,
+		'nested.nested.three': 3
+	};
+	const target = {} as any;
+	const update = $inc(query);
+
+	update(target);
+
+	t.equal(target.one, 1, 'one is 1');
+	t.equal(target.nested.two, 2, 'nested.two is 2');
+	t.equal(target.nested.nested.three, 3, 'nested.nested.three is 3');
+
+	update(target);
+
+	t.equal(target.one, 2, 'one is 2');
+	t.equal(target.nested.two, 4, 'nested.two is 4');
+	t.equal(target.nested.nested.three, 6, 'nested.nested.three is 6');
 
 	t.end();
 });
