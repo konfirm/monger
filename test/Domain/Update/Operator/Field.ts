@@ -3,7 +3,7 @@ import each from 'template-literal-each';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$rename', '$set', '$unset'];
+	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$rename', '$set', '$setOnInsert', '$unset'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -23,7 +23,6 @@ test('Domain/Update/Operator/Field - $currentDate', (t) => {
 	};
 	const target = { name: 'Foo' } as any;
 	const update = $currentDate(query as Parameters<typeof $currentDate>[0]);
-	const now = Date.now();
 
 	update(target);
 

@@ -14,6 +14,7 @@ export type Operation = {
 	$mul: Parameters<typeof $mul>[0];
 	$rename: Parameters<typeof $rename>[0];
 	$set: Parameters<typeof $set>[0];
+	$setOnInsert: Parameters<typeof $setOnInsert>[0];
 	$unset: Parameters<typeof $unset>[0];
 };
 
@@ -163,6 +164,20 @@ export function $set(query: Target): (input: Target) => unknown {
 		});
 
 	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
+
+/**
+ * $setOnInsert
+ * Sets the value of a field if an update results in an insert of a document.
+ * Has no effect on update operations that modify existing documents.
+ * @syntax  { $setOnInsert: { <field1>: <value1>, ... } },
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/setOnInsert/
+ * @todo    implement $setOnInsert
+ */
+export function $setOnInsert(todo: any): (input: Target) => unknown {
+	return (input: unknown): boolean => {
+		throw new Error('$setOnInsert not implemented');
+	}
 }
 
 /**

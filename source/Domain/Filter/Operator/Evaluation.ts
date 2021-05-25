@@ -19,6 +19,7 @@ export type Operation = {
  * Allows use of aggregation expressions within the query language.
  * @syntax  { $expr: { <expression> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/expr/
+ * @todo    implement $expr
  */
 export function $expr(todo: any): Evaluator {
 	return (input: unknown): boolean => {
