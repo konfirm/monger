@@ -2,7 +2,7 @@ import * as test from 'tape';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$unset'];
+	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$set', '$unset'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -186,11 +186,41 @@ test('Domain/Update/Operator/Field - $mul', (t) => {
 	t.end();
 });
 
+test('Domain/Update/Operator/Field - $set', (t) => {
+	const { $set } = Field;
+	const query = {
+		'foo': 'written',
+		'bar.baz.qux': false,
+		'array.1': 2,
+		'nested.array.0.inside': 'zero'
+	};
+	const target = {};
+	const update = $set(query);
+
+	t.false('foo' in target, 'target.foo does not exist');
+	t.false('bar' in target, 'target.bar does not exist');
+	t.false('array' in target, 'target.array does not exist');
+	t.false('nested' in target, 'target.nested does not exist');
+
+	update(target);
+
+	t.equal((target as any).foo, 'written', 'target.foo exists');
+	t.equal((target as any).bar.baz.qux, false, 'target.bar.baz.qux exists');
+	t.true(Array.isArray((target as any).array), 'target.array is an array');
+	t.equal((target as any).array[1], 2, 'target.array.1 has value 2');
+	t.true(Array.isArray((target as any).nested.array), 'target.nested.array is an array');
+	t.equal((target as any).nested.array[0].inside, 'zero', 'target.nested.array.0.inside exists');
+
+	t.end();
+});
+
 test('Domain/Update/Operator/Field - $unset', (t) => {
 	const { $unset } = Field;
 	const query = {
 		'foo': '',
-		'bar.baz.qux': ''
+		'bar.baz.qux': '',
+		'array.1': '',
+		'nested.array.0.inside': ''
 	};
 	const target = {
 		foo: 'remove before flight',
@@ -199,16 +229,27 @@ test('Domain/Update/Operator/Field - $unset', (t) => {
 				qux: 'remove before flight',
 			},
 		},
+		array: [1, 2, 3],
+		nested: {
+			array: [
+				{ inside: 'zero' },
+				{ inside: 'one' },
+			],
+		}
 	};
 	const update = $unset(query);
 
-	t.true('foo' in target, 'target.foo exists');
-	t.true('qux' in target.bar.baz, 'target.bar.baz.qux exists');
+	t.equal(target.foo, 'remove before flight', 'target.foo exists');
+	t.equal(target.bar.baz.qux, 'remove before flight', 'target.bar.baz.qux exists');
+	t.equal(target.array[1], 2, 'target.array.1 has value 2');
+	t.equal(target.nested.array[0].inside, 'zero', 'target.nested.array.0.inside exists');
 
 	update(target);
 
 	t.false('foo' in target, 'target.foo no longer exists');
 	t.false('qux' in target.bar.baz, 'target.bar.baz.qux no longer exists');
+	t.equal(target.array[1], null, 'target.array.1 is set to null');
+	t.false('inside' in target.nested.array[0], 'target.nested.array.0.inside no longer exists');
 
 	t.end();
 });

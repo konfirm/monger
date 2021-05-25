@@ -12,6 +12,7 @@ export type Operation = {
 	$min: Parameters<typeof $min>[0];
 	$max: Parameters<typeof $max>[0];
 	$mul: Parameters<typeof $mul>[0];
+	$set: Parameters<typeof $set>[0];
 	$unset: Parameters<typeof $unset>[0];
 };
 
@@ -112,6 +113,27 @@ export function $mul(query: Numeric): (input: Target) => unknown {
 	);
 }
 
+/**
+ * $set
+ * Sets the value of a field in a document.
+ * @syntax  { $set: { <field1>: <value1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/set/
+ */
+export function $set(query: Target): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const value = query[key];
+			const access = accessor(key);
+
+			return (target: Target) => {
+				access(target, value);
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}
 
 /**
  * $unset
