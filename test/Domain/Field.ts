@@ -3,7 +3,7 @@ import each from 'template-literal-each';
 import * as Field from '../../source/Domain/Field';
 
 test('Domain/Field - exports', (t) => {
-	const expected = ['dotted'];
+	const expected = ['accessor'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -59,7 +59,7 @@ test('Domain/Field - dotted read', (t) => {
 		foo.1.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          | ${2}
 	`((record) => {
 		const { path, target, expect } = record as { path: string, [key: string]: unknown };
-		const peek = Field.dotted(path);
+		const peek = Field.accessor(path);
 
 		t.equal(peek(target), expect, `'${path}' of ${JSON.stringify(target)} is ${JSON.stringify(expect)}`);
 	});
@@ -113,7 +113,7 @@ test('Domain/Field - dotted write', (t) => {
 		foo.1.bar       | ${{ foo: [{ bar: 1 }, { bar: 2 }] }}          |
 	`((record) => {
 		const { path, target, error } = record as { path: string, target: unknown, error?: string };
-		const poke = Field.dotted(path);
+		const poke = Field.accessor(path);
 
 		if (error) {
 			const match = new RegExp(error.replace(/([\{\}\[\]])/g, '\\$1'));
