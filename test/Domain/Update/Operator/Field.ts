@@ -1,8 +1,9 @@
 import * as test from 'tape';
+import each from 'template-literal-each';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$set', '$unset'];
+	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$rename', '$set', '$unset'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -182,6 +183,38 @@ test('Domain/Update/Operator/Field - $mul', (t) => {
 	t.equal(lower.one, 10, 'one is 10');
 	t.equal(lower.nested.two, 40, 'nested.two is 40');
 	t.equal(lower.nested.nested.three, 90, 'nested.nested.three is 90');
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Field - $rename', (t) => {
+	const { $rename } = Field;
+	const target = { foo: { bar: 'A foo walks into a bar' } };
+
+	t.equal(JSON.stringify(target), '{"foo":{"bar":"A foo walks into a bar"}}', 'matches initial value');
+
+	each`
+		name           | rename              | error
+		---------------|---------------------|-------
+		foo.bar        | other               |
+		other          | other.nested        | The source and target field for $rename must not be on the same path: other: "other.nested"
+		other          | some.different.path |
+		some.different | some                | The source and target field for $rename must not be on the same path: some.different: "some"
+		some.different | created             |
+	`((record) => {
+		const { name, rename, error } = record as { [key: string]: string };
+		const update = $rename({ [name]: rename });
+
+		if (error) {
+			const match = new RegExp(error.replace(/\$/g, '\\$'));
+			t.throws(() => update(target), match, `The source and target field for $rename must not be on the same path: ${name}: "${rename}"`);
+		}
+		else {
+			update(target);
+		}
+	});
+
+	t.equal(JSON.stringify(target), '{"foo":{},"some":{},"created":{"path":"A foo walks into a bar"}}', 'matches targetted value');
 
 	t.end();
 });

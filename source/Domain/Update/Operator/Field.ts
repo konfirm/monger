@@ -12,6 +12,7 @@ export type Operation = {
 	$min: Parameters<typeof $min>[0];
 	$max: Parameters<typeof $max>[0];
 	$mul: Parameters<typeof $mul>[0];
+	$rename: Parameters<typeof $rename>[0];
 	$set: Parameters<typeof $set>[0];
 	$unset: Parameters<typeof $unset>[0];
 };
@@ -111,6 +112,35 @@ export function $mul(query: Numeric): (input: Target) => unknown {
 		(value: number, current: unknown) =>
 			typeof current !== 'number' ? 0 : value * current
 	);
+}
+
+/**
+ * $rename
+ * Renames a field.
+ * @syntax  {$rename: { <field1>: <newName1>, <field2>: <newName2>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/rename/
+ */
+export function $rename(query: Target<string>): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const rename = query[key];
+			const path = key.indexOf(rename) === 0 || rename.indexOf(key) === 0;
+			const current = accessor(key);
+			const create = accessor(rename);
+
+			return (target: Target) => {
+				if (path) {
+					throw new Error(`The source and target field for $rename must not be on the same path: ${key}: "${rename}"`);
+				}
+
+				create(target, current(target));
+				current(target, undefined, true);
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
 }
 
 /**
