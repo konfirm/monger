@@ -12,7 +12,7 @@ function normalize(key: string): string | number {
 	return /^[0-9]+$/.test(key) ? Number(key) : key;
 }
 
-function read({ value }: Nest): unknown {
+function get({ value }: Nest): unknown {
 	return value;
 }
 
@@ -32,14 +32,14 @@ function exit(key: unknown, parent: Nest): void {
 	throw new Error(`Cannot create field ${field} in element ${element(parent)}`);
 }
 
-function write(nest: Nest, value: unknown): void {
+function set(nest: Nest, value: unknown): void {
 	const { parent, key } = nest;
 
 	if (parent) {
 		const [detect, create] = typeof key === 'number' ? [isArray, []] : [isObject, {}];
 
 		if (!all(detect, parent) && all(isUndefined, nest, parent)) {
-			write(parent, create);
+			set(parent, create);
 		}
 		if (!all(detect, parent)) {
 			exit(key, parent);
@@ -58,13 +58,16 @@ function nest(nesting: Nesting, key: Nest['key']): Nesting {
 
 		return { value, key, parent }
 	};
-
 }
 
-export function dotted(key: string) {
-	const nesting = key.split('.')
+function chain(key: string): Nesting {
+	return key.split('.')
 		.map(normalize)
 		.reduce(nest, (value: unknown) => ({ value }));
+}
+
+export function accessor(key: string) {
+	const nesting = chain(key);
 
 	return (target: unknown, ...values: Array<unknown>): unknown => {
 		const nested = nesting(target);

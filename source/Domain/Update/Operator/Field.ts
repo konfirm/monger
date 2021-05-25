@@ -1,7 +1,5 @@
-// import type { Evaluator } from '../Compiler';
-import { dotted } from '../../Field';
+import { accessor } from '../../Field';
 
-// type Target = Parameters<ReturnType<typeof dotted>>[0];
 type Target = { [key: string]: unknown };
 
 type CurrentDateType = { $type: 'date' | 'timestamp' };
@@ -20,10 +18,10 @@ function numericOperation(query: Numeric, modify: (value: number, current: unkno
 	const execute = Object.keys(query)
 		.map((key) => {
 			const value = query[key];
-			const accessor = dotted(key);
+			const access = accessor(key);
 
 			return (target: Target) => {
-				accessor(target, modify(value, accessor(target)));
+				access(target, modify(value, access(target)));
 
 				return target;
 			}
@@ -43,10 +41,10 @@ export function $currentDate(query: CurrentDate): (input: Target) => unknown {
 	const execute = Object.keys(query)
 		.map((key) => {
 			const { $type: type } = (query[key] === true ? { $type: 'date' } : query[key]) as CurrentDateType;
-			const accessor = dotted(key);
+			const access = accessor(key);
 
 			return (target: Target, value: Date) => {
-				accessor(target, type === 'date' ? new Date(value) : value.getTime());
+				access(target, type === 'date' ? new Date(value) : value.getTime());
 
 				return target;
 			};

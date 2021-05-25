@@ -3,7 +3,7 @@ import type { Operation as ComparisonOperation } from './Operator/Comparison';
 import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as LogicalOperation } from './Operator/Logical';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
-import { dotted } from '../Field';
+import { accessor } from '../Field';
 import { isObject } from '../BSON';
 
 
@@ -40,9 +40,9 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private delegate(name: K, query: T): Evaluator {
 		const compiled = this.condition(name, query);
-		const accessor = dotted(name as string);
+		const access = accessor(name as string);
 
-		return (input: any) => compiled(accessor(input));
+		return (input: any) => compiled(access(input));
 	}
 
 	private operation(name: K, query: T): Evaluator {
