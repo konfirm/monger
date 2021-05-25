@@ -1,12 +1,10 @@
 import { accessor } from '../../Field';
 import { isUndefined } from '../../BSON';
 
-type Target = { [key: string]: unknown };
-
+type Target<T = unknown> = { [key: string]: T };
 type CurrentDateType = { $type: 'date' | 'timestamp' };
-type CurrentDate = { [key: string]: true | CurrentDateType };
-type Numeric = { [key: string]: number };
-type Property = { [key: string]: string };
+type CurrentDate = Target<true | CurrentDateType>;
+type Numeric = Target<number>;
 
 export type Operation = {
 	$currentDate: Parameters<typeof $currentDate>[0];
@@ -121,7 +119,7 @@ export function $mul(query: Numeric): (input: Target) => unknown {
  * @syntax  { $unset: { <field1>: "", ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/unset/
  */
-export function $unset(query: Property): (input: Target) => unknown {
+export function $unset(query: Target): (input: Target) => unknown {
 	const execute = Object.keys(query)
 		.map((key) => {
 			const access = accessor(key);
