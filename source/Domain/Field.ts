@@ -84,6 +84,11 @@ function chain(key: string): Nesting {
 export function accessor(key: string) {
 	const nesting = chain(key);
 
+	// the rest operator is used to collect any additional argument in
+	// an array, whenever the length is 1 or more, it means we will be
+	// updating a record (or at least attempt to), and the value can be undefined
+	// the full signature is:
+	// (target: unknown, value?: any, remove?:boolean) => unknown
 	return (target: unknown, ...values: Array<unknown>): unknown => {
 		const nested = nesting(target);
 

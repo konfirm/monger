@@ -1,7 +1,8 @@
+import type { Target, Updater } from '../Compiler';
+import { prepare } from '../Compiler';
 import { accessor } from '../../Field';
 import { isUndefined } from '../../BSON';
 
-type Target<T = unknown> = { [key: string]: T };
 type CurrentDateType = { $type: 'date' | 'timestamp' };
 type CurrentDate = Target<true | CurrentDateType>;
 type Numeric = Target<number>;
@@ -18,20 +19,18 @@ export type Operation = {
 	$unset: Parameters<typeof $unset>[0];
 };
 
-function numericOperation(query: Numeric, modify: (value: number, current: unknown) => unknown) {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const value = query[key];
-			const access = accessor(key);
+function operation<T extends Target>(query: T, execute: (value: T[keyof T], current: unknown) => unknown) {
+	const execution = prepare<T>(query, (key, value) => {
+		const access = accessor(key as string);
 
-			return (target: Target) => {
-				access(target, modify(value, access(target)));
+		return (target: Target): Target => {
+			access(target, execute(value as T[keyof T], access(target)));
 
-				return target;
-			}
-		});
+			return target;
+		};
+	});
 
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+	return (input: Target) => execution.reduce((carry, ex) => ex(carry), input);
 }
 
 /**
@@ -41,22 +40,20 @@ function numericOperation(query: Numeric, modify: (value: number, current: unkno
  * @syntax  { $currentDate: { <field1>: <typeSpecification1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/currentDate/
  */
-export function $currentDate(query: CurrentDate): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const { $type: type } = (query[key] === true ? { $type: 'date' } : query[key]) as CurrentDateType;
-			const access = accessor(key);
+export function $currentDate(query: CurrentDate): Updater {
+	const execution = prepare<CurrentDate>(query, (key, value) => {
+		const { $type: type } = value === true ? { $type: 'date' } : value as CurrentDateType;
+		const access = accessor(key as string);
 
-			return (target: Target, value: Date) => {
-				access(target, type === 'date' ? new Date(value) : value.getTime());
+		return (target: Target, value: Date): Target => {
+			access(target, type === 'date' ? new Date(value) : value.getTime());
 
-				return target;
-			};
-		});
-
+			return target;
+		};
+	});
 	const date = new Date();
 
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry, date), input);
+	return (input: Target) => execution.reduce((carry, ex) => ex(carry, date), input);
 }
 
 /**
@@ -65,8 +62,8 @@ export function $currentDate(query: CurrentDate): (input: Target) => unknown {
  * @syntax  { $inc: { <field1>: <amount1>, <field2>: <amount2>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/inc/
  */
-export function $inc(query: Numeric): (input: Target) => unknown {
-	return numericOperation(
+export function $inc(query: Numeric): Updater {
+	return operation<Numeric>(
 		query,
 		(value: number, current: unknown) =>
 			((current || 0) as number) + value
@@ -79,8 +76,8 @@ export function $inc(query: Numeric): (input: Target) => unknown {
  * @syntax  { $min: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/min/
  */
-export function $min(query: Numeric): (input: Target) => unknown {
-	return numericOperation(
+export function $min(query: Numeric): Updater {
+	return operation(
 		query,
 		(value: number, current: unknown) =>
 			typeof current !== 'number' || current < value ? value : current
@@ -93,8 +90,8 @@ export function $min(query: Numeric): (input: Target) => unknown {
  * @syntax  { $max: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/max/
  */
-export function $max(query: Numeric): (input: Target) => unknown {
-	return numericOperation(
+export function $max(query: Numeric): Updater {
+	return operation(
 		query,
 		(value: number, current: unknown) =>
 			typeof current !== 'number' || current > value ? value : current
@@ -107,8 +104,8 @@ export function $max(query: Numeric): (input: Target) => unknown {
  * @syntax  { $mul: { <field1>: <number1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/mul/
  */
-export function $mul(query: Numeric): (input: Target) => unknown {
-	return numericOperation(
+export function $mul(query: Numeric): Updater {
+	return operation(
 		query,
 		(value: number, current: unknown) =>
 			typeof current !== 'number' ? 0 : value * current
@@ -121,27 +118,25 @@ export function $mul(query: Numeric): (input: Target) => unknown {
  * @syntax  {$rename: { <field1>: <newName1>, <field2>: <newName2>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/rename/
  */
-export function $rename(query: Target<string>): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const rename = query[key];
-			const path = key.indexOf(rename) === 0 || rename.indexOf(key) === 0;
-			const current = accessor(key);
-			const create = accessor(rename);
+export function $rename(query: Target<string>): Updater {
+	const execution = prepare<Target<string>>(query, (key, rename) => {
+		const path = String(key).indexOf(rename) === 0 || rename.indexOf(String(key)) === 0;
+		const current = accessor(key as string);
+		const create = accessor(rename);
 
-			return (target: Target) => {
-				if (path) {
-					throw new Error(`The source and target field for $rename must not be on the same path: ${key}: "${rename}"`);
-				}
+		return (target: Target) => {
+			if (path) {
+				throw new Error(`The source and target field for $rename must not be on the same path: ${key}: "${rename}"`);
+			}
 
-				create(target, current(target));
-				current(target, undefined, true);
+			create(target, current(target));
+			current(target, undefined, true);
 
-				return target;
-			};
-		});
+			return target;
+		};
+	});
 
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+	return (input: Target) => execution.reduce((carry, ex) => ex(carry), input);
 }
 
 /**
@@ -150,20 +145,19 @@ export function $rename(query: Target<string>): (input: Target) => unknown {
  * @syntax  { $set: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/set/
  */
-export function $set(query: Target): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const value = query[key];
-			const access = accessor(key);
+export function $set(query: Target): Updater {
+	const execution = prepare<Target>(query, (key, value) => {
+		const access = accessor(key as string);
 
-			return (target: Target) => {
-				access(target, value);
+		return (target: Target) => {
+			access(target, value);
 
-				return target;
-			};
-		});
+			return target;
+		};
+	});
 
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+
+	return (input: Target) => execution.reduce((carry, ex) => ex(carry), input);
 }
 
 /**
@@ -174,8 +168,8 @@ export function $set(query: Target): (input: Target) => unknown {
  * @see     https://docs.mongodb.com/manual/reference/operator/update/setOnInsert/
  * @todo    implement $setOnInsert
  */
-export function $setOnInsert(todo: any): (input: Target) => unknown {
-	return (input: unknown): boolean => {
+export function $setOnInsert(todo: any): Updater {
+	return (input: Target) => {
 		throw new Error('$setOnInsert not implemented');
 	}
 }
@@ -186,19 +180,18 @@ export function $setOnInsert(todo: any): (input: Target) => unknown {
  * @syntax  { $unset: { <field1>: "", ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/unset/
  */
-export function $unset(query: Target): (input: Target) => unknown {
-	const execute = Object.keys(query)
-		.map((key) => {
-			const access = accessor(key);
+export function $unset(query: Target): Updater {
+	const execution = prepare(query, (key) => {
+		const access = accessor(key as string);
 
-			return (target: Target) => {
-				if (!isUndefined(access(target))) {
-					access(target, undefined, true);
-				}
+		return (target: Target) => {
+			if (!isUndefined(access(target))) {
+				access(target, undefined, true);
+			}
 
-				return target;
-			};
-		});
+			return target;
+		}
+	});
 
-	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+	return (input: Target) => execution.reduce((carry, ex) => ex(carry), input);
 }
