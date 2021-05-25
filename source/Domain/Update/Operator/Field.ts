@@ -1,10 +1,12 @@
 import { accessor } from '../../Field';
+import { isUndefined } from '../../BSON';
 
 type Target = { [key: string]: unknown };
 
 type CurrentDateType = { $type: 'date' | 'timestamp' };
 type CurrentDate = { [key: string]: true | CurrentDateType };
 type Numeric = { [key: string]: number };
+type Property = { [key: string]: string };
 
 export type Operation = {
 	$currentDate: Parameters<typeof $currentDate>[0];
@@ -12,6 +14,7 @@ export type Operation = {
 	$min: Parameters<typeof $min>[0];
 	$max: Parameters<typeof $max>[0];
 	$mul: Parameters<typeof $mul>[0];
+	$unset: Parameters<typeof $unset>[0];
 };
 
 function numericOperation(query: Numeric, modify: (value: number, current: unknown) => unknown) {
@@ -111,3 +114,26 @@ export function $mul(query: Numeric): (input: Target) => unknown {
 	);
 }
 
+
+/**
+ * $unset
+ * Removes the specified field from a document.
+ * @syntax  { $unset: { <field1>: "", ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/unset/
+ */
+export function $unset(query: Property): (input: Target) => unknown {
+	const execute = Object.keys(query)
+		.map((key) => {
+			const access = accessor(key);
+
+			return (target: Target) => {
+				if (!isUndefined(access(target))) {
+					access(target, undefined, true);
+				}
+
+				return target;
+			};
+		});
+
+	return (input: Target) => execute.reduce((carry, ex) => ex(carry), input);
+}

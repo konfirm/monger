@@ -2,8 +2,7 @@ import * as test from 'tape';
 import * as Field from '../../../../source/Domain/Update/Operator/Field';
 
 test('Domain/Update/Operator/Field - exports', (t) => {
-	const expected = ['$currentDate', '$inc', '$min', '$max'];
-	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul'];
+	const expected = ['$currentDate', '$inc', '$min', '$max', '$mul', '$unset'];
 	const actual = Object.keys(Field);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -183,6 +182,33 @@ test('Domain/Update/Operator/Field - $mul', (t) => {
 	t.equal(lower.one, 10, 'one is 10');
 	t.equal(lower.nested.two, 40, 'nested.two is 40');
 	t.equal(lower.nested.nested.three, 90, 'nested.nested.three is 90');
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Field - $unset', (t) => {
+	const { $unset } = Field;
+	const query = {
+		'foo': '',
+		'bar.baz.qux': ''
+	};
+	const target = {
+		foo: 'remove before flight',
+		bar: {
+			baz: {
+				qux: 'remove before flight',
+			},
+		},
+	};
+	const update = $unset(query);
+
+	t.true('foo' in target, 'target.foo exists');
+	t.true('qux' in target.bar.baz, 'target.bar.baz.qux exists');
+
+	update(target);
+
+	t.false('foo' in target, 'target.foo no longer exists');
+	t.false('qux' in target.bar.baz, 'target.bar.baz.qux no longer exists');
 
 	t.end();
 });

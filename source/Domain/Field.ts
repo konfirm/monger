@@ -50,6 +50,21 @@ function set(nest: Nest, value: unknown): void {
 	}
 }
 
+function unset(nest: Nest): boolean {
+	const { parent, key } = nest;
+
+	if (parent) {
+		if (isObject(parent.value)) {
+			delete (parent.value as Target)[key as string];
+		}
+		else if (isArray(parent.value)) {
+			(parent.value as Target)[key as number] = null;
+		}
+	}
+
+	return false;
+}
+
 function nest(nesting: Nesting, key: Nest['key']): Nesting {
 	return (target: unknown): Nest => {
 		const parent = nesting(target);
@@ -72,6 +87,12 @@ export function accessor(key: string) {
 	return (target: unknown, ...values: Array<unknown>): unknown => {
 		const nested = nesting(target);
 
-		return values.length ? write(nested, values[0]) : read(nested);
+		if (values.length) {
+			const [value, remove] = values;
+
+			return remove ? unset(nested) : set(nested, value);
+		}
+
+		return get(nested);
 	}
 }
