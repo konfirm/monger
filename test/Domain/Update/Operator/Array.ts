@@ -4,7 +4,7 @@ import { json, jsonify, preserve } from '../../../Utility';
 import * as ArrayOperator from '../../../../source/Domain/Update/Operator/Array';
 
 test('Domain/Update/Operator/Array - exports', (t) => {
-	const expected = ['$addToSet'];
+	const expected = ['$addToSet', '$pop', '$pull'];
 	const actual = Object.keys(ArrayOperator);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -99,6 +99,61 @@ test('Domain/Update/Operator/Array - $addToSet errors', (t) => {
 			() => {
 				const addToSet = $addToSet(query as Parameters<typeof $addToSet>[0]);
 				addToSet(preserve(input) as Parameters<typeof addToSet>[0])
+			},
+			match,
+			jsonify`${query} on ${input} throws: ${error}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $pop', (t) => {
+	const { $pop } = ArrayOperator;
+
+	each`
+		query                | input                               | output
+		---------------------|-------------------------------------|--------
+		${{ foo: 1 }}        | ${{}}                               | ${{}}
+		${{ foo: -1 }}       | ${{}}                               | ${{}}
+		${{ foo: 1 }}        | ${{ foo: [] }}                      | ${{ foo: [] }}
+		${{ foo: -1 }}       | ${{ foo: [] }}                      | ${{ foo: [] }}
+		${{ foo: 1 }}        | ${{ foo: [1] }}                     | ${{ foo: [] }}
+		${{ foo: -1 }}       | ${{ foo: [1] }}                     | ${{ foo: [] }}
+		${{ foo: 1 }}        | ${{ foo: ['one', 'two'] }}          | ${{ foo: ['one'] }}
+		${{ foo: -1 }}       | ${{ foo: ['one', 'two'] }}          | ${{ foo: ['two'] }}
+	`((record) => {
+		const { query, input, output } = record as { [key: string]: unknown };
+		const pop = $pop(query as Parameters<typeof $pop>[0]);
+		const result = pop(preserve(input) as Parameters<typeof pop>[0])
+
+		t.equal(
+			json(result),
+			json(output),
+			jsonify`${query} on ${input} updates to ${result}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $pop errors', (t) => {
+	const { $pop } = ArrayOperator;
+	each`
+		query         | input                  | error
+		--------------|------------------------|--------
+		${{ foo: 1 }} | ${{ foo: null }}       | Cannot apply $pop to non-array field. Field named 'foo' has non-array type null
+		${{ foo: 1 }} | ${{ foo: 1 }}          | Cannot apply $pop to non-array field. Field named 'foo' has non-array type int
+		${{ foo: 1 }} | ${{ foo: 'one' }}      | Cannot apply $pop to non-array field. Field named 'foo' has non-array type string
+		${{ foo: 1 }} | ${{ foo: { bar: 1 } }} | Cannot apply $pop to non-array field. Field named 'foo' has non-array type object
+	`((record) => {
+		const { query, input, error } = record as { error: string, [key: string]: unknown };
+		const match = new RegExp((error || '').replace(/([\$\[\]\{\}])/g, '\\$1'));
+
+		t.throws(
+			() => {
+				const pop = $pop(query as Parameters<typeof $pop>[0]);
+				pop(preserve(input) as Parameters<typeof pop>[0]);
 			},
 			match,
 			jsonify`${query} on ${input} throws: ${error}`

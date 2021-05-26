@@ -4,6 +4,7 @@ import { accessor } from '../../Field';
 import { isObject, isArray, isUndefined, type } from '../../BSON';
 
 type Primitve = string | number | boolean | null;
+type MinPlus = -1 | 1;
 type AddToSet = {
 	[key: string]
 	: { $each: Array<unknown> }
@@ -14,6 +15,7 @@ type AddToSet = {
 
 export type Operation = {
 	$addToSet: Parameters<typeof $addToSet>[0];
+	$pop: Parameters<typeof $pop>[0];
 };
 
 function validateArrayFor(method: string): (key: string, value: unknown) => Array<unknown> {
@@ -86,6 +88,36 @@ export function $addToSet(query: AddToSet): Updater {
 			return target;
 		};
 	});
+
+	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
+}
+
+/**
+ * $pop
+ * Removes the first or last item of an array.
+ * @syntax  { $pop: { <field>: <-1 | 1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/pop/
+ * @todo    implement $pop
+ */
+export function $pop(query: Target<MinPlus>): Updater {
+	const name = '$pop';
+	const validate = validateArrayFor(name);
+	const execution = prepare(query, (key, direction) => {
+		const method = direction > 0 ? 'pop' : 'shift';
+		const access = accessor(key as string);
+
+		return (target: Target): Target => {
+			const current = access(target);
+
+			if (!isUndefined(current)) {
+				const list = validate(key as string, current);
+
+				list[method]();
+			}
+
+			return target;
+		}
+	})
 
 	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
 }
