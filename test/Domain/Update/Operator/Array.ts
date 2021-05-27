@@ -162,3 +162,59 @@ test('Domain/Update/Operator/Array - $pop errors', (t) => {
 
 	t.end();
 });
+
+test('Domain/Update/Operator/Array - $pull', (t) => {
+	const { $pull } = ArrayOperator;
+	each`
+		query                           | input                                | output
+		--------------------------------|--------------------------------------|--------
+		${{ foo: 1 }}                   | ${{}}                                | ${{}}
+		${{ foo: 1 }}                   | ${{ foo: [1, 2, 3] }}                | ${{ foo: [2, 3] }}
+		${{ foo: 'bar' }}               | ${{ foo: ['bar', 'baz'] }}           | ${{ foo: ['baz'] }}
+		${{ foo: [1, 'bar'] }}          | ${{ foo: [1, 2, 3] }}                | ${{ foo: [1, 2, 3] }}
+		${{ foo: [1, 'bar'] }}          | ${{ foo: ['bar', 'baz'] }}           | ${{ foo: ['bar', 'baz'] }}
+		${{ foo: { bar: 1 } }}          | ${{ foo: [{ bar: 1 }, { baz: 2 }] }} | ${{ foo: [{ baz: 2 }] }}
+		${{ foo: { $gt: 1 } }}          | ${{ foo: [1, 2, 3] }}                | ${{ foo: [1] }}
+		${{ foo: { $in: [1, 'bar'] } }} | ${{ foo: [1, 2, 3] }}                | ${{ foo: [2, 3] }}
+		${{ foo: { $in: [1, 'bar'] } }} | ${{ foo: ['bar', 'baz'] }}           | ${{ foo: ['baz'] }}
+	`((record) => {
+		const { query, input, output } = record as { [key: string]: unknown };
+		const pull = $pull(query as Parameters<typeof $pull>[0]);
+		const result = pull(preserve(input) as Parameters<typeof pull>[0])
+
+		t.equal(
+			json(result),
+			json(output),
+			jsonify`${query} on ${input} updates to ${result}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $pull errors', (t) => {
+	const { $pull } = ArrayOperator;
+	each`
+		query                          | input                  | error
+		-------------------------------|------------------------|--------
+		${{ foo: { $gt: 1, bar: 3 } }} | ${{}}                  | unknown operator: bar
+		${{ foo: 1 }}                  | ${{ foo: null }}       | Cannot apply $pull to non-array field. Field named 'foo' has non-array type null
+		${{ foo: 1 }}                  | ${{ foo: 1 }}          | Cannot apply $pull to non-array field. Field named 'foo' has non-array type int
+		${{ foo: 1 }}                  | ${{ foo: 'one' }}      | Cannot apply $pull to non-array field. Field named 'foo' has non-array type string
+		${{ foo: 1 }}                  | ${{ foo: { bar: 1 } }} | Cannot apply $pull to non-array field. Field named 'foo' has non-array type object
+	`((record) => {
+		const { query, input, error } = record as { error: string, [key: string]: unknown };
+		const match = new RegExp((error || '').replace(/([\$\[\]\{\}])/g, '\\$1'));
+
+		t.throws(
+			() => {
+				const pull = $pull(query as Parameters<typeof $pull>[0]);
+				pull(preserve(input) as Parameters<typeof pull>[0]);
+			},
+			match,
+			jsonify`${query} on ${input} throws: ${error}`
+		);
+	});
+
+	t.end();
+});

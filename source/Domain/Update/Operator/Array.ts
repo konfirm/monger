@@ -1,4 +1,6 @@
+import type { Query } from '../../Filter/Compiler';
 import type { Target, Updater } from '../Compiler';
+import { filter } from '../../Filter';
 import { prepare } from '../Compiler';
 import { accessor } from '../../Field';
 import { isObject, isArray, isUndefined, type } from '../../BSON';
@@ -16,6 +18,7 @@ type AddToSet = {
 export type Operation = {
 	$addToSet: Parameters<typeof $addToSet>[0];
 	$pop: Parameters<typeof $pop>[0];
+	$pull: Parameters<typeof $pull>[0];
 };
 
 function validateArrayFor(method: string): (key: string, value: unknown) => Array<unknown> {
@@ -36,6 +39,12 @@ function contains(collection: Array<any>, value: unknown): boolean {
 	return collection.some((value) => JSON.stringify(value) === json);
 }
 
+function compare(settings: unknown): (value: unknown) => boolean {
+	const json = JSON.stringify(settings);
+
+	return (value: unknown): boolean => json === JSON.stringify(value);
+}
+
 function ensureArray(target: Target, access: ReturnType<typeof accessor>): Array<unknown> {
 	let current = access(target);
 
@@ -45,6 +54,22 @@ function ensureArray(target: Target, access: ReturnType<typeof accessor>): Array
 	}
 
 	return current as Array<unknown>;
+}
+
+function isFilter(settings: Partial<Query> | { [key: string]: Primitve }): boolean {
+	if (isObject(settings)) {
+		const keys = Object.keys(settings);
+		const hasFilter = keys.some((key) => key[0] === '$');
+		const [first] = hasFilter ? keys.filter((key) => key[0] !== '$') : [];
+
+		if (first) {
+			throw new Error(`unknown operator: ${first}`);
+		}
+
+		return hasFilter;
+	}
+
+	return false;
 }
 
 function $each(settings: unknown, method: string): Array<unknown> {
@@ -66,7 +91,6 @@ function $each(settings: unknown, method: string): Array<unknown> {
  * Adds elements to an array only if they do not already exist in the set.
  * @syntax  { $addToSet: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/addToSet/
- * @todo    implement $addToSet
  */
 export function $addToSet(query: AddToSet): Updater {
 	const name = '$addToSet';
@@ -97,7 +121,6 @@ export function $addToSet(query: AddToSet): Updater {
  * Removes the first or last item of an array.
  * @syntax  { $pop: { <field>: <-1 | 1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/pop/
- * @todo    implement $pop
  */
 export function $pop(query: Target<MinPlus>): Updater {
 	const name = '$pop';
@@ -118,6 +141,40 @@ export function $pop(query: Target<MinPlus>): Updater {
 			return target;
 		}
 	})
+
+	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
+}
+
+/**
+ * $pull
+ * Removes all array elements that match a specified query.
+ * @syntax  { $pull: { <field1>: <value|condition>, <field2>: <value|condition>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/pull/
+ */
+export function $pull(query: Target<Partial<Query> | { [key: string]: Primitve }>): Updater {
+	const name = '$pull';
+	const validate = validateArrayFor(name);
+	const execution = prepare(query, (key, settings) => {
+		const access = accessor(key as string);
+		const condition = isFilter(settings) ? filter(settings) : compare(settings);
+
+		return (target: Target): Target => {
+			const current = access(target);
+
+			if (!isUndefined(current)) {
+				const list = validate(key as string, current);
+
+				list
+					.filter(condition)
+					.forEach((item) => {
+						const index = list.indexOf(item);
+						list.splice(index, 1);
+					});
+			}
+
+			return target;
+		};
+	});
 
 	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
 }
