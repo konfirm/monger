@@ -4,7 +4,7 @@ import { json, jsonify, preserve } from '../../../Utility';
 import * as ArrayOperator from '../../../../source/Domain/Update/Operator/Array';
 
 test('Domain/Update/Operator/Array - exports', (t) => {
-	const expected = ['$addToSet', '$pop', '$pull'];
+	const expected = ['$addToSet', '$pop', '$pull', '$push'];
 	const actual = Object.keys(ArrayOperator);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -210,6 +210,106 @@ test('Domain/Update/Operator/Array - $pull errors', (t) => {
 			() => {
 				const pull = $pull(query as Parameters<typeof $pull>[0]);
 				pull(preserve(input) as Parameters<typeof pull>[0]);
+			},
+			match,
+			jsonify`${query} on ${input} throws: ${error}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $push', (t) => {
+	const { $push } = ArrayOperator;
+
+	each`
+		field | value | input | output
+		------|-------|-------|--------
+		foo   | ${1}  | ${{}} | ${{ foo: [1] }}
+	`(({ field, value, input, output }: any) => {
+		const query = { [field]: value };
+		const push = $push(query as Parameters<typeof $push>[0]);
+		const result = push(preserve(input) as Parameters<typeof push>[0])
+
+		t.equal(
+			json(result),
+			json(output),
+			jsonify`${query} on ${input} updates to ${result}`
+		);
+	});
+
+	const vo1 = { name: 'foo' };
+	const vo2 = { name: 'bar' };
+	each`
+		field | $each        | $sort           | $position | $slice | input                 | output
+		------|--------------|-----------------|-----------|--------|-----------------------|--------
+		one   | ${[1]}       |                 |           |        | ${{}}                 | ${{ one: [1] }}
+		one   | ${[1]}       |                 |           |        | ${{ one: [1] }}       | ${{ one: [1, 1] }}
+		one   | ${[7]}       |                 |           |        | ${{ one: [1] }}       | ${{ one: [1, 7] }}
+		one   | ${[7]}       |                 | ${1}      |        | ${{ one: [1] }}       | ${{ one: [1, 7] }}
+		one   | ${[7]}       |                 | ${-1}     |        | ${{ one: [1] }}       | ${{ one: [7, 1] }}
+		one   | ${[1, 3, 4]} |                 |           |        | ${{ one: [2] }}       | ${{ one: [2, 1, 3, 4] }}
+		one   | ${[1, 3, 4]} |                 | ${1}      |        | ${{ one: [2] }}       | ${{ one: [2, 1, 3, 4] }}
+		one   | ${[1, 3, 4]} |                 | ${-1}     |        | ${{ one: [2] }}       | ${{ one: [1, 3, 4, 2] }}
+		one   | ${[1, 3, 4]} | ${1}            |           |        | ${{ one: [2] }}       | ${{ one: [1, 2, 3, 4] }}
+		one   | ${[1, 3, 4]} | ${-1}           |           |        | ${{ one: [2] }}       | ${{ one: [4, 3, 2, 1] }}
+		one   | ${[1, 3, 4]} | ${1}            | ${1}      |        | ${{ one: [2] }}       | ${{ one: [1, 2, 3, 4] }}
+		one   | ${[1, 3, 4]} | ${-1}           | ${1}      |        | ${{ one: [2] }}       | ${{ one: [4, 3, 2, 1] }}
+		one   | ${[1, 3, 4]} | ${1}            | ${-1}     |        | ${{ one: [2] }}       | ${{ one: [1, 2, 3, 4] }}
+		one   | ${[1, 3, 4]} | ${-1}           | ${-1}     |        | ${{ one: [2] }}       | ${{ one: [4, 3, 2, 1] }}
+		one   | ${[1, 3, 4]} |                 |           | ${2}   | ${{ one: [2] }}       | ${{ one: [2, 1] }}
+		one   | ${[1, 3, 4]} |                 | ${1}      | ${2}   | ${{ one: [2] }}       | ${{ one: [2, 1] }}
+		one   | ${[1, 3, 4]} |                 | ${-1}     | ${2}   | ${{ one: [2] }}       | ${{ one: [1, 3] }}
+		one   | ${[1, 3, 4]} | ${1}            |           | ${2}   | ${{ one: [2] }}       | ${{ one: [1, 2] }}
+		one   | ${[1, 3, 4]} | ${-1}           |           | ${2}   | ${{ one: [2] }}       | ${{ one: [4, 3] }}
+		one   | ${[1, 3, 4]} | ${1}            | ${1}      | ${2}   | ${{ one: [2] }}       | ${{ one: [1, 2] }}
+		one   | ${[1, 3, 4]} | ${-1}           | ${1}      | ${2}   | ${{ one: [2] }}       | ${{ one: [4, 3] }}
+		one   | ${[1, 3, 4]} | ${1}            | ${-1}     | ${2}   | ${{ one: [2] }}       | ${{ one: [1, 2] }}
+		one   | ${[1, 3, 4]} | ${-1}           | ${-1}     | ${2}   | ${{ one: [2] }}       | ${{ one: [4, 3] }}
+		obj   | ${[vo2]}     |                 |           |        | ${{}}                 | ${{ obj: [vo2] }}
+		obj   | ${[vo2]}     |                 |           |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+		obj   | ${[vo2]}     |                 | ${1}      |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+		obj   | ${[vo2]}     |                 | ${-1}     |        | ${{ obj: [vo1] }}     | ${{ obj: [vo2, vo1] }}
+		obj   | ${[vo2]}     | ${1}            |           |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+		obj   | ${[vo2]}     | ${1}            | ${1}      |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+		obj   | ${[vo2]}     | ${-1}           | ${-1}     |        | ${{ obj: [vo1] }}     | ${{ obj: [vo2, vo1] }}
+		obj   | ${[vo2]}     | ${{ name: 1 }}  |           |        | ${{ obj: [vo1] }}     | ${{ obj: [vo2, vo1] }}
+		obj   | ${[vo2]}     | ${{ name: 1 }}  | ${1}      |        | ${{ obj: [vo1] }}     | ${{ obj: [vo2, vo1] }}
+		obj   | ${[vo2]}     | ${{ name: 1 }}  | ${-1}     |        | ${{ obj: [vo1] }}     | ${{ obj: [vo2, vo1] }}
+		obj   | ${[vo2]}     | ${{ name: -1 }} | ${1}      |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+		obj   | ${[vo2]}     | ${{ name: -1 }} | ${-1}     |        | ${{ obj: [vo1] }}     | ${{ obj: [vo1, vo2] }}
+	`(({ field, input, output, $each, ...rest }: any) => {
+		const query = { [field]: { $each, ...rest } };
+		const push = $push(query as Parameters<typeof $push>[0]);
+		const result = push(preserve(input) as Parameters<typeof push>[0])
+
+		t.equal(
+			json(result),
+			json(output),
+			jsonify`${query} on ${input} updates to ${result}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $push errors', (t) => {
+	const { $push } = ArrayOperator;
+	each`
+		query                          | input                  | error
+		-------------------------------|------------------------|--------
+		${{ foo: 1 }}                  | ${{ foo: null }}       | Cannot apply $push to non-array field. Field named 'foo' has non-array type null
+		${{ foo: 1 }}                  | ${{ foo: 1 }}          | Cannot apply $push to non-array field. Field named 'foo' has non-array type int
+		${{ foo: 1 }}                  | ${{ foo: 'one' }}      | Cannot apply $push to non-array field. Field named 'foo' has non-array type string
+		${{ foo: 1 }}                  | ${{ foo: { bar: 1 } }} | Cannot apply $push to non-array field. Field named 'foo' has non-array type object
+	`((record) => {
+		const { query, input, error } = record as { error: string, [key: string]: unknown };
+		const match = new RegExp((error || '').replace(/([\$\[\]\{\}])/g, '\\$1'));
+
+		t.throws(
+			() => {
+				const push = $push(query as Parameters<typeof $push>[0]);
+				push(preserve(input) as Parameters<typeof push>[0]);
 			},
 			match,
 			jsonify`${query} on ${input} throws: ${error}`

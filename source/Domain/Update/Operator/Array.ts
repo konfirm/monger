@@ -7,10 +7,18 @@ import { isObject, isArray, isUndefined, type } from '../../BSON';
 
 type Primitve = string | number | boolean | null;
 type MinPlus = -1 | 1;
-type AddToSet = {
+type AddToSetOptions = {
 	[key: string]
 	: { $each: Array<unknown> }
 	| ({ [key: string]: unknown } & { $each?: never })
+	| Primitve
+	| Array<unknown>;
+};
+type SortOptions = MinPlus | Target<MinPlus>
+type PushOptions = {
+	[key: string]
+	: { $each: Array<unknown>, $slice?: number, $sort?: SortOptions, $position?: MinPlus }
+	| ({ [key: string]: unknown } & { $each?: never, $slice?: never, $sort?: never, $position?: never })
 	| Primitve
 	| Array<unknown>;
 };
@@ -19,6 +27,7 @@ export type Operation = {
 	$addToSet: Parameters<typeof $addToSet>[0];
 	$pop: Parameters<typeof $pop>[0];
 	$pull: Parameters<typeof $pull>[0];
+	$push: Parameters<typeof $push>[0];
 };
 
 function validateArrayFor(method: string): (key: string, value: unknown) => Array<unknown> {
@@ -86,13 +95,39 @@ function $each(settings: unknown, method: string): Array<unknown> {
 	return [settings];
 }
 
+function $slice(settings: unknown): (list: Array<unknown>) => Array<unknown> {
+	const { $slice } = (settings || {}) as any;
+
+	return (list: Array<unknown>): Array<unknown> => list.slice(0, $slice);
+}
+
+function $sort(settings: unknown): (list: Array<unknown>) => Array<unknown> {
+	const { $sort = 0 } = (settings || {}) as any;
+
+	if (isObject($sort)) {
+		const order = Object.keys($sort as Target<MinPlus>)
+			.map((key) => ({ [key]: one }: Target<any>, { [key]: two }: Target<any>) => (one < two ? -1 : Number(one > two)) * ($sort as Target<MinPlus>)[key]);
+
+		return (list: Array<unknown>) => order.reduce((carry, sorter) => carry.sort(sorter), list as Array<Target>);
+	}
+
+	return (list: Array<unknown>): Array<unknown> => list.sort((one: any, two: any) => (one < two ? -1 : Number(one > two)) * $sort);
+}
+
+function $position(settings: unknown): (list: Array<unknown>, insert: Array<unknown>) => Array<unknown> {
+	const { $position = 0 } = (settings || {}) as any;
+
+	return (list, insert) => ([] as Array<unknown>)
+		.concat($position < 0 ? insert : list, $position < 0 ? list : insert);
+}
+
 /**
  * $addToSet
  * Adds elements to an array only if they do not already exist in the set.
  * @syntax  { $addToSet: { <field1>: <value1>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/addToSet/
  */
-export function $addToSet(query: AddToSet): Updater {
+export function $addToSet(query: AddToSetOptions): Updater {
 	const name = '$addToSet';
 	const validate = validateArrayFor(name);
 	const execution = prepare(query, (key, settings) => {
@@ -179,3 +214,31 @@ export function $pull(query: Target<Partial<Query> | { [key: string]: Primitve }
 	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
 }
 
+/**
+ * $push
+ * Adds an item to an array.
+ * @syntax  { $push: { <field1>: <value1>, ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/push/
+ */
+export function $push(query: PushOptions): Updater {
+	const name = '$push';
+	const validate = validateArrayFor(name);
+	const execution = prepare(query, (key, settings) => {
+		const values = $each(settings, name);
+		const access = accessor(key as string);
+		const combine = $position(settings);
+		const sort = $sort(settings);
+		const slice = $slice(settings);
+
+		return (target: Target): Target => {
+			const list = validate(key as string, ensureArray(target, access));
+			const insert = slice(sort(combine(list, values)));
+
+			list.splice(0, list.length, ...insert);
+
+			return target;
+		}
+	});
+
+	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
+}
