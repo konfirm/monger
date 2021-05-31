@@ -28,6 +28,7 @@ export type Operation = {
 	$pop: Parameters<typeof $pop>[0];
 	$pull: Parameters<typeof $pull>[0];
 	$push: Parameters<typeof $push>[0];
+	$pullAll: Parameters<typeof $pullAll>[0];
 };
 
 function validateArrayFor(method: string): (key: string, value: unknown) => Array<unknown> {
@@ -238,6 +239,43 @@ export function $push(query: PushOptions): Updater {
 
 			return target;
 		}
+	});
+
+	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);
+}
+
+
+/**
+ * $pullAll
+ * Removes all matching values from an array.
+ * @syntax  { $pullAll: { <field1>: [ <value1>, <value2> ... ], ... } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/update/pullAll/
+ */
+export function $pullAll(query: Target<Array<unknown>>): Updater {
+	const name = '$pullAll';
+	const validate = validateArrayFor(name);
+	const execution = prepare(query, (key, settings) => {
+		if (!isArray(settings)) {
+			throw new Error(`${name} requires an array argument but was given non-array type ${type(settings)}`);
+		}
+		const access = accessor(key as string);
+
+		return (target: Target): Target => {
+			const current = access(target);
+
+			if (!isUndefined(current)) {
+				const list = validate(key as string, current);
+
+				list
+					.filter((value) => contains(settings, value))
+					.forEach((item) => {
+						const index = list.indexOf(item);
+						list.splice(index, 1);
+					});
+			}
+
+			return target;
+		};
 	});
 
 	return (input: Target): Target => execution.reduce((carry, ex) => ex(carry), input);

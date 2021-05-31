@@ -4,7 +4,7 @@ import { json, jsonify, preserve } from '../../../Utility';
 import * as ArrayOperator from '../../../../source/Domain/Update/Operator/Array';
 
 test('Domain/Update/Operator/Array - exports', (t) => {
-	const expected = ['$addToSet', '$pop', '$pull', '$push'];
+	const expected = ['$addToSet', '$pop', '$pull', '$push', '$pullAll'];
 	const actual = Object.keys(ArrayOperator);
 
 	t.equal(actual.length, expected.length, `contains ${expected.length} keys`);
@@ -310,6 +310,60 @@ test('Domain/Update/Operator/Array - $push errors', (t) => {
 			() => {
 				const push = $push(query as Parameters<typeof $push>[0]);
 				push(preserve(input) as Parameters<typeof push>[0]);
+			},
+			match,
+			jsonify`${query} on ${input} throws: ${error}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $pullAll', (t) => {
+	const { $pullAll } = ArrayOperator;
+	each`
+		query                           | input                                | output
+		--------------------------------|--------------------------------------|--------
+		${{ foo: [1, 'bar'] }}          | ${{}}                                | ${{}}
+		${{ foo: [1, 'bar'] }}          | ${{ foo: [1, 2, 3] }}                | ${{ foo: [2, 3] }}
+		${{ foo: [1, 'bar'] }}          | ${{ foo: ['bar', 'baz'] }}           | ${{ foo: ['baz'] }}
+	`((record) => {
+		const { query, input, output } = record as { [key: string]: unknown };
+		const pullAll = $pullAll(query as Parameters<typeof $pullAll>[0]);
+		const result = pullAll(preserve(input) as Parameters<typeof pullAll>[0])
+
+		t.equal(
+			json(result),
+			json(output),
+			jsonify`${query} on ${input} updates to ${result}`
+		);
+	});
+
+	t.end();
+});
+
+test('Domain/Update/Operator/Array - $pullAll errors', (t) => {
+	const { $pullAll } = ArrayOperator;
+	each`
+		query                  | input                  | error
+		-----------------------|------------------------|--------
+		${{ foo: 1 }}          | ${{ foo: null }}       | $pullAll requires an array argument but was given non-array type int
+		${{ foo: 'one' }}      | ${{ foo: null }}       | $pullAll requires an array argument but was given non-array type string
+		${{ foo: true }}       | ${{ foo: null }}       | $pullAll requires an array argument but was given non-array type bool
+		${{ foo: null }}       | ${{ foo: null }}       | $pullAll requires an array argument but was given non-array type null
+		${{ foo: { bar: 1 } }} | ${{ foo: null }}       | $pullAll requires an array argument but was given non-array type object
+		${{ foo: [1] }}        | ${{ foo: null }}       | Cannot apply $pullAll to non-array field. Field named 'foo' has non-array type null
+		${{ foo: [1] }}        | ${{ foo: 1 }}          | Cannot apply $pullAll to non-array field. Field named 'foo' has non-array type int
+		${{ foo: [1] }}        | ${{ foo: 'one' }}      | Cannot apply $pullAll to non-array field. Field named 'foo' has non-array type string
+		${{ foo: [1] }}        | ${{ foo: { bar: 1 } }} | Cannot apply $pullAll to non-array field. Field named 'foo' has non-array type object
+	`((record) => {
+		const { query, input, error } = record as { error: string, [key: string]: unknown };
+		const match = new RegExp((error || '').replace(/([\$\[\]\{\}])/g, '\\$1'));
+
+		t.throws(
+			() => {
+				const pullAll = $pullAll(query as Parameters<typeof $pullAll>[0]);
+				pullAll(preserve(input) as Parameters<typeof pullAll>[0]);
 			},
 			match,
 			jsonify`${query} on ${input} throws: ${error}`
