@@ -112,16 +112,16 @@ test('Domain/Update/Operator/Array - $pop', (t) => {
 	const { $pop } = ArrayOperator;
 
 	each`
-		query                | input                               | output
-		---------------------|-------------------------------------|--------
-		${{ foo: 1 }}        | ${{}}                               | ${{}}
-		${{ foo: -1 }}       | ${{}}                               | ${{}}
-		${{ foo: 1 }}        | ${{ foo: [] }}                      | ${{ foo: [] }}
-		${{ foo: -1 }}       | ${{ foo: [] }}                      | ${{ foo: [] }}
-		${{ foo: 1 }}        | ${{ foo: [1] }}                     | ${{ foo: [] }}
-		${{ foo: -1 }}       | ${{ foo: [1] }}                     | ${{ foo: [] }}
-		${{ foo: 1 }}        | ${{ foo: ['one', 'two'] }}          | ${{ foo: ['one'] }}
-		${{ foo: -1 }}       | ${{ foo: ['one', 'two'] }}          | ${{ foo: ['two'] }}
+		query          | input                      | output
+		---------------|----------------------------|--------
+		${{ foo: 1 }}  | ${{}}                      | ${{}}
+		${{ foo: -1 }} | ${{}}                      | ${{}}
+		${{ foo: 1 }}  | ${{ foo: [] }}             | ${{ foo: [] }}
+		${{ foo: -1 }} | ${{ foo: [] }}             | ${{ foo: [] }}
+		${{ foo: 1 }}  | ${{ foo: [1] }}            | ${{ foo: [] }}
+		${{ foo: -1 }} | ${{ foo: [1] }}            | ${{ foo: [] }}
+		${{ foo: 1 }}  | ${{ foo: ['one', 'two'] }} | ${{ foo: ['one'] }}
+		${{ foo: -1 }} | ${{ foo: ['one', 'two'] }} | ${{ foo: ['two'] }}
 	`((record) => {
 		const { query, input, output } = record as { [key: string]: unknown };
 		const pop = $pop(query as Parameters<typeof $pop>[0]);
@@ -223,9 +223,10 @@ test('Domain/Update/Operator/Array - $push', (t) => {
 	const { $push } = ArrayOperator;
 
 	each`
-		field | value | input | output
-		------|-------|-------|--------
-		foo   | ${1}  | ${{}} | ${{ foo: [1] }}
+		field | value    | input | output
+		------|----------|-------|--------
+		foo   | ${1}     | ${{}} | ${{ foo: [1] }}
+		foo   | ${'one'} | ${{}} | ${{ foo: ['one'] }}
 	`(({ field, value, input, output }: any) => {
 		const query = { [field]: value };
 		const push = $push(query as Parameters<typeof $push>[0]);
@@ -296,12 +297,12 @@ test('Domain/Update/Operator/Array - $push', (t) => {
 test('Domain/Update/Operator/Array - $push errors', (t) => {
 	const { $push } = ArrayOperator;
 	each`
-		query                          | input                  | error
-		-------------------------------|------------------------|--------
-		${{ foo: 1 }}                  | ${{ foo: null }}       | Cannot apply $push to non-array field. Field named 'foo' has non-array type null
-		${{ foo: 1 }}                  | ${{ foo: 1 }}          | Cannot apply $push to non-array field. Field named 'foo' has non-array type int
-		${{ foo: 1 }}                  | ${{ foo: 'one' }}      | Cannot apply $push to non-array field. Field named 'foo' has non-array type string
-		${{ foo: 1 }}                  | ${{ foo: { bar: 1 } }} | Cannot apply $push to non-array field. Field named 'foo' has non-array type object
+		query         | input                  | error
+		--------------|------------------------|--------
+		${{ foo: 1 }} | ${{ foo: null }}       | Cannot apply $push to non-array field. Field named 'foo' has non-array type null
+		${{ foo: 1 }} | ${{ foo: 1 }}          | Cannot apply $push to non-array field. Field named 'foo' has non-array type int
+		${{ foo: 1 }} | ${{ foo: 'one' }}      | Cannot apply $push to non-array field. Field named 'foo' has non-array type string
+		${{ foo: 1 }} | ${{ foo: { bar: 1 } }} | Cannot apply $push to non-array field. Field named 'foo' has non-array type object
 	`((record) => {
 		const { query, input, error } = record as { error: string, [key: string]: unknown };
 		const match = new RegExp((error || '').replace(/([\$\[\]\{\}])/g, '\\$1'));
@@ -322,11 +323,11 @@ test('Domain/Update/Operator/Array - $push errors', (t) => {
 test('Domain/Update/Operator/Array - $pullAll', (t) => {
 	const { $pullAll } = ArrayOperator;
 	each`
-		query                           | input                                | output
-		--------------------------------|--------------------------------------|--------
-		${{ foo: [1, 'bar'] }}          | ${{}}                                | ${{}}
-		${{ foo: [1, 'bar'] }}          | ${{ foo: [1, 2, 3] }}                | ${{ foo: [2, 3] }}
-		${{ foo: [1, 'bar'] }}          | ${{ foo: ['bar', 'baz'] }}           | ${{ foo: ['baz'] }}
+		query                  | input                      | output
+		-----------------------|----------------------------|--------
+		${{ foo: [1, 'bar'] }} | ${{}}                      | ${{}}
+		${{ foo: [1, 'bar'] }} | ${{ foo: [1, 2, 3] }}      | ${{ foo: [2, 3] }}
+		${{ foo: [1, 'bar'] }} | ${{ foo: ['bar', 'baz'] }} | ${{ foo: ['baz'] }}
 	`((record) => {
 		const { query, input, output } = record as { [key: string]: unknown };
 		const pullAll = $pullAll(query as Parameters<typeof $pullAll>[0]);

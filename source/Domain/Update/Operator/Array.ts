@@ -37,7 +37,7 @@ function validateArrayFor(method: string): (key: string, value: unknown) => Arra
 			return value as Array<unknown>;
 		}
 
-		const [, tail] = (String(key).match(/^(.+\.)?([^\.]+)$/) || []).slice(1);
+		const [, tail] = (String(key).match(/^(.+\.)?([^\.]+)$/) as Array<string>).slice(1);
 
 		throw new Error(`Cannot apply ${method} to non-array field. Field named '${tail}' has non-array type ${type(value)}`);
 	};
@@ -97,13 +97,13 @@ function $each(settings: unknown, method: string): Array<unknown> {
 }
 
 function $slice(settings: unknown): (list: Array<unknown>) => Array<unknown> {
-	const { $slice } = (settings || {}) as any;
+	const { $slice } = (isObject(settings) ? settings : {}) as any;
 
 	return (list: Array<unknown>): Array<unknown> => list.slice(0, $slice);
 }
 
 function $sort(settings: unknown): (list: Array<unknown>) => Array<unknown> {
-	const { $sort = 0 } = (settings || {}) as any;
+	const { $sort = 0 } = (isObject(settings) ? settings : {}) as any;
 
 	if (isObject($sort)) {
 		const order = Object.keys($sort as Target<MinPlus>)
@@ -116,7 +116,7 @@ function $sort(settings: unknown): (list: Array<unknown>) => Array<unknown> {
 }
 
 function $position(settings: unknown): (list: Array<unknown>, insert: Array<unknown>) => Array<unknown> {
-	const { $position = 0 } = (settings || {}) as any;
+	const { $position = 0 } = (isObject(settings) ? settings : {}) as any;
 
 	return (list, insert) => ([] as Array<unknown>)
 		.concat($position < 0 ? insert : list, $position < 0 ? list : insert);

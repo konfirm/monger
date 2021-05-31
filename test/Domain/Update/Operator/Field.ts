@@ -246,9 +246,25 @@ test('Domain/Update/Operator/Field - $set', (t) => {
 	t.end();
 });
 
+test('Domain/Update/Operator/Field - $setOnInsert is not implemented', (t) => {
+	const { $setOnInsert } = Field;
+	const setOnInsert = $setOnInsert(undefined);
+
+	t.throws(
+		() => {
+			setOnInsert({} as Parameters<typeof setOnInsert>[0]);
+		},
+		/\$setOnInsert not implemented/,
+		'$setOnInsert is not implemented'
+	);
+
+	t.end();
+});
+
 test('Domain/Update/Operator/Field - $unset', (t) => {
 	const { $unset } = Field;
 	const query = {
+		'nop': '',
 		'foo': '',
 		'bar.baz.qux': '',
 		'array.1': '',
@@ -271,6 +287,7 @@ test('Domain/Update/Operator/Field - $unset', (t) => {
 	};
 	const update = $unset(query);
 
+	t.false('nop' in target, 'target.nop does not exist');
 	t.equal(target.foo, 'remove before flight', 'target.foo exists');
 	t.equal(target.bar.baz.qux, 'remove before flight', 'target.bar.baz.qux exists');
 	t.equal(target.array[1], 2, 'target.array.1 has value 2');
@@ -278,6 +295,7 @@ test('Domain/Update/Operator/Field - $unset', (t) => {
 
 	update(target);
 
+	t.false('nop' in target, 'target.nop does not exist');
 	t.false('foo' in target, 'target.foo no longer exists');
 	t.false('qux' in target.bar.baz, 'target.bar.baz.qux no longer exists');
 	t.equal(target.array[1], null, 'target.array.1 is set to null');

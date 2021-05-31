@@ -87,7 +87,7 @@ function detect(value: unknown): TypeClassifier {
 }
 
 export function type(type: unknown): string {
-	const { alias } = detect(type) || {};
+	const { alias } = detect(type);
 
 	return alias as string;
 }

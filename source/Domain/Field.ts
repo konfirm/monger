@@ -50,19 +50,15 @@ function set(nest: Nest, value: unknown): void {
 	}
 }
 
-function unset(nest: Nest): boolean {
-	const { parent, key } = nest;
+function unset(nest: Nest): void {
+	const { parent, key } = nest as Nest & { parent: Nest };
 
-	if (parent) {
-		if (isObject(parent.value)) {
-			delete (parent.value as Target)[key as string];
-		}
-		else if (isArray(parent.value)) {
-			(parent.value as Target)[key as number] = null;
-		}
+	if (isObject(parent.value)) {
+		delete (parent.value as Target)[key as string];
 	}
-
-	return false;
+	if (isArray(parent.value)) {
+		(parent.value as Target)[key as number] = null;
+	}
 }
 
 function nest(nesting: Nesting, key: Nest['key']): Nesting {
