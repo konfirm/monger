@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import { filter } from '../../source/main';
+import { filter } from '../../../source/main';
 
-test('Samples/Dotted - it supports dot notation', (t) => {
+test('Samples/Filter/Dotted - it supports dot notation', (t) => {
 	const target = { foo: { bar: { baz: { qux: 1 } } } };
 
 	[
