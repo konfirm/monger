@@ -103,3 +103,4 @@ export const isArray = is('array');
 export const isObject = is('object');
 export const isNULL = is('null');
 export const isUndefined = is('undefined');
+export const isRegex = is('regex');

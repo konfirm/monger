@@ -1,5 +1,5 @@
 import type { Evaluator } from '../Compiler';
-import { is } from '../../BSON';
+import { is, isRegex } from '../../BSON';
 
 type Primitive = string | number | boolean;
 type Comparable = Primitive | Array<Comparable> | { [key: string]: Comparable };
@@ -16,7 +16,6 @@ export type Operation = {
 };
 
 const isPrimitive = is('string', 'number', 'boolean');
-const isRegex = is('regex');
 
 /**
   * $eq
