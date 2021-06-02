@@ -18,25 +18,38 @@ test('Domain/Filter/Operator/Comparison - $eq', (t) => {
 	const { $eq } = Comparison;
 
 	each`
-		query    | input    | matches
-		---------|----------|---------
-		${true}  | ${true}  | yes
-		${true}  | ${false} | no
-		${false} | ${true}  | no
-		${false} | ${false} | yes
-		string   | stri     | no
-		string   | string   | yes
-		string   | stringed | no
-		${1}     | ${0}     | no
-		${1}     | ${1}     | yes
-		${1}     | ${2}     | no
+		query                         | input                         | matches
+		------------------------------|-------------------------------|---------
+		${true}                       | ${true}                       | yes
+		${true}                       | ${false}                      | no
+		${false}                      | ${true}                       | no
+		${false}                      | ${false}                      | yes
+		string                        | stri                          | no
+		string                        | string                        | yes
+		string                        | stringed                      | no
+		${1}                          | ${0}                          | no
+		${1}                          | ${1}                          | yes
+		${1}                          | ${2}                          | no
+		${[1, 2]}                     | ${[1, 2]}                     | yes
+		${[1, 2]}                     | ${[1, 2, 3]}                  | no
+		${[1, 2, 3]}                  | ${[1, 2]}                     | no
+		${[1, 2, 3]}                  | ${[1, 3, 2]}                  | no
+		${{ foo: 'bar' }}             | ${{ foo: 'bar' }}             | yes
+		${{ foo: 'bar', bar: 'baz' }} | ${{ foo: 'bar', bar: 'baz' }} | yes
+		${{ foo: 'bar', bar: 'baz' }} | ${{ bar: 'baz', foo: 'bar' }} | no
+		${/^bar/}                     | ${'bar'}                      | yes
+		${/^bar/}                     | ${'barry'}                    | yes
+		${/^bar/}                     | ${'Barry'}                    | no
+		${/^bar/i}                    | ${'Barry'}                    | yes
+		${/^bar$/}                    | ${'Barry'}                    | no
+		${/^bar$/i}                   | ${'Barry'}                    | no
 	`((record) => {
 		const { query, input, matches } = record;
 		const compiled = $eq(query as Comparison.Operation['$eq']);
 		const isMatch = matches === 'yes';
 		const message = isMatch ? 'matches' : 'does not match'
 
-		t.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+		t.equal(compiled(input), matches === 'yes', `${JSON.stringify(input)} ${message} ${JSON.stringify(query)}`);
 	});
 
 	t.end();
