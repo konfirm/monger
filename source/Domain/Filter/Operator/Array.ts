@@ -1,8 +1,10 @@
 import type { Evaluator } from '../Compiler';
 import { deep } from '../../Compare';
+import { isArray } from '../../BSON';
 
 export type Operation = {
 	$all: Parameters<typeof $all>[0];
+	$size: Parameters<typeof $size>[0];
 };
 
 /**
@@ -30,4 +32,14 @@ export function $all(query: Array<unknown>): Evaluator {
 
 		return condition.every((cond) => cond(normal));
 	};
+}
+
+/**
+ * $size
+ * Matches if the array field is a specified size.
+ * @syntax  { <field>: { $size: number } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/query/size/
+ */
+export function $size(query: number): Evaluator {
+	return (input: unknown) => isArray(input) && (input as Array<unknown>).length === query;
 }
