@@ -1,5 +1,5 @@
 import type { Evaluator } from '../Compiler';
-import { is, isRegex } from '../../BSON';
+import { deep } from '../../Compare';
 
 type Primitive = string | number | boolean;
 type Comparable = Primitive | Array<Comparable> | { [key: string]: Comparable };
@@ -15,8 +15,6 @@ export type Operation = {
 	$nin: Parameters<typeof $nin>[0];
 };
 
-const isPrimitive = is('string', 'number', 'boolean');
-
 /**
   * $eq
   * Matches values that are equal to a specified value.
@@ -24,14 +22,7 @@ const isPrimitive = is('string', 'number', 'boolean');
   * @see     https://docs.mongodb.com/manual/reference/operator/query/eq/
   */
 export function $eq(query: RegExp | Comparable): Evaluator {
-	if (isRegex(query)) {
-		return (input: unknown) => (query as RegExp).test(String(input));
-	}
-
-	const normalize = isPrimitive(query) ? (v: unknown) => v : (v: unknown) => JSON.stringify(v);
-	const normal = normalize(query);
-
-	return (input: unknown) => normalize(input) === normal;
+	return (input: unknown) => deep(query, input);
 }
 
 /**
