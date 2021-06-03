@@ -2,25 +2,25 @@ import { type as getType, isArray, isObject, isRegex } from './BSON';
 
 type A<T = unknown> = Array<T>;
 type O<T = unknown> = { [key: string]: T };
-type Verifier<T = unknown> = (...values: [T, ...Array<unknown>]) => boolean;
+type Verifier<T = unknown> = (...values: [T, ...A]) => boolean;
 
-export function type(first: unknown, ...rest: Array<unknown>): boolean {
+export function type(first: unknown, ...rest: A): boolean {
 	const type = getType(first);
 
 	return rest.every((value) => getType(value) === type);
 }
 
-export function equal(first: unknown, ...rest: Array<unknown>): boolean {
+export function equal(first: unknown, ...rest: A): boolean {
 	return rest.every((value) => value === first);
 }
 
-function similarArray(first: Array<unknown>, ...rest: Array<unknown>): boolean {
+function similarArray(first: A, ...rest: A): boolean {
 	return rest.every((other) =>
 		first.length === (<A>other).length
 		&& (<A>first).every((value, index) => deep(value, (<A>other)[index])));
 }
 
-function similarObject(first: O, ...rest: Array<unknown>): boolean {
+function similarObject(first: O, ...rest: A): boolean {
 	const keys = Object.keys(<O>first);
 
 	return rest.every((other) =>
@@ -45,12 +45,6 @@ const rules: Array<Verifier> = [
 		&& rest.every((value) => (first as RegExp).test(String(value))),
 ];
 
-export function deep(...rest: [unknown, ...Array<unknown>]): boolean {
+export function deep(...rest: [unknown, ...A]): boolean {
 	return rules.some((rule) => rule(...rest));
-}
-
-export function json([first, ...rest]: [unknown, unknown, ...Array<unknown>]): boolean {
-	const json = JSON.stringify(first);
-
-	return rest.every((value) => JSON.stringify(value) === json);
 }

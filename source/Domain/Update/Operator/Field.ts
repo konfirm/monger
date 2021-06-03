@@ -115,7 +115,7 @@ export function $mul(query: Numeric): Updater {
 /**
  * $rename
  * Renames a field.
- * @syntax  {$rename: { <field1>: <newName1>, <field2>: <newName2>, ... } }
+ * @syntax  { $rename: { <field1>: <newName1>, <field2>: <newName2>, ... } }
  * @see     https://docs.mongodb.com/manual/reference/operator/update/rename/
  */
 export function $rename(query: Target<string>): Updater {
