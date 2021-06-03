@@ -1,8 +1,9 @@
+import type { Operation as ArrayOperation } from './Operator/Array';
 import type { Operation as BitwiseOperation } from './Operator/Bitwise';
 import type { Operation as ComparisonOperation } from './Operator/Comparison';
 import type { Operation as ElementOperation } from './Operator/Element';
-import type { Operation as LogicalOperation } from './Operator/Logical';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
+import type { Operation as LogicalOperation } from './Operator/Logical';
 import { accessor } from '../Field';
 import { isObject } from '../BSON';
 
@@ -16,7 +17,8 @@ export type Operators = {
 }
 
 type Operation
-	= BitwiseOperation
+	= ArrayOperation
+	& BitwiseOperation
 	& ComparisonOperation
 	& ElementOperation
 	& EvaluationOperation;
