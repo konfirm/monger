@@ -59,18 +59,31 @@ test('Domain/Filter/Operator/Comparison - $ne', (t) => {
 	const { $ne } = Comparison;
 
 	each`
-		query    | input    | matches
-		---------|----------|---------
-		${true}  | ${true}  | no
-		${true}  | ${false} | yes
-		${false} | ${true}  | yes
-		${false} | ${false} | no
-		string   | stri     | yes
-		string   | string   | no
-		string   | stringed | yes
-		${1}     | ${0}     | yes
-		${1}     | ${1}     | no
-		${1}     | ${2}     | yes
+		query                         | input                         | matches
+		------------------------------|-------------------------------|---------
+		${true}                       | ${true}                       | no
+		${true}                       | ${false}                      | yes
+		${false}                      | ${true}                       | yes
+		${false}                      | ${false}                      | no
+		string                        | stri                          | yes
+		string                        | string                        | no
+		string                        | stringed                      | yes
+		${1}                          | ${0}                          | yes
+		${1}                          | ${1}                          | no
+		${1}                          | ${2}                          | yes
+		${[1, 2]}                     | ${[1, 2]}                     | no
+		${[1, 2]}                     | ${[1, 2, 3]}                  | yes
+		${[1, 2, 3]}                  | ${[1, 2]}                     | yes
+		${[1, 2, 3]}                  | ${[1, 3, 2]}                  | yes
+		${{ foo: 'bar' }}             | ${{ foo: 'bar' }}             | no
+		${{ foo: 'bar', bar: 'baz' }} | ${{ foo: 'bar', bar: 'baz' }} | no
+		${{ foo: 'bar', bar: 'baz' }} | ${{ bar: 'baz', foo: 'bar' }} | yes
+		${/^bar/}                     | ${'bar'}                      | no
+		${/^bar/}                     | ${'barry'}                    | no
+		${/^bar/}                     | ${'Barry'}                    | yes
+		${/^bar/i}                    | ${'Barry'}                    | no
+		${/^bar$/}                    | ${'Barry'}                    | yes
+		${/^bar$/i}                   | ${'Barry'}                    | yes
 	`((record) => {
 		const { query, input, matches } = record;
 		const compiled = $ne(query as Comparison.Operation['$ne']);
@@ -215,6 +228,10 @@ test('Domain/Filter/Operator/Comparison - $in', (t) => {
 		${[false]}        | ${false} | yes
 		${[true, false]}  | ${false} | yes
 		${[true, false]}  | ${true}  | yes
+		${[/foo/, /^ba/]} | foo      | yes
+		${[/foo/, /^ba/]} | goo      | no
+		${[/foo/, /^ba/]} | bar      | yes
+		${[/foo/, /^ba/]} | baz      | yes
 	`((record) => {
 		const { query, input, matches } = record;
 		const compiled = $in(query as Comparison.Operation['$in']);
@@ -247,6 +264,10 @@ test('Domain/Filter/Operator/Comparison - $nin', (t) => {
 		${[false]}        | ${false} | no
 		${[true, false]}  | ${false} | no
 		${[true, false]}  | ${true}  | no
+		${[/foo/, /^ba/]} | foo      | no
+		${[/foo/, /^ba/]} | goo      | yes
+		${[/foo/, /^ba/]} | bar      | no
+		${[/foo/, /^ba/]} | baz      | no
 	`((record) => {
 		const { query, input, matches } = record;
 		const compiled = $nin(query as Comparison.Operation['$nin']);

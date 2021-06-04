@@ -52,7 +52,7 @@ export function $gte(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/in/
   */
 export function $in(query: Array<unknown>): Evaluator {
-	return (input: unknown) => query.includes(input);
+	return (input: unknown) => query.some((value) => deep(value, input));
 }
 
 /**
@@ -82,7 +82,7 @@ export function $lte(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/ne/
   */
 export function $ne(query: Primitive): Evaluator {
-	return (input: unknown) => input !== query;
+	return (input: unknown) => !deep(query, input);
 }
 
 /**
@@ -92,5 +92,5 @@ export function $ne(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/nin/
   */
 export function $nin(query: Array<unknown>): Evaluator {
-	return (input: unknown) => !query.includes(input);
+	return (input: unknown) => !query.some((value) => deep(value, input));
 }

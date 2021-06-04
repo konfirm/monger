@@ -4,6 +4,7 @@ import { filter } from '../../Filter';
 import { prepare } from '../Compiler';
 import { accessor } from '../../Field';
 import { isObject, isArray, isUndefined, type } from '../../BSON';
+import { deep } from '../../Compare';
 
 type Primitve = string | number | boolean | null;
 type MinPlus = -1 | 1;
@@ -44,15 +45,11 @@ function validateArrayFor(method: string): (key: string, value: unknown) => Arra
 }
 
 function contains(collection: Array<any>, value: unknown): boolean {
-	const json = JSON.stringify(value);
-
-	return collection.some((value) => JSON.stringify(value) === json);
+	return collection.some((input) => deep(value, input));
 }
 
-function compare(settings: unknown): (value: unknown) => boolean {
-	const json = JSON.stringify(settings);
-
-	return (value: unknown): boolean => json === JSON.stringify(value);
+function compare(value: unknown): (input: unknown) => boolean {
+	return (input: unknown): boolean => deep(value, input);
 }
 
 function ensureArray(target: Target, access: ReturnType<typeof accessor>): Array<unknown> {
