@@ -13,12 +13,17 @@
 		"test:pretty:work": "nyc --require ts-node/register tape test/**/*.ts | tap-spec",
 		"prebuild": "tsc --declarationDir temp --declaration true --emitDeclarationOnly true",
 		"build": "rollup -c rollup.config.js",
-		"postbuild": "rm -rf temp"
+		"postbuild": "rm -rf temp",
+		"prepack": "npm run build"
 	},
 	"keywords": [
 		"mongo",
 		"mongodb",
 		"query"
+	],
+	"files": [
+		"source/*",
+		"dist/*"
 	],
 	"author": "Rogier Spieker <rogier+npm@konfirm.eu>",
 	"license": "MIT",
