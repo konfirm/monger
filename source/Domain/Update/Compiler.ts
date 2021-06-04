@@ -5,7 +5,7 @@ import type { Operation as FieldOperation } from './Operator/Field';
 export type Target<T = unknown> = { [key: string]: T };
 export type Updater = (input: Target, ...args: Array<any>) => Target;
 export type CompileStep = (update: any) => Updater;
-export type UpdateCompiler = (update: any, compile: CompileStep, context: Partial<Update>) => Updater;
+export type UpdateCompiler = (update: any) => Updater;
 type Operation
 	= ArrayOperation
 	& BitwiseOperation
@@ -31,7 +31,7 @@ export class Compiler<T extends Partial<Update> = Partial<Update>, K extends key
 	private operation(name: K, query: T): Updater {
 		const { [name]: operation } = this.operators;
 
-		return operation(query[name], (query) => this.compile(query), query);
+		return operation(query[name]);
 	}
 
 	compile(query: T): Updater {
