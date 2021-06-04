@@ -4,6 +4,34 @@ A typescript/javascript implementation of MongoDB's query language
 
 ## API
 
+## BSON
+
+| available | number | alias               | typeof              | description                                    |
+| --------- | ------ | ------------------- | ------------------- | ---------------------------------------------- |
+| yes       | 1      | double              | `number`            | Floating point number                          |
+| yes       | 2      | string              | `string`            | String                                         |
+| yes       | 3      | object              | `object`            | Object (not `Array`, `Date`, `NULL`, `RegExp`) |
+| yes       | 4      | array               | `object`            | Array                                          |
+| no        | 5      | binData             |                     |                                                |
+| yes       | 6      | undefined           | `undefined`         | Undefined                                      |
+| no        | 7      | objectId            |                     |                                                |
+| yes       | 8      | bool                | `boolean`           | Boolean                                        |
+| yes       | 9      | date                | `object`            | Date                                           |
+| yes       | 10     | null                | `object`            | NULL                                           |
+| yes       | 11     | regex               | `object`            | RexExp                                         |
+| no        | 12     | dbPointer           |                     |                                                |
+| yes       | 13     | javascript          | `function`          | Function                                       |
+| yes       | 14     | symbol              | `symbol`            | Symbol                                         |
+| no        | 15     | javascriptWithScope |                     |                                                |
+| yes       | 16     | int                 | `number`            | Integer Number                                 |
+| no        | 17     | timestamp           |                     |                                                |
+| yes       | 18     | long                | `number` / `bigint` | BigInt or an Integer Number (outside of 2^53)  |
+| no        | 19     | decimal             |                     |                                                |
+| no        | -1     | minKey              |                     |                                                |
+| no        | 127    | maxKey              |                     |                                                |
+
+
+
 ## Filter
 
 
