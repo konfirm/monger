@@ -1,5 +1,5 @@
 import type { Query, CompileStep, Evaluator } from '../Compiler';
-import { TextSearchOptions } from './Evaluation/Text';
+import type { TextSearchOptions } from './Evaluation/Text';
 import { Term } from './Evaluation/Text';
 import { schema as jsonSchema } from './Evaluation/Schema';
 

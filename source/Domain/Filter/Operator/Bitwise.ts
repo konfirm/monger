@@ -14,8 +14,8 @@ export type Operation = {
 /**
  * $bitsAllClear
  * Matches numeric or binary values in which a set of bit positions all have a value of 0.
-  * @syntax  { <field>: { $bitsAllClear: <numeric bitmask> } }
-  *          { <field>: { $bitsAllClear: [ <position1>, <position2>, ...] } }
+ * @syntax  { <field>: { $bitsAllClear: <numeric bitmask> } }
+ *          { <field>: { $bitsAllClear: [ <position1>, <position2>, ...] } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAllClear/
  */
 export function $bitsAllClear(query: BitMask | BitPosition): Evaluator {
