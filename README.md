@@ -2,6 +2,20 @@
 
 A typescript/javascript implementation of MongoDB's query language
 
+## Using
+
+Monger is built using TypeScript, for JavaScript various formats are pre-built.
+
+| format | file                 | size (gzip) |
+| ------ | -------------------- | ----------- |
+| iife   | dist/main.js         | 54K (9.9K)  |
+| iife   | dist/main.min.js     | 13K (4.2K)  |
+| esm    | dist/esm/main.js     | 49K (9.5K)  |
+| esm    | dist/esm/main.min.js | 13K (4.2K)  |
+| cjs    | dist/cjs/main.js     | 49K (9.6K)  |
+| cjs    | dist/cjs/main.min.js | 13K (4.2K)  |
+
+
 ## API
 
 ## BSON
