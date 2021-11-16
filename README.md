@@ -6,14 +6,14 @@ A typescript/javascript implementation of MongoDB's query language
 
 Monger is built using TypeScript, for JavaScript various formats are pre-built.
 
-| format | file                 | size (gzip) |
-| ------ | -------------------- | ----------- |
-| iife   | dist/main.js         | 54K (9.9K)  |
-| iife   | dist/main.min.js     | 13K (4.2K)  |
-| esm    | dist/esm/main.js     | 49K (9.5K)  |
-| esm    | dist/esm/main.min.js | 13K (4.2K)  |
-| cjs    | dist/cjs/main.js     | 49K (9.6K)  |
-| cjs    | dist/cjs/main.min.js | 13K (4.2K)  |
+| format | file                 | size (gzip) | default for |
+| ------ | -------------------- | ----------- | ----------- |
+| iife   | dist/main.js         | 54K (9.9K)  |             |
+| iife   | dist/main.min.js     | 13K (4.2K)  |             |
+| esm    | dist/esm/main.js     | 49K (9.5K)  | `import`    |
+| esm    | dist/esm/main.min.js | 13K (4.2K)  |             |
+| cjs    | dist/cjs/main.js     | 49K (9.6K)  | `require`   |
+| cjs    | dist/cjs/main.min.js | 13K (4.2K)  |             |
 
 
 ## API
@@ -26,42 +26,65 @@ Monger is built using TypeScript, for JavaScript various formats are pre-built.
 | yes       | 2      | string              | `string`            | String                                         |
 | yes       | 3      | object              | `object`            | Object (not `Array`, `Date`, `NULL`, `RegExp`) |
 | yes       | 4      | array               | `object`            | Array                                          |
-| no        | 5      | binData             |                     |                                                |
+| no        | 5      | binData             |                     | _not implemented_                              |
 | yes       | 6      | undefined           | `undefined`         | Undefined                                      |
-| no        | 7      | objectId            |                     |                                                |
+| no        | 7      | objectId            |                     | _not implemented_                              |
 | yes       | 8      | bool                | `boolean`           | Boolean                                        |
 | yes       | 9      | date                | `object`            | Date                                           |
 | yes       | 10     | null                | `object`            | NULL                                           |
 | yes       | 11     | regex               | `object`            | RexExp                                         |
-| no        | 12     | dbPointer           |                     |                                                |
+| no        | 12     | dbPointer           |                     | _not implemented_                              |
 | yes       | 13     | javascript          | `function`          | Function                                       |
 | yes       | 14     | symbol              | `symbol`            | Symbol                                         |
-| no        | 15     | javascriptWithScope |                     |                                                |
+| no        | 15     | javascriptWithScope |                     | _not implemented_                              |
 | yes       | 16     | int                 | `number`            | Integer Number                                 |
 | no        | 17     | timestamp           |                     |                                                |
 | yes       | 18     | long                | `number` / `bigint` | BigInt or an Integer Number (outside of 2^53)  |
-| no        | 19     | decimal             |                     |                                                |
-| no        | -1     | minKey              |                     |                                                |
-| no        | 127    | maxKey              |                     |                                                |
+| no        | 19     | decimal             |                     | _not implemented_                              |
+| no        | -1     | minKey              |                     | _not implemented_                              |
+| no        | 127    | maxKey              |                     | _not implemented_                              |
 
 
 
 ## Filter
 
+Filter tests whether an object matches the filter criteria.
+
+### Usage
+
+#### Typescript/ES Modules
+
+```js
+import { filter } from '@konfirm/monger';
+
+const isNamedSue = filter({ name: { $eq: 'Sue' }});
+
+console.log(isNamedSue({ name: 'Sue' })); // true
+console.log(isNamedSue({ name: 'Ann' })); // false
+```
+
+#### CommonJS
+
+```js
+const { filter } = require('@konfirm/monger');
+const isNamedAnn = filter({ name: { $eq: 'Ann' } });
+
+console.log(isNamedSue({ name: 'Sue' })); // false
+console.log(isNamedSue({ name: 'Ann' })); // true
+```
 
 ### Comparison Operators
 
-| available | name   | description                                                         |
-| --------- | ------ | ------------------------------------------------------------------- |
-| yes       | `$eq`  | Matches values that are equal to a specified value.                 |
-| yes       | `$gt`  | Matches values that are greater than a specified value.             |
-| yes       | `$gte` | Matches values that are greater than or equal to a specified value. |
-| yes       | `$in`  | Matches any of the values specified in an array.                    |
-| yes       | `$lt`  | Matches values that are less than a specified value.                |
-| yes       | `$lte` | Matches values that are less than or equal to a specified value.    |
-| yes       | `$ne`  | Matches all values that are not equal to a specified value.         |
-| yes       | `$nin` | Matches none of the values specified in an array.                   |
-
+| available | name   | description                                                           |
+| --------- | ------ | --------------------------------------------------------------------- |
+| yes       | `$eq`  | Matches values that are equal to the specified value.                 |
+| yes       | `$gt`  | Matches values that are greater than the specified value.             |
+| yes       | `$gte` | Matches values that are greater than or equal to the specified value. |
+| yes       | `$in`  | Matches any of the values specified in an array.                      |
+| yes       | `$lt`  | Matches values that are less than the specified value.                |
+| yes       | `$lte` | Matches values that are less than or equal to the specified value.    |
+| yes       | `$ne`  | Matches all values that are not equal to the specified value.         |
+| yes       | `$nin` | Matches none of the values specified in an array.                     |
 
 ### Logical Operators
 
@@ -95,12 +118,12 @@ Monger is built using TypeScript, for JavaScript various formats are pre-built.
 
 ### Geospatial Operators
 
-| available | name             | description                                                                                                                                   |
-| --------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| **no**    | `$geoIntersects` | Selects geometries that intersect with a GeoJSON geometry. The 2dsphere index supports $geoIntersects.                                        |
-| **no**    | `$geoWithin`     | Selects geometries within a bounding GeoJSON geometry. The 2dsphere and 2d indexes support $geoWithin.                                        |
-| **no**    | `$near`          | Returns geospatial objects in proximity to a point. Requires a geospatial index. The 2dsphere and 2d indexes support $near.                   |
-| **no**    | `$nearSphere`    | Returns geospatial objects in proximity to a point on a sphere. Requires a geospatial index. The 2dsphere and 2d indexes support $nearSphere. |
+| available | name             | description                                                     |
+| --------- | ---------------- | --------------------------------------------------------------- |
+| **no**    | `$geoIntersects` | Selects geometries that intersect with a GeoJSON geometry.      |
+| **no**    | `$geoWithin`     | Selects geometries within a bounding GeoJSON geometry.          |
+| **no**    | `$near`          | Returns geospatial objects in proximity to a point.             |
+| **no**    | `$nearSphere`    | Returns geospatial objects in proximity to a point on a sphere. |
 
 #### Specifiers
 
@@ -154,6 +177,35 @@ Monger is built using TypeScript, for JavaScript various formats are pre-built.
 
 
 ## Update
+
+Update modifies an object
+
+### Usage
+
+#### Typescript/ES Modules
+
+```js
+import { update } from '@konfirm/monger';
+
+const renameToSue = update({name: { $set: 'Sue' }});
+const named = { name: 'Ann' };
+
+console.log(named.name); // Ann
+renameToSue(name);
+console.log(named.name); // Sue
+```
+
+#### CommonJS
+
+```js
+const { update } = require('@konfirm/monger');
+const renameToSue = update({name: { $set: 'Sue' }});
+const named = { name: 'Ann' };
+
+console.log(named.name); // Ann
+renameToSue(name);
+console.log(named.name); // Sue
+```
 
 ### Fields Operators
 
