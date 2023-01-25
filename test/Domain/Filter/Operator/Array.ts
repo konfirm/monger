@@ -1,7 +1,7 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
 import * as ArrayOp from '../../../../source/Domain/Filter/Operator/Array';
-import { filter } from '../../../../source/Domain/Filter';
+import { filter } from '../../../Helper';
 
 test('Domain/Filter/Operator/Array - exports', (t) => {
 	const expected = ['$all', '$elemMatch', '$size'];

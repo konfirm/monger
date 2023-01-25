@@ -1,6 +1,6 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
-import { filter } from '../../../source/main';
+import { filter } from '../../Helper';
 
 test('Samples/Filter/Logical - $and', (t) => {
 	const query = {

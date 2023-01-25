@@ -1,7 +1,7 @@
 import * as test from 'tape';
 import each from 'template-literal-each';
 import * as Geospatial from '../../../../source/Domain/Filter/Operator/Geospatial';
-import { filter } from '../../../../source/Domain/Filter';
+import { filter } from '../../../Helper';
 
 test('Domain/Filter/Operator/Geospatial - exports', (t) => {
 	const expected = ['$geoIntersects', '$geoWithin', '$near', '$nearSphere'];
