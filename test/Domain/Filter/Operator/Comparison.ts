@@ -37,10 +37,10 @@ test('Domain/Filter/Operator/Comparison - $eq', (t) => {
 		${{ foo: 'bar' }}             | ${{ foo: 'bar' }}             | yes
 		${{ foo: 'bar', bar: 'baz' }} | ${{ foo: 'bar', bar: 'baz' }} | yes
 		${{ foo: 'bar', bar: 'baz' }} | ${{ bar: 'baz', foo: 'bar' }} | no
-		${/^bar/}                     | ${'bar'}                      | yes
-		${/^bar/}                     | ${'barry'}                    | yes
+		${/^bar/}                     | ${'bar'}                      | no
+		${/^bar/}                     | ${'barry'}                    | no
 		${/^bar/}                     | ${'Barry'}                    | no
-		${/^bar/i}                    | ${'Barry'}                    | yes
+		${/^bar/i}                    | ${'Barry'}                    | no
 		${/^bar$/}                    | ${'Barry'}                    | no
 		${/^bar$/i}                   | ${'Barry'}                    | no
 	`((record) => {

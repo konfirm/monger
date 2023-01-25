@@ -5,7 +5,7 @@ import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
 import type { Operation as LogicalOperation } from './Operator/Logical';
 import { accessor } from '../Field';
-import { isObject } from '../BSON';
+import { isObject, isRegex } from '../BSON';
 
 
 export type Evaluator = (input: any) => boolean;
@@ -35,7 +35,9 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private condition(name: K, query: T): Evaluator {
 		const { [name]: value } = query;
-		const condition = !isObject(value) ? { $eq: value } : value;
+		const condition = !isObject(value)
+			? isRegex(value) ? { $regex: value } : { $eq: value }
+			: value;
 
 		return this.compile(condition as unknown as T);
 	}
