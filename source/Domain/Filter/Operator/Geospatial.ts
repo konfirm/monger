@@ -1,22 +1,24 @@
-import { GeoJSON, intersect, MultiPolygon, Point, Polygon, Position } from '@konfirm/geojson';
-import type { /*Query, CompileStep,*/ Evaluator } from '../Compiler';
+import { distance, GeoJSON, intersect, isGeoJSON, isPoint, Point } from '@konfirm/geojson';
+import type { Query, CompileStep, Evaluator } from '../Compiler';
+import { GeoWithinQuery, within } from './Geospatial/Within';
+import { isLegacyPoint, LegacyPoint, legacyToGeoJSON } from './Geospatial/Legacy';
 
 type GeoIntersectsQuery = {
 	$geometry: GeoJSON;
 }
 
-type GeoWithinQuery
-	= { $geometry: Polygon | MultiPolygon }
-	| { $box: [Position, Position] }
-	| { $polygon: Array<Position> }
-	| { $center: [Position, number] }
-	| { $centerSphere: [Position, number] }
-
-type NearQuery = {
+type NearGeoJSONPoint = {
 	$geometry: Point;
 	$maxDistance?: number;
 	$minDistance?: number;
 }
+type LegacyNearPointContext
+	= { $near: LegacyPoint }
+	& Omit<NearGeoJSONPoint, '$geometry'>;
+type LegacyNearSpherePointContext
+	= { $nearSphere: LegacyPoint }
+	& Omit<NearGeoJSONPoint, '$geometry'>;
+type NearQuery = NearGeoJSONPoint | LegacyPoint;
 
 export type Operation = {
 	$geoIntersects: Parameters<typeof $geoIntersects>[0];
@@ -25,20 +27,44 @@ export type Operation = {
 	$nearSphere: Parameters<typeof $nearSphere>[0];
 };
 
-export function $geoIntersects(query: GeoIntersectsQuery /*, compile: CompileStep */): Evaluator {
-	const { $geometry } = query;
+function between({ $minDistance: min = -Infinity, $maxDistance: max = Infinity }: NearGeoJSONPoint | LegacyNearPointContext): (n: number) => boolean {
+	return (n: number): boolean => n >= min && n <= max;
+}
+function direct(a: Point, b: Point): number {
+	return distance(a, b, 'direct');
+}
+function vincenty(a: Point, b: Point): number {
+	return distance(a, b, 'vincenty');
+}
 
-	return (input: any) => intersect(input, $geometry);
+export function $geoIntersects({ $geometry }: GeoIntersectsQuery): Evaluator {
+	return (input: any) => isGeoJSON(input) && intersect(input, $geometry);
 }
-export function $geoWithin(query: GeoWithinQuery /*, compile: CompileStep */): Evaluator {
-	// TODO: this seems to be a job for our GeoJSON library
-	return (input: any) => false;
+export function $geoWithin(query: GeoWithinQuery): Evaluator {
+	return within(query);
 }
-export function $near(query: NearQuery /*, compile: CompileStep */): Evaluator {
-	// TODO: this seems to be a job for our GeoJSON library
-	return (input: any) => false;
+export function $near(query: NearQuery, compile: CompileStep, context: Partial<Query>): Evaluator {
+	if (isLegacyPoint(query)) {
+		const { $near: _, ...rest } = <LegacyNearPointContext>context;
+
+		return $near({ $geometry: <Point>legacyToGeoJSON(query), ...rest }, compile, context);
+	}
+
+	const { $geometry, ...rest } = query;
+	const bound = between(<NearGeoJSONPoint>rest);
+
+	return (input: any) => (isPoint(input) && bound(vincenty($geometry, input))) || (isLegacyPoint(input) && bound(direct($geometry, <Point>legacyToGeoJSON(input))));
 }
-export function $nearSphere(query: NearQuery /*, compile: CompileStep */): Evaluator {
-	// TODO: this seems to be a job for our GeoJSON library
-	return (input: any) => false;
+export function $nearSphere(query: NearQuery, compile: CompileStep, context: Partial<Query>): Evaluator {
+	if (isLegacyPoint(query)) {
+		const { $nearSphere: _, ...rest } = <LegacyNearSpherePointContext>context;
+		const $geometry = <Point>legacyToGeoJSON(query);
+
+		return $nearSphere({ $geometry, ...rest }, compile, context);
+	}
+
+	const { $geometry, ...rest } = query;
+	const bound = between(<NearGeoJSONPoint>rest);
+
+	return (input: any) => bound(vincenty($geometry, isPoint(input) ? input : <Point>legacyToGeoJSON(input)));
 }
