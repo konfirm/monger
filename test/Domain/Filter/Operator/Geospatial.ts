@@ -1,6 +1,6 @@
 import type { Point } from '@konfirm/geojson';
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Geospatial from '../../../../source/Domain/Filter/Operator/Geospatial';
 import { filter } from '../../../Helper';
 import { GeoWithinBox, GeoWithinQuery } from '../../../../source/Domain/Filter/Operator/Geospatial/Within';

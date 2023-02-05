@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import { json, jsonify, preserve } from '../../../Utility';
 import * as ArrayOperator from '../../../../source/Domain/Update/Operator/Array';
 

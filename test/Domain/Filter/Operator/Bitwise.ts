@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Bitwise from '../../../../source/Domain/Filter/Operator/Bitwise';
 import { filter } from '../../../Helper';
 

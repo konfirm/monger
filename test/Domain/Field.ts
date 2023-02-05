@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Field from '../../source/Domain/Field';
 
 test('Domain/Field - exports', (t) => {

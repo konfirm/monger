@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Evaluation from '../../../../source/Domain/Filter/Operator/Evaluation';
 
 test('Domain/Filter/Operator/Evaluation - exports', (t) => {

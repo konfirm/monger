@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as ArrayOp from '../../../../source/Domain/Filter/Operator/Array';
 import { filter } from '../../../Helper';
 
