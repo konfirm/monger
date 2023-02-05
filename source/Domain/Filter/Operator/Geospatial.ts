@@ -30,8 +30,8 @@ export type Operation = {
 function between({ $minDistance: min = -Infinity, $maxDistance: max = Infinity }: NearGeoJSONPoint | LegacyNearPointContext): (n: number) => boolean {
 	return (n: number): boolean => n >= min && n <= max;
 }
-function direct(a: Point, b: Point): number {
-	return distance(a, b, 'direct');
+function cartesian(a: Point, b: Point): number {
+	return distance(a, b, 'cartesian');
 }
 function vincenty(a: Point, b: Point): number {
 	return distance(a, b, 'vincenty');
@@ -53,7 +53,7 @@ export function $near(query: NearQuery, compile: CompileStep, context: Partial<Q
 	const { $geometry, ...rest } = query;
 	const bound = between(<NearGeoJSONPoint>rest);
 
-	return (input: any) => (isPoint(input) && bound(vincenty($geometry, input))) || (isLegacyPoint(input) && bound(direct($geometry, <Point>legacyToGeoJSON(input))));
+	return (input: any) => (isPoint(input) && bound(vincenty($geometry, input))) || (isLegacyPoint(input) && bound(cartesian($geometry, <Point>legacyToGeoJSON(input))));
 }
 export function $nearSphere(query: NearQuery, compile: CompileStep, context: Partial<Query>): Evaluator {
 	if (isLegacyPoint(query)) {
