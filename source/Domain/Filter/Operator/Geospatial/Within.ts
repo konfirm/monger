@@ -63,7 +63,13 @@ const compilers = {
     },
 
     $centerSphere({ $centerSphere }: GeoWithinCenterSphere): Evaluator {
-        return (input: any) => false;
+        const [center, radius] = $centerSphere;
+        if (!isLegacyPoint(center)) {
+            throw new Error('Point must be an array or object');
+        }
+        const point = legacyToGeoJSON(center);
+
+        return (input: any) => (isGeoJSON(input) && distance(point, input, 'cartesian') <= radius) || (isLegacy(input) && distance(point, legacyToGeoJSON(input), 'cartesian') <= radius);
     },
 };
 

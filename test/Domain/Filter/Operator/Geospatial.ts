@@ -3,7 +3,6 @@ import * as test from 'tape';
 import { each } from 'template-literal-each';
 import * as Geospatial from '../../../../source/Domain/Filter/Operator/Geospatial';
 import { filter } from '../../../Helper';
-import { GeoWithinBox, GeoWithinQuery } from '../../../../source/Domain/Filter/Operator/Geospatial/Within';
 
 type N2 = [number, number];
 const arnhem: N2 = [5.909662963872819, 51.9790545929402];
@@ -110,21 +109,24 @@ test('Domain/Filter/Operator/Geospatial - $geoWithin', (t) => {
 		$center       | ${[[5, 5], 200000]}                                                               | ${[1, 5]}          | no
 		$center       | ${[[5, 5], 200000]}                                                               | ${[4, 5]}          | yes
 		$center       | ${[[5, 5], 200000]}                                                               | ${[9, 5]}          | no
+		$centerSphere | ${[[5, 5], 200000]}                                                               | ${[1, 5]}          | no
+		$centerSphere | ${[[5, 5], 200000]}                                                               | ${[4, 5]}          | yes
+		$centerSphere | ${[[5, 5], 200000]}                                                               | ${[9, 5]}          | no
 	`(({ operator, query, position, within }: any) => {
 		const [x, y] = position;
 		const legacyArray = { value: [x, y] };
 		const legacyObject = { value: { x, y } };
 		const point = { value: { type: 'Point', coordinates: [x, y] } };
 		const compiled = filter({ value: { $geoWithin: { [operator]: query } } });
-				const matches = within === 'yes';
-				const condition = matches ? 'contains' : 'does not contain';
+		const matches = within === 'yes';
+		const condition = matches ? 'contains' : 'does not contain';
 		const gmatches = matches && geojson.includes(operator);
 		const gcondition = gmatches ? 'contains' : 'does not contain';
 
 		t.equal(compiled(legacyArray), matches, `{ ${operator}: ${JSON.stringify(query)} } ${condition} ${JSON.stringify(legacyArray)}`);
 		t.equal(compiled(legacyObject), matches, `{ ${operator}: ${JSON.stringify(query)} } ${condition} ${JSON.stringify(legacyObject)}`);
 		t.equal(compiled(point), gmatches, `{ ${operator}: ${JSON.stringify(query)} } ${gcondition} ${JSON.stringify(point)}`);
-			})
+	})
 
 	t.end();
 });
