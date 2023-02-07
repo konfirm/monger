@@ -89,52 +89,37 @@ test('Domain/Filter/Operator/Geospatial - $geoIntersects', (t) => {
 });
 
 test('Domain/Filter/Operator/Geospatial - $geoWithin', (t) => {
+	const geojson = ['$geometry', '$centerSphere'];
 	each`
-		query                | value      | within
-		---------------------|------------|--------
-		${[[1, 1], [5, 50]]} | ${[0, 0]}  | no
-		${[[1, 1], [5, 50]]} | ${[2, 25]} | yes
-		${[[1, 1], [5, 50]]} | ${[7, 25]} | no
-	`((record) => {
-		const { query, value, within } = record as any;
-		const [[a, b], [c, d]] = query;
-		const [e, f] = value;
-		const boxes: Array<GeoWithinBox> = [
-			{ $box: [[a, b], [c, d]] },
-			{ $box: [[c, b], [a, d]] },
-			{ $box: [[a, d], [c, b]] },
-			{ $box: [[c, d], [a, b]] },
-
-			{ $box: [{ a, b }, [c, d]] },
-			{ $box: [{ c, b }, [a, d]] },
-			{ $box: [{ a, d }, [c, b]] },
-			{ $box: [{ c, d }, [a, b]] },
-
-			{ $box: [[a, b], { c, d }] },
-			{ $box: [[c, b], { a, d }] },
-			{ $box: [[a, d], { c, b }] },
-			{ $box: [[c, d], { a, b }] },
-
-			{ $box: [{ a, b }, { c, d }] },
-			{ $box: [{ c, b }, { a, d }] },
-			{ $box: [{ a, d }, { c, b }] },
-			{ $box: [{ c, d }, { a, b }] },
-		];
-		const inputs = [
-			[e, f],
-			{ e, f },
-		];
-		boxes.forEach((query) => {
-			inputs.forEach((value) => {
-				const input = { value };
-				const compiled = filter({ value: { $geoWithin: query } });
+		operator      | query                                                                             | position           | within
+		--------------|-----------------------------------------------------------------------------------|--------------------|--------
+		$box          | ${[[1, 1], [5, 50]]}                                                              | ${[0, 0]}          | no
+		$box          | ${[{ a: 1, b: 1 }, [5, 50]]}                                                      | ${[0, 0]}          | no
+		$box          | ${[[1, 1], [5, 50]]}                                                              | ${[2, 25]}         | yes
+		$box          | ${[[1, 1], { q: 5, w: 50 }]}                                                      | ${[2, 25]}         | yes
+		$box          | ${[[1, 1], [5, 50]]}                                                              | ${[7, 25]}         | no
+		$box          | ${[{ a: 1, b: 1 }, { c: 5, d: 50 }]}                                              | ${[7, 25]}         | no
+		$polygon      | ${[[1, 1], [1, 50], [5, 50], [5, 1]]}                                             | ${[0, 0]}          | no
+		$polygon      | ${[{ a: 1, b: 1 }, { c: 1, d: 50 }, { e: 5, f: 50 }, { g: 5, h: 1 }]}             | ${[0, 0]}          | no
+		$polygon      | ${[[1, 1], [1, 50], [5, 50], [5, 1]]}                                             | ${[2, 25]}         | yes
+		$polygon      | ${[{ z: 1, y: 1 }, { x: 1, y: 50 }, { y: 5, x: 50 }, { w: 5, q: 1 }]}             | ${[2, 25]}         | yes
+		$polygon      | ${[[1, 1], [1, 50], [5, 50], [5, 1]]}                                             | ${[7, 25]}         | no
+	`(({ operator, query, position, within }: any) => {
+		const [x, y] = position;
+		const legacyArray = { value: [x, y] };
+		const legacyObject = { value: { x, y } };
+		const point = { value: { type: 'Point', coordinates: [x, y] } };
+		const compiled = filter({ value: { $geoWithin: { [operator]: query } } });
 				const matches = within === 'yes';
 				const condition = matches ? 'contains' : 'does not contain';
+		const gmatches = matches && geojson.includes(operator);
+		const gcondition = gmatches ? 'contains' : 'does not contain';
 
-				t.equal(compiled(input), matches, `${JSON.stringify(query)} ${condition} ${JSON.stringify(input)}`);
+		t.equal(compiled(legacyArray), matches, `{ ${operator}: ${JSON.stringify(query)} } ${condition} ${JSON.stringify(legacyArray)}`);
+		t.equal(compiled(legacyObject), matches, `{ ${operator}: ${JSON.stringify(query)} } ${condition} ${JSON.stringify(legacyObject)}`);
+		t.equal(compiled(point), gmatches, `{ ${operator}: ${JSON.stringify(query)} } ${gcondition} ${JSON.stringify(point)}`);
 			})
-		})
-	});
+
 	t.end();
 });
 

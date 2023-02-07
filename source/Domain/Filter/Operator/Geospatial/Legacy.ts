@@ -1,4 +1,4 @@
-import { GeoJSON, isStrictPosition, Polygon, Position } from "@konfirm/geojson";
+import { GeoJSON, isStrictPosition, Position } from "@konfirm/geojson";
 
 export type LegacyPointArray = Position;
 export type LegacyPointObject = { [key: string]: number };
@@ -45,8 +45,8 @@ export function getLegacyBoxCoordinates(input: LegacyBox): [Position, Position] 
 export function getLegacyPolygonCoordinates(input: LegacyPolygon): [Position, Position, Position, Position, ...Array<Position>] {
     const mapped = input.map(getLegacyPointCoordinates);
     const append = mapped[mapped.length - 1].every((v, i) => v === mapped[0][i])
-        ? mapped[0]
-        : [];
+        ? []
+        : [mapped[0]];
 
     return mapped.concat(append) as [Position, Position, Position, Position, ...Array<Position>];
 }
@@ -55,7 +55,9 @@ export function legacyToGeoJSON(legacy: Legacy): GeoJSON {
     if (isLegacyPoint(legacy)) {
         return { type: 'Point', coordinates: getLegacyPointCoordinates(legacy) };
     }
-
+    if (isLegacyPolygon(legacy)) {
+        return { type: 'Polygon', coordinates: [getLegacyPolygonCoordinates(legacy)] };
+    }
     if (isLegacyBox(legacy)) {
         const sort = (...values: Array<number>): Array<number> => values.sort((a, b) => a < b ? -1 : Number(a > b));
         const [[lonA, latA], [lonB, latB]] = getLegacyBoxCoordinates(legacy);

@@ -1,6 +1,6 @@
 import { intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Polygon, Position } from "@konfirm/geojson";
 import { Evaluator } from "../../Compiler";
-import { getLegacyBoxCoordinates, isLegacy, isLegacyBox, LegacyBox, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
+import { isLegacy, isLegacyBox, isLegacyPoint, isLegacyPolygon, LegacyBox, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
 
 type GeoWithinOptions = {
     $geometry?: Polygon | MultiPolygon;
@@ -43,7 +43,13 @@ const compilers = {
     },
 
     $polygon({ $polygon }: GeoWithinPolygon): Evaluator {
-        return (input: any) => false;
+        if (!isLegacyPolygon($polygon)) {
+            throw new Error('Polygon must have at least 3 points');
+        }
+        const $geometry = legacyToGeoJSON($polygon);
+        const within = compilers.$geometry({ $geometry } as GeoWithinGeometry);
+
+        return (input: any) => isLegacy(input) && within(legacyToGeoJSON(input));
     },
 
     $center({ $center }: GeoWithinCenter): Evaluator {
