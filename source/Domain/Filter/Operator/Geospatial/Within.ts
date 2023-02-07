@@ -34,7 +34,7 @@ const compilers = {
 
     $box({ $box }: GeoWithinBox): Evaluator {
         if (!isLegacyBox($box)) {
-            throw new Error('$box must be a legacy coordinate box');
+            throw new Error('Point must be an array or object');
         }
 
         const within = compilers.$geometry({ $geometry: legacyToGeoJSON($box) } as GeoWithinGeometry);
