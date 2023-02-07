@@ -1,4 +1,4 @@
-import { intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Polygon, Position } from "@konfirm/geojson";
+import { distance, intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Polygon, Position } from "@konfirm/geojson";
 import { Evaluator } from "../../Compiler";
 import { isLegacy, isLegacyBox, isLegacyPoint, isLegacyPolygon, LegacyBox, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
 
@@ -53,7 +53,13 @@ const compilers = {
     },
 
     $center({ $center }: GeoWithinCenter): Evaluator {
-        return (input: any) => false;
+        const [center, radius] = $center;
+        if (!isLegacyPoint(center)) {
+            throw new Error('Point must be an array or object');
+        }
+        const point = legacyToGeoJSON(center);
+
+        return (input: any) => isLegacyPoint(input) && distance(point, legacyToGeoJSON(input), 'cartesian') <= radius;
     },
 
     $centerSphere({ $centerSphere }: GeoWithinCenterSphere): Evaluator {
