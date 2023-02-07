@@ -120,22 +120,22 @@ console.log(isNamedSue({ name: 'Ann' })); // true
 
 | available | name             | description                                                     |
 | --------- | ---------------- | --------------------------------------------------------------- |
-| **no**    | `$geoIntersects` | Selects geometries that intersect with a GeoJSON geometry.      |
-| **no**    | `$geoWithin`     | Selects geometries within a bounding GeoJSON geometry.          |
-| **no**    | `$near`          | Returns geospatial objects in proximity to a point.             |
-| **no**    | `$nearSphere`    | Returns geospatial objects in proximity to a point on a sphere. |
+| yes       | `$geoIntersects` | Selects geometries that intersect with a GeoJSON geometry.      |
+| yes       | `$geoWithin`     | Selects geometries within a bounding GeoJSON geometry.          |
+| yes       | `$near`          | Returns geospatial objects in proximity to a point.             |
+| yes       | `$nearSphere`    | Returns geospatial objects in proximity to a point on a sphere. |
 
 #### Specifiers
 
 | available | name            | description                                                                                                                                                                        |
 | --------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **no**    | `$box`          | Specifies a rectangular box using legacy coordinate pairs for $geoWithin queries. The 2d index supports $box.                                                                      |
-| **no**    | `$center`       | Specifies a circle using legacy coordinate pairs to $geoWithin queries when using planar geometry. The 2d index supports $center.                                                  |
-| **no**    | `$centerSphere` | Specifies a circle using either legacy coordinate pairs or GeoJSON format for $geoWithin queries when using spherical geometry. The 2dsphere and 2d indexes support $centerSphere. |
-| **no**    | `$geometry`     | Specifies a geometry in GeoJSON format to geospatial query operators.                                                                                                              |
-| **no**    | `$maxDistance`  | Specifies a maximum distance to limit the results of $near and $nearSphere queries. The 2dsphere and 2d indexes support $maxDistance.                                              |
-| **no**    | `$minDistance`  | Specifies a minimum distance to limit the results of $near and $nearSphere queries. For use with 2dsphere index only.                                                              |
-| **no**    | `$polygon`      | Specifies a polygon to using legacy coordinate pairs for $geoWithin queries. The 2d index supports $center.                                                                        |
+| yes       | `$box`          | Specifies a rectangular box using legacy coordinate pairs for $geoWithin queries. The 2d index supports $box.                                                                      |
+| yes       | `$center`       | Specifies a circle using legacy coordinate pairs to $geoWithin queries when using planar geometry. The 2d index supports $center.                                                  |
+| yes       | `$centerSphere` | Specifies a circle using either legacy coordinate pairs or GeoJSON format for $geoWithin queries when using spherical geometry. The 2dsphere and 2d indexes support $centerSphere. |
+| yes       | `$geometry`     | Specifies a geometry in GeoJSON format to geospatial query operators.                                                                                                              |
+| yes       | `$maxDistance`  | Specifies a maximum distance to limit the results of $near and $nearSphere queries. The 2dsphere and 2d indexes support $maxDistance.                                              |
+| yes       | `$minDistance`  | Specifies a minimum distance to limit the results of $near and $nearSphere queries. For use with 2dsphere index only.                                                              |
+| yes       | `$polygon`      | Specifies a polygon to using legacy coordinate pairs for $geoWithin queries. The 2d index supports $center.                                                                        |
 | **no**    | `$uniqueDocs`   | Deprecated. Modifies a $geoWithin and $near queries to ensure that even if a document matches the query multiple times, the query returns the document once.                       |
 
 ### Array Operators
