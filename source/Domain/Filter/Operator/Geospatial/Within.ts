@@ -26,10 +26,10 @@ export type GeoWithinQuery
 const compilers = {
     $geometry({ $geometry }: GeoWithinGeometry): Evaluator {
         if (!(isPolygon($geometry) || isMultiPolygon($geometry))) {
-            throw new Error(`$within not supported with provided geometry: ${JSON.stringify($geometry)}`);
+            throw new Error(`unknown GeoJSON type: ${JSON.stringify($geometry)}`);
         }
 
-        return (input: any) => isGeoJSON(input) && intersect(input, $geometry);
+        return (input: any) => (isGeoJSON(input) && intersect(input, $geometry) || (isLegacy(input) && intersect(legacyToGeoJSON(input), $geometry)));
     },
 
     $box({ $box }: GeoWithinBox): Evaluator {

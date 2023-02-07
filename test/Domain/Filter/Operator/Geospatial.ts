@@ -104,6 +104,9 @@ test('Domain/Filter/Operator/Geospatial - $geoWithin', (t) => {
 		$polygon      | ${[[1, 1], [1, 50], [5, 50], [5, 1]]}                                             | ${[2, 25]}         | yes
 		$polygon      | ${[{ z: 1, y: 1 }, { x: 1, y: 50 }, { y: 5, x: 50 }, { w: 5, q: 1 }]}             | ${[2, 25]}         | yes
 		$polygon      | ${[[1, 1], [1, 50], [5, 50], [5, 1]]}                                             | ${[7, 25]}         | no
+		$geometry     | ${{ type: 'Polygon', coordinates: [[[1, 1], [1, 50], [5, 50], [5, 1], [1, 1]]] }} | ${[0, 0]}          | no
+		$geometry     | ${{ type: 'Polygon', coordinates: [[[1, 1], [1, 50], [5, 50], [5, 1], [1, 1]]] }} | ${[2, 25]}         | yes
+		$geometry     | ${{ type: 'Polygon', coordinates: [[[1, 1], [1, 50], [5, 50], [5, 1], [1, 1]]] }} | ${[7, 25]}         | no
 	`(({ operator, query, position, within }: any) => {
 		const [x, y] = position;
 		const legacyArray = { value: [x, y] };
