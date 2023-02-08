@@ -37,12 +37,34 @@ function vincenty(a: Point, b: Point): number {
 	return distance(a, b, 'vincenty');
 }
 
+/**
+ * Selects geometries that intersect with a GeoJSON geometry.
+ *
+ * @param {GeoIntersectsQuery} { $geometry }
+ * @return {*}  {Evaluator}
+ */
 export function $geoIntersects({ $geometry }: GeoIntersectsQuery): Evaluator {
 	return (input: any) => isGeoJSON(input) && intersect(input, $geometry);
 }
+
+/**
+ * Selects geometries within a bounding GeoJSON geometry.
+ *
+ * @param {GeoWithinQuery} query
+ * @return {*}  {Evaluator}
+ */
 export function $geoWithin(query: GeoWithinQuery): Evaluator {
 	return within(query);
 }
+
+/**
+ * Returns geospatial objects in proximity to a point.
+ *
+ * @param {NearQuery} query
+ * @param {CompileStep} compile
+ * @param {Partial<Query>} context
+ * @return {*}  {Evaluator}
+ */
 export function $near(query: NearQuery, compile: CompileStep, context: Partial<Query>): Evaluator {
 	if (isLegacyPoint(query)) {
 		const { $near: _, ...rest } = <LegacyNearPointContext>context;
@@ -55,6 +77,15 @@ export function $near(query: NearQuery, compile: CompileStep, context: Partial<Q
 
 	return (input: any) => (isPoint(input) && bound(vincenty($geometry, input))) || (isLegacyPoint(input) && bound(cartesian($geometry, <Point>legacyToGeoJSON(input))));
 }
+
+/**
+ * Returns geospatial objects in proximity to a point on a sphere.
+ *
+ * @param {NearQuery} query
+ * @param {CompileStep} compile
+ * @param {Partial<Query>} context
+ * @return {*}  {Evaluator}
+ */
 export function $nearSphere(query: NearQuery, compile: CompileStep, context: Partial<Query>): Evaluator {
 	if (isLegacyPoint(query)) {
 		const { $nearSphere: _, ...rest } = <LegacyNearSpherePointContext>context;
