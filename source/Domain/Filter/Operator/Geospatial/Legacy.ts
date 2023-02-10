@@ -24,7 +24,13 @@ export function isLegacyPointArray(input: any): input is LegacyPointArray {
  * @return {*}  {input is LegacyPointObject}
  */
 export function isLegacyPointObject(input: any): input is LegacyPointObject {
-    return typeof input === 'object' && !Array.isArray(input) && Object.keys(input).every((key) => typeof input[key] === 'number');
+    if (typeof input === 'object' && !Array.isArray(input)) {
+        const keys = Object.keys(input);
+
+        return keys.length >= 2 && keys.every((key) => typeof input[key] === 'number');
+    }
+
+    return false;
 }
 
 /**
@@ -44,7 +50,7 @@ export function isLegacyPoint(input: any): input is LegacyPoint {
  * @return {*}  {input is LegacyBox}
  */
 export function isLegacyBox(input: any): input is LegacyBox {
-    return Array.isArray(input) && input.length >= 2 && input.every(isLegacyPoint);
+    return Array.isArray(input) && input.length === 2 && input.every(isLegacyPoint);
 }
 
 /**
@@ -73,7 +79,7 @@ export function isLegacy(input: any): input is Legacy {
  * @param {LegacyPoint} input
  * @return {*}  {Position}
  */
-export function getLegacyPointCoordinates(input: LegacyPoint): Position {
+function getLegacyPointCoordinates(input: LegacyPoint): Position {
     return isLegacyPointArray(input)
         ? input
         : Object.keys(input).slice(0, 2).map((key) => input[key]) as Position
@@ -85,7 +91,7 @@ export function getLegacyPointCoordinates(input: LegacyPoint): Position {
  * @param {LegacyBox} input
  * @return {*}  {[Position, Position]}
  */
-export function getLegacyBoxCoordinates(input: LegacyBox): [Position, Position] {
+function getLegacyBoxCoordinates(input: LegacyBox): [Position, Position] {
     return input.slice(0, 2).map(getLegacyPointCoordinates) as [Position, Position];
 }
 
@@ -96,7 +102,7 @@ export function getLegacyBoxCoordinates(input: LegacyBox): [Position, Position] 
  * @param {LegacyPolygon} input
  * @return {*}  {[Position, Position, Position, Position, ...Array<Position>]}
  */
-export function getLegacyPolygonCoordinates(input: LegacyPolygon): [Position, Position, Position, Position, ...Array<Position>] {
+function getLegacyPolygonCoordinates(input: LegacyPolygon): [Position, Position, Position, Position, ...Array<Position>] {
     const mapped = input.map(getLegacyPointCoordinates);
     const append = mapped[mapped.length - 1].every((v, i) => v === mapped[0][i])
         ? []

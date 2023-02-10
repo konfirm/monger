@@ -1,6 +1,7 @@
 import { distance, intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Polygon, Position } from "@konfirm/geojson";
 import { Evaluator } from "../../Compiler";
 import { isLegacy, isLegacyBox, isLegacyPoint, isLegacyPolygon, LegacyBox, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
+import { is } from '../../../BSON';
 
 type GeoWithinOptions = {
     $geometry?: Polygon | MultiPolygon;
@@ -23,6 +24,8 @@ export type GeoWithinQuery
     | GeoWithinCenter
     | GeoWithinCenterSphere;
 
+const isNumber = is('int', 'double', 'long');
+
 /**
  * Compile a $geometry query
  *
@@ -31,7 +34,7 @@ export type GeoWithinQuery
  */
 function $geometry({ $geometry }: GeoWithinGeometry): Evaluator {
     if (!(isPolygon($geometry) || isMultiPolygon($geometry))) {
-        throw new Error(`unknown GeoJSON type: ${JSON.stringify($geometry)}`);
+        throw new Error(`$within not supported with provided geometry ${JSON.stringify($geometry)}`);
     }
 
     return (input: any) => (isGeoJSON(input) && intersect(input, $geometry) || (isLegacy(input) && intersect(legacyToGeoJSON(input), $geometry)));
@@ -75,9 +78,15 @@ function $polygon({ $polygon }: GeoWithinPolygon): Evaluator {
  * @return {*}  {Evaluator}
  */
 function $center({ $center }: GeoWithinCenter): Evaluator {
+    if (!Array.isArray($center)) {
+        throw new Error(`unknown geo specifier: $center: ${JSON.stringify($center)}`);
+    }
     const [center, radius] = $center;
     if (!isLegacyPoint(center)) {
         throw new Error('Point must be an array or object');
+    }
+    if (!isNumber(radius) || radius < 0) {
+        throw new Error('radius must be a non-negative number');
     }
     const point = legacyToGeoJSON(center);
 
@@ -91,11 +100,17 @@ function $center({ $center }: GeoWithinCenter): Evaluator {
  * @return {*}  {Evaluator}
  */
 function $centerSphere({ $centerSphere }: GeoWithinCenterSphere): Evaluator {
-    const [center, radius] = $centerSphere;
-    if (!isLegacyPoint(center)) {
+    if (!Array.isArray($centerSphere)) {
+        throw new Error(`unknown geo specifier: $centerSphere: ${JSON.stringify($centerSphere)}`);
+    }
+    const [centerSphere, radius] = $centerSphere;
+    if (!isLegacyPoint(centerSphere)) {
         throw new Error('Point must be an array or object');
     }
-    const point = legacyToGeoJSON(center);
+    if (!isNumber(radius) || radius < 0) {
+        throw new Error('radius must be a non-negative number');
+    }
+    const point = legacyToGeoJSON(centerSphere);
 
     return (input: any) => (isGeoJSON(input) && distance(point, input, 'cartesian') <= radius) || (isLegacy(input) && distance(point, legacyToGeoJSON(input), 'cartesian') <= radius);
 }
@@ -113,7 +128,7 @@ export function within(query: GeoWithinQuery): Evaluator {
     const unknown = keys.filter((key) => !(key in compilers))
 
     if (unknown.length) {
-        throw new Error(`unknown $within shape: ${unknown.join(', ')}`);
+        throw new Error(`unknown geo specifier: ${unknown.join(', ')}`);
     }
 
     const evaluators = keys.map((key) => compilers[key as keyof typeof compilers](query as any));
