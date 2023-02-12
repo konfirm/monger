@@ -1,6 +1,6 @@
 import type { JSONSchema } from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Schema from '../../../../../../source/Domain/Filter/Operator/Evaluation/Schema';
 
 test('Domain/Filter/Operator/Evaluation/Schema - schema/additionalItems', (t) => {

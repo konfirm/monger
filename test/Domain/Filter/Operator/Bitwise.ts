@@ -1,6 +1,7 @@
 import * as test from 'tape';
-import each from 'template-literal-each';
+import { each } from 'template-literal-each';
 import * as Bitwise from '../../../../source/Domain/Filter/Operator/Bitwise';
+import { filter } from '../../../Helper';
 
 type TestRecord = { query: number | Array<number>, input: number, matches: string };
 
@@ -17,8 +18,6 @@ test('Domain/Filter/Operator/Bitwise - exports', (t) => {
 });
 
 test('Domain/Filter/Operator/Bitwise - $bitsAllClear', (t) => {
-	const { $bitsAllClear } = Bitwise;
-
 	each`
 		query     | input | matches
 		----------|-------|---------
@@ -44,11 +43,11 @@ test('Domain/Filter/Operator/Bitwise - $bitsAllClear', (t) => {
 		${[200]}  | ${5}  | yes
 	`((record) => {
 		const { query, input, matches } = <TestRecord>record;
-		const compiled = $bitsAllClear(query);
+		const compiled = filter({ value: { $bitsAllClear: query } });
 		const isMatch = matches === 'yes';
 		const message = isMatch ? 'matches' : 'does not match'
 
-		t.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+		t.equal(compiled({ value: input }), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
 	});
 
 	t.end();

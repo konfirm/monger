@@ -40,11 +40,22 @@ const rules: Array<Verifier> = [
 	equal,
 	typed<A>(isArray, similarArray),
 	typed<O>(isObject, similarObject),
-	(first, ...rest) =>
-		isRegex(first)
-		&& rest.every((value) => (first as RegExp).test(String(value))),
 ];
+const implicitRules: Array<Verifier> = rules
+	.concat((first, ...rest) =>
+		isRegex(first)
+		&& rest.every((value) => (first as RegExp).test(String(value)))
+	);
+const explicitRules: Array<Verifier> = rules
+	.concat((first, ...rest) =>
+		isRegex(first)
+		&& rest.every((value) => isRegex(value) && (first as RegExp).toString() === (value as RegExp).toString())
+	);
 
-export function deep(...rest: [unknown, ...A]): boolean {
-	return rules.some((rule) => rule(...rest));
+export function deep(a: unknown, b: unknown, explicit: boolean = false): boolean {
+	const rules = explicit
+		? explicitRules
+		: implicitRules;
+
+	return rules.some((rule) => rule(a, b));
 }

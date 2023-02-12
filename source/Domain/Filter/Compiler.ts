@@ -4,8 +4,9 @@ import type { Operation as ComparisonOperation } from './Operator/Comparison';
 import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
 import type { Operation as LogicalOperation } from './Operator/Logical';
+import type { Operation as GeospatialOperation } from './Operator/Geospatial';
 import { accessor } from '../Field';
-import { isObject } from '../BSON';
+import { isObject, isRegex } from '../BSON';
 
 
 export type Evaluator = (input: any) => boolean;
@@ -21,7 +22,8 @@ type Operation
 	& BitwiseOperation
 	& ComparisonOperation
 	& ElementOperation
-	& EvaluationOperation;
+	& EvaluationOperation
+	& GeospatialOperation;
 type ImplicitEqual = ComparisonOperation['$eq'];
 
 export type Query = LogicalOperation | { [key: string]: ImplicitEqual | Partial<Query | Operation> }
@@ -35,7 +37,9 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private condition(name: K, query: T): Evaluator {
 		const { [name]: value } = query;
-		const condition = !isObject(value) ? { $eq: value } : value;
+		const condition = !isObject(value)
+			? isRegex(value) ? { $regex: value } : { $eq: value }
+			: value;
 
 		return this.compile(condition as unknown as T);
 	}
@@ -57,6 +61,9 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	compile(query: T): Evaluator {
 		const operation = Object.keys(query)
+			// legacy $near supports sibling $min-/$maxDistance keys, which in turn should not be taken into consideration
+			// TODO: determine how to deal with these exceptions
+			.filter((key) => !['$minDistance', '$maxDistance'].includes(key) || !('$near' in query || '$nearSphere'))
 			.map((name) => this.operation(name as K, query));
 
 		return (input: any) => operation.every((op) => op(input));

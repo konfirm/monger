@@ -1,7 +1,7 @@
 import * as test from 'tape';
-import { filter } from '../../../source/main';
+import { filter } from '../../Helper';
 
-test('Samples/Filter/Comparison - $eq', (t) => {
+test('Samples/Filter/Comparison - $eq (scalar)', (t) => {
 	const query = {
 		field: { $eq: 3 },
 	};
@@ -16,17 +16,41 @@ test('Samples/Filter/Comparison - $eq', (t) => {
 	t.end();
 });
 
-test('Samples/Filter/Comparison - implicit equality', (t) => {
+test('Samples/Filter/Comparison - $eq (regex)', (t) => {
 	const query = {
-		field: 3,
+		field: { $eq: /^Mongo/ },
 	};
 	const $eq = filter(query);
 
-	t.false($eq({ field: 1 }), `${JSON.stringify(query)} does not match {field:1}`);
-	t.false($eq({ field: 2 }), `${JSON.stringify(query)} does not match {field:2}`);
-	t.true($eq({ field: 3 }), `${JSON.stringify(query)} matches {field:3}`);
-	t.false($eq({ field: 4 }), `${JSON.stringify(query)} does not match {field:4}`);
-	t.false($eq({ field: 5 }), `${JSON.stringify(query)} does not match {field:5}`);
+	t.false($eq({ field: 'Monger' }), `${JSON.stringify(query)} does not match {field:'Monger'}`);
+	t.false($eq({ field: 'Mongo' }), `${JSON.stringify(query)} does not match {field:'Mongo'}`);
+	t.true($eq({ field: /^Mongo/ }), `${JSON.stringify(query)} matches {field:/Mongo/}`);
+
+	t.end();
+});
+
+test('Samples/Filter/Comparison - implicit equality (scalar)', (t) => {
+	const query = {
+		field: 2,
+	};
+	const num = filter(query);
+
+	t.false(num({ field: 1 }), `${JSON.stringify(query)} does not match {field:1}`);
+	t.true(num({ field: 2 }), `${JSON.stringify(query)} matches {field:2}`);
+	t.false(num({ field: 3 }), `${JSON.stringify(query)} does not match {field:3}`);
+
+	t.end();
+});
+
+test('Samples/Filter/Comparison - implicit equality (regex)', (t) => {
+	const query = {
+		field: /^Mongo/,
+	};
+	const rx = filter(query);
+
+	t.false(rx({ field: 'Monger' }), `{field:/^Mongo/} does not match {field:'Monger'}`);
+	t.true(rx({ field: 'Mongo' }), `{field:/^Mongo/} matches {field:'Mongo'}`);
+	t.true(rx({ field: 'MongoDB' }), `{field:/^Mongo/} matches {field:'MongoDB'}`);
 
 	t.end();
 });

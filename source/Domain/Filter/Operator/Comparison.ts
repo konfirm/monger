@@ -5,14 +5,14 @@ type Primitive = string | number | boolean;
 type Comparable = Primitive | Array<Comparable> | { [key: string]: Comparable };
 
 export type Operation = {
-	$eq: Parameters<typeof $eq>[0];
-	$gt: Parameters<typeof $gt>[0];
-	$gte: Parameters<typeof $gte>[0];
-	$in: Parameters<typeof $in>[0];
-	$lt: Parameters<typeof $lt>[0];
-	$lte: Parameters<typeof $lte>[0];
-	$ne: Parameters<typeof $ne>[0];
-	$nin: Parameters<typeof $nin>[0];
+  $eq: Parameters<typeof $eq>[0];
+  $gt: Parameters<typeof $gt>[0];
+  $gte: Parameters<typeof $gte>[0];
+  $in: Parameters<typeof $in>[0];
+  $lt: Parameters<typeof $lt>[0];
+  $lte: Parameters<typeof $lte>[0];
+  $ne: Parameters<typeof $ne>[0];
+  $nin: Parameters<typeof $nin>[0];
 };
 
 /**
@@ -22,7 +22,7 @@ export type Operation = {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/eq/
   */
 export function $eq(query: RegExp | Comparable): Evaluator {
-	return (input: unknown) => deep(query, input);
+  return (input: unknown) => deep(query, input, true);
 }
 
 /**
@@ -32,7 +32,7 @@ export function $eq(query: RegExp | Comparable): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/gt/
   */
 export function $gt(query: Primitive): Evaluator {
-	return (input: any) => typeof input === typeof query && input > query;
+  return (input: any) => typeof input === typeof query && input > query;
 }
 
 /**
@@ -42,7 +42,7 @@ export function $gt(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/gte/
   */
 export function $gte(query: Primitive): Evaluator {
-	return (input: any) => typeof input === typeof query && input >= query;
+  return (input: any) => typeof input === typeof query && input >= query;
 }
 
 /**
@@ -52,7 +52,7 @@ export function $gte(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/in/
   */
 export function $in(query: Array<unknown>): Evaluator {
-	return (input: unknown) => query.some((value) => deep(value, input));
+  return (input: unknown) => query.some((value) => deep(value, input));
 }
 
 /**
@@ -62,7 +62,7 @@ export function $in(query: Array<unknown>): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/lt/
   */
 export function $lt(query: Primitive): Evaluator {
-	return (input: any) => typeof input === typeof query && input < query;
+  return (input: any) => typeof input === typeof query && input < query;
 }
 
 /**
@@ -72,7 +72,7 @@ export function $lt(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/lte/
   */
 export function $lte(query: Primitive): Evaluator {
-	return (input: any) => typeof input === typeof query && input <= query;
+  return (input: any) => typeof input === typeof query && input <= query;
 }
 
 /**
@@ -82,7 +82,7 @@ export function $lte(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/ne/
   */
 export function $ne(query: Primitive): Evaluator {
-	return (input: unknown) => !deep(query, input);
+  return (input: unknown) => !deep(query, input);
 }
 
 /**
@@ -92,5 +92,5 @@ export function $ne(query: Primitive): Evaluator {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/nin/
   */
 export function $nin(query: Array<unknown>): Evaluator {
-	return (input: unknown) => !query.some((value) => deep(value, input));
+  return (input: unknown) => !query.some((value) => deep(value, input));
 }

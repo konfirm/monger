@@ -16,8 +16,8 @@ export const Operator = {
 	Field,
 };
 
-export function update<T extends Partial<Update> = Partial<Update>>(update: T): Updater {
-	const instance = new UpdateCompiler<T>(ArrayOps, Bitwise, Field);
+export function update<U extends Partial<Update> = Partial<Update>>(update: U): Updater {
+	const instance = new UpdateCompiler<U>(ArrayOps, Bitwise, Field);
 
 	return instance.compile(update);
 }

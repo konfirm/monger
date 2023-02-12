@@ -1,5 +1,5 @@
 import * as test from 'tape';
-import { filter } from '../../../source/main';
+import { filter } from '../../Helper';
 
 test('Samples/Filter/Dotted - it supports dot notation', (t) => {
 	const target = { foo: { bar: { baz: { qux: 1 } } } };
