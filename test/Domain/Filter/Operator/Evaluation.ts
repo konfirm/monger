@@ -1,6 +1,7 @@
 import * as test from 'tape';
 import { each } from 'template-literal-each';
 import * as Evaluation from '../../../../source/Domain/Filter/Operator/Evaluation';
+import { data as expression, TestRecord } from './Evaluation/Expression';
 
 test('Domain/Filter/Operator/Evaluation - exports', (t) => {
 	const expected = ['$expr', '$jsonSchema', '$mod', '$regex', '$text', '$where'];
@@ -17,9 +18,24 @@ test('Domain/Filter/Operator/Evaluation - exports', (t) => {
 
 test('Domain/Filter/Operator/Evaluation - $expr', (t) => {
 	const { $expr } = Evaluation;
-	const expr = $expr('@TODO');
 
-	t.throws(() => expr('@TODO'), '$expr is not implemented');
+	expression.forEach(({ operator, query, tests }: TestRecord) => {
+		const q = { [operator]: query };
+
+		tests.forEach(({ output, error, ...input }) => {
+			if (error) {
+				t.throws(() => {
+					const compiled = $expr(q);
+
+					return compiled(input)
+				}, <any>error, `$expr(${JSON.stringify(q)}) on ${JSON.stringify(input)} throws ${error}`);
+			}
+			else {
+				const compiled = $expr(q);
+				t.equals(compiled(input), Boolean(output), `$expr(${JSON.stringify(q)}) on ${JSON.stringify(input)} returns ${Boolean(output)}`);
+			}
+		});
+	});
 
 	t.end();
 });

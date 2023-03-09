@@ -9,7 +9,7 @@ import { accessor } from '../Field';
 import { isObject, isRegex } from '../BSON';
 
 
-export type Evaluator = (input: any) => boolean;
+export type Evaluator<T = boolean> = (input: any) => T;
 export type CompileStep = (query: any) => Evaluator;
 export type FilterCompiler = (query: any, compile: CompileStep, context: Partial<Query>) => Evaluator;
 

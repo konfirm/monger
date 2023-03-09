@@ -2,6 +2,7 @@ import type { Query, CompileStep, Evaluator } from '../Compiler';
 import type { TextSearchOptions } from './Evaluation/Text';
 import { Term } from './Evaluation/Text';
 import { schema as jsonSchema } from './Evaluation/Schema';
+import { expression } from './Evaluation/Expression';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];
@@ -21,10 +22,10 @@ export type Operation = {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/expr/
  * @todo    implement $expr
  */
-export function $expr(todo: any): Evaluator {
-	return (input: unknown): boolean => {
-		throw new Error('$expr not implemented');
-	}
+export function $expr(...args: Parameters<typeof expression>): Evaluator {
+	const compiled = expression(...args);
+
+	return (input: any): boolean => Boolean(compiled(input));
 }
 
 /**
