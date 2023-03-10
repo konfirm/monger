@@ -1,6 +1,7 @@
 import * as test from 'tape';
 import * as Expression from '../../../../../source/Domain/Filter/Operator/Evaluation/Expression';
 import { data as comparison } from './Expression/Comparison';
+import { data as arithmetic } from './Expression/Arithmetic';
 
 
 type TestOutput = { output: unknown, [key: string]: unknown };
@@ -20,6 +21,7 @@ export const data: Array<TestRecord> = [
         ],
     },
     ...comparison,
+    ...arithmetic,
 ]
 
 

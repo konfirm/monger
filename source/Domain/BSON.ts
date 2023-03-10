@@ -101,6 +101,6 @@ export function is(...type: Array<TypeIdentifier>): Evaluator {
 //  Common type detectors
 export const isArray = is(4);
 export const isObject = is(3);
-export const isNULL = is(10);
 export const isUndefined = is(6);
+export const isNULL = is(10);
 export const isRegex = is(11);

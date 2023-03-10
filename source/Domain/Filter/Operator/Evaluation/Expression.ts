@@ -2,9 +2,11 @@ import { isStringWithPattern } from '@konfirm/guard';
 import { isObject } from '../../../BSON';
 import { accessor } from '../../../Field';
 import { Evaluator } from '../../Compiler';
+import * as Arithmetic from './Expression/Arithmetic';
 import * as Comparison from './Expression/Comparison';
 
 const expressions = {
+    ...Arithmetic,
     ...Comparison,
 };
 const operators = Object.keys(expressions);
