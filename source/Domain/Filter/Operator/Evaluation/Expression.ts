@@ -4,10 +4,12 @@ import { accessor } from '../../../Field';
 import { Evaluator } from '../../Compiler';
 import * as Arithmetic from './Expression/Arithmetic';
 import * as Comparison from './Expression/Comparison';
+import * as Literal from './Expression/Literal';
 
 const expressions = {
     ...Arithmetic,
     ...Comparison,
+    ...Literal,
 };
 const operators = Object.keys(expressions);
 
