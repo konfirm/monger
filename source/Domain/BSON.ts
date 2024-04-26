@@ -104,3 +104,4 @@ export const isObject = is(3);
 export const isUndefined = is(6);
 export const isNULL = is(10);
 export const isRegex = is(11);
+export const isInteger = is(16);
