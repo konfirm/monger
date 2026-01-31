@@ -59,7 +59,7 @@ This document provides a comprehensive reference of all MongoDB query operators 
 | Bitwise            | 4     | 0           | 0%         |
 | Boolean            | 6     | 0           | 0%         |
 | Comparison         | 8     | 7           | 87%        |
-| Conditional        | 3     | 0           | 0%         |
+| Conditional        | 3     | 3           | 100%       |
 | Custom Aggregation | 1     | 0           | 0%         |
 | Data Size          | 2     | 0           | 0%         |
 | Date               | 21    | 0           | 0%         |
@@ -151,7 +151,7 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$cmp`](#cmp-expr)                      | Comparison         | 1.0     | ✓      |
 | [`$concat`](#concat)                     | String             | 1.0     | ×      |
 | [`$concatArrays`](#concatArrays)         | Array              | 3.2     | ×      |
-| [`$cond`](#cond)                         | Conditional        | 1.0     | ≈      |
+| [`$cond`](#cond)                         | Conditional        | 1.0     | ✓      |
 | [`$convert`](#convert)                   | Type               | 4.0     | ✓      |
 | [`$cos`](#cos)                           | Trigonometry       | 3.6     | ×      |
 | [`$cosh`](#cosh)                         | Trigonometry       | 3.6     | ×      |
@@ -183,7 +183,7 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$gt`](#gt-expr)                        | Comparison         | 1.0     | ✓      |
 | [`$gte`](#gte-expr)                      | Comparison         | 1.0     | ✓      |
 | [`$hour`](#hour)                         | Date               | 1.0     | ×      |
-| [`$ifNull`](#ifNull)                     | Conditional        | 1.0     | ×      |
+| [`$ifNull`](#ifNull)                     | Conditional        | 1.0     | ✓      |
 | [`$in`](#in-expr)                        | Comparison         | 1.0     | ×      |
 | [`$indexOfArray`](#indexOfArray)         | Array              | 3.4     | ×      |
 | [`$indexOfBytes`](#indexOfBytes)         | String             | 3.4     | ×      |
@@ -256,7 +256,7 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$substrBytes`](#substrBytes)           | String             | 3.4     | ×      |
 | [`$substrCP`](#substrCP)                 | String             | 3.4     | ×      |
 | [`$subtract`](#subtract-expr)            | Arithmetic         | 1.0     | ×      |
-| [`$switch`](#switch)                     | Conditional        | 1.0     | ×      |
+| [`$switch`](#switch)                     | Conditional        | 1.0     | ✓      |
 | [`$tan`](#tan)                           | Trigonometry       | 3.6     | ×      |
 | [`$tanh`](#tanh)                         | Trigonometry       | 3.6     | ×      |
 | [`$toBool`](#toBool)                     | Type               | 3.6     | ✓      |

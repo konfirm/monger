@@ -4,6 +4,7 @@ import { data as comparison } from './Expression/Comparison';
 import { data as array } from './Expression/Array';
 import { data as arithmetic } from './Expression/Arithmetic';
 import { data as literal } from './Expression/Literal';
+import { data as conditional } from './Expression/Conditional';
 
 
 type TestOutput = { output: unknown, [key: string]: unknown };
@@ -26,6 +27,7 @@ export const data: Array<TestRecord> = [
 	...array,
 	...comparison,
 	...literal,
+	...conditional,
 ];
 
 test('Domain/Filter/Operator/Evaluation/Expression - exports', (t) => {

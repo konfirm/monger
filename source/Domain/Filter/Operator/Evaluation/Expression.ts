@@ -6,7 +6,7 @@ import * as Arithmetic from './Expression/Arithmetic';
 import * as Array from './Expression/Array';
 // import * as Boolean from './Expression/Boolean';
 import * as Comparison from './Expression/Comparison';
-// import * as Conditional from './Expression/Conditional';
+import * as Conditional from './Expression/Conditional';
 // import * as Custom from './Expression/Custom';
 // import * as DataSize from './Expression/DataSize';
 // import * as Date from './Expression/Date';
@@ -25,6 +25,7 @@ const expressions = {
 	...Arithmetic,
 	...Array,
 	...Comparison,
+	...Conditional,
 	...Literal,
 	...Misc,
 };
@@ -73,13 +74,13 @@ function compile(query: Partial<ExpressionQuery> | FieldReference | unknown): (i
 		// TODO: allow for $comment
 		const keys = Object.keys(query);
 		const ops = keys.filter((key) => key in expressions).map((key) => {
-			const op = expressions[key as keyof typeof expressions];
+			const op = expressions[key as keyof typeof expressions] as (...args: Array<any>) => (v: any) => any;
 			const { [key as keyof typeof query]: value } = query;
 
-			return (<(...args: Array<any>) => ReturnType<typeof op>>op)(value, compile);
+			return op(value, compile);
 		});
 
-		return (input: any) => ops.reduce((carry, op) => op(carry), input);
+		return (input: any) => ops.reduce((carry, operation) => operation(carry), input);
 	}
 
 	if (isFieldReference(query)) {
