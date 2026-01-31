@@ -33,3 +33,5 @@ export function filter<T extends Partial<Query> = Partial<Query>>(query: T): Eva
 
 	return instance.compile(query);
 }
+
+export { Query, Evaluator };

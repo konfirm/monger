@@ -21,3 +21,5 @@ export function update<U extends Partial<Update> = Partial<Update>>(update: U): 
 
 	return instance.compile(update);
 }
+
+export { Update, Updater };

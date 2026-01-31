@@ -1,16 +1,32 @@
 import { isStringWithPattern } from '@konfirm/guard';
 import { isObject } from '../../../BSON';
 import { accessor } from '../../../Field';
+// import * as Accumulator from './Expression/Accumulator';
 import * as Arithmetic from './Expression/Arithmetic';
 import * as Array from './Expression/Array';
+// import * as Boolean from './Expression/Boolean';
 import * as Comparison from './Expression/Comparison';
+// import * as Conditional from './Expression/Conditional';
+// import * as Custom from './Expression/Custom';
+// import * as DataSize from './Expression/DataSize';
+// import * as Date from './Expression/Date';
 import * as Literal from './Expression/Literal';
+import * as Misc from './Expression/Misc';
+// import * as Object from './Expression/Object';
+// import * as Set from './Expression/Set';
+// import * as String from './Expression/String';
+// import * as Text from './Expression/Text';
+// import * as Trigonometry from './Expression/Trigonometry';
+// import * as Type from './Expression/Type';
+// import * as Variable from './Expression/Variable';
+// import * as Window from './Expression/Window';
 
 const expressions = {
 	...Arithmetic,
 	...Array,
 	...Comparison,
 	...Literal,
+	...Misc,
 };
 const operators = Object.keys(expressions);
 
@@ -23,7 +39,7 @@ type ExpressionQuery = {
 	[K in keyof ExpressionIO]: ExpressionIO[K]['input'];
 }
 
-export type Expression = unknown;
+export type Expression<T = unknown> = T;
 export type ExpressionResolver<T = any> = (input: any) => T;
 export type FieldReference<T extends string = string> = `$${T}`;
 export type ExpressionCompiler = <T = unknown>(query: Partial<ExpressionQuery> | FieldReference | unknown) => (input: any) => T;

@@ -43,7 +43,7 @@ test('main - Filter', (t) => {
 
 test('main - filter', (t) => {
 	const { filter } = main;
-	const query = filter({
+	const filterQuery: main.FilterQuery = {
 		name: { $eq: 'Sample' },
 		$and: [
 			{
@@ -53,7 +53,8 @@ test('main - filter', (t) => {
 				]
 			}
 		],
-	});
+	};
+	const query: main.FilterFunction = filter(filterQuery);
 
 	t.false(query({}), 'does not match empty object');
 	t.false(query({ name: 'Sample' }), 'does not match object with only name');
@@ -92,7 +93,7 @@ test('main - Update', (t) => {
 
 test('main - update', (t) => {
 	const { update } = main;
-	const query = {
+	const query: main.UpdateQuery = {
 		$set: { foo: 'bar', 'bar.baz': 'qux' },
 	};
 
@@ -102,7 +103,7 @@ test('main - update', (t) => {
 		[{ foo: 1 }, { foo: 'bar', bar: { baz: 'qux' } }],
 		[{ foo: 1, baz: 3 }, { foo: 'bar', baz: 3, bar: { baz: 'qux' } }],
 	].forEach(([input, output]) => {
-		const updater = update(query);
+		const updater: main.UpdateFunction = update(query);
 		const result = updater(preserve(input) as Parameters<typeof updater>[0]);
 
 		t.equal(

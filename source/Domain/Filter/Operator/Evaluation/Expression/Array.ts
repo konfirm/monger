@@ -1,10 +1,10 @@
-import { Expression, ExpressionCompiler, FieldReference } from "../Expression";
+import type { Expression, ExpressionCompiler } from "../Expression";
 import { Evaluator } from "../../../Compiler";
 import { isArray, isInteger } from "../../../../BSON";
 
 export type Operation = {
 	$arrayElemAt: Parameters<typeof $arrayElemAt>[0];
-	// $arrayToObject: Parameters<typeof $arrayToObject>[0];
+	$arrayToObject: Parameters<typeof $arrayToObject>[0];
 	// $concatArrays: Parameters<typeof $concatArrays>[0];
 	// $filter: Parameters<typeof $filter>[0];
 	// $firstN: Parameters<typeof $firstN>[0];
@@ -26,7 +26,7 @@ export type Operation = {
 };
 export type Result = {
 	$arrayElemAt: ReturnType<typeof $arrayElemAt>;
-	// $arrayToObject: ReturnType<typeof $arrayToObject>;
+	$arrayToObject: ReturnType<typeof $arrayToObject>;
 	// $concatArrays: ReturnType<typeof $concatArrays>;
 	// $filter: ReturnType<typeof $filter>;
 	// $firstN: ReturnType<typeof $firstN>;
@@ -53,29 +53,59 @@ export type Result = {
  * @syntax { $arrayElemAt: [ <array>, <idx> ] }
  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayElemAt
  */
-export function $arrayElemAt<T extends unknown>(query: [Expression, Expression], compile: ExpressionCompiler): Evaluator<T | null | undefined> {
+export function $arrayElemAt<T extends unknown>(
+	query: [Expression, Expression],
+	compile: ExpressionCompiler,
+): Evaluator<T | null | undefined> {
 	const resolve = query.map(compile);
 
 	return (input: any) => {
-		const [list, index] = resolve.map((f) => f(input)) as [Array<T>, number];
+		const [list, index] = resolve.map((f) => f(input)) as [
+			Array<T>,
+			number,
+		];
 
 		if (isArray(list) && isInteger(index)) {
-			return index < 0
-				? list[list.length + index]
-				: list[index];
+			return index < 0 ? list[list.length + index] : list[index];
 		}
 
 		return null;
 	};
 }
 
-// /**
-//  * $arrayToObject
-//  * Converts an array of key value pairs to a document.
-//  * @syntax { $arrayToObject: <unknown> }
-//  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayToObject
-//  */
-// export function $arrayToObject(query: unknown) { }
+type ArrayToObjectExpressionTuple = [unknown, unknown];
+type ArrayToObjectExpressionObject = { k: unknown; v: unknown };
+type ArrayToObjectExpression =
+	| Expression
+	| Array<ArrayToObjectExpressionTuple | ArrayToObjectExpressionObject>;
+
+/**
+ * $arrayToObject
+ * Converts an array of key value pairs to a document.
+ * @syntax { $arrayToObject: <unknown> }
+ * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayToObject
+ */
+export function $arrayToObject<T extends object = { [key: string]: unknown }>(
+	query: ArrayToObjectExpression,
+	compile: ExpressionCompiler,
+): Evaluator<T | undefined> {
+	const resolve = compile(query);
+
+	// console.log(resolve.toString());
+	// return (input: any): T | undefined => {
+	// 	if (isArray(input)) {
+	// 		const result = {};
+
+	// 		normalized.forEach(({ k, v }) => {
+	// 			result[k(input)] = v(input);
+	// 		});
+
+	// 		return result as T;
+	// 	}
+	// };
+	// throw new Error('nah');
+	return () => undefined;
+}
 
 // /**
 //  * $concatArrays
@@ -220,4 +250,3 @@ export function $arrayElemAt<T extends unknown>(query: [Expression, Expression],
 //  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/zip
 //  */
 // export function $zip(query: unknown) { }
-

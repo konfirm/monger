@@ -42,7 +42,7 @@ test('Domain/Filter/Operator/Evaluation/Expression - exports', (t) => {
 
 const { expression } = Expression;
 
-test.only('Domain/Filter/Operator/Evaluation/Expression - expression', (t) => {
+test('Domain/Filter/Operator/Evaluation/Expression - expression', (t) => {
 	data.forEach(({ operator, query, tests }) => {
 		const q = { [operator]: query };
 
