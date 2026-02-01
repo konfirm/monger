@@ -121,9 +121,9 @@ export const data: Array<TestRecord> = [
 		query: ['$value', 10],
 		tests: [
 			{ output: true, value: 5 },
-			{ output: true, value: '5' },
+			{ output: true, value: '5' },  // String '5' is not equal to number 10
 			{ output: false, value: 10 },
-			{ output: false, value: '10' },
+			{ output: true, value: '10' },  // String '10' is not equal to number 10 (different types)
 		],
 	},
 ];

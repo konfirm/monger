@@ -1,5 +1,6 @@
 import { Evaluator } from '../../../Compiler';
 import { Expression, ExpressionCompiler } from '../Expression';
+import { deep, CompareMode } from '../../../../Compare';
 
 export type Operation = {
     $cmp: Parameters<typeof $cmp>[0];
@@ -40,7 +41,7 @@ export function $cmp(query: [Expression, Expression], compile: ExpressionCompile
 /**
  * $eq
  * Returns true if the values are equivalent.
- * @syntax { $cmp: [ <expression1>, <expression2> ] }
+ * @syntax { $eq: [ <expression1>, <expression2> ] }
  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/eq/
  */
 export function $eq(query: [Expression, Expression], compile: ExpressionCompiler): Evaluator<boolean> {
@@ -49,7 +50,7 @@ export function $eq(query: [Expression, Expression], compile: ExpressionCompiler
     return (input: any): boolean => {
         const [a, b] = resolve.map((f) => f(input));
 
-        return a == b;
+        return deep(a, b, CompareMode.MONGODB);
     };
 }
 
@@ -130,6 +131,6 @@ export function $ne(query: [Expression, Expression], compile: ExpressionCompiler
     return (input: any): boolean => {
         const [a, b] = resolve.map((f) => f(input));
 
-        return a != b;
+        return !deep(a, b, CompareMode.MONGODB);
     };
 }

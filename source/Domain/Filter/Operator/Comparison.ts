@@ -1,5 +1,5 @@
 import type { Evaluator } from '../Compiler';
-import { deep } from '../../Compare';
+import { deep, CompareMode } from '../../Compare';
 
 type Primitive = string | number | boolean;
 type Comparable = Primitive | Array<Comparable> | { [key: string]: Comparable };
@@ -22,7 +22,7 @@ export type Operation = {
   * @see     https://docs.mongodb.com/manual/reference/operator/query/eq/
   */
 export function $eq(query: RegExp | Comparable): Evaluator {
-  return (input: unknown) => deep(query, input, true);
+  return (input: unknown) => deep(query, input, CompareMode.EXPLICIT);
 }
 
 /**
