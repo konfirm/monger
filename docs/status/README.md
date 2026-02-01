@@ -22,9 +22,9 @@ This document provides a comprehensive reference of all MongoDB query operators 
 
 | MongoDB | total | implemented | completion |
 | ------- | ----- | ----------- | ---------- |
-| 1.0     | 58    | 29          | 50%        |
+| 1.0     | 58    | 32          | 55%        |
 | 2.6     | 1     | 0           | 0%         |
-| 3.2     | 10    | 1           | 10%        |
+| 3.2     | 10    | 2           | 20%        |
 | 3.4     | 12    | 0           | 0%         |
 | 3.6     | 37    | 6           | 16%        |
 | 4.0     | 6     | 1           | 16%        |
@@ -57,7 +57,7 @@ This document provides a comprehensive reference of all MongoDB query operators 
 | Arithmetic         | 16    | 16          | 100%       |
 | Array              | 15    | 3           | 20%        |
 | Bitwise            | 4     | 0           | 0%         |
-| Boolean            | 6     | 0           | 0%         |
+| Boolean            | 6     | 4           | 67%        |
 | Comparison         | 8     | 7           | 87%        |
 | Conditional        | 3     | 3           | 100%       |
 | Custom Aggregation | 1     | 0           | 0%         |
@@ -132,7 +132,7 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$acosh`](#acosh)                       | Trigonometry       | 3.6     | ×      |
 | [`$add`](#add)                           | Arithmetic         | 1.0     | ✓      |
 | [`$allElementsTrue`](#allElementsTrue)   | Boolean            | 3.6     | ×      |
-| [`$and`](#and-expr)                      | Boolean            | 1.0     | ×      |
+| [`$and`](#and-expr)                      | Boolean            | 1.0     | ✓      |
 | [`$anyElementTrue`](#anyElementTrue)     | Boolean            | 3.6     | ×      |
 | [`$arrayElemAt`](#arrayElemAt)           | Array              | 3.2     | ✓      |
 | [`$arrayToObject`](#arrayToObject)       | Array              | 3.6     | ✓      |
@@ -189,7 +189,7 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$indexOfBytes`](#indexOfBytes)         | String             | 3.4     | ×      |
 | [`$indexOfCP`](#indexOfCP)               | String             | 3.4     | ×      |
 | [`$integral`](#integral)                 | Window             | 5.0     | ×      |
-| [`$isArray`](#isArray)                   | Boolean            | 3.2     | ×      |
+| [`$isArray`](#isArray)                   | Boolean            | 3.2     | ✓      |
 | [`$isNumber`](#isNumber)                 | Type               | 3.6     | ✓      |
 | [`$isoDayOfWeek`](#isoDayOfWeek)         | Date               | 3.6     | ×      |
 | [`$isoWeek`](#isoWeek)                   | Date               | 3.6     | ×      |
@@ -215,9 +215,9 @@ Expressions are MQL components that resolve to a value. Expressions are stateles
 | [`$month`](#month)                       | Date               | 1.0     | ×      |
 | [`$multiply`](#multiply)                 | Arithmetic         | 1.0     | ✓      |
 | [`$ne`](#ne-expr)                        | Comparison         | 1.0     | ✓      |
-| [`$not`](#not-expr)                      | Boolean            | 1.0     | ×      |
+| [`$not`](#not-expr)                      | Boolean            | 1.0     | ✓      |
 | [`$objectToArray`](#objectToArray)       | Object             | 3.6     | ×      |
-| [`$or`](#or-expr)                        | Boolean            | 1.0     | ×      |
+| [`$or`](#or-expr)                        | Boolean            | 1.0     | ✓      |
 | [`$pow`](#pow)                           | Arithmetic         | 1.0     | ✓      |
 | [`$radiansToDegrees`](#radiansToDegrees) | Trigonometry       | 3.6     | ×      |
 | [`$rand`](#rand)                         | Miscellaneous      | 3.6     | ✓      |

@@ -4,7 +4,7 @@ import { accessor } from '../../../Field';
 // import * as Accumulator from './Expression/Accumulator';
 import * as Arithmetic from './Expression/Arithmetic';
 import * as Array from './Expression/Array';
-// import * as Boolean from './Expression/Boolean';
+import * as Boolean from './Expression/Boolean';
 import * as Comparison from './Expression/Comparison';
 import * as Conditional from './Expression/Conditional';
 // import * as Custom from './Expression/Custom';
@@ -24,6 +24,7 @@ import * as Misc from './Expression/Misc';
 const expressions = {
 	...Arithmetic,
 	...Array,
+	...Boolean,
 	...Comparison,
 	...Conditional,
 	...Literal,

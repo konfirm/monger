@@ -5,6 +5,7 @@ import { data as array } from './Expression/Array';
 import { data as arithmetic } from './Expression/Arithmetic';
 import { data as literal } from './Expression/Literal';
 import { data as conditional } from './Expression/Conditional';
+import { data as boolean } from './Expression/Boolean';
 
 
 type TestOutput = { output: unknown, [key: string]: unknown };
@@ -25,6 +26,7 @@ export const data: Array<TestRecord> = [
 	},
 	...arithmetic,
 	...array,
+	...boolean,
 	...comparison,
 	...literal,
 	...conditional,
