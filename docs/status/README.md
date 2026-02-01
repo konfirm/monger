@@ -22,15 +22,15 @@ This document provides a comprehensive reference of all MongoDB query operators 
 
 | MongoDB | total | implemented | completion |
 | ------- | ----- | ----------- | ---------- |
-| 1.0     | 58    | 20          | 34%        |
+| 1.0     | 58    | 29          | 50%        |
 | 2.6     | 1     | 0           | 0%         |
-| 3.2     | 10    | 2           | 20%        |
+| 3.2     | 10    | 1           | 10%        |
 | 3.4     | 12    | 0           | 0%         |
-| 3.6     | 37    | 3           | 8%         |
+| 3.6     | 37    | 6           | 16%        |
 | 4.0     | 6     | 1           | 16%        |
 | 4.2     | 1     | 0           | 0%         |
 | 4.4     | 1     | 0           | 0%         |
-| 5.0     | 16    | 0           | 0%         |
+| 5.0     | 16    | 2           | 12%        |
 | 5.1     | 2     | 0           | 0%         |
 | 5.2     | 4     | 0           | 0%         |
 | 5.3     | 1     | 0           | 0%         |
@@ -55,7 +55,7 @@ This document provides a comprehensive reference of all MongoDB query operators 
 | type               | total | implemented | completion |
 | ------------------ | ----- | ----------- | ---------- |
 | Arithmetic         | 16    | 16          | 100%       |
-| Array              | 15    | 2           | 13%        |
+| Array              | 15    | 3           | 20%        |
 | Bitwise            | 4     | 0           | 0%         |
 | Boolean            | 6     | 0           | 0%         |
 | Comparison         | 8     | 7           | 87%        |

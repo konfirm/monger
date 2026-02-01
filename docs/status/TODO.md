@@ -283,12 +283,12 @@ These are the best candidates for immediate implementation:
 ## Recommended Implementation Order
 
 ### Phase 1: Core Foundation (High Priority, Low Complexity)
-1. Complete `$cond` (currently partial)
+1.  ~Complete `$cond` (currently partial)~
 2. `$and`, `$or`, `$not` (Boolean)
 3. `$isArray` (Boolean)
 4. `$concatArrays` (Array)
 5. `$concat` (String)
-6. `$ifNull` (Conditional)
+6. ~`$ifNull`, `$switch` (Conditional)~
 7. `$in` (Array/Comparison)
 
 ### Phase 2: String & Array Essentials

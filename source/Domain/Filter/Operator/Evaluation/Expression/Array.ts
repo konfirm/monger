@@ -1,6 +1,14 @@
 import type { Expression, ExpressionCompiler } from "../Expression";
+import {
+	not,
+	isArray,
+	isString,
+	isArrayOfSize,
+	isStrictStructure,
+	isUndefined,
+} from "@konfirm/guard";
 import { Evaluator } from "../../../Compiler";
-import { isArray, isInteger } from "../../../../BSON";
+import { isInteger, isObject } from "../../../../BSON";
 
 export type Operation = {
 	$arrayElemAt: Parameters<typeof $arrayElemAt>[0];
@@ -79,32 +87,76 @@ type ArrayToObjectExpression =
 	| Expression
 	| Array<ArrayToObjectExpressionTuple | ArrayToObjectExpressionObject>;
 
+const isArrayToObjectTuple = isArrayOfSize<ArrayToObjectExpressionTuple>(2, 2);
+const isArrayToObjectObject = isStrictStructure<ArrayToObjectExpressionObject>({
+	k: isString,
+	v: not(isUndefined),
+});
+
 /**
  * $arrayToObject
  * Converts an array of key value pairs to a document.
  * @syntax { $arrayToObject: <unknown> }
  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/arrayToObject
  */
-export function $arrayToObject<T extends object = { [key: string]: unknown }>(
+export function $arrayToObject<T extends Record<string, unknown>>(
 	query: ArrayToObjectExpression,
 	compile: ExpressionCompiler,
-): Evaluator<T | undefined> {
+): Evaluator<T | null> {
 	const resolve = compile(query);
 
-	// console.log(resolve.toString());
-	// return (input: any): T | undefined => {
-	// 	if (isArray(input)) {
-	// 		const result = {};
+	return (input: any): T | null => {
+		const array = resolve(input) as Array<unknown>;
 
-	// 		normalized.forEach(({ k, v }) => {
-	// 			result[k(input)] = v(input);
-	// 		});
+		if (!isArray(array)) {
+			throw new Error(
+				`$arrayToObject requires an array input, found: ${typeof array}`,
+			);
+		}
 
-	// 		return result as T;
-	// 	}
-	// };
-	// throw new Error('nah');
-	return () => undefined;
+		if (isArray(array[0])) {
+			const mapped = array.map((record, index) => {
+				if (Array.isArray(record)) {
+					if (isArrayToObjectTuple(record)) {
+						return { [String(record[0])]: record[1] };
+					}
+
+					throw new Error(
+						`$arrayToObject requires an array of size 2 arrays, found array of size: ${record.length}`,
+					);
+				}
+
+				throw new Error(
+					`$arrayToObject requires a consistent input format. Elements must all be arrays or all be objects. Array was detected, now found: ${typeof record}`,
+				);
+			});
+
+			return Object.assign({}, ...mapped);
+		} else if (isObject(array[0])) {
+			const mapped = array.map((record) => {
+				if (isObject(record)) {
+					if (isArrayToObjectObject(record)) {
+						return { [String(record.k)]: record.v };
+					}
+
+					const { length } = Object.keys(
+						record as Record<string, unknown>,
+					);
+					throw new Error(
+						`$arrayToObject requires an object keys of 'k' and 'v'. Found incorrect number of keys:${length}`,
+					);
+				}
+
+				throw new Error(
+					`$arrayToObject requires a consistent input format. Elements must all be arrays or all be objects. Object was detected, now found: ${isArray(record) ? "array" : typeof record}`,
+				);
+			});
+
+			return Object.assign({}, ...mapped);
+		}
+
+		return {} as T;
+	};
 }
 
 // /**
