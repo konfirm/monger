@@ -1,0 +1,499 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js",
+      "timestamp": 1769973922590
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "server9406",
+      "timestamp": 1769973922593
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.server9406",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973922593
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.server9406.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973922594
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.server9406.drop",
+      "result": true,
+      "timestamp": 1769973922594
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.server9406",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973922594
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.server9406.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973922594
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.server9406.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973922594,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.server9406.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973922594,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.server9406.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973922594
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.server9406",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973922595
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.server9406.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$dateToString": {
+                  "date": {
+                    "$oid": "14b12afff000000000000000"
+                  },
+                  "format": "%V-%G"
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973922597,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.server9406.aggregate",
+      "result": {},
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.server9406.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.server9406.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 23,
+      "type": "function_call",
+      "path": "ObjectId",
+      "target": "ObjectId",
+      "arguments": [
+        "14b12afff000000000000000"
+      ],
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "ObjectId.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973922597,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "ObjectId.result",
+      "property": "$oid",
+      "valueType": "string",
+      "timestamp": 1769973922597,
+      "value": "14b12afff000000000000000"
+    },
+    {
+      "id": 23,
+      "type": "function_return",
+      "path": "ObjectId",
+      "result": {
+        "$oid": "14b12afff000000000000000"
+      },
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.server9406",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973922597
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "ObjectId.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973922597,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "ObjectId.result",
+      "property": "$oid",
+      "valueType": "string",
+      "timestamp": 1769973922597,
+      "value": "14b12afff000000000000000"
+    },
+    {
+      "id": 27,
+      "type": "function_call",
+      "path": "collection.server9406.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$dateToString": {
+                  "date": {
+                    "$oid": "14b12afff000000000000000"
+                  },
+                  "format": "%V-%G"
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 30,
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973922598,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 27,
+      "type": "function_return",
+      "path": "collection.server9406.aggregate",
+      "result": {},
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 38,
+      "type": "function_call",
+      "path": "collection.server9406.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 38,
+      "type": "function_return",
+      "path": "collection.server9406.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.server9406.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973922598
+    },
+    {
+      "id": 42,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'result')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973922598
+    }
+  ],
+  "state": {
+    "collections": {
+      "server9406": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973922590,
+    "endTime": 1769973922598,
+    "totalOperations": 7
+  }
+}

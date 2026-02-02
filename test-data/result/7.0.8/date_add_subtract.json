@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_add_subtract.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:04.506Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

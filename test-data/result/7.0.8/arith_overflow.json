@@ -1,0 +1,100 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/arith_overflow.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:51.843Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$add": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $add only supports numeric or date types, not object",
+        "code": 14
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$subtract": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: can't $subtract object from object",
+        "code": 14
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$multiply": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $multiply only supports numeric types, not object",
+        "code": 14
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $add only supports numeric or date types, not object"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: can't $subtract object from object"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $multiply only supports numeric types, not object"
+    }
+  ]
+}

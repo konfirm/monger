@@ -1,0 +1,152 @@
+{
+  "operator": "$tan",
+  "description": "Tests for $tan - Trigonometry operator",
+  "mongodbVersion": "3.6",
+  "implemented": false,
+  "source": "/mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js, /mongo/jstests/aggregation/expressions/ne_constant.js, /mongo/jstests/aggregation/sources/geonear/distancefield_and_includelocs.js, /mongo/jstests/aggregation/sources/geonear/geonear_mindistance.js, /mongo/jstests/aggregation/sources/geonear/geonear_no_distancefield.js, /mongo/jstests/aggregation/sources/geonear/mindistance_and_maxdistance.js, /mongo/jstests/aggregation/sources/geonear/mindistance_and_maxdistance_expr.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/change_stream_constants.h, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "687511",
+      "type": "numericCode",
+      "context": "ones. // This is a regression test for BF-24149. coll.insert({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d"
+    },
+    {
+      "code": "906209",
+      "type": "numericCode",
+      "context": "// This is a regression test for BF-24149. coll.insert({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.t"
+    },
+    {
+      "code": "334592",
+      "type": "numericCode",
+      "context": "rt({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.toJSON().$numberDecimal; assertArrayEq({ actual: coll"
+    },
+    {
+      "code": "421055",
+      "type": "numericCode",
+      "context": "d: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.toJSON().$numberDecimal; assertArrayEq({ actual: coll .aggr"
+    },
+    {
+      "code": "141592",
+      "type": "numericCode",
+      "context": "imal; assertArrayEq({ actual: coll .aggregate(makePipeline({$multiply: [-3.14159265859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"90572124221"
+    },
+    {
+      "code": "314159",
+      "type": "numericCode",
+      "context": "ayEq({ actual: coll .aggregate(makePipeline({$multiply: [-3.14159265859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269"
+    },
+    {
+      "code": "915242",
+      "type": "numericCode",
+      "context": "5859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1"
+    },
+    {
+      "code": "528741",
+      "type": "numericCode",
+      "context": "\"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); as"
+    },
+    {
+      "code": "946952",
+      "type": "numericCode",
+      "context": "314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( n"
+    },
+    {
+      "code": "442227",
+      "type": "numericCode",
+      "context": "255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberD"
+    },
+    {
+      "code": "299097",
+      "type": "numericCode",
+      "context": ") .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimal"
+    },
+    {
+      "code": "905721",
+      "type": "numericCode",
+      "context": ".toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsE"
+    },
+    {
+      "code": "242210",
+      "type": "numericCode",
+      "context": "ay() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( "
+    },
+    {
+      "code": "045313",
+      "type": "numericCode",
+      "context": ".map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll "
+    },
+    {
+      "code": "783126",
+      "type": "numericCode",
+      "context": ".map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll "
+    },
+    {
+      "code": "900762",
+      "type": "numericCode",
+      "context": "ap(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll .a"
+    },
+    {
+      "code": "999999",
+      "type": "numericCode",
+      "context": "aggregate( makePipeline({ $multiply: [NumberDecimal(\"-9.999999999999999999999999999999999E+6144\"), \"$x\", \"$y\"], }), ) .toArray()[0]._id, NumberDecimal(0), ), ); assertArrayEq({"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "({}, doc), newDoc); // // Tests for \"distanceField\". // const expectedDistance = 0.0000000000000001; // Test that \"distanceField\" can be computed in a new field. assertCloseEnough( firstGeoNearResult("
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "eric values are illegal. assert.throwsWithCode(() => assertGeoNearResults({minDistance: -1.1}), ErrorCodes.BadValue); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"3.2\"}), ErrorCodes"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": ", ErrorCodes.BadValue); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"3.2\"}), ErrorCodes.TypeMismatch); // A minimum distance of 0 returns all points. assertGeoNearResults({minDistan"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "legal. assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$concat: [\"3\", \".2\"]}}), ErrorCodes.TypeMismatch); assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"di"
+    },
+    {
+      "code": "755570",
+      "type": "numericCode",
+      "context": "assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"distFromOrigin\"}}), 7555701); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"$distFromOrigin\"}), 7555701); "
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Trigonometry",
+      "MongoDB version: 3.6",
+      "Implementation status: × Not implemented",
+      "Found 7 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/change_stream_constants.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp"
+    ]
+  }
+}

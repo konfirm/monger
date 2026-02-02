@@ -1,0 +1,28 @@
+{
+  "source": "convert_bindata_numeric.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert_bindata_numeric.js",
+  "extractedAt": "2026-02-01T19:19:03.895Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "doc.output",
+      "expected": "doc.expected",
+      "line": 230
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany(documents",
+      "line": 226
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "operator": "$zip",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/zip.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.094Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$zip": {
+            "inputs": [
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                "A",
+                "B",
+                "C"
+              ]
+            ]
+          }
+        },
+        "context": {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        },
+        "expected": [
+          {
+            "_id": "697fb0038db0edd5ff18cd7d",
+            "zipped": [
+              [
+                1,
+                "A"
+              ],
+              [
+                2,
+                "B"
+              ],
+              [
+                3,
+                "C"
+              ]
+            ]
+          }
+        ],
+        "duration": 7
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

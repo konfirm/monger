@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/map_arrayindexas.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:25.070Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

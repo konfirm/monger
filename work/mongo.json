@@ -1,0 +1,205 @@
+[
+    {
+        "name": "legacy point array",
+        "location": [
+            5.911760330200195,
+            51.97496770044958
+        ]
+    },
+    {
+        "name": "legacy point object",
+        "location": {
+            "x": 5.911760330200195,
+            "y": 51.97496770044958
+        }
+    },
+    {
+        "name": "legacy polygon array",
+        "location": [
+            [
+                5.9,
+                51.9
+            ],
+            [
+                5.9,
+                52.1
+            ],
+            [
+                6.1,
+                52.1
+            ],
+            [
+                6.1,
+                51.9
+            ]
+        ]
+    },
+    {
+        "name": "GeoJSON Point",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                5.911760330200195,
+                51.97496770044958
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON MultiPoint",
+        "location": {
+            "type": "MultiPoint",
+            "coordinates": [
+                [
+                    5.911,
+                    51.974
+                ],
+                [
+                    6.199,
+                    52.136
+                ]
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON LineString",
+        "location": {
+            "type": "LineString",
+            "coordinates": [
+                [
+                    5.911,
+                    51.974
+                ],
+                [
+                    6.199,
+                    52.136
+                ]
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON MultiLineString",
+        "location": {
+            "type": "MultiLineString",
+            "coordinates": [
+                [
+                    [
+                        5.911,
+                        51.974
+                    ],
+                    [
+                        6.199,
+                        52.136
+                    ]
+                ]
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON Polygon",
+        "location": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        5.911,
+                        51.974
+                    ],
+                    [
+                        5.911,
+                        52.136
+                    ],
+                    [
+                        6.199,
+                        52.136
+                    ],
+                    [
+                        6.199,
+                        51.974
+                    ],
+                    [
+                        5.911,
+                        51.974
+                    ]
+                ]
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON MultiPolygon",
+        "location": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            5.911,
+                            51.974
+                        ],
+                        [
+                            5.911,
+                            52.136
+                        ],
+                        [
+                            6.199,
+                            52.136
+                        ],
+                        [
+                            6.199,
+                            51.974
+                        ],
+                        [
+                            5.911,
+                            51.974
+                        ]
+                    ]
+                ]
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON GeometryCollection",
+        "location": {
+            "type": "GeometryCollection",
+            "geometries": [
+                {
+                    "type": "Point",
+                    "coordinates": [
+                        5.911760330200195,
+                        51.97496770044958
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "name": "GeoJSON Feature",
+        "location": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.911760330200195,
+                    51.97496770044958
+                ]
+            }
+        }
+    },
+    {
+        "name": "GeoJSON FeatureCollection",
+        "location": {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            5.911760330200195,
+                            51.97496770044958
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+]

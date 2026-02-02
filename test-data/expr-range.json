@@ -1,0 +1,165 @@
+{
+  "operator": "$range",
+  "description": "Tests for $range - Array operator",
+  "mongodbVersion": "3.2",
+  "implemented": false,
+  "source": "/mongo/jstests/aggregation/expressions/range.js, /mongo/jstests/aggregation/expressions/range2.js, /mongo/jstests/aggregation/sources/densify/explicit_range.js, /mongo/jstests/aggregation/sources/densify/full_range.js, /mongo/jstests/aggregation/sources/setWindowFields/range.js, /mongo/jstests/aggregation/sources/setWindowFields/range_wrong_type.js",
+  "implementationSource": "TBD",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic array operation",
+        "query": {
+          "$range": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [
+      {
+        "description": "Operation with null array",
+        "query": {
+          "$range": [
+            null
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "34444",
+      "type": "assertErrorCode",
+      "context": "[{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [NumberLong(\"12147483647\"), \"$distance\"]}}}]; assertErrorCode(coll, pipeline, 34444); // Start value is a decimal. pipeline = [{$project: {_id: 0, "
+    },
+    {
+      "code": "34443",
+      "type": "assertErrorCode",
+      "context": "= [{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [\"String is not a number\", \"$distance\"]}}}]; assertErrorCode(coll, pipeline, 34443); // Start value is null. pipeline = [{$project: {_id: 0, city"
+    },
+    {
+      "code": "34446",
+      "type": "assertErrorCode",
+      "context": "[{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [\"$distance\", NumberLong(\"12147483647\")]}}}]; assertErrorCode(coll, pipeline, 34446); // End value is a decimal. pipeline = [{$project: {_id: 0, ci"
+    },
+    {
+      "code": "34445",
+      "type": "assertErrorCode",
+      "context": "= [{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [\"$distance\", \"String is not a number\"]}}}]; assertErrorCode(coll, pipeline, 34445); // End value is null. pipeline = [{$project: {_id: 0, city: "
+    },
+    {
+      "code": "34448",
+      "type": "assertErrorCode",
+      "context": "st stops\": {$range: [\"$distance\", NumberInt(100), NumberLong(\"12147483647\")]}, }, }, ]; assertErrorCode(coll, pipeline, 34448); // Step value is a decimal. pipeline = [ { $project: { _id: 0, city: 1, "
+    },
+    {
+      "code": "34447",
+      "type": "assertErrorCode",
+      "context": "est stops\": {$range: [\"$distance\", NumberInt(100), \"String is not a number\"]}, }, }, ]; assertErrorCode(coll, pipeline, 34447); // Step value is null. pipeline = [{$project: {_id: 0, city: 1, \"Rest st"
+    },
+    {
+      "code": "34449",
+      "type": "assertErrorCode",
+      "context": "e is zero. pipeline = [{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [0, \"$distance\", 0]}}}]; assertErrorCode(coll, pipeline, 34449); // Testing decimal values that are Int32 representable. cons"
+    },
+    {
+      "code": "1073741924",
+      "type": "assertErrorCode",
+      "context": "Result, decimalRangeResult)); assert(coll.drop()); assert.commandWorked(coll.insertOne({_id: 1})); assertErrorCode(coll, [{$project: {result: {$range: [0, 1073741924]}}}], ErrorCodes.ExceededMemoryLim"
+    },
+    {
+      "code": "ExceededMemoryLimit",
+      "type": "ErrorCodes",
+      "context": "coll.insertOne({_id: 1})); assertErrorCode(coll, [{$project: {result: {$range: [0, 1073741924]}}}], ErrorCodes.ExceededMemoryLimit); assert( arrayEq([{_id: 1, result: []}], coll.aggregate([{$project: "
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "Testing overflow errors due to $range start and end taking int32 values. // Example: {$range: [100, 2147483647, 1073741824]} // Output will OOM because array will look like this: // [ 100, 1073741924,"
+    },
+    {
+      "code": "107374",
+      "type": "numericCode",
+      "context": "flow errors due to $range start and end taking int32 values. // Example: {$range: [100, 2147483647, 1073741824]} // Output will OOM because array will look like this: // [ 100, 1073741924, -2147483548"
+    },
+    {
+      "code": "121474",
+      "type": "numericCode",
+      "context": "tart value is too big. pipeline = [{$project: {_id: 0, city: 1, \"Rest stops\": {$range: [NumberLong(\"12147483647\"), \"$distance\"]}}}]; assertErrorCode(coll, pipeline, 34444); // Start value is a decimal"
+    },
+    {
+      "code": "28667",
+      "type": "assertErrorCode",
+      "context": "// We need an input document to receive an output document. coll.insert({}); let rangeObj = [1]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 28667, \"range requires two\" + \" or thr"
+    },
+    {
+      "code": "34443",
+      "type": "assertErrorCode",
+      "context": "{$range: rangeObj}}}], 28667, \"range requires two\" + \" or three arguments\"); rangeObj = [\"a\", 1]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34443, \"range requires a\" + \" numeric"
+    },
+    {
+      "code": "34444",
+      "type": "assertErrorCode",
+      "context": "$range: rangeObj}}}], 34443, \"range requires a\" + \" numeric starting value\"); rangeObj = [1.1, 1]; assertErrorCode( coll, [{$project: {range: {$range: rangeObj}}}], 34444, \"range requires an\" + \" inte"
+    },
+    {
+      "code": "34445",
+      "type": "assertErrorCode",
+      "context": "eObj}}}], 34444, \"range requires an\" + \" integral starting value\", ); rangeObj = [1, \"a\"]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34445, \"range requires a\" + \" numeric ending"
+    },
+    {
+      "code": "34446",
+      "type": "assertErrorCode",
+      "context": "{$range: rangeObj}}}], 34445, \"range requires a\" + \" numeric ending value\"); rangeObj = [1, 1.1]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34446, \"range requires an\" + \" integr"
+    },
+    {
+      "code": "34447",
+      "type": "assertErrorCode",
+      "context": "nge: rangeObj}}}], 34446, \"range requires an\" + \" integral ending value\"); rangeObj = [1, 3, \"a\"]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34447, \"range requires a\" + \" numeri"
+    },
+    {
+      "code": "34448",
+      "type": "assertErrorCode",
+      "context": "{$range: rangeObj}}}], 34447, \"range requires a\" + \" numeric step value\"); rangeObj = [1, 3, 1.1]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34448, \"range requires an\" + \" integ"
+    },
+    {
+      "code": "34449",
+      "type": "assertErrorCode",
+      "context": "{$range: rangeObj}}}], 34448, \"range requires an\" + \" integral step value\"); rangeObj = [1, 3, 0]; assertErrorCode(coll, [{$project: {range: {$range: rangeObj}}}], 34449, \"range requires a\" + \" non-ze"
+    },
+    {
+      "code": "542941",
+      "type": "numericCode",
+      "context": "b: {$max: 5, window: {range: [+3, \"unbounded\"]}}, }, }, }), 5429414, );"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 2,
+    "happyPathCount": 1,
+    "errorCaseCount": 0,
+    "nullCaseCount": 1,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Array",
+      "MongoDB version: 3.2",
+      "Implementation status: × Not implemented",
+      "Found 6 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ]
+  }
+}

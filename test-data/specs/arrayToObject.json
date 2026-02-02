@@ -1,0 +1,105 @@
+{
+  "source": "arrayToObject.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/arrayToObject.js",
+  "extractedAt": "2026-02-01T19:18:53.877Z",
+  "setup": {
+    "collections": {
+      "array_to_object_expr": [
+        {
+          "expanded": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 18,
+      "type": "aggregate",
+      "collection": "array_to_object_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "collapsed": {
+              "$arrayToObject": "$expanded"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "expanded": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973533687
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "expectedCollapsed",
+      "line": 20
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "expectedCollapsed",
+      "line": 32
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: \"missing-expanded-field\", collapsed: null}]",
+      "line": 108
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: \"sentinel\", a: 1}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({expanded: expanded}",
+      "line": 18
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({expanded: expanded}",
+      "line": 26
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({expanded: expanded}",
+      "line": 40
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: \"missing-expanded-field\"}",
+      "line": 106
+    }
+  ],
+  "meta": {
+    "totalOperations": 36,
+    "totalAssertions": 8,
+    "errors": 1
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/concat_arrays2.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.006Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "all": {
+                "$concatArrays": [
+                  "$a",
+                  "$b",
+                  "$c"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        },
+        "expected": [
+          {
+            "all": [
+              1,
+              2,
+              "three"
+            ]
+          }
+        ],
+        "duration": 10
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "all": {
+                "$concatArrays": [
+                  "$a",
+                  "$d"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        },
+        "expected": [
+          {
+            "all": [
+              1,
+              2,
+              [
+                3
+              ],
+              4
+            ]
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "all": {
+                "$concatArrays": [
+                  "$a"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        },
+        "expected": [
+          {
+            "all": [
+              1,
+              2
+            ]
+          }
+        ],
+        "duration": 3
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "all": {
+                "$concatArrays": [
+                  "$a",
+                  "$e"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        },
+        "expected": [
+          {
+            "all": null
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "all": {
+                "$concatArrays": [
+                  "$a",
+                  "$f"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        },
+        "expected": [
+          {
+            "all": null
+          }
+        ],
+        "duration": 6
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 5,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "source": "ts_second_increment.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/ts_second_increment.js",
+  "extractedAt": "2026-02-01T19:19:55.712Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 16
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].bsonTimeSeconds",
+      "expected": "result[0].bsonTime.getTime(",
+      "line": 17
+    },
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 22
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].bsonTimeSeconds",
+      "expected": "null, result",
+      "line": 23
+    },
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 37
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].bsonTimeIncrements",
+      "expected": "result[0].bsonTime.getInc(",
+      "line": 38
+    },
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 45
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].bsonTimeSeconds",
+      "expected": "null, result",
+      "line": 46
+    },
+    {
+      "type": "commandWorked",
+      "result": "testDB.dropDatabase(",
+      "line": 5
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, bsonTime: Timestamp(1622731060, 10",
+      "line": 10
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "nonTimestampError",
+      "code": "5687301",
+      "line": 30
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "nonTimestampError",
+      "code": "5687302",
+      "line": 59
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 12,
+    "errors": 1
+  }
+}

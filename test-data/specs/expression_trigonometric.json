@@ -1,0 +1,1134 @@
+{
+  "source": "expression_trigonometric.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_trigonometric.js",
+  "extractedAt": "2026-02-01T19:19:18.204Z",
+  "setup": {
+    "collections": {
+      "expression_trigonometric": []
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 18,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973557996
+    },
+    {
+      "id": 52,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973557997
+    },
+    {
+      "id": 86,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 120,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 154,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 195,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          },
+          "x": {
+            "$numberInt": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 238,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          },
+          "x": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 274,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973557998
+    },
+    {
+      "id": 308,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558000
+    },
+    {
+      "id": 342,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558001
+    },
+    {
+      "id": 376,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558001
+    },
+    {
+      "id": 410,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558001
+    },
+    {
+      "id": 444,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 478,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 512,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 546,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 580,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 614,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 648,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 682,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 716,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 757,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          },
+          "x": {
+            "$numberLong": "1"
+          }
+        }
+      ],
+      "timestamp": 1769973558002
+    },
+    {
+      "id": 800,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          },
+          "x": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 836,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 870,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 904,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 938,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 972,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1006,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1040,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1074,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1108,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": {
+            "$numberLong": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1135,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 1
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1160,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 1
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1185,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1210,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1235,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1260,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0,
+          "x": 1
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1285,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0,
+          "x": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1310,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1335,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1360,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1385,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558003
+    },
+    {
+      "id": 1410,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558007
+    },
+    {
+      "id": 1435,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558007
+    },
+    {
+      "id": 1460,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558007
+    },
+    {
+      "id": 1485,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558007
+    },
+    {
+      "id": 1510,
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "y": 0
+        }
+      ],
+      "timestamp": 1769973558007
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({\"y\": val[0], \"x\": val[1]}",
+      "line": 19
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({\"y\": val}",
+      "line": 22
+    }
+  ],
+  "meta": {
+    "totalOperations": 1758,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

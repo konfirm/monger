@@ -1,0 +1,37 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/array_expression.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.983Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          "$a",
+          "$b"
+        ],
+        "context": {
+          "a": 1,
+          "b": 2
+        },
+        "expected": [
+          {
+            "_id": "697fafc9a04af159e5ac17bc",
+            "out": [
+              1,
+              2
+            ]
+          }
+        ],
+        "duration": 6
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

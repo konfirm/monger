@@ -1,0 +1,287 @@
+{
+  "operator": "$not",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/not.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.065Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$not": "$x"
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": false
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 6
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$not": "$x.y"
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": true
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$not": "$x.y"
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": true
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$not": {
+            "$not": "$x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": true
+          },
+          {
+            "_id": 1,
+            "x": false
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {
+          "$not": {
+            "$not": {
+              "$not": "$x"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": false
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$not": {
+            "$and": [
+              "$x",
+              "$y"
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": true
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$not": {
+            "$or": [
+              "$x",
+              "$y"
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": false
+          },
+          {
+            "_id": 1,
+            "x": false
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$and": [
+            {
+              "$not": "$x"
+            },
+            "$y"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": false
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {
+          "$or": [
+            {
+              "$not": "$x"
+            },
+            "$y"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": false
+          },
+          {
+            "_id": 1,
+            "x": true
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$switch": {
+            "branches": [
+              {
+                "case": {
+                  "$not": {
+                    "$gt": [
+                      "$x",
+                      "$y"
+                    ]
+                  }
+                },
+                "then": "x"
+              },
+              {
+                "case": {
+                  "$not": {
+                    "$lte": [
+                      "$x",
+                      "$y"
+                    ]
+                  }
+                },
+                "then": "y"
+              }
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": "y"
+          },
+          {
+            "_id": 1,
+            "x": "x"
+          }
+        ],
+        "duration": 4
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 10,
+    "totalDocuments": 2,
+    "errors": 0
+  }
+}

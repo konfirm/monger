@@ -1,0 +1,159 @@
+{
+  "source": "size.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/size.js",
+  "extractedAt": "2026-02-01T19:19:45.754Z",
+  "setup": {
+    "collections": {
+      "expression_size": [
+        {
+          "_id": 0,
+          "arr": []
+        },
+        {
+          "_id": 1,
+          "arr": [
+            1
+          ]
+        },
+        {
+          "_id": 2,
+          "arr": [
+            "asdf",
+            "asdfasdf"
+          ]
+        },
+        {
+          "_id": 3,
+          "arr": [
+            1,
+            "asdf",
+            1234,
+            4.3,
+            {
+              "key": 23
+            }
+          ]
+        },
+        {
+          "_id": 4,
+          "arr": [
+            3,
+            [
+              31,
+              31,
+              13,
+              13
+            ]
+          ]
+        },
+        {
+          "arr": 231
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 27,
+      "type": "aggregate",
+      "collection": "expression_size",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "length": {
+              "$size": "$arr"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "arr": []
+        },
+        {
+          "_id": 1,
+          "arr": [
+            1
+          ]
+        },
+        {
+          "_id": 2,
+          "arr": [
+            "asdf",
+            "asdfasdf"
+          ]
+        },
+        {
+          "_id": 3,
+          "arr": [
+            1,
+            "asdf",
+            1234,
+            4.3,
+            {
+              "key": 23
+            }
+          ]
+        },
+        {
+          "_id": 4,
+          "arr": [
+            3,
+            [
+              31,
+              31,
+              13,
+              13
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973585573
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, arr: []}",
+      "line": 9
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, arr: [1]}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, arr: [\"asdf\", \"asdfasdf\"]}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, arr: [1, \"asdf\", 1234, 4.3, {key: 23}]}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, arr: [3, [31, 31, 13, 13]]}",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({arr: 231}",
+      "line": 18
+    }
+  ],
+  "meta": {
+    "totalOperations": 58,
+    "totalAssertions": 6,
+    "errors": 0
+  }
+}

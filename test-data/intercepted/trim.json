@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/trim.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/trim.js",
+      "timestamp": 1769973928339
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "trim_expressions",
+      "timestamp": 1769973928342
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "testExpression is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973928343
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928339,
+    "endTime": 1769973928343,
+    "totalOperations": 0
+  }
+}

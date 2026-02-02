@@ -1,0 +1,641 @@
+{
+  "operator": "$pow",
+  "description": "Tests for $pow - Arithmetic operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/log_pow_exp.js, /mongo/jstests/aggregation/sources/bucketauto/bucket_auto_pow2_inf.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two.cpp, /mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic arithmetic operation",
+        "query": {
+          "$pow": [
+            10,
+            5
+          ]
+        },
+        "expected": null
+      },
+      {
+        "description": "Arithmetic with field references",
+        "query": {
+          "$pow": [
+            "$a",
+            "$b"
+          ]
+        },
+        "context": {
+          "a": 10,
+          "b": 5
+        },
+        "expected": null
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [
+      {
+        "description": "Operation with null argument",
+        "query": {
+          "$pow": [
+            null,
+            5
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "5",
+      "type": "assertErrorCode",
+      "context": "-null, bases not positive or equal to 1, args not positive. // Args/bases must be numeric or null. assertErrorCode(coll, [{$project: {log: {$log: [\"string\", 5]}}}], 28756); assertErrorCode(coll, [{$pr"
+    },
+    {
+      "code": "28765",
+      "type": "assertErrorCode",
+      "context": "\"string\", 5]}}}], 28756); assertErrorCode(coll, [{$project: {log: {$log: [5, \"string\"]}}}], 28757); assertErrorCode(coll, [{$project: {log10: {$log10: [\"string\"]}}}], 28765); assertErrorCode(coll, [{$"
+    },
+    {
+      "code": "0",
+      "type": "assertErrorCode",
+      "context": "); // Args/bases cannot equal 0. assertErrorCode(coll, [{$project: {log: {$log: [0, 5]}}}], 28758); assertErrorCode(coll, [{$project: {log: {$log: [5, 0]}}}], 28759); assertErrorCode(coll, [{$project:"
+    },
+    {
+      "code": "28761",
+      "type": "assertErrorCode",
+      "context": "{log: {$log: [0, 5]}}}], 28758); assertErrorCode(coll, [{$project: {log: {$log: [5, 0]}}}], 28759); assertErrorCode(coll, [{$project: {log10: {$log10: [0]}}}], 28761); assertErrorCode(coll, [{$project"
+    },
+    {
+      "code": "28766",
+      "type": "assertErrorCode",
+      "context": "log: {$log: [5, 0]}}}], 28759); assertErrorCode(coll, [{$project: {log10: {$log10: [0]}}}], 28761); assertErrorCode(coll, [{$project: {ln: {$ln: [0]}}}], 28766); assertErrorCode(coll, [{$project: {log"
+    },
+    {
+      "code": "1",
+      "type": "assertErrorCode",
+      "context": "ssertErrorCode(coll, [{$project: {ln: {$ln: [NumberDecimal(-1)]}}}], 28766); // Base can't equal 1. assertErrorCode(coll, [{$project: {log: {$log: [5, 1]}}}], 28759); assertErrorCode(coll, [{$project:"
+    },
+    {
+      "code": "718281",
+      "type": "numericCode",
+      "context": "pressions; coll.drop(); assert.commandWorked(coll.insert({_id: 0, a: 8, b: 2})); const doubleE = 2.7182818284590452; const decimalE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decima"
+    },
+    {
+      "code": "828459",
+      "type": "numericCode",
+      "context": "ons; coll.drop(); assert.commandWorked(coll.insert({_id: 0, a: 8, b: 2})); const doubleE = 2.7182818284590452; const decimalE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1over"
+    },
+    {
+      "code": "045235",
+      "type": "numericCode",
+      "context": ", a: 8, b: 2})); const doubleE = 2.7182818284590452; const decimalE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\");"
+    },
+    {
+      "code": "360287",
+      "type": "numericCode",
+      "context": ", b: 2})); const doubleE = 2.7182818284590452; const decimalE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Gi"
+    },
+    {
+      "code": "471352",
+      "type": "numericCode",
+      "context": "})); const doubleE = 2.7182818284590452; const decimalE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a "
+    },
+    {
+      "code": "367879",
+      "type": "numericCode",
+      "context": "malE = NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a double, is it an integer? function isInteger(n) { r"
+    },
+    {
+      "code": "441171",
+      "type": "numericCode",
+      "context": "NumberDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a double, is it an integer? function isInteger(n) { return !"
+    },
+    {
+      "code": "442321",
+      "type": "numericCode",
+      "context": "rDecimal(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a double, is it an integer? function isInteger(n) { return !n.toS"
+    },
+    {
+      "code": "595523",
+      "type": "numericCode",
+      "context": "al(\"2.718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a double, is it an integer? function isInteger(n) { return !n.toString("
+    },
+    {
+      "code": "770161",
+      "type": "numericCode",
+      "context": "718281828459045235360287471352662\"); const decimal1overE = NumberDecimal(\"0.3678794411714423215955237701614609\"); // Given a double, is it an integer? function isInteger(n) { return !n.toString().incl"
+    },
+    {
+      "code": "440642",
+      "type": "numericCode",
+      "context": "Result: NumberDecimal(\"0E+33\")}, { input: 2.5, base: 8, doubleResult: 0.4406426982957875, decResult: NumberDecimal(\"0.4406426982957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357"
+    },
+    {
+      "code": "698295",
+      "type": "numericCode",
+      "context": ": NumberDecimal(\"0E+33\")}, { input: 2.5, base: 8, doubleResult: 0.4406426982957875, decResult: NumberDecimal(\"0.4406426982957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740"
+    },
+    {
+      "code": "787449",
+      "type": "numericCode",
+      "context": "base: 8, doubleResult: 0.4406426982957875, decResult: NumberDecimal(\"0.4406426982957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.93578"
+    },
+    {
+      "code": "290106",
+      "type": "numericCode",
+      "context": "8, doubleResult: 0.4406426982957875, decResult: NumberDecimal(\"0.4406426982957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.93578497401"
+    },
+    {
+      "code": "476496",
+      "type": "numericCode",
+      "context": "doubleResult: 0.4406426982957875, decResult: NumberDecimal(\"0.4406426982957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.93578497401920"
+    },
+    {
+      "code": "935784",
+      "type": "numericCode",
+      "context": "957874492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.9357849740192013691473231057439436\"), }, {input: 8, base: 8, doubleResult: 1, decResul"
+    },
+    {
+      "code": "974019",
+      "type": "numericCode",
+      "context": "492901064764964633\"), }, { input: 7, base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.9357849740192013691473231057439436\"), }, {input: 8, base: 8, doubleResult: 1, decResult: Num"
+    },
+    {
+      "code": "201369",
+      "type": "numericCode",
+      "context": "base: 8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.9357849740192013691473231057439436\"), }, {input: 8, base: 8, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 64, base: "
+    },
+    {
+      "code": "147323",
+      "type": "numericCode",
+      "context": "8, doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.9357849740192013691473231057439436\"), }, {input: 8, base: 8, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 64, base: 8, dou"
+    },
+    {
+      "code": "105743",
+      "type": "numericCode",
+      "context": "doubleResult: 0.9357849740192015, decResult: NumberDecimal(\"0.9357849740192013691473231057439436\"), }, {input: 8, base: 8, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 64, base: 8, double"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "{ input: 64, base: 8, doubleResult: 2, decResult: NumberDecimal(\"2.000000000000000000000000000000000\"), }, { input: 65, base: 8, doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937"
+    },
+    {
+      "code": "007455",
+      "type": "numericCode",
+      "context": "00000000000000000000000\"), }, { input: 65, base: 8, doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937676151502755710694582028\"), }, // Base 9, a more unusual base. {input: 1, bas"
+    },
+    {
+      "code": "937676",
+      "type": "numericCode",
+      "context": "00000000000000000\"), }, { input: 65, base: 8, doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937676151502755710694582028\"), }, // Base 9, a more unusual base. {input: 1, base: 9, "
+    },
+    {
+      "code": "151502",
+      "type": "numericCode",
+      "context": "base: 8, doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937676151502755710694582028\"), }, // Base 9, a more unusual base. {input: 1, base: 9, doubleResult: 0, decResult: NumberDec"
+    },
+    {
+      "code": "755710",
+      "type": "numericCode",
+      "context": "8, doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937676151502755710694582028\"), }, // Base 9, a more unusual base. {input: 1, base: 9, doubleResult: 0, decResult: NumberDecimal(\""
+    },
+    {
+      "code": "694582",
+      "type": "numericCode",
+      "context": "doubleResult: 2.0074559376761516, decResult: NumberDecimal(\"2.007455937676151502755710694582028\"), }, // Base 9, a more unusual base. {input: 1, base: 9, doubleResult: 0, decResult: NumberDecimal(\"0E+"
+    },
+    {
+      "code": "417021",
+      "type": "numericCode",
+      "context": "Result: NumberDecimal(\"0E+33\")}, { input: 2.5, base: 9, doubleResult: 0.41702188357323483, decResult: NumberDecimal(\"0.4170218835732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.630"
+    },
+    {
+      "code": "883573",
+      "type": "numericCode",
+      "context": ": NumberDecimal(\"0E+33\")}, { input: 2.5, base: 9, doubleResult: 0.41702188357323483, decResult: NumberDecimal(\"0.4170218835732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.630929753"
+    },
+    {
+      "code": "234865",
+      "type": "numericCode",
+      "context": "base: 9, doubleResult: 0.41702188357323483, decResult: NumberDecimal(\"0.4170218835732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309"
+    },
+    {
+      "code": "048756",
+      "type": "numericCode",
+      "context": "9, doubleResult: 0.41702188357323483, decResult: NumberDecimal(\"0.4170218835732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535"
+    },
+    {
+      "code": "646667",
+      "type": "numericCode",
+      "context": "doubleResult: 0.41702188357323483, decResult: NumberDecimal(\"0.4170218835732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714"
+    },
+    {
+      "code": "630929",
+      "type": "numericCode",
+      "context": "732348650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714574370995271143427609\"), }, {input: 9, base: 9, doubleResult: 1, decResul"
+    },
+    {
+      "code": "753571",
+      "type": "numericCode",
+      "context": "650487566466679398\"), }, { input: 4, base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714574370995271143427609\"), }, {input: 9, base: 9, doubleResult: 1, decResult: Num"
+    },
+    {
+      "code": "457437",
+      "type": "numericCode",
+      "context": "base: 9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714574370995271143427609\"), }, {input: 9, base: 9, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 10, base: "
+    },
+    {
+      "code": "099527",
+      "type": "numericCode",
+      "context": "9, doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714574370995271143427609\"), }, {input: 9, base: 9, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 10, base: 9, dou"
+    },
+    {
+      "code": "114342",
+      "type": "numericCode",
+      "context": "doubleResult: 0.6309297535714574, decResult: NumberDecimal(\"0.6309297535714574370995271143427609\"), }, {input: 9, base: 9, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 10, base: 9, double"
+    },
+    {
+      "code": "047951",
+      "type": "numericCode",
+      "context": ", decResult: NumberDecimal(\"1\")}, { input: 10, base: 9, doubleResult: 1.0479516371446924, decResult: NumberDecimal(\"1.047951637144692302148283761010701\"), }, {input: 81, base: 9, doubleResult: 2, decR"
+    },
+    {
+      "code": "637144",
+      "type": "numericCode",
+      "context": "esult: NumberDecimal(\"1\")}, { input: 10, base: 9, doubleResult: 1.0479516371446924, decResult: NumberDecimal(\"1.047951637144692302148283761010701\"), }, {input: 81, base: 9, doubleResult: 2, decResult:"
+    },
+    {
+      "code": "692302",
+      "type": "numericCode",
+      "context": "base: 9, doubleResult: 1.0479516371446924, decResult: NumberDecimal(\"1.047951637144692302148283761010701\"), }, {input: 81, base: 9, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 82, base: "
+    },
+    {
+      "code": "148283",
+      "type": "numericCode",
+      "context": "9, doubleResult: 1.0479516371446924, decResult: NumberDecimal(\"1.047951637144692302148283761010701\"), }, {input: 81, base: 9, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 82, base: 9, dou"
+    },
+    {
+      "code": "761010",
+      "type": "numericCode",
+      "context": "doubleResult: 1.0479516371446924, decResult: NumberDecimal(\"1.047951637144692302148283761010701\"), }, {input: 81, base: 9, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 82, base: 9, double"
+    },
+    {
+      "code": "005584",
+      "type": "numericCode",
+      "context": ", decResult: NumberDecimal(\"2\")}, { input: 82, base: 9, doubleResult: 2.0055843597957064, decResult: NumberDecimal(\"2.005584359795706389324272570756155\"), }, // Base 12.77, an even MORE unusual base. "
+    },
+    {
+      "code": "359795",
+      "type": "numericCode",
+      "context": "esult: NumberDecimal(\"2\")}, { input: 82, base: 9, doubleResult: 2.0055843597957064, decResult: NumberDecimal(\"2.005584359795706389324272570756155\"), }, // Base 12.77, an even MORE unusual base. {input"
+    },
+    {
+      "code": "706389",
+      "type": "numericCode",
+      "context": "base: 9, doubleResult: 2.0055843597957064, decResult: NumberDecimal(\"2.005584359795706389324272570756155\"), }, // Base 12.77, an even MORE unusual base. {input: 1, base: 12.77, doubleResult: 0, decRes"
+    },
+    {
+      "code": "324272",
+      "type": "numericCode",
+      "context": "9, doubleResult: 2.0055843597957064, decResult: NumberDecimal(\"2.005584359795706389324272570756155\"), }, // Base 12.77, an even MORE unusual base. {input: 1, base: 12.77, doubleResult: 0, decResult: N"
+    },
+    {
+      "code": "570756",
+      "type": "numericCode",
+      "context": "doubleResult: 2.0055843597957064, decResult: NumberDecimal(\"2.005584359795706389324272570756155\"), }, // Base 12.77, an even MORE unusual base. {input: 1, base: 12.77, doubleResult: 0, decResult: Numb"
+    },
+    {
+      "code": "359739",
+      "type": "numericCode",
+      "context": "lt: NumberDecimal(\"0E+33\")}, { input: 2.5, base: 12.77, doubleResult: 0.3597390013391846, decResult: NumberDecimal(\"0.3597390013391846393309152124110717\"), }, {input: 12.77, base: 12.77, doubleResult:"
+    },
+    {
+      "code": "001339",
+      "type": "numericCode",
+      "context": "mberDecimal(\"0E+33\")}, { input: 2.5, base: 12.77, doubleResult: 0.3597390013391846, decResult: NumberDecimal(\"0.3597390013391846393309152124110717\"), }, {input: 12.77, base: 12.77, doubleResult: 1, de"
+    },
+    {
+      "code": "184639",
+      "type": "numericCode",
+      "context": "e: 12.77, doubleResult: 0.3597390013391846, decResult: NumberDecimal(\"0.3597390013391846393309152124110717\"), }, {input: 12.77, base: 12.77, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 1"
+    },
+    {
+      "code": "330915",
+      "type": "numericCode",
+      "context": "77, doubleResult: 0.3597390013391846, decResult: NumberDecimal(\"0.3597390013391846393309152124110717\"), }, {input: 12.77, base: 12.77, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 13, bas"
+    },
+    {
+      "code": "212411",
+      "type": "numericCode",
+      "context": "doubleResult: 0.3597390013391846, decResult: NumberDecimal(\"0.3597390013391846393309152124110717\"), }, {input: 12.77, base: 12.77, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 13, base: 1"
+    },
+    {
+      "code": "007008",
+      "type": "numericCode",
+      "context": "cResult: NumberDecimal(\"1\")}, { input: 13, base: 12.77, doubleResult: 1.0070082433896357, decResult: NumberDecimal(\"1.007008243389635671677137269228113\"), }, { input: 163.0729, base: 12.77, doubleResu"
+    },
+    {
+      "code": "243389",
+      "type": "numericCode",
+      "context": "t: NumberDecimal(\"1\")}, { input: 13, base: 12.77, doubleResult: 1.0070082433896357, decResult: NumberDecimal(\"1.007008243389635671677137269228113\"), }, { input: 163.0729, base: 12.77, doubleResult: 2,"
+    },
+    {
+      "code": "635671",
+      "type": "numericCode",
+      "context": "e: 12.77, doubleResult: 1.0070082433896357, decResult: NumberDecimal(\"1.007008243389635671677137269228113\"), }, { input: 163.0729, base: 12.77, doubleResult: 2, decResult: NumberDecimal(\"2.00000000000"
+    },
+    {
+      "code": "677137",
+      "type": "numericCode",
+      "context": "77, doubleResult: 1.0070082433896357, decResult: NumberDecimal(\"1.007008243389635671677137269228113\"), }, { input: 163.0729, base: 12.77, doubleResult: 2, decResult: NumberDecimal(\"2.00000000000000000"
+    },
+    {
+      "code": "269228",
+      "type": "numericCode",
+      "context": "doubleResult: 1.0070082433896357, decResult: NumberDecimal(\"1.007008243389635671677137269228113\"), }, { input: 163.0729, base: 12.77, doubleResult: 2, decResult: NumberDecimal(\"2.000000000000000000000"
+    },
+    {
+      "code": "016332",
+      "type": "numericCode",
+      "context": "000000000000000000\"), }, { input: 170, base: 12.77, doubleResult: 2.016332738676606, decResult: NumberDecimal(\"2.016332738676605709114981994718173\"), }, ]; for (const test of logTestCases) { // If we "
+    },
+    {
+      "code": "738676",
+      "type": "numericCode",
+      "context": "000000000000\"), }, { input: 170, base: 12.77, doubleResult: 2.016332738676606, decResult: NumberDecimal(\"2.016332738676605709114981994718173\"), }, ]; for (const test of logTestCases) { // If we can ca"
+    },
+    {
+      "code": "605709",
+      "type": "numericCode",
+      "context": "se: 12.77, doubleResult: 2.016332738676606, decResult: NumberDecimal(\"2.016332738676605709114981994718173\"), }, ]; for (const test of logTestCases) { // If we can cast our input, base (or both) to int"
+    },
+    {
+      "code": "114981",
+      "type": "numericCode",
+      "context": ".77, doubleResult: 2.016332738676606, decResult: NumberDecimal(\"2.016332738676605709114981994718173\"), }, ]; for (const test of logTestCases) { // If we can cast our input, base (or both) to integer t"
+    },
+    {
+      "code": "994718",
+      "type": "numericCode",
+      "context": "doubleResult: 2.016332738676606, decResult: NumberDecimal(\"2.016332738676605709114981994718173\"), }, ]; for (const test of logTestCases) { // If we can cast our input, base (or both) to integer types,"
+    },
+    {
+      "code": "397940",
+      "type": "numericCode",
+      "context": "doubleResult: 0, decResult: NumberDecimal(\"0\")}, { input: 2.5, doubleResult: 0.3979400086720376, decResult: NumberDecimal(\"0.3979400086720376095725222105510140\"), }, {input: 10, doubleResult: 1, decRe"
+    },
+    {
+      "code": "008672",
+      "type": "numericCode",
+      "context": "eResult: 0, decResult: NumberDecimal(\"0\")}, { input: 2.5, doubleResult: 0.3979400086720376, decResult: NumberDecimal(\"0.3979400086720376095725222105510140\"), }, {input: 10, doubleResult: 1, decResult:"
+    },
+    {
+      "code": "037609",
+      "type": "numericCode",
+      "context": "put: 2.5, doubleResult: 0.3979400086720376, decResult: NumberDecimal(\"0.3979400086720376095725222105510140\"), }, {input: 10, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 11, doubleResult:"
+    },
+    {
+      "code": "572522",
+      "type": "numericCode",
+      "context": ".5, doubleResult: 0.3979400086720376, decResult: NumberDecimal(\"0.3979400086720376095725222105510140\"), }, {input: 10, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 11, doubleResult: 1.041"
+    },
+    {
+      "code": "210551",
+      "type": "numericCode",
+      "context": "doubleResult: 0.3979400086720376, decResult: NumberDecimal(\"0.3979400086720376095725222105510140\"), }, {input: 10, doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 11, doubleResult: 1.0413926"
+    },
+    {
+      "code": "041392",
+      "type": "numericCode",
+      "context": ", doubleResult: 1, decResult: NumberDecimal(\"1\")}, { input: 11, doubleResult: 1.041392685158225, decResult: NumberDecimal(\"1.041392685158225040750199971243024\"), }, {input: 100, doubleResult: 2, decRe"
+    },
+    {
+      "code": "685158",
+      "type": "numericCode",
+      "context": "leResult: 1, decResult: NumberDecimal(\"1\")}, { input: 11, doubleResult: 1.041392685158225, decResult: NumberDecimal(\"1.041392685158225040750199971243024\"), }, {input: 100, doubleResult: 2, decResult: "
+    },
+    {
+      "code": "225040",
+      "type": "numericCode",
+      "context": "input: 11, doubleResult: 1.041392685158225, decResult: NumberDecimal(\"1.041392685158225040750199971243024\"), }, {input: 100, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 101, doubleResult"
+    },
+    {
+      "code": "750199",
+      "type": "numericCode",
+      "context": "11, doubleResult: 1.041392685158225, decResult: NumberDecimal(\"1.041392685158225040750199971243024\"), }, {input: 100, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 101, doubleResult: 2.004"
+    },
+    {
+      "code": "971243",
+      "type": "numericCode",
+      "context": "doubleResult: 1.041392685158225, decResult: NumberDecimal(\"1.041392685158225040750199971243024\"), }, {input: 100, doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 101, doubleResult: 2.0043213"
+    },
+    {
+      "code": "004321",
+      "type": "numericCode",
+      "context": "doubleResult: 2, decResult: NumberDecimal(\"2\")}, { input: 101, doubleResult: 2.0043213737826426, decResult: NumberDecimal(\"2.004321373782642574275188178222938\"), }, ]; for (const test of log10TestCase"
+    },
+    {
+      "code": "373782",
+      "type": "numericCode",
+      "context": "eResult: 2, decResult: NumberDecimal(\"2\")}, { input: 101, doubleResult: 2.0043213737826426, decResult: NumberDecimal(\"2.004321373782642574275188178222938\"), }, ]; for (const test of log10TestCases) { "
+    },
+    {
+      "code": "642574",
+      "type": "numericCode",
+      "context": "put: 101, doubleResult: 2.0043213737826426, decResult: NumberDecimal(\"2.004321373782642574275188178222938\"), }, ]; for (const test of log10TestCases) { // If the input is an integer anyway, test with "
+    },
+    {
+      "code": "275188",
+      "type": "numericCode",
+      "context": "01, doubleResult: 2.0043213737826426, decResult: NumberDecimal(\"2.004321373782642574275188178222938\"), }, ]; for (const test of log10TestCases) { // If the input is an integer anyway, test with our in"
+    },
+    {
+      "code": "178222",
+      "type": "numericCode",
+      "context": "doubleResult: 2.0043213737826426, decResult: NumberDecimal(\"2.004321373782642574275188178222938\"), }, ]; for (const test of log10TestCases) { // If the input is an integer anyway, test with our intege"
+    },
+    {
+      "code": "916290",
+      "type": "numericCode",
+      "context": "/ `e` is about 2.7, so this should be close to 1. { input: 2.5, doubleResult: 0.9162907318741551, decResult: NumberDecimal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.94591"
+    },
+    {
+      "code": "731874",
+      "type": "numericCode",
+      "context": "is about 2.7, so this should be close to 1. { input: 2.5, doubleResult: 0.9162907318741551, decResult: NumberDecimal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.94591014905"
+    },
+    {
+      "code": "155065",
+      "type": "numericCode",
+      "context": "put: 2.5, doubleResult: 0.9162907318741551, decResult: NumberDecimal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.9459101490553"
+    },
+    {
+      "code": "183527",
+      "type": "numericCode",
+      "context": ".5, doubleResult: 0.9162907318741551, decResult: NumberDecimal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.9459101490553133051"
+    },
+    {
+      "code": "211768",
+      "type": "numericCode",
+      "context": "doubleResult: 0.9162907318741551, decResult: NumberDecimal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.94591014905531330510535"
+    },
+    {
+      "code": "945910",
+      "type": "numericCode",
+      "context": "mal(\"0.9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092"
+    },
+    {
+      "code": "149055",
+      "type": "numericCode",
+      "context": ".9162907318741550651835272117680110\"), }, { input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046"
+    },
+    {
+      "code": "313305",
+      "type": "numericCode",
+      "context": "input: 7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.30258509299404"
+    },
+    {
+      "code": "105352",
+      "type": "numericCode",
+      "context": "7, doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017"
+    },
+    {
+      "code": "743443",
+      "type": "numericCode",
+      "context": "doubleResult: 1.9459101490553132, decResult: NumberDecimal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991"
+    },
+    {
+      "code": "302585",
+      "type": "numericCode",
+      "context": "mal(\"1.945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991454684364\"), }, ]; for (const test of lnTestCases) { if"
+    },
+    {
+      "code": "092994",
+      "type": "numericCode",
+      "context": ".945910149055313305105352743443180\"), }, { input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991454684364\"), }, ]; for (const test of lnTestCases) { if (isIn"
+    },
+    {
+      "code": "045684",
+      "type": "numericCode",
+      "context": "input: 10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991454684364\"), }, ]; for (const test of lnTestCases) { if (isInteger(test.input)) { testOp({$ln: NumberInt"
+    },
+    {
+      "code": "017991",
+      "type": "numericCode",
+      "context": "10, doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991454684364\"), }, ]; for (const test of lnTestCases) { if (isInteger(test.input)) { testOp({$ln: NumberInt(test.i"
+    },
+    {
+      "code": "454684",
+      "type": "numericCode",
+      "context": "doubleResult: 2.302585092994046, decResult: NumberDecimal(\"2.302585092994045684017991454684364\"), }, ]; for (const test of lnTestCases) { if (isInteger(test.input)) { testOp({$ln: NumberInt(test.input"
+    },
+    {
+      "code": "999999",
+      "type": "numericCode",
+      "context": "r is actually correct: the input is an approximation of E. testOp({$ln: decimalE}, NumberDecimal(\"0.9999999999999999999999999999999998\")); testOp({$ln: decimal1overE}, NumberDecimal(\"-0.99999999999999"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "tOp({$ln: [NumberLong(\"1\")]}, 0); // LLONG_MAX is converted to a double. testOp({$log: [NumberLong(\"9223372036854775807\"), 10]}, 18.964889726830812); // Null inputs result in null. testOp({$log: [null"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "ln: [NumberLong(\"1\")]}, 0); // LLONG_MAX is converted to a double. testOp({$log: [NumberLong(\"9223372036854775807\"), 10]}, 18.964889726830812); // Null inputs result in null. testOp({$log: [null, 10]}"
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "umberLong(\"1\")]}, 0); // LLONG_MAX is converted to a double. testOp({$log: [NumberLong(\"9223372036854775807\"), 10]}, 18.964889726830812); // Null inputs result in null. testOp({$log: [null, 10]}, null"
+    },
+    {
+      "code": "964889",
+      "type": "numericCode",
+      "context": "; // LLONG_MAX is converted to a double. testOp({$log: [NumberLong(\"9223372036854775807\"), 10]}, 18.964889726830812); // Null inputs result in null. testOp({$log: [null, 10]}, null); testOp({$log: [10"
+    },
+    {
+      "code": "726830",
+      "type": "numericCode",
+      "context": "LONG_MAX is converted to a double. testOp({$log: [NumberLong(\"9223372036854775807\"), 10]}, 18.964889726830812); // Null inputs result in null. testOp({$log: [null, 10]}, null); testOp({$log: [10, null"
+    },
+    {
+      "code": "010000",
+      "type": "numericCode",
+      "context": "NumberDecimal, return a NumberDecimal testOp({$pow: [NumberDecimal(\"10.0\"), -2]}, NumberDecimal(\"0.01000000000000000000000000000000000\")); testOp({$pow: [0.5, NumberDecimal(\"-1\")]}, NumberDecimal(\"2.0"
+    },
+    {
+      "code": "477600",
+      "type": "numericCode",
+      "context": "ld overflow a long, return a double. testOp({$pow: [NumberInt(\"2\"), NumberLong(\"63\")]}, 9223372036854776000); // Exact decimal result testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDeci"
+    },
+    {
+      "code": "519229",
+      "type": "numericCode",
+      "context": "00); // Exact decimal result testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDecimal(\"5192296858534827628530496329220096E-112\")); // Result would be incorrect if double were returned. te"
+    },
+    {
+      "code": "685853",
+      "type": "numericCode",
+      "context": "/ Exact decimal result testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDecimal(\"5192296858534827628530496329220096E-112\")); // Result would be incorrect if double were returned. testOp({"
+    },
+    {
+      "code": "482762",
+      "type": "numericCode",
+      "context": "t decimal result testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDecimal(\"5192296858534827628530496329220096E-112\")); // Result would be incorrect if double were returned. testOp({$pow: "
+    },
+    {
+      "code": "853049",
+      "type": "numericCode",
+      "context": "mal result testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDecimal(\"5192296858534827628530496329220096E-112\")); // Result would be incorrect if double were returned. testOp({$pow: [Numbe"
+    },
+    {
+      "code": "632922",
+      "type": "numericCode",
+      "context": "sult testOp({$pow: [NumberInt(\"5\"), NumberDecimal(\"-112\")]}, NumberDecimal(\"5192296858534827628530496329220096E-112\")); // Result would be incorrect if double were returned. testOp({$pow: [NumberInt(\""
+    },
+    {
+      "code": "500315",
+      "type": "numericCode",
+      "context": "be incorrect if double were returned. testOp({$pow: [NumberInt(\"3\"), NumberInt(\"35\")]}, NumberLong(\"50031545098999707\")); // Else if either input is a long, return a long. testOp({$pow: [NumberInt(\"-2"
+    },
+    {
+      "code": "450989",
+      "type": "numericCode",
+      "context": "orrect if double were returned. testOp({$pow: [NumberInt(\"3\"), NumberInt(\"35\")]}, NumberLong(\"50031545098999707\")); // Else if either input is a long, return a long. testOp({$pow: [NumberInt(\"-2\"), Nu"
+    },
+    {
+      "code": "117854",
+      "type": "numericCode",
+      "context": "}, ]; assert.commandFailedWithCode(coll.runCommand(\"aggregate\", {pipeline: pipeline, cursor: {}}), 11785400);"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 3,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 1,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Arithmetic",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 2 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two.cpp",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two_test.cpp"
+    ]
+  }
+}

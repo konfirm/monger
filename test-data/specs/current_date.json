@@ -1,0 +1,22 @@
+{
+  "source": "current_date.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/current_date.js",
+  "extractedAt": "2026-02-01T19:19:06.755Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "bulk.execute(",
+      "line": 26
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "source": "map.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/map.js",
+  "extractedAt": "2026-02-01T19:19:29.096Z",
+  "setup": {
+    "collections": {
+      "server9841": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "var",
+              "in": "$$var"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568908
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "var",
+              "in": {
+                "$add": [
+                  10,
+                  "$$var"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "in": "$$this"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$nested",
+              "as": "var",
+              "in": "$$var.a"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$nested",
+              "as": "CURRENT",
+              "in": "$a"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$mixed",
+              "as": "var",
+              "in": "$$var.a"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$null",
+              "as": "var",
+              "in": "$$var"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 137,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "outer",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "as": "inner",
+                  "in": {
+                    "$add": [
+                      "$$inner",
+                      "$$outer"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568909
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "in": "$$this"
+                }
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568910
+    },
+    {
+      "id": 173,
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "outer",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "in": {
+                    "$add": [
+                      "$$this",
+                      "$$outer"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        }
+      ],
+      "timestamp": 1769973568910
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{res: expected}]",
+      "line": 16
+    }
+  ],
+  "meta": {
+    "totalOperations": 213,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

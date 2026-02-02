@@ -1,0 +1,1140 @@
+{
+  "operator": "$concatArrays",
+  "description": "Concatenates arrays together, returns null if any input is null/missing, throws error 28664 for non-array inputs",
+  "mongodbVersion": "3.2",
+  "source": "mongo/jstests/aggregation/expressions/concat_arrays.js",
+  "implementationSource": "mongo/src/mongo/db/exec/expression/evaluate_array.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Single array returns the array",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate two arrays",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          "a",
+          "b",
+          "c"
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate multiple arrays - numbers and strings",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ],
+          "nested_arr": [
+            [
+              "an",
+              "array"
+            ],
+            "arr",
+            [
+              [],
+              [
+                [],
+                "a",
+                "b"
+              ]
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          "a",
+          "b",
+          "c",
+          [
+            "an",
+            "array"
+          ],
+          "arr",
+          [
+            [],
+            [
+              [],
+              "a",
+              "b"
+            ]
+          ]
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              "a",
+              "b",
+              "c"
+            ],
+            [
+              [
+                "an",
+                "array"
+              ],
+              "arr",
+              [
+                [],
+                [
+                  [],
+                  "a",
+                  "b"
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate object arrays",
+        "context": {
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ]
+        },
+        "expected": [
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          }
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate same array twice",
+        "context": {
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ]
+        },
+        "expected": [
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          },
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          }
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ],
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate three arrays - objects, objects, and nulls",
+        "context": {
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ],
+          "null_arr": [
+            null,
+            null,
+            null
+          ]
+        },
+        "expected": [
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          },
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          },
+          null,
+          null,
+          null
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ],
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ],
+            [
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Array containing null elements can be concatenated",
+        "context": {
+          "null_arr": [
+            null,
+            null,
+            null
+          ]
+        },
+        "expected": [
+          null,
+          null,
+          null
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate array with single null element",
+        "context": {
+          "one_null_arr": [
+            null
+          ]
+        },
+        "expected": [
+          null
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate null array with null array prefix",
+        "context": {
+          "one_null_arr": [
+            null
+          ],
+          "null_arr": [
+            null,
+            null,
+            null
+          ]
+        },
+        "expected": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              null
+            ],
+            [
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate multiple arrays including null arrays and int array",
+        "context": {
+          "null_arr": [
+            null,
+            null,
+            null
+          ],
+          "one_null_arr": [
+            null
+          ],
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          3,
+          4,
+          null,
+          null,
+          null
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              null,
+              null,
+              null
+            ],
+            [
+              null
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "description": "No arguments returns empty array",
+        "expected": [],
+        "query": {
+          "$concatArrays": []
+        }
+      },
+      {
+        "description": "Concatenate empty arrays",
+        "context": {
+          "empty_arr": [],
+          "str_arr": []
+        },
+        "expected": [],
+        "query": {
+          "$concatArrays": [
+            [],
+            []
+          ]
+        }
+      },
+      {
+        "description": "Concatenate empty array with non-empty array",
+        "context": {
+          "empty_arr": [],
+          "str_arr": [
+            "foo",
+            "bar"
+          ]
+        },
+        "expected": [
+          "foo",
+          "bar"
+        ],
+        "query": {
+          "$concatArrays": [
+            [],
+            [
+              "foo",
+              "bar"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate mixed types - int array and string array",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          }
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate with literal array and field reference",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Concatenate object array with literal object array",
+        "context": {
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ]
+        },
+        "expected": [
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "c": 3
+          },
+          {
+            "d": 4,
+            "e": 5
+          },
+          {
+            "o": 123,
+            "b": 1
+          },
+          {
+            "y": "o",
+            "d": "a"
+          }
+        ],
+        "query": {
+          "$concatArrays": [
+            [
+              {
+                "a": 1,
+                "b": 2
+              },
+              {
+                "c": 3
+              },
+              {
+                "d": 4,
+                "e": 5
+              }
+            ],
+            [
+              {
+                "o": 123,
+                "b": 1
+              },
+              {
+                "y": "o",
+                "d": "a"
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Single null input returns null",
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            null
+          ]
+        }
+      },
+      {
+        "description": "Null field reference returns null",
+        "context": {
+          "null_val": null,
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": "$null_val"
+        }
+      },
+      {
+        "description": "Array with valid values followed by null returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "null_val": null
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            null
+          ]
+        }
+      },
+      {
+        "description": "Null followed by valid arrays returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            null,
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Valid array, null, then valid array returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            null,
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Missing field reference returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": "$not_a_field"
+        }
+      },
+      {
+        "description": "Array with valid value then missing field returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            "$not_a_field"
+          ]
+        }
+      },
+      {
+        "description": "Missing field before valid arrays returns null",
+        "context": {
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ],
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            "$not_a_field",
+            [
+              "a",
+              "b",
+              "c"
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Both null field and missing field returns null",
+        "context": {
+          "null_val": null
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            "$null_val",
+            "$not_a_field"
+          ]
+        }
+      },
+      {
+        "description": "Valid array before null field and non-array value returns null",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "null_val": null,
+          "dbl_val": 2
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            "$null_val",
+            2
+          ]
+        }
+      },
+      {
+        "description": "All null fields returns null",
+        "context": {
+          "null_val": null
+        },
+        "expected": null,
+        "query": {
+          "$concatArrays": [
+            "$null_val",
+            null,
+            "$null_val"
+          ]
+        }
+      }
+    ],
+    "errors": [
+      {
+        "description": "Double value input throws error 28664",
+        "context": {
+          "dbl_val": 2
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not double",
+        "expectedError": "$concatArrays only supports arrays, not double",
+        "query": {
+          "$concatArrays": [
+            2
+          ]
+        }
+      },
+      {
+        "description": "String value input throws error 28664",
+        "context": {
+          "str_val": "a string"
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not string",
+        "expectedError": "$concatArrays only supports arrays, not string",
+        "query": {
+          "$concatArrays": [
+            "a string"
+          ]
+        }
+      },
+      {
+        "description": "Integer value input throws error 28664",
+        "context": {
+          "int_val": 1
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not int",
+        "expectedError": "$concatArrays only supports arrays, not int",
+        "query": {
+          "$concatArrays": [
+            1
+          ]
+        }
+      },
+      {
+        "description": "Object value input throws error 28664",
+        "context": {
+          "obj_val": {
+            "a": 1,
+            "b": "two"
+          }
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not object",
+        "expectedError": "$concatArrays only supports arrays, not object",
+        "query": {
+          "$concatArrays": [
+            {
+              "a": 1,
+              "b": "two"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Number literal input throws error 28664",
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not int",
+        "expectedError": "$concatArrays only supports arrays, not int",
+        "query": {
+          "$concatArrays": [
+            123
+          ]
+        }
+      },
+      {
+        "description": "String literal before array throws error 28664",
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not string",
+        "expectedError": "$concatArrays only supports arrays, not string",
+        "query": {
+          "$concatArrays": [
+            "some_val",
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Valid array then integer field throws error 28664",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "int_val": 1
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not int",
+        "expectedError": "$concatArrays only supports arrays, not int",
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            1
+          ]
+        }
+      },
+      {
+        "description": "Double array then double field throws error 28664",
+        "context": {
+          "dbl_arr": [
+            10,
+            20.1,
+            20.4,
+            50.5
+          ],
+          "dbl_val": 2
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not double",
+        "expectedError": "$concatArrays only supports arrays, not double",
+        "query": {
+          "$concatArrays": [
+            [
+              10,
+              20.1,
+              20.4,
+              50.5
+            ],
+            2
+          ]
+        }
+      },
+      {
+        "description": "Valid array with integer literal throws error 28664",
+        "context": {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "mongodbErrorCode": 28664,
+        "mongodbErrorMessage": "$concatArrays only supports arrays, not int",
+        "expectedError": "$concatArrays only supports arrays, not int",
+        "query": {
+          "$concatArrays": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            32
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 34,
+    "happyPathCount": 16,
+    "nullCasesCount": 11,
+    "errorCount": 9,
+    "errorCodesExtracted": true,
+    "errorMessagesExact": true,
+    "notes": [
+      "$concatArrays takes an array of expressions that must resolve to arrays",
+      "If any input is null or missing, returns null immediately (short-circuit)",
+      "If any input is a non-array type, throws error 28664",
+      "Error message format: '$concatArrays only supports arrays, not <type>'",
+      "Empty arrays are valid and can be concatenated",
+      "Arrays containing null elements are valid and work correctly",
+      "No arguments returns empty array",
+      "All array types are supported: numbers, strings, objects, nested arrays",
+      "Mixed type arrays can be concatenated"
+    ],
+    "mongodbSourceFiles": [
+      "mongo/src/mongo/db/exec/expression/evaluate_array.cpp (lines 262-277)"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "source": "create_oid.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/create_oid.js",
+  "extractedAt": "2026-02-01T19:19:05.819Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "\"object\"",
+      "expected": "typeof result[\"_id\"]",
+      "line": 30
+    },
+    {
+      "type": "commandWorked",
+      "result": "bulk.execute(",
+      "line": 19
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "failedToParseCode",
+      "line": 45
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "failedToParseCode",
+      "line": 50
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "failedToParseCode",
+      "line": 55
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "failedToParseCode",
+      "line": 60
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "failedToParseCode",
+      "line": 65
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 7,
+    "errors": 1
+  }
+}

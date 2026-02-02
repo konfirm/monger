@@ -1,0 +1,227 @@
+{
+  "source": "round_trunc.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/round_trunc.js",
+  "extractedAt": "2026-02-01T19:19:43.385Z",
+  "setup": {
+    "collections": {
+      "server19548": [
+        {
+          "a": -1.2
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 23,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": {
+            "$numberLong": "4"
+          }
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 63,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": {
+            "$numberLong": "4"
+          }
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 93,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": null
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 117,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": null
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 141,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": null
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 165,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": null
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 189,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": -2
+        }
+      ],
+      "timestamp": 1769973583199
+    },
+    {
+      "id": 213,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 0.9
+        }
+      ],
+      "timestamp": 1769973583200
+    },
+    {
+      "id": 237,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": -1.2
+        }
+      ],
+      "timestamp": 1769973583200
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: value}",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 100
+    }
+  ],
+  "meta": {
+    "totalOperations": 294,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

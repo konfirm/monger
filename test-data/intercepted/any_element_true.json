@@ -1,0 +1,381 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/any_element_true.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/any_element_true.js",
+      "timestamp": 1769973910303
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "any_element_true",
+      "timestamp": 1769973910305
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.any_element_true",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973910306
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.any_element_true.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973910306
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.any_element_true.drop",
+      "result": true,
+      "timestamp": 1769973910306
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.any_element_true",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973910306
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.any_element_true.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973910306
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.any_element_true.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910307,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.any_element_true.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973910308,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.any_element_true.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.any_element_true",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.any_element_true.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$anyElementTrue": {
+                  "$literal": [
+                    true,
+                    true
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "any_element_true",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$anyElementTrue": {
+                "$literal": [
+                  true,
+                  true
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910308,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.any_element_true.aggregate",
+      "result": {},
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.any_element_true.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.any_element_true.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 23,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": 0,
+      "expected": 1,
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.any_element_true.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910308
+    },
+    {
+      "id": 25,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'hasOwnProperty')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973910308
+    }
+  ],
+  "state": {
+    "collections": {
+      "any_element_true": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973910303,
+    "endTime": 1769973910308,
+    "totalOperations": 4
+  }
+}

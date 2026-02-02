@@ -1,0 +1,237 @@
+{
+  "operator": "$lt",
+  "description": "Tests for $lt - Comparison operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/filter.js, /mongo/jstests/aggregation/expressions/filter_arrayindexas.js, /mongo/jstests/aggregation/expressions/multiply.js, /mongo/jstests/aggregation/sources/graphLookup/filter.js, /mongo/jstests/aggregation/sources/project/multiple_projects.js, /mongo/jstests/aggregation/sources/replaceRoot/filter_replace_root.js, /mongo/jstests/aggregation/sources/setWindowFields/partition_results.js",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/evaluate_map_reduce_filter.cpp, /mongo/src/mongo/db/pipeline/accumulator_multi.cpp, /mongo/src/mongo/db/pipeline/accumulator_multi.h, /mongo/src/mongo/db/pipeline/change_stream_filter_helpers.cpp, /mongo/src/mongo/db/pipeline/change_stream_filter_helpers.h, /mongo/src/mongo/db/pipeline/expression_map_reduce_filter.cpp, /mongo/src/mongo/db/pipeline/expression_map_reduce_filter_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic comparison with matching values",
+        "query": {
+          "$lt": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 100
+        },
+        "expected": true
+      },
+      {
+        "description": "Basic comparison with non-matching values",
+        "query": {
+          "$lt": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 50
+        },
+        "expected": false
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "valid variable name. filterDoc = {input: \"$a\", as: \"$x\", cond: true}; runAndAssertThrows(filterDoc, ErrorCodes.FailedToParse); // 'input' is not an array. filterDoc = {input: \"string\", as: \"x\", cond: "
+    },
+    {
+      "code": "327391",
+      "type": "numericCode",
+      "context": "// error. filterDoc = {input: \"$a\", as: \"x\", cond: true, limit: 0.5}; runAndAssertThrows(filterDoc, 327391); filterDoc = {input: \"$a\", as: \"x\", cond: true, limit: 0}; runAndAssertThrows(filterDoc, 327"
+    },
+    {
+      "code": "327392",
+      "type": "numericCode",
+      "context": ", 327391); filterDoc = {input: \"$a\", as: \"x\", cond: true, limit: 0}; runAndAssertThrows(filterDoc, 327392); filterDoc = {input: \"$a\", as: \"x\", cond: true, limit: -100}; runAndAssertThrows(filterDoc, 3"
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "nt should throw an exception filterDoc = { input: \"$a\", as: \"x\", cond: true, limit: 2147483648, }; runAndAssertThrows(filterDoc, 327391); // Create filter that uses the default variable name in 'cond'"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ndexAs'. testError({$filter: {input: \"$b\", arrayIndexAs: \"IDX\", cond: {$eq: [\"$$this\", \"$$IDX\"]}}}, ErrorCodes.FailedToParse); testError({$filter: {input: \"$b\", arrayIndexAs: \"^\", cond: {$eq: [\"$$this"
+    },
+    {
+      "code": "APIStrictError",
+      "type": "ErrorCodes",
+      "context": "{$filter: {input: \"$b\", arrayIndexAs: \"i\", cond: {$eq: [\"$$this\", \"$$IDX\"]}}}; testError(filterDoc, ErrorCodes.APIStrictError, { apiVersion: \"1\", apiStrict: true, });"
+    },
+    {
+      "code": "937580",
+      "type": "numericCode",
+      "context": "'t reuse same variable. testError({$filter: {input: \"$b\", as: \"i\", cond: true, arrayIndexAs: \"i\"}}, 9375802); // Can't use 'arrayIndexAs' in API Version 1 with apiStrict. filterDoc = {$filter: {input:"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "iply. const errorTestCases = [ {document: {left: 1, right: \"not a number\"}, errorCodes: [16555, ErrorCodes.TypeMismatch]}, {document: {left: \"not a number\", right: 1}, errorCodes: [16555, ErrorCodes.T"
+    },
+    {
+      "code": "250000",
+      "type": "numericCode",
+      "context": "{ document: {left: 12.5, right: NumberDecimal(\"2.5\")}, expected: NumberDecimal(\"31.25000000000000\"), }, {document: {left: 12.5, right: null}, expected: null}, {document: {left: NumberLong(\"10\"), right"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "document: {left: 12.5, right: NumberDecimal(\"2.5\")}, expected: NumberDecimal(\"31.25000000000000\"), }, {document: {left: 12.5, right: null}, expected: null}, {document: {left: NumberLong(\"10\"), right: "
+    },
+    {
+      "code": "362880",
+      "type": "numericCode",
+      "context": "Int(8), NumberInt(9), NumberInt(10), ], expected: NumberInt(3628800), }, {values: [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5], expected: 13427061.1083984375}, { values: [ NumberLong(1), Number"
+    },
+    {
+      "code": "134270",
+      "type": "numericCode",
+      "context": "berInt(3628800), }, {values: [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5], expected: 13427061.1083984375}, { values: [ NumberLong(1), NumberLong(2), NumberLong(3), NumberLong(4), NumberLong(5),"
+    },
+    {
+      "code": "108398",
+      "type": "numericCode",
+      "context": "28800), }, {values: [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5], expected: 13427061.1083984375}, { values: [ NumberLong(1), NumberLong(2), NumberLong(3), NumberLong(4), NumberLong(5), NumberLo"
+    },
+    {
+      "code": "227819",
+      "type": "numericCode",
+      "context": "es: [NumberInt(12345), NumberLong(67890), NumberDecimal(2.71828)], expected: NumberDecimal(\"2278196040.47400000000000\"), }, {values: [NumberInt(12345), 67890, NumberLong(23456)], expected: 19658521684"
+    },
+    {
+      "code": "474000",
+      "type": "numericCode",
+      "context": "Int(12345), NumberLong(67890), NumberDecimal(2.71828)], expected: NumberDecimal(\"2278196040.47400000000000\"), }, {values: [NumberInt(12345), 67890, NumberLong(23456)], expected: 19658521684800}, { val"
+    },
+    {
+      "code": "196585",
+      "type": "numericCode",
+      "context": "96040.47400000000000\"), }, {values: [NumberInt(12345), 67890, NumberLong(23456)], expected: 19658521684800}, { values: [NumberInt(12345), 67890, NumberDecimal(2.71828)], expected: NumberDecimal(\"22781"
+    },
+    {
+      "code": "216848",
+      "type": "numericCode",
+      "context": "47400000000000\"), }, {values: [NumberInt(12345), 67890, NumberLong(23456)], expected: 19658521684800}, { values: [NumberInt(12345), 67890, NumberDecimal(2.71828)], expected: NumberDecimal(\"2278196040."
+    },
+    {
+      "code": "314159",
+      "type": "numericCode",
+      "context": "96040.47400000000000000000\"), }, // Test edge cases. { values: [1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), Num"
+    },
+    {
+      "code": "265358",
+      "type": "numericCode",
+      "context": "47400000000000000000\"), }, // Test edge cases. { values: [1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), NumberDec"
+    },
+    {
+      "code": "979393",
+      "type": "numericCode",
+      "context": "00000000000000\"), }, // Test edge cases. { values: [1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), NumberDecimal(1"
+    },
+    {
+      "code": "979323",
+      "type": "numericCode",
+      "context": "st edge cases. { values: [1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), NumberDecimal(1.1), 1.0e35], expected: Nu"
+    },
+    {
+      "code": "869604",
+      "type": "numericCode",
+      "context": "ues: [1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), NumberDecimal(1.1), 1.0e35], expected: NumberDecimal(\"1.10000"
+    },
+    {
+      "code": "401089",
+      "type": "numericCode",
+      "context": "1, NumberLong(\"314159265358979393\"), NumberLong(\"-314159265358979323\")], expected: -9.86960440108936e34, }, { values: [NumberInt(1), NumberDecimal(1.1), 1.0e35], expected: NumberDecimal(\"1.10000000000"
+    },
+    {
+      "code": "100000",
+      "type": "numericCode",
+      "context": "{ values: [NumberInt(1), NumberDecimal(1.1), 1.0e35], expected: NumberDecimal(\"1.1000000000000000000000000000E+35\"), }, { values: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], ex"
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "ected: NumberDecimal(\"1.1000000000000000000000000000E+35\"), }, { values: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], expected: -1.8268770458126154e35, }, { values: [NumberInt(2"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "Decimal(\"1.1000000000000000000000000000E+35\"), }, { values: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], expected: -1.8268770458126154e35, }, { values: [NumberInt(2147483647), 9"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "l(\"1.1000000000000000000000000000E+35\"), }, { values: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], expected: -1.8268770458126154e35, }, { values: [NumberInt(2147483647), 9223372"
+    },
+    {
+      "code": "826877",
+      "type": "numericCode",
+      "context": "values: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], expected: -1.8268770458126154e35, }, { values: [NumberInt(2147483647), 9223372036854, NumberDecimal(3.14)], expected: Number"
+    },
+    {
+      "code": "045812",
+      "type": "numericCode",
+      "context": "ues: [NumberInt(2147483647), 9223372036854, NumberLong(-9223372036854)], expected: -1.8268770458126154e35, }, { values: [NumberInt(2147483647), 9223372036854, NumberDecimal(3.14)], expected: NumberDec"
+    },
+    {
+      "code": "621941",
+      "type": "numericCode",
+      "context": "lues: [NumberInt(2147483647), 9223372036854, NumberDecimal(3.14)], expected: NumberDecimal(\"62194107544730740000000.000000\"), }, {values: [NumberInt(1), NumberDecimal(1.1), NaN], expected: NumberDecim"
+    },
+    {
+      "code": "075447",
+      "type": "numericCode",
+      "context": "[NumberInt(2147483647), 9223372036854, NumberDecimal(3.14)], expected: NumberDecimal(\"62194107544730740000000.000000\"), }, {values: [NumberInt(1), NumberDecimal(1.1), NaN], expected: NumberDecimal(\"Na"
+    },
+    {
+      "code": "307400",
+      "type": "numericCode",
+      "context": "rInt(2147483647), 9223372036854, NumberDecimal(3.14)], expected: NumberDecimal(\"62194107544730740000000.000000\"), }, {values: [NumberInt(1), NumberDecimal(1.1), NaN], expected: NumberDecimal(\"NaN\")}, "
+    },
+    {
+      "code": "562650",
+      "type": "numericCode",
+      "context": "tSearchWithMatch: {neighbors: {$near: [10, 20]}}, }, }, ]), 5626500, );"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 2,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Comparison",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 7 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/evaluate_map_reduce_filter.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_multi.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_multi.h",
+      "/mongo/src/mongo/db/pipeline/change_stream_filter_helpers.cpp",
+      "/mongo/src/mongo/db/pipeline/change_stream_filter_helpers.h",
+      "/mongo/src/mongo/db/pipeline/expression_map_reduce_filter.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_map_reduce_filter_test.cpp"
+    ]
+  }
+}

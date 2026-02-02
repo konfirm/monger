@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_to_string2.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_to_string2.js",
+      "timestamp": 1769973915967
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973915970
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973915967,
+    "endTime": 1769973915970,
+    "totalOperations": 0
+  }
+}

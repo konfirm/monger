@@ -1,0 +1,651 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/switch_errors.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/switch_errors.js",
+      "timestamp": 1769973927937
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "switch",
+      "timestamp": 1769973927940
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973927940
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.switch.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973927940
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.switch.drop",
+      "result": true,
+      "timestamp": 1769973927940
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927940,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 5,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": "not an object"
+          }
+        }
+      },
+      "expectedCode": 40060,
+      "message": "$switch requires an object as an argument.",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": "not an array"
+            }
+          }
+        }
+      },
+      "expectedCode": 40061,
+      "message": "$switch requires 'branches' to be an array.",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": [
+                "not an object"
+              ]
+            }
+          }
+        }
+      },
+      "expectedCode": 40062,
+      "message": "$switch requires each branch to be an object.",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": [
+                {}
+              ]
+            }
+          }
+        }
+      },
+      "expectedCode": 40064,
+      "message": "$switch requires each branch have a 'case'.",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expectedCode": 40065,
+      "message": "$switch requires each branch have a 'then'.",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": true,
+                  "then": false,
+                  "badKey": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expectedCode": 40063,
+      "message": "$switch found a branch with an unknown argument",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "notAnArgument": 1
+            }
+          }
+        }
+      },
+      "expectedCode": 40067,
+      "message": "$switch found an unknown argument",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 19,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": []
+            }
+          }
+        }
+      },
+      "expectedCode": 40068,
+      "message": "$switch requires at least one branch",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927941,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 21,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {}
+          }
+        }
+      },
+      "expectedCode": 40068,
+      "message": "$switch requires at least one branch",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 24,
+      "type": "function_call",
+      "path": "collection.switch.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "x": 1
+        }
+      ],
+      "timestamp": 1769973927941
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.switch.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927942,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.switch.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973927942,
+      "value": 1
+    },
+    {
+      "id": 24,
+      "type": "function_return",
+      "path": "collection.switch.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973927942
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927942,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 27,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      "$x",
+                      0
+                    ]
+                  },
+                  "then": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expectedCode": 40066,
+      "message": "$switch has no default and an input matched no case",
+      "timestamp": 1769973927942
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973927942
+    },
+    {
+      "id": 30,
+      "type": "function_call",
+      "path": "collection.switch.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$sortByCount": {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$literal": false
+                    },
+                    "then": 1
+                  },
+                  {
+                    "case": "$x",
+                    "then": {
+                      "$ifNull": [
+                        2,
+                        "$y"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973927942
+    },
+    {
+      "id": 31,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": [
+        {
+          "$sortByCount": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$literal": false
+                  },
+                  "then": 1
+                },
+                {
+                  "case": "$x",
+                  "then": {
+                    "$ifNull": [
+                      2,
+                      "$y"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "x": 1
+        }
+      ],
+      "timestamp": 1769973927942
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927942,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 30,
+      "type": "function_return",
+      "path": "collection.switch.aggregate",
+      "result": {},
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 39,
+      "type": "function_call",
+      "path": "collection.switch.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 39,
+      "type": "function_return",
+      "path": "collection.switch.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "collection.switch.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 44,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 2,
+          "count": 1
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973927943
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "collection.switch",
+      "property": "remove",
+      "valueType": "undefined",
+      "timestamp": 1769973927943,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 48,
+      "type": "test_error",
+      "error": {
+        "message": "coll.remove is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973927943
+    }
+  ],
+  "state": {
+    "collections": {
+      "switch": [
+        {
+          "x": 1
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973927937,
+    "endTime": 1769973927943,
+    "totalOperations": 4
+  }
+}

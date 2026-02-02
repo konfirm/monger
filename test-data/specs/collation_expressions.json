@@ -1,0 +1,206 @@
+{
+  "source": "collation_expressions.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/collation_expressions.js",
+  "extractedAt": "2026-02-01T19:18:58.690Z",
+  "setup": {
+    "collections": {
+      "collation_expressions": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 97
+    },
+    {
+      "type": "eq",
+      "actual": "2",
+      "expected": "results[0].out.length",
+      "line": 98
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 118
+    },
+    {
+      "type": "eq",
+      "actual": "4",
+      "expected": "results[0].out.length",
+      "line": 119
+    },
+    {
+      "type": "eq",
+      "actual": "results1",
+      "expected": "results2",
+      "line": 132
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 169
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0].out",
+      "line": 170
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 178
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0].out",
+      "line": 179
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 187
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0].out",
+      "line": 188
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 196
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0].out",
+      "line": 197
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 252
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0]._id.a",
+      "line": 253
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "results[0]._id.b",
+      "line": 254
+    },
+    {
+      "type": "eq",
+      "actual": "3",
+      "expected": "results.length",
+      "line": 298
+    },
+    {
+      "type": "eq",
+      "actual": "\"foo\"",
+      "expected": "results[0].out",
+      "line": 299
+    },
+    {
+      "type": "eq",
+      "actual": "\"bar\"",
+      "expected": "results[1].out",
+      "line": 300
+    },
+    {
+      "type": "eq",
+      "actual": "\"baz\"",
+      "expected": "results[2].out",
+      "line": 301
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "results.length",
+      "line": 327
+    },
+    {
+      "type": "eq",
+      "actual": "[ [0, 1], [2, 3], [4, 5], ]",
+      "expected": "results[0].out,",
+      "line": 328
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.createCollection(coll.getName(",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, upper: \"A\", lower: \"a\"}",
+      "line": 125
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, str: \"A\"}",
+      "line": 165
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, str: \"A\", str2: \"B\"}",
+      "line": 174
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, str: \"A\"}",
+      "line": 183
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, str: \"A\", str2: \"B\"}",
+      "line": 192
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1}",
+      "line": 248
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, a: \"A\"}",
+      "line": 274
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, b: \"B\"}",
+      "line": 275
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, c: \"C\"}",
+      "line": 276
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, evens: [0, 2, 4], odds: [1, 3]}",
+      "line": 305
+    }
+  ],
+  "meta": {
+    "totalOperations": 8,
+    "totalAssertions": 33,
+    "errors": 1
+  }
+}

@@ -1,0 +1,2213 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/bottom.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/bottom.js",
+      "timestamp": 1769973911559
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "bottom_expr",
+      "timestamp": 1769973911562
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973911563
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.bottom_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973911563
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.bottom_expr.drop",
+      "result": true,
+      "timestamp": 1769973911563
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973911563
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.bottom_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973911563
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.bottom_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911564,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.bottom_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973911564,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.bottom_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": []
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": []
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911564,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 24,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": null
+        }
+      ],
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911564
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911565,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911565
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 42,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": 4
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 46,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    "a",
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  "a",
+                  "b",
+                  "c"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 46,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 55,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 55,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 61,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 60,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": "c"
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 64,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 64,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 72,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 73,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 73,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 78,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": [
+            1,
+            "b"
+          ]
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 82,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 88,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 82,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 91,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 93,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 91,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 96,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": 4
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 100,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 102,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 100,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 109,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 109,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 114,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": 0
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 118,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 120,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 121,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 123,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 124,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 118,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 127,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 128,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 127,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 133,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 134,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 132,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": 0
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 135,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 136,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      3,
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    [
+                      3,
+                      6
+                    ]
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 137,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    3,
+                    [
+                      1,
+                      1
+                    ]
+                  ],
+                  [
+                    3,
+                    6
+                  ]
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 138,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911566,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 139,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 140,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 141,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 142,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 143,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 136,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 144,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 145,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 146,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 147,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 145,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 148,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 149,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 151,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 152,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 150,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": [
+            3,
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 153,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 154,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    {
+                      "a": 1,
+                      "b": 1
+                    },
+                    {
+                      "a": 2,
+                      "b": 2
+                    },
+                    {
+                      "a": 2,
+                      "b": 1
+                    }
+                  ],
+                  "sortBy": {
+                    "a": 1,
+                    "b": -1
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "bottom_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "bottom": {
+              "$bottom": {
+                "input": [
+                  {
+                    "a": 1,
+                    "b": 1
+                  },
+                  {
+                    "a": 2,
+                    "b": 2
+                  },
+                  {
+                    "a": 2,
+                    "b": 1
+                  }
+                ],
+                "sortBy": {
+                  "a": 1,
+                  "b": -1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973911566
+    },
+    {
+      "id": 156,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 157,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 158,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 159,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 160,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 161,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 154,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 162,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 163,
+      "type": "function_call",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 164,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 165,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 163,
+      "type": "function_return",
+      "path": "collection.bottom_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 166,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 167,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 169,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 170,
+      "type": "property_get",
+      "path": "collection.bottom_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 168,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "bottom": {
+            "a": 2,
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 172,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 171,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$bottom": 0
+            }
+          }
+        }
+      ],
+      "expectedCode": 7212122,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 174,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 173,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$bottom": {
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 7212124,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 176,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 175,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$bottom": {
+                "input": "one"
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721217,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 178,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 177,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$bottom": {
+                "input": 1
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721217,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 180,
+      "type": "property_get",
+      "path": "collection.bottom_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911567,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 179,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$bottom": {
+                "input": [
+                  1,
+                  2,
+                  3
+                ],
+                "sortBy": "a"
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 2942507,
+      "timestamp": 1769973911567
+    },
+    {
+      "id": 181,
+      "type": "test_end",
+      "status": "success",
+      "duration": 8,
+      "timestamp": 1769973911567
+    }
+  ],
+  "state": {
+    "collections": {
+      "bottom_expr": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973911559,
+    "endTime": 1769973911567,
+    "totalOperations": 20
+  }
+}

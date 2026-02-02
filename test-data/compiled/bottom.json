@@ -1,0 +1,273 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/bottom.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.997Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": []
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    "a",
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      3,
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    [
+                      3,
+                      6
+                    ]
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "bottom": {
+                "$bottom": {
+                  "input": [
+                    {
+                      "a": 1,
+                      "b": 1
+                    },
+                    {
+                      "a": 2,
+                      "b": 2
+                    },
+                    {
+                      "a": 2,
+                      "b": 1
+                    }
+                  ],
+                  "sortBy": {
+                    "a": 1,
+                    "b": -1
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $bottom"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 9,
+    "totalDocuments": 1,
+    "errors": 9
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "source": "date_expr_before_1970.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_expr_before_1970.js",
+  "extractedAt": "2026-02-01T19:19:08.167Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].year",
+      "expected": "date.getUTCFullYear(",
+      "line": 52
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].month",
+      "expected": "date.getUTCMonth(",
+      "line": 53
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].dayOfMonth",
+      "expected": "date.getUTCDate(",
+      "line": 54
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].hour",
+      "expected": "date.getUTCHours(",
+      "line": 55
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].minute",
+      "expected": "date.getUTCMinutes(",
+      "line": 56
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].second",
+      "expected": "date.getUTCSeconds(",
+      "line": 57
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].millisecond",
+      "expected": "date.getUTCMilliseconds(",
+      "line": 58
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].millisecondPlusTen",
+      "expected": "(date.getUTCMilliseconds(",
+      "line": 59
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].format",
+      "expected": "date.tojson(",
+      "line": 64
+    },
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0]",
+      "expected": "{ year: date.getUTCFullYear(",
+      "line": 65
+    },
+    {
+      "type": "commandWorked",
+      "result": "res",
+      "line": 51
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 11,
+    "errors": 1
+  }
+}

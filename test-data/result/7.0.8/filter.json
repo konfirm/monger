@@ -1,0 +1,736 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/filter.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:16.089Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$filter": {
+                "input": "$a",
+                "as": "x",
+                "cond": {
+                  "$gt": [
+                    "$$x",
+                    2
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "_id": 1,
+          "b": []
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": [
+            4
+          ]
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 11,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$filter": {
+                "input": "$a",
+                "as": "x",
+                "cond": {
+                  "$gt": [
+                    "$$x",
+                    1
+                  ]
+                },
+                "limit": {
+                  "$literal": 3
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": [
+            4
+          ]
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$filter": {
+                "input": "$a",
+                "as": "x",
+                "cond": {
+                  "$gt": [
+                    "$$x",
+                    2
+                  ]
+                },
+                "limit": null
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "_id": 1,
+          "b": []
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": [
+            4
+          ]
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$filter": {
+                "input": "$a",
+                "cond": {
+                  "$eq": [
+                    2,
+                    "$$this"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": []
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$let": {
+                "vars": {
+                  "value": "$d"
+                },
+                "in": {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$gte": [
+                        {
+                          "$add": [
+                            "$c",
+                            "$$this"
+                          ]
+                        },
+                        "$$value"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": [
+            4
+          ]
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$filter": {
+                "input": "$a",
+                "cond": {
+                  "$or": [
+                    {
+                      "$and": [
+                        {
+                          "$gt": [
+                            "$$this",
+                            1
+                          ]
+                        },
+                        {
+                          "$lt": [
+                            "$$this",
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "$eq": [
+                        "$$this",
+                        5
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2,
+            5
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": []
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$or": [
+                {
+                  "$and": [
+                    {
+                      "$filter": {
+                        "input": "$a",
+                        "cond": {
+                          "$or": [
+                            {
+                              "$and": [
+                                {
+                                  "$gt": [
+                                    "$$this",
+                                    1
+                                  ]
+                                },
+                                {
+                                  "$lt": [
+                                    "$$this",
+                                    3
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "$eq": [
+                                "$$this",
+                                5
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "$d"
+                  ]
+                },
+                {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$eq": [
+                        "$$this",
+                        1
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": true
+        },
+        {
+          "_id": 1,
+          "b": true
+        },
+        {
+          "_id": 2,
+          "b": true
+        },
+        {
+          "_id": 3,
+          "b": true
+        },
+        {
+          "_id": 4,
+          "b": false
+        },
+        {
+          "_id": 5,
+          "b": false
+        },
+        {
+          "_id": 6,
+          "b": false
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$cond": {
+                "if": {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$eq": [
+                        "$$this",
+                        1
+                      ]
+                    }
+                  }
+                },
+                "then": {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$eq": [
+                        "$$this",
+                        2
+                      ]
+                    }
+                  }
+                },
+                "else": {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$eq": [
+                        "$$this",
+                        3
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": []
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_filter_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "b": {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$filter": {
+                        "input": "$a",
+                        "cond": {
+                          "$eq": [
+                            "$$this",
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "then": {
+                      "$filter": {
+                        "input": "$a",
+                        "cond": {
+                          "$eq": [
+                            "$$this",
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "case": {
+                      "$filter": {
+                        "input": "$a",
+                        "cond": {
+                          "$eq": [
+                            "$$this",
+                            3
+                          ]
+                        }
+                      }
+                    },
+                    "then": {
+                      "$filter": {
+                        "input": "$a",
+                        "cond": {
+                          "$eq": [
+                            "$$this",
+                            4
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ],
+                "default": {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$eq": [
+                        "$$this",
+                        5
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 1,
+          "b": [
+            2
+          ]
+        },
+        {
+          "_id": 2,
+          "b": []
+        },
+        {
+          "_id": 3,
+          "b": []
+        },
+        {
+          "_id": 4,
+          "b": null
+        },
+        {
+          "_id": 5,
+          "b": null
+        },
+        {
+          "_id": 6,
+          "b": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": []
+}

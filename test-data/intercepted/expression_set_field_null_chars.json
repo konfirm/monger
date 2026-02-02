@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/expression_set_field_null_chars.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/expression_set_field_null_chars.js",
+      "timestamp": 1769973917606
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973917608
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973917606,
+    "endTime": 1769973917608,
+    "totalOperations": 0
+  }
+}

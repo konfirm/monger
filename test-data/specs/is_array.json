@@ -1,0 +1,206 @@
+{
+  "source": "is_array.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/is_array.js",
+  "extractedAt": "2026-02-01T19:19:26.721Z",
+  "setup": {
+    "collections": {
+      "is_array_expr": [
+        {
+          "_id": 0,
+          "x": 0
+        },
+        {
+          "_id": 1,
+          "x": "0"
+        },
+        {
+          "_id": 2,
+          "x": {}
+        },
+        {
+          "_id": 3,
+          "x": {
+            "$numberLong": "0"
+          }
+        },
+        {
+          "_id": 4,
+          "x": {
+            "y": []
+          }
+        },
+        {
+          "_id": 5,
+          "x": null
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        },
+        {
+          "_id": 8,
+          "x": []
+        },
+        {
+          "_id": 9,
+          "x": [
+            0
+          ]
+        },
+        {
+          "_id": 10,
+          "x": [
+            "0"
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 95,
+      "type": "aggregate",
+      "collection": "is_array_expr",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "isArray": {
+              "$isArray": "$x"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0
+        },
+        {
+          "_id": 1,
+          "x": "0"
+        },
+        {
+          "_id": 2,
+          "x": {}
+        },
+        {
+          "_id": 3,
+          "x": {
+            "$numberLong": "0"
+          }
+        },
+        {
+          "_id": 4,
+          "x": {
+            "y": []
+          }
+        },
+        {
+          "_id": 5,
+          "x": null
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        },
+        {
+          "_id": 8,
+          "x": []
+        },
+        {
+          "_id": 9,
+          "x": [
+            0
+          ]
+        },
+        {
+          "_id": 10,
+          "x": [
+            "0"
+          ]
+        }
+      ],
+      "timestamp": 1769973566538
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "expectedResults",
+      "line": 36
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, x: 0}",
+      "line": 6
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, x: \"0\"}",
+      "line": 7
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, x: new ObjectId(",
+      "line": 8
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, x: new NumberLong(0",
+      "line": 9
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, x: {y: []}}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, x: null}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, x: NaN}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, x: undefined}",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, x: []}",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, x: [0]}",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, x: [\"0\"]}",
+      "line": 18
+    }
+  ],
+  "meta": {
+    "totalOperations": 131,
+    "totalAssertions": 12,
+    "errors": 0
+  }
+}

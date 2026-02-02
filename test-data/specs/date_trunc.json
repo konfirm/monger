@@ -1,0 +1,22 @@
+{
+  "source": "date_trunc.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_trunc.js",
+  "extractedAt": "2026-02-01T19:19:12.982Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "testDB.dropDatabase(",
+      "line": 14
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

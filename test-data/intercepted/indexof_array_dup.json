@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/indexof_array_dup.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/indexof_array_dup.js",
+      "timestamp": 1769973919371
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTest is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973919374
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973919371,
+    "endTime": 1769973919374,
+    "totalOperations": 0
+  }
+}

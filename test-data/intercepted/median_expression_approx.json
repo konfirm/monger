@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/median_expression_approx.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/median_expression_approx.js",
+      "timestamp": 1769973921252
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973921255
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973921252,
+    "endTime": 1769973921255,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/array_elem_at.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:53.093Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "x": 3
+        }
+      ],
+      "duration": 7,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                1
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "x": 2
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": []
+}

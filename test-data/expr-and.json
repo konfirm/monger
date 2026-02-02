@@ -1,0 +1,679 @@
+{
+  "operator": "$and",
+  "description": "Tests for $and - Boolean expression operator that returns true only when ALL expressions evaluate to true",
+  "mongodbVersion": "2.4",
+  "implemented": true,
+  "category": "Boolean Expression",
+  "source": "/mongo/jstests/aggregation/exec/value_coerce_to_bool.js, /mongo/jstests/aggregation/optimization/and_or_short_circuit.js, /mongo/jstests/aggregation/expressions/cond.js, /mongo/jstests/aggregation/expressions/not.js, /mongo/jstests/aggregation/expressions/empty_obj_arg.js, /mongo/jstests/aggregation/expressions/filter.js, /mongo/src/mongo/db/exec/expression/evaluate_and_test.cpp",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/evaluate_and_test.cpp, /mongo/src/mongo/db/pipeline/expression_and_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Empty array returns true (vacuous truth)",
+        "query": {
+          "$and": []
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Single true operand returns true",
+        "query": {
+          "$and": [true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Single non-zero number is truthy - returns true",
+        "query": {
+          "$and": [1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "True AND true returns true",
+        "query": {
+          "$and": [true, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "True AND true AND true returns true",
+        "query": {
+          "$and": [true, true, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "All truthy values (1, 'hello', [], {}) returns true",
+        "query": {
+          "$and": [1, "hello", [], {}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Field path that exists and is truthy - returns true",
+        "query": {
+          "$and": ["$field"]
+        },
+        "context": {
+          "field": 1
+        },
+        "expected": true
+      },
+      {
+        "description": "Multiple field paths all truthy - returns true",
+        "query": {
+          "$and": ["$x", "$y", "$z"]
+        },
+        "context": {
+          "x": true,
+          "y": 1,
+          "z": "hello"
+        },
+        "expected": true
+      },
+      {
+        "description": "$and combined with $not - NOT false AND true returns true",
+        "query": {
+          "$and": [{"$not": "$x"}, "$y"]
+        },
+        "context": {
+          "x": false,
+          "y": true
+        },
+        "expected": true
+      },
+      {
+        "description": "$and combined with $eq comparison - both match",
+        "query": {
+          "$and": [{"$eq": ["$str", "a"]}, {"$eq": ["$str2", "b"]}]
+        },
+        "context": {
+          "str": "a",
+          "str2": "b"
+        },
+        "expected": true
+      },
+      {
+        "description": "$and inside $cond as condition - empty $and is true",
+        "query": {
+          "$cond": [{"$and": []}, {"$add": [1]}, {"$add": [1, 1]}]
+        },
+        "context": {},
+        "expected": 1
+      },
+      {
+        "description": "Empty object {} is truthy - returns true",
+        "query": {
+          "$and": [{}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Empty array [] is truthy - returns true",
+        "query": {
+          "$and": [[]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Array with values is truthy - returns true",
+        "query": {
+          "$and": [[1, 2, 3]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Array with false value is truthy - returns true",
+        "query": {
+          "$and": [[false]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Negative number is truthy - returns true",
+        "query": {
+          "$and": [-1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Object with fields is truthy - returns true",
+        "query": {
+          "$and": [{"y": 2, "z": 3}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "$and used in $filter - both conditions satisfied",
+        "query": {
+          "$filter": {
+            "input": "$a",
+            "cond": {
+              "$and": [
+                {"$gt": ["$$this", 1]},
+                {"$lt": ["$$this", 4]}
+              ]
+            }
+          }
+        },
+        "context": {
+          "a": [1, 2, 3, 4, 5]
+        },
+        "expected": [2, 3]
+      },
+      {
+        "description": "Complex nested $and with $or",
+        "query": {
+          "$and": [
+            {"$or": [true, false]},
+            {"$and": [true, true]}
+          ]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "$and with multiple nested comparisons - all true",
+        "query": {
+          "$and": [
+            {"$eq": ["$x", 1]},
+            {"$gt": ["$y", 0]},
+            {"$lt": ["$z", 10]}
+          ]
+        },
+        "context": {
+          "x": 1,
+          "y": 5,
+          "z": 8
+        },
+        "expected": true
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Null is falsy - single null returns false",
+        "query": {
+          "$and": [null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Undefined/missing field is falsy - returns false",
+        "query": {
+          "$and": ["$missingField"]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True AND null returns false",
+        "query": {
+          "$and": [true, null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Null AND true returns false",
+        "query": {
+          "$and": [null, true]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Null AND null returns false",
+        "query": {
+          "$and": [null, null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Field path evaluating to null is falsy",
+        "query": {
+          "$and": ["$field"]
+        },
+        "context": {
+          "field": null
+        },
+        "expected": false
+      },
+      {
+        "description": "Multiple truthy values with one null returns false",
+        "query": {
+          "$and": [1, true, "hello", null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "$and inside $cond with null - first arg null evaluates to false",
+        "query": {
+          "$cond": [{"$and": [null]}, {"$add": [1]}, {"$add": [1, 1]}]
+        },
+        "context": {},
+        "expected": 2
+      }
+    ],
+    "errors": [
+      {
+        "description": "Non-array input (string) throws error",
+        "query": {
+          "$and": "string"
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Non-array input (object) throws error",
+        "query": {
+          "$and": {"key": "value"}
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Non-array input (number) throws error",
+        "query": {
+          "$and": 123
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Non-array input (boolean) throws error",
+        "query": {
+          "$and": true
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Non-array input (null) throws error",
+        "query": {
+          "$and": null
+        },
+        "errorExpected": true
+      }
+    ],
+    "edgeCases": [
+      {
+        "description": "Single false operand returns false",
+        "query": {
+          "$and": [false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True AND false returns false",
+        "query": {
+          "$and": [true, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "False AND true returns false",
+        "query": {
+          "$and": [false, true]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "False AND false returns false",
+        "query": {
+          "$and": [false, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Zero is falsy - returns false",
+        "query": {
+          "$and": [0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True AND 0 returns false (0 is falsy)",
+        "query": {
+          "$and": [true, 0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Zero AND true returns false (0 is falsy)",
+        "query": {
+          "$and": [0, true]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Empty string is falsy - returns false",
+        "query": {
+          "$and": [""]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True AND empty string returns false",
+        "query": {
+          "$and": [true, ""]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Multiple truthy values with one 0 returns false",
+        "query": {
+          "$and": [1, true, "hello", 0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Multiple truthy values with one false returns false",
+        "query": {
+          "$and": [1, true, "hello", false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "$and combined with $not - NOT true AND false returns false",
+        "query": {
+          "$and": [{"$not": "$x"}, "$y"]
+        },
+        "context": {
+          "x": true,
+          "y": false
+        },
+        "expected": false
+      },
+      {
+        "description": "$and with $eq comparison - first matches, second doesn't",
+        "query": {
+          "$and": [{"$eq": ["$str", "a"]}, {"$eq": ["$str2", "c"]}]
+        },
+        "context": {
+          "str": "a",
+          "str2": "b"
+        },
+        "expected": false
+      },
+      {
+        "description": "$and with $eq comparison - neither matches",
+        "query": {
+          "$and": [{"$eq": ["$str", "x"]}, {"$eq": ["$str2", "y"]}]
+        },
+        "context": {
+          "str": "a",
+          "str2": "b"
+        },
+        "expected": false
+      },
+      {
+        "description": "Decimal number 0.0 is falsy - returns false",
+        "query": {
+          "$and": [0.0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True AND 0.0 returns false",
+        "query": {
+          "$and": [true, 0.0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Very long array of truthy values returns true",
+        "query": {
+          "$and": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Very long array with single false at end returns false",
+        "query": {
+          "$and": [1, 1, 1, 1, 1, 1, 1, 1, 1, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Very long array with single 0 at end returns false",
+        "query": {
+          "$and": [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "$and with $not nested - $not false is true, so true AND true returns true",
+        "query": {
+          "$and": [{"$not": "$x"}, {"$not": "$y"}]
+        },
+        "context": {
+          "x": false,
+          "y": false
+        },
+        "expected": true
+      },
+      {
+        "description": "$and with $not nested - $not true is false, so false AND false returns false",
+        "query": {
+          "$and": [{"$not": "$x"}, {"$not": "$y"}]
+        },
+        "context": {
+          "x": true,
+          "y": true
+        },
+        "expected": false
+      }
+    ],
+    "typeConversionCases": [
+      {
+        "description": "String 'true' is truthy (non-empty) - returns true",
+        "query": {
+          "$and": ["true"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String 'false' is truthy (non-empty) - returns true",
+        "query": {
+          "$and": ["false"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String '0' is truthy (non-empty) - returns true",
+        "query": {
+          "$and": ["0"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String '1' is truthy (non-empty) - returns true",
+        "query": {
+          "$and": ["1"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NumberInt 0 is falsy - returns false",
+        "query": {
+          "$and": [{"$literal": {"$numberInt": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberInt 1 is truthy - returns true",
+        "query": {
+          "$and": [{"$literal": {"$numberInt": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NumberLong 0 is falsy - returns false",
+        "query": {
+          "$and": [{"$literal": {"$numberLong": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberLong 1 is truthy - returns true",
+        "query": {
+          "$and": [{"$literal": {"$numberLong": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NumberDecimal 0 is falsy - returns false",
+        "query": {
+          "$and": [{"$literal": {"$numberDecimal": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberDecimal 1 is truthy - returns true",
+        "query": {
+          "$and": [{"$literal": {"$numberDecimal": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Whitespace string is truthy - returns true",
+        "query": {
+          "$and": [" "]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "ObjectId is truthy - returns true",
+        "query": {
+          "$and": [{"$toObjectId": "5f0627282a63fc000b8fd067"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Date is truthy - returns true",
+        "query": {
+          "$and": [{"$toDate": "2021-01-01T00:00:00Z"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Timestamp is truthy - returns true",
+        "query": {
+          "$and": [{"$literal": {"$timestamp": {"t": 1, "i": 1}}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Binary data is truthy - returns true",
+        "query": {
+          "$and": [{"$binary": {"base64": "BBBB", "subType": "00"}}]
+        },
+        "context": {},
+        "expected": true
+      }
+    ]
+  },
+  "errorCodes": [
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "Non-array input to $and throws TypeMismatch error"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 77,
+    "happyPathCount": 20,
+    "errorCaseCount": 5,
+    "nullCaseCount": 8,
+    "edgeCaseCount": 21,
+    "typeConversionCount": 15,
+    "errorCodesExtracted": true,
+    "notes": [
+      "$and is a Boolean Expression operator used in aggregation expressions",
+      "Returns true only if ALL expressions evaluate to true (short-circuits on first false)",
+      "Empty array [] returns true (vacuous truth) - important difference from $or",
+      "Truthy values: non-zero numbers, non-empty strings, arrays (even empty), objects, true, ObjectId, Date, Timestamp, Binary data",
+      "Falsy values: 0, 0.0, empty string \"\", null, undefined, false",
+      "Non-array input throws TypeMismatch error",
+      "Can be combined with $or, $not, $cond, $switch, $filter, $eq",
+      "Short-circuits - stops evaluating after finding first falsy value",
+      "Extracted from MongoDB jstests: value_coerce_to_bool.js, and_or_short_circuit.js, cond.js, not.js, empty_obj_arg.js, filter.js",
+      "Implementation tested in evaluate_and_test.cpp"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/evaluate_and_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_and_test.cpp"
+    ],
+    "jstestSourceFiles": [
+      "/mongo/jstests/aggregation/exec/value_coerce_to_bool.js",
+      "/mongo/jstests/aggregation/optimization/and_or_short_circuit.js",
+      "/mongo/jstests/aggregation/expressions/cond.js",
+      "/mongo/jstests/aggregation/expressions/not.js",
+      "/mongo/jstests/aggregation/expressions/empty_obj_arg.js",
+      "/mongo/jstests/aggregation/expressions/filter.js"
+    ],
+    "truthyValues": [
+      "Non-zero numbers (positive and negative)",
+      "Non-empty strings",
+      "Arrays (including empty arrays [] - vacuous truth)",
+      "Objects (including empty objects {})",
+      "true",
+      "ObjectId",
+      "Date",
+      "Timestamp",
+      "Binary data"
+    ],
+    "falsyValues": [
+      "0 (integer)",
+      "0.0 (float)",
+      "Empty string \"\"",
+      "null",
+      "undefined/missing fields",
+      "false"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "source": "array_elem_at.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/array_elem_at.js",
+  "extractedAt": "2026-02-01T19:18:54.358Z",
+  "setup": {
+    "collections": {
+      "agg_array_elem_at_expr": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "timestamp": 1769973534171
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                1
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "timestamp": 1769973534172
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: [1, 2, 3, 4, 5]}",
+      "line": 10
+    }
+  ],
+  "meta": {
+    "totalOperations": 51,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "single_obj_arg.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/single_obj_arg.js",
+  "extractedAt": "2026-02-01T19:19:45.282Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

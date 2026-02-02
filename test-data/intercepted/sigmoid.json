@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/sigmoid.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/sigmoid.js",
+      "timestamp": 1769973925372
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "getCollection",
+      "timestamp": 1769973925375
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973925375
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973925372,
+    "endTime": 1769973925375,
+    "totalOperations": 0
+  }
+}

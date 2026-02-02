@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/convert_bindata_numeric.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/convert_bindata_numeric.js",
+      "timestamp": 1769973913628
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "Invalid or unexpected token",
+        "name": "SyntaxError"
+      },
+      "timestamp": 1769973913630
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973913628,
+    "endTime": 1769973913630,
+    "totalOperations": 0
+  }
+}

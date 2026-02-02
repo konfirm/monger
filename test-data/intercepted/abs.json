@@ -1,0 +1,4478 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/abs.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/abs.js",
+      "timestamp": 1769973909480
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "abs_expr",
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.abs_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.abs_expr.drop",
+      "result": true,
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0,
+          "a": 5
+        }
+      ],
+      "timestamp": 1769973909483
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909485,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909485,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 1,
+          "a": -5
+        }
+      ],
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909485,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909485,
+      "value": 2
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 2
+      },
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 14,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 2,
+          "a": 5.5
+        }
+      ],
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909485,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909485,
+      "value": 3
+    },
+    {
+      "id": 14,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 18,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 3,
+          "a": -5.5
+        }
+      ],
+      "timestamp": 1769973909485
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909485,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909485,
+      "value": 4
+    },
+    {
+      "id": 18,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 4
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 22,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        "5"
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 22,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "5"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 25,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 4,
+          "a": {
+            "$numberInt": "5"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 5
+    },
+    {
+      "id": 25,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 5
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 33,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        "-5"
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 33,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "-5"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 36,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 5,
+          "a": {
+            "$numberInt": "-5"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 6
+    },
+    {
+      "id": 36,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 6
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 46,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "5"
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 46,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "5"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 49,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 6,
+          "a": {
+            "$numberLong": "5"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 7
+    },
+    {
+      "id": 49,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 7
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 60,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 61,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "-5"
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 61,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "-5"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 65,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 64,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 7,
+          "a": {
+            "$numberLong": "-5"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 72,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 73,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 8
+    },
+    {
+      "id": 64,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 8
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 78,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 8,
+          "a": 0
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 82,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 83,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 88,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 9
+    },
+    {
+      "id": 78,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 9
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 90,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 9,
+          "a": 0
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 91,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 93,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 96,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 100,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 10
+    },
+    {
+      "id": 90,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 10
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 101,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 102,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        "0"
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "0"
+    },
+    {
+      "id": 102,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "0"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "0"
+    },
+    {
+      "id": 105,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 10,
+          "a": {
+            "$numberInt": "0"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 109,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 114,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "0"
+    },
+    {
+      "id": 118,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 119,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909486,
+      "value": 11
+    },
+    {
+      "id": 105,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 11
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 120,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 121,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        -2147483648
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 123,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-2147483648"
+    },
+    {
+      "id": 121,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "-2147483648"
+      },
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-2147483648"
+    },
+    {
+      "id": 124,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 11,
+          "a": {
+            "$numberInt": "-2147483648"
+          }
+        }
+      ],
+      "timestamp": 1769973909486
+    },
+    {
+      "id": 127,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 128,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 132,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "5"
+    },
+    {
+      "id": 133,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 134,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-5"
+    },
+    {
+      "id": 135,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 136,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "0"
+    },
+    {
+      "id": 137,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909486,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 138,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909486,
+      "value": "-2147483648"
+    },
+    {
+      "id": 139,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 140,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 12
+    },
+    {
+      "id": 124,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 12
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 141,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 142,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 12,
+          "a": -2147483648
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 143,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 144,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 145,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 146,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 147,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 148,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 149,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 150,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 151,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 152,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 153,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 154,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 155,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 156,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 13
+    },
+    {
+      "id": 142,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 13
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 157,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 158,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "1152921504606846977"
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 159,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 160,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 158,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "1152921504606846977"
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 162,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 163,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 161,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 13,
+          "a": {
+            "$numberLong": "1152921504606846977"
+          }
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 164,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 165,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 166,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 167,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 168,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 169,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 170,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 171,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 172,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 173,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 174,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 175,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 176,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 177,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 178,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 179,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 14
+    },
+    {
+      "id": 161,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 14
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 180,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 181,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "-1152921504606846977"
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 182,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 183,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 181,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "-1152921504606846977"
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 185,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 186,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 184,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 14,
+          "a": {
+            "$numberLong": "-1152921504606846977"
+          }
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 187,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 188,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 189,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 190,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 191,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 192,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 193,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 194,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 195,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 196,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 197,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 198,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 199,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 200,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 201,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 202,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 203,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 204,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 15
+    },
+    {
+      "id": 184,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 15
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 205,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 206,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 15,
+          "a": null
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 207,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 208,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 209,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 210,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 211,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 212,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 213,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 214,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 215,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 216,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 217,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 218,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 219,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 220,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 221,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 222,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 223,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 224,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 16
+    },
+    {
+      "id": 206,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 16
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 225,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 226,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 16
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 227,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 228,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 229,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 230,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 231,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 232,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 233,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 234,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 235,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 236,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 237,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 238,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 239,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 240,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 241,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 242,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 243,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 244,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 17
+    },
+    {
+      "id": 226,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 17
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 245,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 246,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 17,
+          "a": null
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 247,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 248,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 249,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 250,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 251,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 252,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 253,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 254,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 255,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 256,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 257,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 258,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 259,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 260,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 261,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 262,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 263,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 264,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 18
+    },
+    {
+      "id": 246,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 18
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 265,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 266,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 18
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 267,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 268,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 269,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 270,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 271,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 272,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 273,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 274,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 275,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 276,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 277,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 278,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 279,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 280,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 281,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 282,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 283,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 284,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909487,
+      "value": 19
+    },
+    {
+      "id": 266,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 19
+      },
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 285,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 286,
+      "type": "function_call",
+      "path": "collection.abs_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "a": {
+                "$abs": "$a"
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 288,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 289,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 290,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 291,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 292,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 293,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "5"
+    },
+    {
+      "id": 294,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 295,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-5"
+    },
+    {
+      "id": 296,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 297,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "0"
+    },
+    {
+      "id": 298,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 299,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-2147483648"
+    },
+    {
+      "id": 300,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 301,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 302,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 303,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909487,
+      "value": "-1152921504606846977"
+    },
+    {
+      "id": 287,
+      "type": "aggregate",
+      "collection": "abs_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": "$a"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "a": 5
+        },
+        {
+          "_id": 1,
+          "a": -5
+        },
+        {
+          "_id": 2,
+          "a": 5.5
+        },
+        {
+          "_id": 3,
+          "a": -5.5
+        },
+        {
+          "_id": 4,
+          "a": {
+            "$numberInt": "5"
+          }
+        },
+        {
+          "_id": 5,
+          "a": {
+            "$numberInt": "-5"
+          }
+        },
+        {
+          "_id": 6,
+          "a": {
+            "$numberLong": "5"
+          }
+        },
+        {
+          "_id": 7,
+          "a": {
+            "$numberLong": "-5"
+          }
+        },
+        {
+          "_id": 8,
+          "a": 0
+        },
+        {
+          "_id": 9,
+          "a": 0
+        },
+        {
+          "_id": 10,
+          "a": {
+            "$numberInt": "0"
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "$numberInt": "-2147483648"
+          }
+        },
+        {
+          "_id": 12,
+          "a": -2147483648
+        },
+        {
+          "_id": 13,
+          "a": {
+            "$numberLong": "1152921504606846977"
+          }
+        },
+        {
+          "_id": 14,
+          "a": {
+            "$numberLong": "-1152921504606846977"
+          }
+        },
+        {
+          "_id": 15,
+          "a": null
+        },
+        {
+          "_id": 16
+        },
+        {
+          "_id": 17,
+          "a": null
+        },
+        {
+          "_id": 18
+        }
+      ],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 304,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909487,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 305,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 306,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 307,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 308,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 309,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 286,
+      "type": "function_return",
+      "path": "collection.abs_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 310,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 311,
+      "type": "function_call",
+      "path": "collection.abs_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973909487
+    },
+    {
+      "id": 312,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 313,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 311,
+      "type": "function_return",
+      "path": "collection.abs_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 314,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "5"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 315,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 316,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 314,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "5"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 317,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "5"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 318,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 319,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 317,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "5"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 320,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        2147483648
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 321,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 322,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "2147483648"
+    },
+    {
+      "id": 320,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "2147483648"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 323,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "1152921504606846977"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 324,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 325,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 323,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "1152921504606846977"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 326,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "1152921504606846977"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 327,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 328,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 326,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "1152921504606846977"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 329,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 330,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 331,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 332,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 333,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 334,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 335,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 336,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "2147483648"
+    },
+    {
+      "id": 337,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 338,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 339,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 340,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 342,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 343,
+      "type": "property_get",
+      "path": "collection.abs_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 344,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 345,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 346,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 347,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "5"
+    },
+    {
+      "id": 348,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 349,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "2147483648"
+    },
+    {
+      "id": 350,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 351,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 352,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 353,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "1152921504606846977"
+    },
+    {
+      "id": 341,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "_id": 0,
+          "a": 5
+        },
+        {
+          "_id": 1,
+          "a": 5
+        },
+        {
+          "_id": 2,
+          "a": 5.5
+        },
+        {
+          "_id": 3,
+          "a": 5.5
+        },
+        {
+          "_id": 4,
+          "a": 5
+        },
+        {
+          "_id": 5,
+          "a": 5
+        },
+        {
+          "_id": 6,
+          "a": {
+            "$numberLong": "5"
+          }
+        },
+        {
+          "_id": 7,
+          "a": {
+            "$numberLong": "5"
+          }
+        },
+        {
+          "_id": 8,
+          "a": 0
+        },
+        {
+          "_id": 9,
+          "a": 0
+        },
+        {
+          "_id": 10,
+          "a": 0
+        },
+        {
+          "_id": 11,
+          "a": {
+            "$numberLong": "2147483648"
+          }
+        },
+        {
+          "_id": 12,
+          "a": 2147483648
+        },
+        {
+          "_id": 13,
+          "a": {
+            "$numberLong": "1152921504606846977"
+          }
+        },
+        {
+          "_id": 14,
+          "a": {
+            "$numberLong": "1152921504606846977"
+          }
+        },
+        {
+          "_id": 15,
+          "a": null
+        },
+        {
+          "_id": 16,
+          "a": null
+        },
+        {
+          "_id": 17,
+          "a": null
+        },
+        {
+          "_id": 18,
+          "a": null
+        }
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 355,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 354,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": "string"
+            }
+          }
+        }
+      ],
+      "expectedCode": 28765,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 356,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "-9223372036854775808"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 357,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 358,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "-9223372036854775808"
+    },
+    {
+      "id": 356,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "-9223372036854775808"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 360,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 361,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 362,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "-9223372036854775808"
+    },
+    {
+      "id": 359,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": {
+                "$numberLong": "-9223372036854775808"
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 28680,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 363,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 364,
+      "type": "function_call",
+      "path": "collection.abs_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 364,
+      "type": "function_return",
+      "path": "collection.abs_expr.drop",
+      "result": true,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 365,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 366,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 367,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0,
+          "a": "string"
+        }
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 368,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 369,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909488,
+      "value": 1
+    },
+    {
+      "id": 367,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 371,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 370,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": "$a"
+            }
+          }
+        }
+      ],
+      "expectedCode": 28765,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 372,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 373,
+      "type": "function_call",
+      "path": "collection.abs_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 373,
+      "type": "function_return",
+      "path": "collection.abs_expr.drop",
+      "result": true,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 374,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 375,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 376,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "-9223372036854775808"
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 377,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 378,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "-9223372036854775808"
+    },
+    {
+      "id": 376,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "-9223372036854775808"
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 380,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 381,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "-9223372036854775808"
+    },
+    {
+      "id": 379,
+      "type": "function_call",
+      "path": "collection.abs_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0,
+          "a": {
+            "$numberLong": "-9223372036854775808"
+          }
+        }
+      ],
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 382,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 383,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973909488,
+      "value": "-9223372036854775808"
+    },
+    {
+      "id": 384,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 385,
+      "type": "property_get",
+      "path": "collection.abs_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973909488,
+      "value": 1
+    },
+    {
+      "id": 379,
+      "type": "function_return",
+      "path": "collection.abs_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 387,
+      "type": "property_get",
+      "path": "collection.abs_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973909488,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 386,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": "$a"
+            }
+          }
+        }
+      ],
+      "expectedCode": 28680,
+      "timestamp": 1769973909488
+    },
+    {
+      "id": 388,
+      "type": "test_end",
+      "status": "success",
+      "duration": 8,
+      "timestamp": 1769973909488
+    }
+  ],
+  "state": {
+    "collections": {
+      "abs_expr": [
+        {
+          "_id": 0,
+          "a": {
+            "$numberLong": "-9223372036854775808"
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973909480,
+    "endTime": 1769973909488,
+    "totalOperations": 41
+  }
+}

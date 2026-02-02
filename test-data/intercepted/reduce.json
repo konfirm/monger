@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/reduce.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/reduce.js",
+      "timestamp": 1769973923662
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "reduce",
+      "timestamp": 1769973923664
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "testExpression is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973923664
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973923662,
+    "endTime": 1769973923664,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "source": "concat.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/concat.js",
+  "extractedAt": "2026-02-01T19:18:59.638Z",
+  "setup": {
+    "collections": {
+      "concat": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 12,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

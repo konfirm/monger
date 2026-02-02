@@ -1,0 +1,27 @@
+{
+  "source": "expression_set_field_null_chars.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_set_field_null_chars.js",
+  "extractedAt": "2026-02-01T19:19:17.700Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, foo: \"bar\"}",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.adminCommand({ bulkWrite: 1, ops: [{update: 0, filter: {_id: 1}, updateMods: [{$replaceWith: setFieldExpression}]}], nsInfo: [{ns: `${db.getName(",
+      "line": 77
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

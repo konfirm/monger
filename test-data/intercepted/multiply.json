@@ -1,0 +1,373 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/multiply.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/multiply.js",
+      "timestamp": 1769973921785
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "jstests_aggregation_multiply",
+      "timestamp": 1769973921788
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_multiply",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973921788
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_multiply.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973921788
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_multiply.drop",
+      "result": true,
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 5,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "10"
+    },
+    {
+      "id": 5,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "10"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 8,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        2
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "2"
+    },
+    {
+      "id": 8,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "2"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        20
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "20"
+    },
+    {
+      "id": 11,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "20"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 14,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "10"
+    },
+    {
+      "id": 14,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "10"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 17,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "10"
+    },
+    {
+      "id": 17,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "10"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 20,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "2"
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "2"
+    },
+    {
+      "id": 20,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "2"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 23,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        "20"
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "20"
+    },
+    {
+      "id": 23,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "20"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 26,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921789,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973921789,
+      "value": "10"
+    },
+    {
+      "id": 26,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "10"
+      },
+      "timestamp": 1769973921789
+    },
+    {
+      "id": 29,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973921790
+    }
+  ],
+  "state": {
+    "collections": {
+      "jstests_aggregation_multiply": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973921785,
+    "endTime": 1769973921789,
+    "totalOperations": 9
+  }
+}

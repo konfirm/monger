@@ -1,0 +1,38 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/reverseArray.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:38.805Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "reverseArray",
+      "pipeline": [
+        {
+          "$project": {
+            "reversed": {
+              "$reverseArray": {
+                "$literal": [
+                  1,
+                  2
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697faff63fed258d0e1fb160",
+          "reversed": [
+            2,
+            1
+          ]
+        }
+      ],
+      "duration": 6,
+      "success": true
+    }
+  ],
+  "errors": []
+}

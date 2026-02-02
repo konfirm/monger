@@ -1,0 +1,30 @@
+{
+  "operator": "$_internalJsEmit",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/internal_js_emit.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.059Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$_internalJsEmit": {
+            "this": "$$ROOT"
+          }
+        },
+        "context": {
+          "text": "hello world"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: The map function must be specified."
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

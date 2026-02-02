@@ -1,0 +1,185 @@
+{
+  "operator": "$indexOfBytes",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/indexof_bytes.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.059Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$indexOfBytes": [
+            4,
+            "$item"
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a string as the first argument, found: int"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            4
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a string as the second argument, found: int"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            null
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a string as the second argument, found: null"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "$missing"
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a string as the second argument, found: missing"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            "hello"
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytesrequires an integral starting index, found a value of type: string, with value: \"hello\""
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            -2
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a nonnegative starting index, found: -2"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            1,
+            "hello"
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytesrequires an integral ending index, found a value of type: string, with value: \"hello\""
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            1,
+            -2
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytes requires a nonnegative ending index, found: -2"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            1.4
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytesrequires an integral starting index, found a value of type: double, with value: 1.4"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$indexOfBytes": [
+            "$item",
+            "bar",
+            1,
+            5.2
+          ]
+        },
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $indexOfBytesrequires an integral ending index, found a value of type: double, with value: 5.2"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {},
+        "context": {
+          "item": "foobar foobar"
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 11,
+    "totalDocuments": 1,
+    "errors": 11
+  }
+}

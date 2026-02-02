@@ -1,0 +1,28 @@
+{
+  "source": "map_arrayindexas.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/map_arrayindexas.js",
+  "extractedAt": "2026-02-01T19:19:29.565Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{res: expected}]",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ simple: [1, 2, 3, 4], a4z: [0, 0, 0, 0], nested: [{a: 1}, {a: 2}], mixed: [{a: 1}, {}, {a: 2}, {a: null}], notArray: 1, null: null, }",
+      "line": 21
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

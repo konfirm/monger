@@ -1,0 +1,64 @@
+{
+  "source": "create_uuid.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/create_uuid.js",
+  "extractedAt": "2026-02-01T19:19:06.289Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "resultArray.length",
+      "expected": "docCount",
+      "line": 34
+    },
+    {
+      "type": "eq",
+      "actual": "[\"uuidField\", \"uuidStrField\"]",
+      "expected": "fields",
+      "line": 39
+    },
+    {
+      "type": "eq",
+      "actual": "\"object\"",
+      "expected": "typeof uuidField",
+      "line": 42
+    },
+    {
+      "type": "eq",
+      "actual": "\"string\"",
+      "expected": "typeof uuidStrField",
+      "line": 44
+    },
+    {
+      "type": "eq",
+      "actual": "\"867dee52-c331-484e-92d1-c56479b8e67e\".length",
+      "expected": "uuidStrField.length",
+      "line": 45
+    },
+    {
+      "type": "eq",
+      "actual": "resultArray.length",
+      "expected": "docCount",
+      "line": 71
+    },
+    {
+      "type": "eq",
+      "actual": "set.size",
+      "expected": "docCount * docCount",
+      "line": 74
+    },
+    {
+      "type": "commandWorked",
+      "result": "bulk.execute(",
+      "line": 19
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 8,
+    "errors": 1
+  }
+}

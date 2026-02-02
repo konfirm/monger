@@ -1,0 +1,492 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/sortArray2.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/sortArray2.js",
+      "timestamp": 1769973926036
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "sortArray2",
+      "timestamp": 1769973926039
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.sortArray2",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973926039
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.sortArray2.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973926039
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.sortArray2.drop",
+      "result": true,
+      "timestamp": 1769973926039
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.sortArray2",
+      "property": "insertMany",
+      "valueType": "function",
+      "timestamp": 1769973926039
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.sortArray2.insertMany",
+      "target": "insertMany",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "b": {
+              "c": 1
+            }
+          },
+          {
+            "_id": 1,
+            "b": {
+              "c": 2
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973926040
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.sortArray2.insertMany.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926041,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.sortArray2.insertMany.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973926041,
+      "value": 2
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.sortArray2.insertMany",
+      "result": {
+        "nInserted": 2
+      },
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.sortArray2",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.sortArray2.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$sort": {
+              "b.c": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "sortArray2",
+      "pipeline": [
+        {
+          "$sort": {
+            "b.c": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926041,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.sortArray2.aggregate",
+      "result": {},
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.sortArray2.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.sortArray2.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.sortArray2",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 23,
+      "type": "function_call",
+      "path": "collection.sortArray2.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$group": {
+              "_id": null,
+              "arr": {
+                "$push": "$$ROOT"
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "sorted": {
+                "$sortArray": {
+                  "input": "$arr",
+                  "sortBy": {
+                    "b.c": 1
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 24,
+      "type": "aggregate",
+      "collection": "sortArray2",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": null,
+            "arr": {
+              "$push": "$$ROOT"
+            }
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "sorted": {
+              "$sortArray": {
+                "input": "$arr",
+                "sortBy": {
+                  "b.c": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926041,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 23,
+      "type": "function_return",
+      "path": "collection.sortArray2.aggregate",
+      "result": {},
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 32,
+      "type": "function_call",
+      "path": "collection.sortArray2.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 32,
+      "type": "function_return",
+      "path": "collection.sortArray2.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973926041
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973926042
+    },
+    {
+      "id": 36,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": 1,
+      "expected": 0,
+      "timestamp": 1769973926042
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "collection.sortArray2.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973926042
+    },
+    {
+      "id": 38,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'sorted')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973926042
+    }
+  ],
+  "state": {
+    "collections": {
+      "sortArray2": [
+        {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926036,
+    "endTime": 1769973926042,
+    "totalOperations": 6
+  }
+}

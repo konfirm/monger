@@ -1,0 +1,70 @@
+{
+  "source": "internal_js_emit.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/internal_js_emit.js",
+  "extractedAt": "2026-02-01T19:19:25.300Z",
+  "setup": {
+    "collections": {
+      "js_emit_expr": [
+        {
+          "text": "hello world"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "js_emit_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "emits": {
+              "$_internalJsEmit": {
+                "this": "$$ROOT"
+              }
+            },
+            "_id": 0
+          }
+        },
+        {
+          "$unwind": "$emits"
+        },
+        {
+          "$replaceRoot": {
+            "newRoot": "$emits"
+          }
+        }
+      ],
+      "documents": [
+        {
+          "text": "hello world"
+        }
+      ],
+      "timestamp": 1769973565118
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({text: \"hello world\"}",
+      "line": 34
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({text: \"mongo db\"}",
+      "line": 45
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({text: 5}",
+      "line": 73
+    }
+  ],
+  "meta": {
+    "totalOperations": 26,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

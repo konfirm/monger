@@ -1,0 +1,128 @@
+{
+  "source": "avg_and_sum.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/avg_and_sum.js",
+  "extractedAt": "2026-02-01T19:18:55.341Z",
+  "setup": {
+    "collections": {
+      "collection": [
+        {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$avg": "$null"
+          }
+        }
+      },
+      "documents": [
+        {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        }
+      ],
+      "timestamp": 1769973535153
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$avg: field}}}",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$sum: field}}}",
+      "line": 19
+    }
+  ],
+  "meta": {
+    "totalOperations": 28,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "arithmetic_constant_folding.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js",
+  "extractedAt": "2026-02-01T19:18:53.394Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "processedPipeline[0].$group._id",
+      "expected": "wrapLits(expected",
+      "line": 175
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.adminCommand({\"enableSharding\": db.getName(",
+      "line": 16
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

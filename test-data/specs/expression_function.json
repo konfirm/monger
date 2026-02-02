@@ -1,0 +1,85 @@
+{
+  "source": "expression_function.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_function.js",
+  "extractedAt": "2026-02-01T19:19:15.338Z",
+  "setup": {
+    "collections": {
+      "expression_function": [
+        {
+          "value": 0
+        },
+        {
+          "value": 1
+        },
+        {
+          "value": 2
+        },
+        {
+          "value": 3
+        },
+        {
+          "value": 4
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 27,
+      "type": "aggregate",
+      "collection": "expression_function",
+      "pipeline": [
+        {
+          "$project": {
+            "newValue": {
+              "$function": {
+                "args": [
+                  "$value",
+                  -1
+                ],
+                "lang": "js"
+              }
+            },
+            "_id": 0
+          }
+        }
+      ],
+      "documents": [
+        {
+          "value": 0
+        },
+        {
+          "value": 1
+        },
+        {
+          "value": 2
+        },
+        {
+          "value": 3
+        },
+        {
+          "value": 4
+        }
+      ],
+      "timestamp": 1769973555157
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({value: i}",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({values: [i, i * 2]}",
+      "line": 45
+    }
+  ],
+  "meta": {
+    "totalOperations": 46,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

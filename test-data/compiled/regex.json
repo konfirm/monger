@@ -1,0 +1,4016 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/regex.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.079Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(m(p))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 8
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(m(p))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "((S)(i)(m)(p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "((S)(i)(m)(p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(S)(i)(m)((p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(S)(i)(m)((p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 1,
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 33",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 1,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 82",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "camel",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 83",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "camel",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 84",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "camel",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 91",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "Foo.*line"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 92",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "Foo.*line"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 93",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "Foo.*line"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 94",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "Foo.*line",
+            "options": "s"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 95",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "Foo.*line",
+            "options": "s"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 96",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "Foo.*line",
+            "options": "s"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 97",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "F o o # a comment"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 98",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "F o o # a comment"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 99",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "F o o # a comment"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 100",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "F o o # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 101",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "F o o # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 102",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "F o o # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 103",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "F o o # a comment \n\n# ignored",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 104",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "F o o # a comment \n\n# ignored",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 105",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "F o o # a comment \n\n# ignored",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 106",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(F o o) # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 107",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(F o o) # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 108",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(F o o) # a comment",
+            "options": "x"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 109",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 110",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 111",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 112",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 113",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 114",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "$pattern"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 115",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": ""
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 116",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": ""
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 117",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": ""
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 118",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(missing)|()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 119",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(missing)|()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 120",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(missing)|()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 121",
+        "query": {
+          "$regexFindAll": {
+            "input": "bbbb",
+            "regex": "()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": [
+              {
+                "match": "",
+                "idx": 0,
+                "captures": [
+                  ""
+                ]
+              },
+              {
+                "match": "",
+                "idx": 1,
+                "captures": [
+                  ""
+                ]
+              },
+              {
+                "match": "",
+                "idx": 2,
+                "captures": [
+                  ""
+                ]
+              },
+              {
+                "match": "",
+                "idx": 3,
+                "captures": [
+                  ""
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 122",
+        "query": {
+          "$regexFind": {
+            "input": "bbbb",
+            "regex": "()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": {
+              "match": "",
+              "idx": 0,
+              "captures": [
+                ""
+              ]
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 123",
+        "query": {
+          "$regexMatch": {
+            "input": "bbbb",
+            "regex": "()"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": true
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 127",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 129",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 133",
+        "query": {
+          "$regexFindAll": {
+            "input": null,
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 135",
+        "query": {
+          "$regexMatch": {
+            "input": null,
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 136",
+        "query": {
+          "$regexFindAll": {
+            "input": "$missingField",
+            "regex": "$missingField",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 138",
+        "query": {
+          "$regexMatch": {
+            "input": "$missingField",
+            "regex": "$missingField",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 139",
+        "query": {
+          "$regexFindAll": {
+            "input": "$missingField",
+            "regex": "$$REMOVE",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 141",
+        "query": {
+          "$regexMatch": {
+            "input": "$missingField",
+            "regex": "$$REMOVE",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 142",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=3)(fé)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 143",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=3)(fé)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 144",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=3)(fé)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 145",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*LF)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 146",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*LF)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 147",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*LF)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 148",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*CR)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 149",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*CR)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 150",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*CR)ab.cd"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 151",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 152",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 153",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 154",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "té"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 155",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "té"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 156",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "té"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 163",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "\\p{Hangul}"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 164",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "\\p{Hangul}"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 165",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "\\p{Hangul}"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 166",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "\\p{Latin}+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 167",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "\\p{Latin}+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 168",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "\\p{Latin}+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 169",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UTF8)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 170",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UTF8)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 171",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UTF8)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 172",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UTF)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 173",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UTF)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 174",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UTF)༤"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 175",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UTF8)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 176",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UTF8)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 177",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UTF8)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 178",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UTF)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 179",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UTF)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 180",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UTF)(44)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 181",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 182",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 183",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UCP)^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 184",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:digit:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 185",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:digit:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 186",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:digit:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 187",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UCP)[[:digit:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 188",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UCP)[[:digit:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 189",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UCP)[[:digit:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 190",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:alpha:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 191",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:alpha:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 192",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "(*UCP)^[[:alpha:]]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 193",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 194",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 195",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "^(\\w+)"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 196",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "^[[:digit:]]"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 197",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "^[[:digit:]]"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 198",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "^[[:digit:]]"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 199",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 200",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 201",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 202",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$",
+            "options": "u"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 203",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$",
+            "options": "u"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 204",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": "^[[:alpha:]]+$",
+            "options": "u"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 205",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFindAll": {
+                  "input": "$a",
+                  "regex": "(str.*?[0-9])"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": []
+          },
+          {
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 207",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexMatch": {
+                  "input": "$a",
+                  "regex": "(str.*?[0-9])"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": false
+          },
+          {
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 208",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFindAll": {
+                  "input": "$a",
+                  "regex": "(^.*[0-2]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": []
+          },
+          {
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 210",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexMatch": {
+                  "input": "$a",
+                  "regex": "(^.*[0-2]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": false
+          },
+          {
+            "matches": false
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 211",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFindAll": {
+                  "input": "$a",
+                  "regex": "(^.*[7-9]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": []
+          },
+          {
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 213",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexMatch": {
+                  "input": "$a",
+                  "regex": "(^.*[7-9]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": false
+          },
+          {
+            "matches": false
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 214",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFindAll": {
+                  "input": "$a",
+                  "regex": "$regex"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": []
+          },
+          {
+            "matches": []
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 216",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexMatch": {
+                  "input": "$a",
+                  "regex": "$regex"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": false
+          },
+          {
+            "matches": false
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(m(p))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "((S)(i)(m)(p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "(S)(i)(m)((p)(l)(e))"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 32",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 1,
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 128",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 134",
+        "query": {
+          "$regexFind": {
+            "input": null,
+            "regex": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 137",
+        "query": {
+          "$regexFind": {
+            "input": "$missingField",
+            "regex": "$missingField",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 140",
+        "query": {
+          "$regexFind": {
+            "input": "$missingField",
+            "regex": "$$REMOVE",
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "matches": null
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 206",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFind": {
+                  "input": "$a",
+                  "regex": "(str.*?[0-9])"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": null
+          },
+          {
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 209",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFind": {
+                  "input": "$a",
+                  "regex": "(^.*[0-2]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": null
+          },
+          {
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 212",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFind": {
+                  "input": "$a",
+                  "regex": "(^.*[7-9]$)"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": null
+          },
+          {
+            "matches": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 215",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "matches": {
+                "$regexFind": {
+                  "input": "$a",
+                  "regex": "$regex"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "matches": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": [
+          {
+            "matches": null
+          },
+          {
+            "matches": null
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "errors": [
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 34",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 35",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 36",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 37",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 38",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 39",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 40",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 41",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 42",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 43",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 44",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 45",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 46",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 47",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 48",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 49",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 50",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 51",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 52",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 53",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 54",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 55",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 56",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 57",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 58",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 59",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 60",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 61",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 62",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 63",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 64",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 65",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 66",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 67",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 68",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 69",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 70",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 71",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 72",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 73",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 74",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 75",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 76",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 77",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 78",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 79",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {},
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 80",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {},
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 81",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {},
+            "options": "i"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 85",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 86",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 87",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 88",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 89",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 90",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 124",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 125",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 126",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 130",
+        "query": {
+          "$regexFindAll": {
+            "input": null,
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 131",
+        "query": {
+          "$regexFind": {
+            "input": null,
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 132",
+        "query": {
+          "$regexMatch": {
+            "input": null,
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 157",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 158",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 159",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 160",
+        "query": {
+          "$regexFindAll": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 161",
+        "query": {
+          "$regexFind": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 162",
+        "query": {
+          "$regexMatch": {
+            "input": "$text",
+            "regex": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+        }
+      },
+      {
+        "description": "Aggregate operation 217",
+        "query": {
+          "$cond": [
+            {
+              "$eq": [
+                {
+                  "$regexFindAll": {
+                    "input": "$level",
+                    "regex": {}
+                  }
+                },
+                []
+              ]
+            },
+            "REDACTED",
+            "$info"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "level": "Public Knowledge",
+          "info": "Company Name"
+        },
+        "expected": {
+          "error": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 217,
+    "totalDocuments": 2,
+    "errors": 88
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/percentile_expression_syntax.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/percentile_expression_syntax.js",
+      "timestamp": 1769973923127
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_percentile",
+      "timestamp": 1769973923130
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_percentile",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973923130
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_percentile.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973923131
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_percentile.drop",
+      "result": true,
+      "timestamp": 1769973923131
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.expression_percentile",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973923131
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.expression_percentile.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "k1": 3,
+            "k2": 2,
+            "k3": "hi",
+            "k4": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      ],
+      "timestamp": 1769973923131
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.expression_percentile.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923132,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.expression_percentile.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973923132,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.expression_percentile.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973923132
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.expression_percentile",
+      "property": "runCommand",
+      "valueType": "undefined",
+      "timestamp": 1769973923133,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "test_error",
+      "error": {
+        "message": "coll.runCommand is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973923133
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_percentile": [
+        {
+          "_id": 0,
+          "k1": 3,
+          "k2": 2,
+          "k3": "hi",
+          "k4": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973923127,
+    "endTime": 1769973923133,
+    "totalOperations": 2
+  }
+}

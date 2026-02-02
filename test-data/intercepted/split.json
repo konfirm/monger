@@ -1,0 +1,110 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/split.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/split.js",
+      "timestamp": 1769973926170
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "split",
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.split",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.split.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.split.drop",
+      "result": true,
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.split",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.split.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973926174
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.split.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926175,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.split.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973926175,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.split.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973926175
+    },
+    {
+      "id": 9,
+      "type": "test_error",
+      "error": {
+        "message": "testExpression is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973926175
+    }
+  ],
+  "state": {
+    "collections": {
+      "split": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926170,
+    "endTime": 1769973926175,
+    "totalOperations": 2
+  }
+}

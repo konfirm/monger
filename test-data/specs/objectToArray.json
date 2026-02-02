@@ -1,0 +1,373 @@
+{
+  "source": "objectToArray.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/objectToArray.js",
+  "extractedAt": "2026-02-01T19:19:34.751Z",
+  "setup": {
+    "collections": {
+      "object_to_array_expr": [
+        {
+          "_id": 16
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subDoc": {
+            "a": 1,
+            "b": 2,
+            "c": "foo"
+          }
+        }
+      ],
+      "timestamp": 1769973574558
+    },
+    {
+      "id": 36,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "subDoc": {
+            "y": []
+          }
+        }
+      ],
+      "timestamp": 1769973574559
+    },
+    {
+      "id": 61,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 2,
+          "subDoc": {
+            "a": 1,
+            "b": {
+              "d": "string"
+            },
+            "c": [
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      "timestamp": 1769973574559
+    },
+    {
+      "id": 86,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 3,
+          "subDoc": {}
+        }
+      ],
+      "timestamp": 1769973574559
+    },
+    {
+      "id": 111,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "document": {
+              "$objectToArray": "$$ROOT"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 4,
+          "a": 1,
+          "b": 2,
+          "c": 3
+        }
+      ],
+      "timestamp": 1769973574559
+    },
+    {
+      "id": 143,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "document": {
+              "$objectToArray": {
+                "dayOfWeek": {
+                  "$dayOfWeek": "$date"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 5,
+          "date": {
+            "$date": "2017-01-24T00:00:00"
+          }
+        }
+      ],
+      "timestamp": 1769973574559
+    },
+    {
+      "id": 256,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 14,
+          "subDoc": null
+        }
+      ],
+      "timestamp": 1769973574561
+    },
+    {
+      "id": 281,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 15
+        }
+      ],
+      "timestamp": 1769973574561
+    },
+    {
+      "id": 306,
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 16
+        }
+      ],
+      "timestamp": 1769973574561
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ { _id: 0, expanded: [ {\"k\": \"a\", \"v\": 1}, {\"k\": \"b\", \"v\": 2}, {\"k\": \"c\", \"v\": \"foo\"}, ], }, ]",
+      "line": 14
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 1, expanded: [{\"k\": \"y\", \"v\": []}]}]",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ { _id: 2, expanded: [ {\"k\": \"a\", \"v\": 1}, {\"k\": \"b\", \"v\": {\"d\": \"string\"}}, {\"k\": \"c\", \"v\": [1, 2]}, ], }, ]",
+      "line": 33
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 3, expanded: []}]",
+      "line": 47
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ { _id: 4, document: [ {\"k\": \"_id\", \"v\": 4}, {\"k\": \"a\", \"v\": 1}, {\"k\": \"b\", \"v\": 2}, {\"k\": \"c\", \"v\": 3}, ], }, ]",
+      "line": 53
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 5, document: [{\"k\": \"dayOfWeek\", \"v\": 3}]}]",
+      "line": 68
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 14, expanded: null}]",
+      "line": 107
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 15, expanded: null}]",
+      "line": 112
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 16, expanded: null}]",
+      "line": 117
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, subDoc: {\"a\": 1, \"b\": 2, \"c\": \"foo\"}}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, subDoc: {\"y\": []}}",
+      "line": 26
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, subDoc: {\"a\": 1, \"b\": {\"d\": \"string\"}, \"c\": [1, 2]}}",
+      "line": 31
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, subDoc: {}}",
+      "line": 45
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, \"a\": 1, \"b\": 2, \"c\": 3}",
+      "line": 51
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, \"date\": ISODate(\"2017-01-24T00:00:00\"",
+      "line": 66
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, subDoc: \"string\"}",
+      "line": 72
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, subDoc: ObjectId(",
+      "line": 76
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, subDoc: NumberLong(0",
+      "line": 80
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, subDoc: []}",
+      "line": 84
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, subDoc: [0]}",
+      "line": 88
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 11, subDoc: [\"string\"]}",
+      "line": 92
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 12, subDoc: [{\"a\": \"b\"}]}",
+      "line": 96
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 13, subDoc: NaN}",
+      "line": 100
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 14, subDoc: null}",
+      "line": 105
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 15, subDoc: undefined}",
+      "line": 110
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 16}",
+      "line": 115
+    }
+  ],
+  "meta": {
+    "totalOperations": 377,
+    "totalAssertions": 26,
+    "errors": 0
+  }
+}

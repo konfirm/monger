@@ -1,0 +1,16 @@
+{
+  "source": "reduce.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/reduce.js",
+  "extractedAt": "2026-02-01T19:19:38.972Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

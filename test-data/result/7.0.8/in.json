@@ -1,0 +1,38 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/in.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:19.160Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "in",
+      "pipeline": {
+        "$project": {
+          "included": {
+            "$in": [
+              "$elementField",
+              {
+                "$literal": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

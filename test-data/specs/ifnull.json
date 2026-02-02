@@ -1,0 +1,98 @@
+{
+  "source": "ifnull.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/ifnull.js",
+  "extractedAt": "2026-02-01T19:19:22.472Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_ifnull": [
+        {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "my_false": false,
+          "my_str": "",
+          "my_null": null,
+          "my_obj": {},
+          "my_list": [],
+          "my_list_of_docs": [
+            {
+              "z": 1
+            },
+            {
+              "z": 2
+            }
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 17,
+      "type": "aggregate",
+      "collection": "jstests_aggregation_ifnull",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "a": {
+            "$ifNull": [
+              "$one",
+              "$two"
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "my_false": false,
+          "my_str": "",
+          "my_null": null,
+          "my_obj": {},
+          "my_list": [],
+          "my_list_of_docs": [
+            {
+              "z": 1
+            },
+            {
+              "z": 2
+            }
+          ]
+        }
+      ],
+      "timestamp": 1769973562288
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "t.insertOne({ zero: 0, one: 1, two: 2, three: 3, my_false: false, my_str: \"\", my_null: null, my_undefined: undefined, my_obj: {}, my_list: [], my_list_of_docs: [{z: 1}, {z: 2}], }",
+      "line": 5
+    },
+    {
+      "type": "commandWorked",
+      "result": "t.insertOne({d: \"foo\"}",
+      "line": 99
+    },
+    {
+      "type": "commandWorked",
+      "result": "t.updateMany({}, {$set: {b: \"bar\"}}",
+      "line": 101
+    },
+    {
+      "type": "commandWorked",
+      "result": "t.insertOne({three: 3, my_list_of_docs: [{z: 1}, {z: 2}]}",
+      "line": 107
+    }
+  ],
+  "meta": {
+    "totalOperations": 33,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

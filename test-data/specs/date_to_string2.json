@@ -1,0 +1,38 @@
+{
+  "source": "date_to_string2.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_to_string2.js",
+  "extractedAt": "2026-02-01T19:19:12.041Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res[0].formatted",
+      "expected": "expectedStr",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: date}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: dateVal}",
+      "line": 31
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

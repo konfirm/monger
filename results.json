@@ -1,0 +1,2461 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/concat_arrays.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:37:32.640Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 9,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                [
+                  0
+                ],
+                "$int_arr",
+                [
+                  5,
+                  6,
+                  7
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$str_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$obj_arr",
+                "$obj_arr",
+                "$null_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$str_arr",
+                "$nested_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 8,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$obj_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$obj_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$obj_arr",
+                [
+                  {
+                    "o": 123,
+                    "b": 1
+                  },
+                  {
+                    "y": "o",
+                    "d": "a"
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                [
+                  null
+                ],
+                "$null_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": "$one_null_arr"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_arr",
+                "$one_null_arr",
+                "$int_arr",
+                "$null_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                {
+                  "$concatArrays": "$int_arr"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                {
+                  "$concatArrays": "$int_arr"
+                },
+                {
+                  "$concatArrays": {
+                    "$concatArrays": "$str_arr"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$str_arr",
+                {
+                  "$filter": {
+                    "input": "$int_arr",
+                    "as": "num",
+                    "cond": {
+                      "$and": [
+                        {
+                          "$gte": [
+                            "$$num",
+                            2
+                          ]
+                        },
+                        {
+                          "$lte": [
+                            "$$num",
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "$int_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$str_arr",
+                {
+                  "$filter": {
+                    "input": [],
+                    "cond": {
+                      "$isArray": [
+                        {
+                          "$concatArrays": [
+                            [],
+                            "$$this"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": []
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                null,
+                "$int_arr",
+                "$str_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                null,
+                "$str_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_val",
+                "$str_arr",
+                "$int_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$str_arr",
+                "$null_val",
+                "$int_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$not_a_field"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$not_a_field",
+                "$str_arr",
+                "$int_arr"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$not_a_field"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$not_a_field",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_val",
+                "$not_a_field"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                {
+                  "$concatArrays": "$int_arr"
+                },
+                null,
+                {
+                  "$concatArrays": {
+                    "$concatArrays": [
+                      "$obj_arr",
+                      "$str_arr"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$null_val",
+                "$int_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$null_val",
+                null,
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$dbl_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$str_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                123
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $concatArrays only supports arrays, not int",
+        "code": 28664
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "some_val",
+                [
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $concatArrays only supports arrays, not string",
+        "code": 28664
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$obj_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$int_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$dbl_arr",
+                "$dbl_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$dbl_val",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "some_string_value",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$dbl_val",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                "$int_val",
+                "$not_a_field"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_val",
+                "$not_a_field"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_val",
+                "$not_a_field",
+                "$null_val"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$int_arr",
+                32
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$arr1",
+                "$arr2"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": [
+            42,
+            35,
+            197865432,
+            "albatross",
+            "abbacus",
+            "alien"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": [
+            1,
+            "albatross",
+            "abbacus",
+            "alien"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            23
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": [
+            "foo",
+            "bar"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": []
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "projection_expr_concat_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "f": {
+              "$concatArrays": [
+                "$arr1",
+                [
+                  1,
+                  2,
+                  3
+                ],
+                "$arr2"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fab7ca959f16a9d0e4d57",
+          "f": [
+            42,
+            35,
+            197865432,
+            1,
+            2,
+            3,
+            "albatross",
+            "abbacus",
+            "alien"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d58",
+          "f": [
+            1,
+            1,
+            2,
+            3,
+            "albatross",
+            "abbacus",
+            "alien"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d59",
+          "f": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            23,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5a",
+          "f": [
+            1,
+            2,
+            3,
+            "foo",
+            "bar"
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5b",
+          "f": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5c",
+          "f": null
+        },
+        {
+          "_id": "697fab7ca959f16a9d0e4d5d",
+          "f": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $concatArrays only supports arrays, not int"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $concatArrays only supports arrays, not string"
+    }
+  ]
+}

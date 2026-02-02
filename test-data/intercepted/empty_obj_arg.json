@@ -1,0 +1,78 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/empty_obj_arg.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/empty_obj_arg.js",
+      "timestamp": 1769973916632
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "s6232",
+      "timestamp": 1769973916636
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.s6232",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973916636
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.s6232.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973916636
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.s6232.drop",
+      "result": true,
+      "timestamp": 1769973916636
+    },
+    {
+      "id": 5,
+      "type": "db_access",
+      "property": "s6232",
+      "timestamp": 1769973916636
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.s6232",
+      "property": "save",
+      "valueType": "undefined",
+      "timestamp": 1769973916636,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "test_error",
+      "error": {
+        "message": "db.s6232.save is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973916636
+    }
+  ],
+  "state": {
+    "collections": {
+      "s6232": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973916632,
+    "endTime": 1769973916636,
+    "totalOperations": 1
+  }
+}

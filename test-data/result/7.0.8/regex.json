@@ -1,0 +1,6045 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/regex.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:34.475Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(m(p))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 8,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(m(p))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(m(p))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 112
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 113
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "((S)(i)(m)(p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "((S)(i)(m)(p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "((S)(i)(m)(p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(S)(i)(m)((p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(S)(i)(m)((p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(S)(i)(m)((p)(l)(e))"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 1,
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 1,
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "([a-zA-Z0-9._-]+)@[a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 1,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 6
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 6
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 6
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "capture_group"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 7
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 7
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 7
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {},
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {},
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {},
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "camel",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "camel",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "camel",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "Foo.*line"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "Foo.*line"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "Foo.*line"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "Foo.*line",
+                "options": "s"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "Foo.*line",
+                "options": "s"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "Foo.*line",
+                "options": "s"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "F o o # a comment"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "F o o # a comment"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "F o o # a comment"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "F o o # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "F o o # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "F o o # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "F o o # a comment \n\n# ignored",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "F o o # a comment \n\n# ignored",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "F o o # a comment \n\n# ignored",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(F o o) # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(F o o) # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(F o o) # a comment",
+                "options": "x"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 10
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 10
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 10
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "$pattern"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": ""
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": ""
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": ""
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(missing)|()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(missing)|()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": "Empty input"
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(missing)|()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "bbbb",
+                "regex": "()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": [
+            {
+              "match": "",
+              "idx": 0,
+              "captures": [
+                ""
+              ]
+            },
+            {
+              "match": "",
+              "idx": 1,
+              "captures": [
+                ""
+              ]
+            },
+            {
+              "match": "",
+              "idx": 2,
+              "captures": [
+                ""
+              ]
+            },
+            {
+              "match": "",
+              "idx": 3,
+              "captures": [
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "bbbb",
+                "regex": "()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": {
+            "match": "",
+            "idx": 0,
+            "captures": [
+              ""
+            ]
+          }
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "bbbb",
+                "regex": "()"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": true
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": null,
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": null,
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": null,
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": null,
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": null,
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": null,
+                "regex": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$missingField",
+                "regex": "$missingField",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$missingField",
+                "regex": "$missingField",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$missingField",
+                "regex": "$missingField",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$missingField",
+                "regex": "$$REMOVE",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$missingField",
+                "regex": "$$REMOVE",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$missingField",
+                "regex": "$$REMOVE",
+                "options": "i"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=3)(fé)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=3)(fé)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=3)(fé)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*LF)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*LF)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*LF)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*CR)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*CR)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*CR)ab.cd"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*LIMIT_MATCH=5)(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "té"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "té"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "té"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": {}
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "\\p{Hangul}"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "\\p{Hangul}"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "\\p{Hangul}"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "\\p{Latin}+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "\\p{Latin}+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "\\p{Latin}+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UTF8)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UTF8)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UTF8)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UTF)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UTF)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UTF)༤"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UTF8)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UTF8)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UTF8)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UTF)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UTF)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UTF)(44)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UCP)^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:digit:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:digit:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:digit:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UCP)[[:digit:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UCP)[[:digit:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UCP)[[:digit:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 13
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:alpha:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 13
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:alpha:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 13
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "(*UCP)^[[:alpha:]]+"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "^(\\w+)"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "^[[:digit:]]"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "^[[:digit:]]"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "^[[:digit:]]"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFindAll": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$",
+                "options": "u"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexFind": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$",
+                "options": "u"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "matches": {
+              "$regexMatch": {
+                "input": "$text",
+                "regex": "^[[:alpha:]]+$",
+                "options": "u"
+              }
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFindAll": {
+                "input": "$a",
+                "regex": "(str.*?[0-9])"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": []
+        },
+        {
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFind": {
+                "input": "$a",
+                "regex": "(str.*?[0-9])"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": null
+        },
+        {
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexMatch": {
+                "input": "$a",
+                "regex": "(str.*?[0-9])"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": false
+        },
+        {
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFindAll": {
+                "input": "$a",
+                "regex": "(^.*[0-2]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": []
+        },
+        {
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFind": {
+                "input": "$a",
+                "regex": "(^.*[0-2]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": null
+        },
+        {
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexMatch": {
+                "input": "$a",
+                "regex": "(^.*[0-2]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": false
+        },
+        {
+          "matches": false
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFindAll": {
+                "input": "$a",
+                "regex": "(^.*[7-9]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": []
+        },
+        {
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFind": {
+                "input": "$a",
+                "regex": "(^.*[7-9]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": null
+        },
+        {
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexMatch": {
+                "input": "$a",
+                "regex": "(^.*[7-9]$)"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": false
+        },
+        {
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFindAll": {
+                "input": "$a",
+                "regex": "$regex"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": []
+        },
+        {
+          "matches": []
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexFind": {
+                "input": "$a",
+                "regex": "$regex"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": null
+        },
+        {
+          "matches": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "matches": {
+              "$regexMatch": {
+                "input": "$a",
+                "regex": "$regex"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "matches": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "matches": false
+        },
+        {
+          "matches": false
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "regex_find_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "information": {
+              "$cond": [
+                {
+                  "$eq": [
+                    {
+                      "$regexFindAll": {
+                        "input": "$level",
+                        "regex": {}
+                      }
+                    },
+                    []
+                  ]
+                },
+                "REDACTED",
+                "$info"
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex",
+        "code": 51105
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFind needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexMatch needs 'regex' to be of type string or regex"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Failed to optimize pipeline :: caused by :: $regexFindAll needs 'regex' to be of type string or regex"
+    }
+  ]
+}

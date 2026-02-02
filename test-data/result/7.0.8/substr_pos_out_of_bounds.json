@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/substr_pos_out_of_bounds.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:46.238Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

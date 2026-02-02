@@ -1,0 +1,22 @@
+{
+  "source": "strings_null_byte.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/strings_null_byte.js",
+  "extractedAt": "2026-02-01T19:19:50.018Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "c.insertOne({foo: \"as\\0df\"}",
+      "line": 6
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

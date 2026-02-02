@@ -1,0 +1,34 @@
+{
+  "source": "cmp_literal.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/cmp_literal.js",
+  "extractedAt": "2026-02-01T19:18:58.220Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.cursor.firstBatch[0].stringis$string",
+      "expected": "true",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "result.cursor.firstBatch[0].stringis$string",
+      "expected": "false",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({string: \"foo\"}",
+      "line": 4
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

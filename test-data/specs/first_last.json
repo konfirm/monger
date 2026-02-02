@@ -1,0 +1,127 @@
+{
+  "source": "first_last.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/first_last.js",
+  "extractedAt": "2026-02-01T19:19:20.568Z",
+  "setup": {
+    "collections": {
+      "expression_first_last": [
+        {
+          "_id": 0,
+          "a": []
+        },
+        {
+          "_id": 1,
+          "a": [
+            "A"
+          ]
+        },
+        {
+          "_id": 2,
+          "a": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "_id": 3,
+          "a": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "_id": 4,
+          "a": null
+        },
+        {
+          "_id": 5
+        },
+        {
+          "_id": 6
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "expression_first_last",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "f": {
+              "$first": "$a"
+            },
+            "l": {
+              "$last": "$a"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "a": []
+        },
+        {
+          "_id": 1,
+          "a": [
+            "A"
+          ]
+        },
+        {
+          "_id": 2,
+          "a": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "_id": 3,
+          "a": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "_id": 4,
+          "a": null
+        },
+        {
+          "_id": 5
+        },
+        {
+          "_id": 6
+        }
+      ],
+      "timestamp": 1769973560385
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ // When an array doesn't contain a given index, the result is 'missing', similar to looking up a // nonexistent key in a document. {_id: 0}, {_id: 1, f: \"A\", l: \"A\"}, {_id: 2, f: \"A\", l: \"B\"}, {_id: 3, f: \"A\", l: \"C\"}, // When the input is nullish instead of an array, the result is null. {_id: 4, f: null, l: null}, {_id: 5, f: null, l: null}, {_id: 6, f: null, l: null}, ]",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, a: []}, {_id: 1, a: [\"A\"]}, {_id: 2, a: [\"A\", \"B\"]}, {_id: 3, a: [\"A\", \"B\", \"C\"]}, {_id: 4, a: null}, {_id: 5, a: undefined}, {_id: 6}, ]",
+      "line": 7
+    }
+  ],
+  "meta": {
+    "totalOperations": 31,
+    "totalAssertions": 2,
+    "errors": 0
+  }
+}

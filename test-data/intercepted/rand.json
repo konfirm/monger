@@ -1,0 +1,61 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/rand.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/rand.js",
+      "timestamp": 1769973923262
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_rand",
+      "timestamp": 1769973923266
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_rand",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973923266
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_rand.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973923266
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_rand.drop",
+      "result": true,
+      "timestamp": 1769973923266
+    },
+    {
+      "id": 5,
+      "type": "test_error",
+      "error": {
+        "message": "print is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973923267
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_rand": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973923262,
+    "endTime": 1769973923267,
+    "totalOperations": 1
+  }
+}

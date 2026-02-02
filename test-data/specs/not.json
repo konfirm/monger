@@ -1,0 +1,594 @@
+{
+  "source": "not.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/not.js",
+  "extractedAt": "2026-02-01T19:19:33.807Z",
+  "setup": {
+    "collections": {
+      "not_expr": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 25,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": "$x"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0
+        },
+        {
+          "_id": 1,
+          "x": 2
+        },
+        {
+          "_id": 2,
+          "x": false
+        },
+        {
+          "_id": 3,
+          "x": true
+        },
+        {
+          "_id": 4,
+          "x": null
+        },
+        {
+          "_id": 5,
+          "x": []
+        },
+        {
+          "_id": 6,
+          "x": [
+            false
+          ]
+        },
+        {
+          "_id": 7,
+          "x": [
+            true
+          ]
+        },
+        {
+          "_id": 8,
+          "x": "hello"
+        },
+        {
+          "_id": 9,
+          "x": {
+            "$oid": "5f0627282a63fc000b8fd067"
+          }
+        },
+        {
+          "_id": 10,
+          "x": {
+            "$date": "2021-01-01T00:00:00Z"
+          }
+        },
+        {
+          "_id": 11,
+          "x": {
+            "y": 2,
+            "z": 3
+          }
+        },
+        {
+          "_id": 12
+        }
+      ],
+      "timestamp": 1769973573622
+    },
+    {
+      "id": 54,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": "$x.y"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": [
+            {
+              "y": 0
+            },
+            {
+              "y": 1
+            }
+          ]
+        },
+        {
+          "_id": 1,
+          "x": [
+            {
+              "z": 0
+            },
+            {
+              "z": 1
+            }
+          ]
+        },
+        {
+          "_id": 2,
+          "x": [
+            false
+          ]
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 79,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": "$x.y"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": {
+            "y": 0
+          }
+        },
+        {
+          "_id": 1,
+          "x": {
+            "y": 2
+          }
+        },
+        {
+          "_id": 2,
+          "x": {
+            "y": false
+          }
+        },
+        {
+          "_id": 3,
+          "x": {
+            "y": true
+          }
+        },
+        {
+          "_id": 4,
+          "x": {
+            "y": null
+          }
+        },
+        {
+          "_id": 5,
+          "x": {
+            "y": []
+          }
+        },
+        {
+          "_id": 6,
+          "x": {
+            "y": [
+              false
+            ]
+          }
+        },
+        {
+          "_id": 7,
+          "x": {
+            "y": [
+              true
+            ]
+          }
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 104,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": {
+                "$not": "$x"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 122,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": {
+                "$not": {
+                  "$not": "$x"
+                }
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 140,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": {
+                "$and": [
+                  "$x",
+                  "$y"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 158,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$not": {
+                "$or": [
+                  "$x",
+                  "$y"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 176,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$and": [
+                {
+                  "$not": "$x"
+                },
+                "$y"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 194,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$or": [
+                {
+                  "$not": "$x"
+                },
+                "$y"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    },
+    {
+      "id": 212,
+      "type": "aggregate",
+      "collection": "not_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$not": {
+                        "$gt": [
+                          "$x",
+                          "$y"
+                        ]
+                      }
+                    },
+                    "then": "x"
+                  },
+                  {
+                    "case": {
+                      "$not": {
+                        "$lte": [
+                          "$x",
+                          "$y"
+                        ]
+                      }
+                    },
+                    "then": "y"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": true,
+          "y": false
+        },
+        {
+          "_id": 1,
+          "x": false,
+          "y": true
+        }
+      ],
+      "timestamp": 1769973573623
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: true}, {_id: 1, x: false}, {_id: 2, x: true}, {_id: 3, x: false}, {_id: 4, x: true}, {_id: 5, x: false}, {_id: 6, x: false}, {_id: 7, x: false}, {_id: 8, x: false}, {_id: 9, x: false}, {_id: 10, x: false}, {_id: 11, x: false}, {_id: 12, x: true}, ]",
+      "line": 26
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: false}, {_id: 1, x: false}, {_id: 2, x: false}, ]",
+      "line": 53
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: true}, {_id: 1, x: false}, {_id: 2, x: true}, {_id: 3, x: false}, {_id: 4, x: true}, {_id: 5, x: false}, {_id: 6, x: false}, {_id: 7, x: false}, ]",
+      "line": 75
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: true}, {_id: 1, x: false}, ]",
+      "line": 96
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: false}, {_id: 1, x: true}, ]",
+      "line": 102
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: true}, {_id: 1, x: true}, ]",
+      "line": 108
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: false}, {_id: 1, x: false}, ]",
+      "line": 114
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: false}, {_id: 1, x: true}, ]",
+      "line": 120
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: false}, {_id: 1, x: true}, ]",
+      "line": 126
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, x: \"y\"}, {_id: 1, x: \"x\"}, ]",
+      "line": 148
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: 0}, {_id: 1, x: 2}, {_id: 2, x: false}, {_id: 3, x: true}, {_id: 4, x: null}, {_id: 5, x: []}, // Empty array truthy, $not(x",
+      "line": 7
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: [{y: 0}, {y: 1}]}, // x.y exists, so false. {_id: 1, x: [{z: 0}, {z: 1}]}, // x.y evaluates to [] which is truthy, so false. {_id: 2, x: [false]}, // x.y evaluates to [] which is truthy, so false ]",
+      "line": 44
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: {y: 0}}, {_id: 1, x: {y: 2}}, {_id: 2, x: {y: false}}, {_id: 3, x: {y: true}}, {_id: 4, x: {y: null}}, {_id: 5, x: {y: []}}, // $not(x.y",
+      "line": 61
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: true, y: false}, {_id: 1, x: false, y: true}, ]",
+      "line": 88
+    }
+  ],
+  "meta": {
+    "totalOperations": 258,
+    "totalAssertions": 14,
+    "errors": 0
+  }
+}

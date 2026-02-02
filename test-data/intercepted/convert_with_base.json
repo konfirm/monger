@@ -1,0 +1,139 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/convert_with_base.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/convert_with_base.js",
+      "timestamp": 1769973914068
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_convert_with_base",
+      "timestamp": 1769973914071
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_convert_with_base",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973914071
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_convert_with_base.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_convert_with_base.drop",
+      "result": true,
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 5,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973914072,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973914072,
+      "value": "10"
+    },
+    {
+      "id": 5,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "10"
+      },
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 8,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        10
+      ],
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973914072,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973914072,
+      "value": "10"
+    },
+    {
+      "id": 8,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "10"
+      },
+      "timestamp": 1769973914072
+    },
+    {
+      "id": 11,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914072
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_convert_with_base": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914068,
+    "endTime": 1769973914072,
+    "totalOperations": 3
+  }
+}

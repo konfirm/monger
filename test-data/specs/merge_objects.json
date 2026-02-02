@@ -1,0 +1,1521 @@
+{
+  "source": "merge_objects.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/merge_objects.js",
+  "extractedAt": "2026-02-01T19:19:31.922Z",
+  "setup": {
+    "collections": {
+      "merge_object_expr": [
+        {
+          "obj": {}
+        },
+        {
+          "obj": {
+            "a": 1
+          }
+        },
+        {
+          "obj": {
+            "b": 2
+          }
+        },
+        {
+          "obj": {
+            "subobj": {
+              "x": 1
+            }
+          }
+        },
+        {
+          "obj": {
+            "subobj": {
+              "y": 2
+            }
+          }
+        },
+        {
+          "obj": {
+            "a": 3
+          }
+        },
+        {
+          "obj": {
+            "b": 4
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$subObject",
+                {
+                  "d": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571731
+    },
+    {
+      "id": 33,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$$ROOT",
+                {
+                  "newField": "newValue"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        }
+      ],
+      "timestamp": 1769973571732
+    },
+    {
+      "id": 55,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$$ROOT",
+                {
+                  "a": "newValue"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 77,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {
+                  "a": "defaultValue"
+                },
+                "$$ROOT"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 99,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$replaceRoot": {
+            "newRoot": {
+              "$mergeObjects": [
+                "$$ROOT",
+                "$subObject"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 121,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$subObject",
+                {
+                  "subObject1": {
+                    "d": 1
+                  }
+                },
+                {
+                  "e": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": null
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 177,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 195,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": {
+        "$group": {
+          "_id": 0,
+          "m": {}
+        }
+      },
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571733
+    },
+    {
+      "id": 217,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 10
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": "$nonExistentField"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 239,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": ""
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 261,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 12,
+          "b": 1,
+          "c": 1
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 279,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {},
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 12,
+          "b": 1,
+          "c": 1
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 313,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": {
+              "$in": [
+                13,
+                14,
+                15,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$group": {
+            "_id": "$group",
+            "mergedDocument": {
+              "$mergeObjects": "$obj"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 12,
+          "b": 1,
+          "c": 1
+        },
+        {
+          "_id": 13,
+          "group": 1,
+          "obj": {}
+        },
+        {
+          "_id": 14,
+          "group": 1,
+          "obj": {
+            "a": 2,
+            "b": 2
+          }
+        },
+        {
+          "_id": 15,
+          "group": 1,
+          "obj": {
+            "a": 1,
+            "c": 3
+          }
+        },
+        {
+          "_id": 16,
+          "group": 2,
+          "obj": {
+            "a": 1,
+            "b": 1
+          }
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 335,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 17
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": "$$REMOVE"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "_id": 4,
+          "a": 0,
+          "subObject": {
+            "b": 1,
+            "c": 2
+          }
+        },
+        {
+          "_id": 5,
+          "subObject": {
+            "b": 1,
+            "c": 1
+          }
+        },
+        {
+          "_id": 6,
+          "a": "string"
+        },
+        {
+          "_id": 7,
+          "a": {
+            "b": 1
+          },
+          "c": 1
+        },
+        {
+          "_id": 8,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 9,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 10,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "_id": 12,
+          "b": 1,
+          "c": 1
+        },
+        {
+          "_id": 13,
+          "group": 1,
+          "obj": {}
+        },
+        {
+          "_id": 14,
+          "group": 1,
+          "obj": {
+            "a": 2,
+            "b": 2
+          }
+        },
+        {
+          "_id": 15,
+          "group": 1,
+          "obj": {
+            "a": 1,
+            "c": 3
+          }
+        },
+        {
+          "_id": 16,
+          "group": 2,
+          "obj": {
+            "a": 1,
+            "b": 1
+          }
+        },
+        {
+          "_id": 17,
+          "a": {
+            "b": 2
+          }
+        }
+      ],
+      "timestamp": 1769973571734
+    },
+    {
+      "id": 359,
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$bucketAuto": {
+            "groupBy": "$no_such_field",
+            "buckets": 1,
+            "output": {
+              "result": {
+                "$mergeObjects": "$obj"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "obj": {}
+        },
+        {
+          "obj": {
+            "a": 1
+          }
+        },
+        {
+          "obj": {
+            "b": 2
+          }
+        },
+        {
+          "obj": {
+            "subobj": {
+              "x": 1
+            }
+          }
+        },
+        {
+          "obj": {
+            "subobj": {
+              "y": 2
+            }
+          }
+        },
+        {
+          "obj": {
+            "a": 3
+          }
+        },
+        {
+          "obj": {
+            "b": 4
+          }
+        }
+      ],
+      "timestamp": 1769973571734
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 0, mergedDocument: {b: 1, c: 1, d: 1}}]",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 1, mergedDocument: {_id: 1, a: 0, b: 1, newField: \"newValue\"}}]",
+      "line": 19
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 2, mergedDocument: {_id: 2, a: \"newValue\", b: 1}}]",
+      "line": 26
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 3, mergedDocument: {a: 0, _id: 3, b: 1}}]",
+      "line": 33
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 4, a: 0, subObject: {b: 1, c: 2}, b: 1, c: 2}]",
+      "line": 40
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 5, mergedDocument: {b: 1, c: 1, subObject1: {d: 1}, e: 1}}]",
+      "line": 52
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 8, mergedDocument: {b: null}}]",
+      "line": 70
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 9, mergedDocument: {b: undefined}}]",
+      "line": 77
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 0, m: {}}]",
+      "line": 79
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 10, mergedDocument: {b: 1}}]",
+      "line": 86
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 11, mergedDocument: {b: \"\"}}]",
+      "line": 92
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 12, mergedDocument: {}}]",
+      "line": 97
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 12, mergedDocument: {}}]",
+      "line": 100
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ {_id: 1, mergedDocument: {a: 1, b: 2, c: 3}}, {_id: 2, mergedDocument: {a: 1, b: 1}}, ]",
+      "line": 115
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 17, mergedDocument: {b: 2}}]",
+      "line": 125
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, subObject: {b: 1, c: 1}}",
+      "line": 8
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, a: 0, b: 1}",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, a: 0, b: 1}",
+      "line": 22
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, a: 0, b: 1}",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, a: 0, subObject: {b: 1, c: 2}}",
+      "line": 36
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, subObject: {b: 1, c: 1}}",
+      "line": 43
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, a: \"string\"}",
+      "line": 55
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, a: {b: 1}, c: 1}",
+      "line": 62
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, a: {b: 1}}",
+      "line": 66
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, a: {b: 1}}",
+      "line": 73
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, a: {b: 1}}",
+      "line": 82
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 11, a: {b: 1}}",
+      "line": 88
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 12, b: 1, c: 1}",
+      "line": 95
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 13, group: 1, obj: {}}",
+      "line": 103
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 14, group: 1, obj: {a: 2, b: 2}}",
+      "line": 104
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 15, group: 1, obj: {a: 1, c: 3}}",
+      "line": 105
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 16, group: 2, obj: {a: 1, b: 1}}",
+      "line": 106
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 17, a: {b: 2}}",
+      "line": 121
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {obj: {}}, {obj: {a: 1}}, {obj: {b: 2}}, {obj: {subobj: {x: 1}}}, {obj: {subobj: {y: 2}}}, {obj: {a: 3}}, {obj: {b: 4}}, ]",
+      "line": 131
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ // With 8 docs and 2 buckets, we expect exactly 4 docs in each bucket. // In the first bucket, the documents happen to already be sorted by 'key'. // We expect the last value, a:4 to win. {key: 1, obj: {a: 1}}, {key: 2, obj: {a: 2}}, {key: 3, obj: {a: 3}}, {key: 4, obj: {a: 4}}, // In the second bucket, the documents are not already sorted by 'key'. // We expect the last one a:101 to win, as opposed to the largest/smallest key. {key: 102, obj: {a: 102}}, {key: 103, obj: {a: 103}}, {key: 100, obj: {a: 100}}, {key: 101, obj: {a: 101}}, ]",
+      "line": 166
+    }
+  ],
+  "meta": {
+    "totalOperations": 423,
+    "totalAssertions": 35,
+    "errors": 1
+  }
+}

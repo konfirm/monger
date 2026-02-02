@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/add_with_date.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/add_with_date.js",
+      "timestamp": 1769973910030
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "getSiblingDB",
+      "timestamp": 1769973910033
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973910033
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973910030,
+    "endTime": 1769973910033,
+    "totalOperations": 0
+  }
+}

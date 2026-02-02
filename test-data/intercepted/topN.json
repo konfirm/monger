@@ -1,0 +1,2844 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/topN.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/topN.js",
+      "timestamp": 1769973928206
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "topN_expr",
+      "timestamp": 1769973928208
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973928208
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.topN_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.topN_expr.drop",
+      "result": true,
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.topN_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.topN_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928209,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.topN_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973928209,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.topN_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 0,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928209
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 0,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928210,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 24,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": []
+        }
+      ],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928210
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 42,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            1
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 46,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 5,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 5,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 46,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 55,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 55,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 61,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 60,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 64,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 10,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 10,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 64,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 72,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 73,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 73,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 78,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 82,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    "a",
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  "a",
+                  "b",
+                  "c"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 88,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 82,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 91,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 93,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 91,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 96,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            1
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 100,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 102,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 100,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 109,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 109,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 114,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            0.5
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 118,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 120,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 121,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 123,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 124,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 118,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 127,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 128,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 127,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 133,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 134,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 132,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            0,
+            1
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 135,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 136,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 137,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 138,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 139,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 140,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 141,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 142,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 143,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 136,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 144,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 145,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 146,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 147,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 145,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 148,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 149,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 151,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 152,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 150,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            4,
+            3
+          ]
+        }
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 153,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 154,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    0,
+                    "a",
+                    [
+                      1,
+                      "b"
+                    ],
+                    {
+                      "c": 2
+                    },
+                    0.5
+                  ],
+                  "sortBy": -1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 156,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928211,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 157,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 158,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 159,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 160,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 161,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 154,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 162,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 163,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928211
+    },
+    {
+      "id": 164,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 165,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 163,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 166,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 167,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 169,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 170,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 168,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            [
+              1,
+              "b"
+            ],
+            {
+              "c": 2
+            }
+          ]
+        }
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 171,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 172,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    [
+                      1,
+                      2
+                    ],
+                    [
+                      3,
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    [
+                      3,
+                      6
+                    ]
+                  ],
+                  "sortBy": 1
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 173,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    3,
+                    [
+                      1,
+                      1
+                    ]
+                  ],
+                  [
+                    3,
+                    6
+                  ]
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 174,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 175,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 176,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 177,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 178,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 179,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 172,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 180,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 181,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 182,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 183,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 181,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 184,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 185,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 187,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 188,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 186,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              6
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 189,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 190,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "topN": {
+                "$topN": {
+                  "n": 2,
+                  "input": [
+                    {
+                      "a": 1,
+                      "b": 1
+                    },
+                    {
+                      "a": 2,
+                      "b": 2
+                    },
+                    {
+                      "a": 2,
+                      "b": 1
+                    }
+                  ],
+                  "sortBy": {
+                    "a": 1,
+                    "b": -1
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 191,
+      "type": "aggregate",
+      "collection": "topN_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "topN": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  {
+                    "a": 1,
+                    "b": 1
+                  },
+                  {
+                    "a": 2,
+                    "b": 2
+                  },
+                  {
+                    "a": 2,
+                    "b": 1
+                  }
+                ],
+                "sortBy": {
+                  "a": 1,
+                  "b": -1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 192,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 193,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 194,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 195,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 196,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 197,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 190,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 198,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 199,
+      "type": "function_call",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 200,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 201,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 199,
+      "type": "function_return",
+      "path": "collection.topN_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 202,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 203,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 205,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 206,
+      "type": "property_get",
+      "path": "collection.topN_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 204,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "topN": [
+            {
+              "a": 1,
+              "b": 1
+            },
+            {
+              "a": 2,
+              "b": 2
+            }
+          ]
+        }
+      ],
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 208,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 207,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": 0
+            }
+          }
+        }
+      ],
+      "expectedCode": 721218,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 210,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 209,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "input": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 7212110,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 212,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 211,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": 2
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 7212111,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 214,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 213,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": "2",
+                "input": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721210,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 216,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 215,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": 1.5,
+                "input": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721210,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 218,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 217,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": -1,
+                "input": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721212,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 220,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 219,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": 2,
+                "input": "one"
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721211,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 222,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 221,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": 2,
+                "input": 1
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 721211,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 224,
+      "type": "property_get",
+      "path": "collection.topN_expr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973928212,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 223,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "x": {
+              "$topN": {
+                "n": 2,
+                "input": [
+                  1,
+                  2,
+                  3
+                ],
+                "sortBy": "a"
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 2942507,
+      "timestamp": 1769973928212
+    },
+    {
+      "id": 225,
+      "type": "test_end",
+      "status": "success",
+      "duration": 6,
+      "timestamp": 1769973928212
+    }
+  ],
+  "state": {
+    "collections": {
+      "topN_expr": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928206,
+    "endTime": 1769973928212,
+    "totalOperations": 24
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source": "extract_missing_date.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/extract_missing_date.js",
+  "extractedAt": "2026-02-01T19:19:19.148Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({date: new Date(",
+      "line": 25
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

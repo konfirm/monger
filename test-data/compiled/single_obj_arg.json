@@ -1,0 +1,13 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/single_obj_arg.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.088Z",
+  "tests": {},
+  "metadata": {
+    "totalOperations": 0,
+    "totalDocuments": 0,
+    "errors": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/unary_numeric.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/unary_numeric.js",
+      "timestamp": 1769973928602
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "unary_numeric",
+      "timestamp": 1769973928605
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.unary_numeric",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973928605
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.unary_numeric.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973928605
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.unary_numeric.drop",
+      "result": true,
+      "timestamp": 1769973928606
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.unary_numeric",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973928606
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973928606
+    }
+  ],
+  "state": {
+    "collections": {
+      "unary_numeric": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928602,
+    "endTime": 1769973928606,
+    "totalOperations": 1
+  }
+}

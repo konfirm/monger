@@ -1,0 +1,251 @@
+{
+  "operator": "$expr",
+  "description": "Tests for $expr - Evaluation operator",
+  "mongodbVersion": "3.6",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/array_expression.js, /mongo/jstests/aggregation/expressions/collation_expressions.js, /mongo/jstests/aggregation/expressions/commutative_arithmetic_exprs.js, /mongo/jstests/aggregation/expressions/date_expr_before_1970.js, /mongo/jstests/aggregation/expressions/date_expressions_with_timezones.js, /mongo/jstests/aggregation/expressions/day_of_expressions.js, /mongo/jstests/aggregation/expressions/expression_cond.js, /mongo/jstests/aggregation/expressions/expression_function.js, /mongo/jstests/aggregation/expressions/expression_get_field.js, /mongo/jstests/aggregation/expressions/expression_mod.js, /mongo/jstests/aggregation/expressions/expression_object.js, /mongo/jstests/aggregation/expressions/expression_set_field.js, /mongo/jstests/aggregation/expressions/expression_set_field_null_chars.js, /mongo/jstests/aggregation/expressions/expression_trigonometric.js, /mongo/jstests/aggregation/expressions/exprs_in_arrays.js, /mongo/jstests/aggregation/expressions/group_accumulators_as_exprs.js, /mongo/jstests/aggregation/expressions/iso_date_exprs.js, /mongo/jstests/aggregation/expressions/median_expression_approx.js, /mongo/jstests/aggregation/expressions/median_expression_continuous.js, /mongo/jstests/aggregation/expressions/median_expression_discrete.js, /mongo/jstests/aggregation/expressions/n_expressions.js, /mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js, /mongo/jstests/aggregation/expressions/percentile_expression_approx.js, /mongo/jstests/aggregation/expressions/percentile_expression_continuous.js, /mongo/jstests/aggregation/expressions/percentile_expression_discrete.js, /mongo/jstests/aggregation/expressions/percentile_expression_syntax.js, /mongo/jstests/aggregation/expressions/std_dev_exprs.js, /mongo/jstests/aggregation/sources/geonear/mindistance_and_maxdistance_expr.js, /mongo/jstests/aggregation/sources/group/group_by_expr.js, /mongo/jstests/aggregation/sources/match/expr_match.js, /mongo/jstests/aggregation/sources/match/trivial_match_expr.js, /mongo/jstests/aggregation/sources/project/error_project_subfield_with_existing_expr.js, /mongo/jstests/aggregation/sources/project/project_with_expressions.js, /mongo/jstests/aggregation/sources/setWindowFields/avoid_express_path.js",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/expression_bm.cpp, /mongo/src/mongo/db/pipeline/expression.cpp, /mongo/src/mongo/db/pipeline/expression.h, /mongo/src/mongo/db/pipeline/expression_and_test.cpp, /mongo/src/mongo/db/pipeline/expression_clone_bm.cpp, /mongo/src/mongo/db/pipeline/expression_clone_test.cpp, /mongo/src/mongo/db/pipeline/expression_compare_test.cpp, /mongo/src/mongo/db/pipeline/expression_context.cpp, /mongo/src/mongo/db/pipeline/expression_context.h, /mongo/src/mongo/db/pipeline/expression_context_builder.cpp, /mongo/src/mongo/db/pipeline/expression_context_builder.h, /mongo/src/mongo/db/pipeline/expression_context_diagnostic_printer.h, /mongo/src/mongo/db/pipeline/expression_context_for_test.h, /mongo/src/mongo/db/pipeline/expression_context_test.cpp, /mongo/src/mongo/db/pipeline/expression_convert_test.cpp, /mongo/src/mongo/db/pipeline/expression_create_oid_test.cpp, /mongo/src/mongo/db/pipeline/expression_create_uuid_test.cpp, /mongo/src/mongo/db/pipeline/expression_date_test.cpp, /mongo/src/mongo/db/pipeline/expression_field_path_test.cpp, /mongo/src/mongo/db/pipeline/expression_find_internal.cpp, /mongo/src/mongo/db/pipeline/expression_find_internal.h, /mongo/src/mongo/db/pipeline/expression_find_internal_test.cpp, /mongo/src/mongo/db/pipeline/expression_from_accumulator_quantile.h, /mongo/src/mongo/db/pipeline/expression_function.cpp, /mongo/src/mongo/db/pipeline/expression_function.h, /mongo/src/mongo/db/pipeline/expression_function_test.cpp, /mongo/src/mongo/db/pipeline/expression_hash_test.cpp, /mongo/src/mongo/db/pipeline/expression_hasher.h, /mongo/src/mongo/db/pipeline/expression_hasher_test.cpp, /mongo/src/mongo/db/pipeline/expression_javascript_test.cpp, /mongo/src/mongo/db/pipeline/expression_js_emit.cpp, /mongo/src/mongo/db/pipeline/expression_js_emit.h, /mongo/src/mongo/db/pipeline/expression_let.cpp, /mongo/src/mongo/db/pipeline/expression_let_test.cpp, /mongo/src/mongo/db/pipeline/expression_map_reduce_filter.cpp, /mongo/src/mongo/db/pipeline/expression_map_reduce_filter_test.cpp, /mongo/src/mongo/db/pipeline/expression_nary_test.cpp, /mongo/src/mongo/db/pipeline/expression_object_test.cpp, /mongo/src/mongo/db/pipeline/expression_or_test.cpp, /mongo/src/mongo/db/pipeline/expression_replace_test.cpp, /mongo/src/mongo/db/pipeline/expression_sharding.cpp, /mongo/src/mongo/db/pipeline/expression_sharding.h, /mongo/src/mongo/db/pipeline/expression_subtype_test.cpp, /mongo/src/mongo/db/pipeline/expression_test.cpp, /mongo/src/mongo/db/pipeline/expression_test_api_version.cpp, /mongo/src/mongo/db/pipeline/expression_test_api_version.h, /mongo/src/mongo/db/pipeline/expression_test_api_version_test.cpp, /mongo/src/mongo/db/pipeline/expression_test_feature_flags.cpp, /mongo/src/mongo/db/pipeline/expression_test_feature_flags.h, /mongo/src/mongo/db/pipeline/expression_test_feature_flags_test.cpp, /mongo/src/mongo/db/pipeline/expression_trigonometric.cpp, /mongo/src/mongo/db/pipeline/expression_trigonometric.h, /mongo/src/mongo/db/pipeline/expression_trim_test.cpp, /mongo/src/mongo/db/pipeline/expression_vector_similarity_test.cpp, /mongo/src/mongo/db/pipeline/expression_visitor.h, /mongo/src/mongo/db/pipeline/expression_walker.h, /mongo/src/mongo/db/pipeline/expression_walker_test.cpp, /mongo/src/mongo/db/pipeline/monotonic_expression.cpp, /mongo/src/mongo/db/pipeline/monotonic_expression.h, /mongo/src/mongo/db/pipeline/monotonic_expression_test.cpp, /mongo/src/mongo/db/pipeline/name_expression.cpp, /mongo/src/mongo/db/pipeline/name_expression.h, /mongo/src/mongo/db/pipeline/name_expression_parser.cpp",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "40539",
+      "type": "assertErrorCode",
+      "context": "ror Code tests. // let pipeline = {$project: {dayOfYear: {\"$dayOfYear\": {timezone: \"$timezone\"}}}}; assertErrorCode(coll, pipeline, 40539); pipeline = { $project: {dayOfYear: {\"$dayOfYear\": {date: 42}"
+    },
+    {
+      "code": "16006",
+      "type": "assertErrorCode",
+      "context": "ode(coll, pipeline, 40539); pipeline = { $project: {dayOfYear: {\"$dayOfYear\": {date: 42}}}, }; assertErrorCode(coll, pipeline, 16006); pipeline = { $project: {date: {\"$dayOfYear\": {date: \"$date\", \"tim"
+    },
+    {
+      "code": "40533",
+      "type": "assertErrorCode",
+      "context": "ine, 16006); pipeline = { $project: {date: {\"$dayOfYear\": {date: \"$date\", \"timezone\": 5}}}, }; assertErrorCode(coll, pipeline, 40533); pipeline = { $project: {date: {\"$dayOfYear\": {date: \"$date\", \"tim"
+    },
+    {
+      "code": "40485",
+      "type": "assertErrorCode",
+      "context": "pipeline = { $project: {date: {\"$dayOfYear\": {date: \"$date\", \"timezone\": \"DoesNot/Exist\"}}}, }; assertErrorCode(coll, pipeline, 40485);"
+    },
+    {
+      "code": "134133",
+      "type": "numericCode",
+      "context": "/ assert(coll.drop()); assert.commandWorked( coll.insert([ {_id: 1, date: new Timestamp(1341337661, 1)}, {_id: 2, date: new Date(1341337661000)}, ]), ); res = coll .aggregate({ $project: { _id: 0, day"
+    },
+    {
+      "code": "766100",
+      "type": "numericCode",
+      "context": "nsert([ {_id: 1, date: new Timestamp(1341337661, 1)}, {_id: 2, date: new Date(1341337661000)}, ]), ); res = coll .aggregate({ $project: { _id: 0, dayOfYear: {$dayOfYear: \"$date\"}, dayOfMonth: {$dayOfM"
+    },
+    {
+      "code": "JSInterpreterFailure",
+      "type": "ErrorCodes",
+      "context": "FailedWithCode( db.runCommand({aggregate: coll.getName(), pipeline: pipeline, cursor: {}}), ErrorCodes.JSInterpreterFailure, ); pipeline = [ { $project: { newValue: { $function: { \"args\": [1, 3], \"bod"
+    },
+    {
+      "code": "304170",
+      "type": "numericCode",
+      "context": "ield fails with a document missing named arguments. assertGetFieldFailedWithCode({input: {a: \"b\"}}, 3041702); assertGetFieldFailedWithCode({field: \"a\"}, 3041703); // Test that $getField fails with a d"
+    },
+    {
+      "code": "565460",
+      "type": "numericCode",
+      "context": "or more arguments of incorrect type. assertGetFieldFailedWithCode({field: true, input: {a: \"b\"}}, [5654602, 3041704]); assertGetFieldFailedWithCode({field: {\"a\": 1}, input: {\"a\": 1}}, 3041704); assert"
+    },
+    {
+      "code": "634790",
+      "type": "numericCode",
+      "context": "r code depends on presence of the enterprise module. assertGetFieldFailedWithCode(\"$$SEARCH_META\", [6347902, 6347903]); // $$CLUSTER_TIME is only available on replica sets and sharded clusters. assert"
+    },
+    {
+      "code": "100712",
+      "type": "numericCode",
+      "context": "replica sets and sharded clusters. assertGetFieldFailedWithCode(\"$$CLUSTER_TIME\", [3041704, 51144, 10071200]); // Test that $getField treats dotted fields as key literals instead of field paths. Note "
+    },
+    {
+      "code": "0",
+      "type": "assertErrorCode",
+      "context": "or is missing`); } // // Confirm error cases. // // Confirm mod by 0 fails in an expected manner. assertErrorCode(coll, {$project: {a: {$mod: [10, 0 /*double*/]}}}, 16610); assertErrorCode(coll, {$pro"
+    },
+    {
+      "code": "500000",
+      "type": "numericCode",
+      "context": "long_dubint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLo"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "long_dubint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLo"
+    },
+    {
+      "code": "450000",
+      "type": "numericCode",
+      "context": "bint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLong(3)]}"
+    },
+    {
+      "code": "800000",
+      "type": "numericCode",
+      "context": "long: {$mod: [NumberLong(8), NumberLong(3)]}, verylong_verylong: {$mod: [NumberLong(800000000000), NumberLong(300000000000)]}, }, }, { $project: { _id: 0, dub_dub: {type: {$type: \"$dub_dub\"}, value: \""
+    },
+    {
+      "code": "300000",
+      "type": "numericCode",
+      "context": "), NumberLong(3)]}, verylong_verylong: {$mod: [NumberLong(800000000000), NumberLong(300000000000)]}, }, }, { $project: { _id: 0, dub_dub: {type: {$type: \"$dub_dub\"}, value: \"$dub_dub\"}, dub_int: {"
+    },
+    {
+      "code": "200000",
+      "type": "numericCode",
+      "context": ": {type: \"long\", value: NumberLong(2)}, verylong_verylong: {type: \"long\", value: NumberLong(200000000000)}, }, ]; assert.eq(result.length, 1, `Expected one result`); for (const key of Object.keys(expe"
+    },
+    {
+      "code": "416110",
+      "type": "numericCode",
+      "context": "g named arguments. // Field and value are missing. assertSetFieldFailedWithCode({input: {a: \"b\"}}, 4161102); assertSetFieldFailedWithCode({}, 4161102); assertUnsetFieldFailedWithCode({input: {a: \"b\"}}"
+    },
+    {
+      "code": "953470",
+      "type": "numericCode",
+      "context": "of these. for (const field of invalidFieldNames) { assertSetFieldFailsWithCode({field, codes: [9534700, 9423101]}); assertSetFieldFailsWithCode({field: {$const: field}, codes: [9534700, 9423101]}); as"
+    },
+    {
+      "code": "942310",
+      "type": "numericCode",
+      "context": ". for (const field of invalidFieldNames) { assertSetFieldFailsWithCode({field, codes: [9534700, 9423101]}); assertSetFieldFailsWithCode({field: {$const: field}, codes: [9534700, 9423101]}); assertSetF"
+    },
+    {
+      "code": "416110",
+      "type": "numericCode",
+      "context": "y could be const // folded. assertSetFieldFailsWithCode({field: {$concat: [field]}, codes: [4161106, 9423101]}); assertSetFieldFailsWithCode({field: {$toUpper: field}, codes: [4161106, 9423101]}); ass"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "coll.aggregate(pipeline2).toArray(); const {difference} = res2[0]; assert.lt(difference, 0.00000005); assert(coll.drop()); } function testErrorCode(op, val, expErrorCode) { const nonOptimizedOp = conv"
+    },
+    {
+      "code": "000001",
+      "type": "numericCode",
+      "context": "); testErrorCode(\"$atanh\", NumberDecimal(-1.00001), 50989); testErrorCode(\"$atanh\", NumberDecimal(1.000001), 50989); // Check NaN is preserved. [\"$acos\", \"$asin\", \"$atan\", \"$cos\", \"$sin\", \"$tan\"].forE"
+    },
+    {
+      "code": "982793",
+      "type": "numericCode",
+      "context": "testing with unknown constants testOpApprox(\"$atan2\", [NumberInt(3), NumberInt(2)], NumberDecimal(0.9827937232)); testOpApprox(\"$atan2\", [NumberInt(621), NumberInt(84)], NumberDecimal(1.4363466632)); "
+    },
+    {
+      "code": "436346",
+      "type": "numericCode",
+      "context": "mberDecimal(0.9827937232)); testOpApprox(\"$atan2\", [NumberInt(621), NumberInt(84)], NumberDecimal(1.4363466632)); // Non-numeric input. testErrorCode(\"$acos\", \"string\", 28765); testErrorCode(\"$acosh\","
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "ObjectIdFromDate(dt) { try { return new ObjectId((dt.getTime() / 1000).toString(16) + \"f000000000000000\"); } catch (e) { assert(\"Invalid date for conversion to Object Id: \" + dt); } } /** * Helper for"
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "Spec: {$percentile: {p: [0.5, 0.7], input: [\"$k1\", \"$k2\"], method: \"discrete\"}}, errorCode: ErrorCodes.BadValue, msg: \"$percentile should fail because discrete 'method' isn't supported yet\", }); asser"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "legal. assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$concat: [\"3\", \".2\"]}}), ErrorCodes.TypeMismatch); assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"di"
+    },
+    {
+      "code": "755570",
+      "type": "numericCode",
+      "context": "assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"distFromOrigin\"}}), 7555701); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"$distFromOrigin\"}), 7555701); "
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Evaluation",
+      "MongoDB version: 3.6",
+      "Implementation status: ✓ Implemented",
+      "Found 34 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/expression_bm.cpp",
+      "/mongo/src/mongo/db/pipeline/expression.cpp",
+      "/mongo/src/mongo/db/pipeline/expression.h",
+      "/mongo/src/mongo/db/pipeline/expression_and_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_clone_bm.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_clone_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_compare_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_context.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_context.h",
+      "/mongo/src/mongo/db/pipeline/expression_context_builder.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_context_builder.h",
+      "/mongo/src/mongo/db/pipeline/expression_context_diagnostic_printer.h",
+      "/mongo/src/mongo/db/pipeline/expression_context_for_test.h",
+      "/mongo/src/mongo/db/pipeline/expression_context_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_convert_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_create_oid_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_create_uuid_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_date_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_field_path_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal.h",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_from_accumulator_quantile.h",
+      "/mongo/src/mongo/db/pipeline/expression_function.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_function.h",
+      "/mongo/src/mongo/db/pipeline/expression_function_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_hash_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_hasher.h",
+      "/mongo/src/mongo/db/pipeline/expression_hasher_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_javascript_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_js_emit.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_js_emit.h",
+      "/mongo/src/mongo/db/pipeline/expression_let.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_let_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_map_reduce_filter.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_map_reduce_filter_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_nary_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_object_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_or_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_replace_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_sharding.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_sharding.h",
+      "/mongo/src/mongo/db/pipeline/expression_subtype_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_test_api_version.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_test_api_version.h",
+      "/mongo/src/mongo/db/pipeline/expression_test_api_version_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_test_feature_flags.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_test_feature_flags.h",
+      "/mongo/src/mongo/db/pipeline/expression_test_feature_flags_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_trigonometric.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_trigonometric.h",
+      "/mongo/src/mongo/db/pipeline/expression_trim_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_vector_similarity_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_visitor.h",
+      "/mongo/src/mongo/db/pipeline/expression_walker.h",
+      "/mongo/src/mongo/db/pipeline/expression_walker_test.cpp",
+      "/mongo/src/mongo/db/pipeline/monotonic_expression.cpp",
+      "/mongo/src/mongo/db/pipeline/monotonic_expression.h",
+      "/mongo/src/mongo/db/pipeline/monotonic_expression_test.cpp",
+      "/mongo/src/mongo/db/pipeline/name_expression.cpp",
+      "/mongo/src/mongo/db/pipeline/name_expression.h",
+      "/mongo/src/mongo/db/pipeline/name_expression_parser.cpp"
+    ]
+  }
+}

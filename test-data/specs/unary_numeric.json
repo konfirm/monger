@@ -1,0 +1,99 @@
+{
+  "source": "unary_numeric.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/unary_numeric.js",
+  "extractedAt": "2026-02-01T19:19:56.182Z",
+  "setup": {
+    "collections": {
+      "unary_numeric": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ { _id: 0, \"ceil\": 0, \"floor\": 0, \"exp\": 1, }, { _id: 1, \"ceil\": NaN, \"floor\": NaN, \"exp\": NaN, }, { _id: 2, \"ceil\": Infinity, \"floor\": Infinity, \"exp\": Infinity, }, { _id: 3, \"ceil\": -Infinity, \"floor\": -Infinity, \"exp\": 0, }, { _id: 4, \"ceil\": -2, \"floor\": -3, \"exp\": 1, }, ]",
+      "line": 211
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, \"ln\": NaN, \"log10\": NaN, \"sqrt\": NaN}, {_id: 1, \"ln\": NaN, \"log10\": NaN, \"sqrt\": NumberDecimal(\"NaN\"",
+      "line": 258
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[{_id: 0, a: 0}]",
+      "line": 275
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[{_id: 0, a: 0}]",
+      "line": 285
+    },
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[{_id: 0, a: NumberDecimal(\"0\"",
+      "line": 295
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: null}, {_id: 1, x: undefined}, {_id: 2}, {_id: 3, x: 1}, {_id: 4, x: 10}, {_id: 5, x: 100}, {_id: 6, x: 2.3}, {_id: 7, x: 2.6}, {_id: 8, x: NumberDecimal(\"40\"",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: 0}, {_id: 1, x: NaN}, {_id: 2, x: Infinity}, {_id: 3, x: -Infinity}, {_id: 4, x: -2.6}, ]",
+      "line": 194
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: NaN}, {_id: 1, x: NumberDecimal(\"NaN\"",
+      "line": 247
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: 0}]",
+      "line": 269
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: NumberLong(0",
+      "line": 279
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: NumberDecimal(\"0\"",
+      "line": 289
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: -1}]",
+      "line": 299
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: NumberLong(-1",
+      "line": 305
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: NumberDecimal(\"-1\"",
+      "line": 311
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, x: \"string\"}]",
+      "line": 318
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 15,
+    "errors": 1
+  }
+}

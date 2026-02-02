@@ -1,0 +1,29 @@
+{
+  "source": "expression_object.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_object.js",
+  "extractedAt": "2026-02-01T19:19:16.753Z",
+  "setup": {
+    "collections": {
+      "expression_object": [
+        {
+          "_id": "doc1",
+          "field": "val1"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({\"_id\": \"doc1\", \"field\": \"val1\"}",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source": "substr_pos_out_of_bounds.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/substr_pos_out_of_bounds.js",
+  "extractedAt": "2026-02-01T19:19:51.450Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "t.insertOne({}",
+      "line": 6
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

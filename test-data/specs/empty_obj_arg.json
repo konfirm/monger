@@ -1,0 +1,18 @@
+{
+  "source": "empty_obj_arg.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/empty_obj_arg.js",
+  "extractedAt": "2026-02-01T19:19:14.407Z",
+  "setup": {
+    "collections": {
+      "s6232": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 8,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

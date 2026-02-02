@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/extract_missing_date.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/extract_missing_date.js",
+      "timestamp": 1769973918016
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973918020
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973918016,
+    "endTime": 1769973918020,
+    "totalOperations": 0
+  }
+}

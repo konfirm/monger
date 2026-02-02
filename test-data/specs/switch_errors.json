@@ -1,0 +1,81 @@
+{
+  "source": "switch_errors.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/switch_errors.js",
+  "extractedAt": "2026-02-01T19:19:53.808Z",
+  "setup": {
+    "collections": {
+      "switch": [
+        {
+          "x": 1
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 31,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": [
+        {
+          "$sortByCount": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$literal": false
+                  },
+                  "then": 1
+                },
+                {
+                  "case": "$x",
+                  "then": {
+                    "$ifNull": [
+                      2,
+                      "$y"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "x": 1
+        }
+      ],
+      "timestamp": 1769973593629
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[{\"_id\": 2, \"count\": 1}]",
+      "expected": "coll.aggregate(pipeline",
+      "line": 85
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({x: 1}",
+      "line": 63
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.remove({x: 1}",
+      "line": 86
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({z: 1}",
+      "line": 87
+    }
+  ],
+  "meta": {
+    "totalOperations": 52,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

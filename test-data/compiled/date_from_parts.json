@@ -1,0 +1,13 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/date_from_parts.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.019Z",
+  "tests": {},
+  "metadata": {
+    "totalOperations": 0,
+    "totalDocuments": 4,
+    "errors": 0
+  }
+}

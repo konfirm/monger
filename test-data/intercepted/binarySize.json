@@ -1,0 +1,1478 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/binarySize.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/binarySize.js",
+      "timestamp": 1769973911287
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_binarySize",
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_binarySize",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_binarySize.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_binarySize.drop",
+      "result": true,
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.expression_binarySize",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "BinData",
+      "target": "BinData",
+      "arguments": [
+        0,
+        ""
+      ],
+      "timestamp": 1769973911290
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911291,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": ""
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "0"
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "BinData",
+      "result": {
+        "$binary": {
+          "base64": "",
+          "subType": "0"
+        }
+      },
+      "timestamp": 1769973911291
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "path": "BinData",
+      "target": "BinData",
+      "arguments": [
+        0,
+        "1234"
+      ],
+      "timestamp": 1769973911291
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911291,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "1234"
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "0"
+    },
+    {
+      "id": 12,
+      "type": "function_return",
+      "path": "BinData",
+      "result": {
+        "$binary": {
+          "base64": "1234",
+          "subType": "0"
+        }
+      },
+      "timestamp": 1769973911291
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911291,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": ""
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "0"
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911291,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911291,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "1234"
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911291,
+      "value": "0"
+    },
+    {
+      "id": 18,
+      "type": "function_call",
+      "path": "collection.expression_binarySize.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "x": ""
+          },
+          {
+            "_id": 1,
+            "x": "abc"
+          },
+          {
+            "_id": 2,
+            "x": "ab\u0000c"
+          },
+          {
+            "_id": 3,
+            "x": "abc\u0000"
+          },
+          {
+            "_id": 4,
+            "x": {
+              "$binary": {
+                "base64": "",
+                "subType": "0"
+              }
+            }
+          },
+          {
+            "_id": 5,
+            "x": {
+              "$binary": {
+                "base64": "1234",
+                "subType": "0"
+              }
+            }
+          },
+          {
+            "_id": 6,
+            "x": null
+          },
+          {
+            "_id": 7
+          }
+        ]
+      ],
+      "timestamp": 1769973911291
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911292,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911292,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911292,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911292,
+      "value": ""
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911292,
+      "value": "0"
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911292,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911292,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911292,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911292,
+      "value": "1234"
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911292,
+      "value": "0"
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973911293,
+      "value": 8
+    },
+    {
+      "id": 18,
+      "type": "function_return",
+      "path": "collection.expression_binarySize.insert",
+      "result": {
+        "nInserted": 8
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.expression_binarySize",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 42,
+      "type": "function_call",
+      "path": "collection.expression_binarySize.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$sort": {
+              "_id": 1
+            }
+          },
+          {
+            "$addFields": {
+              "s": {
+                "$binarySize": "$x"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": ""
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "1234"
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 43,
+      "type": "aggregate",
+      "collection": "expression_binarySize",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$addFields": {
+            "s": {
+              "$binarySize": "$x"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": ""
+        },
+        {
+          "_id": 1,
+          "x": "abc"
+        },
+        {
+          "_id": 2,
+          "x": "ab\u0000c"
+        },
+        {
+          "_id": 3,
+          "x": "abc\u0000"
+        },
+        {
+          "_id": 4,
+          "x": {
+            "$binary": {
+              "base64": "",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 5,
+          "x": {
+            "$binary": {
+              "base64": "1234",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        }
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 42,
+      "type": "function_return",
+      "path": "collection.expression_binarySize.aggregate",
+      "result": {},
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 60,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 61,
+      "type": "function_call",
+      "path": "collection.expression_binarySize.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 61,
+      "type": "function_return",
+      "path": "collection.expression_binarySize.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 64,
+      "type": "function_call",
+      "path": "BinData",
+      "target": "BinData",
+      "arguments": [
+        0,
+        ""
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 65,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": ""
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 64,
+      "type": "function_return",
+      "path": "BinData",
+      "result": {
+        "$binary": {
+          "base64": "",
+          "subType": "0"
+        }
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 70,
+      "type": "function_call",
+      "path": "BinData",
+      "target": "BinData",
+      "arguments": [
+        0,
+        "1234"
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 72,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 73,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "1234"
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 70,
+      "type": "function_return",
+      "path": "BinData",
+      "result": {
+        "$binary": {
+          "base64": "1234",
+          "subType": "0"
+        }
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 78,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": ""
+    },
+    {
+      "id": 82,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 83,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "1234"
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 91,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 93,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": ""
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 96,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "1234"
+    },
+    {
+      "id": 100,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 88,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "_id": 0,
+          "x": "",
+          "s": 0
+        },
+        {
+          "_id": 1,
+          "x": "abc",
+          "s": 3
+        },
+        {
+          "_id": 2,
+          "x": "ab\u0000c",
+          "s": 4
+        },
+        {
+          "_id": 3,
+          "x": "abc\u0000",
+          "s": 4
+        },
+        {
+          "_id": 4,
+          "x": {
+            "$binary": {
+              "base64": "",
+              "subType": "0"
+            }
+          },
+          "s": 0
+        },
+        {
+          "_id": 5,
+          "x": {
+            "$binary": {
+              "base64": "1234",
+              "subType": "0"
+            }
+          },
+          "s": 3
+        },
+        {
+          "_id": 6,
+          "x": null,
+          "s": null
+        },
+        {
+          "_id": 7,
+          "s": null
+        }
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 101,
+      "type": "property_get",
+      "path": "collection.expression_binarySize",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 102,
+      "type": "function_call",
+      "path": "collection.expression_binarySize.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "x": 42
+        }
+      ],
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": ""
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 109,
+      "type": "property_get",
+      "path": "BinData.result",
+      "property": "$binary",
+      "valueType": "object",
+      "timestamp": 1769973911293,
+      "value": {
+        "base64": "1234",
+        "subType": "0"
+      }
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "base64",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "1234"
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "BinData.result.$binary",
+      "property": "subType",
+      "valueType": "string",
+      "timestamp": 1769973911293,
+      "value": "0"
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 114,
+      "type": "property_get",
+      "path": "collection.expression_binarySize.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973911293,
+      "value": 9
+    },
+    {
+      "id": 102,
+      "type": "function_return",
+      "path": "collection.expression_binarySize.insert",
+      "result": {
+        "nInserted": 9
+      },
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.expression_binarySize",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973911293,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 115,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": {
+        "$project": {
+          "s": {
+            "$binarySize": "$x"
+          }
+        }
+      },
+      "expectedCode": 51276,
+      "timestamp": 1769973911293
+    },
+    {
+      "id": 117,
+      "type": "test_end",
+      "status": "success",
+      "duration": 6,
+      "timestamp": 1769973911293
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_binarySize": [
+        {
+          "_id": 0,
+          "x": ""
+        },
+        {
+          "_id": 1,
+          "x": "abc"
+        },
+        {
+          "_id": 2,
+          "x": "ab\u0000c"
+        },
+        {
+          "_id": 3,
+          "x": "abc\u0000"
+        },
+        {
+          "_id": 4,
+          "x": {
+            "$binary": {
+              "base64": "",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 5,
+          "x": {
+            "$binary": {
+              "base64": "1234",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        },
+        {
+          "x": 42
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973911287,
+    "endTime": 1769973911293,
+    "totalOperations": 9
+  }
+}

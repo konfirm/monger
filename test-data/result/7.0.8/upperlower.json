@@ -1,0 +1,32 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/upperlower.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:50.748Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "jstests_aggregation_upperlower",
+      "pipeline": [
+        {
+          "$project": {
+            "upper": {
+              "$toUpper": []
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Expression $toUpper takes exactly 1 arguments. 0 were passed in.",
+        "code": 16020
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Expression $toUpper takes exactly 1 arguments. 0 were passed in."
+    }
+  ]
+}

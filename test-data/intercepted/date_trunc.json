@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_trunc.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_trunc.js",
+      "timestamp": 1769973916235
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "getSiblingDB",
+      "timestamp": 1769973916238
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973916238
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973916235,
+    "endTime": 1769973916238,
+    "totalOperations": 0
+  }
+}

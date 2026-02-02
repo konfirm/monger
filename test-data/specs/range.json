@@ -1,0 +1,116 @@
+{
+  "source": "range.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/range.js",
+  "extractedAt": "2026-02-01T19:19:38.031Z",
+  "setup": {
+    "collections": {
+      "range": [
+        {
+          "city": "San Jose",
+          "distance": {
+            "$numberInt": "42"
+          }
+        },
+        {
+          "city": "Sacramento",
+          "distance": {
+            "$numberInt": "88"
+          }
+        },
+        {
+          "city": "Reno",
+          "distance": {
+            "$numberInt": "218"
+          }
+        },
+        {
+          "city": "Los Angeles",
+          "distance": {
+            "$numberInt": "383"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 49,
+      "type": "aggregate",
+      "collection": "range",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "city": 1,
+            "Rest stops": {
+              "$range": [
+                {
+                  "$numberInt": "0"
+                },
+                "$distance",
+                {
+                  "$numberInt": "25"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "city": "San Jose",
+          "distance": {
+            "$numberInt": "42"
+          }
+        },
+        {
+          "city": "Sacramento",
+          "distance": {
+            "$numberInt": "88"
+          }
+        },
+        {
+          "city": "Reno",
+          "distance": {
+            "$numberInt": "218"
+          }
+        },
+        {
+          "city": "Los Angeles",
+          "distance": {
+            "$numberInt": "383"
+          }
+        }
+      ],
+      "timestamp": 1769973577849
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {city: \"San Jose\", distance: NumberInt(42",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {city: \"San Jose\", distance: NumberInt(5",
+      "line": 121
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{city: \"San Jose\", distance: NumberInt(100",
+      "line": 169
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({_id: 1}",
+      "line": 290
+    }
+  ],
+  "meta": {
+    "totalOperations": 78,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

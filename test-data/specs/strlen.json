@@ -1,0 +1,69 @@
+{
+  "source": "strlen.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/strlen.js",
+  "extractedAt": "2026-02-01T19:19:50.492Z",
+  "setup": {
+    "collections": {
+      "substr": [
+        {
+          "strField": "MyString",
+          "intField": 1,
+          "nullField": null,
+          "specialCharField": "é",
+          "specialCharField2": "匣6卜十戈大中金",
+          "specialCharField3": "i ♥ u"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 2, \"strLenCP\": 1}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"$specialCharField\"}, strLenCP: {$strLenCP: \"$specialCharField\"}, }, }",
+      "line": 78
+    },
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 22, \"strLenCP\": 8}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"$specialCharField2\"}, strLenCP: {$strLenCP: \"$specialCharField2\"}, }, }",
+      "line": 91
+    },
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 7, \"strLenCP\": 5}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"i ♥ u\"}, strLenCP: {$strLenCP: \"$specialCharField3\"}, }, }",
+      "line": 104
+    },
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 20, \"strLenCP\": 5}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"🧐🤓😎🥸🤩\"}, strLenCP: {$strLenCP: \"🧐🤓😎🥸🤩\"}, }, }",
+      "line": 117
+    },
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 24, \"strLenCP\": 9}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"十🤳🕺十十💃ahk\"}, strLenCP: {$strLenCP: \"十🤳🕺十十💃ahk\"}, }, }",
+      "line": 130
+    },
+    {
+      "type": "eq",
+      "actual": "{\"strLenBytes\": 8, \"strLenCP\": 8}",
+      "expected": "coll .aggregate({ $project: { _id: 0, strLenBytes: {$strLenBytes: \"$strField\"}, strLenCP: {$strLenCP: \"$strField\"}, }, }",
+      "line": 144
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ strField: \"MyString\", intField: 1, nullField: null, specialCharField: \"é\", specialCharField2: \"匣6卜十戈大中金\", specialCharField3: \"i ♥ u\", }",
+      "line": 13
+    }
+  ],
+  "meta": {
+    "totalOperations": 21,
+    "totalAssertions": 7,
+    "errors": 1
+  }
+}

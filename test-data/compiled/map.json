@@ -1,0 +1,386 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/map.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.062Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {},
+        "context": {
+          "simple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "nested": [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            }
+          ],
+          "mixed": [
+            {
+              "a": 1
+            },
+            {},
+            {
+              "a": 2
+            },
+            {
+              "a": null
+            }
+          ],
+          "notArray": 1,
+          "null": null
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 10,
+    "totalDocuments": 1,
+    "errors": 10
+  }
+}

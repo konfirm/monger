@@ -1,0 +1,241 @@
+{
+  "source": "zip.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/zip.js",
+  "extractedAt": "2026-02-01T19:19:58.073Z",
+  "setup": {
+    "collections": {
+      "zip": [
+        {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "zip",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  [
+                    1,
+                    2,
+                    3
+                  ],
+                  [
+                    "A",
+                    "B",
+                    "C"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        }
+      ],
+      "timestamp": 1769973597887
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 81
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [1, \"A\"], [2, \"B\"], [3, \"C\"], ]",
+      "line": 82
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 93
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "null",
+      "line": 94
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 101
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "null",
+      "line": 102
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 109
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "null",
+      "line": 110
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 117
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "null",
+      "line": 118
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 128
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [1, \"A\"], [2, \"B\"], ]",
+      "line": 129
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 142
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [\"A\", 1], [\"B\", 2], ]",
+      "line": 143
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 153
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[]",
+      "line": 154
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 161
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [ [\"x\", \"y\"], [1, 2, 3], ], ]",
+      "line": 162
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 174
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [\"x\", 1], [\"y\", 2], ]",
+      "line": 175
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 185
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[[[1, 2, 3]]]",
+      "line": 186
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 197
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [1, \"a\", \"c\"], [2, \"b\", \"b\"], [3, \"c\", \"a\"], ]",
+      "line": 198
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 214
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [1, \"A\"], [2, \"B\"], [3, \"D\"], ]",
+      "line": 215
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 230
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].zipped",
+      "expected": "[ [1, \"A\"], [2, \"B\"], [3, null], ]",
+      "line": 231
+    }
+  ],
+  "meta": {
+    "totalOperations": 47,
+    "totalAssertions": 28,
+    "errors": 1
+  }
+}

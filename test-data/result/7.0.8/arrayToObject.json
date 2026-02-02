@@ -1,0 +1,33 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/arrayToObject.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:52.683Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "array_to_object_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "collapsed": {
+              "$arrayToObject": "$expanded"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fafc8e6ccfd5814568cf1",
+          "collapsed": {
+            "price": 24,
+            "item": "apple"
+          }
+        }
+      ],
+      "duration": 8,
+      "success": true
+    }
+  ],
+  "errors": []
+}

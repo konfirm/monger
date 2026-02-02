@@ -1,0 +1,1879 @@
+{
+  "source": "expression_get_field.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_get_field.js",
+  "extractedAt": "2026-02-01T19:19:15.813Z",
+  "setup": {
+    "collections": {
+      "expression_get_field": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 15,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 25,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": "a"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 35,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": true,
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 45,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": {
+                  "a": 1
+                },
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 55,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": 5
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": true
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 75,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": null,
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555628
+    },
+    {
+      "id": 85,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                },
+                "unknown": true
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555629
+    },
+    {
+      "id": 95,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$add": [
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555629
+    },
+    {
+      "id": 105,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$const": true
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555629
+    },
+    {
+      "id": 115,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$const": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555629
+    },
+    {
+      "id": 125,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": []
+                },
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555629
+    },
+    {
+      "id": 135,
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": 2,
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field1"
+        }
+      ],
+      "timestamp": 1769973555630
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ _id: i, x: i, y: \"c\", \"a$b\": \"foo\", \"a.b\": \"bar\", \"a.$b\": 5, \".xy\": i, \".$xz\": i, \"..zz\": i, \"$a\": 10, \"$x.$y\": 20, \"$x..$y\": {\"$a\": 1, \"$b..$c\": 2}, c: {d: \"x\"}, e: {\"$f\": 30}, f: [{\"$a\": 41}, {\"$b..\": 42}], \"$v..\": null, foo: \"bar\", bar: \"baz\", \"letterB\": \"b\", \"$b\": \"b\", arr: {0: {0: {0: {b: \"bar\"}}}}, maybeStr: i === 0 ? \"2\" : 2, \"$.1\": \"$.2\", \"$.2\": \"bar\", items: [0, 1, 2, 3, 4], lookupField: \"field\" + i, }",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll2.insert({_id: 0, field0: \"0\", field1: \"1\"}",
+      "line": 415
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "code",
+      "line": 14
+    }
+  ],
+  "meta": {
+    "totalOperations": 163,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

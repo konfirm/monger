@@ -1,0 +1,16 @@
+{
+  "source": "date_add_subtract.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_add_subtract.js",
+  "extractedAt": "2026-02-01T19:19:07.222Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

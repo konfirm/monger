@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/percentile_expression_continuous.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/percentile_expression_continuous.js",
+      "timestamp": 1769973922859
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973922861
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973922859,
+    "endTime": 1769973922861,
+    "totalOperations": 0
+  }
+}

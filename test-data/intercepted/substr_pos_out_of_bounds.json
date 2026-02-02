@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/substr_pos_out_of_bounds.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/substr_pos_out_of_bounds.js",
+      "timestamp": 1769973927248
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973927254
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973927248,
+    "endTime": 1769973927254,
+    "totalOperations": 0
+  }
+}

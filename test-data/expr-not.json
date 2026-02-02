@@ -1,0 +1,133 @@
+{
+  "operator": "$not",
+  "description": "Returns the boolean value that is the opposite of its argument expression",
+  "mongodbVersion": "1.0",
+  "source": "mongo/jstests/aggregation/expressions/not.js",
+  "implementationSource": "mongo/src/mongo/db/exec/expression/evaluate_not.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Not true returns false",
+        "query": { "$not": true },
+        "expected": false
+      },
+      {
+        "description": "Not false returns true",
+        "query": { "$not": false },
+        "expected": true
+      },
+      {
+        "description": "Not 1 (truthy) returns false",
+        "query": { "$not": 1 },
+        "expected": false
+      },
+      {
+        "description": "Not 2 (truthy) returns false",
+        "query": { "$not": 2 },
+        "expected": false
+      },
+      {
+        "description": "Not 0 (falsy) returns true",
+        "query": { "$not": 0 },
+        "expected": true
+      },
+      {
+        "description": "Not 'hello' (truthy) returns false",
+        "query": { "$not": "hello" },
+        "expected": false
+      },
+      {
+        "description": "Not '' (falsy) returns true",
+        "query": { "$not": "" },
+        "expected": true
+      },
+      {
+        "description": "Not null (falsy) returns true",
+        "query": { "$not": null },
+        "expected": true
+      },
+      {
+        "description": "Not [1,2,3] (truthy) returns false",
+        "query": { "$not": [1, 2, 3] },
+        "expected": false
+      },
+      {
+        "description": "Not [] (truthy) returns false",
+        "query": { "$not": [] },
+        "expected": false
+      },
+      {
+        "description": "Not {a:1} (truthy) returns false",
+        "query": { "$not": { "a": 1 } },
+        "expected": false
+      },
+      {
+        "description": "Not {} (truthy) returns false",
+        "query": { "$not": {} },
+        "expected": false
+      },
+      {
+        "description": "Field reference truthy",
+        "query": { "$not": "$value" },
+        "context": { "value": 42 },
+        "expected": false
+      },
+      {
+        "description": "Field reference falsy (0)",
+        "query": { "$not": "$value" },
+        "context": { "value": 0 },
+        "expected": true
+      },
+      {
+        "description": "Field reference falsy (null)",
+        "query": { "$not": "$value" },
+        "context": { "value": null },
+        "expected": true
+      },
+      {
+        "description": "Missing field is falsy",
+        "query": { "$not": "$missing" },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Double negation returns original (true)",
+        "query": { "$not": { "$not": true } },
+        "expected": true
+      },
+      {
+        "description": "Double negation returns original (false)",
+        "query": { "$not": { "$not": false } },
+        "expected": false
+      },
+      {
+        "description": "Triple negation",
+        "query": { "$not": { "$not": { "$not": true } } },
+        "expected": false
+      },
+      {
+        "description": "Not with $eq expression (true becomes false)",
+        "query": { "$not": { "$eq": ["$value", 42] } },
+        "context": { "value": 42 },
+        "expected": false
+      },
+      {
+        "description": "Not with $eq expression (false becomes true)",
+        "query": { "$not": { "$eq": ["$value", 42] } },
+        "context": { "value": 41 },
+        "expected": true
+      }
+    ]
+  },
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "totalTests": 21,
+    "happyPathCount": 21,
+    "notes": [
+      "Accepts single expression only",
+      "Truthy values (non-zero, non-empty, arrays, objects) → false",
+      "Falsy values (0, '', null, undefined, false) → true",
+      "Double negation returns original value"
+    ]
+  }
+}

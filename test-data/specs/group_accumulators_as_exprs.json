@@ -1,0 +1,932 @@
+{
+  "source": "group_accumulators_as_exprs.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/group_accumulators_as_exprs.js",
+  "extractedAt": "2026-02-01T19:19:21.519Z",
+  "setup": {
+    "collections": {
+      "server9625": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$avg": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561330
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$avg": [
+                [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561331
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561331
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 137,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevPop": [
+                1,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 173,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevPop": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 191,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevSamp": [
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 209,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevSamp": [
+                [
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 227,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$avg": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 245,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 263,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 281,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 299,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevPop": [
+                1,
+                3,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 317,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevSamp": [
+                1,
+                2,
+                3,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 335,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$avg": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561332
+    },
+    {
+      "id": 353,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 371,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 389,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 407,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevPop": [
+                1,
+                3,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 425,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevSamp": [
+                1,
+                2,
+                3,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 449,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                "$a",
+                2,
+                3,
+                {
+                  "$sum": [
+                    4,
+                    5
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 467,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                "$a",
+                2,
+                3,
+                {
+                  "$min": [
+                    4,
+                    5
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 485,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                "$a",
+                2,
+                3,
+                {
+                  "$max": [
+                    4,
+                    5
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 503,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$avg": [
+                "$a",
+                3,
+                {
+                  "$avg": [
+                    4,
+                    6
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 521,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevPop": [
+                "$a",
+                {
+                  "$stdDevPop": [
+                    1,
+                    3
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 539,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$stdDevSamp": [
+                "$a",
+                {
+                  "$stdDevSamp": [
+                    1,
+                    2,
+                    3
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 557,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sum": [
+                "$a",
+                2,
+                3,
+                {
+                  "$sum": [
+                    [
+                      "$a",
+                      4,
+                      5
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 575,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$min": [
+                "$b",
+                2,
+                3,
+                {
+                  "$min": [
+                    [
+                      "$a",
+                      4,
+                      5
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    },
+    {
+      "id": 593,
+      "type": "aggregate",
+      "collection": "server9625",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$max": [
+                "$a",
+                2,
+                3,
+                {
+                  "$max": [
+                    [
+                      "$b",
+                      4,
+                      5
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 6
+        }
+      ],
+      "timestamp": 1769973561333
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 6
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({\"a\": 1, \"b\": 6}",
+      "line": 49
+    }
+  ],
+  "meta": {
+    "totalOperations": 679,
+    "totalAssertions": 2,
+    "errors": 0
+  }
+}

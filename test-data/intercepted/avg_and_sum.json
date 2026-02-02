@@ -1,0 +1,382 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/avg_and_sum.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/avg_and_sum.js",
+      "timestamp": 1769973911148
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "collection",
+      "timestamp": 1769973911152
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973911152
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.collection.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973911152
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.collection.drop",
+      "result": true,
+      "timestamp": 1769973911152
+    },
+    {
+      "id": 5,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973911152
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "insertOne",
+      "valueType": "function",
+      "timestamp": 1769973911153
+    },
+    {
+      "id": 7,
+      "type": "function_call",
+      "path": "collection.collection.insertOne",
+      "target": "insertOne",
+      "arguments": [
+        {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        }
+      ],
+      "timestamp": 1769973911153
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911154,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973911154,
+      "value": 1
+    },
+    {
+      "id": 7,
+      "type": "function_return",
+      "path": "collection.collection.insertOne",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973911154
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973911154
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "path": "collection.collection.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "a": {
+              "$avg": "$null"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973911154
+    },
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$avg": "$null"
+          }
+        }
+      },
+      "documents": [
+        {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        }
+      ],
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911155,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 11,
+      "type": "function_return",
+      "path": "collection.collection.aggregate",
+      "result": {},
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 20,
+      "type": "function_call",
+      "path": "collection.collection.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 20,
+      "type": "function_return",
+      "path": "collection.collection.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973911155
+    },
+    {
+      "id": 24,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'a')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973911155
+    }
+  ],
+  "state": {
+    "collections": {
+      "collection": [
+        {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973911148,
+    "endTime": 1769973911155,
+    "totalOperations": 4
+  }
+}

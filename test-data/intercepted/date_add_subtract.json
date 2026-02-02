@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_add_subtract.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_add_subtract.js",
+      "timestamp": 1769973914599
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTest is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914602
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914599,
+    "endTime": 1769973914602,
+    "totalOperations": 0
+  }
+}

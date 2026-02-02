@@ -1,0 +1,79 @@
+{
+  "operator": "$add",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/arith_overflow.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.978Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$add": [
+            "$lhs",
+            "$rhs"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $add only supports numeric or date types, not object"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$subtract": [
+            "$lhs",
+            "$rhs"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: can't $subtract object from object"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$multiply": [
+            "$lhs",
+            "$rhs"
+          ]
+        },
+        "context": {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $multiply only supports numeric types, not object"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 3,
+    "totalDocuments": 2,
+    "errors": 3
+  }
+}

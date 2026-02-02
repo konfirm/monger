@@ -1,0 +1,540 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/array_elem_at.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/array_elem_at.js",
+      "timestamp": 1769973910874
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "agg_array_elem_at_expr",
+      "timestamp": 1769973910876
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973910877
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973910877
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.drop",
+      "result": true,
+      "timestamp": 1769973910877
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973910877
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "timestamp": 1769973910877
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910878,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973910878,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "x": {
+                "$arrayElemAt": [
+                  "$a",
+                  2
+                ]
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910878,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 19,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 19,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 24,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "x": 3
+        }
+      ],
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973910878
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "x": {
+                "$arrayElemAt": [
+                  "$a",
+                  1
+                ]
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "agg_array_elem_at_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "x": {
+              "$arrayElemAt": [
+                "$a",
+                1
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910879,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "collection.agg_array_elem_at_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 42,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "x": 2
+        }
+      ],
+      "timestamp": 1769973910879
+    },
+    {
+      "id": 45,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973910879
+    }
+  ],
+  "state": {
+    "collections": {
+      "agg_array_elem_at_expr": [
+        {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973910874,
+    "endTime": 1769973910879,
+    "totalOperations": 6
+  }
+}

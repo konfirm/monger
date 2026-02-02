@@ -1,0 +1,91 @@
+{
+  "source": "all_elements_true.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/all_elements_true.js",
+  "extractedAt": "2026-02-01T19:18:51.941Z",
+  "setup": {
+    "collections": {
+      "all_elements_true": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "all_elements_true",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$allElementsTrue": {
+                "$literal": [
+                  true,
+                  true
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ]
+        }
+      ],
+      "timestamp": 1769973531755
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results.length",
+      "expected": "1, results",
+      "line": 10
+    },
+    {
+      "type": "eq",
+      "actual": "loneResult.result",
+      "expected": "expected, loneResult",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, allTrue: [true, true], someTrue: [true, false], noneTrue: [0, false]}",
+      "line": 6
+    }
+  ],
+  "meta": {
+    "totalOperations": 29,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

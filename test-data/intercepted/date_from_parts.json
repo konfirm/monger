@@ -1,0 +1,200 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_from_parts.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_from_parts.js",
+      "timestamp": 1769973915142
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "dateFromParts",
+      "timestamp": 1769973915145
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.dateFromParts",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915145
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.dateFromParts.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915145
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.dateFromParts.drop",
+      "result": true,
+      "timestamp": 1769973915145
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.dateFromParts",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915145
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.dateFromParts.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "year": 2017,
+            "month": 6,
+            "day": 19,
+            "hour": 15,
+            "minute": 13,
+            "second": 25,
+            "millisecond": 713
+          },
+          {
+            "_id": 1,
+            "year": 2017,
+            "month": 6,
+            "day": 19,
+            "hour": 15,
+            "minute": 13,
+            "second": 25,
+            "millisecond": 713,
+            "timezone": "Europe/Amsterdam"
+          },
+          {
+            "_id": 2,
+            "year": 2017,
+            "month": 6,
+            "day": 19,
+            "hour": 15,
+            "minute": 13,
+            "second": 25,
+            "millisecond": 713,
+            "timezone": "Asia/Tokyo"
+          },
+          {
+            "_id": 3,
+            "date": {
+              "year": 2017,
+              "month": 6,
+              "day": 19,
+              "hour": 15,
+              "minute": 13,
+              "second": 25,
+              "millisecond": 713,
+              "timezone": "America/Chicago"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915146
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.dateFromParts.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915147,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.dateFromParts.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915147,
+      "value": 4
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.dateFromParts.insert",
+      "result": {
+        "nInserted": 4
+      },
+      "timestamp": 1769973915147
+    },
+    {
+      "id": 9,
+      "type": "test_error",
+      "error": {
+        "message": "anyEq is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973915148
+    }
+  ],
+  "state": {
+    "collections": {
+      "dateFromParts": [
+        {
+          "_id": 0,
+          "year": 2017,
+          "month": 6,
+          "day": 19,
+          "hour": 15,
+          "minute": 13,
+          "second": 25,
+          "millisecond": 713
+        },
+        {
+          "_id": 1,
+          "year": 2017,
+          "month": 6,
+          "day": 19,
+          "hour": 15,
+          "minute": 13,
+          "second": 25,
+          "millisecond": 713,
+          "timezone": "Europe/Amsterdam"
+        },
+        {
+          "_id": 2,
+          "year": 2017,
+          "month": 6,
+          "day": 19,
+          "hour": 15,
+          "minute": 13,
+          "second": 25,
+          "millisecond": 713,
+          "timezone": "Asia/Tokyo"
+        },
+        {
+          "_id": 3,
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 19,
+            "hour": 15,
+            "minute": 13,
+            "second": 25,
+            "millisecond": 713,
+            "timezone": "America/Chicago"
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973915142,
+    "endTime": 1769973915148,
+    "totalOperations": 2
+  }
+}

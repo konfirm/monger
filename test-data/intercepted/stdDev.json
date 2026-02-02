@@ -1,0 +1,403 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/stdDev.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/stdDev.js",
+      "timestamp": 1769973926439
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "collection",
+      "timestamp": 1769973926441
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973926441
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.collection.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973926441
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.collection.drop",
+      "result": true,
+      "timestamp": 1769973926442
+    },
+    {
+      "id": 5,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973926442
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "insertOne",
+      "valueType": "function",
+      "timestamp": 1769973926442
+    },
+    {
+      "id": 7,
+      "type": "function_call",
+      "path": "collection.collection.insertOne",
+      "target": "insertOne",
+      "arguments": [
+        {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973926443
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926443,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973926443,
+      "value": 1
+    },
+    {
+      "id": 7,
+      "type": "function_return",
+      "path": "collection.collection.insertOne",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973926443
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973926443
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "path": "collection.collection.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "a": {
+              "$stdDevPop": "$num"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973926443
+    },
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$stdDevPop": "$num"
+          }
+        }
+      },
+      "documents": [
+        {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926444,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 11,
+      "type": "function_return",
+      "path": "collection.collection.aggregate",
+      "result": {},
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 20,
+      "type": "function_call",
+      "path": "collection.collection.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 20,
+      "type": "function_return",
+      "path": "collection.collection.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973926444
+    },
+    {
+      "id": 24,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'a')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973926445
+    }
+  ],
+  "state": {
+    "collections": {
+      "collection": [
+        {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926439,
+    "endTime": 1769973926445,
+    "totalOperations": 4
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "source": "max_min.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/max_min.js",
+  "extractedAt": "2026-02-01T19:19:30.041Z",
+  "setup": {
+    "collections": {
+      "collection": [
+        {
+          "int1": 5,
+          "int2": 10,
+          "str1": "hello",
+          "str2": "hello world",
+          "NaN": null,
+          "arr1": [
+            5
+          ],
+          "arr2": [
+            1,
+            2,
+            3
+          ],
+          "arr3": [
+            1,
+            2,
+            "string",
+            null
+          ],
+          "arr4": [],
+          "arrNest1": [
+            [
+              1,
+              2
+            ]
+          ],
+          "arrNest2": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "arrNest3": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "arrNest4": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            1
+          ],
+          "arrMixed1": [
+            [],
+            "hello",
+            [
+              "c"
+            ]
+          ],
+          "arrMixed2": [
+            [],
+            "hello",
+            [
+              "c"
+            ],
+            null
+          ],
+          "null": null,
+          "undefined1": [
+            null
+          ],
+          "undefined2": [
+            null,
+            2,
+            "string"
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$max": []
+          }
+        }
+      },
+      "documents": [
+        {
+          "int1": 5,
+          "int2": 10,
+          "str1": "hello",
+          "str2": "hello world",
+          "NaN": null,
+          "arr1": [
+            5
+          ],
+          "arr2": [
+            1,
+            2,
+            3
+          ],
+          "arr3": [
+            1,
+            2,
+            "string",
+            null
+          ],
+          "arr4": [],
+          "arrNest1": [
+            [
+              1,
+              2
+            ]
+          ],
+          "arrNest2": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "arrNest3": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "arrNest4": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            1
+          ],
+          "arrMixed1": [
+            [],
+            "hello",
+            [
+              "c"
+            ]
+          ],
+          "arrMixed2": [
+            [],
+            "hello",
+            [
+              "c"
+            ],
+            null
+          ],
+          "null": null,
+          "undefined1": [
+            null
+          ],
+          "undefined2": [
+            null,
+            2,
+            "string"
+          ]
+        }
+      ],
+      "timestamp": 1769973569855
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$max: params}}}",
+      "line": 32
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$min: params}}}",
+      "line": 36
+    }
+  ],
+  "meta": {
+    "totalOperations": 28,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

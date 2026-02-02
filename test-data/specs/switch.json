@@ -1,0 +1,377 @@
+{
+  "source": "switch.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/switch.js",
+  "extractedAt": "2026-02-01T19:19:53.333Z",
+  "setup": {
+    "collections": {
+      "switch": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      1
+                    ]
+                  },
+                  "then": "one is equal to one!"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593146
+    },
+    {
+      "id": 28,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      1
+                    ]
+                  },
+                  "then": "one is equal to one!"
+                },
+                {
+                  "case": {
+                    "$eq": [
+                      2,
+                      2
+                    ]
+                  },
+                  "then": "two is equal to two!"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593147
+    },
+    {
+      "id": 45,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      2
+                    ]
+                  },
+                  "then": "one is equal to two!"
+                }
+              ],
+              "default": "no case matched."
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593147
+    },
+    {
+      "id": 62,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": "Null was true!"
+                }
+              ],
+              "default": "No case matched."
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593147
+    },
+    {
+      "id": 79,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": "$missingField",
+                  "then": "Null was true!"
+                }
+              ],
+              "default": "No case matched."
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593147
+    },
+    {
+      "id": 96,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": true,
+                  "then": null
+                }
+              ],
+              "default": false
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593148
+    },
+    {
+      "id": 113,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": true,
+                  "then": "$missingField"
+                }
+              ],
+              "default": false
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593148
+    },
+    {
+      "id": 130,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": false
+                }
+              ],
+              "default": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593148
+    },
+    {
+      "id": 147,
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": false
+                }
+              ],
+              "default": "$missingField"
+            }
+          }
+        }
+      },
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973593148
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 23
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": \"one is equal to one!\"}",
+      "line": 24
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 42
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": \"one is equal to one!\"}",
+      "line": 43
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 59
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": \"no case matched.\"}",
+      "line": 60
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 77
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": \"No case matched.\"}",
+      "line": 78
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 93
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": \"No case matched.\"}",
+      "line": 94
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 104
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": null}",
+      "line": 105
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 115
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{}",
+      "line": 116
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 126
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{\"output\": null}",
+      "line": 127
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 137
+    },
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "{}",
+      "line": 138
+    }
+  ],
+  "meta": {
+    "totalOperations": 182,
+    "totalAssertions": 18,
+    "errors": 0
+  }
+}

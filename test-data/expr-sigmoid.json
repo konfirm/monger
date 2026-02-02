@@ -1,0 +1,261 @@
+{
+  "operator": "$sigmoid",
+  "description": "Tests for $sigmoid - Window operator",
+  "mongodbVersion": "5.0",
+  "implemented": false,
+  "source": "/mongo/jstests/aggregation/expressions/sigmoid.js",
+  "implementationSource": "TBD",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "2",
+      "type": "assertErrorCode",
+      "context": "ect: {computed: {$sigmoid: [\"claudia\", \"will\", \"reilly\", \"ted\"]}}}, ErrorCodes.TypeMismatch, ); assertErrorCode(coll, {$project: {computed: {$sigmoid: [1, 2, 3, 4]}}}, ErrorCodes.TypeMismatch); // TOD"
+    },
+    {
+      "code": "200",
+      "type": "assertErrorCode",
+      "context": "-92973: Ensure that the errors below will be caught by $sigmoid and not the desugared // $multiply. assertErrorCode(coll, {$project: {computed: {$sigmoid: {$gt: [1, 200]}}}}, ErrorCodes.TypeMismatch);"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "will be caught directly by $sigmoid. assertErrorCode(coll, {$project: {computed: {$sigmoid: \"4\"}}}, ErrorCodes.TypeMismatch); assertErrorCode(coll, {$project: {computed: {$sigmoid: \"kyra\"}}}, ErrorCod"
+    },
+    {
+      "code": "993307",
+      "type": "numericCode",
+      "context": "ic inputs directly. testExpression(coll, {$sigmoid: 0}, 0.5); testExpression(coll, {$sigmoid: 5}, 0.9933071490757153); testExpression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, "
+    },
+    {
+      "code": "149075",
+      "type": "numericCode",
+      "context": "uts directly. testExpression(coll, {$sigmoid: 0}, 0.5); testExpression(coll, {$sigmoid: 5}, 0.9933071490757153); testExpression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, {$sigm"
+    },
+    {
+      "code": "999959",
+      "type": "numericCode",
+      "context": "testExpression(coll, {$sigmoid: 5}, 0.9933071490757153); testExpression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, {$sigmoid: -24}, 3.7751345441365816e-11); testExpression(coll,"
+    },
+    {
+      "code": "330847",
+      "type": "numericCode",
+      "context": "xpression(coll, {$sigmoid: 5}, 0.9933071490757153); testExpression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, {$sigmoid: -24}, 3.7751345441365816e-11); testExpression(coll, {$si"
+    },
+    {
+      "code": "775134",
+      "type": "numericCode",
+      "context": "testExpression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, {$sigmoid: -24}, 3.7751345441365816e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.041"
+    },
+    {
+      "code": "544136",
+      "type": "numericCode",
+      "context": "pression(coll, {$sigmoid: 10.11}, 0.999959330847226); testExpression(coll, {$sigmoid: -24}, 3.7751345441365816e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.041487119"
+    },
+    {
+      "code": "041487",
+      "type": "numericCode",
+      "context": "3.7751345441365816e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.04148711930169585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, Numbe"
+    },
+    {
+      "code": "119301",
+      "type": "numericCode",
+      "context": "1345441365816e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.04148711930169585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDeci"
+    },
+    {
+      "code": "695850",
+      "type": "numericCode",
+      "context": "1365816e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.04148711930169585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0"
+    },
+    {
+      "code": "607678",
+      "type": "numericCode",
+      "context": "6e-11); testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.04148711930169585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.95851"
+    },
+    {
+      "code": "319413",
+      "type": "numericCode",
+      "context": "; testExpression(coll, {$sigmoid: NumberDecimal(\"-3.14\")}, NumberDecimal(\"0.04148711930169585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.95851288069"
+    },
+    {
+      "code": "958512",
+      "type": "numericCode",
+      "context": "9585060767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.9585128806983041493923216805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll"
+    },
+    {
+      "code": "880698",
+      "type": "numericCode",
+      "context": "0767831941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.9585128806983041493923216805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll, {$si"
+    },
+    {
+      "code": "304149",
+      "type": "numericCode",
+      "context": "1941324486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.9585128806983041493923216805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll, {$sigmoid:"
+    },
+    {
+      "code": "392321",
+      "type": "numericCode",
+      "context": "4486\")); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.9585128806983041493923216805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll, {$sigmoid: Numbe"
+    },
+    {
+      "code": "680586",
+      "type": "numericCode",
+      "context": "); testExpression(coll, {$sigmoid: NumberDecimal(\"3.14\")}, NumberDecimal(\"0.9585128806983041493923216805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll, {$sigmoid: NumberInt(\""
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "805867550\")); testExpression(coll, {$sigmoid: 100}, 1); testExpression(coll, {$sigmoid: NumberInt(\"-2147483648\")}, 0); testExpression(coll, {$sigmoid: NumberInt(\"2147483647\")}, 1); testExpression(coll"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "ression(coll, {$sigmoid: NumberInt(\"2147483647\")}, 1); testExpression(coll, {$sigmoid: NumberLong(\"-9223372036854775808\")}, 0); testExpression(coll, {$sigmoid: NumberLong(\"9223372036854775807\")}, 1); "
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "n(coll, {$sigmoid: NumberInt(\"2147483647\")}, 1); testExpression(coll, {$sigmoid: NumberLong(\"-9223372036854775808\")}, 0); testExpression(coll, {$sigmoid: NumberLong(\"9223372036854775807\")}, 1); coll.d"
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": ", {$sigmoid: NumberInt(\"2147483647\")}, 1); testExpression(coll, {$sigmoid: NumberLong(\"-9223372036854775808\")}, 0); testExpression(coll, {$sigmoid: NumberLong(\"9223372036854775807\")}, 1); coll.drop();"
+    },
+    {
+      "code": "731058",
+      "type": "numericCode",
+      "context": "]; const expectedNumericFieldPathResults = [ {_id: 1, computed: 0.5}, {_id: 2, computed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, c"
+    },
+    {
+      "code": "578630",
+      "type": "numericCode",
+      "context": "nst expectedNumericFieldPathResults = [ {_id: 1, computed: 0.5}, {_id: 2, computed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, comput"
+    },
+    {
+      "code": "880797",
+      "type": "numericCode",
+      "context": "[ {_id: 1, computed: 0.5}, {_id: 2, computed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, com"
+    },
+    {
+      "code": "077977",
+      "type": "numericCode",
+      "context": "{_id: 1, computed: 0.5}, {_id: 2, computed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, compu"
+    },
+    {
+      "code": "952574",
+      "type": "numericCode",
+      "context": "computed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id:"
+    },
+    {
+      "code": "126822",
+      "type": "numericCode",
+      "context": "ed: 0.7310585786300049}, {_id: 3, computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, co"
+    },
+    {
+      "code": "017986",
+      "type": "numericCode",
+      "context": "computed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {"
+    },
+    {
+      "code": "209962",
+      "type": "numericCode",
+      "context": "ed: 0.8807970779778823}, {_id: 4, computed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8"
+    },
+    {
+      "code": "006692",
+      "type": "numericCode",
+      "context": "omputed: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: "
+    },
+    {
+      "code": "850924",
+      "type": "numericCode",
+      "context": "d: 0.9525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689"
+    },
+    {
+      "code": "284855",
+      "type": "numericCode",
+      "context": "525741268224334}, {_id: 5, computed: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689414213"
+    },
+    {
+      "code": "720075",
+      "type": "numericCode",
+      "context": "uted: 0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689414213699951}, {_id: 10, computed: 0}"
+    },
+    {
+      "code": "976020",
+      "type": "numericCode",
+      "context": "0.01798620996209156}, {_id: 6, computed: 0.0066928509242848554}, {_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689414213699951}, {_id: 10, computed: 0}, {_id"
+    },
+    {
+      "code": "268941",
+      "type": "numericCode",
+      "context": "{_id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689414213699951}, {_id: 10, computed: 0}, {_id: 11, computed: 1}, {_id: 12, computed: 0}, {_id: 13, computed: 1"
+    },
+    {
+      "code": "421369",
+      "type": "numericCode",
+      "context": "id: 7, computed: 3.7200759760208356e-44}, {_id: 8, computed: 1}, {_id: 9, computed: 0.2689414213699951}, {_id: 10, computed: 0}, {_id: 11, computed: 1}, {_id: 12, computed: 0}, {_id: 13, computed: 1},"
+    },
+    {
+      "code": "678910",
+      "type": "numericCode",
+      "context": "9}, {_id: 3, length: 2.3, height: 4.9, width: 2.1}, {_id: 4, length: 12345, height: 678910, width: 2.1}, ]), ); const numericNestedExpressionResults = coll .aggregate([ { $project: { _id: 1, perimeter"
+    },
+    {
+      "code": "999997",
+      "type": "numericCode",
+      "context": "erSigmoid: 0.8807970779778823, volumeSigmoid: 0.7310585786300049}, {_id: 2, perimeterSigmoid: 0.999997739675702, volumeSigmoid: 1}, { _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.999"
+    },
+    {
+      "code": "739675",
+      "type": "numericCode",
+      "context": "oid: 0.8807970779778823, volumeSigmoid: 0.7310585786300049}, {_id: 2, perimeterSigmoid: 0.999997739675702, volumeSigmoid: 1}, { _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.999999999"
+    },
+    {
+      "code": "987871",
+      "type": "numericCode",
+      "context": "terSigmoid: 0.999997739675702, volumeSigmoid: 1}, { _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.9999999999473312, }, {_id: 4, perimeterSigmoid: 1, volumeSigmoid: 1}, ]; assert(anyEq"
+    },
+    {
+      "code": "565015",
+      "type": "numericCode",
+      "context": "moid: 0.999997739675702, volumeSigmoid: 1}, { _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.9999999999473312, }, {_id: 4, perimeterSigmoid: 1, volumeSigmoid: 1}, ]; assert(anyEq(numer"
+    },
+    {
+      "code": "999999",
+      "type": "numericCode",
+      "context": "d: 1}, { _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.9999999999473312, }, {_id: 4, perimeterSigmoid: 1, volumeSigmoid: 1}, ]; assert(anyEq(numericNestedExpressionResults, expectedNu"
+    },
+    {
+      "code": "999947",
+      "type": "numericCode",
+      "context": "{ _id: 3, perimeterSigmoid: 0.9878715650157257, volumeSigmoid: 0.9999999999473312, }, {_id: 4, perimeterSigmoid: 1, volumeSigmoid: 1}, ]; assert(anyEq(numericNestedExpressionResults, expectedNumericNe"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Window",
+      "MongoDB version: 5.0",
+      "Implementation status: × Not implemented",
+      "Found 1 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ]
+  }
+}

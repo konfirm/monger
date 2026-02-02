@@ -1,0 +1,638 @@
+{
+  "source": "date_to_string.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_to_string.js",
+  "extractedAt": "2026-02-01T19:19:11.566Z",
+  "setup": {
+    "collections": {
+      "date_to_string": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 60,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "$tz"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "UTC"
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Europe/London"
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "America/New_York"
+        },
+        {
+          "_id": 3,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Australia/Eucla"
+        },
+        {
+          "_id": 4,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Asia/Kathmandu"
+        },
+        {
+          "_id": 5,
+          "date": {
+            "$date": "1935-07-10T11:36:37.133Z"
+          },
+          "tz": "Europe/Amsterdam"
+        },
+        {
+          "_id": 6,
+          "date": {
+            "$date": "1900-07-10T11:41:22.418Z"
+          },
+          "tz": "America/Caracas"
+        }
+      ],
+      "timestamp": 1769973551372
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "America/New_York"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 170,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 221,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "Natural: %Y-W%w-%U, ISO: %G-W%u-%V",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-01T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 272,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%b (%B) %d, %Y",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-01T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 323,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "$timezone"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          },
+          "timezone": null
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 3,
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "_id": 4,
+          "date": null,
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "_id": 5,
+          "timezone": "Europe/Oslo"
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 374,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551373
+    },
+    {
+      "id": 398,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date",
+                "timezone": "UTC"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551374
+    },
+    {
+      "id": 422,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date",
+                "timezone": "America/New_York"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973551374
+    },
+    {
+      "id": 457,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              },
+              "format": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973551374
+    },
+    {
+      "id": 480,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973551374
+    },
+    {
+      "id": 503,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              },
+              "format": "$missing"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973551374
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[ {_id: 0, date: \"Natural: 2017-W1-01, ISO: 2016-W7-52\"}, {_id: 1, date: \"Natural: 2017-W3-27, ISO: 2017-W2-27\"}, {_id: 2, date: \"Natural: 2017-W2-49, ISO: 2017-W1-49\"}, ]",
+      "expected": "coll .aggregate([ { $project: { date: { $dateToString: {format: \"Natural: %Y-W%w-%U, ISO: %G-W%u-%V\", date: \"$date\"}, }, }, }, {$sort: {_id: 1}}, ]",
+      "line": 127
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: 0, date: null}, {_id: 1, date: null}, {_id: 2, date: null}, {_id: 3, date: null}, {_id: 4, date: null}, {_id: 5, date: null}, ]",
+      "expected": "coll .aggregate([ { $project: { date: { $dateToString: { format: \"%Y-%m-%d %H:%M:%S %z (%Z minutes",
+      "line": 183
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: 0, date: \"2017-01-04T15:08:51.911Z\"}, {_id: 1, date: \"2017-07-04T15:09:12.911Z\"}, {_id: 2, date: \"2017-12-04T15:09:14.911Z\"}, ]",
+      "expected": "coll.aggregate([{$project: {date: {$dateToString: {date: \"$date\"}}}}, {$sort: {_id: 1}}]",
+      "line": 227
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: 0, date: \"2017-01-04T15:08:51.911Z\"}, {_id: 1, date: \"2017-07-04T15:09:12.911Z\"}, {_id: 2, date: \"2017-12-04T15:09:14.911Z\"}, ]",
+      "expected": "coll .aggregate([{$project: {date: {$dateToString: {date: \"$date\", timezone: \"UTC\"}}}}, {$sort: {_id: 1}}]",
+      "line": 237
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: 0, date: \"2017-01-04T10:08:51.911\"}, {_id: 1, date: \"2017-07-04T11:09:12.911\"}, {_id: 2, date: \"2017-12-04T10:09:14.911\"}, ]",
+      "expected": "coll .aggregate([ {$project: {date: {$dateToString: {date: \"$date\", timezone: \"America/New_York\"}}}}, {$sort: {_id: 1}}, ]",
+      "line": 249
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: { date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 268
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: { date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 283
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: { date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 298
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-07-04T14:56:42.911Z\"",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 53
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 88
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-01T15:08:51.911Z\"",
+      "line": 119
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-01T15:08:51.911Z\"",
+      "line": 150
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 172
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, date: new ISODate(\"2017-01-04T15:08:51.911Z\"",
+      "line": 218
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0}",
+      "line": 266
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "res",
+      "code": "18533",
+      "line": 317
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "res",
+      "code": "40517",
+      "line": 336
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "res",
+      "code": "16006",
+      "line": 340
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "res",
+      "code": "40485",
+      "line": 357
+    }
+  ],
+  "meta": {
+    "totalOperations": 592,
+    "totalAssertions": 20,
+    "errors": 1
+  }
+}

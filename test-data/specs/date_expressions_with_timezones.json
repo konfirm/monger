@@ -1,0 +1,377 @@
+{
+  "source": "date_expressions_with_timezones.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_expressions_with_timezones.js",
+  "extractedAt": "2026-02-01T19:19:08.639Z",
+  "setup": {
+    "collections": {
+      "date_expressions_with_time_zones": [
+        {
+          "date": {
+            "$date": "2017-01-16T01:02:03.456Z"
+          },
+          "timezone": "America/Sao_Paulo"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 46,
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": "$date"
+              },
+              "month": {
+                "$month": "$date"
+              },
+              "day": {
+                "$dayOfMonth": "$date"
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-06-16T00:00:00.000Z"
+          },
+          "sales": 1
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-06-16T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-06-17T00:00:00.000Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 3,
+          "date": {
+            "$date": "2017-06-17T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 4,
+          "date": {
+            "$date": "2017-06-17T15:00:33.101Z"
+          },
+          "sales": 2
+        }
+      ],
+      "timestamp": 1769973548453
+    },
+    {
+      "id": 74,
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              },
+              "month": {
+                "$month": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              },
+              "day": {
+                "$dayOfMonth": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-06-16T00:00:00.000Z"
+          },
+          "sales": 1
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-06-16T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-06-17T00:00:00.000Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 3,
+          "date": {
+            "$date": "2017-06-17T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 4,
+          "date": {
+            "$date": "2017-06-17T15:00:33.101Z"
+          },
+          "sales": 2
+        }
+      ],
+      "timestamp": 1769973548453
+    },
+    {
+      "id": 102,
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              },
+              "month": {
+                "$month": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              },
+              "day": {
+                "$dayOfMonth": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-06-16T00:00:00.000Z"
+          },
+          "sales": 1
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-06-16T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-06-17T00:00:00.000Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 3,
+          "date": {
+            "$date": "2017-06-17T12:02:21.013Z"
+          },
+          "sales": 2
+        },
+        {
+          "_id": 4,
+          "date": {
+            "$date": "2017-06-17T15:00:33.101Z"
+          },
+          "sales": 2
+        }
+      ],
+      "timestamp": 1769973548453
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[ {_id: {year: 2017, month: 6, day: 16}, totalSales: 3}, {_id: {year: 2017, month: 6, day: 17}, totalSales: 6}, ]",
+      "expected": "coll .aggregate([ { $group: { _id: { year: {$year: \"$date\"}, month: {$month: \"$date\"}, day: {$dayOfMonth: \"$date\"}, }, totalSales: {$sum: \"$sales\"}, }, }, {$sort: {\"_id.year\": 1, \"_id.month\": 1, \"_id.day\": 1}}, ]",
+      "line": 29
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: {year: 2017, month: 6, day: 15}, totalSales: 1}, {_id: {year: 2017, month: 6, day: 16}, totalSales: 4}, {_id: {year: 2017, month: 6, day: 17}, totalSales: 4}, ]",
+      "expected": "coll .aggregate([ { $group: { _id: { year: {$year: {date: \"$date\", timezone: \"America/New_York\"}}, month: {$month: {date: \"$date\", timezone: \"America/New_York\"}}, day: {$dayOfMonth: {date: \"$date\", timezone: \"America/New_York\"}}, }, totalSales: {$sum: \"$sales\"}, }, }, {$sort: {\"_id.year\": 1, \"_id.month\": 1, \"_id.day\": 1}}, ]",
+      "line": 53
+    },
+    {
+      "type": "eq",
+      "actual": "[ {_id: {year: 2017, month: 6, day: 16}, totalSales: 3}, {_id: {year: 2017, month: 6, day: 17}, totalSales: 4}, {_id: {year: 2017, month: 6, day: 18}, totalSales: 2}, ]",
+      "expected": "coll .aggregate([ { $group: { _id: { year: {$year: {date: \"$date\", timezone: \"Australia/Sydney\"}}, month: {$month: {date: \"$date\", timezone: \"Australia/Sydney\"}}, day: {$dayOfMonth: {date: \"$date\", timezone: \"Australia/Sydney\"}}, }, totalSales: {$sum: \"$sales\"}, }, }, {$sort: {\"_id.year\": 1, \"_id.month\": 1, \"_id.day\": 1}}, ]",
+      "line": 77
+    },
+    {
+      "type": "eq",
+      "actual": "expectedValues.idBasedTzExpected",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"$timezone\"",
+      "line": 113
+    },
+    {
+      "type": "eq",
+      "actual": "expectedValues.idBasedTzExpected",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"America/Sao_Paulo\"",
+      "line": 117
+    },
+    {
+      "type": "eq",
+      "actual": "expectedValues.offsetBasedTzExpected",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"$timezone\"",
+      "line": 125
+    },
+    {
+      "type": "eq",
+      "actual": "expectedValues.offsetBasedTzExpected",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"-01:30\"",
+      "line": 129
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"$timezone\"",
+      "line": 137
+    },
+    {
+      "type": "eq",
+      "actual": "expectedValues.noTzExpected",
+      "expected": "runDateTimeExpressionWithTimezone(exprName",
+      "line": 138
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "runDateTimeExpressionWithTimezone(exprName, \"$timezone\"",
+      "line": 143
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0}]",
+      "expected": "coll.aggregate(pipeline",
+      "line": 186
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0}]",
+      "expected": "coll.aggregate(pipeline",
+      "line": 190
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ // Three sales on 2017-06-16 in UTC. {_id: 0, date: new ISODate(\"2017-06-16T00:00:00.000Z\"",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 101
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2017-01-16T01:02:03.456Z\"",
+      "line": 112
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2017-01-01T01:02:03.456Z\"",
+      "line": 124
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2017-01-16T01:02:03.456Z\"",
+      "line": 136
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({timezone: \"America/Sao_Paulo\"}",
+      "line": 142
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2017-06-16T00:00:00.000Z\"",
+      "line": 147
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2017-06-16T00:00:00.000Z\"",
+      "line": 153
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: \"2017-06-16T00:00:00.000Z\", timezone: \"America/Sao_Paulo\"}",
+      "line": 159
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, date: ISODate(\"2017-01-16T01:02:03.456Z\"",
+      "line": 193
+    }
+  ],
+  "meta": {
+    "totalOperations": 168,
+    "totalAssertions": 22,
+    "errors": 1
+  }
+}

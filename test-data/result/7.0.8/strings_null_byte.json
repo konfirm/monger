@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/strings_null_byte.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:45.039Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

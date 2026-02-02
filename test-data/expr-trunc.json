@@ -1,0 +1,162 @@
+{
+  "operator": "$trunc",
+  "description": "Tests for $trunc - Arithmetic operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/date_trunc.js, /mongo/jstests/aggregation/expressions/round_trunc.js",
+  "implementationSource": "TBD",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic arithmetic operation",
+        "query": {
+          "$trunc": [
+            10,
+            5
+          ]
+        },
+        "expected": null
+      },
+      {
+        "description": "Arithmetic with field references",
+        "query": {
+          "$trunc": [
+            "$a",
+            "$b"
+          ]
+        },
+        "context": {
+          "a": 10,
+          "b": 5
+        },
+        "expected": null
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [
+      {
+        "description": "Operation with null argument",
+        "query": {
+          "$trunc": [
+            null,
+            5
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ments: [{date: someDate, unit: \"century\", binSize: 1, timeZone: \"UTC\"}], expectedErrorCode: ErrorCodes.FailedToParse, }, { // Null 'binSize'. pipeline: aggregationPipelineWithDateTrunc, inputDocuments"
+    },
+    {
+      "code": "543900",
+      "type": "numericCode",
+      "context": "id: false, date_trunc: {$dateTrunc: \"A\"}}}], inputDocuments: [], expectedErrorCode: 5439007, }, { // Invalid $dateTrunc expression - invalid parameter. pipeline: [{$project: {_id: false, date_trunc: {"
+    },
+    {
+      "code": "543901",
+      "type": "numericCode",
+      "context": "te_trunc: {$dateTrunc: {date: someDate}}}}], inputDocuments: [], expectedErrorCode: 5439010, }, // Evaluation tests. { // Default values are used for optional parameters (startOfWeek: \"Sunday\", binSiz"
+    },
+    {
+      "code": "135033",
+      "type": "numericCode",
+      "context": "it: \"second\", binSize: 10}}}, }, ], inputDocuments: [{ts: new Timestamp(1350336377 /*2012-10-15T21:26:17Z*/, 0)}], expectedResults: [{date_trunc: new Date(\"2012-10-15T21:26:10Z\")}], }, { // Invalid 'd"
+    },
+    {
+      "code": "2",
+      "type": "assertErrorCode",
+      "context": "ong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorCode(coll, [{$project: {a: {$trunc: [1, 2, 3]}}}], 28667); assertErrorCode(coll, [{$projec"
+    },
+    {
+      "code": "51081",
+      "type": "assertErrorCode",
+      "context": "l, [{$project: {a: {$round: [1, 2, 3]}}}], 28667); // Test non-numeric input to $trunc and $round. assertErrorCode(coll, [{$project: {a: {$round: \"string\"}}}], 51081); assertErrorCode(coll, [{$project"
+    },
+    {
+      "code": "101",
+      "type": "assertErrorCode",
+      "context": "1\")]}}}], 51083); assertErrorCode(coll, [{$project: {a: {$round: [1, NumberInt(\"-21\")]}}}], 51083); assertErrorCode(coll, [{$project: {a: {$round: [1, 101]}}}], 51083); assertErrorCode(coll, [{$projec"
+    },
+    {
+      "code": "10",
+      "type": "assertErrorCode",
+      "context": "on arguments. assertErrorCode(coll, [{$project: {a: {$round: [1, NumberDecimal(\"1.4\")]}}}], 51082); assertErrorCode(coll, [{$project: {a: {$trunc: [1, 10.5]}}}], 51082); assertErrorCode(coll, [{$proje"
+    },
+    {
+      "code": "298912",
+      "type": "numericCode",
+      "context": "mal(\"23.298\"), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc"
+    },
+    {
+      "code": "343250",
+      "type": "numericCode",
+      "context": "3.298\"), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(Numbe"
+    },
+    {
+      "code": "054252",
+      "type": "numericCode",
+      "context": "), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecim"
+    },
+    {
+      "code": "245154",
+      "type": "numericCode",
+      "context": "berDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1."
+    },
+    {
+      "code": "298000",
+      "type": "numericCode",
+      "context": "al(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1.298\"), NumberDecimal(\"1.298000000000000000000000000000000\"), NumberDecimal(\"100\")); testRound(1.298, 1, 0); testRound(1.298,"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1.298\"), NumberDecimal(\"1.298000000000000000000000000000000\"), NumberDecimal(\"100\")); testRound(1.298, 1, 0); testRound(1.298, 1.3, "
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "00000000000000000000000000\"), NumberDecimal(\"100\")); // Test $round overflow. testRound(NumberInt(\"2147483647\"), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLo"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "83647\"), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assert"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorC"
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "berLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorCode(co"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 3,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 1,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Arithmetic",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 2 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ]
+  }
+}

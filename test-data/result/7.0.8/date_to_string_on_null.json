@@ -1,0 +1,298 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_to_string_on_null.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:09.132Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": null,
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "timezone": null,
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "timezone": "$missing",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {}
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": 5
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": "Not a date"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": null
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": "$missing"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

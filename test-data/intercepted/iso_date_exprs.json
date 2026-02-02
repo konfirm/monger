@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/iso_date_exprs.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/iso_date_exprs.js",
+      "timestamp": 1769973920444
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973920446
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973920444,
+    "endTime": 1769973920446,
+    "totalOperations": 0
+  }
+}

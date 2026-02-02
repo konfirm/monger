@@ -1,0 +1,88 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/switch.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.092Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {},
+        "context": {},
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 9,
+    "totalDocuments": 1,
+    "errors": 9
+  }
+}

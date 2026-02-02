@@ -1,0 +1,7816 @@
+{
+  "operator": "$getField",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/expression_get_field.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.037Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 13",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {
+                    "a": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "b"
+          },
+          {
+            "_id": 1,
+            "test": "b"
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "a$b"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "foo"
+          },
+          {
+            "_id": 1,
+            "test": "foo"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "a.b"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "bar"
+          },
+          {
+            "_id": 1,
+            "test": "bar"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "x"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 0
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "a.$b"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": ".xy"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 0
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": ".$xz"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 0
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "..zz"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 0
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$const": "$a"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 10
+          },
+          {
+            "_id": 1,
+            "test": 10
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$const": "$x.$y"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 20
+          },
+          {
+            "_id": 1,
+            "test": 20
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$const": "$x..$y"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$a": 1,
+              "$b..$c": 2
+            }
+          },
+          {
+            "_id": 1,
+            "test": {
+              "$a": 1,
+              "$b..$c": 2
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$f"
+                  },
+                  "input": "$e"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 30
+          },
+          {
+            "_id": 1,
+            "test": 30
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 62",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a.b",
+                  "input": {
+                    "$const": {
+                      "a.b": "b"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "b"
+          },
+          {
+            "_id": 1,
+            "test": "b"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 63",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": ".ab",
+                  "input": {
+                    "$const": {
+                      ".ab": "b"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "b"
+          },
+          {
+            "_id": 1,
+            "test": "b"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 64",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "ab.",
+                  "input": {
+                    "$const": {
+                      "ab.": "b"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "b"
+          },
+          {
+            "_id": 1,
+            "test": "b"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 65",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a.b.c",
+                  "input": {
+                    "$const": {
+                      "a.b.c": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 66",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a.b.c",
+                  "input": {
+                    "a": {
+                      "b": {
+                        "c": 5
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 67",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "d",
+                  "input": {
+                    "$getField": "c"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "x"
+          },
+          {
+            "_id": 1,
+            "test": "x"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 68",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a$b",
+                  "input": {
+                    "a$b": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": "b"
+          },
+          {
+            "_id": 1,
+            "test": "b"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 69",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a$b.b",
+                  "input": {
+                    "$const": {
+                      "a$b.b": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 70",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "a$b.b"
+                  },
+                  "input": {
+                    "$const": {
+                      "a$b.b": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 71",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$b.b"
+                  },
+                  "input": {
+                    "$const": {
+                      "$b.b": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 72",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$b"
+                  },
+                  "input": {
+                    "$const": {
+                      "$b": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 73",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$.ab"
+                  },
+                  "input": {
+                    "$const": {
+                      "$.ab": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 74",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$$xz"
+                  },
+                  "input": {
+                    "$const": {
+                      "$$xz": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 76",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {
+                    "b": 2,
+                    "c": 3
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 79",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {}
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 81",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$const": "$u.."
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 82",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "doesNotExist2",
+                  "input": {
+                    "$getField": "doesNotExist1"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 83",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "x",
+                  "input": {
+                    "$getField": "doesNotExist"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 84",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": true
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 85",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {
+                    "$getField": {
+                      "field": "b.c",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 5
+          },
+          {
+            "_id": 1,
+            "test": 5
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 86",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "x",
+                  "input": {
+                    "$getField": {
+                      "field": "b.c",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 87",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {
+                    "$getField": {
+                      "field": "b.d",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0
+          },
+          {
+            "_id": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 88",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$a"
+                  },
+                  "input": {
+                    "$getField": {
+                      "$const": "$x..$y"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 1
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 89",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$b..$c"
+                  },
+                  "input": {
+                    "$getField": {
+                      "$const": "$x..$y"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 2
+          },
+          {
+            "_id": 1,
+            "test": 2
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 90",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "a$b"
+                  },
+                  "input": {
+                    "$arrayElemAt": [
+                      [
+                        {
+                          "$const": {
+                            "a$b": 1
+                          }
+                        },
+                        {
+                          "$const": {
+                            "a$b": 2
+                          }
+                        }
+                      ],
+                      0
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 1
+          },
+          {
+            "_id": 1,
+            "test": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 91",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "a.."
+                  },
+                  "input": {
+                    "$arrayElemAt": [
+                      [
+                        {
+                          "$const": {
+                            "a..": 1
+                          }
+                        },
+                        {
+                          "$const": {
+                            "a..": 2
+                          }
+                        }
+                      ],
+                      1
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 2
+          },
+          {
+            "_id": 1,
+            "test": 2
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 92",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$a"
+                  },
+                  "input": {
+                    "$arrayElemAt": [
+                      "$f",
+                      0
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 41
+          },
+          {
+            "_id": 1,
+            "test": 41
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 93",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$b.."
+                  },
+                  "input": {
+                    "$arrayElemAt": [
+                      "$f",
+                      1
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": 42
+          },
+          {
+            "_id": 1,
+            "test": 42
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 94",
+        "query": {
+          "$getField": ".$xz"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "aa": 0
+          },
+          {
+            "_id": 1,
+            "aa": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 95",
+        "query": [
+          {
+            "$match": {
+              "$expr": {
+                "$ne": [
+                  {
+                    "$getField": "_id"
+                  },
+                  {
+                    "$getField": ".$xz"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 96",
+        "query": {
+          "$getField": "x"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "a": 0,
+            "b": "bar"
+          },
+          {
+            "_id": 1,
+            "a": 1,
+            "b": "bar"
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 97",
+        "query": [
+          {
+            "$addFields": {
+              "aa": {
+                "$getField": {
+                  "$const": "a.b"
+                }
+              }
+            }
+          },
+          {
+            "$project": {
+              "aa": 1,
+              "_id": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "aa": "bar"
+          },
+          {
+            "_id": 1,
+            "aa": "bar"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 98",
+        "query": [
+          {
+            "$bucket": {
+              "groupBy": {
+                "$getField": {
+                  "$const": "a.b"
+                }
+              },
+              "boundaries": [
+                "aaa",
+                "bar",
+                "zzz"
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": "bar",
+            "count": 2
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 99",
+        "query": [
+          {
+            "$bucket": {
+              "groupBy": {
+                "$getField": "x"
+              },
+              "boundaries": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "count": 1
+          },
+          {
+            "_id": 1,
+            "count": 1
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 75",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          },
+          {
+            "_id": 1,
+            "test": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 77",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": "a",
+                  "input": {
+                    "a": null,
+                    "b": 2,
+                    "c": 3
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          },
+          {
+            "_id": 1,
+            "test": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 78",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$const": "$a"
+                  },
+                  "input": {
+                    "$const": {
+                      "$a": null,
+                      "b": 2,
+                      "c": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          },
+          {
+            "_id": 1,
+            "test": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 80",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$const": "$v.."
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          },
+          {
+            "_id": 1,
+            "test": null
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$getField": {
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$getField": {
+            "field": "a"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'input' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$getField": {
+            "field": true,
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$getField": {
+            "field": {
+              "a": 1
+            },
+            "input": {
+              "a": 1
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {
+          "$getField": 5
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got int"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$getField": true
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$getField": {
+            "field": null,
+            "input": {
+              "a": 1
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got null"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$getField": {
+            "field": "a",
+            "input": {
+              "a": "b"
+            },
+            "unknown": true
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField found an unknown argument: unknown"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {
+          "$getField": {
+            "$add": [
+              2,
+              3
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$getField": {
+            "$const": true
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {
+          "$getField": {
+            "$const": {
+              "a": 1
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got object"
+        }
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": {
+          "$getField": {
+            "field": {
+              "$const": []
+            },
+            "input": {
+              "a": 1
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got array"
+        }
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$concat": [
+                      "a",
+                      "b"
+                    ]
+                  },
+                  "input": {
+                    "ab": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$cond": [
+                      false,
+                      null,
+                      "x"
+                    ]
+                  },
+                  "input": {
+                    "x": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "field": {
+                    "$cond": [
+                      {
+                        "$eq": [
+                          "$y",
+                          9
+                        ]
+                      },
+                      null,
+                      "x"
+                    ]
+                  },
+                  "input": {
+                    "x": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "$foo"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.foo' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.foo'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$concat": [
+                    "$letterB",
+                    "a",
+                    "r"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": {
+          "$getField": "$maybeStr"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.maybeStr' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.maybeStr'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 32",
+        "query": {
+          "$getField": "$a"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 33",
+        "query": {
+          "$getField": "$a.b"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.a.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a.b'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 34",
+        "query": {
+          "$getField": "$$CURRENT.a"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 35",
+        "query": {
+          "$getField": "$x"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.x'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 36",
+        "query": {
+          "$getField": "$missing"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.missing' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.missing'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 37",
+        "query": {
+          "$getField": "$arr.0.1.2.x"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.arr.0.1.2.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.1.2.x'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 38",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$concat": [
+                    "b",
+                    "a",
+                    "r"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 39",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$concat": [
+                    {
+                      "$getField": {
+                        "$const": "$b"
+                      }
+                    },
+                    "a",
+                    "r"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 40",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$getField": {
+                    "$getField": {
+                      "$const": "$.1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 41",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "$c.d"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 42",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "$arr.0.0.0.b"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.arr.0.0.0.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.0.0.b'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 43",
+        "query": {
+          "$getField": {
+            "$add": [
+              1,
+              2
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 44",
+        "query": {
+          "$getField": {
+            "$mod": [
+              5,
+              10
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 45",
+        "query": {
+          "$getField": {
+            "$month": "$$NOW"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 46",
+        "query": {
+          "$getField": {
+            "$ne": [
+              "$x",
+              1
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 47",
+        "query": {
+          "$getField": {
+            "$toDouble": "2.5"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 48",
+        "query": {
+          "$getField": {
+            "$reverseArray": "$items"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 49",
+        "query": {
+          "$getField": {
+            "$mergeObjects": [
+              "$c",
+              "$e"
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 50",
+        "query": {
+          "$getField": {
+            "$mergeObjects": [
+              null,
+              null
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 51",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "$$CURRENT.c.d"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 52",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": "$$ROOT.c.d"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$ROOT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$ROOT.c.d'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 53",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$getField": {
+                  "$toString": "$$NOW"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 54",
+        "query": {
+          "$getField": "$$NOW"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$NOW' is a field path reference which is not allowed in this context. Did you mean {$literal: '$NOW'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 55",
+        "query": {
+          "$getField": "$$REMOVE"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$REMOVE' is a field path reference which is not allowed in this context. Did you mean {$literal: '$REMOVE'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 56",
+        "query": {
+          "$getField": "$$DESCEND"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Use of undefined variable: DESCEND"
+        }
+      },
+      {
+        "description": "Aggregate operation 57",
+        "query": {
+          "$getField": "$$PRUNE"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Use of undefined variable: PRUNE"
+        }
+      },
+      {
+        "description": "Aggregate operation 58",
+        "query": {
+          "$getField": "$$KEEP"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Use of undefined variable: KEEP"
+        }
+      },
+      {
+        "description": "Aggregate operation 59",
+        "query": {
+          "$getField": "$$USER_ROLES"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$USER_ROLES' is a field path reference which is not allowed in this context. Did you mean {$literal: '$USER_ROLES'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 60",
+        "query": {
+          "$getField": "$$SEARCH_META"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$SEARCH_META' is a field path reference which is not allowed in this context. Did you mean {$literal: '$SEARCH_META'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 61",
+        "query": {
+          "$getField": "$$CLUSTER_TIME"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CLUSTER_TIME' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CLUSTER_TIME'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 100",
+        "query": [
+          {
+            "$lookup": {
+              "let": {
+                "field": "$lookupField"
+              },
+              "from": "expression_get_field_lookup_test",
+              "pipeline": [
+                {
+                  "$project": {
+                    "field": {
+                      "$getField": {
+                        "field": "$$field",
+                        "input": "$$CURRENT"
+                      }
+                    }
+                  }
+                }
+              ],
+              "as": "result"
+            }
+          },
+          {
+            "$project": {
+              "result": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          },
+          "f": [
+            {
+              "$a": 41
+            },
+            {
+              "$b..": 42
+            }
+          ],
+          "$v..": null,
+          "foo": "bar",
+          "bar": "baz",
+          "letterB": "b",
+          "$b": "b",
+          "arr": {
+            "0": {
+              "0": {
+                "0": {
+                  "b": "bar"
+                }
+              }
+            }
+          },
+          "maybeStr": "2",
+          "$.1": "$.2",
+          "$.2": "bar",
+          "items": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "lookupField": "field0"
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$field' is a field path reference which is not allowed in this context. Did you mean {$literal: '$field'}?"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 100,
+    "totalDocuments": 2,
+    "errors": 49
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/single_obj_arg.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/single_obj_arg.js",
+      "timestamp": 1769973925502
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973925505
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973925502,
+    "endTime": 1769973925505,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "hash.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/hash.js",
+  "extractedAt": "2026-02-01T19:19:21.991Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "actualHex",
+      "expected": "expectedHex",
+      "line": 159
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0}",
+      "line": 16
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "source": "sqrt.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/sqrt.js",
+  "extractedAt": "2026-02-01T19:19:48.130Z",
+  "setup": {
+    "collections": {
+      "sqrt": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                100
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587945
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587946
+    },
+    {
+      "id": 52,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                {
+                  "$numberLong": "100"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587947
+    },
+    {
+      "id": 75,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                {
+                  "$numberLong": "9223372036854775807"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587947
+    },
+    {
+      "id": 93,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587947
+    },
+    {
+      "id": 111,
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973587947
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0}",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 147,
+    "totalAssertions": 1,
+    "errors": 0
+  }
+}

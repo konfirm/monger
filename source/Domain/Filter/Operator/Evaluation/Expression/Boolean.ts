@@ -87,7 +87,6 @@ export function $not(
 	query: unknown,
 	compile: ExpressionCompiler,
 ): Evaluator<boolean> {
-	console.log({ query });
 	if (query === undefined) {
 		throw new Error("$not must have an expression");
 	}

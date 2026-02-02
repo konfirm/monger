@@ -1,0 +1,1036 @@
+{
+  "operator": "$in",
+  "description": "Tests for $in - Comparison operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js, /mongo/jstests/aggregation/expressions/binarySize.js, /mongo/jstests/aggregation/expressions/convert_any_to_string.js, /mongo/jstests/aggregation/expressions/convert_bindata.js, /mongo/jstests/aggregation/expressions/convert_bindata_numeric.js, /mongo/jstests/aggregation/expressions/convert_bindata_vector.js, /mongo/jstests/aggregation/expressions/convert_string_to_object_array.js, /mongo/jstests/aggregation/expressions/date_from_string.js, /mongo/jstests/aggregation/expressions/date_from_string_on_error.js, /mongo/jstests/aggregation/expressions/date_from_string_on_null.js, /mongo/jstests/aggregation/expressions/date_to_string.js, /mongo/jstests/aggregation/expressions/date_to_string2.js, /mongo/jstests/aggregation/expressions/date_to_string_on_null.js, /mongo/jstests/aggregation/expressions/exprs_in_arrays.js, /mongo/jstests/aggregation/expressions/extract_missing_date.js, /mongo/jstests/aggregation/expressions/filter_arrayindexas.js, /mongo/jstests/aggregation/expressions/in.js, /mongo/jstests/aggregation/expressions/indexof_array.js, /mongo/jstests/aggregation/expressions/indexof_array_dup.js, /mongo/jstests/aggregation/expressions/indexof_bytes.js, /mongo/jstests/aggregation/expressions/indexof_codepoints.js, /mongo/jstests/aggregation/expressions/internal_js_emit.js, /mongo/jstests/aggregation/expressions/internal_js_emit_with_scope.js, /mongo/jstests/aggregation/expressions/internal_key_string_value.js, /mongo/jstests/aggregation/expressions/map_arrayindexas.js, /mongo/jstests/aggregation/expressions/max_min.js, /mongo/jstests/aggregation/expressions/median_expression_continuous.js, /mongo/jstests/aggregation/expressions/null_chars_string_input.js, /mongo/jstests/aggregation/expressions/percentile_expression_continuous.js, /mongo/jstests/aggregation/expressions/reduce_arrayindexas.js, /mongo/jstests/aggregation/expressions/single_obj_arg.js, /mongo/jstests/aggregation/expressions/strings_null_byte.js, /mongo/jstests/aggregation/expressions/ts_second_increment.js, /mongo/jstests/aggregation/sources/addFields/add_fields_adds_to_missing_fields.js, /mongo/jstests/aggregation/sources/addFields/independence.js, /mongo/jstests/aggregation/sources/bucketauto/bucket_auto_pow2_inf.js, /mongo/jstests/aggregation/sources/densify/densify_dep_tracking.js, /mongo/jstests/aggregation/sources/densify/internal_parse.js, /mongo/jstests/aggregation/sources/documents/subpipeline_validation.js, /mongo/jstests/aggregation/sources/facet/facet_validate_pipelines.js, /mongo/jstests/aggregation/sources/facet/inner_graphlookup.js, /mongo/jstests/aggregation/sources/facet/inner_lookup.js, /mongo/jstests/aggregation/sources/geonear/distancefield_and_includelocs.js, /mongo/jstests/aggregation/sources/geonear/geonear_hint.js, /mongo/jstests/aggregation/sources/geonear/geonear_mindistance.js, /mongo/jstests/aggregation/sources/geonear/mindistance_and_maxdistance.js, /mongo/jstests/aggregation/sources/geonear/mindistance_and_maxdistance_expr.js, /mongo/jstests/aggregation/sources/geonear/requires_geo_index.js, /mongo/jstests/aggregation/sources/graphLookup/missing_fields.js, /mongo/jstests/aggregation/sources/graphLookup/spilling.js, /mongo/jstests/aggregation/sources/group/distinct_scan_optimization.js, /mongo/jstests/aggregation/sources/group/groupMissing.js, /mongo/jstests/aggregation/sources/group/group_set_window_fields.js, /mongo/jstests/aggregation/sources/group/numeric_grouping.js, /mongo/jstests/aggregation/sources/group/text_score_grouping.js, /mongo/jstests/aggregation/sources/indexStats/verify_index_stats_output.js, /mongo/jstests/aggregation/sources/lookup/lookup_contains_text.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_hj.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_inlj.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_lib.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_nlj.js, /mongo/jstests/aggregation/sources/lookup/lookup_single_solution_cache.js, /mongo/jstests/aggregation/sources/lookup/lookup_subpipeline.js, /mongo/jstests/aggregation/sources/lookup/lookup_subpipeline_and_fields.js, /mongo/jstests/aggregation/sources/lookup/lookup_subpipeline_geonear.js, /mongo/jstests/aggregation/sources/lookup/lookup_subpipeline_group.js, /mongo/jstests/aggregation/sources/lookup/lookup_unwind_pbt.js, /mongo/jstests/aggregation/sources/lookup/lookup_using_hashed_index.js, /mongo/jstests/aggregation/sources/match/disallow_near_in_match.js, /mongo/jstests/aggregation/sources/match/disallow_where_in_match.js, /mongo/jstests/aggregation/sources/match/sbe_non_leading_match_pbt.js, /mongo/jstests/aggregation/sources/match/text_search_requires_index.js, /mongo/jstests/aggregation/sources/match/within_in_match.js, /mongo/jstests/aggregation/sources/merge/disallowed_in_lookup.js, /mongo/jstests/aggregation/sources/merge/mode_fail_insert.js, /mongo/jstests/aggregation/sources/merge/mode_keep_existing_insert.js, /mongo/jstests/aggregation/sources/merge/mode_merge_insert.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_discard.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_fail.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_insert.js, /mongo/jstests/aggregation/sources/merge/mode_replace_insert.js, /mongo/jstests/aggregation/sources/merge/pipeline_validation.js, /mongo/jstests/aggregation/sources/merge/requires_unique_index.js, /mongo/jstests/aggregation/sources/metadata/set_metadata_fails_in_user_request.js, /mongo/jstests/aggregation/sources/out/out_in_lookup_not_allowed.js, /mongo/jstests/aggregation/sources/project/analyze_deps_string_order.js, /mongo/jstests/aggregation/sources/project/error_project_subfield_with_existing_expr.js, /mongo/jstests/aggregation/sources/project/handle_missing_subpath.js, /mongo/jstests/aggregation/sources/project/inclusion_accepts_all_numeric_types.js, /mongo/jstests/aggregation/sources/project/project_coalescing.js, /mongo/jstests/aggregation/sources/scoreFusion/score_fusion_score_combination_syntax.js, /mongo/jstests/aggregation/sources/setWindowFields/empty_window.js, /mongo/jstests/aggregation/sources/setWindowFields/empty_window_top_bottom.js, /mongo/jstests/aggregation/sources/setWindowFields/exp_moving_avg.js, /mongo/jstests/aggregation/sources/setWindowFields/explain.js, /mongo/jstests/aggregation/sources/setWindowFields/integral.js, /mongo/jstests/aggregation/sources/setWindowFields/linear_fill.js, /mongo/jstests/aggregation/sources/setWindowFields/min_max.js, /mongo/jstests/aggregation/sources/setWindowFields/min_max_scaler_output_values.js, /mongo/jstests/aggregation/sources/setWindowFields/min_max_scaler_parsing.js, /mongo/jstests/aggregation/sources/setWindowFields/n_accumulators_minN.js, /mongo/jstests/aggregation/sources/setWindowFields/output_overwrites_existing_data.js, /mongo/jstests/aggregation/sources/setWindowFields/window_functions_on_timeseries_coll.js, /mongo/jstests/aggregation/sources/sort/explain_sort.js, /mongo/jstests/aggregation/sources/sort/sort_key_with_missing_fields.js, /mongo/jstests/aggregation/sources/sort/sort_via_index_pbt.js, /mongo/jstests/aggregation/sources/unionWith/unionWith_explain.js, /mongo/jstests/aggregation/sources/unionWith/unionWith_invalid_usage.js, /mongo/jstests/aggregation/sources/unwind/unwind.js, /mongo/jstests/aggregation/sources/unwind/unwind_empty_array.js, /mongo/jstests/aggregation/sources/unwind/unwind_include_array_index.js, /mongo/jstests/aggregation/sources/unwind/unwind_preserve_null_and_empty_arrays.js, /mongo/jstests/aggregation/sources/unwind/unwind_skip.js, /mongo/jstests/aggregation/sources/unwind/unwind_sort.js",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/evaluate_find_internal.cpp, /mongo/src/mongo/db/exec/expression/evaluate_find_internal_test.cpp, /mongo/src/mongo/db/exec/expression/evaluate_index.cpp, /mongo/src/mongo/db/exec/expression/evaluate_index_test.cpp, /mongo/src/mongo/db/exec/expression/evaluate_sharding.cpp, /mongo/src/mongo/db/exec/expression/evaluate_sharding.h, /mongo/src/mongo/db/exec/expression/evaluate_string.cpp, /mongo/src/mongo/db/exec/expression/evaluate_string_test.cpp, /mongo/src/mongo/db/pipeline/accumulator_exp_moving_avg.cpp, /mongo/src/mongo/db/pipeline/accumulator_for_window_functions.h, /mongo/src/mongo/db/pipeline/accumulator_integral.cpp, /mongo/src/mongo/db/pipeline/accumulator_internal_construct_stats.cpp, /mongo/src/mongo/db/pipeline/accumulator_min_max.cpp, /mongo/src/mongo/db/pipeline/aggregation_hint_translation.h, /mongo/src/mongo/db/pipeline/change_stream_invalidation_info.cpp, /mongo/src/mongo/db/pipeline/change_stream_invalidation_info.h, /mongo/src/mongo/db/pipeline/change_stream_pipeline_helpers.cpp, /mongo/src/mongo/db/pipeline/change_stream_pipeline_helpers.h, /mongo/src/mongo/db/pipeline/change_stream_start_after_invalidate_info.cpp, /mongo/src/mongo/db/pipeline/change_stream_start_after_invalidate_info.h, /mongo/src/mongo/db/pipeline/dispatch_shard_pipeline_test.cpp, /mongo/src/mongo/db/pipeline/document_source_change_stream_check_invalidate.cpp, /mongo/src/mongo/db/pipeline/document_source_change_stream_check_invalidate.h, /mongo/src/mongo/db/pipeline/document_source_change_stream_inject_control_events.cpp, /mongo/src/mongo/db/pipeline/document_source_change_stream_inject_control_events.h, /mongo/src/mongo/db/pipeline/document_source_change_stream_unwind_transaction.cpp, /mongo/src/mongo/db/pipeline/document_source_change_stream_unwind_transaction.h, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.cpp, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.h, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup_test.cpp, /mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_input_util.cpp, /mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_input_util.h, /mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util.cpp, /mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util.h, /mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util_test.cpp, /mongo/src/mongo/db/pipeline/document_source_index_stats.cpp, /mongo/src/mongo/db/pipeline/document_source_index_stats.h, /mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats.h, /mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update.h, /mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.h, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_inhibit_optimization.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_inhibit_optimization.h, /mongo/src/mongo/db/pipeline/document_source_internal_list_collections.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_list_collections.h, /mongo/src/mongo/db/pipeline/document_source_internal_projection.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_projection.h, /mongo/src/mongo/db/pipeline/document_source_internal_replace_root.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_replace_root.h, /mongo/src/mongo/db/pipeline/document_source_internal_shardserver_info.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_shardserver_info.h, /mongo/src/mongo/db/pipeline/document_source_internal_shred_documents.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_shred_documents.h, /mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline.h, /mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_unpack_bucket.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_unpack_bucket.h, /mongo/src/mongo/db/pipeline/document_source_parsing_validators.cpp, /mongo/src/mongo/db/pipeline/document_source_parsing_validators.h, /mongo/src/mongo/db/pipeline/document_source_query_settings.cpp, /mongo/src/mongo/db/pipeline/document_source_query_settings.h, /mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline.cpp, /mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline.h, /mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline_test.cpp, /mongo/src/mongo/db/pipeline/document_source_set_window_fields.cpp, /mongo/src/mongo/db/pipeline/document_source_set_window_fields.h, /mongo/src/mongo/db/pipeline/document_source_set_window_fields_test.cpp, /mongo/src/mongo/db/pipeline/document_source_single_document_transformation.cpp, /mongo/src/mongo/db/pipeline/document_source_single_document_transformation.h, /mongo/src/mongo/db/pipeline/document_source_streaming_group.cpp, /mongo/src/mongo/db/pipeline/document_source_streaming_group.h, /mongo/src/mongo/db/pipeline/document_source_unwind.cpp, /mongo/src/mongo/db/pipeline/document_source_unwind.h, /mongo/src/mongo/db/pipeline/document_source_unwind_test.cpp, /mongo/src/mongo/db/pipeline/explain_util.cpp, /mongo/src/mongo/db/pipeline/explain_util.h, /mongo/src/mongo/db/pipeline/expression_context_diagnostic_printer.h, /mongo/src/mongo/db/pipeline/expression_find_internal.cpp, /mongo/src/mongo/db/pipeline/expression_find_internal.h, /mongo/src/mongo/db/pipeline/expression_find_internal_test.cpp, /mongo/src/mongo/db/pipeline/expression_sharding.cpp, /mongo/src/mongo/db/pipeline/expression_sharding.h, /mongo/src/mongo/db/pipeline/graph_lookup_mock_mongo_interface.cpp, /mongo/src/mongo/db/pipeline/graph_lookup_mock_mongo_interface.h, /mongo/src/mongo/db/pipeline/hybrid_search_pipeline_builder.cpp, /mongo/src/mongo/db/pipeline/hybrid_search_pipeline_builder.h, /mongo/src/mongo/db/pipeline/lite_parsed_document_source_nested_pipelines.h, /mongo/src/mongo/db/pipeline/lite_parsed_pipeline.cpp, /mongo/src/mongo/db/pipeline/lite_parsed_pipeline.h, /mongo/src/mongo/db/pipeline/lite_parsed_pipeline_test.cpp, /mongo/src/mongo/db/pipeline/memory_token_container_util.h, /mongo/src/mongo/db/pipeline/percentile_algo_continuous.cpp, /mongo/src/mongo/db/pipeline/percentile_algo_continuous.h, /mongo/src/mongo/db/pipeline/percentile_algo_continuous_test.cpp, /mongo/src/mongo/db/pipeline/pipeline.cpp, /mongo/src/mongo/db/pipeline/pipeline.h, /mongo/src/mongo/db/pipeline/pipeline_d.cpp, /mongo/src/mongo/db/pipeline/pipeline_d.h, /mongo/src/mongo/db/pipeline/pipeline_factory.cpp, /mongo/src/mongo/db/pipeline/pipeline_factory.h, /mongo/src/mongo/db/pipeline/pipeline_factory_test.cpp, /mongo/src/mongo/db/pipeline/pipeline_metadata_tree.h, /mongo/src/mongo/db/pipeline/pipeline_metadata_tree_test.cpp, /mongo/src/mongo/db/pipeline/pipeline_optimization_bm.cpp, /mongo/src/mongo/db/pipeline/pipeline_split_state.h, /mongo/src/mongo/db/pipeline/pipeline_test.cpp, /mongo/src/mongo/db/pipeline/pipeline_test_util.cpp, /mongo/src/mongo/db/pipeline/pipeline_test_util.h, /mongo/src/mongo/db/pipeline/plan_executor_pipeline.cpp, /mongo/src/mongo/db/pipeline/plan_executor_pipeline.h, /mongo/src/mongo/db/pipeline/plan_executor_pipeline_test.cpp, /mongo/src/mongo/db/pipeline/plan_explainer_pipeline.cpp, /mongo/src/mongo/db/pipeline/plan_explainer_pipeline.h, /mongo/src/mongo/db/pipeline/rank_fusion_pipeline_builder.cpp, /mongo/src/mongo/db/pipeline/rank_fusion_pipeline_builder.h, /mongo/src/mongo/db/pipeline/score_fusion_pipeline_builder.cpp, /mongo/src/mongo/db/pipeline/score_fusion_pipeline_builder.h, /mongo/src/mongo/db/pipeline/shard_role_transaction_resources_stasher_for_pipeline.h, /mongo/src/mongo/db/pipeline/sharded_agg_helpers_targeting_policy.h, /mongo/src/mongo/db/pipeline/single_document_transformation_processor.cpp, /mongo/src/mongo/db/pipeline/single_document_transformation_processor.h, /mongo/src/mongo/db/pipeline/split_pipeline.cpp, /mongo/src/mongo/db/pipeline/split_pipeline.h, /mongo/src/mongo/db/pipeline/split_pipeline_test.cpp, /mongo/src/mongo/db/pipeline/stage_constraints.h, /mongo/src/mongo/db/pipeline/timeseries_index_conversion_options.h, /mongo/src/mongo/db/pipeline/transformer_interface.h",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic comparison with matching values",
+        "query": {
+          "$in": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 100
+        },
+        "expected": true
+      },
+      {
+        "description": "Basic comparison with non-matching values",
+        "query": {
+          "$in": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 50
+        },
+        "expected": false
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "687511",
+      "type": "numericCode",
+      "context": "ones. // This is a regression test for BF-24149. coll.insert({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d"
+    },
+    {
+      "code": "906209",
+      "type": "numericCode",
+      "context": "// This is a regression test for BF-24149. coll.insert({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.t"
+    },
+    {
+      "code": "334592",
+      "type": "numericCode",
+      "context": "rt({_id: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.toJSON().$numberDecimal; assertArrayEq({ actual: coll"
+    },
+    {
+      "code": "421055",
+      "type": "numericCode",
+      "context": "d: 0, v: NumberDecimal(\"917.6875119062092\")}); coll.insert({_id: 1, v: NumberDecimal(\"927.3345924210555\")}); const idToString = (d) => d._id.toJSON().$numberDecimal; assertArrayEq({ actual: coll .aggr"
+    },
+    {
+      "code": "141592",
+      "type": "numericCode",
+      "context": "imal; assertArrayEq({ actual: coll .aggregate(makePipeline({$multiply: [-3.14159265859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"90572124221"
+    },
+    {
+      "code": "314159",
+      "type": "numericCode",
+      "context": "ayEq({ actual: coll .aggregate(makePipeline({$multiply: [-3.14159265859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269"
+    },
+    {
+      "code": "915242",
+      "type": "numericCode",
+      "context": "5859, \"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1"
+    },
+    {
+      "code": "528741",
+      "type": "numericCode",
+      "context": "\"$v\", -314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); as"
+    },
+    {
+      "code": "946952",
+      "type": "numericCode",
+      "context": "314159255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( n"
+    },
+    {
+      "code": "442227",
+      "type": "numericCode",
+      "context": "255]})) .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberD"
+    },
+    {
+      "code": "299097",
+      "type": "numericCode",
+      "context": ") .toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimal"
+    },
+    {
+      "code": "905721",
+      "type": "numericCode",
+      "context": ".toArray() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsE"
+    },
+    {
+      "code": "242210",
+      "type": "numericCode",
+      "context": "ay() .map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( "
+    },
+    {
+      "code": "045313",
+      "type": "numericCode",
+      "context": ".map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll "
+    },
+    {
+      "code": "783126",
+      "type": "numericCode",
+      "context": ".map(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll "
+    },
+    {
+      "code": "900762",
+      "type": "numericCode",
+      "context": "ap(idToString), expected: [\"915242528741.9469524422272990976000\", \"905721242210.0453137831269007622941\"], }); // BF-24945 coll.drop(); coll.insert({x: 0, y: 4.1}); assert( numberDecimalsEqual( coll .a"
+    },
+    {
+      "code": "999999",
+      "type": "numericCode",
+      "context": "aggregate( makePipeline({ $multiply: [NumberDecimal(\"-9.999999999999999999999999999999999E+6144\"), \"$x\", \"$y\"], }), ) .toArray()[0]._id, NumberDecimal(0), ), ); assertArrayEq({"
+    },
+    {
+      "code": "51276",
+      "type": "assertErrorCode",
+      "context": ", ]); // $binarySize only accepts strings and BinData. assert.commandWorked(coll.insert({x: 42})); assertErrorCode(coll, {$project: {s: {$binarySize: \"$x\"}}}, 51276);"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "ected: \"Timestamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: f"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "\"Timestamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: function"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": "stamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: function () {"
+    },
+    {
+      "code": "123123",
+      "type": "numericCode",
+      "context": "id: 13, input: {foo: 123}, target: \"string\", expected: '{\"foo\":123}'}, {_id: 14, input: {foo: 1.123123}, target: \"string\", expected: '{\"foo\":1.123123}'}, { _id: 15, input: {foo: NumberDecimal(\"1.12312"
+    },
+    {
+      "code": "799439",
+      "type": "numericCode",
+      "context": "\"}]', }, { _id: 17, input: { objectId: ObjectId(\"507f1f77bcf86cd799439011\"), uuid: UUID(\"3b241101-e2bb-4255-8caf-4136c566a962\"), date: ISODate(\"2018-03-27T16:58:51.538Z\"), regex: /^ABC/i, js: function"
+    },
+    {
+      "code": "241101",
+      "type": "numericCode",
+      "context": "input: { objectId: ObjectId(\"507f1f77bcf86cd799439011\"), uuid: UUID(\"3b241101-e2bb-4255-8caf-4136c566a962\"), date: ISODate(\"2018-03-27T16:58:51.538Z\"), regex: /^ABC/i, js: function (s) { return s + \"f"
+    },
+    {
+      "code": "156554",
+      "type": "numericCode",
+      "context": "unction (s) { return s + \"foo\"; }, timestamp: new Timestamp(1565545664, 1), }, target: \"string\", expected: [ '{\"objectId\":\"507f1f77bcf86cd799439011\",', '\"uuid\":\"3b241101-e2bb-4255-8caf-4136c566a962\",'"
+    },
+    {
+      "code": "123456",
+      "type": "numericCode",
+      "context": "g to go over the size limit. ...[...Array(24).keys()].map((i) => [(i + 16 + 1).toString(), -1234567891]), ]), }; const illegalConversionTestDocs = [ // Any type is allowed to be converted to string. /"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "de: 4341107, }, // Invalid type. {_id: 5, input: 123, target: {type: -2}, expectedCode: ErrorCodes.FailedToParse}, {_id: 6, input: 123, target: -2, expectedCode: ErrorCodes.FailedToParse}, ]; runConve"
+    },
+    {
+      "code": "331484",
+      "type": "numericCode",
+      "context": "NonUUIDSubtype, \"hn3uUsMxSE6S0cVkebjmfg==\"), }, { _id: 11, input: \"867DEE52C331484E92D1C56479B8E67E\", target: {type: \"binData\", subtype: kNonUUIDSubtype}, format: \"hex\", expected: BinData(kNonUUIDSubt"
+    },
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": "// Can only convert string (or BinData) to BinData. { _id: 3, input: ObjectId(\"0123456789abcdef01234567\"), target: {type: \"binData\", subtype: kUUIDSubtype}, }, { _id: 4, input: ObjectId(\"0123456789abc"
+    },
+    {
+      "code": "434110",
+      "type": "numericCode",
+      "context": "=\", target: {type: \"binData\", subtype: -1}, format: \"base64\", expectedCode: 4341107, }, { _id: 2, input: \"hn3uUsMxSE6S0cVkebjmfg==\", target: {type: \"binData\", subtype: 1000}, format: \"base64\", expecte"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "nTestDocs = [ // Test conversions from BinData to Int. { _id: 0, // Hex: \"0x0000002A\", 4 byte integer input: BinData(0, \"AAAAKg==\"), target: \"int\", byteOrder: \"big\", expected: 42, }, { _id: 1, // Hex:"
+    },
+    {
+      "code": "202000",
+      "type": "numericCode",
+      "context": ", byteOrder: \"big\", expected: 200, }, { _id: 4, // Hex: \"0xA2020000\", 4 byte long input: BinData(0, \"ogIAAA==\"), target: \"long\", byteOrder: \"little\", expected: 674, }, { _id: 5, // Hex: \"0xc7cf\", 2 by"
+    },
+    {
+      "code": "004000",
+      "type": "numericCode",
+      "context": "d: 9, input: -2.5, target: \"binData\", byteOrder: \"big\", // Hex: \"0xc004000000000000\", 8 byte double expected: BinData(0, \"wAQAAAAAAAA=\"), }, { _id: 10, input: 813245678.98, target: {type: \"binData\", s"
+    },
+    {
+      "code": "813245",
+      "type": "numericCode",
+      "context": "e double expected: BinData(0, \"wAQAAAAAAAA=\"), }, { _id: 10, input: 813245678.98, target: {type: \"binData\", subtype: 3}, byteOrder: \"big\", // Hex: \"0x41C83C92777D70A4\", 8 byte double expected: BinData"
+    },
+    {
+      "code": "415333",
+      "type": "numericCode",
+      "context": "byteOrder: \"big\", expected: -2.5, }, { _id: 12, // Hex: \"0x41533333\", 4 byte single precision double input: BinData(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, },"
+    },
+    {
+      "code": "199999",
+      "type": "numericCode",
+      "context": "t: BinData(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, }, { _id: 13, // Hex: \"0x000000000000E0BF\", 8 byte double precision double input: BinData(5, \"AAAAAAAA4L8=\""
+    },
+    {
+      "code": "809265",
+      "type": "numericCode",
+      "context": "Data(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, }, { _id: 13, // Hex: \"0x000000000000E0BF\", 8 byte double precision double input: BinData(5, \"AAAAAAAA4L8=\"), tar"
+    },
+    {
+      "code": "010080",
+      "type": "numericCode",
+      "context": "byteOrder: \"little\", expected: -0.5, }, { _id: 14, // Hex: \"0x0100807F\", 4 byte single precision double input: BinData(0, \"AQCAfw==\"), target: \"double\", byteOrder: \"little\", expected: NaN, }, { _id: 1"
+    },
+    {
+      "code": "265266",
+      "type": "numericCode",
+      "context": "rder: \"big\", expected: -Infinity, }, { _id: 16, // Hex: \"0xC26CBF6CD2652666\", 8 byte double precision inf input: BinData(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345"
+    },
+    {
+      "code": "987765",
+      "type": "numericCode",
+      "context": "BinData(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345.2, }, ]; // Unsupported conversions. // const illegalConversionTestDocs = [ // We don't support BinData to Decim"
+    },
+    {
+      "code": "314345",
+      "type": "numericCode",
+      "context": "ta(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345.2, }, ]; // Unsupported conversions. // const illegalConversionTestDocs = [ // We don't support BinData to Decimal co"
+    },
+    {
+      "code": "913000",
+      "type": "numericCode",
+      "context": "// ByteOrder must either be 'little' or 'big'. byteOrder: \"weird\", expectedCode: 9130002, }, { _id: 21, input: NumberLong(200), target: \"binData\", // ByteOrder must either be 'little' or 'big'. byteOr"
+    },
+    {
+      "code": "ConversionFailure",
+      "type": "ErrorCodes",
+      "context": "ses = [ // Invalid string BSON array {invalid_bson_array: [\"oh\", \"hi\", \"mark\"], error_code: ErrorCodes.ConversionFailure}, // Must be an array {invalid_bson_array: \"theroom\", error_code: ErrorCodes.Co"
+    },
+    {
+      "code": "776571",
+      "type": "numericCode",
+      "context": "pecification is taken from // https://github.com/mongodb/specifications/blob/9d0d3f0042a8cf5faeb47ae7765716151bfca9ef/source/bson-binary-vector/bson-binary-vector.md#data-types-dtypes. const kBindataV"
+    },
+    {
+      "code": "106059",
+      "type": "numericCode",
+      "context": "padding: 0, dtype: kFloat32Byte, littleEndian: false, }, // TODO SERVER-106059 Add tests for integers larger than INT8. ]; function int8VectorToBitArray(vector) { const bitArray = []; for (const int8 "
+    },
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": "sToBase64(byteArray) { const base64chars = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"; let result = \"\"; let i; for (i = 0; i < byteArray.length; i += 3) { let chunk = (byteArra"
+    },
+    {
+      "code": "105066",
+      "type": "numericCode",
+      "context": "let binToBsonErrorCases = [ // Invalid dtype {invalid_bindata_vector: \"ea0000\", error_code: 10506600}, // Invalid padding - should only exist for PACKED_BIT { invalid_bindata_vector: kInt8Byte + \"01\" "
+    },
+    {
+      "code": "111111",
+      "type": "numericCode",
+      "context": "ing - should only exist for PACKED_BIT { invalid_bindata_vector: kFloat32Byte + \"01\" + \"11111111\", error_code: 10506606, }, // Not enough bytes for float { invalid_bindata_vector: kFloat32Byte + \"00\" "
+    },
+    {
+      "code": "001100",
+      "type": "numericCode",
+      "context": "}, // Not enough bytes for float { invalid_bindata_vector: kFloat32Byte + \"00\" + \"001100\", error_code: 10506602, }, ]; binToBsonErrorCases.forEach((testCase) => { let bindataVectorAsBitArray = hexToBi"
+    },
+    {
+      "code": "184467",
+      "type": "numericCode",
+      "context": "ersions. makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characte"
+    },
+    {
+      "code": "440737",
+      "type": "numericCode",
+      "context": "s. makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characters mak"
+    },
+    {
+      "code": "095516",
+      "type": "numericCode",
+      "context": "makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characters makeVa"
+    },
+    {
+      "code": "ConversionFailure",
+      "type": "ErrorCodes",
+      "context": "h(function (pipeline) { assertErrCodeAndErrMsgContains( coll, pipeline, ErrorCodes.ConversionFailure, \"an incomplete date/time string has been found\", ); }); /* ---------------------------------------"
+    },
+    {
+      "code": "149934",
+      "type": "numericCode",
+      "context": ": {_id: 1}}, ]) .toArray(), ); expectedResults = [ {\"_id\": 0, \"date\": new Date(1499344537000)}, {\"_id\": 1, \"date\": new Date(1499344537513)}, {\"_id\": 2, \"date\": new Date(1499344537000)}, {\"_id\": 3, \"da"
+    },
+    {
+      "code": "453700",
+      "type": "numericCode",
+      "context": ": 1}}, ]) .toArray(), ); expectedResults = [ {\"_id\": 0, \"date\": new Date(1499344537000)}, {\"_id\": 1, \"date\": new Date(1499344537513)}, {\"_id\": 2, \"date\": new Date(1499344537000)}, {\"_id\": 3, \"date\": n"
+    },
+    {
+      "code": "453751",
+      "type": "numericCode",
+      "context": "dResults = [ {\"_id\": 0, \"date\": new Date(1499344537000)}, {\"_id\": 1, \"date\": new Date(1499344537513)}, {\"_id\": 2, \"date\": new Date(1499344537000)}, {\"_id\": 3, \"date\": new Date(1499344537513)}, {\"_id\":"
+    },
+    {
+      "code": "299072",
+      "type": "numericCode",
+      "context": "(1499344537000)}, {\"_id\": 3, \"date\": new Date(1499344537513)}, {\"_id\": 4, \"date\": new Date(-299072962552)}, ]; assert.eq( expectedResults, coll .aggregate([ { $project: {date: {$dateFromString: {dateS"
+    },
+    {
+      "code": "962552",
+      "type": "numericCode",
+      "context": "44537000)}, {\"_id\": 3, \"date\": new Date(1499344537513)}, {\"_id\": 4, \"date\": new Date(-299072962552)}, ]; assert.eq( expectedResults, coll .aggregate([ { $project: {date: {$dateFromString: {dateString:"
+    },
+    {
+      "code": "2",
+      "type": "assertErrorCode",
+      "context": "ions // Add assertErrorCode(coll, {$project: {add: {$add: [\"$date\", \"$date\"]}}}, 16612); // Divide assertErrorCode(coll, {$project: {divide: {$divide: [\"$date\", 2]}}}, [16609, ErrorCodes.TypeMismatch]"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "}}, 16612); // Divide assertErrorCode(coll, {$project: {divide: {$divide: [\"$date\", 2]}}}, [16609, ErrorCodes.TypeMismatch]); // Mod assertErrorCode(coll, {$project: {mod: {$mod: [\"$date\", 2]}}}, 1661"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ndexAs'. testError({$filter: {input: \"$b\", arrayIndexAs: \"IDX\", cond: {$eq: [\"$$this\", \"$$IDX\"]}}}, ErrorCodes.FailedToParse); testError({$filter: {input: \"$b\", arrayIndexAs: \"^\", cond: {$eq: [\"$$this"
+    },
+    {
+      "code": "APIStrictError",
+      "type": "ErrorCodes",
+      "context": "{$filter: {input: \"$b\", arrayIndexAs: \"i\", cond: {$eq: [\"$$this\", \"$$IDX\"]}}}; testError(filterDoc, ErrorCodes.APIStrictError, { apiVersion: \"1\", apiStrict: true, });"
+    },
+    {
+      "code": "937580",
+      "type": "numericCode",
+      "context": "'t reuse same variable. testError({$filter: {input: \"$b\", as: \"i\", cond: true, arrayIndexAs: \"i\"}}, 9375802); // Can't use 'arrayIndexAs' in API Version 1 with apiStrict. filterDoc = {$filter: {input:"
+    },
+    {
+      "code": "40081",
+      "type": "assertErrorCode",
+      "context": "ilure Tests ------------------------ */ let pipeline = {$project: {included: {$in: [[1, 2], 1]}}}; assertErrorCode(coll, pipeline, 40081, \"$in requires an array as a second argument\"); pipeline = { $p"
+    },
+    {
+      "code": "16020",
+      "type": "assertErrorCode",
+      "context": "n requires an array as a second argument\"); pipeline = { $project: {included: {$in: null}}, }; assertErrorCode(coll, pipeline, 16020, \"$in requires two arguments\"); pipeline = { $project: {included: {"
+    },
+    {
+      "code": "40090",
+      "type": "assertErrorCode",
+      "context": "$project: { output: { $indexOfArray: [\"string\", \"s\"], }, }, }; assertErrorCode(coll, pipeline, 40090); pipeline = { $project: {output: {$indexOfArray: [[1, 2, 3], 2, \"bad\"]}}, }; assertErrorCode(coll,"
+    },
+    {
+      "code": "40096",
+      "type": "assertErrorCode",
+      "context": "pipeline, 40090); pipeline = { $project: {output: {$indexOfArray: [[1, 2, 3], 2, \"bad\"]}}, }; assertErrorCode(coll, pipeline, 40096); pipeline = { $project: {output: {$indexOfArray: [[1, 2, 3], 2, 0, "
+    },
+    {
+      "code": "40097",
+      "type": "assertErrorCode",
+      "context": "ll, pipeline, 40096); pipeline = { $project: {output: {$indexOfArray: [[1, 2, 3], 2, -1]}}, }; assertErrorCode(coll, pipeline, 40097); pipeline = { $project: {output: {$indexOfArray: [[1, 2, 3], 2, 1,"
+    },
+    {
+      "code": "40091",
+      "type": "assertErrorCode",
+      "context": "ine = { $project: { output: { $indexOfBytes: [3, \"s\"], }, }, }; assertErrorCode(coll, pipeline, 40091); pipeline = { $project: { output: { $indexOfBytes: [\"s\", 3], }, }, }; assertErrorCode(coll, pipel"
+    },
+    {
+      "code": "40092",
+      "type": "assertErrorCode",
+      "context": "ine = { $project: { output: { $indexOfBytes: [\"s\", 3], }, }, }; assertErrorCode(coll, pipeline, 40092); pipeline = { $project: {output: {$indexOfBytes: [\"abc\", \"b\", \"bad\"]}}, }; assertErrorCode(coll, "
+    },
+    {
+      "code": "40096",
+      "type": "assertErrorCode",
+      "context": "l, pipeline, 40092); pipeline = { $project: {output: {$indexOfBytes: [\"abc\", \"b\", \"bad\"]}}, }; assertErrorCode(coll, pipeline, 40096); pipeline = { $project: {output: {$indexOfBytes: [\"abc\", \"b\", 0, \""
+    },
+    {
+      "code": "40097",
+      "type": "assertErrorCode",
+      "context": "coll, pipeline, 40096); pipeline = { $project: {output: {$indexOfBytes: [\"abc\", \"b\", -1]}}, }; assertErrorCode(coll, pipeline, 40097); pipeline = { $project: {output: {$indexOfBytes: [\"abc\", \"b\", 1, -"
+    },
+    {
+      "code": "40093",
+      "type": "assertErrorCode",
+      "context": "peline = { $project: { output: { $indexOfCP: [3, \"s\"], }, }, }; assertErrorCode(coll, pipeline, 40093); pipeline = { $project: { output: { $indexOfCP: [\"s\", 3], }, }, }; assertErrorCode(coll, pipeline"
+    },
+    {
+      "code": "40094",
+      "type": "assertErrorCode",
+      "context": "peline = { $project: { output: { $indexOfCP: [\"s\", 3], }, }, }; assertErrorCode(coll, pipeline, 40094); pipeline = { $project: {output: {$indexOfCP: [\"abc\", \"b\", \"bad\"]}}, }; assertErrorCode(coll, pip"
+    },
+    {
+      "code": "40096",
+      "type": "assertErrorCode",
+      "context": "coll, pipeline, 40094); pipeline = { $project: {output: {$indexOfCP: [\"abc\", \"b\", \"bad\"]}}, }; assertErrorCode(coll, pipeline, 40096); pipeline = { $project: {output: {$indexOfCP: [\"abc\", \"b\", 0, \"bad"
+    },
+    {
+      "code": "40097",
+      "type": "assertErrorCode",
+      "context": "de(coll, pipeline, 40096); pipeline = { $project: {output: {$indexOfCP: [\"abc\", \"b\", -1]}}, }; assertErrorCode(coll, pipeline, 40097); pipeline = { $project: {output: {$indexOfCP: [\"abc\", \"b\", 1, -1]}"
+    },
+    {
+      "code": "JSInterpreterFailure",
+      "type": "ErrorCodes",
+      "context": "FailedWithCode( db.runCommand({aggregate: coll.getName(), pipeline: pipeline, cursor: {}}), ErrorCodes.JSInterpreterFailure, ); // Test that the command correctly fails for invalid arguments. pipeline"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "ine, cursor: {}, runtimeConstants: constants, fromRouter: true, }), ErrorCodes.TypeMismatch, );"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "mberInt(1)}, {_id: 1, a: NumberLong(2)}, {_id: 2, a: 3.0}, {_id: 3, a: NumberDecimal(\"4.000000\")}, {_id: 4, a: \"abc\"}, {_id: 5, a: ISODate(\"2024-01-01\")}, {_id: 6, a: [1, 2, 3]}, {_id: 7, a: {b: 1, c:"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "finable names on 'arrayIndexAs'. testError({$map: {input: \"$simple\", arrayIndexAs: \"IDX\", in: []}}, ErrorCodes.FailedToParse); testError({$map: {input: \"$simple\", arrayIndexAs: \"^\", in: []}}, ErrorCod"
+    },
+    {
+      "code": "APIStrictError",
+      "type": "ErrorCodes",
+      "context": "n API Version 1 with apiStrict. testError({$map: {input: \"$simple\", arrayIndexAs: \"i\", in: \"$$i\"}}, ErrorCodes.APIStrictError, { apiVersion: \"1\", apiStrict: true, });"
+    },
+    {
+      "code": "937580",
+      "type": "numericCode",
+      "context": "t reuse same variable. testError({$map: {input: \"$simple\", as: \"i\", arrayIndexAs: \"i\", in: \"$$i\"}}, 9375801); // Can't use 'arrayIndexAs' in API Version 1 with apiStrict. testError({$map: {input: \"$si"
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": ": [40239, 16411], }, {pipeline: [{$changeStream: {fullDocument: nullStr}}], codes: [ErrorCodes.BadValue]}, { pipeline: [{$changeStream: {fullDocumentBeforeChange: nullStr}}], codes: [ErrorCodes.BadVal"
+    },
+    {
+      "code": "InvalidNamespace",
+      "type": "ErrorCodes",
+      "context": "as: \"results\", }, }, ], codes: [ErrorCodes.InvalidNamespace], }, { pipeline: [ { $graphLookup: { from: \"coll\", startWith"
+    },
+    {
+      "code": "109838",
+      "type": "numericCode",
+      "context": "es cannot be wrapped in a $facet stage. * do_not_wrap_aggregations_in_facets, * # TODO SERVER-109838: Remove incompatible_with_extensions tag. * incompatible_with_extensions * ] */ import {assertDropA"
+    },
+    {
+      "code": "594680",
+      "type": "numericCode",
+      "context": "pipeline: [{$densify: {field: \"foo\", range: {step: 1, bounds: nullStr}}}], codes: [5946802], }, { pipeline: [ { $densify: { field: \"foo\", partitionByFields: [nullStr],"
+    },
+    {
+      "code": "899300",
+      "type": "numericCode",
+      "context": "\"full\"}, }, }, ], codes: [16411, 16410, 8993000], }, { pipeline: [{$fill: {partitionByFields: [nullStr], output: {foo: {value: \"bar\"}}}}], codes: [16411, 16410], }, { pipel"
+    },
+    {
+      "code": "953470",
+      "type": "numericCode",
+      "context": "roject: {field: {$setField: {field: nullStr, input: {}, value: \"newField\"}}}}], codes: [9534700, 16411], }, { pipeline: [{$project: {field: {$unsetField: {field: nullStr, input: {}}}}}], codes: [95347"
+    },
+    {
+      "code": "810580",
+      "type": "numericCode",
+      "context": ", 16411], }, {pipeline: [{$replaceRoot: {newRoot: nullStr}}], codes: [40228, 16411, 8105800]}, {pipeline: [{$replaceWith: nullStr}], codes: [40228, 16411, 8105800]}, {pipeline: [{$sortByCount: nullStr"
+    },
+    {
+      "code": "112325",
+      "type": "numericCode",
+      "context": "rnalChangeStreamCheckInvalidate\", \"$_internalChangeStreamCheckResumability\", // TODO SERVER-112325: Remove this stage once all mongos versions are guaranteed to not // generate this stage in a change "
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ayIndexAs'. testError({$reduce: {input: \"$simple\", arrayIndexAs: \"IDX\", initialValue: [], in: []}}, ErrorCodes.FailedToParse); testError({$reduce: {input: \"$simple\", arrayIndexAs: \"^\", initialValue: ["
+    },
+    {
+      "code": "APIStrictError",
+      "type": "ErrorCodes",
+      "context": "in: { $add: [\"$$this\", \"$$value\", \"$$i\"], }, }, }; testError(pipeline, ErrorCodes.APIStrictError, { apiVersion: \"1\", apiStrict: true, }); // // Test 'as' and 'asValue'. // test({$reduce: {input: \"$sim"
+    },
+    {
+      "code": "929840",
+      "type": "numericCode",
+      "context": "t: \"$simple\", initialValue: 0, as: \"elem\", valueAs: \"elem\", in: {$add: [\"$$elem\", \"$$elem\"]}}}, 9298401, ); testError( { $reduce: { input: \"$simple\", initialValue: 0, as: \"elem\", arrayIndexAs: \"elem\","
+    },
+    {
+      "code": "162273",
+      "type": "numericCode",
+      "context": "ll = testDB.getCollection(collName); assert.commandWorked(coll.insert({_id: 0, bsonTime: Timestamp(1622731060, 10), invalidBsonTime: 1622731060})); (function testtsSecond() { // Projects the seconds c"
+    },
+    {
+      "code": "568730",
+      "type": "numericCode",
+      "context": "cond: \"$invalidBsonTime\"}}}]).toArray(), ); assert.commandFailedWithCode(nonTimestampError, 5687301); })(); (function testtsIncrement() { // Projects the increment component of bson timestamp using th"
+    },
+    {
+      "code": "117854",
+      "type": "numericCode",
+      "context": "}, ]; assert.commandFailedWithCode(coll.runCommand(\"aggregate\", {pipeline: pipeline, cursor: {}}), 11785400);"
+    },
+    {
+      "code": "InvalidNamespace",
+      "type": "ErrorCodes",
+      "context": "() => coll.aggregate([{$lookup: {from: \"foo\", pipeline: [{$documents: []}], as: \"lustuff\"}}]), ErrorCodes.InvalidNamespace, ); assert.throwsWithCode( () => coll.aggregate([ { $lookup: { from: \"foo\", l"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "({}, doc), newDoc); // // Tests for \"distanceField\". // const expectedDistance = 0.0000000000000001; // Test that \"distanceField\" can be computed in a new field. assertCloseEnough( firstGeoNearResult("
+    },
+    {
+      "code": "NoQueryExecutionPlans",
+      "type": "ErrorCodes",
+      "context": "eline: [geoNearStage], cursor: {}, hint: hintIndexName, }), ErrorCodes.NoQueryExecutionPlans, ); } // A compound index cannot be hinted when $geoNear doesn't filter on the first element. checkInvalidH"
+    },
+    {
+      "code": "787627",
+      "type": "numericCode",
+      "context": "query: query, spherical: true, near: {coordinates: [106.65589, 10.787627], type: \"Point\"}, distanceField: \"distance\", key: \"location\", }, }; } function checkInvalidHint(geoNearStage, hintIndexName) { "
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "eric values are illegal. assert.throwsWithCode(() => assertGeoNearResults({minDistance: -1.1}), ErrorCodes.BadValue); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"3.2\"}), ErrorCodes"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": ", ErrorCodes.BadValue); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"3.2\"}), ErrorCodes.TypeMismatch); // A minimum distance of 0 returns all points. assertGeoNearResults({minDistan"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "legal. assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$concat: [\"3\", \".2\"]}}), ErrorCodes.TypeMismatch); assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"di"
+    },
+    {
+      "code": "755570",
+      "type": "numericCode",
+      "context": "assert.throwsWithCode(() => assertGeoNearResults({minDistance: {$getField: \"distFromOrigin\"}}), 7555701); assert.throwsWithCode(() => assertGeoNearResults({minDistance: \"$distFromOrigin\"}), 7555701); "
+    },
+    {
+      "code": "IndexNotFound",
+      "type": "ErrorCodes",
+      "context": "nsert({_id: 1, x: 5, geo: [0, 0]})); // Fail without index. assertErrorCode(from, geonearPipeline, ErrorCodes.IndexNotFound); assertErrorCode(coll, geonearWithinLookupPipeline, ErrorCodes.IndexNotFoun"
+    },
+    {
+      "code": "QueryExceededMemoryLimitNoDiskUseAllowed",
+      "type": "ErrorCodes",
+      "context": ".throwsWithCode( () => local.aggregate(pipeline, disableSpillingOptions).itcount(), ErrorCodes.QueryExceededMemoryLimitNoDiskUseAllowed, ); const previousMemoryLimitKnobValue = getKnob(memoryLimitKnob"
+    },
+    {
+      "code": "844270",
+      "type": "numericCode",
+      "context": "}, }, ]; assert.throwsWithCode(() => local.aggregate(pipeline).itcount(), 8442700); pipeline.push({$unwind: \"$output\"}); pipeline.push({$project: {payload: 0, \"output.payload\": 0}}); assert.eq(local.a"
+    },
+    {
+      "code": "IndexNotFound",
+      "type": "ErrorCodes",
+      "context": "le banana\"})); // Neither 'outer' nor 'inner' have text indexes. assertErrorCode(outer, pipeline, ErrorCodes.IndexNotFound); // Only 'outer' has a text index. assert.commandWorked(outer.createIndex({a"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "00:00.00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjk"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": ", {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjkl/g}, "
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "foreignRecords: docs, foreignField: \"a\", expectedErrorCode: ErrorCodes.BadValue, }); } })(); (function testMatchingNaN() { const docs = [ {_id: 0, a: NaN}, {_id: 1, a: NumberDecimal(\"NaN\")},"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "00:00.00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjk"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": ", {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjkl/g}, "
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "run across multiple versions, we need to allow both types of errors. // TODO SERVER-106081: Remove ErrorCodes.FailedToParse in the test cases below. // 'pipeline' and 'let' must be of expected type. a"
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "ected type. assertErrorCode( coll, [{$lookup: {pipeline: 1, from: \"from\", as: \"as\"}}], [ErrorCodes.TypeMismatch, ErrorCodes.FailedToParse], ); assertErrorCode( coll, [{$lookup: {pipeline: {}, from: \"f"
+    },
+    {
+      "code": "106081",
+      "type": "numericCode",
+      "context": "tests being // run across multiple versions, we need to allow both types of errors. // TODO SERVER-106081: Remove ErrorCodes.FailedToParse in the test cases below. // 'pipeline' and 'let' must be of e"
+    },
+    {
+      "code": "5626500",
+      "type": "assertErrorCode",
+      "context": "rt.eq(1, coll.find(geoNearQuery).count()); // Test that we refuse to run $match with a near query. assertErrorCode(coll, {$match: nearQuery}, 5626500); assertErrorCode(coll, {$match: nearSphereQuery},"
+    },
+    {
+      "code": "562650",
+      "type": "numericCode",
+      "context": "// Test that we refuse to run $match with a near query. assertErrorCode(coll, {$match: nearQuery}, 5626500); assertErrorCode(coll, {$match: nearSphereQuery}, 5626500); assertErrorCode(coll, {$match: g"
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "\"jstests/aggregation/extras/utils.js\"; assertErrorCode(db.foo, {$match: {$where: \"return true\"}}, ErrorCodes.BadValue); assertErrorCode(db.foo, {$match: {$and: [{$where: \"return true\"}]}}, ErrorCodes."
+    },
+    {
+      "code": "IndexNotFound",
+      "type": "ErrorCodes",
+      "context": "ked(from.insert({_id: 100, a: \"foo\"})); // Fail without index. assertErrorCode(from, textPipeline, ErrorCodes.IndexNotFound); assertErrorCode(coll, pipeline, ErrorCodes.IndexNotFound); assert.commandW"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "// // Test that $merge fails if there's a duplicate key error. // assertErrorCode(coll, pipeline, ErrorCodes.DuplicateKey); // // Test that $merge will preserve the indexes and options of the output c"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "rt.throws(() => coll.aggregate(pipelineDifferentOutputDb)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Explicitly create the collection and database, then fall through to th"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "rror = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 1, b: \"a\""
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the tes"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "st error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 11, b"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the tes"
+    },
+    {
+      "code": "MergeStageNoMatchingDocument",
+      "type": "ErrorCodes",
+      "context": "et error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.MergeStageNoMatchingDocument); // Since there is no way to guarantee the ordering of the writ"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "me(), updatePipeline: [{$project: {x: 1, a: 1}}]})), ); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, x: 1}, {_id:"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force creation of the database and collection, then fall through the test "
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "), whenMatched: \"replace\", whenNotMatched: \"insert\"}}, ]), ); assert.commandFailedWithCode(res, ErrorCodes.DuplicateKey); assert.includes(res.message, \"$merge failed due to a DuplicateKey error\"); // "
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "rt.throws(() => coll.aggregate(pipelineDifferentOutputDb)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the"
+    },
+    {
+      "code": "549130",
+      "type": "numericCode",
+      "context": "{a: 5, foo: \"bar\"})); assert.throwsWithCode(() => coll.aggregate([{$setMetadata: {score: \"$a\"}}]), 5491300);"
+    },
+    {
+      "code": "109868",
+      "type": "numericCode",
+      "context": "op/bottom functions when no documents fall in the window. * These are regression tests for: SERVER-109868. * * @tags: [requires_fcv_83, * ] */ const coll = db[jsTestName()]; coll.drop(); assert.comman"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "}, }, }, ], cursor: {}, }), ErrorCodes.FailedToParse, ); assert.commandFailedWithCode( db.runCommand({ aggregate: coll.getName(), pipeline: [ { $setWindowFields: {"
+    },
+    {
+      "code": "111899",
+      "type": "numericCode",
+      "context": "including each individual * function as well as any other internal state. * * TODO: Once SERVER-111899 is done and feature flag QueryMemoryTracking is removed, the * \"multiversion_incompatible\" tag ca"
+    },
+    {
+      "code": "549071",
+      "type": "numericCode",
+      "context": "}, ], }, }); } assert.commandFailedWithCode(explainUnit(\"year\"), 5490710); assert.commandFailedWithCode(explainUnit(\"quarter\"), 5490710); assert.commandFailedWithCode(explainUnit(\"month\"), 5490710); a"
+    },
+    {
+      "code": "542390",
+      "type": "numericCode",
+      "context": "te: \"setWindowFields_integral\", pipeline: pipelineWithUnit, cursor: {}, }), 5423901, ); assert.commandFailedWithCode( db.runCommand({ aggregate: \"setWindowFields_integral\", pipeline: pipelineWithNoUni"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ill: {}, window: []}}, }, }, ], cursor: {}, }), ErrorCodes.FailedToParse, ); let collection = [ {_id: 0, val: 0}, {_id: 1, val: null}, {_id: 2, val: null}, {_id: 9, val: null}, {_id: 10, val: 10}, ]; "
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), ErrorCodes.TypeMismatch, ); // The field we are filling can only have a numeric or null value. coll.drop(); collection = [ {test: 0, val: \"str\", z: 2}, "
+    },
+    {
+      "code": "588134",
+      "type": "numericCode",
+      "context": "}, }, ]) .toArray(); expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; ass"
+    },
+    {
+      "code": "054288",
+      "type": "numericCode",
+      "context": "}, }, ]) .toArray(); expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; ass"
+    },
+    {
+      "code": "568625",
+      "type": "numericCode",
+      "context": "expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expect"
+    },
+    {
+      "code": "333712",
+      "type": "numericCode",
+      "context": "ed = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); c"
+    },
+    {
+      "code": "998278",
+      "type": "numericCode",
+      "context": "{_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); coll.drop(); collection = [ "
+    },
+    {
+      "code": "922903",
+      "type": "numericCode",
+      "context": ": 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); coll.drop(); collection = [ {_id"
+    },
+    {
+      "code": "936131",
+      "type": "numericCode",
+      "context": "{borough: \"Bronx\", y: -10, date: ISODate(\"2002-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISOD"
+    },
+    {
+      "code": "386861",
+      "type": "numericCode",
+      "context": "orough: \"Bronx\", y: -10, date: ISODate(\"2002-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODat"
+    },
+    {
+      "code": "063868",
+      "type": "numericCode",
+      "context": "Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODate(\"2004-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 200, date: ISODate(\"2005-1"
+    },
+    {
+      "code": "613138",
+      "type": "numericCode",
+      "context": ", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODate(\"2004-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 200, date: ISODate(\"2005-12-28T0"
+    },
+    {
+      "code": "499315",
+      "type": "numericCode",
+      "context": "rough: \"Manhattan\", y: -1, date: ISODate(\"2000-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -2.499315381104519, date: ISODate(\"2001-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -10, date: ISODate(\"2"
+    },
+    {
+      "code": "381104",
+      "type": "numericCode",
+      "context": "\"Manhattan\", y: -1, date: ISODate(\"2000-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -2.499315381104519, date: ISODate(\"2001-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -10, date: ISODate(\"2006-12-"
+    },
+    {
+      "code": "605010",
+      "type": "numericCode",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), 6050106, ); // The sort field values must be of type numeric. coll.drop(); collection = [ {test: null, val: 0}, {test: 1, val: null}, {test: 4, val: nul"
+    },
+    {
+      "code": "605001",
+      "type": "numericCode",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), 605001, ); // Mixing dates with numerics in sort field is not allowed. coll.drop(); collection = [ {x: 1, y: 10}, {x: 2, y: null}, {x: new Date(), y: 20"
+    },
+    {
+      "code": "190000",
+      "type": "numericCode",
+      "context": "docIdToOutputFieldValue: { 1: 10000, 2: 20000, 3: 190000 / 13, 4: 15000, 5: 10000, 6: 13750, 7: 16250, }, }, ); validateTestCase({ // Sort by a field"
+    },
+    {
+      "code": "IDLUnknownField",
+      "type": "ErrorCodes",
+      "context": "window: {documents: [\"current\", \"unbounded\"]}, }, }, }, ErrorCodes.IDLUnknownField, ); expectFailureWithArgs( // 'input' cannot be missing. { sortBy: {_id: 1}, output: { \"relativeXValue\": { $minMaxSca"
+    },
+    {
+      "code": "IDLFailedToParse",
+      "type": "ErrorCodes",
+      "context": "window: {documents: [\"current\", \"unbounded\"]}, }, }, }, ErrorCodes.IDLFailedToParse, ); expectFailureWithArgs( // 'min' must be a numerical type. { sortBy: {_id: 1}, output: { \"relativeXValue\": { $min"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "window: {documents: [\"current\", \"unbounded\"]}, }, }, }, ErrorCodes.FailedToParse, ); expectFailureWithArgs( // 'max' must be a numerical type. { sortBy: {_id: 1}, output: { \"relativeXValue\": { $minMax"
+    },
+    {
+      "code": "104870",
+      "type": "numericCode",
+      "context": "x: 10}, window: {documents: [0, \"unbounded\"]}, }, }, }, 10487000, ); expectFailureWithArgs( // Removable document based bounds, input evaluates to a string (from document field). { sortBy: {_id: 1}, o"
+    },
+    {
+      "code": "894740",
+      "type": "numericCode",
+      "context": "{$minMaxScaler: {input: \"$x\"}, window: {range: [\"unbounded\", \"unbounded\"]}}, }, }, 8947401, ); expectFailureWithArgs( // Range based bounds cannot have a descending sortBy field. { sortBy: {_id: -1}, "
+    },
+    {
+      "code": "533990",
+      "type": "numericCode",
+      "context": "tiveXValue\": {$minMaxScaler: {input: \"$x\"}, window: {range: [\"current\", 1]}}, }, }, 5339902, ); expectFailureWithArgs( // Range based bounds require a single sortBy field. { sortBy: {y: -1, _id: 1}, o"
+    },
+    {
+      "code": "105223",
+      "type": "numericCode",
+      "context": "})); // Create an index that will satisfy this sort. // TODO SERVER-105223 use other kinds of indexes to satisfy the sort (hashed, wildcard). // The server won't let us create an index with pattern {_"
+    },
+    {
+      "code": "InvalidOptions",
+      "type": "ErrorCodes",
+      "context": "e. assert.commandFailedWithCode(baseColl.update({a: 1}, [{$unionWith: unionColl.getName()}]), [ ErrorCodes.InvalidOptions, ErrorCodes.OperationNotSupportedInTransaction, ]); function assertFailsWithCo"
+    },
+    {
+      "code": "OperationNotSupportedInTransaction",
+      "type": "ErrorCodes",
+      "context": "(baseColl.update({a: 1}, [{$unionWith: unionColl.getName()}]), [ ErrorCodes.InvalidOptions, ErrorCodes.OperationNotSupportedInTransaction, ]); function assertFailsWithCode(pipeline, errCode) { assert."
+    },
+    {
+      "code": "IllegalOperation",
+      "type": "ErrorCodes",
+      "context": "a $changeStream. assertFailsWithCode([{$changeStream: {}}, {$unionWith: unionColl.getName()}], ErrorCodes.IllegalOperation); // Likewise, $changeStream is disallowed within a $unionWith sub-pipeline. "
+    },
+    {
+      "code": "InvalidNamespace",
+      "type": "ErrorCodes",
+      "context": "iveUsers: {}}]; assertFailsWithCode([{$unionWith: {coll: unionColl.getName(), pipeline: subPipe}}], ErrorCodes.InvalidNamespace); subPipe = [{$listLocalSessions: {}}]; assertFailsWithCode([{$unionWith"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 2,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Comparison",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 114 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/evaluate_find_internal.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_find_internal_test.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_index.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_index_test.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_sharding.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_sharding.h",
+      "/mongo/src/mongo/db/exec/expression/evaluate_string.cpp",
+      "/mongo/src/mongo/db/exec/expression/evaluate_string_test.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_exp_moving_avg.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_for_window_functions.h",
+      "/mongo/src/mongo/db/pipeline/accumulator_integral.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_internal_construct_stats.cpp",
+      "/mongo/src/mongo/db/pipeline/accumulator_min_max.cpp",
+      "/mongo/src/mongo/db/pipeline/aggregation_hint_translation.h",
+      "/mongo/src/mongo/db/pipeline/change_stream_invalidation_info.cpp",
+      "/mongo/src/mongo/db/pipeline/change_stream_invalidation_info.h",
+      "/mongo/src/mongo/db/pipeline/change_stream_pipeline_helpers.cpp",
+      "/mongo/src/mongo/db/pipeline/change_stream_pipeline_helpers.h",
+      "/mongo/src/mongo/db/pipeline/change_stream_start_after_invalidate_info.cpp",
+      "/mongo/src/mongo/db/pipeline/change_stream_start_after_invalidate_info.h",
+      "/mongo/src/mongo/db/pipeline/dispatch_shard_pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_check_invalidate.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_check_invalidate.h",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_inject_control_events.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_inject_control_events.h",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_unwind_transaction.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_change_stream_unwind_transaction.h",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.h",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_input_util.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_input_util.h",
+      "/mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util.h",
+      "/mongo/src/mongo/db/pipeline/document_source_hybrid_scoring_util_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_index_stats.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_index_stats.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_all_collection_stats_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_apply_oplog_update_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_inhibit_optimization.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_inhibit_optimization.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_list_collections.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_list_collections.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_projection.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_projection.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_replace_root.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_replace_root.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_shardserver_info.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_shardserver_info.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_shred_documents.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_shred_documents.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_split_pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_unpack_bucket.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_unpack_bucket.h",
+      "/mongo/src/mongo/db/pipeline/document_source_parsing_validators.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_parsing_validators.h",
+      "/mongo/src/mongo/db/pipeline/document_source_query_settings.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_query_settings.h",
+      "/mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline.h",
+      "/mongo/src/mongo/db/pipeline/document_source_set_variable_from_subpipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_set_window_fields.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_set_window_fields.h",
+      "/mongo/src/mongo/db/pipeline/document_source_set_window_fields_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_single_document_transformation.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_single_document_transformation.h",
+      "/mongo/src/mongo/db/pipeline/document_source_streaming_group.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_streaming_group.h",
+      "/mongo/src/mongo/db/pipeline/document_source_unwind.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_unwind.h",
+      "/mongo/src/mongo/db/pipeline/document_source_unwind_test.cpp",
+      "/mongo/src/mongo/db/pipeline/explain_util.cpp",
+      "/mongo/src/mongo/db/pipeline/explain_util.h",
+      "/mongo/src/mongo/db/pipeline/expression_context_diagnostic_printer.h",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal.h",
+      "/mongo/src/mongo/db/pipeline/expression_find_internal_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_sharding.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_sharding.h",
+      "/mongo/src/mongo/db/pipeline/graph_lookup_mock_mongo_interface.cpp",
+      "/mongo/src/mongo/db/pipeline/graph_lookup_mock_mongo_interface.h",
+      "/mongo/src/mongo/db/pipeline/hybrid_search_pipeline_builder.cpp",
+      "/mongo/src/mongo/db/pipeline/hybrid_search_pipeline_builder.h",
+      "/mongo/src/mongo/db/pipeline/lite_parsed_document_source_nested_pipelines.h",
+      "/mongo/src/mongo/db/pipeline/lite_parsed_pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/lite_parsed_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/lite_parsed_pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/memory_token_container_util.h",
+      "/mongo/src/mongo/db/pipeline/percentile_algo_continuous.cpp",
+      "/mongo/src/mongo/db/pipeline/percentile_algo_continuous.h",
+      "/mongo/src/mongo/db/pipeline/percentile_algo_continuous_test.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline.h",
+      "/mongo/src/mongo/db/pipeline/pipeline_d.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_d.h",
+      "/mongo/src/mongo/db/pipeline/pipeline_factory.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_factory.h",
+      "/mongo/src/mongo/db/pipeline/pipeline_factory_test.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_metadata_tree.h",
+      "/mongo/src/mongo/db/pipeline/pipeline_metadata_tree_test.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_optimization_bm.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_split_state.h",
+      "/mongo/src/mongo/db/pipeline/pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_test_util.cpp",
+      "/mongo/src/mongo/db/pipeline/pipeline_test_util.h",
+      "/mongo/src/mongo/db/pipeline/plan_executor_pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/plan_executor_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/plan_executor_pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/plan_explainer_pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/plan_explainer_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/rank_fusion_pipeline_builder.cpp",
+      "/mongo/src/mongo/db/pipeline/rank_fusion_pipeline_builder.h",
+      "/mongo/src/mongo/db/pipeline/score_fusion_pipeline_builder.cpp",
+      "/mongo/src/mongo/db/pipeline/score_fusion_pipeline_builder.h",
+      "/mongo/src/mongo/db/pipeline/shard_role_transaction_resources_stasher_for_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/sharded_agg_helpers_targeting_policy.h",
+      "/mongo/src/mongo/db/pipeline/single_document_transformation_processor.cpp",
+      "/mongo/src/mongo/db/pipeline/single_document_transformation_processor.h",
+      "/mongo/src/mongo/db/pipeline/split_pipeline.cpp",
+      "/mongo/src/mongo/db/pipeline/split_pipeline.h",
+      "/mongo/src/mongo/db/pipeline/split_pipeline_test.cpp",
+      "/mongo/src/mongo/db/pipeline/stage_constraints.h",
+      "/mongo/src/mongo/db/pipeline/timeseries_index_conversion_options.h",
+      "/mongo/src/mongo/db/pipeline/transformer_interface.h"
+    ]
+  }
+}

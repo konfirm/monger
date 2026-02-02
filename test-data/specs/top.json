@@ -1,0 +1,302 @@
+{
+  "source": "top.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/top.js",
+  "extractedAt": "2026-02-01T19:19:54.280Z",
+  "setup": {
+    "collections": {
+      "top_expr": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": []
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594095
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594096
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  "a",
+                  "b",
+                  "c"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594096
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594096
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594096
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594096
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594097
+    },
+    {
+      "id": 137,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    3,
+                    [
+                      1,
+                      1
+                    ]
+                  ],
+                  [
+                    3,
+                    6
+                  ]
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594097
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  {
+                    "a": 1,
+                    "b": 1
+                  },
+                  {
+                    "a": 2,
+                    "b": 2
+                  },
+                  {
+                    "a": 2,
+                    "b": 1
+                  }
+                ],
+                "sortBy": {
+                  "a": 1,
+                  "b": -1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973594097
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 15
+    }
+  ],
+  "meta": {
+    "totalOperations": 201,
+    "totalAssertions": 1,
+    "errors": 0
+  }
+}

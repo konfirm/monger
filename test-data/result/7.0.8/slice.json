@@ -1,0 +1,595 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/slice.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:41.676Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1
+          ]
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            3,
+            4
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            3,
+            4
+          ]
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": []
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                10
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -10
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                null,
+                -10
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                1,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            1,
+            2
+          ]
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                1,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            1,
+            2
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -3,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            2,
+            3
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -5,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -10,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            0,
+            1
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                10,
+                2
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": []
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                4,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            4
+          ]
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -1,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": [
+            4
+          ]
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "agg_slice_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "slice": {
+              "$slice": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                -1,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "slice": null
+        }
+      ],
+      "duration": 1,
+      "success": true
+    }
+  ],
+  "errors": []
+}

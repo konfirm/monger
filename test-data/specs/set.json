@@ -1,0 +1,49 @@
+{
+  "source": "set.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/set.js",
+  "extractedAt": "2026-02-01T19:19:44.342Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expectedResult",
+      "expected": "result.map(sortSetFields",
+      "line": 44
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].output",
+      "expected": "null, `Expected null result for operator ${operator} with document ${tojson(doc",
+      "line": 323
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, arr1: [1, 2, 3], arr2: [2, 3, 4]}, {_id: 1, arr1: [1, 2, 3], arr2: [4, 5, 6]}, {_id: 2, arr1: [1, 2, 3], arr2: []}, {_id: 3, arr1: [], arr2: [4, 5, 6]}, {_id: 4, arr1: [1, 2, 3], arr2: [2, 3]}, {_id: 5, arr1: [2, 3], arr2: [2, 3, 4]}, {_id: 6, arr1: [1, 2, 3], arr2: [1, 2, 3]}, {_id: 7, arr1: [1, 2, 3], arr2: [1, 1, 2, 2, 3, 3]}, ]",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(badDocument",
+      "line": 298
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(doc",
+      "line": 321
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(doc",
+      "line": 336
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 6,
+    "errors": 1
+  }
+}

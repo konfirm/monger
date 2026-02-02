@@ -1,0 +1,39 @@
+{
+  "source": "vector_similarity.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/vector_similarity.js",
+  "extractedAt": "2026-02-01T19:19:57.122Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1, `${operator} result should return one document`",
+      "line": 134
+    },
+    {
+      "type": "eq",
+      "actual": "resultBinData.length",
+      "expected": "1, `${operator} binData result should return one document`",
+      "line": 159
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(testCase.document",
+      "line": 119
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(testCase.document",
+      "line": 193
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

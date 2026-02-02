@@ -1,0 +1,47 @@
+{
+  "source": "replace_all.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/replace_all.js",
+  "extractedAt": "2026-02-01T19:19:41.962Z",
+  "setup": {
+    "collections": {
+      "replace_all": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 14
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(document",
+      "line": 32
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({}",
+      "line": 50
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({ obj_field: {a: 1, b: 1, c: {d: 2}}, arr_field1: [1, 2, 3, \"c\"], arr_field2: [\"aaaaa\"], int_field: 1, dbl_field: 1.0, null_field: null, str_field: \"foo\", regex_field: /.*/, }",
+      "line": 121
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "code",
+      "line": 55
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 5,
+    "errors": 1
+  }
+}

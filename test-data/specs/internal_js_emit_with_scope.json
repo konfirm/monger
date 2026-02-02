@@ -1,0 +1,24 @@
+{
+  "source": "internal_js_emit_with_scope.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/internal_js_emit_with_scope.js",
+  "extractedAt": "2026-02-01T19:19:25.771Z",
+  "setup": {
+    "collections": {
+      "js_emit_with_scope": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({text: \"wood chuck could chuck wood\"}",
+      "line": 50
+    }
+  ],
+  "meta": {
+    "totalOperations": 6,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

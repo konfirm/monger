@@ -1,0 +1,75 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/is_array.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:22.509Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "is_array_expr",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "isArray": {
+              "$isArray": "$x"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "isArray": false
+        },
+        {
+          "_id": 1,
+          "isArray": false
+        },
+        {
+          "_id": 2,
+          "isArray": false
+        },
+        {
+          "_id": 3,
+          "isArray": false
+        },
+        {
+          "_id": 4,
+          "isArray": false
+        },
+        {
+          "_id": 5,
+          "isArray": false
+        },
+        {
+          "_id": 6,
+          "isArray": false
+        },
+        {
+          "_id": 7,
+          "isArray": false
+        },
+        {
+          "_id": 8,
+          "isArray": true
+        },
+        {
+          "_id": 9,
+          "isArray": true
+        },
+        {
+          "_id": 10,
+          "isArray": true
+        }
+      ],
+      "duration": 7,
+      "success": true
+    }
+  ],
+  "errors": []
+}

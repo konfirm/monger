@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_diff.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_diff.js",
+      "timestamp": 1769973914737
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "getSiblingDB",
+      "timestamp": 1769973914740
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914741
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914737,
+    "endTime": 1769973914741,
+    "totalOperations": 0
+  }
+}

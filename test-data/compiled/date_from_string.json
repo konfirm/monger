@@ -1,0 +1,26 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/date_from_string.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.019Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

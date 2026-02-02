@@ -1,0 +1,47 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/range.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.067Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "city": 1,
+              "Rest stops": {
+                "$range": [
+                  {
+                    "$numberInt": "0"
+                  },
+                  "$distance",
+                  {
+                    "$numberInt": "25"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "city": "San Jose",
+          "distance": {
+            "$numberInt": "42"
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unrecognized expression '$numberInt'"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 4,
+    "errors": 1
+  }
+}

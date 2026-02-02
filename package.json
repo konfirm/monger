@@ -19,7 +19,8 @@
 		"prebuild": "tsc --declarationDir temp --declaration true --emitDeclarationOnly true",
 		"build": "rollup -c rollup.config.mjs",
 		"postbuild": "rm -rf temp",
-		"prepublish": "npm run build"
+		"prepublish": "npm run build",
+		"array": "nyc --require ts-node/register tape 'test/**/Expression/Array.ts' | tap-arc"
 	},
 	"keywords": [
 		"mongo",
@@ -50,6 +51,7 @@
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
-		"@konfirm/geojson": "^1.0.0"
+		"@konfirm/geojson": "^1.0.0",
+		"mongodb": "^7.0.0"
 	}
 }

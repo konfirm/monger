@@ -1,0 +1,72 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/concat_error.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/concat_error.js",
+      "timestamp": 1769973912810
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "s6570",
+      "timestamp": 1769973912813
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.s6570",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973912813
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.s6570.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973912813
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.s6570.drop",
+      "result": true,
+      "timestamp": 1769973912814
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.s6570",
+      "property": "save",
+      "valueType": "undefined",
+      "timestamp": 1769973912814,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "c.save is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973912814
+    }
+  ],
+  "state": {
+    "collections": {
+      "s6570": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973912810,
+    "endTime": 1769973912814,
+    "totalOperations": 1
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_to_parts.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:07.788Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz",
+                "iso8601": false
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz",
+                "iso8601": true
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$match": {
+            "iso": {
+              "$exists": true
+            }
+          }
+        },
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz",
+                "iso8601": "$iso"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz",
+                "iso8601": false
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz",
+                "iso8601": true
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$_id",
+                "timezone": "$tz",
+                "iso8601": false
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: can't convert from BSON type int to Date",
+        "code": 16006
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "timezone": "$tz"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date",
+                "iso8601": "$iso8601"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToParts": {
+                "date": "$date"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "dateToParts",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "out": {
+              "$dateToParts": {
+                "date": {
+                  "$date": "2017-12-15T10:00:00.000Z"
+                },
+                "timezone": "America/Sao_Paulo"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$date'",
+        "code": 168
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: can't convert from BSON type int to Date"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$date'"
+    }
+  ]
+}

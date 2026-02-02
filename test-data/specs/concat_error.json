@@ -1,0 +1,18 @@
+{
+  "source": "concat_error.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/concat_error.js",
+  "extractedAt": "2026-02-01T19:19:01.053Z",
+  "setup": {
+    "collections": {
+      "s6570": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

@@ -1,0 +1,2075 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/convert_bindata_vector.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.013Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAA=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAB/Bw==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EATu4A==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAOACA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAA=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAcA",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAZA",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "AwAAAQAK",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EANDuA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "AwAC",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "AwB/Bw==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAA=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwCamZk+",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwCamZk/",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwDNzAxA",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 32",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "AwB/B4A=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 33",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 34",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwAAAABDAADgQA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 35",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 36",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwAAAAHDAADgQA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 37",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 38",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwBmZv/CZmb2wA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 39",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 40",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwAAAID/AAAAAAAAgH8=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "little"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 41",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 42",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "EAA=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 43",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 44",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwA+mZma",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 45",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 46",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwA/mZma",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 47",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 48",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwBADMzN",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 49",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 50",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "AwB/B4A=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 51",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 52",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwBDAAAAQOAAAA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 53",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 54",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwDDAQAAQOAAAA==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 55",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 56",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwDC/2ZmwPZmZg==",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      },
+      {
+        "description": "Aggregate operation 57",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "approx": 1,
+              "expected": "$bson_array",
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "array"
+                  },
+                  "input": "$bindata_array_base64",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $convert found an unknown argument: byteOrder"
+        }
+      },
+      {
+        "description": "Aggregate operation 58",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "expected": {
+                "$binary": {
+                  "base64": "JwD/gAAAAAAAAH+AAAA=",
+                  "subType": "9"
+                }
+              },
+              "output": {
+                "$convert": {
+                  "to": {
+                    "type": "binData",
+                    "subtype": 9
+                  },
+                  "input": "$bson_array",
+                  "byteOrder": "big"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "bindata_array_base64": {
+            "$binary": {
+              "base64": "6gAA",
+              "subType": "9"
+            }
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unknown expression $binary"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 58,
+    "totalDocuments": 1,
+    "errors": 58
+  }
+}

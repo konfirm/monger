@@ -1,0 +1,98 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/sortArray2.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.089Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$sort": {
+              "b.c": 1
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "b": {
+              "c": 1
+            }
+          },
+          {
+            "_id": 1,
+            "b": {
+              "c": 2
+            }
+          }
+        ],
+        "duration": 7
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$group": {
+              "_id": null,
+              "arr": {
+                "$push": "$$ROOT"
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "sorted": {
+                "$sortArray": {
+                  "input": "$arr",
+                  "sortBy": {
+                    "b.c": 1
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        "expected": [
+          {
+            "sorted": [
+              {
+                "_id": 0,
+                "b": {
+                  "c": 1
+                }
+              },
+              {
+                "_id": 1,
+                "b": {
+                  "c": 2
+                }
+              }
+            ]
+          }
+        ],
+        "duration": 4
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 2,
+    "totalDocuments": 2,
+    "errors": 0
+  }
+}

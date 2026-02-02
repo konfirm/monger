@@ -1,0 +1,61 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/convert_string_to_object_array.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/convert_string_to_object_array.js",
+      "timestamp": 1769973913919
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_convert_bindata",
+      "timestamp": 1769973913923
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_convert_bindata",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973913923
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_convert_bindata.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973913923
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_convert_bindata.drop",
+      "result": true,
+      "timestamp": 1769973913923
+    },
+    {
+      "id": 5,
+      "type": "test_error",
+      "error": {
+        "message": "runConvertTests is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973913936
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_convert_bindata": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973913919,
+    "endTime": 1769973913936,
+    "totalOperations": 1
+  }
+}

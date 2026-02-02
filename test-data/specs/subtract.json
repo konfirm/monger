@@ -1,0 +1,214 @@
+{
+  "source": "subtract.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/subtract.js",
+  "extractedAt": "2026-02-01T19:19:52.390Z",
+  "setup": {
+    "collections": {
+      "subtract_coll": [
+        {
+          "_id": 0,
+          "lhs": 1,
+          "rhs": 1
+        },
+        {
+          "_id": 1,
+          "lhs": -2000000000,
+          "rhs": 2000000000
+        },
+        {
+          "_id": 2,
+          "lhs": {
+            "$numberLong": "-20000000000"
+          },
+          "rhs": {
+            "$numberLong": "20000000000"
+          }
+        },
+        {
+          "_id": 3,
+          "lhs": 10.5,
+          "rhs": 0.5
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result[0].diff",
+      "expected": "0",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "result[1].diff",
+      "expected": "NumberLong(\"-4000000000\"",
+      "line": 29
+    },
+    {
+      "type": "eq",
+      "actual": "result[2].diff",
+      "expected": "NumberLong(\"-40000000000\"",
+      "line": 30
+    },
+    {
+      "type": "eq",
+      "actual": "result[3].diff",
+      "expected": "10.0",
+      "line": 31
+    },
+    {
+      "type": "eq",
+      "actual": "result[4].diff",
+      "expected": "NumberDecimal(\"9990.00005\"",
+      "line": 32
+    },
+    {
+      "type": "eq",
+      "actual": "result[5].diff",
+      "expected": "new Date(1912392600000",
+      "line": 33
+    },
+    {
+      "type": "eq",
+      "actual": "result[6].diff",
+      "expected": "70000",
+      "line": 34
+    },
+    {
+      "type": "eq",
+      "actual": "result[7].diff",
+      "expected": "new Date(1683794065001",
+      "line": 35
+    },
+    {
+      "type": "eq",
+      "actual": "result[8].diff",
+      "expected": "new Date(1683794065001",
+      "line": 36
+    },
+    {
+      "type": "eq",
+      "actual": "result[9].diff",
+      "expected": "new Date(1683794065000",
+      "line": 37
+    },
+    {
+      "type": "eq",
+      "actual": "result[10].diff",
+      "expected": "new Date(1683794065000",
+      "line": 38
+    },
+    {
+      "type": "eq",
+      "actual": "result[11].diff",
+      "expected": "new Date(1683794065001",
+      "line": 39
+    },
+    {
+      "type": "eq",
+      "actual": "result[12].diff",
+      "expected": "new Date(1683794065000",
+      "line": 40
+    },
+    {
+      "type": "eq",
+      "actual": "result[13].diff",
+      "expected": "new Date(1683794065000",
+      "line": 41
+    },
+    {
+      "type": "eq",
+      "actual": "result[14].diff",
+      "expected": "new Date(1683794065000",
+      "line": 42
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, lhs: 1, rhs: 1}",
+      "line": 9
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, lhs: -2000000000, rhs: 2000000000}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, lhs: NumberLong(-20000000000",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, lhs: 10.5, rhs: 0.5}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, lhs: NumberDecimal(\"10000.12345\"",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, lhs: new Date(1912392670000",
+      "line": 14
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, lhs: new Date(1912392670000",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, lhs: new Date(1683794065002",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, lhs: new Date(1683794065002",
+      "line": 18
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, lhs: new Date(1683794065002",
+      "line": 19
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, lhs: new Date(1683794065002",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 11, lhs: new Date(1683794065002",
+      "line": 22
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 12, lhs: new Date(1683794065002",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 13, lhs: new Date(1683794065002",
+      "line": 24
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 14, lhs: new Date(1683794065002",
+      "line": 25
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ { _id: 0, veryBigNegativeLong: NumberLong(\"-9223372036854775808\"",
+      "line": 47
+    }
+  ],
+  "meta": {
+    "totalOperations": 47,
+    "totalAssertions": 31,
+    "errors": 1
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "operator": "$convert",
+  "description": "Tests for $convert - Type operator",
+  "mongodbVersion": "4.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/convert.js, /mongo/jstests/aggregation/expressions/convert_any_to_string.js, /mongo/jstests/aggregation/expressions/convert_bindata.js, /mongo/jstests/aggregation/expressions/convert_bindata_numeric.js, /mongo/jstests/aggregation/expressions/convert_bindata_vector.js, /mongo/jstests/aggregation/expressions/convert_string_to_object_array.js, /mongo/jstests/aggregation/expressions/convert_with_base.js",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/evaluate_convert_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.h, /mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats_test.cpp, /mongo/src/mongo/db/pipeline/expression_convert_test.cpp",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": "{_id: 8, input: \"str\", target: \"string\", expected: \"str\"}, { _id: 9, input: \"0123456789abcdef01234567\", target: \"objectId\", expected: ObjectId(\"0123456789abcdef01234567\"), }, {_id: 10, input: \"\", targ"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "ected: \"Timestamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: f"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "\"Timestamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: function"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": "stamp(1, 2)\"}, { _id: 3, input: new DBPointer(\"coll\", new ObjectId(\"0102030405060708090a0b0c\")), target: \"string\", expected: 'DBRef(\"coll\", 0102030405060708090a0b0c)', }, {_id: 4, input: function () {"
+    },
+    {
+      "code": "123123",
+      "type": "numericCode",
+      "context": "id: 13, input: {foo: 123}, target: \"string\", expected: '{\"foo\":123}'}, {_id: 14, input: {foo: 1.123123}, target: \"string\", expected: '{\"foo\":1.123123}'}, { _id: 15, input: {foo: NumberDecimal(\"1.12312"
+    },
+    {
+      "code": "799439",
+      "type": "numericCode",
+      "context": "\"}]', }, { _id: 17, input: { objectId: ObjectId(\"507f1f77bcf86cd799439011\"), uuid: UUID(\"3b241101-e2bb-4255-8caf-4136c566a962\"), date: ISODate(\"2018-03-27T16:58:51.538Z\"), regex: /^ABC/i, js: function"
+    },
+    {
+      "code": "241101",
+      "type": "numericCode",
+      "context": "input: { objectId: ObjectId(\"507f1f77bcf86cd799439011\"), uuid: UUID(\"3b241101-e2bb-4255-8caf-4136c566a962\"), date: ISODate(\"2018-03-27T16:58:51.538Z\"), regex: /^ABC/i, js: function (s) { return s + \"f"
+    },
+    {
+      "code": "156554",
+      "type": "numericCode",
+      "context": "unction (s) { return s + \"foo\"; }, timestamp: new Timestamp(1565545664, 1), }, target: \"string\", expected: [ '{\"objectId\":\"507f1f77bcf86cd799439011\",', '\"uuid\":\"3b241101-e2bb-4255-8caf-4136c566a962\",'"
+    },
+    {
+      "code": "123456",
+      "type": "numericCode",
+      "context": "g to go over the size limit. ...[...Array(24).keys()].map((i) => [(i + 16 + 1).toString(), -1234567891]), ]), }; const illegalConversionTestDocs = [ // Any type is allowed to be converted to string. /"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "de: 4341107, }, // Invalid type. {_id: 5, input: 123, target: {type: -2}, expectedCode: ErrorCodes.FailedToParse}, {_id: 6, input: 123, target: -2, expectedCode: ErrorCodes.FailedToParse}, ]; runConve"
+    },
+    {
+      "code": "331484",
+      "type": "numericCode",
+      "context": "NonUUIDSubtype, \"hn3uUsMxSE6S0cVkebjmfg==\"), }, { _id: 11, input: \"867DEE52C331484E92D1C56479B8E67E\", target: {type: \"binData\", subtype: kNonUUIDSubtype}, format: \"hex\", expected: BinData(kNonUUIDSubt"
+    },
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": "// Can only convert string (or BinData) to BinData. { _id: 3, input: ObjectId(\"0123456789abcdef01234567\"), target: {type: \"binData\", subtype: kUUIDSubtype}, }, { _id: 4, input: ObjectId(\"0123456789abc"
+    },
+    {
+      "code": "434110",
+      "type": "numericCode",
+      "context": "=\", target: {type: \"binData\", subtype: -1}, format: \"base64\", expectedCode: 4341107, }, { _id: 2, input: \"hn3uUsMxSE6S0cVkebjmfg==\", target: {type: \"binData\", subtype: 1000}, format: \"base64\", expecte"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "nTestDocs = [ // Test conversions from BinData to Int. { _id: 0, // Hex: \"0x0000002A\", 4 byte integer input: BinData(0, \"AAAAKg==\"), target: \"int\", byteOrder: \"big\", expected: 42, }, { _id: 1, // Hex:"
+    },
+    {
+      "code": "202000",
+      "type": "numericCode",
+      "context": ", byteOrder: \"big\", expected: 200, }, { _id: 4, // Hex: \"0xA2020000\", 4 byte long input: BinData(0, \"ogIAAA==\"), target: \"long\", byteOrder: \"little\", expected: 674, }, { _id: 5, // Hex: \"0xc7cf\", 2 by"
+    },
+    {
+      "code": "004000",
+      "type": "numericCode",
+      "context": "d: 9, input: -2.5, target: \"binData\", byteOrder: \"big\", // Hex: \"0xc004000000000000\", 8 byte double expected: BinData(0, \"wAQAAAAAAAA=\"), }, { _id: 10, input: 813245678.98, target: {type: \"binData\", s"
+    },
+    {
+      "code": "813245",
+      "type": "numericCode",
+      "context": "e double expected: BinData(0, \"wAQAAAAAAAA=\"), }, { _id: 10, input: 813245678.98, target: {type: \"binData\", subtype: 3}, byteOrder: \"big\", // Hex: \"0x41C83C92777D70A4\", 8 byte double expected: BinData"
+    },
+    {
+      "code": "415333",
+      "type": "numericCode",
+      "context": "byteOrder: \"big\", expected: -2.5, }, { _id: 12, // Hex: \"0x41533333\", 4 byte single precision double input: BinData(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, },"
+    },
+    {
+      "code": "199999",
+      "type": "numericCode",
+      "context": "t: BinData(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, }, { _id: 13, // Hex: \"0x000000000000E0BF\", 8 byte double precision double input: BinData(5, \"AAAAAAAA4L8=\""
+    },
+    {
+      "code": "809265",
+      "type": "numericCode",
+      "context": "Data(0, \"QVMzMw==\"), target: \"double\", byteOrder: \"big\", expected: 13.199999809265137, }, { _id: 13, // Hex: \"0x000000000000E0BF\", 8 byte double precision double input: BinData(5, \"AAAAAAAA4L8=\"), tar"
+    },
+    {
+      "code": "010080",
+      "type": "numericCode",
+      "context": "byteOrder: \"little\", expected: -0.5, }, { _id: 14, // Hex: \"0x0100807F\", 4 byte single precision double input: BinData(0, \"AQCAfw==\"), target: \"double\", byteOrder: \"little\", expected: NaN, }, { _id: 1"
+    },
+    {
+      "code": "265266",
+      "type": "numericCode",
+      "context": "rder: \"big\", expected: -Infinity, }, { _id: 16, // Hex: \"0xC26CBF6CD2652666\", 8 byte double precision inf input: BinData(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345"
+    },
+    {
+      "code": "987765",
+      "type": "numericCode",
+      "context": "BinData(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345.2, }, ]; // Unsupported conversions. // const illegalConversionTestDocs = [ // We don't support BinData to Decim"
+    },
+    {
+      "code": "314345",
+      "type": "numericCode",
+      "context": "ta(2, \"wmy/bNJlJmY=\"), target: \"double\", byteOrder: \"big\", expected: -987765314345.2, }, ]; // Unsupported conversions. // const illegalConversionTestDocs = [ // We don't support BinData to Decimal co"
+    },
+    {
+      "code": "913000",
+      "type": "numericCode",
+      "context": "// ByteOrder must either be 'little' or 'big'. byteOrder: \"weird\", expectedCode: 9130002, }, { _id: 21, input: NumberLong(200), target: \"binData\", // ByteOrder must either be 'little' or 'big'. byteOr"
+    },
+    {
+      "code": "ConversionFailure",
+      "type": "ErrorCodes",
+      "context": "ses = [ // Invalid string BSON array {invalid_bson_array: [\"oh\", \"hi\", \"mark\"], error_code: ErrorCodes.ConversionFailure}, // Must be an array {invalid_bson_array: \"theroom\", error_code: ErrorCodes.Co"
+    },
+    {
+      "code": "776571",
+      "type": "numericCode",
+      "context": "pecification is taken from // https://github.com/mongodb/specifications/blob/9d0d3f0042a8cf5faeb47ae7765716151bfca9ef/source/bson-binary-vector/bson-binary-vector.md#data-types-dtypes. const kBindataV"
+    },
+    {
+      "code": "106059",
+      "type": "numericCode",
+      "context": "padding: 0, dtype: kFloat32Byte, littleEndian: false, }, // TODO SERVER-106059 Add tests for integers larger than INT8. ]; function int8VectorToBitArray(vector) { const bitArray = []; for (const int8 "
+    },
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": "sToBase64(byteArray) { const base64chars = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"; let result = \"\"; let i; for (i = 0; i < byteArray.length; i += 3) { let chunk = (byteArra"
+    },
+    {
+      "code": "105066",
+      "type": "numericCode",
+      "context": "let binToBsonErrorCases = [ // Invalid dtype {invalid_bindata_vector: \"ea0000\", error_code: 10506600}, // Invalid padding - should only exist for PACKED_BIT { invalid_bindata_vector: kInt8Byte + \"01\" "
+    },
+    {
+      "code": "111111",
+      "type": "numericCode",
+      "context": "ing - should only exist for PACKED_BIT { invalid_bindata_vector: kFloat32Byte + \"01\" + \"11111111\", error_code: 10506606, }, // Not enough bytes for float { invalid_bindata_vector: kFloat32Byte + \"00\" "
+    },
+    {
+      "code": "001100",
+      "type": "numericCode",
+      "context": "}, // Not enough bytes for float { invalid_bindata_vector: kFloat32Byte + \"00\" + \"001100\", error_code: 10506602, }, ]; binToBsonErrorCases.forEach((testCase) => { let bindataVectorAsBitArray = hexToBi"
+    },
+    {
+      "code": "184467",
+      "type": "numericCode",
+      "context": "ersions. makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characte"
+    },
+    {
+      "code": "440737",
+      "type": "numericCode",
+      "context": "s. makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characters mak"
+    },
+    {
+      "code": "095516",
+      "type": "numericCode",
+      "context": "makeValidConversion(13, '{\"number\": 1.2e+3}'), makeValidConversion(14, '{\"number\": 18446744073709551615}'), makeValidConversion(15, '{\"number\": -18446744073709551615}'), // Non-ascii characters makeVa"
+    },
+    {
+      "code": "012345",
+      "type": "numericCode",
+      "context": ", input: \"str\", target: \"string\", base: 2, expected: \"str\"}, { _id: 52, input: \"0123456789abcdef01234567\", target: \"objectId\", base: 2, expected: ObjectId(\"0123456789abcdef01234567\"), }, {_id: 53, inp"
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "onversion from number to string with large numbers. { _id: 80, input: NumberInt(2147483647), target: \"string\", base: 2, expected: \"1111111111111111111111111111111\", }, { _id: 81, input: NumberInt(-214"
+    },
+    {
+      "code": "111111",
+      "type": "numericCode",
+      "context": "input: NumberInt(2147483647), target: \"string\", base: 2, expected: \"1111111111111111111111111111111\", }, { _id: 81, input: NumberInt(-2147483648), target: \"string\", base: 2, expected: \"-10000000000000"
+    },
+    {
+      "code": "100000",
+      "type": "numericCode",
+      "context": "input: NumberInt(-2147483648), target: \"string\", base: 2, expected: \"-10000000000000000000000000000000\", }, { _id: 82, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 2, expected: \"1"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "input: NumberInt(-2147483648), target: \"string\", base: 2, expected: \"-10000000000000000000000000000000\", }, { _id: 82, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 2, expected: \"1"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "cted: \"-10000000000000000000000000000000\", }, { _id: 82, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 2, expected: \"111111111111111111111111111111111111111111111111111111111111111"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "\"-10000000000000000000000000000000\", }, { _id: 82, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 2, expected: \"111111111111111111111111111111111111111111111111111111111111111\", }, "
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "0000000000000000000000000000\", }, { _id: 82, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 2, expected: \"111111111111111111111111111111111111111111111111111111111111111\", }, { _id:"
+    },
+    {
+      "code": "177777",
+      "type": "numericCode",
+      "context": "0000000\", }, {_id: 84, input: NumberInt(2147483647), target: \"string\", base: 8, expected: \"17777777777\"}, {_id: 85, input: NumberInt(-2147483648), target: \"string\", base: 8, expected: \"-20000000000\"},"
+    },
+    {
+      "code": "200000",
+      "type": "numericCode",
+      "context": "\"17777777777\"}, {_id: 85, input: NumberInt(-2147483648), target: \"string\", base: 8, expected: \"-20000000000\"}, { _id: 86, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 8, expected:"
+    },
+    {
+      "code": "777777",
+      "type": "numericCode",
+      "context": "t: NumberLong(\"9223372036854775807\"), target: \"string\", base: 8, expected: \"777777777777777777777\", }, { _id: 87, input: NumberLong(\"-9223372036854775808\"), target: \"string\", base: 8, expected: \"-1000"
+    },
+    {
+      "code": "800000",
+      "type": "numericCode",
+      "context": ": \"7FFFFFFF\"}, {_id: 93, input: NumberInt(-2147483648), target: \"string\", base: 16, expected: \"-80000000\"}, { _id: 94, input: NumberLong(\"9223372036854775807\"), target: \"string\", base: 16, expected: \""
+    },
+    {
+      "code": "350130",
+      "type": "numericCode",
+      "context": "ase must be integral. {_id: 1, input: NumberInt(10), target: \"string\", base: 2.1, expectedCode: 3501300}, {_id: 2, input: 10, target: \"string\", base: 2.1, expectedCode: 3501300}, {_id: 3, input: Numbe"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Type",
+      "MongoDB version: 4.0",
+      "Implementation status: ✓ Implemented",
+      "Found 7 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/evaluate_convert_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_convert_bucket_index_stats_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_convert_test.cpp"
+    ]
+  }
+}

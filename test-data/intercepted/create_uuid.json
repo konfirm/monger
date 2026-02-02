@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/create_uuid.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/create_uuid.js",
+      "timestamp": 1769973914338
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_uuid",
+      "timestamp": 1769973914340
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "assertDropCollection is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914341
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914338,
+    "endTime": 1769973914341,
+    "totalOperations": 0
+  }
+}

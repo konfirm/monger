@@ -1,0 +1,22 @@
+{
+  "source": "sigmoid.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/sigmoid.js",
+  "extractedAt": "2026-02-01T19:19:44.809Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([ {_id: 1, length: 1, height: 1, width: 1}, {_id: 2, length: 4, height: 3, width: 9}, {_id: 3, length: 2.3, height: 4.9, width: 2.1}, {_id: 4, length: 12345, height: 678910, width: 2.1}, ]",
+      "line": 66
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

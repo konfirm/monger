@@ -1,0 +1,34 @@
+{
+  "operator": "$function",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/expression_function.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.027Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$function": {
+            "args": [
+              "$value",
+              -1
+            ],
+            "lang": "js"
+          }
+        },
+        "context": {
+          "value": 0
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: The body function must be specified."
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 5,
+    "errors": 1
+  }
+}

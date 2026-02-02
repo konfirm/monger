@@ -1,0 +1,72 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/week_sunday.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/week_sunday.js",
+      "timestamp": 1769973928999
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "jstests_aggregation_server6190",
+      "timestamp": 1769973929002
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_server6190",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973929002
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_server6190.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973929002
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_server6190.drop",
+      "result": true,
+      "timestamp": 1769973929002
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_server6190",
+      "property": "save",
+      "valueType": "undefined",
+      "timestamp": 1769973929002,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "t.save is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973929003
+    }
+  ],
+  "state": {
+    "collections": {
+      "jstests_aggregation_server6190": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928999,
+    "endTime": 1769973929003,
+    "totalOperations": 1
+  }
+}

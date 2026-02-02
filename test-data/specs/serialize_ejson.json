@@ -1,0 +1,51 @@
+{
+  "source": "serialize_ejson.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/serialize_ejson.js",
+  "extractedAt": "2026-02-01T19:19:43.854Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.a",
+      "expected": "\"depth limit\"",
+      "line": 176
+    },
+    {
+      "type": "eq",
+      "actual": "\"symbol\"",
+      "expected": "res.type",
+      "line": 262
+    },
+    {
+      "type": "eq",
+      "actual": "\"value\"",
+      "expected": "res.value",
+      "line": 263
+    },
+    {
+      "type": "eq",
+      "actual": "res.a",
+      "expected": "\"failed\"",
+      "line": 278
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.adminCommand({getParameter: 1, [paramName]: 1}",
+      "line": 19
+    },
+    {
+      "type": "commandWorked",
+      "result": "bulk.execute(",
+      "line": 30
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 6,
+    "errors": 1
+  }
+}

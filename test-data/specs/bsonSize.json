@@ -1,0 +1,63 @@
+{
+  "source": "bsonSize.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/bsonSize.js",
+  "extractedAt": "2026-02-01T19:18:57.752Z",
+  "setup": {
+    "collections": {
+      "agg_expr_bsonSize": [
+        {
+          "_id": 1
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1}",
+      "line": 3
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$push: {xs: 1}}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$push: {xs: {subdoc: 12345}}}",
+      "line": 14
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$push: {xs: \"x\".repeat(7",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$push: {xs: \"x\".repeat(500",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$push: {xs: \"x\".repeat(16 * 1e6",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$set: {arr: [1, 2, 3, 4]}}",
+      "line": 27
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.update({_id: 1}, {$set: {arr: {a: {b: {c: 1}}}}}",
+      "line": 31
+    }
+  ],
+  "meta": {
+    "totalOperations": 12,
+    "totalAssertions": 8,
+    "errors": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/any_element_true.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:51.420Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "any_element_true",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$anyElementTrue": {
+                "$literal": [
+                  true,
+                  true
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": true
+        }
+      ],
+      "duration": 6,
+      "success": true
+    }
+  ],
+  "errors": []
+}

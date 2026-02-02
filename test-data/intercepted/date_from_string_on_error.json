@@ -1,0 +1,7456 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_from_string_on_error.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_from_string_on_error.js",
+      "timestamp": 1769973915411
+    },
+    {
+      "id": 2,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T11:56:02Z"
+      ],
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915414,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 4,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915414,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 2,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T11:56:02Z"
+      },
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 5,
+      "type": "db_access",
+      "property": "date_from_string_on_error",
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 7,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 7,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.drop",
+      "result": true,
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915414
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915415,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915415,
+      "value": 1
+    },
+    {
+      "id": 9,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915415,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915415,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 13,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "July 4th",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 16,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "July 4th",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915415,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 13,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 24,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 24,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915415
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 31,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "12:50:53",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 40,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "12:50:53",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 48,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 48,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 55,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 60,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 61,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2017",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 64,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2017",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 65,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 61,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 72,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 73,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 72,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 78,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 82,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 83,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 79,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 85,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "60.Monday1770/06:59",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 88,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "60.Monday1770/06:59",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 91,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 93,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 85,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 96,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 96,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 100,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 101,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 102,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915416,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915416,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 103,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915416
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 109,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "Not even close",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 112,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Not even close",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 114,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 118,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 109,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 119,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 120,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 121,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 120,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 123,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 124,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 128,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 127,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 132,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 134,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 135,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 133,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "July 4th, 10000",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 136,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "July 4th, 10000",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 137,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 138,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 139,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 140,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 141,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 142,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 133,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 143,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 144,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 145,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 146,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 144,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 147,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 148,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 149,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 150,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 152,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 153,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 154,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 155,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 151,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 156,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 158,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 159,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 157,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": 5,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 160,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 161,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 162,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 163,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 164,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 165,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 166,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 157,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 167,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 168,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 169,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 170,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 168,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 171,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 172,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 173,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 174,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 176,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 177,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 178,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 179,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 175,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 180,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 182,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 183,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 181,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": {
+                  "year": 2018,
+                  "month": 2,
+                  "day": 5
+                },
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 184,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": {
+                "year": 2018,
+                "month": 2,
+                "day": 5
+              },
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 185,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 186,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 187,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 188,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 189,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 190,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 181,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 191,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 192,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 193,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 194,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 192,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 195,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 196,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 197,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 198,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 200,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 201,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 202,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 203,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 199,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 204,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 206,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 207,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 205,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": [
+                  "2018-02-05"
+                ],
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 208,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": [
+                "2018-02-05"
+              ],
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 209,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 210,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 211,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 212,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 213,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 214,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 205,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 215,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 216,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 217,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 218,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 216,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 219,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 220,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 221,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 222,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 224,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915417,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 225,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915417,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 226,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 227,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 223,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 228,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915417
+    },
+    {
+      "id": 230,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 231,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 229,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": null,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 232,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 233,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 234,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 235,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 236,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 237,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 238,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 229,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 239,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 240,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 241,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 242,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 240,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 243,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 244,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 246,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 247,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 245,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 248,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 250,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 251,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 249,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 252,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 253,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 254,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 255,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 256,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 257,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 258,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 249,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 259,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 260,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 261,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 262,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 260,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 263,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 264,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 266,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 267,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 265,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 268,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 270,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 271,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 269,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "$missing",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 272,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 273,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 274,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 275,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 276,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 277,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 278,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 269,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 279,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 280,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 281,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 282,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 280,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 283,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 284,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 286,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 287,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 285,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 288,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 290,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 291,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 289,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06",
+                "format": "%Y",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 292,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "%Y",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 293,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 294,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 295,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 296,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 297,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 298,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 289,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 299,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 300,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 301,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 302,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 300,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 303,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 304,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 305,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 306,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 308,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 309,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 310,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 311,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 307,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 312,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 314,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 315,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 313,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06",
+                "format": "%Y-%m-%dT%H",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 316,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "%Y-%m-%dT%H",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 317,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 318,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 319,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 320,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 321,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 322,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 313,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 323,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 324,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 325,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 326,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 324,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 327,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 328,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 329,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 330,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 332,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 333,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 334,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 335,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 331,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 336,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 338,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 339,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 337,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06",
+                "format": "Y-m-d",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 340,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "Y-m-d",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 341,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 342,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 343,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 344,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 345,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 346,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 337,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 347,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 348,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 349,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 350,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 348,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 351,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 352,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 353,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 354,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 356,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 357,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 358,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 359,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 355,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 360,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 362,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 363,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 361,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "format": null,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 364,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 365,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 366,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 367,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 368,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 369,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 370,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 361,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 371,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 372,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 373,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 374,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 372,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 375,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 376,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 378,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 379,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 377,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 380,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 382,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 383,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 381,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "timezone": null,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 384,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "timezone": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 385,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 386,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 387,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 388,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 389,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 390,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 381,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 391,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 392,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 393,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 394,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 392,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 395,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 396,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 398,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 399,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 397,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 400,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 402,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 403,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 401,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 404,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 405,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 406,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 407,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 408,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 409,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 410,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 401,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 411,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 412,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 413,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 414,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 412,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 415,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 416,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 418,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 419,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 417,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 420,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 422,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 423,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 421,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 424,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 425,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 426,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 427,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 428,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 429,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 430,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 421,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 431,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 432,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 433,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 434,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 432,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 435,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 436,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 438,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 439,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 437,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 440,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 442,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 443,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 441,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "format": "$missing",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 444,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "format": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 445,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 446,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 447,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 448,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 449,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 450,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 441,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 451,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 452,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 453,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 454,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 452,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 455,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 456,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 458,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 459,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 457,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 460,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 462,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 463,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 461,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "2018-02-06T11:56:02Z",
+                "timezone": "$missing",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 464,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 465,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 466,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 467,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 468,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 469,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 470,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 461,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 471,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 472,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 473,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 474,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 472,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 475,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 476,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 478,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 479,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 477,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 480,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 482,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 483,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 481,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": 5,
+                "format": null,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 484,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 485,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 486,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 487,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 488,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 489,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 490,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 481,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 491,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 492,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 493,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 494,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 492,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 495,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 496,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 497,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 498,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 500,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 501,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 502,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 503,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 499,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 504,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 506,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 507,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 505,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": 5,
+                "timezone": "$missing",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 508,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 509,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 510,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 511,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 512,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 513,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 514,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 505,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 515,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 516,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 517,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 518,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 516,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 519,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 520,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 521,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 522,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 524,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 525,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 526,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 527,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 523,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T11:56:02Z"
+          }
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 528,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 530,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 531,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 529,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "Invalid date string",
+                "format": null,
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 532,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Invalid date string",
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 533,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 534,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 535,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 536,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 537,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 538,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 529,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 539,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 540,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 541,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 542,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 540,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 543,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 544,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 546,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 547,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 545,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 548,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 550,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 551,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915418,
+      "value": "2017-07-04T11:56:02Z"
+    },
+    {
+      "id": 549,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "Invalid date string",
+                "timezone": "$missing",
+                "onError": {
+                  "$date": "2017-07-04T11:56:02Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 552,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Invalid date string",
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 553,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 554,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 555,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 556,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 557,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 558,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 549,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 559,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 560,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 561,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 562,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 560,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 563,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 564,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 566,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 567,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 565,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 568,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 569,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid",
+                "onError": {}
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 570,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": {}
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 571,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 572,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 573,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 574,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 575,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 576,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 569,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 577,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 578,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 579,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 580,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 578,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 581,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 582,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 584,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 585,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 583,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": {}
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 586,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 587,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid",
+                "onError": 5
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 588,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": 5
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 589,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 590,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 591,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 592,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 593,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 594,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 587,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 595,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 596,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 597,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 598,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 596,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 599,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 600,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 602,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 603,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 601,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": 5
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 604,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 605,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid",
+                "onError": "Not a date"
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 606,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": "Not a date"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 607,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 608,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 609,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 610,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 611,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 612,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 605,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 613,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 614,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 615,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 616,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 614,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 617,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 618,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 620,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 621,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 619,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "Not a date"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 622,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 623,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid",
+                "onError": null
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 624,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 625,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 626,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 627,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 628,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 629,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 630,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 623,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 631,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 632,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 633,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 634,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 632,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 635,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 636,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 638,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 639,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 637,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 640,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 641,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid"
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 642,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 643,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 644,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 645,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 646,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 647,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 648,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 641,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 649,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 650,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 651,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 652,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 650,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 653,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 654,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 656,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 657,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 655,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 658,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 659,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateFromString": {
+                "dateString": "invalid",
+                "onError": "$missing"
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 660,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": "$missing"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 661,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 662,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 663,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 664,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 665,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 666,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 659,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate",
+      "result": {},
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 667,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 668,
+      "type": "function_call",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 669,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 670,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 668,
+      "type": "function_return",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 671,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 672,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 674,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 675,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 673,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915418
+    },
+    {
+      "id": 676,
+      "type": "property_get",
+      "path": "collection.date_from_string_on_error",
+      "property": "runCommand",
+      "valueType": "undefined",
+      "timestamp": 1769973915418,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 677,
+      "type": "test_error",
+      "error": {
+        "message": "coll.runCommand is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973915419
+    }
+  ],
+  "state": {
+    "collections": {
+      "date_from_string_on_error": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973915411,
+    "endTime": 1769973915419,
+    "totalOperations": 65
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/in.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/in.js",
+      "timestamp": 1769973919104
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "in",
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.in",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.in.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.in.drop",
+      "result": true,
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.in",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.in.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.in.drop",
+      "result": true,
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.in",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 8,
+      "type": "function_call",
+      "path": "collection.in.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "elementField": 1
+        }
+      ],
+      "timestamp": 1769973919107
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.in.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973919108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.in.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973919108,
+      "value": 1
+    },
+    {
+      "id": 8,
+      "type": "function_return",
+      "path": "collection.in.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "collection.in",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "path": "collection.in.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "included": {
+              "$in": [
+                "$elementField",
+                {
+                  "$literal": [
+                    1,
+                    2,
+                    3
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 13,
+      "type": "aggregate",
+      "collection": "in",
+      "pipeline": {
+        "$project": {
+          "included": {
+            "$in": [
+              "$elementField",
+              {
+                "$literal": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "elementField": 1
+        }
+      ],
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973919108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 12,
+      "type": "function_return",
+      "path": "collection.in.aggregate",
+      "result": {},
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 21,
+      "type": "function_call",
+      "path": "collection.in.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973919108
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 21,
+      "type": "function_return",
+      "path": "collection.in.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 25,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": 0,
+      "expected": 1,
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.in.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973919109
+    },
+    {
+      "id": 27,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'included')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973919109
+    }
+  ],
+  "state": {
+    "collections": {
+      "in": [
+        {
+          "elementField": 1
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973919104,
+    "endTime": 1769973919109,
+    "totalOperations": 5
+  }
+}

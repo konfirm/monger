@@ -1,0 +1,321 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/top.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:48.662Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": []
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  "a",
+                  "b",
+                  "c"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  0,
+                  "a",
+                  [
+                    1,
+                    "b"
+                  ],
+                  {
+                    "c": 2
+                  },
+                  0.5
+                ],
+                "sortBy": -1
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    3,
+                    [
+                      1,
+                      1
+                    ]
+                  ],
+                  [
+                    3,
+                    6
+                  ]
+                ],
+                "sortBy": 1
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "top_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "top": {
+              "$top": {
+                "input": [
+                  {
+                    "a": 1,
+                    "b": 1
+                  },
+                  {
+                    "a": 2,
+                    "b": 2
+                  },
+                  {
+                    "a": 2,
+                    "b": 1
+                  }
+                ],
+                "sortBy": {
+                  "a": 1,
+                  "b": -1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unknown expression $top",
+        "code": 31325
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unknown expression $top"
+    }
+  ]
+}

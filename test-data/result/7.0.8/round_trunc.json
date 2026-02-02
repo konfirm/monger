@@ -1,0 +1,198 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/round_trunc.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:39.222Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 7,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$trunc": "$a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    }
+  ],
+  "errors": []
+}

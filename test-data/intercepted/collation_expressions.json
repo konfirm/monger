@@ -1,0 +1,78 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/collation_expressions.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/collation_expressions.js",
+      "timestamp": 1769973912104
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "collation_expressions",
+      "timestamp": 1769973912108
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.collation_expressions",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973912108
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.collation_expressions.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973912108
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.collation_expressions.drop",
+      "result": true,
+      "timestamp": 1769973912109
+    },
+    {
+      "id": 5,
+      "type": "db_access",
+      "property": "createCollection",
+      "timestamp": 1769973912109
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.collation_expressions",
+      "property": "getName",
+      "valueType": "undefined",
+      "timestamp": 1769973912109,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "test_error",
+      "error": {
+        "message": "coll.getName is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973912109
+    }
+  ],
+  "state": {
+    "collections": {
+      "collation_expressions": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973912104,
+    "endTime": 1769973912109,
+    "totalOperations": 1
+  }
+}

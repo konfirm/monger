@@ -1,0 +1,440 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/merge_objects.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:27.078Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 0
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$subObject",
+                {
+                  "d": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$$ROOT",
+                {
+                  "newField": "newValue"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$$ROOT",
+                {
+                  "a": "newValue"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 3
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {
+                  "a": "defaultValue"
+                },
+                "$$ROOT"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 4
+          }
+        },
+        {
+          "$replaceRoot": {
+            "newRoot": {
+              "$mergeObjects": [
+                "$$ROOT",
+                "$subObject"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 5
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$subObject",
+                {
+                  "subObject1": {
+                    "d": 1
+                  }
+                },
+                {
+                  "e": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 8
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": null
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 9
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": {
+        "$group": {
+          "_id": 0,
+          "m": {}
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 10
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": "$nonExistentField"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": ""
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                {},
+                {}
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": {
+              "$in": [
+                13,
+                14,
+                15,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$group": {
+            "_id": "$group",
+            "mergedDocument": {
+              "$mergeObjects": "$obj"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 17
+          }
+        },
+        {
+          "$project": {
+            "mergedDocument": {
+              "$mergeObjects": [
+                "$a",
+                {
+                  "b": "$$REMOVE"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "merge_object_expr",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$bucketAuto": {
+            "groupBy": "$no_such_field",
+            "buckets": 1,
+            "output": {
+              "result": {
+                "$mergeObjects": "$obj"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": {
+            "min": null,
+            "max": null
+          },
+          "result": {
+            "a": 3,
+            "b": 4,
+            "subobj": {
+              "y": 2
+            }
+          }
+        }
+      ],
+      "duration": 2,
+      "success": true
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

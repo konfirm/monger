@@ -1,0 +1,29 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/max_min.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:25.489Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$max": []
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

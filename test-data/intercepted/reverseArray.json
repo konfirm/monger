@@ -1,0 +1,409 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/reverseArray.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/reverseArray.js",
+      "timestamp": 1769973924829
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "reverseArray",
+      "timestamp": 1769973924831
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.reverseArray",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973924831
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.reverseArray.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973924831
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.reverseArray.drop",
+      "result": true,
+      "timestamp": 1769973924832
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.reverseArray",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973924832
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.reverseArray.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "nullField": null,
+          "embedded": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "singleElem": [
+            1
+          ],
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "num": 1,
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973924832
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.reverseArray.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973924833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.reverseArray.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973924833,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.reverseArray.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973924833
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.reverseArray",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973924833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "reversed": {
+              "$reverseArray": 1
+            }
+          }
+        }
+      ],
+      "expectedCode": 34435,
+      "timestamp": 1769973924833
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.reverseArray",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973924833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "reversed": {
+              "$reverseArray": "$num"
+            }
+          }
+        }
+      ],
+      "expectedCode": 34435,
+      "timestamp": 1769973924833
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.reverseArray",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973924833
+    },
+    {
+      "id": 14,
+      "type": "function_call",
+      "path": "collection.reverseArray.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "reversed": {
+                "$reverseArray": {
+                  "$literal": [
+                    1,
+                    2
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973924833
+    },
+    {
+      "id": 15,
+      "type": "aggregate",
+      "collection": "reverseArray",
+      "pipeline": [
+        {
+          "$project": {
+            "reversed": {
+              "$reverseArray": {
+                "$literal": [
+                  1,
+                  2
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "nullField": null,
+          "embedded": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "singleElem": [
+            1
+          ],
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "num": 1,
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973924834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 14,
+      "type": "function_return",
+      "path": "collection.reverseArray.aggregate",
+      "result": {},
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 23,
+      "type": "function_call",
+      "path": "collection.reverseArray.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 23,
+      "type": "function_return",
+      "path": "collection.reverseArray.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 27,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": 1,
+      "expected": 0,
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "collection.reverseArray.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973924834
+    },
+    {
+      "id": 29,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'reversed')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973924835
+    }
+  ],
+  "state": {
+    "collections": {
+      "reverseArray": [
+        {
+          "nullField": null,
+          "embedded": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "singleElem": [
+            1
+          ],
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "num": 1,
+          "empty": []
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973924829,
+    "endTime": 1769973924835,
+    "totalOperations": 4
+  }
+}

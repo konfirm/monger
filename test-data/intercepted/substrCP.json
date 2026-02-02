@@ -1,0 +1,784 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/substrCP.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/substrCP.js",
+      "timestamp": 1769973927101
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "substrCP",
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.substrCP.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.substrCP.drop",
+      "result": true,
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "insertOne",
+      "valueType": "function",
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.substrCP.insertOne",
+      "target": "insertOne",
+      "arguments": [
+        {
+          "a": "abc"
+        }
+      ],
+      "timestamp": 1769973927104
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.substrCP.insertOne.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927105,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.substrCP.insertOne.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973927105,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.substrCP.insertOne",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973927105
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                0,
+                "a"
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34452,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                0,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34453,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                "abc",
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34450,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                2.2,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34451,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                -1,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34455,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 19,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$a",
+                1,
+                -3
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 34454,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 22,
+      "type": "function_call",
+      "path": "collection.substrCP.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 22,
+      "type": "function_return",
+      "path": "collection.substrCP.drop",
+      "result": true,
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 23,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "insertOne",
+      "valueType": "function",
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 25,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        4294967297
+      ],
+      "timestamp": 1769973927106
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927106,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973927107,
+      "value": "4294967297"
+    },
+    {
+      "id": 25,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "4294967297"
+      },
+      "timestamp": 1769973927107
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927107,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973927107,
+      "value": "4294967297"
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.substrCP.insertOne",
+      "target": "insertOne",
+      "arguments": [
+        {
+          "t": "寿司sushi",
+          "u": "éclair",
+          "v": "Å",
+          "w": "◢◢◢",
+          "x": "a",
+          "y": "abc",
+          "z": "abcde",
+          "a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3,
+          "e": 4,
+          "f": 5,
+          "neg": -4,
+          "invalidStr": {},
+          "bigNum": {
+            "$numberLong": "4294967297"
+          }
+        }
+      ],
+      "timestamp": 1769973927107
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927107,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973927107,
+      "value": "4294967297"
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.substrCP.insertOne.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.substrCP.insertOne.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973927108,
+      "value": 1
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.substrCP.insertOne",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 35,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": []
+            }
+          }
+        }
+      ],
+      "expectedCode": 16020,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 37,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 16020,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 39,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$x",
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      ],
+      "expectedCode": 16020,
+      "message": "error thrown, check parameters",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "collection.substrCP",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 42,
+      "type": "function_call",
+      "path": "collection.substrCP.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "a": {
+              "$substrCP": [
+                "$x",
+                999,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973927108,
+      "value": "4294967297"
+    },
+    {
+      "id": 43,
+      "type": "aggregate",
+      "collection": "substrCP",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$substrCP": [
+              "$x",
+              999,
+              0
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "t": "寿司sushi",
+          "u": "éclair",
+          "v": "Å",
+          "w": "◢◢◢",
+          "x": "a",
+          "y": "abc",
+          "z": "abcde",
+          "a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3,
+          "e": 4,
+          "f": 5,
+          "neg": -4,
+          "invalidStr": {},
+          "bigNum": {
+            "$numberLong": "4294967297"
+          }
+        }
+      ],
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973927108,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 42,
+      "type": "function_return",
+      "path": "collection.substrCP.aggregate",
+      "result": {},
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 53,
+      "type": "function_call",
+      "path": "collection.substrCP.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 53,
+      "type": "function_return",
+      "path": "collection.substrCP.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.substrCP.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973927108
+    },
+    {
+      "id": 57,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'a')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973927109
+    }
+  ],
+  "state": {
+    "collections": {
+      "substrCP": [
+        {
+          "t": "寿司sushi",
+          "u": "éclair",
+          "v": "Å",
+          "w": "◢◢◢",
+          "x": "a",
+          "y": "abc",
+          "z": "abcde",
+          "a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3,
+          "e": 4,
+          "f": 5,
+          "neg": -4,
+          "invalidStr": {},
+          "bigNum": {
+            "$numberLong": "4294967297"
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973927101,
+    "endTime": 1769973927109,
+    "totalOperations": 7
+  }
+}

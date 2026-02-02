@@ -1,0 +1,39 @@
+{
+  "source": "iso_date_exprs.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/iso_date_exprs.js",
+  "extractedAt": "2026-02-01T19:19:27.665Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.cursor.firstBatch[0].result",
+      "expected": "expResult, tojson(pipeline",
+      "line": 35
+    },
+    {
+      "type": "eq",
+      "actual": "testOpCount",
+      "expected": "486, \"unexpected number of calls to 'testOp(",
+      "line": 247
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({date: ISODate(\"2021-04-14T04:48:00.00Z\"",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.runCommand(\"aggregate\", {pipeline: pipeline, cursor: {}}",
+      "line": 19
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

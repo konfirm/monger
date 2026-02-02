@@ -1,0 +1,326 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/date_from_string_on_error.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.020Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": {},
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 31,
+    "totalDocuments": 1,
+    "errors": 31
+  }
+}

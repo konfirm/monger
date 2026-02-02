@@ -1,0 +1,72 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/cond.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/cond.js",
+      "timestamp": 1769973913084
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "jstests_aggregation_cond",
+      "timestamp": 1769973913088
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_cond",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973913088
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_cond.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973913088
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_cond.drop",
+      "result": true,
+      "timestamp": 1769973913088
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_cond",
+      "property": "save",
+      "valueType": "undefined",
+      "timestamp": 1769973913088,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "coll.save is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973913089
+    }
+  ],
+  "state": {
+    "collections": {
+      "jstests_aggregation_cond": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973913084,
+    "endTime": 1769973913089,
+    "totalOperations": 1
+  }
+}

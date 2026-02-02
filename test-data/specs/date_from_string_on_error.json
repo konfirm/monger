@@ -1,0 +1,823 @@
+{
+  "source": "date_from_string_on_error.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_from_string_on_error.js",
+  "extractedAt": "2026-02-01T19:19:10.089Z",
+  "setup": {
+    "collections": {
+      "date_from_string_on_error": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 16,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "July 4th",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549897
+    },
+    {
+      "id": 40,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "12:50:53",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 64,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2017",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 88,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "60.Monday1770/06:59",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 112,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Not even close",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 136,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "July 4th, 10000",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 160,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 184,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": {
+                "year": 2018,
+                "month": 2,
+                "day": 5
+              },
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 208,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": [
+                "2018-02-05"
+              ],
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549899
+    },
+    {
+      "id": 232,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549900
+    },
+    {
+      "id": 252,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549900
+    },
+    {
+      "id": 272,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549900
+    },
+    {
+      "id": 292,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "%Y",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549900
+    },
+    {
+      "id": 316,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "%Y-%m-%dT%H",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549900
+    },
+    {
+      "id": 340,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06",
+              "format": "Y-m-d",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 364,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 384,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "timezone": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 404,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 424,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 444,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "format": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 464,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "2018-02-06T11:56:02Z",
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 484,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 508,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": 5,
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 532,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Invalid date string",
+              "format": null,
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 552,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "Invalid date string",
+              "timezone": "$missing",
+              "onError": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 570,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": {}
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 588,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": 5
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 606,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": "Not a date"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 624,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 642,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    },
+    {
+      "id": 660,
+      "type": "aggregate",
+      "collection": "date_from_string_on_error",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateFromString": {
+              "dateString": "invalid",
+              "onError": "$missing"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973549901
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onErrorValue}]",
+      "expected": "coll .aggregate({ $project: {date: {$dateFromString: {dateString: inputDate, onError: onErrorValue}}}, }",
+      "line": 16
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onErrorValue}]",
+      "expected": "coll .aggregate({ $project: {date: {$dateFromString: {dateString: inputDate, onError: onErrorValue}}}, }",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: {date: {$dateFromString: {dateString: inputDate, onError: onErrorValue}}}, }",
+      "line": 40
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onErrorValue}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateFromString: {dateString: \"2018-02-06\", format: inputFormat, onError: onErrorValue}, }, }, }",
+      "line": 52
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateFromString: { dateString: \"2018-02-06T11:56:02Z\", format: nullishValue, onError: onErrorValue, }, }, }, }",
+      "line": 69
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateFromString: { dateString: \"2018-02-06T11:56:02Z\", timezone: nullishValue, onError: onErrorValue, }, }, }, }",
+      "line": 85
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onErrorValue}]",
+      "expected": "coll .aggregate({ $project: {date: {$dateFromString: {dateString: 5, format: null, onError: onErrorValue}}}, }",
+      "line": 105
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onErrorValue}]",
+      "expected": "coll .aggregate({ $project: { date: {$dateFromString: {dateString: 5, timezone: \"$missing\", onError: onErrorValue}}, }, }",
+      "line": 113
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateFromString: {dateString: \"Invalid date string\", format: null, onError: onErrorValue}, }, }, }",
+      "line": 126
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateFromString: { dateString: \"Invalid date string\", timezone: \"$missing\", onError: onErrorValue, }, }, }, }",
+      "line": 138
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onError}]",
+      "expected": "coll.aggregate({$project: {date: {$dateFromString: {dateString: \"invalid\", onError: onError}}}}",
+      "line": 157
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0}]",
+      "expected": "coll.aggregate({$project: {date: {$dateFromString: {dateString: \"invalid\", onError: \"$missing\"}}}}",
+      "line": 165
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0}",
+      "line": 12
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "res",
+      "code": "40684",
+      "line": 179
+    }
+  ],
+  "meta": {
+    "totalOperations": 742,
+    "totalAssertions": 14,
+    "errors": 1
+  }
+}

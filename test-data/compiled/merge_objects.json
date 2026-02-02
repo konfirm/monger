@@ -1,0 +1,325 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/merge_objects.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.064Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$mergeObjects": [
+            "$subObject",
+            {
+              "d": 1
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$mergeObjects": [
+            "$$ROOT",
+            {
+              "newField": "newValue"
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$mergeObjects": [
+            "$$ROOT",
+            {
+              "a": "newValue"
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$mergeObjects": [
+            {
+              "a": "defaultValue"
+            },
+            "$$ROOT"
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$match": {
+              "_id": 4
+            }
+          },
+          {
+            "$replaceRoot": {
+              "newRoot": {
+                "$mergeObjects": [
+                  "$$ROOT",
+                  "$subObject"
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$mergeObjects": [
+            "$subObject",
+            {
+              "subObject1": {
+                "d": 1
+              }
+            },
+            {
+              "e": 1
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$mergeObjects": [
+            "$a",
+            {
+              "b": null
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$mergeObjects": [
+            "$a",
+            {}
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$mergeObjects": [
+            "$a",
+            {
+              "b": "$nonExistentField"
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {
+          "$mergeObjects": [
+            "$a",
+            {
+              "b": ""
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": {
+          "$mergeObjects": [
+            {}
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": {
+          "$mergeObjects": [
+            {},
+            {}
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": [
+          {
+            "$match": {
+              "_id": {
+                "$in": [
+                  13,
+                  14,
+                  15,
+                  16
+                ]
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          },
+          {
+            "$group": {
+              "_id": "$group",
+              "mergedDocument": {
+                "$mergeObjects": "$obj"
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ],
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": {
+          "$mergeObjects": [
+            "$a",
+            {
+              "b": "$$REMOVE"
+            }
+          ]
+        },
+        "context": {
+          "obj": {}
+        },
+        "expected": [],
+        "duration": 2
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 16",
+        "query": [
+          {
+            "$sort": {
+              "_id": 1
+            }
+          },
+          {
+            "$bucketAuto": {
+              "groupBy": "$no_such_field",
+              "buckets": 1,
+              "output": {
+                "result": {
+                  "$mergeObjects": "$obj"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "obj": {}
+        },
+        "expected": [
+          {
+            "_id": {
+              "min": null,
+              "max": null
+            },
+            "result": {
+              "a": 3,
+              "b": 4,
+              "subobj": {
+                "y": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "errors": [
+      {
+        "description": "Aggregate operation 9",
+        "query": {},
+        "context": {
+          "obj": {}
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 16,
+    "totalDocuments": 7,
+    "errors": 1
+  }
+}

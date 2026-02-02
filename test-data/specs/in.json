@@ -1,0 +1,95 @@
+{
+  "source": "in.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/in.js",
+  "extractedAt": "2026-02-01T19:19:22.942Z",
+  "setup": {
+    "collections": {
+      "in": [
+        {
+          "elementField": 1
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 13,
+      "type": "aggregate",
+      "collection": "in",
+      "pipeline": {
+        "$project": {
+          "included": {
+            "$in": [
+              "$elementField",
+              {
+                "$literal": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "elementField": 1
+        }
+      ],
+      "timestamp": 1769973562758
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 64
+    },
+    {
+      "type": "eq",
+      "actual": "res[0].included",
+      "expected": "options.elementIsIncluded",
+      "line": 65
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1",
+      "line": 74
+    },
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "0",
+      "line": 76
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({elementField: options.element}",
+      "line": 32
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.createIndex({elementField: \"hashed\"}",
+      "line": 45
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.createCollection(coll.getName(",
+      "line": 51
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({elementField: options.element}",
+      "line": 57
+    }
+  ],
+  "meta": {
+    "totalOperations": 32,
+    "totalAssertions": 8,
+    "errors": 1
+  }
+}

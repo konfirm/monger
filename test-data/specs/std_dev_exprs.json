@@ -1,0 +1,27 @@
+{
+  "source": "std_dev_exprs.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/std_dev_exprs.js",
+  "extractedAt": "2026-02-01T19:19:49.072Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "t.insert({}",
+      "line": 7
+    },
+    {
+      "type": "commandWorked",
+      "result": "t.insert({num: data[i]}",
+      "line": 9
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

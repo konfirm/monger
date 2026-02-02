@@ -1,0 +1,126 @@
+{
+  "operator": "$eq",
+  "description": "Tests for $eq - Comparison operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/sources/geonear/requires_geo_index.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_hj.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_inlj.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_lib.js, /mongo/jstests/aggregation/sources/lookup/lookup_equijoin_semantics_nlj.js, /mongo/jstests/aggregation/sources/match/text_search_requires_index.js, /mongo/jstests/aggregation/sources/merge/requires_unique_index.js, /mongo/jstests/aggregation/sources/metadata/set_metadata_fails_in_user_request.js, /mongo/jstests/aggregation/sources/out/required_last_position.js, /mongo/jstests/aggregation/sources/project/dotted_and_nested_proj_are_equal.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/aggregation_request_helper.cpp, /mongo/src/mongo/db/pipeline/aggregation_request_helper.h, /mongo/src/mongo/db/pipeline/aggregation_request_test.cpp, /mongo/src/mongo/db/pipeline/document_source_sequential_document_cache.cpp, /mongo/src/mongo/db/pipeline/document_source_sequential_document_cache.h, /mongo/src/mongo/db/pipeline/document_source_sequential_document_cache_test.cpp, /mongo/src/mongo/db/pipeline/query_request_conversion.cpp, /mongo/src/mongo/db/pipeline/query_request_conversion.h, /mongo/src/mongo/db/pipeline/sequential_document_cache.cpp, /mongo/src/mongo/db/pipeline/sequential_document_cache.h, /mongo/src/mongo/db/pipeline/sequential_document_cache_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic comparison with matching values",
+        "query": {
+          "$eq": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 100
+        },
+        "expected": true
+      },
+      {
+        "description": "Basic comparison with non-matching values",
+        "query": {
+          "$eq": [
+            "$field",
+            100
+          ]
+        },
+        "context": {
+          "field": 50
+        },
+        "expected": false
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "IndexNotFound",
+      "type": "ErrorCodes",
+      "context": "nsert({_id: 1, x: 5, geo: [0, 0]})); // Fail without index. assertErrorCode(from, geonearPipeline, ErrorCodes.IndexNotFound); assertErrorCode(coll, geonearWithinLookupPipeline, ErrorCodes.IndexNotFoun"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "00:00.00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjk"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": ", {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjkl/g}, "
+    },
+    {
+      "code": "BadValue",
+      "type": "ErrorCodes",
+      "context": "foreignRecords: docs, foreignField: \"a\", expectedErrorCode: ErrorCodes.BadValue, }); } })(); (function testMatchingNaN() { const docs = [ {_id: 0, a: NaN}, {_id: 1, a: NumberDecimal(\"NaN\")},"
+    },
+    {
+      "code": "010203",
+      "type": "numericCode",
+      "context": "00:00.00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a"
+    },
+    {
+      "code": "040506",
+      "type": "numericCode",
+      "context": "00Z\")}, {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjk"
+    },
+    {
+      "code": "070809",
+      "type": "numericCode",
+      "context": ", {_id: 8, a: new Timestamp(1, 123)}, {_id: 9, a: new ObjectId(\"0102030405060708090A0B0C\")}, {_id: 10, a: new BinData(0, \"BBBBBBBBBBBBBBBBBBBBBBBBBBBB\")}, {_id: 11, a: /hjkl/}, {_id: 12, a: /hjkl/g}, "
+    },
+    {
+      "code": "IndexNotFound",
+      "type": "ErrorCodes",
+      "context": "ked(from.insert({_id: 100, a: \"foo\"})); // Fail without index. assertErrorCode(from, textPipeline, ErrorCodes.IndexNotFound); assertErrorCode(coll, pipeline, ErrorCodes.IndexNotFound); assert.commandW"
+    },
+    {
+      "code": "549130",
+      "type": "numericCode",
+      "context": "{a: 5, foo: \"bar\"})); assert.throwsWithCode(() => coll.aggregate([{$setMetadata: {score: \"$a\"}}]), 5491300);"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 2,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Comparison",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 10 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/aggregation_request_helper.cpp",
+      "/mongo/src/mongo/db/pipeline/aggregation_request_helper.h",
+      "/mongo/src/mongo/db/pipeline/aggregation_request_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_sequential_document_cache.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_sequential_document_cache.h",
+      "/mongo/src/mongo/db/pipeline/document_source_sequential_document_cache_test.cpp",
+      "/mongo/src/mongo/db/pipeline/query_request_conversion.cpp",
+      "/mongo/src/mongo/db/pipeline/query_request_conversion.h",
+      "/mongo/src/mongo/db/pipeline/sequential_document_cache.cpp",
+      "/mongo/src/mongo/db/pipeline/sequential_document_cache.h",
+      "/mongo/src/mongo/db/pipeline/sequential_document_cache_test.cpp"
+    ]
+  }
+}

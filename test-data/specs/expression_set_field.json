@@ -1,0 +1,2698 @@
+{
+  "source": "expression_set_field.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_set_field.js",
+  "extractedAt": "2026-02-01T19:19:17.227Z",
+  "setup": {
+    "collections": {
+      "expression_set_field": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 15,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557040
+    },
+    {
+      "id": 25,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {}
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557040
+    },
+    {
+      "id": 35,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557040
+    },
+    {
+      "id": 45,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {}
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 55,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "value": "a"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "value": "a",
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 75,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "a"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 85,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 95,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": "a",
+                "value": "foo"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 105,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": "a",
+                "value": null,
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 115,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": null,
+                "value": 0
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 125,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "foo",
+                "value": 0
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 135,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": null
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 145,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": "foo"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 155,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": true,
+                "input": {
+                  "a": "b"
+                },
+                "value": 24
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557041
+    },
+    {
+      "id": 165,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": {
+                  "a": 1
+                },
+                "input": {
+                  "a": 1
+                },
+                "value": 24
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 175,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": 33,
+                "input": 33,
+                "value": 24
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 185,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "a",
+                "input": true,
+                "value": 24
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 195,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": true,
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 205,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": {
+                  "a": 1
+                },
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 215,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": 33,
+                "input": 33
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 225,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": "a",
+                "input": true
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 235,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": null,
+                "input": {},
+                "value": 0
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 245,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "$field_path",
+                "input": {},
+                "value": 0
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 255,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": {
+                  "$concat": [
+                    "a.b",
+                    ".",
+                    "c"
+                  ]
+                },
+                "input": {
+                  "$const": {
+                    "a.b.c": 5
+                  }
+                },
+                "value": 12345
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 265,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": null,
+                "input": {}
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 275,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": "$field_path",
+                "input": {}
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 285,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "field": {
+                  "$concat": [
+                    "a.b",
+                    ".",
+                    "c"
+                  ]
+                },
+                "input": {
+                  "$const": {
+                    "a.b.c": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 295,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": 5
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 305,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": true
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 315,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "$add": [
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 325,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": "foo"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 335,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": 5
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 345,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": true
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 355,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": {
+                "$add": [
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 365,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$unsetField": "foo"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 375,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                },
+                "unknown": true
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 385,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$setField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                },
+                "value": 24,
+                "unknown": true
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    },
+    {
+      "id": 395,
+      "type": "aggregate",
+      "collection": "expression_set_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$setField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                },
+                "value": 24
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": 0,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 0,
+          ".$xz": 0,
+          "..zz": 0,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        },
+        {
+          "_id": 1,
+          "x": 1,
+          "y": "c",
+          "a$b": "foo",
+          "a.b": "bar",
+          "a.$b": 5,
+          ".xy": 1,
+          ".$xz": 1,
+          "..zz": 1,
+          "$a": 10,
+          "$x.$y": 20,
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          },
+          "c": {
+            "d": "x"
+          },
+          "e": {
+            "$f": 30
+          }
+        }
+      ],
+      "timestamp": 1769973557042
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(buildTestCase(i",
+      "line": 111
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, \"x\": 1, \"a$b\": \"foo\", \"$x..$y\": {\"$a\": 1, \"$b..$c\": 2}}",
+      "line": 405
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "code",
+      "line": 54
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "code",
+      "line": 60
+    }
+  ],
+  "meta": {
+    "totalOperations": 449,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

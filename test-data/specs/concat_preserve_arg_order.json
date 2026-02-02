@@ -1,0 +1,25 @@
+{
+  "source": "concat_preserve_arg_order.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/concat_preserve_arg_order.js",
+  "extractedAt": "2026-02-01T19:19:01.537Z",
+  "setup": {
+    "collections": {
+      "c": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "\"1foo3bar2\"",
+      "expected": "c.aggregate(project",
+      "line": 9
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

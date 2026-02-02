@@ -1,0 +1,144 @@
+{
+  "source": "binarySize.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/binarySize.js",
+  "extractedAt": "2026-02-01T19:18:55.823Z",
+  "setup": {
+    "collections": {
+      "expression_binarySize": [
+        {
+          "_id": 0,
+          "x": ""
+        },
+        {
+          "_id": 1,
+          "x": "abc"
+        },
+        {
+          "_id": 2,
+          "x": "ab\u0000c"
+        },
+        {
+          "_id": 3,
+          "x": "abc\u0000"
+        },
+        {
+          "_id": 4,
+          "x": {
+            "$binary": {
+              "base64": "",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 5,
+          "x": {
+            "$binary": {
+              "base64": "1234",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        },
+        {
+          "x": 42
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 43,
+      "type": "aggregate",
+      "collection": "expression_binarySize",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$addFields": {
+            "s": {
+              "$binarySize": "$x"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "x": ""
+        },
+        {
+          "_id": 1,
+          "x": "abc"
+        },
+        {
+          "_id": 2,
+          "x": "ab\u0000c"
+        },
+        {
+          "_id": 3,
+          "x": "abc\u0000"
+        },
+        {
+          "_id": 4,
+          "x": {
+            "$binary": {
+              "base64": "",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 5,
+          "x": {
+            "$binary": {
+              "base64": "1234",
+              "subType": "0"
+            }
+          }
+        },
+        {
+          "_id": 6,
+          "x": null
+        },
+        {
+          "_id": 7
+        }
+      ],
+      "timestamp": 1769973535637
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[ {_id: 0, x: \"\", s: 0}, {_id: 1, x: \"abc\", s: 3}, // Javascript strings and BSON strings can contain '\\0', so both of these have length 4. {_id: 2, x: \"ab\\0c\", s: 4}, {_id: 3, x: \"abc\\0\", s: 4}, {_id: 4, x: BinData(0, \"\"",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 0, x: \"\"}, {_id: 1, x: \"abc\"}, {_id: 2, x: \"ab\\0c\"}, {_id: 3, x: \"abc\\0\"}, {_id: 4, x: BinData(0, \"\"",
+      "line": 9
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({x: 42}",
+      "line": 40
+    }
+  ],
+  "meta": {
+    "totalOperations": 126,
+    "totalAssertions": 3,
+    "errors": 0
+  }
+}

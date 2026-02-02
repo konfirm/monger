@@ -1,0 +1,31 @@
+{
+  "source": "substrbytes.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/substrbytes.js",
+  "extractedAt": "2026-02-01T19:19:51.917Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_substr": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "t.aggregate({$project: {a: {$substrBytes: [str, offset, len]}}}",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "\"e\"",
+      "expected": "t .aggregate({ $project: { a: { $substrBytes: [ { $substrBytes: [{$substrBytes: [{$substrBytes: [\"abcdefghij\", 1, 6]}, 2, 5]}, 0, 3], }, 1, 1, ], }, }, }",
+      "line": 144
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

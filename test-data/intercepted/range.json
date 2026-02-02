@@ -1,0 +1,858 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/range.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/range.js",
+      "timestamp": 1769973923394
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "range",
+      "timestamp": 1769973923397
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.range",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973923397
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.range.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973923397
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.range.drop",
+      "result": true,
+      "timestamp": 1769973923397
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.range",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        42
+      ],
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923398,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923398,
+      "value": "42"
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "42"
+      },
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        88
+      ],
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923398,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923398,
+      "value": "88"
+    },
+    {
+      "id": 9,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "88"
+      },
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        218
+      ],
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923398,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923398,
+      "value": "218"
+    },
+    {
+      "id": 12,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "218"
+      },
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 15,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        383
+      ],
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923398,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923398,
+      "value": "383"
+    },
+    {
+      "id": 15,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "383"
+      },
+      "timestamp": 1769973923398
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923398,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923398,
+      "value": "42"
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "88"
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "218"
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "383"
+    },
+    {
+      "id": 18,
+      "type": "function_call",
+      "path": "collection.range.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "city": "San Jose",
+            "distance": {
+              "$numberInt": "42"
+            }
+          },
+          {
+            "city": "Sacramento",
+            "distance": {
+              "$numberInt": "88"
+            }
+          },
+          {
+            "city": "Reno",
+            "distance": {
+              "$numberInt": "218"
+            }
+          },
+          {
+            "city": "Los Angeles",
+            "distance": {
+              "$numberInt": "383"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973923399
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "42"
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "88"
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "218"
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923399,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923399,
+      "value": "383"
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.range.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.range.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973923400,
+      "value": 4
+    },
+    {
+      "id": 18,
+      "type": "function_return",
+      "path": "collection.range.insert",
+      "result": {
+        "nInserted": 4
+      },
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "collection.range",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 38,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        0
+      ],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "0"
+    },
+    {
+      "id": 38,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "0"
+      },
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 41,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        25
+      ],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "25"
+    },
+    {
+      "id": 41,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "25"
+      },
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "0"
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "25"
+    },
+    {
+      "id": 44,
+      "type": "function_call",
+      "path": "collection.range.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "_id": 0,
+              "city": 1,
+              "Rest stops": {
+                "$range": [
+                  {
+                    "$numberInt": "0"
+                  },
+                  "$distance",
+                  {
+                    "$numberInt": "25"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "42"
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "88"
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "218"
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973923400,
+      "value": "383"
+    },
+    {
+      "id": 49,
+      "type": "aggregate",
+      "collection": "range",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "city": 1,
+            "Rest stops": {
+              "$range": [
+                {
+                  "$numberInt": "0"
+                },
+                "$distance",
+                {
+                  "$numberInt": "25"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "city": "San Jose",
+          "distance": {
+            "$numberInt": "42"
+          }
+        },
+        {
+          "city": "Sacramento",
+          "distance": {
+            "$numberInt": "88"
+          }
+        },
+        {
+          "city": "Reno",
+          "distance": {
+            "$numberInt": "218"
+          }
+        },
+        {
+          "city": "Los Angeles",
+          "distance": {
+            "$numberInt": "383"
+          }
+        }
+      ],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973923400,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 60,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 61,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 44,
+      "type": "function_return",
+      "path": "collection.range.aggregate",
+      "result": {},
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 64,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 65,
+      "type": "function_call",
+      "path": "collection.range.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "collection.range.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 65,
+      "type": "function_return",
+      "path": "collection.range.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973923400
+    },
+    {
+      "id": 68,
+      "type": "test_error",
+      "error": {
+        "message": "arrayEq is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973923401
+    }
+  ],
+  "state": {
+    "collections": {
+      "range": [
+        {
+          "city": "San Jose",
+          "distance": {
+            "$numberInt": "42"
+          }
+        },
+        {
+          "city": "Sacramento",
+          "distance": {
+            "$numberInt": "88"
+          }
+        },
+        {
+          "city": "Reno",
+          "distance": {
+            "$numberInt": "218"
+          }
+        },
+        {
+          "city": "Los Angeles",
+          "distance": {
+            "$numberInt": "383"
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973923394,
+    "endTime": 1769973923401,
+    "totalOperations": 10
+  }
+}

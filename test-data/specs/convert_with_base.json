@@ -1,0 +1,18 @@
+{
+  "source": "convert_with_base.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert_with_base.js",
+  "extractedAt": "2026-02-01T19:19:05.331Z",
+  "setup": {
+    "collections": {
+      "expression_convert_with_base": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 14,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

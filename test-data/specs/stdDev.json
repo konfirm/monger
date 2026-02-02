@@ -1,0 +1,142 @@
+{
+  "source": "stdDev.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/stdDev.js",
+  "extractedAt": "2026-02-01T19:19:48.603Z",
+  "setup": {
+    "collections": {
+      "collection": [
+        {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$stdDevPop": "$num"
+          }
+        }
+      },
+      "documents": [
+        {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973588419
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$stdDevPop: field}}}",
+      "line": 26
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$stdDevSamp: field}}}",
+      "line": 33
+    }
+  ],
+  "meta": {
+    "totalOperations": 28,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

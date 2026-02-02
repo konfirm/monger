@@ -1,0 +1,27 @@
+{
+  "source": "null_chars_string_input.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/null_chars_string_input.js",
+  "extractedAt": "2026-02-01T19:19:34.272Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, foo: 1}",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.runCommand(\"aggregate\", {pipeline: pipeline, cursor: {}}",
+      "line": 157
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

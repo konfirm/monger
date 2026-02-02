@@ -1,0 +1,177 @@
+{
+  "operator": "$subtract",
+  "description": "Tests for $subtract - Arithmetic operator",
+  "mongodbVersion": "1.0",
+  "implemented": false,
+  "source": "/mongo/jstests/aggregation/expressions/add_subtract_dates.js, /mongo/jstests/aggregation/expressions/date_add_subtract.js, /mongo/jstests/aggregation/expressions/subtract.js",
+  "implementationSource": "TBD",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic arithmetic operation",
+        "query": {
+          "$subtract": [
+            10,
+            5
+          ]
+        },
+        "expected": null
+      },
+      {
+        "description": "Arithmetic with field references",
+        "query": {
+          "$subtract": [
+            "$a",
+            "$b"
+          ]
+        },
+        "context": {
+          "a": 10,
+          "b": 5
+        },
+        "expected": null
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [
+      {
+        "description": "Operation with null argument",
+        "query": {
+          "$subtract": [
+            null,
+            5
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "subtract: [\"$date\", \"$num\"]}, new Date(millis - num)); fail({$subtract: [\"$num\", \"$date\"]}, [16556, ErrorCodes.TypeMismatch]); fail({$add: [\"$date\", \"$date\"]}, 16612); test({$add: [\"$date\", \"$num\"]}, "
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "$dateAdd: {startDate: \"$dateSent\", unit: \"workday\", amount: 1}}, [{newDate: null}], ErrorCodes.FailedToParse, ); runAndAssert({$dateAdd: {startDate: \"New year day\", unit: \"$timeunit\", amount: 1}}, [{n"
+    },
+    {
+      "code": "103530",
+      "type": "numericCode",
+      "context": "xecuteAggregationTestCase} from \"jstests/libs/query/aggregation_pipeline_utils.js\"; // TODO(SERVER-103530) : Remove multiversion check when 9.0 becomes last-lts const isMultiversion = Boolean(jsTest.o"
+    },
+    {
+      "code": "516640",
+      "type": "numericCode",
+      "context": "g required argument startDate. runAndAssertErrorCode({$dateAdd: {unit: \"second\", amount: 120}}, 5166402); // Missing required argument unit. runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", "
+    },
+    {
+      "code": "300000",
+      "type": "numericCode",
+      "context": "amount. runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"month\", amount: 12 * 300000000}}, 5166406); // Invalid 'amount' parameter error of dateAdd operation due to large amount. runA"
+    },
+    {
+      "code": "597650",
+      "type": "numericCode",
+      "context": "runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"month\", amount: -30000000000}}, 5976500); // Invalid 'amount' parameter error of dateSubtract operation: long long min value cannot be"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "// negated. runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"day\", amount: -9223372036854775808}}, 6045000); // Invalid value of timezone argument. runAndAssertErrorCode({$dateAdd: {s"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "negated. runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"day\", amount: -9223372036854775808}}, 6045000); // Invalid value of timezone argument. runAndAssertErrorCode({$dateAdd: {star"
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "d. runAndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"day\", amount: -9223372036854775808}}, 6045000); // Invalid value of timezone argument. runAndAssertErrorCode({$dateAdd: {startDate:"
+    },
+    {
+      "code": "604500",
+      "type": "numericCode",
+      "context": "ndAssertErrorCode({$dateSubtract: {startDate: \"$date\", unit: \"day\", amount: -9223372036854775808}}, 6045000); // Invalid value of timezone argument. runAndAssertErrorCode({$dateAdd: {startDate: \"$date"
+    },
+    {
+      "code": "Overflow",
+      "type": "ErrorCodes",
+      "context": "ubtract: [new Date(10), \"$veryBigNegativeLong\"]}}}]; assertErrCodeAndErrMsgContains(coll, pipeline, ErrorCodes.Overflow, \"date overflow\"); pipeline = [{$project: {res: {$subtract: [new Date(10), \"$ver"
+    },
+    {
+      "code": "200000",
+      "type": "numericCode",
+      "context": "mmandWorked(coll.insert({_id: 0, lhs: 1, rhs: 1})); assert.commandWorked(coll.insert({_id: 1, lhs: -2000000000, rhs: 2000000000})); assert.commandWorked(coll.insert({_id: 2, lhs: NumberLong(-200000000"
+    },
+    {
+      "code": "191239",
+      "type": "numericCode",
+      "context": ".12345\"), rhs: NumberDecimal(\"10.1234\")})); assert.commandWorked(coll.insert({_id: 5, lhs: new Date(1912392670000), rhs: 70000})); assert.commandWorked(coll.insert({_id: 6, lhs: new Date(1912392670000"
+    },
+    {
+      "code": "267000",
+      "type": "numericCode",
+      "context": "\"), rhs: NumberDecimal(\"10.1234\")})); assert.commandWorked(coll.insert({_id: 5, lhs: new Date(1912392670000), rhs: 70000})); assert.commandWorked(coll.insert({_id: 6, lhs: new Date(1912392670000), rhs"
+    },
+    {
+      "code": "260000",
+      "type": "numericCode",
+      "context": "000})); assert.commandWorked(coll.insert({_id: 6, lhs: new Date(1912392670000), rhs: new Date(1912392600000)})); // Doubles are rounded to int64 when subtracted from Date assert.commandWorked(coll.ins"
+    },
+    {
+      "code": "168379",
+      "type": "numericCode",
+      "context": "rounded to int64 when subtracted from Date assert.commandWorked(coll.insert({_id: 7, lhs: new Date(1683794065002), rhs: 0.5})); assert.commandWorked(coll.insert({_id: 8, lhs: new Date(1683794065002), "
+    },
+    {
+      "code": "406500",
+      "type": "numericCode",
+      "context": "ed to int64 when subtracted from Date assert.commandWorked(coll.insert({_id: 7, lhs: new Date(1683794065002), rhs: 0.5})); assert.commandWorked(coll.insert({_id: 8, lhs: new Date(1683794065002), rhs: "
+    },
+    {
+      "code": "400000",
+      "type": "numericCode",
+      "context": "{$sort: {_id: 1}}]).toArray(); assert.eq(result[0].diff, 0); assert.eq(result[1].diff, NumberLong(\"-4000000000\")); assert.eq(result[2].diff, NumberLong(\"-40000000000\")); assert.eq(result[3].diff, 10.0"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "rked( coll.insert([ { _id: 0, veryBigNegativeLong: NumberLong(\"-9223372036854775808\"), veryBigNegativeDouble: -9223372036854775808, veryBigNegativeDecimal: NumberDecimal(\"-9223372036854775808\"), doubl"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "coll.insert([ { _id: 0, veryBigNegativeLong: NumberLong(\"-9223372036854775808\"), veryBigNegativeDouble: -9223372036854775808, veryBigNegativeDecimal: NumberDecimal(\"-9223372036854775808\"), doubleNaN: "
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "ll.insert([ { _id: 0, veryBigNegativeLong: NumberLong(\"-9223372036854775808\"), veryBigNegativeDouble: -9223372036854775808, veryBigNegativeDecimal: NumberDecimal(\"-9223372036854775808\"), doubleNaN: Na"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 3,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 1,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Arithmetic",
+      "MongoDB version: 1.0",
+      "Implementation status: × Not implemented",
+      "Found 3 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ]
+  }
+}

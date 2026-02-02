@@ -1,0 +1,61 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/convert_any_to_string.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/convert_any_to_string.js",
+      "timestamp": 1769973913356
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_convert_bindata",
+      "timestamp": 1769973913360
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_convert_bindata",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973913360
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_convert_bindata.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973913360
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_convert_bindata.drop",
+      "result": true,
+      "timestamp": 1769973913360
+    },
+    {
+      "id": 5,
+      "type": "test_error",
+      "error": {
+        "message": "Timestamp is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973913361
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_convert_bindata": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973913356,
+    "endTime": 1769973913361,
+    "totalOperations": 1
+  }
+}

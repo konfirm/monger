@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/ne_constant.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/ne_constant.js",
+      "timestamp": 1769973922052
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973922056
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973922052,
+    "endTime": 1769973922056,
+    "totalOperations": 0
+  }
+}

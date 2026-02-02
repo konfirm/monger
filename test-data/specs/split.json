@@ -1,0 +1,36 @@
+{
+  "source": "split.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/split.js",
+  "extractedAt": "2026-02-01T19:19:47.659Z",
+  "setup": {
+    "collections": {
+      "split": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(document",
+      "line": 30
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({}",
+      "line": 37
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

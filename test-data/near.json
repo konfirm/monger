@@ -1,0 +1,161 @@
+{
+  "operator": "$near",
+  "description": "Tests for $near - Geospatial operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/sources/bucketauto/granularity_near_zero.js, /mongo/jstests/aggregation/sources/geonear/collation_geonear.js, /mongo/jstests/aggregation/sources/geonear/geonear.js, /mongo/jstests/aggregation/sources/geonear/geonear_hint.js, /mongo/jstests/aggregation/sources/geonear/geonear_let.js, /mongo/jstests/aggregation/sources/geonear/geonear_mindistance.js, /mongo/jstests/aggregation/sources/geonear/geonear_no_distancefield.js, /mongo/jstests/aggregation/sources/lookup/lookup_subpipeline_geonear.js, /mongo/jstests/aggregation/sources/match/disallow_near_in_match.js, /mongo/jstests/aggregation/sources/setWindowFields/linear_fill.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/document_source_geo_near.cpp, /mongo/src/mongo/db/pipeline/document_source_geo_near.h, /mongo/src/mongo/db/pipeline/document_source_geo_near_cursor.cpp, /mongo/src/mongo/db/pipeline/document_source_geo_near_cursor.h, /mongo/src/mongo/db/pipeline/document_source_geo_near_test.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h, /mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "940656",
+      "type": "numericCode",
+      "context": "$bucketAuto: { groupBy: { $reduce: {input: [], initialValue: 4.940656484124654e-324, in: {$size: [\"$$value\"]}}, }, buckets: NumberLong(\"8\"), granularity: \"R80\", }, }, ]) .toArray(); asser"
+    },
+    {
+      "code": "484124",
+      "type": "numericCode",
+      "context": "etAuto: { groupBy: { $reduce: {input: [], initialValue: 4.940656484124654e-324, in: {$size: [\"$$value\"]}}, }, buckets: NumberLong(\"8\"), granularity: \"R80\", }, }, ]) .toArray(); assert.eq(r"
+    },
+    {
+      "code": "NoQueryExecutionPlans",
+      "type": "ErrorCodes",
+      "context": "eline: [geoNearStage], cursor: {}, hint: hintIndexName, }), ErrorCodes.NoQueryExecutionPlans, ); } // A compound index cannot be hinted when $geoNear doesn't filter on the first element. checkInvalidH"
+    },
+    {
+      "code": "787627",
+      "type": "numericCode",
+      "context": "query: query, spherical: true, near: {coordinates: [106.65589, 10.787627], type: \"Point\"}, distanceField: \"distance\", key: \"location\", }, }; } function checkInvalidHint(geoNearStage, hintIndexName) { "
+    },
+    {
+      "code": "586040",
+      "type": "numericCode",
+      "context": "r: {near: \"$$pt\", distanceField: \"distance\"}}], {let: {pt: 5}})); assert.commandFailedWithCode(err, 5860401); err = assert.throws(() => coll.aggregate([{$geoNear: {near: \"$$pt\", distanceField: \"distan"
+    },
+    {
+      "code": "5626500",
+      "type": "assertErrorCode",
+      "context": "rt.eq(1, coll.find(geoNearQuery).count()); // Test that we refuse to run $match with a near query. assertErrorCode(coll, {$match: nearQuery}, 5626500); assertErrorCode(coll, {$match: nearSphereQuery},"
+    },
+    {
+      "code": "562650",
+      "type": "numericCode",
+      "context": "// Test that we refuse to run $match with a near query. assertErrorCode(coll, {$match: nearQuery}, 5626500); assertErrorCode(coll, {$match: nearSphereQuery}, 5626500); assertErrorCode(coll, {$match: g"
+    },
+    {
+      "code": "FailedToParse",
+      "type": "ErrorCodes",
+      "context": "ill: {}, window: []}}, }, }, ], cursor: {}, }), ErrorCodes.FailedToParse, ); let collection = [ {_id: 0, val: 0}, {_id: 1, val: null}, {_id: 2, val: null}, {_id: 9, val: null}, {_id: 10, val: 10}, ]; "
+    },
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), ErrorCodes.TypeMismatch, ); // The field we are filling can only have a numeric or null value. coll.drop(); collection = [ {test: 0, val: \"str\", z: 2}, "
+    },
+    {
+      "code": "588134",
+      "type": "numericCode",
+      "context": "}, }, ]) .toArray(); expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; ass"
+    },
+    {
+      "code": "054288",
+      "type": "numericCode",
+      "context": "}, }, ]) .toArray(); expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; ass"
+    },
+    {
+      "code": "568625",
+      "type": "numericCode",
+      "context": "expected = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expect"
+    },
+    {
+      "code": "333712",
+      "type": "numericCode",
+      "context": "ed = [ {_id: 0.5, val: 0}, {_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); c"
+    },
+    {
+      "code": "998278",
+      "type": "numericCode",
+      "context": "{_id: 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); coll.drop(); collection = [ "
+    },
+    {
+      "code": "922903",
+      "type": "numericCode",
+      "context": ": 1, val: 0.5881340542884634}, {_id: 4.384, val: 4.5686253337127845}, {_id: 9, val: 9.998278922903879}, {_id: 10.09283, val: 11.28374}, ]; assert.eq(result, expected); coll.drop(); collection = [ {_id"
+    },
+    {
+      "code": "936131",
+      "type": "numericCode",
+      "context": "{borough: \"Bronx\", y: -10, date: ISODate(\"2002-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISOD"
+    },
+    {
+      "code": "386861",
+      "type": "numericCode",
+      "context": "orough: \"Bronx\", y: -10, date: ISODate(\"2002-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODat"
+    },
+    {
+      "code": "063868",
+      "type": "numericCode",
+      "context": "Bronx\", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODate(\"2004-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 200, date: ISODate(\"2005-1"
+    },
+    {
+      "code": "613138",
+      "type": "numericCode",
+      "context": ", y: 59.93613138686132, date: ISODate(\"2003-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 130.06386861313868, date: ISODate(\"2004-12-28T00:00:00Z\")}, {borough: \"Bronx\", y: 200, date: ISODate(\"2005-12-28T0"
+    },
+    {
+      "code": "499315",
+      "type": "numericCode",
+      "context": "rough: \"Manhattan\", y: -1, date: ISODate(\"2000-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -2.499315381104519, date: ISODate(\"2001-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -10, date: ISODate(\"2"
+    },
+    {
+      "code": "381104",
+      "type": "numericCode",
+      "context": "\"Manhattan\", y: -1, date: ISODate(\"2000-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -2.499315381104519, date: ISODate(\"2001-12-28T00:00:00Z\")}, {borough: \"Manhattan\", y: -10, date: ISODate(\"2006-12-"
+    },
+    {
+      "code": "605010",
+      "type": "numericCode",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), 6050106, ); // The sort field values must be of type numeric. coll.drop(); collection = [ {test: null, val: 0}, {test: 1, val: null}, {test: 4, val: nul"
+    },
+    {
+      "code": "605001",
+      "type": "numericCode",
+      "context": "$linearFill: \"$val\"}}, }, }, ], cursor: {}, }), 605001, ); // Mixing dates with numerics in sort field is not allowed. coll.drop(); collection = [ {x: 1, y: 10}, {x: 2, y: null}, {x: new Date(), y: 20"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Geospatial",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 10 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/document_source_geo_near.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_geo_near.h",
+      "/mongo/src/mongo/db/pipeline/document_source_geo_near_cursor.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_geo_near_cursor.h",
+      "/mongo/src/mongo/db/pipeline/document_source_geo_near_test.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance.h",
+      "/mongo/src/mongo/db/pipeline/document_source_internal_compute_geo_near_distance_test.cpp"
+    ]
+  }
+}

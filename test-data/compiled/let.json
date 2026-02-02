@@ -1,0 +1,42 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/let.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.061Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "output": "$two"
+            }
+          }
+        ],
+        "context": {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "nested": {
+            "four": 4
+          }
+        },
+        "expected": [
+          {
+            "_id": "697fafe7078caf5955cd30e3",
+            "output": 2
+          }
+        ],
+        "duration": 6
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

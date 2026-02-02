@@ -1,0 +1,18 @@
+{
+  "source": "convert_any_to_string.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert_any_to_string.js",
+  "extractedAt": "2026-02-01T19:19:02.948Z",
+  "setup": {
+    "collections": {
+      "expression_convert_bindata": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 6,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

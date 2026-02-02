@@ -1,0 +1,27 @@
+{
+  "source": "ne_constant.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/ne_constant.js",
+  "extractedAt": "2026-02-01T19:19:33.331Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: 1}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: 2}",
+      "line": 12
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

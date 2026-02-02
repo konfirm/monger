@@ -1,0 +1,36 @@
+{
+  "source": "sortArray.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/sortArray.js",
+  "extractedAt": "2026-02-01T19:19:46.703Z",
+  "setup": {
+    "collections": {
+      "sortArray": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 46
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "output[0].sorted",
+      "line": 47
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ nullField: null, undefField: undefined, embedded: [ [1, 2], [3, 4], ], singleElem: [1], normal: [1, 2, 3], num: 1, empty: [], normalSingleObjs: [{a: 1}, {a: 2}, {a: 3}], mismatchedSingleObjs: [{a: 1}, {b: 2}, {c: 3}], normalMultiObjs: [ {a: 1, b: 3, c: 1}, {a: 2, b: 2, c: 2}, {a: 3, b: 1, c: 3}, ], tiesMultiObjs: [ {a: 1, b: 2, c: 1}, {a: 1, b: 3, c: 4}, {a: 1, b: 3, c: 5}, ], nestedObjs: [ {a: 1, b: {c: 2}}, {a: 1, b: {c: 1}}, ], mismatchedTypes: [1, [1], {a: 1}, \"1\"], moreMismatchedTypes: [2, 1, \"hello\", {a: 6}, {a: \"hello\"}, {a: -1}, null], mismatchedNumberTypes: [[NumberDecimal(4",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

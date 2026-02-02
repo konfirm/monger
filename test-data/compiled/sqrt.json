@@ -1,0 +1,162 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/sqrt.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.090Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  100
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": [
+          {
+            "result": 10
+          }
+        ],
+        "duration": 6
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  0
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": [
+          {
+            "result": 0
+          }
+        ],
+        "duration": 3
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": [
+          {
+            "result": null
+          }
+        ],
+        "duration": 6
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": [
+          {
+            "result": null
+          }
+        ],
+        "duration": 4
+      }
+    ],
+    "errors": [
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  {
+                    "$numberLong": "100"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sqrt": [
+                  {
+                    "$numberLong": "9223372036854775807"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 6,
+    "totalDocuments": 1,
+    "errors": 2
+  }
+}

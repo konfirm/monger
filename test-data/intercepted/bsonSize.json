@@ -1,0 +1,125 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/bsonSize.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/bsonSize.js",
+      "timestamp": 1769973911837
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "agg_expr_bsonSize",
+      "timestamp": 1769973911839
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.agg_expr_bsonSize",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973911839
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.agg_expr_bsonSize.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973911840
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.agg_expr_bsonSize.drop",
+      "result": true,
+      "timestamp": 1769973911840
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.agg_expr_bsonSize",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973911840
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.agg_expr_bsonSize.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 1
+        }
+      ],
+      "timestamp": 1769973911840
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.agg_expr_bsonSize.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973911841,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.agg_expr_bsonSize.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973911841,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.agg_expr_bsonSize.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973911841
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.agg_expr_bsonSize",
+      "property": "findOne",
+      "valueType": "undefined",
+      "timestamp": 1769973911841,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "test_error",
+      "error": {
+        "message": "coll.findOne is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973911841
+    }
+  ],
+  "state": {
+    "collections": {
+      "agg_expr_bsonSize": [
+        {
+          "_id": 1
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973911837,
+    "endTime": 1769973911841,
+    "totalOperations": 2
+  }
+}

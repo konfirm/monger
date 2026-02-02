@@ -1,0 +1,56 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/zip.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:51.938Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "zip",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  [
+                    1,
+                    2,
+                    3
+                  ],
+                  [
+                    "A",
+                    "B",
+                    "C"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "697fb0038db0edd5ff18cd7d",
+          "zipped": [
+            [
+              1,
+              "A"
+            ],
+            [
+              2,
+              "B"
+            ],
+            [
+              3,
+              "C"
+            ]
+          ]
+        }
+      ],
+      "duration": 7,
+      "success": true
+    }
+  ],
+  "errors": []
+}

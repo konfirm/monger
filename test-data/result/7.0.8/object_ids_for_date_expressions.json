@@ -1,0 +1,66 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:30.078Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$oid'",
+        "code": 168
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$oid'",
+        "code": 168
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$oid'"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$oid'"
+    }
+  ]
+}

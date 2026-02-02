@@ -1,0 +1,28 @@
+{
+  "source": "filter_arrayindexas.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/filter_arrayindexas.js",
+  "extractedAt": "2026-02-01T19:19:20.093Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{res: expected}]",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ _id: 0, b: [0, 7, 2, 5, 4, 0], nested: [[], [0, 1], [2, 3], [4, 5]], }",
+      "line": 21
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

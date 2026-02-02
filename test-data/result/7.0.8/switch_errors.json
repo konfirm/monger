@@ -1,0 +1,46 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/switch_errors.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:48.240Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": [
+        {
+          "$sortByCount": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$literal": false
+                  },
+                  "then": 1
+                },
+                {
+                  "case": "$x",
+                  "then": {
+                    "$ifNull": [
+                      2,
+                      "$y"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 2,
+          "count": 1
+        }
+      ],
+      "duration": 7,
+      "success": true
+    }
+  ],
+  "errors": []
+}

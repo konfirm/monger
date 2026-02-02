@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_expr_before_1970.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:05.285Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

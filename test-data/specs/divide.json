@@ -1,0 +1,41 @@
+{
+  "source": "divide.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/divide.js",
+  "extractedAt": "2026-02-01T19:19:13.939Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_divide": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 69
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].computed",
+      "expected": "testCase.expected",
+      "line": 70
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(testCase.document",
+      "line": 65
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(testCase.document",
+      "line": 87
+    }
+  ],
+  "meta": {
+    "totalOperations": 30,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

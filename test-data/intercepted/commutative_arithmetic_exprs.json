@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/commutative_arithmetic_exprs.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/commutative_arithmetic_exprs.js",
+      "timestamp": 1769973912240
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTest is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973912243
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973912240,
+    "endTime": 1769973912243,
+    "totalOperations": 0
+  }
+}

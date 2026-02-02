@@ -1,0 +1,103 @@
+{
+  "source": "substrCP.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/substrCP.js",
+  "extractedAt": "2026-02-01T19:19:50.970Z",
+  "setup": {
+    "collections": {
+      "substrCP": [
+        {
+          "t": "寿司sushi",
+          "u": "éclair",
+          "v": "Å",
+          "w": "◢◢◢",
+          "x": "a",
+          "y": "abc",
+          "z": "abcde",
+          "a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3,
+          "e": 4,
+          "f": 5,
+          "neg": -4,
+          "invalidStr": {},
+          "bigNum": {
+            "$numberLong": "4294967297"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 43,
+      "type": "aggregate",
+      "collection": "substrCP",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$substrCP": [
+              "$x",
+              999,
+              0
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "t": "寿司sushi",
+          "u": "éclair",
+          "v": "Å",
+          "w": "◢◢◢",
+          "x": "a",
+          "y": "abc",
+          "z": "abcde",
+          "a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3,
+          "e": 4,
+          "f": 5,
+          "neg": -4,
+          "invalidStr": {},
+          "bigNum": {
+            "$numberLong": "4294967297"
+          }
+        }
+      ],
+      "timestamp": 1769973590783
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$substrCP: [str, offset, len]}}}",
+      "line": 18
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate({$project: {a: {$substrBytes: [str, offset, len]}}}",
+      "line": 22
+    },
+    {
+      "type": "eq",
+      "actual": "\"e\"",
+      "expected": "coll .aggregate({ $project: { a: { $substrCP: [ { $substrCP: [{$substrCP: [{$substrCP: [\"abcdefghij\", \"$b\", 6]}, \"$c\", 5]}, 0, 3], }, 1, 1, ], }, }, }",
+      "line": 81
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({\"a\": \"abc\"}",
+      "line": 11
+    }
+  ],
+  "meta": {
+    "totalOperations": 64,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

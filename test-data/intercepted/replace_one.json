@@ -1,0 +1,110 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/replace_one.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/replace_one.js",
+      "timestamp": 1769973924698
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "replace_one",
+      "timestamp": 1769973924701
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.replace_one",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973924701
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.replace_one.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973924702
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.replace_one.drop",
+      "result": true,
+      "timestamp": 1769973924702
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.replace_one",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973924702
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.replace_one.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973924702
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.replace_one.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973924702,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.replace_one.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973924702,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.replace_one.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973924702
+    },
+    {
+      "id": 9,
+      "type": "test_error",
+      "error": {
+        "message": "testExpression is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973924703
+    }
+  ],
+  "state": {
+    "collections": {
+      "replace_one": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973924698,
+    "endTime": 1769973924703,
+    "totalOperations": 2
+  }
+}

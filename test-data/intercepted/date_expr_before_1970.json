@@ -1,0 +1,75 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_expr_before_1970.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_expr_before_1970.js",
+      "timestamp": 1769973914873
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "c",
+      "timestamp": 1769973914876
+    },
+    {
+      "id": 3,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1960-01-02 03:04:05.006Z"
+      ],
+      "timestamp": 1769973914877
+    },
+    {
+      "id": 4,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973914877,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973914877,
+      "value": "1960-01-02 03:04:05.006Z"
+    },
+    {
+      "id": 3,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1960-01-02 03:04:05.006Z"
+      },
+      "timestamp": 1769973914877
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "print is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914878
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914873,
+    "endTime": 1769973914878,
+    "totalOperations": 1
+  }
+}

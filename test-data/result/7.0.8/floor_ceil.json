@@ -1,0 +1,354 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/floor_ceil.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:17.367Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": {
+                "$numberLong": "4"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'",
+        "code": 168
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": -2
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -2
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": 0.9
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": 1
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": -1.2
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": {
+                "$numberLong": "4"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'",
+        "code": 168
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": -2
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -2
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": 0.9
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": 0
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": -1.2
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": -2
+        }
+      ],
+      "duration": 2,
+      "success": true
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": "sortArray2.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/sortArray2.js",
+  "extractedAt": "2026-02-01T19:19:47.181Z",
+  "setup": {
+    "collections": {
+      "sortArray2": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "output[0].sorted",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([ {_id: 0, b: {c: 1}}, {_id: 1, b: {c: 2}}, ]",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([ {_id: 2, \"b.c\": 1, b: {c: 3}}, {_id: 3, \"b.c\": 0, b: {c: 4}}, ]",
+      "line": 37
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

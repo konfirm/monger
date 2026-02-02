@@ -1,0 +1,75 @@
+{
+  "source": "convert_bindata_vector.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert_bindata_vector.js",
+  "extractedAt": "2026-02-01T19:19:04.379Z",
+  "setup": {
+    "collections": {
+      "expression_convert_bindata_vector": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "doc.output.length",
+      "expected": "doc.expected.length",
+      "line": 239
+    },
+    {
+      "type": "eq",
+      "actual": "doc.output[i]",
+      "expected": "doc.expected[i]",
+      "line": 242
+    },
+    {
+      "type": "eq",
+      "actual": "doc.output",
+      "expected": "doc.expected",
+      "line": 248
+    },
+    {
+      "type": "eq",
+      "actual": "doc.output.length",
+      "expected": "doc.expected.length",
+      "line": 318
+    },
+    {
+      "type": "eq",
+      "actual": "doc.output[i]",
+      "expected": "doc.expected[i]",
+      "line": 321
+    },
+    {
+      "type": "eq",
+      "actual": "doc.output",
+      "expected": "doc.expected",
+      "line": 327
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([doc]",
+      "line": 216
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([doc]",
+      "line": 362
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([doc]",
+      "line": 399
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([doc]",
+      "line": 419
+    }
+  ],
+  "meta": {
+    "totalOperations": 14,
+    "totalAssertions": 10,
+    "errors": 1
+  }
+}

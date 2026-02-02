@@ -1,0 +1,78 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/array_elem_at.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.981Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "x": {
+                "$arrayElemAt": [
+                  "$a",
+                  2
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "expected": [
+          {
+            "x": 3
+          }
+        ],
+        "duration": 7
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "x": {
+                "$arrayElemAt": [
+                  "$a",
+                  1
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "expected": [
+          {
+            "x": 2
+          }
+        ],
+        "duration": 4
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 2,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

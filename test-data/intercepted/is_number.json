@@ -1,0 +1,1570 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/is_number.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/is_number.js",
+      "timestamp": 1769973920308
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "isNumber_expr",
+      "timestamp": 1769973920311
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973920311
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.drop",
+      "result": true,
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        56072
+      ],
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920312,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920312,
+      "value": "56072"
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "56072"
+      },
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920312,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920312,
+      "value": "56072"
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        }
+      ],
+      "timestamp": 1769973920312
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920312,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920312,
+      "value": "56072"
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920313,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973920313,
+      "value": 1
+    },
+    {
+      "id": 9,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973920313
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 17,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$match": {
+              "_id": 1
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "isNum": {
+                "$isNumber": "$integerFieldPath"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920314,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920314,
+      "value": "56072"
+    },
+    {
+      "id": 18,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$integerFieldPath"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        }
+      ],
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920314,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 17,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920314
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 33,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "isNum": true
+        }
+      ],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        500
+      ],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "500"
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "500"
+      },
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "500"
+    },
+    {
+      "id": 40,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "56072"
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "500"
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973920315,
+      "value": 2
+    },
+    {
+      "id": 40,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.insert",
+      "result": {
+        "nInserted": 2
+      },
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 50,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$match": {
+              "_id": 11
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "isNum": {
+                "$isNumber": "$nestedPath.nestedNumber"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "56072"
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920315,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920315,
+      "value": "500"
+    },
+    {
+      "id": 51,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973920315
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 59,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 60,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 61,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 50,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 63,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 64,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 65,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 63,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 68,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "isNum": true
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 72,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 73,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "56072"
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "500"
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 78,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973920316,
+      "value": 3
+    },
+    {
+      "id": 72,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 80,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$match": {
+              "_id": 2
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "isNum": {
+                "$isNumber": "$doubleFieldPath"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 82,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 83,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "56072"
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "500"
+    },
+    {
+      "id": 81,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$doubleFieldPath"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 87,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 88,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 91,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 80,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 93,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 93,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 96,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 99,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 100,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 98,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "isNum": true
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 101,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 102,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 12,
+          "nestedPath": {
+            "nestedNumber": 56072.2
+          }
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "56072"
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "500"
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973920316,
+      "value": 4
+    },
+    {
+      "id": 102,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.insert",
+      "result": {
+        "nInserted": 4
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 109,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 110,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$match": {
+              "_id": 12
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "isNum": {
+                "$isNumber": "$nestedPath.nestedNumber"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "56072"
+    },
+    {
+      "id": 114,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973920316,
+      "value": "500"
+    },
+    {
+      "id": 111,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        },
+        {
+          "_id": 12,
+          "nestedPath": {
+            "nestedNumber": 56072.2
+          }
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920316,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 118,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 119,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 120,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 121,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 110,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 123,
+      "type": "function_call",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 124,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 123,
+      "type": "function_return",
+      "path": "collection.isNumber_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 127,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "collection.isNumber_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 128,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        {
+          "isNum": true
+        }
+      ],
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "collection.isNumber_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920316
+    },
+    {
+      "id": 132,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973920316
+    }
+  ],
+  "state": {
+    "collections": {
+      "isNumber_expr": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        },
+        {
+          "_id": 12,
+          "nestedPath": {
+            "nestedNumber": 56072.2
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973920308,
+    "endTime": 1769973920316,
+    "totalOperations": 15
+  }
+}

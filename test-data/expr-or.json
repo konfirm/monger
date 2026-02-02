@@ -1,0 +1,657 @@
+{
+  "operator": "$or",
+  "description": "Tests for $or - Boolean expression operator that returns true when ANY expression evaluates to true",
+  "mongodbVersion": "2.4",
+  "implemented": true,
+  "category": "Boolean Expression",
+  "source": "/mongo/jstests/aggregation/expressions/not.js, /mongo/jstests/aggregation/expressions/cond.js, /mongo/jstests/aggregation/expressions/filter.js, /mongo/jstests/aggregation/expressions/collation_expressions.js, /mongo/src/mongo/db/exec/expression/evaluate_or_test.cpp",
+  "implementationSource": "/mongo/src/mongo/db/exec/expression/evaluate_or_test.cpp, /mongo/src/mongo/db/pipeline/expression_or_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Empty array returns false",
+        "query": {
+          "$or": []
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Single true operand returns true",
+        "query": {
+          "$or": [true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Single false operand returns false",
+        "query": {
+          "$or": [false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "True OR true returns true",
+        "query": {
+          "$or": [true, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "True OR false returns true (short-circuit)",
+        "query": {
+          "$or": [true, false]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "False OR true returns true",
+        "query": {
+          "$or": [false, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "False OR false returns false",
+        "query": {
+          "$or": [false, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Multiple falsy values return false",
+        "query": {
+          "$or": [false, false, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Multiple falsy with one true at end returns true",
+        "query": {
+          "$or": [false, false, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Zero OR one returns true (0 is falsy, 1 is truthy)",
+        "query": {
+          "$or": [0, 1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Zero OR false returns false (both falsy)",
+        "query": {
+          "$or": [0, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Non-zero number is truthy - returns true",
+        "query": {
+          "$or": [2]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Negative number is truthy - returns true",
+        "query": {
+          "$or": [-1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Non-empty string is truthy - returns true",
+        "query": {
+          "$or": ["hello"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Empty string is falsy - returns false",
+        "query": {
+          "$or": [""]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Empty array is truthy - returns true",
+        "query": {
+          "$or": [[]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Array with false value is truthy - returns true",
+        "query": {
+          "$or": [[false]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Array with true value is truthy - returns true",
+        "query": {
+          "$or": [[true]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Object is truthy - returns true",
+        "query": {
+          "$or": [{"y": 2, "z": 3}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "ObjectId is truthy - returns true",
+        "query": {
+          "$or": [{"$toObjectId": "5f0627282a63fc000b8fd067"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Date is truthy - returns true",
+        "query": {
+          "$or": [{"$toDate": "2021-01-01T00:00:00Z"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Field path that exists evaluates to truthy - returns true",
+        "query": {
+          "$or": ["$field"]
+        },
+        "context": {
+          "field": 1
+        },
+        "expected": true
+      },
+      {
+        "description": "Nested $or with field paths - both true",
+        "query": {
+          "$or": ["$x", "$y"]
+        },
+        "context": {
+          "x": true,
+          "y": false
+        },
+        "expected": true
+      },
+      {
+        "description": "Nested $or with field paths - second true",
+        "query": {
+          "$or": ["$x", "$y"]
+        },
+        "context": {
+          "x": false,
+          "y": true
+        },
+        "expected": true
+      },
+      {
+        "description": "$or combined with $not - first operand is NOT false",
+        "query": {
+          "$or": [{"$not": "$x"}, "$y"]
+        },
+        "context": {
+          "x": false,
+          "y": true
+        },
+        "expected": true
+      },
+      {
+        "description": "$or combined with $not - first operand is NOT true",
+        "query": {
+          "$or": [{"$not": "$x"}, "$y"]
+        },
+        "context": {
+          "x": true,
+          "y": false
+        },
+        "expected": false
+      },
+      {
+        "description": "$or with $eq comparison - first matches",
+        "query": {
+          "$or": [{"$eq": ["$str", "a"]}, {"$eq": ["b", "c"]}]
+        },
+        "context": {
+          "str": "a"
+        },
+        "expected": true
+      },
+      {
+        "description": "$or with $eq comparison - second matches",
+        "query": {
+          "$or": [{"$eq": ["$str", "c"]}, {"$eq": ["$str2", "b"]}]
+        },
+        "context": {
+          "str": "a",
+          "str2": "b"
+        },
+        "expected": true
+      },
+      {
+        "description": "$or inside $filter - filters array with complex condition",
+        "query": {
+          "$filter": {
+            "input": "$a",
+            "cond": {
+              "$or": [
+                {"$and": [{"$gt": ["$$this", 1]}, {"$lt": ["$$this", 3]}]},
+                {"$eq": ["$$this", 5]}
+              ]
+            }
+          }
+        },
+        "context": {
+          "a": [1, 2, 3, 4, 5]
+        },
+        "expected": [2, 5]
+      },
+      {
+        "description": "Complex nested $or in $filter with $and",
+        "query": {
+          "$or": [
+            {
+              "$and": [
+                {
+                  "$filter": {
+                    "input": "$a",
+                    "cond": {
+                      "$or": [
+                        {"$and": [{"$gt": ["$$this", 1]}, {"$lt": ["$$this", 3]}]},
+                        {"$eq": ["$$this", 5]}
+                      ]
+                    }
+                  }
+                },
+                "$d"
+              ]
+            },
+            {"$filter": {"input": "$a", "cond": {"$eq": ["$$this", 1]}}}
+          ]
+        },
+        "context": {
+          "a": [1, 2, 3, 4, 5],
+          "d": true
+        },
+        "expected": true
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Null is falsy - single null returns false",
+        "query": {
+          "$or": [null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Undefined/missing field is falsy - returns false",
+        "query": {
+          "$or": ["$missingField"]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Null OR true returns true",
+        "query": {
+          "$or": [null, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "True OR null returns true",
+        "query": {
+          "$or": [true, null]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Null OR null returns false",
+        "query": {
+          "$or": [null, null]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Field path evaluating to null is falsy",
+        "query": {
+          "$or": ["$field"]
+        },
+        "context": {
+          "field": null
+        },
+        "expected": false
+      },
+      {
+        "description": "Multiple nulls with one truthy value returns true",
+        "query": {
+          "$or": [null, null, 1]
+        },
+        "context": {},
+        "expected": true
+      }
+    ],
+    "edgeCases": [
+      {
+        "description": "Very long array of falsy values returns false",
+        "query": {
+          "$or": [false, false, false, false, false, false, false, false, false, false]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Very long array with single true at end returns true",
+        "query": {
+          "$or": [false, false, false, false, false, false, false, false, false, true]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Decimal number 0.0 is falsy - returns false",
+        "query": {
+          "$or": [0.0]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "Decimal number 0.1 is truthy - returns true",
+        "query": {
+          "$or": [0.1]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NaN is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": "NaN"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Infinity is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": "Infinity"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "-Infinity is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": "-Infinity"}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Whitespace string is truthy - returns true",
+        "query": {
+          "$or": [" "]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Nested empty object is truthy - returns true",
+        "query": {
+          "$or": [{}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Array with only null elements is truthy - returns true",
+        "query": {
+          "$or": [[null, null]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Nested array with empty array is truthy - returns true",
+        "query": {
+          "$or": [[[]]]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Timestamp is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": {"$timestamp": {"t": 1, "i": 1}}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Binary data is truthy - returns true",
+        "query": {
+          "$or": [{"$binary": {"base64": "BBBB", "subType": "00"}}]
+        },
+        "context": {},
+        "expected": true
+      }
+    ],
+    "errors": [
+      {
+        "description": "Non-array input throws error",
+        "query": {
+          "$or": "string"
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Object input throws error",
+        "query": {
+          "$or": {"key": "value"}
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Number input throws error",
+        "query": {
+          "$or": 123
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Boolean input throws error",
+        "query": {
+          "$or": true
+        },
+        "errorExpected": true
+      },
+      {
+        "description": "Null input throws error",
+        "query": {
+          "$or": null
+        },
+        "errorExpected": true
+      }
+    ],
+    "typeConversionCases": [
+      {
+        "description": "String 'true' is truthy (non-empty) - returns true",
+        "query": {
+          "$or": ["true"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String 'false' is truthy (non-empty) - returns true",
+        "query": {
+          "$or": ["false"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String '0' is truthy (non-empty) - returns true",
+        "query": {
+          "$or": ["0"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "String '1' is truthy (non-empty) - returns true",
+        "query": {
+          "$or": ["1"]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "Empty string is falsy - returns false",
+        "query": {
+          "$or": [""]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberInt 0 is falsy - returns false",
+        "query": {
+          "$or": [{"$literal": {"$numberInt": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberInt 1 is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": {"$numberInt": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NumberLong 0 is falsy - returns false",
+        "query": {
+          "$or": [{"$literal": {"$numberLong": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberLong 1 is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": {"$numberLong": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      },
+      {
+        "description": "NumberDecimal 0 is falsy - returns false",
+        "query": {
+          "$or": [{"$literal": {"$numberDecimal": "0"}}]
+        },
+        "context": {},
+        "expected": false
+      },
+      {
+        "description": "NumberDecimal 1 is truthy - returns true",
+        "query": {
+          "$or": [{"$literal": {"$numberDecimal": "1"}}]
+        },
+        "context": {},
+        "expected": true
+      }
+    ]
+  },
+  "errorCodes": [
+    {
+      "code": "TypeMismatch",
+      "type": "ErrorCodes",
+      "context": "Non-array input to $or throws TypeMismatch error"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 54,
+    "happyPathCount": 28,
+    "errorCaseCount": 5,
+    "nullCaseCount": 7,
+    "edgeCaseCount": 13,
+    "typeConversionCount": 11,
+    "errorCodesExtracted": true,
+    "notes": [
+      "$or is a Boolean Expression operator used in aggregation expressions",
+      "Returns true if ANY expression evaluates to true (short-circuits on first true)",
+      "Empty array [] returns false",
+      "Truthy values: non-zero numbers, non-empty strings, arrays (even empty), objects, true, ObjectId, Date, Timestamp, Binary data",
+      "Falsy values: 0, 0.0, empty string \"\", null, undefined, false",
+      "Non-array input throws TypeMismatch error",
+      "Can be combined with $and, $not, $cond, $switch, $filter, $eq",
+      "Short-circuits - stops evaluating after finding first truthy value",
+      "Extracted from MongoDB jstests: not.js, cond.js, filter.js, collation_expressions.js",
+      "Implementation tested in evaluate_or_test.cpp"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/exec/expression/evaluate_or_test.cpp",
+      "/mongo/src/mongo/db/pipeline/expression_or_test.cpp"
+    ],
+    "jstestSourceFiles": [
+      "/mongo/jstests/aggregation/expressions/not.js",
+      "/mongo/jstests/aggregation/expressions/cond.js",
+      "/mongo/jstests/aggregation/expressions/filter.js",
+      "/mongo/jstests/aggregation/expressions/collation_expressions.js"
+    ],
+    "truthyValues": [
+      "Non-zero numbers (positive and negative)",
+      "Non-empty strings",
+      "Arrays (including empty arrays [] - this is different from $and behavior)",
+      "Objects (including empty objects {})",
+      "true",
+      "ObjectId",
+      "Date",
+      "Timestamp",
+      "Binary data",
+      "NaN",
+      "Infinity"
+    ],
+    "falsyValues": [
+      "0 (integer)",
+      "0.0 (float)",
+      "Empty string \"\"",
+      "null",
+      "undefined/missing fields",
+      "false"
+    ]
+  }
+}

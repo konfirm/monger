@@ -1,0 +1,129 @@
+{
+  "source": "any_element_true.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/any_element_true.js",
+  "extractedAt": "2026-02-01T19:18:52.423Z",
+  "setup": {
+    "collections": {
+      "any_element_true": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "any_element_true",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$anyElementTrue": {
+                "$literal": [
+                  true,
+                  true
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973532232
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results.length",
+      "expected": "1, results",
+      "line": 25
+    },
+    {
+      "type": "eq",
+      "actual": "loneResult.result",
+      "expected": "expected, loneResult",
+      "line": 28
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ _id: 0, allTrue: [true, true], someTrue: [true, false], noneTrue: [0, false], nonArray: 1, nullInput: [null], undefinedInput: [undefined], undefinedTrue: [undefined, true], nullTrue: [null, true], empty: [], }",
+      "line": 8
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "5159200",
+      "line": 33
+    }
+  ],
+  "meta": {
+    "totalOperations": 29,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

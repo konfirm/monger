@@ -1,0 +1,37 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/binarySize.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:54.354Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "expression_binarySize",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$addFields": {
+            "s": {
+              "$binarySize": "$x"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $binarySize requires a string or BinData argument, found: object",
+        "code": 51276
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $binarySize requires a string or BinData argument, found: object"
+    }
+  ]
+}

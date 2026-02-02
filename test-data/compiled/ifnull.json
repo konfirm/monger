@@ -1,0 +1,42 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/ifnull.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.058Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "my_false": false,
+          "my_str": "",
+          "my_null": null,
+          "my_obj": {},
+          "my_list": [],
+          "my_list_of_docs": [
+            {
+              "z": 1
+            },
+            {
+              "z": 2
+            }
+          ]
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

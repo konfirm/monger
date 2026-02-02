@@ -1,0 +1,83 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/sortArray2.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:42.539Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "sortArray2",
+      "pipeline": [
+        {
+          "$sort": {
+            "b.c": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "b": {
+            "c": 1
+          }
+        },
+        {
+          "_id": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "duration": 7,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "sortArray2",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": null,
+            "arr": {
+              "$push": "$$ROOT"
+            }
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "sorted": {
+              "$sortArray": {
+                "input": "$arr",
+                "sortBy": {
+                  "b.c": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "sorted": [
+            {
+              "_id": 0,
+              "b": {
+                "c": 1
+              }
+            },
+            {
+              "_id": 1,
+              "b": {
+                "c": 2
+              }
+            }
+          ]
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": []
+}

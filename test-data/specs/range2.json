@@ -1,0 +1,16 @@
+{
+  "source": "range2.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/range2.js",
+  "extractedAt": "2026-02-01T19:19:38.498Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

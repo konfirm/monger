@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/null_chars_string_input.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/null_chars_string_input.js",
+      "timestamp": 1769973922320
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "assertDropAndRecreateCollection is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973922324
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973922320,
+    "endTime": 1769973922324,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "operator": "$abs",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/abs.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.969Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$abs": "$a"
+        },
+        "context": {
+          "_id": 0,
+          "a": {
+            "$numberLong": "-9223372036854775808"
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $abs only supports numeric types, not object"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

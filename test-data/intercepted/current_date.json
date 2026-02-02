@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/current_date.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/current_date.js",
+      "timestamp": 1769973914469
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_currentDate",
+      "timestamp": 1769973914471
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "assertDropCollection is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973914472
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973914469,
+    "endTime": 1769973914472,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/log_pow_exp.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/log_pow_exp.js",
+      "timestamp": 1769973920709
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "log_exponential_expressions",
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.log_exponential_expressions",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.log_exponential_expressions.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.log_exponential_expressions.drop",
+      "result": true,
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.log_exponential_expressions",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.log_exponential_expressions.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0,
+          "a": 8,
+          "b": 2
+        }
+      ],
+      "timestamp": 1769973920712
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.log_exponential_expressions.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973920713,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.log_exponential_expressions.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973920713,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.log_exponential_expressions.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973920713
+    },
+    {
+      "id": 9,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973920714
+    }
+  ],
+  "state": {
+    "collections": {
+      "log_exponential_expressions": [
+        {
+          "_id": 0,
+          "a": 8,
+          "b": 2
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973920709,
+    "endTime": 1769973920714,
+    "totalOperations": 2
+  }
+}

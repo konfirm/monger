@@ -1,0 +1,1018 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/group_accumulators_as_exprs.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.057Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$avg": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 3
+          }
+        ],
+        "duration": 6
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$avg": [
+                  [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 3
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 5
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 5
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 15
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 15
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevPop": [
+                  1,
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevPop": [
+                  [
+                    1,
+                    3
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevSamp": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevSamp": [
+                  [
+                    1,
+                    2,
+                    3
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$avg": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 3
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 15
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevPop": [
+                  1,
+                  3,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevSamp": [
+                  1,
+                  2,
+                  3,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$avg": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 3
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 15
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevPop": [
+                  1,
+                  3,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevSamp": [
+                  1,
+                  2,
+                  3,
+                  null
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  "$a",
+                  2,
+                  3,
+                  {
+                    "$sum": [
+                      4,
+                      5
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 15
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  "$a",
+                  2,
+                  3,
+                  {
+                    "$min": [
+                      4,
+                      5
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  "$a",
+                  2,
+                  3,
+                  {
+                    "$max": [
+                      4,
+                      5
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 5
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$avg": [
+                  "$a",
+                  3,
+                  {
+                    "$avg": [
+                      4,
+                      6
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 3
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevPop": [
+                  "$a",
+                  {
+                    "$stdDevPop": [
+                      1,
+                      3
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 0
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$stdDevSamp": [
+                  "$a",
+                  {
+                    "$stdDevSamp": [
+                      1,
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 0
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$sum": [
+                  "$a",
+                  2,
+                  3,
+                  {
+                    "$sum": [
+                      [
+                        "$a",
+                        4,
+                        5
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 16
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 32",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$min": [
+                  "$b",
+                  2,
+                  3,
+                  {
+                    "$min": [
+                      [
+                        "$a",
+                        4,
+                        5
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 1
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 33",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$max": [
+                  "$a",
+                  2,
+                  3,
+                  {
+                    "$max": [
+                      [
+                        "$b",
+                        4,
+                        5
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": 1,
+          "b": 6
+        },
+        "expected": [
+          {
+            "result": 6
+          }
+        ],
+        "duration": 2
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 33,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

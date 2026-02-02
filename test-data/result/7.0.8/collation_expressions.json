@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/collation_expressions.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:56.940Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

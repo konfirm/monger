@@ -1,0 +1,152 @@
+{
+  "operator": "$mod",
+  "description": "Tests for $mod - Evaluation operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/expression_mod.js, /mongo/jstests/aggregation/sources/merge/all_modes.js, /mongo/jstests/aggregation/sources/merge/mode_fail_insert.js, /mongo/jstests/aggregation/sources/merge/mode_keep_existing_insert.js, /mongo/jstests/aggregation/sources/merge/mode_merge_discard.js, /mongo/jstests/aggregation/sources/merge/mode_merge_fail.js, /mongo/jstests/aggregation/sources/merge/mode_merge_insert.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_discard.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_fail.js, /mongo/jstests/aggregation/sources/merge/mode_pipeline_insert.js, /mongo/jstests/aggregation/sources/merge/mode_replace_discard.js, /mongo/jstests/aggregation/sources/merge/mode_replace_fail.js, /mongo/jstests/aggregation/sources/merge/mode_replace_insert.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/change_stream_read_mode.h, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.cpp, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.h, /mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup_test.cpp",
+  "tests": {
+    "happyPath": [],
+    "errorCases": [],
+    "nullCases": [],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "0",
+      "type": "assertErrorCode",
+      "context": "or is missing`); } // // Confirm error cases. // // Confirm mod by 0 fails in an expected manner. assertErrorCode(coll, {$project: {a: {$mod: [10, 0 /*double*/]}}}, 16610); assertErrorCode(coll, {$pro"
+    },
+    {
+      "code": "500000",
+      "type": "numericCode",
+      "context": "long_dubint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLo"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "long_dubint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLo"
+    },
+    {
+      "code": "450000",
+      "type": "numericCode",
+      "context": "bint: {$mod: [NumberLong(8), 3.0]}, long_dublong: {$mod: [NumberLong(500000000000), 450000000000.0]}, long_int: {$mod: [NumberLong(8), NumberInt(3)]}, long_long: {$mod: [NumberLong(8), NumberLong(3)]}"
+    },
+    {
+      "code": "800000",
+      "type": "numericCode",
+      "context": "long: {$mod: [NumberLong(8), NumberLong(3)]}, verylong_verylong: {$mod: [NumberLong(800000000000), NumberLong(300000000000)]}, }, }, { $project: { _id: 0, dub_dub: {type: {$type: \"$dub_dub\"}, value: \""
+    },
+    {
+      "code": "300000",
+      "type": "numericCode",
+      "context": "), NumberLong(3)]}, verylong_verylong: {$mod: [NumberLong(800000000000), NumberLong(300000000000)]}, }, }, { $project: { _id: 0, dub_dub: {type: {$type: \"$dub_dub\"}, value: \"$dub_dub\"}, dub_int: {"
+    },
+    {
+      "code": "200000",
+      "type": "numericCode",
+      "context": ": {type: \"long\", value: NumberLong(2)}, verylong_verylong: {type: \"long\", value: NumberLong(200000000000)}, }, ]; assert.eq(result.length, 1, `Expected one result`); for (const key of Object.keys(expe"
+    },
+    {
+      "code": "MergeStageNoMatchingDocument",
+      "type": "ErrorCodes",
+      "context": "ed: \"replace\", whenNotMatched: \"fail\"}}, ]), ); assert.commandFailedWithCode(error, ErrorCodes.MergeStageNoMatchingDocument); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 1"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "hed: \"fail\", whenNotMatched: \"insert\"}}, ]), ); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 1, b: \"a\"}, {_id:"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "// // Test that $merge fails if there's a duplicate key error. // assertErrorCode(coll, pipeline, ErrorCodes.DuplicateKey); // // Test that $merge will preserve the indexes and options of the output c"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "rt.throws(() => coll.aggregate(pipelineDifferentOutputDb)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Explicitly create the collection and database, then fall through to th"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "rror = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 1, b: \"a\""
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the tes"
+    },
+    {
+      "code": "MergeStageNoMatchingDocument",
+      "type": "ErrorCodes",
+      "context": "et error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.MergeStageNoMatchingDocument); // Since there is no way to guarantee the ordering of the writ"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "st error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, a: 11, b"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the tes"
+    },
+    {
+      "code": "MergeStageNoMatchingDocument",
+      "type": "ErrorCodes",
+      "context": "et error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.MergeStageNoMatchingDocument); // Since there is no way to guarantee the ordering of the writ"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "me(), updatePipeline: [{$project: {x: 1, a: 1}}]})), ); assert.commandFailedWithCode(error, ErrorCodes.DuplicateKey); assertArrayEq({ actual: target.find().toArray(), expected: [ {_id: 1, x: 1}, {_id:"
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "assert.throws(() => source.aggregate(foreignPipeline)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force creation of the database and collection, then fall through the test "
+    },
+    {
+      "code": "MergeStageNoMatchingDocument",
+      "type": "ErrorCodes",
+      "context": "et error = assert.throws(() => source.aggregate(pipeline)); assert.commandFailedWithCode(error, ErrorCodes.MergeStageNoMatchingDocument); // Since there is no way to guarantee the ordering of the writ"
+    },
+    {
+      "code": "DuplicateKey",
+      "type": "ErrorCodes",
+      "context": "), whenMatched: \"replace\", whenNotMatched: \"insert\"}}, ]), ); assert.commandFailedWithCode(res, ErrorCodes.DuplicateKey); assert.includes(res.message, \"$merge failed due to a DuplicateKey error\"); // "
+    },
+    {
+      "code": "NamespaceNotFound",
+      "type": "ErrorCodes",
+      "context": "rt.throws(() => coll.aggregate(pipelineDifferentOutputDb)); assert.commandFailedWithCode(error, ErrorCodes.NamespaceNotFound); // Force a creation of the database and collection, then fall through the"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 0,
+    "happyPathCount": 0,
+    "errorCaseCount": 0,
+    "nullCaseCount": 0,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Evaluation",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 13 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/change_stream_read_mode.h",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.cpp",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup.h",
+      "/mongo/src/mongo/db/pipeline/document_source_find_and_modify_image_lookup_test.cpp"
+    ]
+  }
+}

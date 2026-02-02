@@ -1,0 +1,41 @@
+{
+  "source": "percentile_expression_syntax.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/percentile_expression_syntax.js",
+  "extractedAt": "2026-02-01T19:19:37.096Z",
+  "setup": {
+    "collections": {
+      "expression_percentile": [
+        {
+          "_id": 0,
+          "k1": 3,
+          "k2": 2,
+          "k3": "hi",
+          "k4": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([{_id: 0, k1: 3, k2: 2, k3: \"hi\", k4: [1, 2, 3]}]",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.runCommand(\"aggregate\", command",
+      "line": 25
+    }
+  ],
+  "meta": {
+    "totalOperations": 12,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

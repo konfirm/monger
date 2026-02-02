@@ -1,0 +1,150 @@
+{
+  "operator": "$round",
+  "description": "Tests for $round - Arithmetic operator",
+  "mongodbVersion": "1.0",
+  "implemented": true,
+  "source": "/mongo/jstests/aggregation/expressions/round_trunc.js",
+  "implementationSource": "/mongo/src/mongo/db/pipeline/granularity_rounder.cpp, /mongo/src/mongo/db/pipeline/granularity_rounder.h, /mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two.cpp, /mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two_test.cpp, /mongo/src/mongo/db/pipeline/granularity_rounder_preferred_numbers.cpp, /mongo/src/mongo/db/pipeline/granularity_rounder_preferred_numbers_test.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Basic arithmetic operation",
+        "query": {
+          "$round": [
+            10,
+            5
+          ]
+        },
+        "expected": null
+      },
+      {
+        "description": "Arithmetic with field references",
+        "query": {
+          "$round": [
+            "$a",
+            "$b"
+          ]
+        },
+        "context": {
+          "a": 10,
+          "b": 5
+        },
+        "expected": null
+      }
+    ],
+    "errorCases": [],
+    "nullCases": [
+      {
+        "description": "Operation with null argument",
+        "query": {
+          "$round": [
+            null,
+            5
+          ]
+        },
+        "expected": null
+      }
+    ],
+    "edgeCases": [],
+    "typeConversionCases": []
+  },
+  "errorCodes": [
+    {
+      "code": "2",
+      "type": "assertErrorCode",
+      "context": "ong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorCode(coll, [{$project: {a: {$trunc: [1, 2, 3]}}}], 28667); assertErrorCode(coll, [{$projec"
+    },
+    {
+      "code": "51081",
+      "type": "assertErrorCode",
+      "context": "l, [{$project: {a: {$round: [1, 2, 3]}}}], 28667); // Test non-numeric input to $trunc and $round. assertErrorCode(coll, [{$project: {a: {$round: \"string\"}}}], 51081); assertErrorCode(coll, [{$project"
+    },
+    {
+      "code": "101",
+      "type": "assertErrorCode",
+      "context": "1\")]}}}], 51083); assertErrorCode(coll, [{$project: {a: {$round: [1, NumberInt(\"-21\")]}}}], 51083); assertErrorCode(coll, [{$project: {a: {$round: [1, 101]}}}], 51083); assertErrorCode(coll, [{$projec"
+    },
+    {
+      "code": "10",
+      "type": "assertErrorCode",
+      "context": "on arguments. assertErrorCode(coll, [{$project: {a: {$round: [1, NumberDecimal(\"1.4\")]}}}], 51082); assertErrorCode(coll, [{$project: {a: {$trunc: [1, 10.5]}}}], 51082); assertErrorCode(coll, [{$proje"
+    },
+    {
+      "code": "298912",
+      "type": "numericCode",
+      "context": "mal(\"23.298\"), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc"
+    },
+    {
+      "code": "343250",
+      "type": "numericCode",
+      "context": "3.298\"), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(Numbe"
+    },
+    {
+      "code": "054252",
+      "type": "numericCode",
+      "context": "), NumberDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecim"
+    },
+    {
+      "code": "245154",
+      "type": "numericCode",
+      "context": "berDecimal(\"2E+1\"), -1); testTrunc(1.298, 1.298, 100); testTrunc(NumberDecimal(\"1.298912343250054252245154325\"), NumberDecimal(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1."
+    },
+    {
+      "code": "298000",
+      "type": "numericCode",
+      "context": "al(\"1.29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1.298\"), NumberDecimal(\"1.298000000000000000000000000000000\"), NumberDecimal(\"100\")); testRound(1.298, 1, 0); testRound(1.298,"
+    },
+    {
+      "code": "000000",
+      "type": "numericCode",
+      "context": "29891234325005425224\"), NumberLong(\"20\")); testTrunc(NumberDecimal(\"1.298\"), NumberDecimal(\"1.298000000000000000000000000000000\"), NumberDecimal(\"100\")); testRound(1.298, 1, 0); testRound(1.298, 1.3, "
+    },
+    {
+      "code": "214748",
+      "type": "numericCode",
+      "context": "00000000000000000000000000\"), NumberDecimal(\"100\")); // Test $round overflow. testRound(NumberInt(\"2147483647\"), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLo"
+    },
+    {
+      "code": "922337",
+      "type": "numericCode",
+      "context": "83647\"), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assert"
+    },
+    {
+      "code": "203685",
+      "type": "numericCode",
+      "context": "), NumberLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorC"
+    },
+    {
+      "code": "477580",
+      "type": "numericCode",
+      "context": "berLong(\"2147483650\"), -1); assertErrorCode(coll, [{$project: {a: {$round: [NumberLong(\"9223372036854775806\"), -1]}}}], 51080); // Test $trunc and $round with more than 2 arguments. assertErrorCode(co"
+    }
+  ],
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 3,
+    "happyPathCount": 2,
+    "errorCaseCount": 0,
+    "nullCaseCount": 1,
+    "edgeCaseCount": 0,
+    "typeConversionCount": 0,
+    "errorCodesExtracted": true,
+    "notes": [
+      "Generated by batch-extract-tests.js",
+      "Operator type: Arithmetic",
+      "MongoDB version: 1.0",
+      "Implementation status: ✓ Implemented",
+      "Found 1 jstest file(s)",
+      "Fill in expected values and add more test cases from MongoDB documentation"
+    ],
+    "mongodbSourceFiles": [
+      "/mongo/src/mongo/db/pipeline/granularity_rounder.cpp",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder.h",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two.cpp",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_powers_of_two_test.cpp",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_preferred_numbers.cpp",
+      "/mongo/src/mongo/db/pipeline/granularity_rounder_preferred_numbers_test.cpp"
+    ]
+  }
+}

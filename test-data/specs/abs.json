@@ -1,0 +1,250 @@
+{
+  "source": "abs.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/abs.js",
+  "extractedAt": "2026-02-01T19:18:49.537Z",
+  "setup": {
+    "collections": {
+      "abs_expr": [
+        {
+          "_id": 0,
+          "a": {
+            "$numberLong": "-9223372036854775808"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 287,
+      "type": "aggregate",
+      "collection": "abs_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "a": {
+              "$abs": "$a"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "a": 5
+        },
+        {
+          "_id": 1,
+          "a": -5
+        },
+        {
+          "_id": 2,
+          "a": 5.5
+        },
+        {
+          "_id": 3,
+          "a": -5.5
+        },
+        {
+          "_id": 4,
+          "a": {
+            "$numberInt": "5"
+          }
+        },
+        {
+          "_id": 5,
+          "a": {
+            "$numberInt": "-5"
+          }
+        },
+        {
+          "_id": 6,
+          "a": {
+            "$numberLong": "5"
+          }
+        },
+        {
+          "_id": 7,
+          "a": {
+            "$numberLong": "-5"
+          }
+        },
+        {
+          "_id": 8,
+          "a": 0
+        },
+        {
+          "_id": 9,
+          "a": 0
+        },
+        {
+          "_id": 10,
+          "a": {
+            "$numberInt": "0"
+          }
+        },
+        {
+          "_id": 11,
+          "a": {
+            "$numberInt": "-2147483648"
+          }
+        },
+        {
+          "_id": 12,
+          "a": -2147483648
+        },
+        {
+          "_id": 13,
+          "a": {
+            "$numberLong": "1152921504606846977"
+          }
+        },
+        {
+          "_id": 14,
+          "a": {
+            "$numberLong": "-1152921504606846977"
+          }
+        },
+        {
+          "_id": 15,
+          "a": null
+        },
+        {
+          "_id": 16
+        },
+        {
+          "_id": 17,
+          "a": null
+        },
+        {
+          "_id": 18
+        }
+      ],
+      "timestamp": 1769973529343
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, a: 5}, {_id: 1, a: 5}, {_id: 2, a: 5.5}, {_id: 3, a: 5.5}, {_id: 4, a: 5}, {_id: 5, a: 5}, {_id: 6, a: NumberLong(\"5\"",
+      "line": 34
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, a: 5}",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, a: -5}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, a: 5.5}",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, a: -5.5}",
+      "line": 14
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, a: NumberInt(\"5\"",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, a: NumberInt(\"-5\"",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, a: NumberLong(\"5\"",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, a: NumberLong(\"-5\"",
+      "line": 18
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, a: 0.0}",
+      "line": 19
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, a: -0.0}",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, a: NumberInt(\"0\"",
+      "line": 21
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 11, a: NumberInt(-Math.pow(2, 31",
+      "line": 23
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 12, a: -Math.pow(2, 31",
+      "line": 24
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 13, a: NumberLong(\"1152921504606846977\"",
+      "line": 26
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 14, a: NumberLong(\"-1152921504606846977\"",
+      "line": 27
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 15, a: null}",
+      "line": 28
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 16, a: undefined}",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 17, a: NaN}",
+      "line": 30
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 18}",
+      "line": 31
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, a: \"string\"}",
+      "line": 64
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, a: NumberLong(\"-9223372036854775808\"",
+      "line": 69
+    }
+  ],
+  "meta": {
+    "totalOperations": 429,
+    "totalAssertions": 22,
+    "errors": 0
+  }
+}

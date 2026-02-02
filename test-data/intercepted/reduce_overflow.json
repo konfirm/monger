@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/reduce_overflow.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/reduce_overflow.js",
+      "timestamp": 1769973923923
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973923926
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973923923,
+    "endTime": 1769973923926,
+    "totalOperations": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js",
+      "timestamp": 1769973910599
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "FixtureHelpers is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973910603
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973910599,
+    "endTime": 1769973910603,
+    "totalOperations": 0
+  }
+}

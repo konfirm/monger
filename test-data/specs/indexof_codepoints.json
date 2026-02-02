@@ -1,0 +1,360 @@
+{
+  "source": "indexof_codepoints.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/indexof_codepoints.js",
+  "extractedAt": "2026-02-01T19:19:24.830Z",
+  "setup": {
+    "collections": {
+      "indexofcp": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                4,
+                "$item"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564643
+    },
+    {
+      "id": 21,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                4
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564644
+    },
+    {
+      "id": 31,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564644
+    },
+    {
+      "id": 41,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "$missing"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564644
+    },
+    {
+      "id": 51,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                "hello"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564644
+    },
+    {
+      "id": 61,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564645
+    },
+    {
+      "id": 71,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                "hello"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564645
+    },
+    {
+      "id": 81,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564645
+    },
+    {
+      "id": 91,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1.4
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564645
+    },
+    {
+      "id": 101,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                5.2
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564645
+    },
+    {
+      "id": 111,
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": {
+        "$project": {
+          "byteLocation": {
+            "$indexOfCP": [
+              null,
+              "$item"
+            ]
+          }
+        }
+      },
+      "documents": [
+        {
+          "item": "foobar foobar",
+          "emptyStr": ""
+        }
+      ],
+      "timestamp": 1769973564646
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "aggResult.byteLocation",
+      "line": 22
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [null, \"$item\"]}}}",
+      "line": 96
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"$missing\", \"$item\"]}}}",
+      "line": 97
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [undefined, \"$item\"]}}}",
+      "line": 101
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"$missing\", null]}}}",
+      "line": 107
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"$missing\", 4]}}}",
+      "line": 108
+    },
+    {
+      "type": "eq",
+      "actual": "null",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"$missing\", \"$missing\"]}}}",
+      "line": 109
+    },
+    {
+      "type": "eq",
+      "actual": "-1",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"\", \"$emptyStr\", 3]}}}",
+      "line": 116
+    },
+    {
+      "type": "eq",
+      "actual": "-1",
+      "expected": "coll.aggregate({$project: {byteLocation: {$indexOfCP: [\"\", \"$emptyStr\", 3, 1]}}}",
+      "line": 117
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({string: arr[0], substring: arr[1]}",
+      "line": 20
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({item: \"foobar foobar\", emptyStr: \"\"}",
+      "line": 49
+    }
+  ],
+  "meta": {
+    "totalOperations": 137,
+    "totalAssertions": 11,
+    "errors": 1
+  }
+}

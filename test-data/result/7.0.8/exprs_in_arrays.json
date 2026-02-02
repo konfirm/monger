@@ -1,0 +1,263 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/exprs_in_arrays.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:15.247Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": [
+              "constant",
+              1
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": [
+            "constant",
+            1
+          ]
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": [
+              "$b"
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": [
+            null
+          ]
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": [
+              {
+                "$toLower": "FoO"
+              }
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": [
+            "foo"
+          ]
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": [
+              "$b",
+              {
+                "$toLower": "FoO"
+              }
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": [
+            null,
+            "foo"
+          ]
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": [
+              "$b",
+              "constant",
+              [
+                1,
+                {
+                  "$toLower": "FoO"
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": [
+            null,
+            "constant",
+            [
+              1,
+              "foo"
+            ]
+          ]
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": {
+              "$setIntersection": [
+                "$a",
+                [
+                  "$b"
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": {
+              "$setIntersection": [
+                "$a",
+                [
+                  {
+                    "$toLower": "FoO"
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "d": {
+              "$setIntersection": [
+                [
+                  [
+                    1,
+                    "foo",
+                    "bar"
+                  ]
+                ],
+                [
+                  [
+                    1,
+                    {
+                      "$toLower": "FoO"
+                    },
+                    "$b"
+                  ]
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "d": []
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "exprs_in_arrays",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "coordinate": [
+              "$x",
+              "$y",
+              "$z"
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "coordinate": [
+            1,
+            null,
+            2
+          ]
+        }
+      ],
+      "duration": 3,
+      "success": true
+    }
+  ],
+  "errors": []
+}

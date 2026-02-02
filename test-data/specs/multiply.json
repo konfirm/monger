@@ -1,0 +1,58 @@
+{
+  "source": "multiply.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/multiply.js",
+  "extractedAt": "2026-02-01T19:19:32.391Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_multiply": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 69
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].computed",
+      "expected": "testCase.expected",
+      "line": 70
+    },
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 180
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].computed",
+      "expected": "testCase.expected",
+      "line": 181
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(testCase.document",
+      "line": 65
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(document",
+      "line": 176
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(testCase.document",
+      "line": 193
+    }
+  ],
+  "meta": {
+    "totalOperations": 38,
+    "totalAssertions": 7,
+    "errors": 1
+  }
+}

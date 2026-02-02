@@ -1,0 +1,69 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/sortArray.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/sortArray.js",
+      "timestamp": 1769973925903
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "sortArray",
+      "timestamp": 1769973925906
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.sortArray",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973925906
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.sortArray.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973925906
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.sortArray.drop",
+      "result": true,
+      "timestamp": 1769973925907
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.sortArray",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973925907
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973925907
+    }
+  ],
+  "state": {
+    "collections": {
+      "sortArray": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973925903,
+    "endTime": 1769973925907,
+    "totalOperations": 1
+  }
+}

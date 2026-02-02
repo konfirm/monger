@@ -1,0 +1,279 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/map.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:24.640Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "var",
+              "in": "$$var"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "var",
+              "in": {
+                "$add": [
+                  10,
+                  "$$var"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "in": "$$this"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$nested",
+              "as": "var",
+              "in": "$$var.a"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$nested",
+              "as": "CURRENT",
+              "in": "$a"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$mixed",
+              "as": "var",
+              "in": "$$var.a"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$null",
+              "as": "var",
+              "in": "$$var"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "outer",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "as": "inner",
+                  "in": {
+                    "$add": [
+                      "$$inner",
+                      "$$outer"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "in": "$$this"
+                }
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "server9841",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "res": {
+            "$map": {
+              "input": "$simple",
+              "as": "outer",
+              "in": {
+                "$map": {
+                  "input": "$simple",
+                  "in": {
+                    "$add": [
+                      "$$this",
+                      "$$outer"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

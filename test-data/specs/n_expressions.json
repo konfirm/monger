@@ -1,0 +1,22 @@
+{
+  "source": "n_expressions.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/n_expressions.js",
+  "extractedAt": "2026-02-01T19:19:32.863Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(doc",
+      "line": 12
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/round_trunc.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.087Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 7
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$trunc": "$a"
+              }
+            }
+          }
+        ],
+        "context": {
+          "a": -1.2
+        },
+        "expected": [
+          {
+            "result": -1
+          }
+        ],
+        "duration": 3
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 9,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

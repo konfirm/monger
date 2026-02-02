@@ -1,0 +1,212 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/objectToArray.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:29.615Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "document": {
+              "$objectToArray": "$$ROOT"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "document": [
+            {
+              "k": "_id",
+              "v": 16
+            }
+          ]
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "document": {
+              "$objectToArray": {
+                "dayOfWeek": {
+                  "$dayOfWeek": "$date"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "document": [
+            {
+              "k": "dayOfWeek",
+              "v": null
+            }
+          ]
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "object_to_array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "expanded": {
+              "$objectToArray": "$subDoc"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 16,
+          "expanded": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    }
+  ],
+  "errors": []
+}

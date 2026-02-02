@@ -1,0 +1,6328 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_to_string.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/date_to_string.js",
+      "timestamp": 1769973915826
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "date_to_string",
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T14:56:42.911Z"
+      ],
+      "timestamp": 1769973915829
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915829,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T14:56:42.911Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T14:56:42.911Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 9,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T14:56:42.911Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T14:56:42.911Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 12,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T14:56:42.911Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 15,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T14:56:42.911Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 15,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T14:56:42.911Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 18,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T14:56:42.911Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 18,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T14:56:42.911Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 21,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1935-07-10T11:36:37.133Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "1935-07-10T11:36:37.133Z"
+    },
+    {
+      "id": 21,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1935-07-10T11:36:37.133Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 24,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1900-07-10T11:41:22.418Z"
+      ],
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "1900-07-10T11:41:22.418Z"
+    },
+    {
+      "id": 24,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1900-07-10T11:41:22.418Z"
+      },
+      "timestamp": 1769973915830
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "1935-07-10T11:36:37.133Z"
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915830,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915830,
+      "value": "1900-07-10T11:41:22.418Z"
+    },
+    {
+      "id": 27,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "__truncated": "[{\"_id\":0,\"date\":{\"$date\":\"2017-07-04T14:56:42.911Z\"},\"tz\":\"UTC\"},{\"_id\":1,\"date\":{\"$date\":\"2017-07-04T14:56:42.911Z\"},\"tz\":\"Europe/London\"},{\"_id\":2,\"date\":{\"$date\":\"2017-07-04T14:56:42.911Z\"},\"tz\":\"America/New_York\"},{\"_id\":3,\"date\":{\"$date\":\"2017-07-04T14:56:42.911Z\"},\"tz\":\"Australia/Eucla\"},{\"_id\":4,\"date\":{\"$date\":\"2017-07-04T14:56:42.911Z\"},\"tz\":\"Asia/Kathmandu\"},{\"_id\":5,\"date\":{\"$date\":\"1935-07-10T11:36:37.133Z\"},\"tz\":\"Europe/Amsterdam\"},{\"_id\":6,\"date\":{\"$date\":\"1900-07-10T11:41:22.418Z..."
+        }
+      ],
+      "timestamp": 1769973915831
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "1935-07-10T11:36:37.133Z"
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915831,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 55,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915831,
+      "value": "1900-07-10T11:41:22.418Z"
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915832,
+      "value": 7
+    },
+    {
+      "id": 27,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 7
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 58,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 59,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                  "date": "$date",
+                  "timezone": "$tz"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 61,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 62,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 63,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 64,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 65,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 66,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 67,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 68,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 69,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 70,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T14:56:42.911Z"
+    },
+    {
+      "id": 71,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 72,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "1935-07-10T11:36:37.133Z"
+    },
+    {
+      "id": 73,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 74,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "1900-07-10T11:41:22.418Z"
+    },
+    {
+      "id": 60,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "$tz"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "UTC"
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Europe/London"
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "America/New_York"
+        },
+        {
+          "_id": 3,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Australia/Eucla"
+        },
+        {
+          "_id": 4,
+          "date": {
+            "$date": "2017-07-04T14:56:42.911Z"
+          },
+          "tz": "Asia/Kathmandu"
+        },
+        {
+          "_id": 5,
+          "date": {
+            "$date": "1935-07-10T11:36:37.133Z"
+          },
+          "tz": "Europe/Amsterdam"
+        },
+        {
+          "_id": 6,
+          "date": {
+            "$date": "1900-07-10T11:41:22.418Z"
+          },
+          "tz": "America/Caracas"
+        }
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 75,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 76,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 77,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 78,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 79,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 80,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 59,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 81,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 82,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 83,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 84,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 82,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 85,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 86,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 88,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 89,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 87,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-07-04 14:56:42 +0000 (0 minutes)"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04 15:56:42 +0100 (60 minutes)"
+        },
+        {
+          "_id": 2,
+          "date": "2017-07-04 10:56:42 -0400 (-240 minutes)"
+        },
+        {
+          "_id": 3,
+          "date": "2017-07-04 23:41:42 +0845 (525 minutes)"
+        },
+        {
+          "_id": 4,
+          "date": "2017-07-04 20:41:42 +0545 (345 minutes)"
+        },
+        {
+          "_id": 5,
+          "date": "1935-07-10 12:56:09 +0119 (79 minutes)"
+        },
+        {
+          "_id": 6,
+          "date": "1900-07-10 07:13:42 -0427 (-267 minutes)"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 90,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 91,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 91,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 92,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 93,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 94,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 95,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 93,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 96,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T15:09:12.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 97,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 98,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 96,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T15:09:12.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 99,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-12-04T15:09:14.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 100,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 101,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 99,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-12-04T15:09:14.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 103,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 104,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 105,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 106,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 107,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 108,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 102,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-07-04T15:09:12.911Z"
+            }
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-12-04T15:09:14.911Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 109,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 110,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 111,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 112,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 113,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 114,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 115,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 116,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915832,
+      "value": 3
+    },
+    {
+      "id": 102,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 117,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 118,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 120,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 121,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 122,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 123,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 124,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 125,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 119,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "America/New_York"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 126,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 127,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 128,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 129,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 130,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 131,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 118,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 132,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 133,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 134,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 135,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 133,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 136,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 137,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 139,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 140,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 138,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-01-04 10:08:51 -0500 (-300 minutes)"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04 11:09:12 -0400 (-240 minutes)"
+        },
+        {
+          "_id": 2,
+          "date": "2017-12-04 10:09:14 -0500 (-300 minutes)"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 141,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 142,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 142,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 143,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 144,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 145,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 146,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 144,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 147,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T15:09:12.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 148,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 149,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 147,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T15:09:12.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 150,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-12-04T15:09:14.911Z"
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 151,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 152,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 150,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-12-04T15:09:14.911Z"
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 154,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 155,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 156,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 157,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 158,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 159,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 153,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-07-04T15:09:12.911Z"
+            }
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-12-04T15:09:14.911Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 160,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 161,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 162,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 163,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 164,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 165,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 166,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 167,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915832,
+      "value": 3
+    },
+    {
+      "id": 153,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 168,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 169,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                  "date": "$date"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 171,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 172,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 173,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 174,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 175,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 176,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915832,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 170,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 177,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915832,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 178,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 179,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 180,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 181,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 182,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 169,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 183,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 184,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 185,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 186,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 184,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 187,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 188,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915832
+    },
+    {
+      "id": 190,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 191,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 189,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-01-04 15:08:51 +0000 (0 minutes)"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04 15:09:12 +0000 (0 minutes)"
+        },
+        {
+          "_id": 2,
+          "date": "2017-12-04 15:09:14 +0000 (0 minutes)"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 192,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 193,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 193,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 194,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 195,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-01T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 196,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 197,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 195,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-01T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 198,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T15:09:12.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 199,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 200,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 198,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T15:09:12.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 201,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-12-04T15:09:14.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 202,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 203,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 201,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-12-04T15:09:14.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 205,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 206,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 207,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 208,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 209,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 210,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 204,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-01T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-07-04T15:09:12.911Z"
+            }
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-12-04T15:09:14.911Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 211,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 212,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 213,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 214,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 215,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 216,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 217,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 218,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915833,
+      "value": 3
+    },
+    {
+      "id": 204,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 219,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 220,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "Natural: %Y-W%w-%U, ISO: %G-W%u-%V",
+                  "date": "$date"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 222,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 223,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 224,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 225,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 226,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 227,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 221,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "Natural: %Y-W%w-%U, ISO: %G-W%u-%V",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-01T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 228,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 229,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 230,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 231,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 232,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 233,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 220,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 234,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 235,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 236,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 237,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 235,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 238,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 239,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 241,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 242,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 240,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "Natural: 2017-W1-01, ISO: 2016-W7-52"
+        },
+        {
+          "_id": 1,
+          "date": "Natural: 2017-W3-27, ISO: 2017-W2-27"
+        },
+        {
+          "_id": 2,
+          "date": "Natural: 2017-W2-49, ISO: 2017-W1-49"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 243,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 244,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 244,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 245,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 246,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-01T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 247,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 248,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 246,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-01T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 249,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T15:09:12.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 250,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 251,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 249,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T15:09:12.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 252,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-12-04T15:09:14.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 253,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 254,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 252,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-12-04T15:09:14.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 256,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 257,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 258,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 259,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 260,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 261,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 255,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-01T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-07-04T15:09:12.911Z"
+            }
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-12-04T15:09:14.911Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 262,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 263,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 264,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 265,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 266,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 267,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 268,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 269,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915833,
+      "value": 3
+    },
+    {
+      "id": 255,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 270,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 271,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "%b (%B) %d, %Y",
+                  "date": "$date"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 273,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 274,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-01T15:08:51.911Z"
+    },
+    {
+      "id": 275,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 276,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 277,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 278,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 272,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%b (%B) %d, %Y",
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-01T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 279,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 280,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 281,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 282,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 283,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 284,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 271,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 285,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 286,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 287,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 288,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 286,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 289,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 290,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 292,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 293,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 291,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "Jan (January) 01, 2017"
+        },
+        {
+          "_id": 1,
+          "date": "Jul (July) 04, 2017"
+        },
+        {
+          "_id": 2,
+          "date": "Dec (December) 04, 2017"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 294,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 295,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 295,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 296,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 297,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 298,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 299,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 297,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 300,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 301,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 302,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 300,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 303,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 304,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 305,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 303,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 307,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 308,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 309,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 310,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 311,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 312,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 306,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            },
+            "timezone": null
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 3,
+            "timezone": "Europe/Oslo"
+          },
+          {
+            "_id": 4,
+            "date": null,
+            "timezone": "Europe/Oslo"
+          },
+          {
+            "_id": 5,
+            "timezone": "Europe/Oslo"
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 313,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 314,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 315,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 316,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 317,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 318,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 319,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 320,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915833,
+      "value": 6
+    },
+    {
+      "id": 306,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 6
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 321,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 322,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                  "date": "$date",
+                  "timezone": "$timezone"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 324,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 325,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 326,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 327,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 328,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 329,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 323,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "format": "%Y-%m-%d %H:%M:%S %z (%Z minutes)",
+                "date": "$date",
+                "timezone": "$timezone"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          },
+          "timezone": null
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 3,
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "_id": 4,
+          "date": null,
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "_id": 5,
+          "timezone": "Europe/Oslo"
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 330,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 331,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 332,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 333,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 334,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 335,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 322,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 336,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 337,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 338,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 339,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 337,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 340,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 341,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 343,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 344,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 342,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        },
+        {
+          "_id": 1,
+          "date": null
+        },
+        {
+          "_id": 2,
+          "date": null
+        },
+        {
+          "_id": 3,
+          "date": null
+        },
+        {
+          "_id": 4,
+          "date": null
+        },
+        {
+          "_id": 5,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 345,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 346,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 346,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 347,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 348,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 349,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 350,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 348,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 351,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-07-04T15:09:12.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 352,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 353,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 351,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-07-04T15:09:12.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 354,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-12-04T15:09:14.911Z"
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 355,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 356,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 354,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-12-04T15:09:14.911Z"
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 358,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 359,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 360,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 361,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 362,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 363,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 357,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "_id": 0,
+            "date": {
+              "$date": "2017-01-04T15:08:51.911Z"
+            }
+          },
+          {
+            "_id": 1,
+            "date": {
+              "$date": "2017-07-04T15:09:12.911Z"
+            }
+          },
+          {
+            "_id": 2,
+            "date": {
+              "$date": "2017-12-04T15:09:14.911Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 364,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 365,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 366,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 367,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 368,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 369,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 370,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 371,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915833,
+      "value": 3
+    },
+    {
+      "id": 357,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 3
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 372,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 373,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "date": "$date"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 375,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 376,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 377,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 378,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 379,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 380,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 374,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 381,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 382,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 383,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 384,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 385,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 386,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 373,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 387,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 388,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 389,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 390,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 388,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 391,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 392,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 394,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 395,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 393,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-01-04T15:08:51.911Z"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04T15:09:12.911Z"
+        },
+        {
+          "_id": 2,
+          "date": "2017-12-04T15:09:14.911Z"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 396,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 397,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "date": "$date",
+                  "timezone": "UTC"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 399,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 400,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 401,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 402,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 403,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 404,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 398,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date",
+                "timezone": "UTC"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 405,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 406,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 407,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 408,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 409,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 410,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 397,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 411,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 412,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 413,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 414,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 412,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 415,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 416,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 418,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 419,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 417,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-01-04T15:08:51.911Z"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04T15:09:12.911Z"
+        },
+        {
+          "_id": 2,
+          "date": "2017-12-04T15:09:14.911Z"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 420,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 421,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "date": {
+                "$dateToString": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              }
+            }
+          },
+          {
+            "$sort": {
+              "_id": 1
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 423,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 424,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 425,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 426,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-07-04T15:09:12.911Z"
+    },
+    {
+      "id": 427,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 428,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915833,
+      "value": "2017-12-04T15:09:14.911Z"
+    },
+    {
+      "id": 422,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": "$date",
+                "timezone": "America/New_York"
+              }
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "date": {
+            "$date": "2017-01-04T15:08:51.911Z"
+          }
+        },
+        {
+          "_id": 1,
+          "date": {
+            "$date": "2017-07-04T15:09:12.911Z"
+          }
+        },
+        {
+          "_id": 2,
+          "date": {
+            "$date": "2017-12-04T15:09:14.911Z"
+          }
+        }
+      ],
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 429,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915833,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 430,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 431,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 432,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 433,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 434,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 421,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 435,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915833
+    },
+    {
+      "id": 436,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 437,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 438,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 436,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 439,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 440,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 442,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 443,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 441,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": "2017-01-04T10:08:51.911"
+        },
+        {
+          "_id": 1,
+          "date": "2017-07-04T11:09:12.911"
+        },
+        {
+          "_id": 2,
+          "date": "2017-12-04T10:09:14.911"
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 444,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 445,
+      "type": "function_call",
+      "path": "collection.date_to_string.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 445,
+      "type": "function_return",
+      "path": "collection.date_to_string.drop",
+      "result": true,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 446,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 447,
+      "type": "function_call",
+      "path": "collection.date_to_string.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 448,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 449,
+      "type": "property_get",
+      "path": "collection.date_to_string.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973915834,
+      "value": 1
+    },
+    {
+      "id": 447,
+      "type": "function_return",
+      "path": "collection.date_to_string.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 450,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 451,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 452,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 453,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 451,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 455,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 456,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 454,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": {
+                  "$date": "2017-01-04T15:08:51.911Z"
+                },
+                "format": null
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 457,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              },
+              "format": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 458,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 459,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 460,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 461,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 462,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 463,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 454,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 464,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 465,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 466,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 467,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 465,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 468,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 469,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 471,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 472,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 470,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 473,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 474,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 475,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 476,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 474,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 478,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 479,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 477,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": {
+                  "$date": "2017-01-04T15:08:51.911Z"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 480,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 481,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 482,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 483,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 484,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 485,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 486,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 477,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 487,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 488,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 489,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 490,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 488,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 491,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 492,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 494,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 495,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 493,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 496,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 497,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 498,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 499,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 497,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 501,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 502,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 500,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "date": {
+              "$dateToString": {
+                "date": {
+                  "$date": "2017-01-04T15:08:51.911Z"
+                },
+                "format": "$missing"
+              }
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 503,
+      "type": "aggregate",
+      "collection": "date_to_string",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": {
+                "$date": "2017-01-04T15:08:51.911Z"
+              },
+              "format": "$missing"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 504,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 505,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 506,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 507,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 508,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 509,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 500,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate",
+      "result": {},
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 510,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 511,
+      "type": "function_call",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 512,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 513,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 511,
+      "type": "function_return",
+      "path": "collection.date_to_string.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 514,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 515,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 517,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 518,
+      "type": "property_get",
+      "path": "collection.date_to_string.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 516,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": [
+        {
+          "_id": 0,
+          "date": null
+        }
+      ],
+      "expected": [],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 519,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "2017-01-04T15:08:51.911Z"
+      ],
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 520,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 521,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973915834,
+      "value": "2017-01-04T15:08:51.911Z"
+    },
+    {
+      "id": 519,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "2017-01-04T15:08:51.911Z"
+      },
+      "timestamp": 1769973915834
+    },
+    {
+      "id": 522,
+      "type": "property_get",
+      "path": "collection.date_to_string",
+      "property": "runCommand",
+      "valueType": "undefined",
+      "timestamp": 1769973915834,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 523,
+      "type": "test_error",
+      "error": {
+        "message": "coll.runCommand is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973915834
+    }
+  ],
+  "state": {
+    "collections": {
+      "date_to_string": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973915826,
+    "endTime": 1769973915834,
+    "totalOperations": 69
+  }
+}

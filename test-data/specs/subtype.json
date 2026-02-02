@@ -1,0 +1,38 @@
+{
+  "source": "subtype.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/subtype.js",
+  "extractedAt": "2026-02-01T19:19:52.860Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne(document",
+      "line": 24
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({}",
+      "line": 31
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "code",
+      "line": 36
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

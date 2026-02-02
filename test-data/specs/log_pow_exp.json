@@ -1,0 +1,42 @@
+{
+  "source": "log_pow_exp.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/log_pow_exp.js",
+  "extractedAt": "2026-02-01T19:19:28.619Z",
+  "setup": {
+    "collections": {
+      "log_exponential_expressions": [
+        {
+          "_id": 0,
+          "a": 8,
+          "b": 2
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "result[0].result",
+      "expected": "expResult, failMsg",
+      "line": 30
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, a: 8, b: 2}",
+      "line": 9
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

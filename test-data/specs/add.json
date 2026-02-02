@@ -1,0 +1,171 @@
+{
+  "source": "add.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/add.js",
+  "extractedAt": "2026-02-01T19:18:50.020Z",
+  "setup": {
+    "collections": {
+      "add_coll": [
+        {
+          "x": 1
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "add_coll",
+      "pipeline": [
+        {
+          "$project": {
+            "y": {
+              "$add": []
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "x": 1
+        }
+      ],
+      "timestamp": 1769973529830
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result[0][\"y\"]",
+      "expected": "0",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "coll.drop(",
+      "line": 37
+    },
+    {
+      "type": "eq",
+      "actual": "addResult[0][\"add\"]",
+      "expected": "arr.reduce((a, b",
+      "line": 43
+    },
+    {
+      "type": "eq",
+      "actual": "true",
+      "expected": "coll.drop(",
+      "line": 48
+    },
+    {
+      "type": "eq",
+      "actual": "result1[0].sum",
+      "expected": "new Date(1683794065003",
+      "line": 61
+    },
+    {
+      "type": "eq",
+      "actual": "result1[1].sum",
+      "expected": "new Date(1683794065003",
+      "line": 62
+    },
+    {
+      "type": "eq",
+      "actual": "result1[2].sum",
+      "expected": "new Date(1683794065004",
+      "line": 63
+    },
+    {
+      "type": "eq",
+      "actual": "result1[3].sum",
+      "expected": "new Date(1683794065004",
+      "line": 64
+    },
+    {
+      "type": "eq",
+      "actual": "result1[4].sum",
+      "expected": "new Date(1683794065003",
+      "line": 65
+    },
+    {
+      "type": "eq",
+      "actual": "result1[5].sum",
+      "expected": "new Date(1683794065004",
+      "line": 66
+    },
+    {
+      "type": "eq",
+      "actual": "result1[6].sum",
+      "expected": "new Date(1683794065004",
+      "line": 67
+    },
+    {
+      "type": "eq",
+      "actual": "result1[7].sum",
+      "expected": "new Date(1683794065004",
+      "line": 68
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({x: 1}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(doc",
+      "line": 38
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, lhs: new Date(1683794065002",
+      "line": 50
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, lhs: new Date(1683794065002",
+      "line": 51
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, lhs: new Date(1683794065002",
+      "line": 52
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, lhs: new Date(1683794065002",
+      "line": 53
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, lhs: new Date(1683794065002",
+      "line": 55
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, lhs: new Date(1683794065002",
+      "line": 56
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6, lhs: new Date(1683794065002",
+      "line": 57
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, lhs: new Date(1683794065002",
+      "line": 58
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ { _id: 0, veryBigPositiveLong: NumberLong(\"9223372036854775806\"",
+      "line": 72
+    }
+  ],
+  "meta": {
+    "totalOperations": 27,
+    "totalAssertions": 23,
+    "errors": 1
+  }
+}

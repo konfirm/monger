@@ -1,0 +1,63 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/avg_and_sum.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.992Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "null": null,
+          "string": "hello world",
+          "num": -1,
+          "num2": 13.4,
+          "arrayEmpty": [],
+          "array1": [
+            1,
+            2,
+            3
+          ],
+          "array2": [
+            1,
+            2,
+            3,
+            "string"
+          ],
+          "array3": [
+            12.4,
+            5.6,
+            9.805
+          ],
+          "arrayNested1": [
+            [
+              1,
+              2,
+              3
+            ],
+            {}
+          ],
+          "arrayNested2": [
+            [
+              1,
+              2,
+              3
+            ],
+            4,
+            null
+          ]
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

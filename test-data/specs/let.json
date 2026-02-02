@@ -1,0 +1,77 @@
+{
+  "source": "let.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/let.js",
+  "extractedAt": "2026-02-01T19:19:28.139Z",
+  "setup": {
+    "collections": {
+      "agg_expr_let": [
+        {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "nested": {
+            "four": 4
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "agg_expr_let",
+      "pipeline": [
+        {
+          "$project": {
+            "output": "$two"
+          }
+        }
+      ],
+      "documents": [
+        {
+          "zero": 0,
+          "one": 1,
+          "two": 2,
+          "three": 3,
+          "nested": {
+            "four": 4
+          }
+        }
+      ],
+      "timestamp": 1769973567953
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res.length",
+      "expected": "1, tojson(res",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "res[0].output",
+      "expected": "output, tojson(res",
+      "line": 13
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[{_id: 0, res: output}]",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({zero: 0, one: 1, two: 2, three: 3, nested: {four: 4}}",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 27,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

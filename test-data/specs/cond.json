@@ -1,0 +1,61 @@
+{
+  "source": "cond.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/cond.js",
+  "extractedAt": "2026-02-01T19:19:02.009Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_cond": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expectedResult",
+      "expected": "coll.aggregate({$project: {a: {$cond: arg}}}",
+      "line": 15
+    },
+    {
+      "type": "eq",
+      "actual": "[\"breakfast\", \"brunch\", \"dinner\", \"linner\"]",
+      "expected": "coll .aggregate([ { $project: { meal: { $cond: [ {$eq: [\"$noonSense\", \"am\"]}, {$cond: [{$eq: [\"$mealCombined\", \"yes\"]}, \"brunch\", \"breakfast\"]}, {$cond: [{$eq: [\"$mealCombined\", \"yes\"]}, \"linner\", \"dinner\"]}, ], }, }, }, {$sort: {meal: 1}}, ]",
+      "line": 69
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({t: true, f: false, x: \"foo\", y: \"bar\"}",
+      "line": 49
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 56
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({noonSense: \"am\", mealCombined: \"no\"}",
+      "line": 65
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({noonSense: \"am\", mealCombined: \"yes\"}",
+      "line": 66
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({noonSense: \"pm\", mealCombined: \"yes\"}",
+      "line": 67
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({noonSense: \"pm\", mealCombined: \"no\"}",
+      "line": 68
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 8,
+    "errors": 1
+  }
+}

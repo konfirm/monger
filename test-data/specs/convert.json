@@ -1,0 +1,18 @@
+{
+  "source": "convert.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert.js",
+  "extractedAt": "2026-02-01T19:19:02.478Z",
+  "setup": {
+    "collections": {
+      "expression_convert": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 18,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

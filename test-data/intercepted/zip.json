@@ -1,0 +1,638 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/zip.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/zip.js",
+      "timestamp": 1769973929130
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "zip",
+      "timestamp": 1769973929133
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973929133
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.zip.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973929133
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.zip.drop",
+      "result": true,
+      "timestamp": 1769973929134
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973929134
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.zip.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        }
+      ],
+      "timestamp": 1769973929134
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.zip.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.zip.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973929135,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.zip.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": 3
+            }
+          }
+        }
+      ],
+      "expectedCode": 34460,
+      "message": "$zip requires an object as an argument.",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": []
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34465,
+      "message": "$zip requires at least one input array",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34461,
+      "message": "inputs is not an array",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "$a"
+                ],
+                "defaults": [
+                  "A"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34466,
+      "message": "cannot specify defaults unless useLongestLength is true.",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "$a"
+                ],
+                "defaults": [
+                  "A",
+                  "B"
+                ],
+                "useLongestLength": true
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34467,
+      "message": "inputs and defaults must be the same length.",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 19,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "$a"
+                ],
+                "defaults": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34462,
+      "message": "defaults is not an array",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 21,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "$a"
+                ],
+                "defaults": [
+                  "A"
+                ],
+                "useLongestLength": 1
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34463,
+      "message": "useLongestLength is not a bool",
+      "timestamp": 1769973929135
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929135,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 23,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "$a",
+                  "$b"
+                ],
+                "defaults": [
+                  "A"
+                ],
+                "notAField": 1
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34464,
+      "message": "unknown argument",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973929136,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 25,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  "A",
+                  "B"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "expectedCode": 34468,
+      "message": "an element of inputs was not an array.",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.zip",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 28,
+      "type": "function_call",
+      "path": "collection.zip.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "zipped": {
+                "$zip": {
+                  "inputs": [
+                    [
+                      1,
+                      2,
+                      3
+                    ],
+                    [
+                      "A",
+                      "B",
+                      "C"
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "zip",
+      "pipeline": [
+        {
+          "$project": {
+            "zipped": {
+              "$zip": {
+                "inputs": [
+                  [
+                    1,
+                    2,
+                    3
+                  ],
+                  [
+                    "A",
+                    "B",
+                    "C"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        }
+      ],
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973929136,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 28,
+      "type": "function_return",
+      "path": "collection.zip.aggregate",
+      "result": {},
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 37,
+      "type": "function_call",
+      "path": "collection.zip.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 38,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 39,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 37,
+      "type": "function_return",
+      "path": "collection.zip.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 41,
+      "type": "assert_eq",
+      "passed": false,
+      "actual": 1,
+      "expected": 0,
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "collection.zip.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973929136
+    },
+    {
+      "id": 43,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'zipped')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973929137
+    }
+  ],
+  "state": {
+    "collections": {
+      "zip": [
+        {
+          "long": [
+            1,
+            2,
+            3
+          ],
+          "short": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973929130,
+    "endTime": 1769973929137,
+    "totalOperations": 4
+  }
+}

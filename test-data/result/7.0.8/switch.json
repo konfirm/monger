@@ -1,0 +1,284 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/switch.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:47.813Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      1
+                    ]
+                  },
+                  "then": "one is equal to one!"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      1
+                    ]
+                  },
+                  "then": "one is equal to one!"
+                },
+                {
+                  "case": {
+                    "$eq": [
+                      2,
+                      2
+                    ]
+                  },
+                  "then": "two is equal to two!"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": {
+                    "$eq": [
+                      1,
+                      2
+                    ]
+                  },
+                  "then": "one is equal to two!"
+                }
+              ],
+              "default": "no case matched."
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": "Null was true!"
+                }
+              ],
+              "default": "No case matched."
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": "$missingField",
+                  "then": "Null was true!"
+                }
+              ],
+              "default": "No case matched."
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": true,
+                  "then": null
+                }
+              ],
+              "default": false
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": true,
+                  "then": "$missingField"
+                }
+              ],
+              "default": false
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": false
+                }
+              ],
+              "default": null
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "switch",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "output": {
+            "$switch": {
+              "branches": [
+                {
+                  "case": null,
+                  "then": false
+                }
+              ],
+              "default": "$missingField"
+            }
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

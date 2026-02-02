@@ -1,0 +1,34 @@
+{
+  "source": "expression_mod.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/expression_mod.js",
+  "extractedAt": "2026-02-01T19:19:16.287Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result.length",
+      "expected": "1, `Expected one result`",
+      "line": 80
+    },
+    {
+      "type": "eq",
+      "actual": "real",
+      "expected": "expected, `Result for ${key} has incorrect type or value, or is missing`",
+      "line": 85
+    },
+    {
+      "type": "commandWorked",
+      "result": "testDB.dropDatabase(",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

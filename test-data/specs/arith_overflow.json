@@ -1,0 +1,194 @@
+{
+  "source": "arith_overflow.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/arith_overflow.js",
+  "extractedAt": "2026-02-01T19:18:52.905Z",
+  "setup": {
+    "collections": {
+      "arith_overflow": [
+        {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        {
+          "_id": 1,
+          "lhs": {
+            "$numberLong": "9000000000000000000"
+          },
+          "rhs": {
+            "$numberLong": "-9000000000000000000"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 50,
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$add": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "2000000000"
+          }
+        },
+        {
+          "_id": 1,
+          "lhs": {
+            "$numberLong": "9000000000000000000"
+          },
+          "rhs": {
+            "$numberLong": "9000000000000000000"
+          }
+        }
+      ],
+      "timestamp": 1769973532718
+    },
+    {
+      "id": 122,
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$subtract": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        {
+          "_id": 1,
+          "lhs": {
+            "$numberLong": "9000000000000000000"
+          },
+          "rhs": {
+            "$numberLong": "-9000000000000000000"
+          }
+        }
+      ],
+      "timestamp": 1769973532719
+    },
+    {
+      "id": 152,
+      "type": "aggregate",
+      "collection": "arith_overflow",
+      "pipeline": [
+        {
+          "$project": {
+            "res": {
+              "$multiply": [
+                "$lhs",
+                "$rhs"
+              ]
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id": 1
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 0,
+          "lhs": {
+            "$numberInt": "2000000000"
+          },
+          "rhs": {
+            "$numberInt": "-2000000000"
+          }
+        },
+        {
+          "_id": 1,
+          "lhs": {
+            "$numberLong": "9000000000000000000"
+          },
+          "rhs": {
+            "$numberLong": "-9000000000000000000"
+          }
+        }
+      ],
+      "timestamp": 1769973532719
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "expectedResults",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, lhs: NumberInt(2e9",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, lhs: NumberLong(9e18",
+      "line": 16
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0, lhs: NumberInt(2e9",
+      "line": 22
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, lhs: NumberLong(9e18",
+      "line": 23
+    }
+  ],
+  "meta": {
+    "totalOperations": 203,
+    "totalAssertions": 5,
+    "errors": 0
+  }
+}

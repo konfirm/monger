@@ -1,0 +1,38 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/size.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:41.239Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "expression_size",
+      "pipeline": [
+        {
+          "$sort": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "length": {
+              "$size": "$arr"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: The argument to $size must be an array, but was of type: int",
+        "code": 17124
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: The argument to $size must be an array, but was of type: int"
+    }
+  ]
+}

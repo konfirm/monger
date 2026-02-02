@@ -1,0 +1,43 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/internal_js_emit.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:21.288Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "js_emit_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "emits": {
+              "$_internalJsEmit": {
+                "this": "$$ROOT"
+              }
+            },
+            "_id": 0
+          }
+        },
+        {
+          "$unwind": "$emits"
+        },
+        {
+          "$replaceRoot": {
+            "newRoot": "$emits"
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: The map function must be specified.",
+        "code": 31222
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: The map function must be specified."
+    }
+  ]
+}

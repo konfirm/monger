@@ -1,0 +1,30 @@
+{
+  "source": "rand.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/rand.js",
+  "extractedAt": "2026-02-01T19:19:37.563Z",
+  "setup": {
+    "collections": {
+      "expression_rand": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "resultArray.length",
+      "line": 18
+    },
+    {
+      "type": "commandWorked",
+      "result": "bulk.execute(",
+      "line": 14
+    }
+  ],
+  "meta": {
+    "totalOperations": 6,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

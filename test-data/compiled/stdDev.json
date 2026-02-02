@@ -1,0 +1,70 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/stdDev.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.090Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {},
+        "context": {
+          "num": 1,
+          "decimal": 1.23,
+          "null": null,
+          "arrSimple": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "arrEmpty": [],
+          "arrMixed": [
+            1,
+            2,
+            3,
+            4,
+            "hello",
+            null
+          ],
+          "arrMixed2": [
+            [],
+            7,
+            19,
+            21,
+            {}
+          ],
+          "arrDecimal": [
+            5.6,
+            3.4,
+            5.6,
+            8.23
+          ],
+          "arrNested": [
+            [
+              1
+            ]
+          ],
+          "arrNested2": [
+            [
+              [],
+              7,
+              19,
+              21,
+              {}
+            ]
+          ]
+        },
+        "expected": {
+          "error": "Argument \"pipeline\" must be an array of aggregation stages"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

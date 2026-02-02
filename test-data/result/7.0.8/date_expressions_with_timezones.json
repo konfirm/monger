@@ -1,0 +1,148 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/date_expressions_with_timezones.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:05.683Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": "$date"
+              },
+              "month": {
+                "$month": "$date"
+              },
+              "day": {
+                "$dayOfMonth": "$date"
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date",
+        "code": 5157904
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              },
+              "month": {
+                "$month": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              },
+              "day": {
+                "$dayOfMonth": {
+                  "date": "$date",
+                  "timezone": "America/New_York"
+                }
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date",
+        "code": 5157904
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "date_expressions_with_time_zones",
+      "pipeline": [
+        {
+          "$group": {
+            "_id": {
+              "year": {
+                "$year": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              },
+              "month": {
+                "$month": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              },
+              "day": {
+                "$dayOfMonth": {
+                  "date": "$date",
+                  "timezone": "Australia/Sydney"
+                }
+              }
+            },
+            "totalSales": {
+              "$sum": "$sales"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "_id.year": 1,
+            "_id.month": 1,
+            "_id.day": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date",
+        "code": 5157904
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: year parameter 'date' must be coercible to date"
+    }
+  ]
+}

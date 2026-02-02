@@ -1,0 +1,109 @@
+{
+  "source": "concat_arrays.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/concat_arrays.js",
+  "extractedAt": "2026-02-01T19:19:00.115Z",
+  "setup": {
+    "collections": {
+      "projection_expr_concat_arrays": [
+        {
+          "int_arr": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dbl_arr": [
+            10,
+            20.1,
+            20.4,
+            50.5
+          ],
+          "nested_arr": [
+            [
+              "an",
+              "array"
+            ],
+            "arr",
+            [
+              [],
+              [
+                [],
+                "a",
+                "b"
+              ]
+            ]
+          ],
+          "str_arr": [
+            "a",
+            "b",
+            "c"
+          ],
+          "obj_arr": [
+            {
+              "a": 1,
+              "b": 2
+            },
+            {
+              "c": 3
+            },
+            {
+              "d": 4,
+              "e": 5
+            }
+          ],
+          "null_arr": [
+            null,
+            null,
+            null
+          ],
+          "one_null_arr": [
+            null
+          ],
+          "one_str_arr": [
+            "one"
+          ],
+          "empty_arr": [],
+          "null_val": null,
+          "str_val": "a string",
+          "dbl_val": 2,
+          "int_val": 1,
+          "obj_val": {
+            "a": 1,
+            "b": "two"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insertOne({ int_arr: [1, 2, 3, 4], dbl_arr: [10.0, 20.1, 20.4, 50.5], nested_arr: [[\"an\", \"array\"], \"arr\", [[], [[], \"a\", \"b\"]]], str_arr: [\"a\", \"b\", \"c\"], obj_arr: [{a: 1, b: 2}, {c: 3}, {d: 4, e: 5}], null_arr: [null, null, null], one_null_arr: [null], one_str_arr: [\"one\"], empty_arr: [], null_val: null, str_val: \"a string\", dbl_val: 2.0, int_val: 1, obj_val: {a: 1, b: \"two\"}, }",
+      "line": 22
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insertMany([ {arr1: [42, 35.0, 197865432], arr2: [\"albatross\", \"abbacus\", \"alien\"]}, {arr1: [1], arr2: [\"albatross\", \"abbacus\", \"alien\"]}, {arr1: [1, 2, 3, 4, 5, 6, 11, 12, 23], arr2: []}, {arr1: [], arr2: [\"foo\", \"bar\"]}, {arr1: [], arr2: []}, {arr1: [1, 2, 3, 4, 5, 6, 11, 12, 23], arr2: null}, {some_field: \"foo\"}, ]",
+      "line": 170
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "28664",
+      "line": 53
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error",
+      "code": "28664",
+      "line": 60
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

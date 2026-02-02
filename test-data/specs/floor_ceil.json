@@ -1,0 +1,335 @@
+{
+  "source": "floor_ceil.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/floor_ceil.js",
+  "extractedAt": "2026-02-01T19:19:21.042Z",
+  "setup": {
+    "collections": {
+      "server19548": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 19,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": {
+                "$numberLong": "4"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560855
+    },
+    {
+      "id": 41,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560856
+    },
+    {
+      "id": 59,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560856
+    },
+    {
+      "id": 77,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560856
+    },
+    {
+      "id": 95,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560856
+    },
+    {
+      "id": 113,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": -2
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560857
+    },
+    {
+      "id": 131,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": 0.9
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560857
+    },
+    {
+      "id": 149,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$ceil": -1.2
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560857
+    },
+    {
+      "id": 175,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": {
+                "$numberLong": "4"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560857
+    },
+    {
+      "id": 197,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560857
+    },
+    {
+      "id": 215,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    },
+    {
+      "id": 233,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    },
+    {
+      "id": 251,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": null
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    },
+    {
+      "id": 269,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": -2
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    },
+    {
+      "id": 287,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": 0.9
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    },
+    {
+      "id": 305,
+      "type": "aggregate",
+      "collection": "server19548",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$floor": -1.2
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973560858
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 10
+    }
+  ],
+  "meta": {
+    "totalOperations": 363,
+    "totalAssertions": 1,
+    "errors": 0
+  }
+}

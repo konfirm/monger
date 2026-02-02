@@ -1,0 +1,428 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/expression_cond.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:11.196Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                {
+                  "$gt": [
+                    "$year",
+                    2000
+                  ]
+                },
+                "new",
+                "old"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "new"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                true,
+                {
+                  "$concat": [
+                    "n",
+                    "e",
+                    "w"
+                  ]
+                },
+                "old"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "new"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "new"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "new"
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                false,
+                "new",
+                {
+                  "$concat": [
+                    "o",
+                    "l",
+                    "d"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "old"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "A",
+                    "a"
+                  ]
+                },
+                "new",
+                {
+                  "$concat": [
+                    "o",
+                    "l",
+                    "d"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "old"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                null,
+                "new",
+                "old"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "old"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                null,
+                "new",
+                "old"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "old"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                true,
+                null,
+                "old"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": null
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": null
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": null
+        }
+      ],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": [
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": null
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": null
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": null
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": {
+                "if": {
+                  "$gt": [
+                    "$year",
+                    2000
+                  ]
+                },
+                "then": "new",
+                "else": "old"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "new"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "old"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expressionCond",
+      "pipeline": [
+        {
+          "$project": {
+            "year": 1,
+            "century": {
+              "$cond": {
+                "if": {
+                  "$gt": [
+                    "$year",
+                    2000
+                  ]
+                },
+                "then": "new",
+                "else": {
+                  "$cond": [
+                    {
+                      "$eq": [
+                        "$year",
+                        2000
+                      ]
+                    },
+                    "2000 was in XX century",
+                    "old"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "year": 1999,
+          "century": "old"
+        },
+        {
+          "_id": 1,
+          "year": 2021,
+          "century": "new"
+        },
+        {
+          "_id": 2,
+          "year": 2000,
+          "century": "2000 was in XX century"
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": []
+}

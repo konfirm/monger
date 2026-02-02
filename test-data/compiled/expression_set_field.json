@@ -1,0 +1,5050 @@
+{
+  "operator": "$setField",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/expression_set_field.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.048Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 39",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {
+                    "a": "b"
+                  },
+                  "value": 24
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a": 24
+            }
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 40",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {
+                    "b": "b"
+                  },
+                  "value": 24
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b": "b",
+              "a": 24
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 41",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {},
+                  "value": 24
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a": 24
+            }
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 42",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {
+                    "a": "b"
+                  },
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {}
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 43",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {
+                    "b": "b"
+                  },
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b": "b"
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 44",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {},
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {}
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 45",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": "a",
+                  "input": {
+                    "a": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {}
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 46",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": "a",
+                  "input": {
+                    "b": "b"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b": "b"
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 47",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": "a",
+                  "input": {}
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {}
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 51",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "0": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 52",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "0": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 53",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "0": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 54",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 55",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 57",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "1": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 58",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "1": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 59",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "1": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 60",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 61",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 63",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "2": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 64",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "2": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 65",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "2": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 66",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 67",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 69",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "3": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 70",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "3": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 71",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "3": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 72",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 73",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 75",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "4": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 76",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "4": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 77",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "4": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 78",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 79",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 81",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "5": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 82",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "5": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 83",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "5": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 84",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 85",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 87",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "6": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 88",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "6": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 89",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "6": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 90",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 91",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 93",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "7": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 94",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "7": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 95",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "7": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 96",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 97",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 99",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "8": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 100",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "8": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 101",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "8": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 102",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 103",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 105",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "9": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 106",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "9": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 107",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "9": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 108",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 109",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 111",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT",
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "10": 12345,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 112",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT",
+                  "value": "foo"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "10": "foo",
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 113",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT",
+                  "value": {
+                    "a": 23,
+                    "xy": {
+                      "a": 1,
+                      "b": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "10": {
+                "a": 23,
+                "xy": {
+                  "a": 1,
+                  "b": 2
+                }
+              },
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 114",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT",
+                  "value": "$$REMOVE"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 115",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 116",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a.b",
+                  "input": {
+                    "$const": {
+                      "a.b": "b"
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a.b": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 117",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": ".ab",
+                  "input": {
+                    "$const": {
+                      ".ab": "b"
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              ".ab": 12345
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 118",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "ab.",
+                  "input": {
+                    "$const": {
+                      "ab.": "b"
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "ab.": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 119",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a.b.c",
+                  "input": {
+                    "$const": {
+                      "a.b.c": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a.b.c": 12345
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 120",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a.b.c",
+                  "input": {
+                    "a": {
+                      "b": {
+                        "c": 5
+                      }
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a": {
+                "b": {
+                  "c": 5
+                }
+              },
+              "a.b.c": 12345
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 121",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a$b",
+                  "input": {
+                    "a$b": "b"
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a$b": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 122",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a$b.b",
+                  "input": {
+                    "$const": {
+                      "a$b.b": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a$b.b": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 123",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "a$b.b"
+                  },
+                  "input": {
+                    "$const": {
+                      "a$b.b": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "a$b.b": 12345
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 124",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$b.b"
+                  },
+                  "input": {
+                    "$const": {
+                      "$b.b": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$b.b": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 125",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$b"
+                  },
+                  "input": {
+                    "$const": {
+                      "$b": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$b": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 126",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$.ab"
+                  },
+                  "input": {
+                    "$const": {
+                      "$.ab": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$.ab": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 127",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$$xz"
+                  },
+                  "input": {
+                    "$const": {
+                      "$$xz": 5
+                    }
+                  },
+                  "value": 12345
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$$xz": 12345
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 128",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "b.c",
+                  "input": {
+                    "$setField": {
+                      "field": "b.c",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      },
+                      "value": "replace me"
+                    }
+                  },
+                  "value": "something"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b.c": "something"
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 129",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "x",
+                  "input": {
+                    "$setField": {
+                      "field": "b.c",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      },
+                      "value": "forget-me-not"
+                    }
+                  },
+                  "value": "something"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b.c": "forget-me-not",
+              "x": "something"
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 130",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "a",
+                  "input": {
+                    "$setField": {
+                      "field": "b.d",
+                      "input": {
+                        "$const": {
+                          "b.c": {
+                            "a": 5
+                          }
+                        }
+                      },
+                      "value": "forget-me-not"
+                    }
+                  },
+                  "value": "$_id"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "b.c": {
+                "a": 5
+              },
+              "b.d": "forget-me-not",
+              "a": 0
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 132",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "result": {
+                "$eq": [
+                  {
+                    "$getField": {
+                      "field": "foo",
+                      "input": {
+                        "$setField": {
+                          "field": "foo",
+                          "input": "$$ROOT",
+                          "value": 1234
+                        }
+                      }
+                    }
+                  },
+                  1234
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "result": true
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 133",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$x..$y"
+                  },
+                  "input": {},
+                  "value": {
+                    "$setField": {
+                      "field": {
+                        "$const": "$a"
+                      },
+                      "input": {
+                        "$getField": {
+                          "$const": "$x..$y"
+                        }
+                      },
+                      "value": "forget-me-not"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "$x..$y": {
+                "$a": "forget-me-not",
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 134",
+        "query": [
+          {
+            "$replaceWith": {
+              "$setField": {
+                "field": {
+                  "$const": "$x..$y"
+                },
+                "input": "$$ROOT",
+                "value": {
+                  "$setField": {
+                    "field": {
+                      "$const": "$a"
+                    },
+                    "input": {
+                      "$getField": {
+                        "$const": "$x..$y"
+                      }
+                    },
+                    "value": "forget-me-not"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "x": 1,
+            "a$b": "foo",
+            "$x..$y": {
+              "$a": "forget-me-not",
+              "$b..$c": 2
+            }
+          }
+        ],
+        "duration": 1
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 48",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": "not_going_to_be_a_field",
+                  "input": null,
+                  "value": 0
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 49",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$unsetField": {
+                  "field": "not_going_to_be_a_field",
+                  "input": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 50",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "0"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "0": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 56",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "1"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "1": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 62",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "2"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "2": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 68",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "3"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "3": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 74",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "4"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "4": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 80",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "5"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "5": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 86",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "6"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "6": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 92",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "7"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "7": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "description": "Aggregate operation 98",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "8"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "8": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 104",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "9"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "9": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 110",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "10"
+                  },
+                  "input": "$$ROOT",
+                  "value": null
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": {
+              "10": null,
+              "_id": 0,
+              "x": 1,
+              "a$b": "foo",
+              "$x..$y": {
+                "$a": 1,
+                "$b..$c": 2
+              }
+            }
+          }
+        ],
+        "duration": 2
+      },
+      {
+        "description": "Aggregate operation 131",
+        "query": [
+          {
+            "$project": {
+              "_id": 1,
+              "test": {
+                "$setField": {
+                  "field": {
+                    "$const": "$h.$i"
+                  },
+                  "input": {
+                    "$setField": {
+                      "field": {
+                        "$const": "$g.."
+                      },
+                      "input": "$e",
+                      "value": "forget-me-not"
+                    }
+                  },
+                  "value": "$_id"
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "test": null
+          }
+        ],
+        "duration": 2
+      }
+    ],
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$setField": {
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": {
+          "$setField": {}
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": {
+          "$unsetField": {
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": {
+          "$unsetField": {}
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": {
+          "$setField": {
+            "value": "a"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": {
+          "$setField": {
+            "value": "a",
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": {
+          "$setField": {
+            "field": "a"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'value' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": {
+          "$setField": {
+            "field": "a",
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'value' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": {
+          "$unsetField": {
+            "field": "a",
+            "value": "foo"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField found an unknown argument: value"
+        }
+      },
+      {
+        "description": "Aggregate operation 10",
+        "query": {
+          "$unsetField": {
+            "field": "a",
+            "value": null,
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField found an unknown argument: value"
+        }
+      },
+      {
+        "description": "Aggregate operation 11",
+        "query": {
+          "$setField": {
+            "field": null,
+            "value": 0
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'input' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 12",
+        "query": {
+          "$setField": {
+            "field": "foo",
+            "value": 0
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'input' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 13",
+        "query": {
+          "$unsetField": {
+            "field": null
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'input' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 14",
+        "query": {
+          "$unsetField": {
+            "field": "foo"
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'input' to be specified"
+        }
+      },
+      {
+        "description": "Aggregate operation 15",
+        "query": {
+          "$setField": {
+            "field": true,
+            "input": {
+              "a": "b"
+            },
+            "value": 24
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to evaluate to type String, but got bool"
+        }
+      },
+      {
+        "description": "Aggregate operation 16",
+        "query": {
+          "$setField": {
+            "field": {
+              "a": 1
+            },
+            "input": {
+              "a": 1
+            },
+            "value": 24
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 17",
+        "query": {
+          "$setField": {
+            "field": 33,
+            "input": 33,
+            "value": 24
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to evaluate to type String, but got int"
+        }
+      },
+      {
+        "description": "Aggregate operation 18",
+        "query": {
+          "$setField": {
+            "field": "a",
+            "input": true,
+            "value": 24
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $setField requires 'input' to evaluate to type Object"
+        }
+      },
+      {
+        "description": "Aggregate operation 19",
+        "query": {
+          "$unsetField": {
+            "field": true,
+            "input": {
+              "a": "b"
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to evaluate to type String, but got bool"
+        }
+      },
+      {
+        "description": "Aggregate operation 20",
+        "query": {
+          "$unsetField": {
+            "field": {
+              "a": 1
+            },
+            "input": {
+              "a": 1
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 21",
+        "query": {
+          "$unsetField": {
+            "field": 33,
+            "input": 33
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to evaluate to type String, but got int"
+        }
+      },
+      {
+        "description": "Aggregate operation 22",
+        "query": {
+          "$unsetField": {
+            "field": "a",
+            "input": true
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $setField requires 'input' to evaluate to type Object"
+        }
+      },
+      {
+        "description": "Aggregate operation 23",
+        "query": {
+          "$setField": {
+            "field": null,
+            "input": {},
+            "value": 0
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to evaluate to type String, but got null"
+        }
+      },
+      {
+        "description": "Aggregate operation 24",
+        "query": {
+          "$setField": {
+            "field": "$field_path",
+            "input": {},
+            "value": 0
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.field_path' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.field_path'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 25",
+        "query": {
+          "$setField": {
+            "field": {
+              "$concat": [
+                "a.b",
+                ".",
+                "c"
+              ]
+            },
+            "input": {
+              "$const": {
+                "a.b.c": 5
+              }
+            },
+            "value": 12345
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 26",
+        "query": {
+          "$unsetField": {
+            "field": null,
+            "input": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to evaluate to type String, but got null"
+        }
+      },
+      {
+        "description": "Aggregate operation 27",
+        "query": {
+          "$unsetField": {
+            "field": "$field_path",
+            "input": {}
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: '$CURRENT.field_path' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.field_path'}?"
+        }
+      },
+      {
+        "description": "Aggregate operation 28",
+        "query": {
+          "$unsetField": {
+            "field": {
+              "$concat": [
+                "a.b",
+                ".",
+                "c"
+              ]
+            },
+            "input": {
+              "$const": {
+                "a.b.c": 5
+              }
+            }
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField requires 'field' to evaluate to a constant, but got a non-constant argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 29",
+        "query": {
+          "$setField": 5
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 30",
+        "query": {
+          "$setField": true
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 31",
+        "query": {
+          "$setField": {
+            "$add": [
+              2,
+              3
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField found an unknown argument: $add"
+        }
+      },
+      {
+        "description": "Aggregate operation 32",
+        "query": {
+          "$setField": "foo"
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 33",
+        "query": {
+          "$unsetField": 5
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 34",
+        "query": {
+          "$unsetField": true
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 35",
+        "query": {
+          "$unsetField": {
+            "$add": [
+              2,
+              3
+            ]
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField found an unknown argument: $add"
+        }
+      },
+      {
+        "description": "Aggregate operation 36",
+        "query": {
+          "$unsetField": "foo"
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $unsetField only supports an object as its argument"
+        }
+      },
+      {
+        "description": "Aggregate operation 37",
+        "query": {
+          "$setField": {
+            "field": "a",
+            "input": {
+              "a": "b"
+            },
+            "unknown": true
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField found an unknown argument: unknown"
+        }
+      },
+      {
+        "description": "Aggregate operation 38",
+        "query": {
+          "$setField": {
+            "field": "a",
+            "input": {
+              "a": "b"
+            },
+            "value": 24,
+            "unknown": true
+          }
+        },
+        "context": {
+          "_id": 0,
+          "x": 1,
+          "a$b": "foo",
+          "$x..$y": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        "expected": {
+          "error": "Invalid $project :: caused by :: $setField found an unknown argument: unknown"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 134,
+    "totalDocuments": 1,
+    "errors": 38
+  }
+}

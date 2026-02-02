@@ -1,0 +1,116 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/expression_object.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/expression_object.js",
+      "timestamp": 1769973917324
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_object",
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_object",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_object.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_object.drop",
+      "result": true,
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.expression_object",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.expression_object.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": "doc1",
+          "field": "val1"
+        }
+      ],
+      "timestamp": 1769973917327
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.expression_object.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973917328,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.expression_object.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973917328,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.expression_object.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973917328
+    },
+    {
+      "id": 9,
+      "type": "test_error",
+      "error": {
+        "message": "documentEq is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973917329
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_object": [
+        {
+          "_id": "doc1",
+          "field": "val1"
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973917324,
+    "endTime": 1769973917328,
+    "totalOperations": 2
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/bitwise.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/bitwise.js",
+      "timestamp": 1769973911424
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973911427
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973911424,
+    "endTime": 1769973911427,
+    "totalOperations": 0
+  }
+}

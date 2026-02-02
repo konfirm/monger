@@ -1,0 +1,113 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/is_number.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:22.942Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$integerFieldPath"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "isNum": false
+        }
+      ],
+      "duration": 8,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "isNum": false
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$doubleFieldPath"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "isNum": true
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "isNum": true
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": []
+}

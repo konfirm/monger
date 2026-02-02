@@ -1,0 +1,26 @@
+{
+  "operator": "$toUpper",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/upperlower.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.094Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$toUpper": []
+        },
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Expression $toUpper takes exactly 1 arguments. 0 were passed in."
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 1
+  }
+}

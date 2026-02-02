@@ -1,0 +1,26 @@
+{
+  "source": "indexof_array.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/indexof_array.js",
+  "extractedAt": "2026-02-01T19:19:23.407Z",
+  "setup": {
+    "collections": {
+      "indexofarray": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 11
+    }
+  ],
+  "meta": {
+    "totalOperations": 11,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

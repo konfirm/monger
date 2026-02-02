@@ -1,0 +1,156 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/sqrt.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:43.363Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                100
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": 10
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": 0
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                {
+                  "$numberLong": "100"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'",
+        "code": 168
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                {
+                  "$numberLong": "9223372036854775807"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'",
+        "code": 168
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "sqrt",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sqrt": [
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "result": null
+        }
+      ],
+      "duration": 4,
+      "success": true
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Unrecognized expression '$numberLong'"
+    }
+  ]
+}

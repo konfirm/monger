@@ -1,0 +1,54 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/switch_errors.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.092Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$sortByCount": {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$literal": false
+                    },
+                    "then": 1
+                  },
+                  {
+                    "case": "$x",
+                    "then": {
+                      "$ifNull": [
+                        2,
+                        "$y"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "x": 1
+        },
+        "expected": [
+          {
+            "_id": 2,
+            "count": 1
+          }
+        ],
+        "duration": 7
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

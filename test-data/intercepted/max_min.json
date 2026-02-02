@@ -1,0 +1,505 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/max_min.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/max_min.js",
+      "timestamp": 1769973921117
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "collection",
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.collection.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.collection.drop",
+      "result": true,
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 5,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "insertOne",
+      "valueType": "function",
+      "timestamp": 1769973921120
+    },
+    {
+      "id": 7,
+      "type": "function_call",
+      "path": "collection.collection.insertOne",
+      "target": "insertOne",
+      "arguments": [
+        {
+          "int1": 5,
+          "int2": 10,
+          "str1": "hello",
+          "str2": "hello world",
+          "NaN": null,
+          "arr1": [
+            5
+          ],
+          "arr2": [
+            1,
+            2,
+            3
+          ],
+          "arr3": [
+            1,
+            2,
+            "string",
+            null
+          ],
+          "arr4": [],
+          "arrNest1": [
+            [
+              1,
+              2
+            ]
+          ],
+          "arrNest2": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "arrNest3": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "arrNest4": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            1
+          ],
+          "arrMixed1": [
+            [],
+            "hello",
+            [
+              "c"
+            ]
+          ],
+          "arrMixed2": [
+            [],
+            "hello",
+            [
+              "c"
+            ],
+            null
+          ],
+          "null": null,
+          "undefined1": [
+            null
+          ],
+          "undefined2": [
+            null,
+            2,
+            "string"
+          ]
+        }
+      ],
+      "timestamp": 1769973921121
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921122,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.collection.insertOne.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973921122,
+      "value": 1
+    },
+    {
+      "id": 7,
+      "type": "function_return",
+      "path": "collection.collection.insertOne",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973921122
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "collection.collection",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "path": "collection.collection.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "a": {
+              "$max": []
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 12,
+      "type": "aggregate",
+      "collection": "collection",
+      "pipeline": {
+        "$project": {
+          "a": {
+            "$max": []
+          }
+        }
+      },
+      "documents": [
+        {
+          "int1": 5,
+          "int2": 10,
+          "str1": "hello",
+          "str2": "hello world",
+          "NaN": null,
+          "arr1": [
+            5
+          ],
+          "arr2": [
+            1,
+            2,
+            3
+          ],
+          "arr3": [
+            1,
+            2,
+            "string",
+            null
+          ],
+          "arr4": [],
+          "arrNest1": [
+            [
+              1,
+              2
+            ]
+          ],
+          "arrNest2": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "arrNest3": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "arrNest4": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            1
+          ],
+          "arrMixed1": [
+            [],
+            "hello",
+            [
+              "c"
+            ]
+          ],
+          "arrMixed2": [
+            [],
+            "hello",
+            [
+              "c"
+            ],
+            null
+          ],
+          "null": null,
+          "undefined1": [
+            null
+          ],
+          "undefined2": [
+            null,
+            2,
+            "string"
+          ]
+        }
+      ],
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973921123,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 11,
+      "type": "function_return",
+      "path": "collection.collection.aggregate",
+      "result": {},
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 20,
+      "type": "function_call",
+      "path": "collection.collection.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 20,
+      "type": "function_return",
+      "path": "collection.collection.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.collection.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973921123
+    },
+    {
+      "id": 24,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'a')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973921123
+    }
+  ],
+  "state": {
+    "collections": {
+      "collection": [
+        {
+          "int1": 5,
+          "int2": 10,
+          "str1": "hello",
+          "str2": "hello world",
+          "NaN": null,
+          "arr1": [
+            5
+          ],
+          "arr2": [
+            1,
+            2,
+            3
+          ],
+          "arr3": [
+            1,
+            2,
+            "string",
+            null
+          ],
+          "arr4": [],
+          "arrNest1": [
+            [
+              1,
+              2
+            ]
+          ],
+          "arrNest2": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "arrNest3": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "arrNest4": [
+            [
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            1
+          ],
+          "arrMixed1": [
+            [],
+            "hello",
+            [
+              "c"
+            ]
+          ],
+          "arrMixed2": [
+            [],
+            "hello",
+            [
+              "c"
+            ],
+            null
+          ],
+          "null": null,
+          "undefined1": [
+            null
+          ],
+          "undefined2": [
+            null,
+            2,
+            "string"
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973921117,
+    "endTime": 1769973921123,
+    "totalOperations": 4
+  }
+}

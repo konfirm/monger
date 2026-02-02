@@ -1,0 +1,46 @@
+{
+  "source": "commutative_arithmetic_exprs.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/commutative_arithmetic_exprs.js",
+  "extractedAt": "2026-02-01T19:18:59.161Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate([{$project: {a: {[op]: [special.val, num]}, _id: 0}}]",
+      "line": 18
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate([{$project: {a: {[op]: [num, special.val]}, _id: 0}}]",
+      "line": 19
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate([{$project: {a: {[op]: [special.path, num]}, _id: 0}}]",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "coll.aggregate([{$project: {a: {[op]: [num, special.path]}, _id: 0}}]",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({inf: Infinity, nan: NaN}",
+      "line": 11
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 5,
+    "errors": 1
+  }
+}

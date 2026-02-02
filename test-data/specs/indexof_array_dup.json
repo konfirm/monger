@@ -1,0 +1,41 @@
+{
+  "source": "indexof_array_dup.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/indexof_array_dup.js",
+  "extractedAt": "2026-02-01T19:19:23.871Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, number: 222, idx: 2}]",
+      "expected": "c.aggregate([{$addFields: {idx: {$indexOfArray: [[111, 111, 222], \"$number\"]}}}]",
+      "line": 9
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, number: 222, idx: 2}]",
+      "expected": "c.aggregate([{$addFields: {idx: {$indexOfArray: [[111, 111, 222, 333], \"$number\"]}}}]",
+      "line": 15
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, number: 222, idx: -1}]",
+      "expected": "c.aggregate([{$addFields: {idx: {$indexOfArray: [[111, 111, 222, 333], \"$number\", 0, 1]}}}]",
+      "line": 21
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, number: 222, idx: 3}]",
+      "expected": "c.aggregate([{$addFields: {idx: {$indexOfArray: [[111, 111, 222, 222, 333], \"$number\", 3, 5]}}}]",
+      "line": 26
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

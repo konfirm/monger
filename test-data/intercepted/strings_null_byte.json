@@ -1,0 +1,30 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/strings_null_byte.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/strings_null_byte.js",
+      "timestamp": 1769973926835
+    },
+    {
+      "id": 2,
+      "type": "test_error",
+      "error": {
+        "message": "jsTestName is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973926838
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926835,
+    "endTime": 1769973926838,
+    "totalOperations": 0
+  }
+}

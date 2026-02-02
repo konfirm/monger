@@ -1,0 +1,87 @@
+{
+  "source": "object_ids_for_date_expressions.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js",
+  "extractedAt": "2026-02-01T19:19:35.220Z",
+  "setup": {
+    "collections": {
+      "server9406": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973575038
+    },
+    {
+      "id": 30,
+      "type": "aggregate",
+      "collection": "server9406",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$dateToString": {
+                "date": {
+                  "$oid": "14b12afff000000000000000"
+                },
+                "format": "%V-%G"
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973575040
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res2.result",
+      "expected": "res1.result, tojson(pipeline",
+      "line": 39
+    },
+    {
+      "type": "eq",
+      "actual": "testOpCount",
+      "expected": "236, \"Expected 236 tests to run\"",
+      "line": 93
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 11
+    }
+  ],
+  "meta": {
+    "totalOperations": 49,
+    "totalAssertions": 3,
+    "errors": 1
+  }
+}

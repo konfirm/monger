@@ -1,0 +1,32 @@
+{
+  "operator": "$add",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/add.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.970Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$add": []
+        },
+        "context": {
+          "x": 1
+        },
+        "expected": [
+          {
+            "_id": "697fafc5b7b138f1b0dc64d9",
+            "y": 0
+          }
+        ],
+        "duration": 6
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

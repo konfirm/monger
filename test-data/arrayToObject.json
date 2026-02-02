@@ -1,0 +1,467 @@
+{
+  "operator": "$arrayToObject",
+  "description": "Converts an array of key-value pairs to a document",
+  "mongodbVersion": "3.6",
+  "source": "mongo/jstests/aggregation/expressions/arrayToObject.js",
+  "implementationSource": "mongo/src/mongo/db/exec/expression/evaluate_array.cpp",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Tuple format: converts key-value pairs to object",
+        "expected": {
+          "price": 24,
+          "item": "apple"
+        },
+        "query": {
+          "$arrayToObject": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Object format: converts k-v objects to document",
+        "expected": {
+          "price": 24,
+          "item": "apple"
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": 24
+            },
+            {
+              "k": "item",
+              "v": "apple"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Duplicate keys - uses last value (tuple format)",
+        "expected": {
+          "price": 100
+        },
+        "query": {
+          "$arrayToObject": [
+            [
+              "price",
+              24
+            ],
+            [
+              "price",
+              100
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Duplicate keys - uses last value (object format)",
+        "expected": {
+          "price": 100
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": 24
+            },
+            {
+              "k": "price",
+              "v": 100
+            }
+          ]
+        }
+      },
+      {
+        "description": "Empty array returns empty object",
+        "expected": {},
+        "query": {
+          "$arrayToObject": []
+        }
+      },
+      {
+        "description": "Null input returns null",
+        "expected": null,
+        "query": {
+          "$arrayToObject": null
+        }
+      },
+      {
+        "description": "Undefined input returns null",
+        "expected": null,
+        "query": {
+          "$arrayToObject": "undefined"
+        }
+      },
+      {
+        "description": "Object format with null value",
+        "expected": {
+          "price": null
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": null
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format with undefined value",
+        "expected": {
+          "price": "undefined"
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": "undefined"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Missing field returns null",
+        "context": {
+          "_id": "test"
+        },
+        "expected": null,
+        "query": {
+          "$arrayToObject": "$nonExistentField"
+        }
+      }
+    ],
+    "errors": [
+      {
+        "description": "Mixed formats - tuple then object",
+        "mongodbErrorCode": 40391,
+        "mongodbErrorMessage": "$arrayToObject requires a consistent input format. Elements must all be arrays or all be objects. Object was detected, now found: <type>",
+        "expectedError": "arrayToObject requires consistent format",
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": 24
+            },
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Mixed formats - object then tuple",
+        "mongodbErrorCode": 40396,
+        "mongodbErrorMessage": "$arrayToObject requires a consistent input format. Elements must all be arrays or all be objects. Array was detected, now found: <type>",
+        "expectedError": "arrayToObject requires consistent format",
+        "query": {
+          "$arrayToObject": [
+            [
+              "item",
+              "apple"
+            ],
+            {
+              "k": "price",
+              "v": 24
+            }
+          ]
+        }
+      },
+      {
+        "description": "String input is invalid",
+        "mongodbErrorCode": 40386,
+        "mongodbErrorMessage": "$arrayToObject requires an array input, found: <type>",
+        "expectedError": "arrayToObject requires an array input",
+        "query": {
+          "$arrayToObject": "string"
+        }
+      },
+      {
+        "description": "ObjectId input is invalid",
+        "mongodbErrorCode": 40386,
+        "mongodbErrorMessage": "$arrayToObject requires an array input, found: <type>",
+        "expectedError": "arrayToObject requires an array input",
+        "query": {
+          "$arrayToObject": "ObjectId('000000000000000000000000')"
+        }
+      },
+      {
+        "description": "NumberLong input is invalid",
+        "mongodbErrorCode": 40386,
+        "mongodbErrorMessage": "$arrayToObject requires an array input, found: <type>",
+        "expectedError": "arrayToObject requires an array input",
+        "query": {
+          "$arrayToObject": 0
+        }
+      },
+      {
+        "description": "First element not array or object",
+        "mongodbErrorCode": 40398,
+        "mongodbErrorMessage": "Unrecognised input type format for $arrayToObject: <type>",
+        "expectedError": "arrayToObject element must be array or object",
+        "query": {
+          "$arrayToObject": [
+            0
+          ]
+        }
+      },
+      {
+        "description": "Tuple missing value",
+        "mongodbErrorCode": 40397,
+        "mongodbErrorMessage": "$arrayToObject requires an array of size 2 arrays, found array of size: <size>",
+        "expectedError": "arrayToObject tuple must have exactly 2 elements",
+        "query": {
+          "$arrayToObject": [
+            [
+              "missing_value"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Tuple with non-string key",
+        "mongodbErrorCode": 40395,
+        "mongodbErrorMessage": "$arrayToObject requires an array of key-value pairs, where the key must be of type string. Found key type: <type>",
+        "expectedError": "arrayToObject key must be a string",
+        "query": {
+          "$arrayToObject": [
+            [
+              321,
+              12
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Tuple with extra element",
+        "mongodbErrorCode": 40397,
+        "mongodbErrorMessage": "$arrayToObject requires an array of size 2 arrays, found array of size: <size>",
+        "expectedError": "arrayToObject tuple must have exactly 2 elements",
+        "query": {
+          "$arrayToObject": [
+            [
+              "key",
+              "value",
+              "offset"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Object input (not array)",
+        "mongodbErrorCode": 40386,
+        "mongodbErrorMessage": "$arrayToObject requires an array input, found: <type>",
+        "expectedError": "arrayToObject requires an array input",
+        "query": {
+          "$arrayToObject": {
+            "y": []
+          }
+        }
+      },
+      {
+        "description": "Object format with wrong number of keys (not 2)",
+        "mongodbErrorCode": 40392,
+        "mongodbErrorMessage": "$arrayToObject requires an object keys of 'k' and 'v'. Found incorrect number of keys: <size>",
+        "expectedError": "arrayToObject object must have exactly 2 keys",
+        "query": {
+          "$arrayToObject": [
+            {
+              "y": "x",
+              "x": "y"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format missing 'v' value",
+        "mongodbErrorCode": 40392,
+        "mongodbErrorMessage": "$arrayToObject requires an object keys of 'k' and 'v'. Found incorrect number of keys: <size>",
+        "expectedError": "arrayToObject object must have both 'k' and 'v' keys",
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "missing"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format with non-string 'k' (number)",
+        "mongodbErrorCode": 40394,
+        "mongodbErrorMessage": "$arrayToObject requires an object with keys 'k' and 'v', where the value of 'k' must be of type string. Found type: <type>",
+        "expectedError": "arrayToObject key must be a string",
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": 24,
+              "v": "string"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format with null 'k'",
+        "mongodbErrorCode": 40394,
+        "mongodbErrorMessage": "$arrayToObject requires an object with keys 'k' and 'v', where the value of 'k' must be of type string. Found type: <type>",
+        "expectedError": "arrayToObject key must be a string",
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": null,
+              "v": "nullKey"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format with undefined 'k'",
+        "note": "MongoDB treats undefined as missing in newer versions, behavior may vary",
+        "expected": {
+          "undefined": "undefinedKey"
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "undefined",
+              "v": "undefinedKey"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Object format with extra fields (allowed but ignored)",
+        "mongodbErrorCode": 40392,
+        "mongodbErrorMessage": "$arrayToObject requires an object keys of 'k' and 'v'. Found incorrect number of keys: <size>",
+        "expectedError": "arrayToObject object must have exactly 2 keys",
+        "query": {
+          "$arrayToObject": [
+            {
+              "y": "ignored",
+              "k": "item",
+              "v": "pear"
+            }
+          ]
+        }
+      },
+      {
+        "description": "NaN input is invalid",
+        "mongodbErrorCode": 40386,
+        "mongodbErrorMessage": "$arrayToObject requires an array input, found: <type>",
+        "expectedError": "arrayToObject requires an array input",
+        "query": {
+          "$arrayToObject": "NaN"
+        }
+      },
+      {
+        "description": "Tuple with null byte in key",
+        "mongodbErrorCode": 4940400,
+        "mongodbErrorMessage": "Key field cannot contain an embedded null byte",
+        "expectedError": "arrayToObject key cannot contain null bytes",
+        "query": {
+          "$arrayToObject": [
+            [
+              "a\u0000b",
+              "abra cadabra"
+            ]
+          ]
+        }
+      },
+      {
+        "description": "Object format with null byte in key",
+        "mongodbErrorCode": 4940401,
+        "mongodbErrorMessage": "Key field cannot contain an embedded null byte",
+        "expectedError": "arrayToObject key cannot contain null bytes",
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "a\u0000b",
+              "v": "blah"
+            }
+          ]
+        }
+      }
+    ],
+    "collationTests": [
+      {
+        "description": "Object format with case-insensitive collation preserves case",
+        "collation": {
+          "locale": "en_US",
+          "strength": 2
+        },
+        "expected": {
+          "price": 24,
+          "PRICE": 100
+        },
+        "query": {
+          "$arrayToObject": [
+            {
+              "k": "price",
+              "v": 24
+            },
+            {
+              "k": "PRICE",
+              "v": 100
+            }
+          ]
+        }
+      },
+      {
+        "description": "Tuple format with case-insensitive collation preserves case",
+        "collation": {
+          "locale": "en_US",
+          "strength": 2
+        },
+        "expected": {
+          "price": 24,
+          "PRICE": 100
+        },
+        "query": {
+          "$arrayToObject": [
+            [
+              "price",
+              24
+            ],
+            [
+              "PRICE",
+              100
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "extractedAt": "2026-02-01",
+    "updatedAt": "2026-02-01",
+    "totalTests": 28,
+    "happyPathCount": 10,
+    "errorCount": 19,
+    "collationTestCount": 2,
+    "errorCodesExtracted": true,
+    "errorMessagesExact": true,
+    "notes": [
+      "Input can be null, undefined, or missing - all return null",
+      "Empty array returns empty object, not null",
+      "Two formats supported: tuple [k, v] and object {k, v}",
+      "All elements must use the same format (no mixing)",
+      "Object format does NOT allow extra fields - exactly 2 keys required",
+      "Duplicate keys: last value wins",
+      "Keys must be strings, null/undefined/numbers rejected",
+      "Keys cannot contain null bytes (0x00)",
+      "Values can be any type including null/undefined"
+    ],
+    "mongodbSourceFiles": [
+      "mongo/src/mongo/db/exec/expression/evaluate_array.cpp (lines 151-255)"
+    ]
+  }
+}

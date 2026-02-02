@@ -1,0 +1,43 @@
+{
+  "source": "strcasecmp.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/strcasecmp.js",
+  "extractedAt": "2026-02-01T19:19:49.549Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_strcasecmp": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expected",
+      "expected": "strcasecmp(a, b",
+      "line": 21
+    },
+    {
+      "type": "eq",
+      "actual": "-expected",
+      "expected": "strcasecmp(b, a",
+      "line": 22
+    },
+    {
+      "type": "eq",
+      "actual": "expectedCmp",
+      "expected": "cmp(a, b",
+      "line": 27
+    },
+    {
+      "type": "eq",
+      "actual": "-expectedCmp",
+      "expected": "cmp(b, a",
+      "line": 28
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

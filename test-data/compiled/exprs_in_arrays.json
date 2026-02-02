@@ -1,0 +1,299 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/exprs_in_arrays.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.054Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": [
+                "constant",
+                1
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": [
+              "constant",
+              1
+            ]
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 3",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": [
+                {
+                  "$toLower": "FoO"
+                }
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": [
+              "foo"
+            ]
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 8",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": {
+                "$setIntersection": [
+                  [
+                    [
+                      1,
+                      "foo",
+                      "bar"
+                    ]
+                  ],
+                  [
+                    [
+                      1,
+                      {
+                        "$toLower": "FoO"
+                      },
+                      "$b"
+                    ]
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": []
+          }
+        ],
+        "duration": 3
+      }
+    ],
+    "nullCases": [
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": [
+                "$b"
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": [
+              null
+            ]
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 4",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": [
+                "$b",
+                {
+                  "$toLower": "FoO"
+                }
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": [
+              null,
+              "foo"
+            ]
+          }
+        ],
+        "duration": 3
+      },
+      {
+        "description": "Aggregate operation 5",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": [
+                "$b",
+                "constant",
+                [
+                  1,
+                  {
+                    "$toLower": "FoO"
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": [
+              null,
+              "constant",
+              [
+                1,
+                "foo"
+              ]
+            ]
+          }
+        ],
+        "duration": 6
+      },
+      {
+        "description": "Aggregate operation 6",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": {
+                "$setIntersection": [
+                  "$a",
+                  [
+                    "$b"
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": null
+          }
+        ],
+        "duration": 4
+      },
+      {
+        "description": "Aggregate operation 7",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "d": {
+                "$setIntersection": [
+                  "$a",
+                  [
+                    {
+                      "$toLower": "FoO"
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "d": null
+          }
+        ],
+        "duration": 5
+      },
+      {
+        "description": "Aggregate operation 9",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "coordinate": [
+                "$x",
+                "$y",
+                "$z"
+              ]
+            }
+          }
+        ],
+        "context": {
+          "_id": 1,
+          "x": 1,
+          "z": 2
+        },
+        "expected": [
+          {
+            "coordinate": [
+              1,
+              null,
+              2
+            ]
+          }
+        ],
+        "duration": 3
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 9,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}

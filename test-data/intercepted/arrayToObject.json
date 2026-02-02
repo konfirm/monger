@@ -1,0 +1,375 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/arrayToObject.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/arrayToObject.js",
+      "timestamp": 1769973910734
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "array_to_object_expr",
+      "timestamp": 1769973910737
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973910738
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973910738
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.drop",
+      "result": true,
+      "timestamp": 1769973910738
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973910738
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "_id": "sentinel",
+          "a": 1
+        }
+      ],
+      "timestamp": 1769973910738
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910739,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973910739,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.drop",
+      "result": true,
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 11,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973910739
+    },
+    {
+      "id": 13,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "expanded": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910740,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973910740,
+      "value": 1
+    },
+    {
+      "id": 13,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 17,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "collapsed": {
+                "$arrayToObject": "$expanded"
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 18,
+      "type": "aggregate",
+      "collection": "array_to_object_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "collapsed": {
+              "$arrayToObject": "$expanded"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "expanded": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      ],
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973910740,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 17,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.aggregate",
+      "result": {},
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 26,
+      "type": "function_call",
+      "path": "collection.array_to_object_expr.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 26,
+      "type": "function_return",
+      "path": "collection.array_to_object_expr.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "collection.array_to_object_expr.aggregate.result.toArray.result",
+      "property": "0",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973910740
+    },
+    {
+      "id": 30,
+      "type": "test_error",
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'collapsed')",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973910740
+    }
+  ],
+  "state": {
+    "collections": {
+      "array_to_object_expr": [
+        {
+          "expanded": [
+            [
+              "price",
+              24
+            ],
+            [
+              "item",
+              "apple"
+            ]
+          ]
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973910734,
+    "endTime": 1769973910740,
+    "totalOperations": 6
+  }
+}

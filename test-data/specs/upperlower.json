@@ -1,0 +1,74 @@
+{
+  "source": "upperlower.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/upperlower.js",
+  "extractedAt": "2026-02-01T19:19:56.655Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_upperlower": [
+        {}
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "jstests_aggregation_upperlower",
+      "pipeline": [
+        {
+          "$project": {
+            "upper": {
+              "$toUpper": []
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973596470
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expectedUpper",
+      "expected": "result.upper",
+      "line": 8
+    },
+    {
+      "type": "eq",
+      "actual": "expectedLower",
+      "expected": "result.lower",
+      "line": 9
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 5
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ string: \"-_ab\", longString: \"abcdefghijklmnopQRSTUVWXYZ123456789\", numberLong: NumberLong(\"2090845886852\"",
+      "line": 64
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error1",
+      "code": "[16020, 16007, ErrorCodes.TypeMismatch]",
+      "line": 14
+    },
+    {
+      "type": "commandFailedWithCode",
+      "function": "error2",
+      "code": "[16020, 16007, ErrorCodes.TypeMismatch]",
+      "line": 17
+    }
+  ],
+  "meta": {
+    "totalOperations": 22,
+    "totalAssertions": 6,
+    "errors": 1
+  }
+}

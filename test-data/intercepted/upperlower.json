@@ -1,0 +1,219 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/upperlower.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/upperlower.js",
+      "timestamp": 1769973928735
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "jstests_aggregation_upperlower",
+      "timestamp": 1769973928738
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973928738
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_upperlower.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_upperlower.drop",
+      "result": true,
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_upperlower.insert",
+      "target": "insert",
+      "arguments": [
+        {}
+      ],
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928739,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973928739,
+      "value": 1
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_upperlower.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973928739
+    },
+    {
+      "id": 10,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_upperlower.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        [
+          {
+            "$project": {
+              "upper": {
+                "$toUpper": []
+              }
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "jstests_aggregation_upperlower",
+      "pipeline": [
+        {
+          "$project": {
+            "upper": {
+              "$toUpper": []
+            }
+          }
+        }
+      ],
+      "documents": [
+        {}
+      ],
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973928740,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_upperlower.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 10,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_upperlower.aggregate",
+      "result": {},
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 18,
+      "type": "assert_throws",
+      "threw": false,
+      "error": null,
+      "timestamp": 1769973928740
+    },
+    {
+      "id": 19,
+      "type": "test_error",
+      "error": {
+        "message": "ErrorCodes is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973928740
+    }
+  ],
+  "state": {
+    "collections": {
+      "jstests_aggregation_upperlower": [
+        {}
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928735,
+    "endTime": 1769973928740,
+    "totalOperations": 3
+  }
+}

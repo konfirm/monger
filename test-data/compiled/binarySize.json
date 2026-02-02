@@ -1,0 +1,40 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/binarySize.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.995Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$sort": {
+              "_id": 1
+            }
+          },
+          {
+            "$addFields": {
+              "s": {
+                "$binarySize": "$x"
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "x": ""
+        },
+        "expected": {
+          "error": "PlanExecutor error during aggregation :: caused by :: $binarySize requires a string or BinData argument, found: object"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 9,
+    "errors": 1
+  }
+}

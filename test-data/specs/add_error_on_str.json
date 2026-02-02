@@ -1,0 +1,18 @@
+{
+  "source": "add_error_on_str.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/add_error_on_str.js",
+  "extractedAt": "2026-02-01T19:18:50.496Z",
+  "setup": {
+    "collections": {
+      "s6570": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

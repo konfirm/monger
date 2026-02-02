@@ -1,0 +1,239 @@
+{
+  "source": "concat_arrays2.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/concat_arrays2.js",
+  "extractedAt": "2026-02-01T19:19:00.589Z",
+  "setup": {
+    "collections": {
+      "agg_concat_arrays_expr": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 11,
+      "type": "aggregate",
+      "collection": "agg_concat_arrays_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "all": {
+              "$concatArrays": [
+                "$a",
+                "$b",
+                "$c"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ],
+      "timestamp": 1769973540404
+    },
+    {
+      "id": 29,
+      "type": "aggregate",
+      "collection": "agg_concat_arrays_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "all": {
+              "$concatArrays": [
+                "$a",
+                "$d"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ],
+      "timestamp": 1769973540405
+    },
+    {
+      "id": 47,
+      "type": "aggregate",
+      "collection": "agg_concat_arrays_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "all": {
+              "$concatArrays": [
+                "$a"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ],
+      "timestamp": 1769973540405
+    },
+    {
+      "id": 65,
+      "type": "aggregate",
+      "collection": "agg_concat_arrays_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "all": {
+              "$concatArrays": [
+                "$a",
+                "$e"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ],
+      "timestamp": 1769973540405
+    },
+    {
+      "id": 83,
+      "type": "aggregate",
+      "collection": "agg_concat_arrays_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "all": {
+              "$concatArrays": [
+                "$a",
+                "$f"
+              ]
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            "three"
+          ],
+          "c": [],
+          "d": [
+            [
+              3
+            ],
+            4
+          ],
+          "e": null,
+          "str": "x"
+        }
+      ],
+      "timestamp": 1769973540405
+    }
+  ],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: [1, 2], b: [\"three\"], c: [], d: [[3], 4], e: null, str: \"x\"}",
+      "line": 10
+    }
+  ],
+  "meta": {
+    "totalOperations": 113,
+    "totalAssertions": 1,
+    "errors": 0
+  }
+}

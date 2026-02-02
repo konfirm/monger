@@ -1,0 +1,25 @@
+{
+  "source": "week_sunday.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/week_sunday.js",
+  "extractedAt": "2026-02-01T19:19:57.598Z",
+  "setup": {
+    "collections": {
+      "jstests_aggregation_server6190": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "expectedWeek",
+      "expected": "week(date",
+      "line": 18
+    }
+  ],
+  "meta": {
+    "totalOperations": 7,
+    "totalAssertions": 1,
+    "errors": 1
+  }
+}

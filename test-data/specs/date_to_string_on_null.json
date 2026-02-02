@@ -1,0 +1,329 @@
+{
+  "source": "date_to_string_on_null.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/date_to_string_on_null.js",
+  "extractedAt": "2026-02-01T19:19:12.515Z",
+  "setup": {
+    "collections": {
+      "date_to_string_on_null": [
+        {
+          "_id": 0
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 16,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": null,
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552328
+    },
+    {
+      "id": 40,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "timezone": null,
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 60,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 84,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 104,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 128,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "2018-02-06T11:56:02Z",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "timezone": "$missing",
+              "onNull": {
+                "$date": "2017-07-04T11:56:02Z"
+              }
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 146,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": {}
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 164,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": 5
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 182,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": "Not a date"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552329
+    },
+    {
+      "id": 200,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": null
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552330
+    },
+    {
+      "id": 218,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552330
+    },
+    {
+      "id": 236,
+      "type": "aggregate",
+      "collection": "date_to_string_on_null",
+      "pipeline": {
+        "$project": {
+          "date": {
+            "$dateToString": {
+              "date": "$missing",
+              "format": "%Y-%m-%d %H:%M:%S",
+              "onNull": "$missing"
+            }
+          }
+        }
+      },
+      "documents": [
+        {
+          "_id": 0
+        }
+      ],
+      "timestamp": 1769973552330
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onNullValue}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: {date: nullishValue, format: \"%Y-%m-%d %H:%M:%S\", onNull: onNullValue}, }, }, }",
+      "line": 12
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: null}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: { date: \"2018-02-06T11:56:02Z\", format: \"%Y-%m-%d %H:%M:%S\", timezone: nullishValue, onNull: onNullValue, }, }, }, }",
+      "line": 27
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0, date: onNullValue}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: {date: \"$missing\", format: \"%Y-%m-%d %H:%M:%S\", onNull: onNullValue}, }, }, }",
+      "line": 48
+    },
+    {
+      "type": "eq",
+      "actual": "[{_id: 0}]",
+      "expected": "coll .aggregate({ $project: { date: { $dateToString: {date: \"$missing\", format: \"%Y-%m-%d %H:%M:%S\", onNull: \"$missing\"}, }, }, }",
+      "line": 64
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 0}",
+      "line": 8
+    }
+  ],
+  "meta": {
+    "totalOperations": 279,
+    "totalAssertions": 5,
+    "errors": 0
+  }
+}

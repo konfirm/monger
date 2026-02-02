@@ -1,0 +1,291 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/indexof_codepoints.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:20.836Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                4,
+                "$item"
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the first argument, found: int",
+        "code": 40093
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                4
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: int",
+        "code": 40094
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                null
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: null",
+        "code": 40094
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "$missing"
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: missing",
+        "code": 40094
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                "hello"
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral starting index, found a value of type: string, with value: \"hello\"",
+        "code": 40096
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a nonnegative starting index, found: -2",
+        "code": 40097
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                "hello"
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral ending index, found a value of type: string, with value: \"hello\"",
+        "code": 40096
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                -2
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a nonnegative ending index, found: -2",
+        "code": 40097
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1.4
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral starting index, found a value of type: double, with value: 1.4",
+        "code": 40096
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": [
+        {
+          "$project": {
+            "byteLocation": {
+              "$indexOfCP": [
+                "$item",
+                "bar",
+                1,
+                5.2
+              ]
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral ending index, found a value of type: double, with value: 5.2",
+        "code": 40096
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "indexofcp",
+      "pipeline": {
+        "$project": {
+          "byteLocation": {
+            "$indexOfCP": [
+              null,
+              "$item"
+            ]
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the first argument, found: int"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: int"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: null"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a string as the second argument, found: missing"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral starting index, found a value of type: string, with value: \"hello\""
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a nonnegative starting index, found: -2"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral ending index, found a value of type: string, with value: \"hello\""
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCP requires a nonnegative ending index, found: -2"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral starting index, found a value of type: double, with value: 1.4"
+    },
+    {
+      "operation": "aggregate",
+      "message": "PlanExecutor error during aggregation :: caused by :: $indexOfCPrequires an integral ending index, found a value of type: double, with value: 5.2"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

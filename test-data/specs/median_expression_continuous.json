@@ -1,0 +1,16 @@
+{
+  "source": "median_expression_continuous.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/median_expression_continuous.js",
+  "extractedAt": "2026-02-01T19:19:30.979Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/object_ids_for_date_expressions.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.066Z",
+  "tests": {
+    "errors": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$dateToString": {
+                  "date": {
+                    "$oid": "14b12afff000000000000000"
+                  },
+                  "format": "%V-%G"
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unrecognized expression '$oid'"
+        }
+      },
+      {
+        "description": "Aggregate operation 2",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$dateToString": {
+                  "date": {
+                    "$oid": "14b12afff000000000000000"
+                  },
+                  "format": "%V-%G"
+                }
+              }
+            }
+          }
+        ],
+        "context": {},
+        "expected": {
+          "error": "Invalid $project :: caused by :: Unrecognized expression '$oid'"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 2,
+    "totalDocuments": 1,
+    "errors": 2
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/day_of_expressions.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/day_of_expressions.js",
+      "timestamp": 1769973916364
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "dayOfExpressions",
+      "timestamp": 1769973916367
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973916367
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.dayOfExpressions.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.dayOfExpressions.drop",
+      "result": true,
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 6,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1960-01-02 03:04:05Z"
+      ],
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916368,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916368,
+      "value": "1960-01-02 03:04:05Z"
+    },
+    {
+      "id": 6,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1960-01-02 03:04:05Z"
+      },
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 9,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1970-01-01 00:00:00.000Z"
+      ],
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916368,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916368,
+      "value": "1970-01-01 00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1970-01-01 00:00:00.000Z"
+      },
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 12,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1980-05-20 12:53:64.834Z"
+      ],
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916368,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916368,
+      "value": "1980-05-20 12:53:64.834Z"
+    },
+    {
+      "id": 12,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1980-05-20 12:53:64.834Z"
+      },
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 15,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1999-12-31 00:00:00.000Z"
+      ],
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 16,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916368,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916368,
+      "value": "1999-12-31 00:00:00.000Z"
+    },
+    {
+      "id": 15,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1999-12-31 00:00:00.000Z"
+      },
+      "timestamp": 1769973916368
+    },
+    {
+      "id": 19,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 20,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1960-01-02 03:04:05Z"
+    },
+    {
+      "id": 21,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1970-01-01 00:00:00.000Z"
+    },
+    {
+      "id": 23,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 24,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1980-05-20 12:53:64.834Z"
+    },
+    {
+      "id": 25,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1999-12-31 00:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "type": "function_call",
+      "path": "collection.dayOfExpressions.insert",
+      "target": "insert",
+      "arguments": [
+        [
+          {
+            "date": {
+              "$date": "1960-01-02 03:04:05Z"
+            }
+          },
+          {
+            "date": {
+              "$date": "1970-01-01 00:00:00.000Z"
+            }
+          },
+          {
+            "date": {
+              "$date": "1980-05-20 12:53:64.834Z"
+            }
+          },
+          {
+            "date": {
+              "$date": "1999-12-31 00:00:00.000Z"
+            }
+          }
+        ]
+      ],
+      "timestamp": 1769973916369
+    },
+    {
+      "id": 27,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 28,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1960-01-02 03:04:05Z"
+    },
+    {
+      "id": 29,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 30,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1970-01-01 00:00:00.000Z"
+    },
+    {
+      "id": 31,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 32,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1980-05-20 12:53:64.834Z"
+    },
+    {
+      "id": 33,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916369,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 34,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916369,
+      "value": "1999-12-31 00:00:00.000Z"
+    },
+    {
+      "id": 35,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 36,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973916370,
+      "value": 4
+    },
+    {
+      "id": 18,
+      "type": "function_return",
+      "path": "collection.dayOfExpressions.insert",
+      "result": {
+        "nInserted": 4
+      },
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 37,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions",
+      "property": "aggregate",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 38,
+      "type": "function_call",
+      "path": "collection.dayOfExpressions.aggregate",
+      "target": "aggregate",
+      "arguments": [
+        {
+          "$project": {
+            "_id": 0,
+            "dayOfYear": {
+              "$dayOfYear": "$date"
+            },
+            "dayOfMonth": {
+              "$dayOfMonth": "$date"
+            },
+            "dayOfWeek": {
+              "$dayOfWeek": "$date"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 40,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 41,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916370,
+      "value": "1960-01-02 03:04:05Z"
+    },
+    {
+      "id": 42,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 43,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916370,
+      "value": "1970-01-01 00:00:00.000Z"
+    },
+    {
+      "id": 44,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 45,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916370,
+      "value": "1980-05-20 12:53:64.834Z"
+    },
+    {
+      "id": 46,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 47,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973916370,
+      "value": "1999-12-31 00:00:00.000Z"
+    },
+    {
+      "id": 39,
+      "type": "aggregate",
+      "collection": "dayOfExpressions",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "dayOfYear": {
+            "$dayOfYear": "$date"
+          },
+          "dayOfMonth": {
+            "$dayOfMonth": "$date"
+          },
+          "dayOfWeek": {
+            "$dayOfWeek": "$date"
+          }
+        }
+      },
+      "documents": [
+        {
+          "date": {
+            "$date": "1960-01-02 03:04:05Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1970-01-01 00:00:00.000Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1980-05-20 12:53:64.834Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1999-12-31 00:00:00.000Z"
+          }
+        }
+      ],
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 48,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973916370,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 49,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 50,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "map",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 51,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "forEach",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 52,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "hasNext",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 53,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "next",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 38,
+      "type": "function_return",
+      "path": "collection.dayOfExpressions.aggregate",
+      "result": {},
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 54,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result",
+      "property": "toArray",
+      "valueType": "function",
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 55,
+      "type": "function_call",
+      "path": "collection.dayOfExpressions.aggregate.result.toArray",
+      "target": "toArray",
+      "arguments": [],
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 56,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result.toArray.result",
+      "property": "toJSON",
+      "value": {
+        "__undefined": true
+      },
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 57,
+      "type": "property_get",
+      "path": "collection.dayOfExpressions.aggregate.result.toArray.result",
+      "property": "length",
+      "value": 0,
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 55,
+      "type": "function_return",
+      "path": "collection.dayOfExpressions.aggregate.result.toArray",
+      "result": [],
+      "timestamp": 1769973916370
+    },
+    {
+      "id": 58,
+      "type": "test_error",
+      "error": {
+        "message": "arrayEq is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973916370
+    }
+  ],
+  "state": {
+    "collections": {
+      "dayOfExpressions": [
+        {
+          "date": {
+            "$date": "1960-01-02 03:04:05Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1970-01-01 00:00:00.000Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1980-05-20 12:53:64.834Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1999-12-31 00:00:00.000Z"
+          }
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973916364,
+    "endTime": 1769973916370,
+    "totalOperations": 8
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "source": "is_number.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/is_number.js",
+  "extractedAt": "2026-02-01T19:19:27.195Z",
+  "setup": {
+    "collections": {
+      "isNumber_expr": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        },
+        {
+          "_id": 12,
+          "nestedPath": {
+            "nestedNumber": 56072.2
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 18,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 1
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$integerFieldPath"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        }
+      ],
+      "timestamp": 1769973567007
+    },
+    {
+      "id": 51,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 11
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        }
+      ],
+      "timestamp": 1769973567009
+    },
+    {
+      "id": 81,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 2
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$doubleFieldPath"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        }
+      ],
+      "timestamp": 1769973567009
+    },
+    {
+      "id": 111,
+      "type": "aggregate",
+      "collection": "isNumber_expr",
+      "pipeline": [
+        {
+          "$match": {
+            "_id": 12
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "isNum": {
+              "$isNumber": "$nestedPath.nestedNumber"
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "_id": 1,
+          "integerFieldPath": {
+            "$numberInt": "56072"
+          }
+        },
+        {
+          "_id": 11,
+          "nestedPath": {
+            "nestedNumber": {
+              "$numberInt": "500"
+            }
+          }
+        },
+        {
+          "_id": 2,
+          "doubleFieldPath": 56072.2
+        },
+        {
+          "_id": 12,
+          "nestedPath": {
+            "nestedNumber": 56072.2
+          }
+        }
+      ],
+      "timestamp": 1769973567009
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "expectedOutput",
+      "line": 11
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 1, integerFieldPath: NumberInt(56072",
+      "line": 15
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 11, nestedPath: {nestedNumber: NumberInt(500",
+      "line": 18
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 2, doubleFieldPath: 56072.2}",
+      "line": 22
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 12, nestedPath: {nestedNumber: 56072.2}}",
+      "line": 25
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 3, decimalFieldPath: NumberDecimal(\"1.234\"",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 13, nestedPath: {nestedNumber: NumberDecimal(\"1.234\"",
+      "line": 32
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 4, longFieldPath: NumberLong(\"123456789\"",
+      "line": 36
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 14, nestedPath: {nestedNumber: NumberLong(\"123456789\"",
+      "line": 39
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 5, nullFieldPath: null}",
+      "line": 43
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 15, nestedPath: {nestedNull: null}}",
+      "line": 46
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 6}",
+      "line": 50
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 16, nestedPath: {}}",
+      "line": 53
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 7, arrayFieldPath: [1]}",
+      "line": 57
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 17, nestedPath: {nestedArray: [1]}}",
+      "line": 60
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 8, stringFieldPath: \"1234\"}",
+      "line": 64
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 18, nestedPath: {nestedString: \"12345\"}}",
+      "line": 67
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 9, dateFieldPath: new Date(",
+      "line": 71
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 19, nestedPath: {nestedDate: new Date(",
+      "line": 74
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 10, binDataFieldPath: UUID(",
+      "line": 79
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 20, nestedPath: {nestedBinData: UUID(",
+      "line": 82
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({_id: 21}",
+      "line": 86
+    }
+  ],
+  "meta": {
+    "totalOperations": 147,
+    "totalAssertions": 22,
+    "errors": 1
+  }
+}

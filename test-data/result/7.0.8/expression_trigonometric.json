@@ -1,0 +1,843 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/expression_trigonometric.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:14.707Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 6,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$acosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$asinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atan2": [
+                "$y",
+                "$x"
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 5,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$atanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cos": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$cosh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sin": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$sinh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tan": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$tanh": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$degreesToRadians": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_trigonometric",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 0,
+            "result": {
+              "$radiansToDegrees": "$y"
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    }
+  ],
+  "errors": []
+}

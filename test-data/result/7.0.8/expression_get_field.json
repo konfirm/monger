@@ -1,0 +1,2907 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/expression_get_field.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:12.087Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to be specified",
+        "code": 3041702
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": "a"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'input' to be specified",
+        "code": 3041703
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": true,
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": {
+                  "a": 1
+                },
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": 5
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got int",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": true
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": null,
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got null",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                },
+                "unknown": true
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField found an unknown argument: unknown",
+        "code": 3041701
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$add": [
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$const": true
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$const": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got object",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": []
+                },
+                "input": {
+                  "a": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got array",
+        "code": 5654602
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "a": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "b"
+        },
+        {
+          "_id": 1,
+          "test": "b"
+        }
+      ],
+      "duration": 4,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$concat": [
+                    "a",
+                    "b"
+                  ]
+                },
+                "input": {
+                  "ab": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$cond": [
+                    false,
+                    null,
+                    "x"
+                  ]
+                },
+                "input": {
+                  "x": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$cond": [
+                    {
+                      "$eq": [
+                        "$y",
+                        9
+                      ]
+                    },
+                    null,
+                    "x"
+                  ]
+                },
+                "input": {
+                  "x": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "a"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "a$b"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "foo"
+        },
+        {
+          "_id": 1,
+          "test": "foo"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "a.b"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "bar"
+        },
+        {
+          "_id": 1,
+          "test": "bar"
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "x"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 0
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "a.$b"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": ".xy"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 0
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": ".$xz"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 0
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "..zz"
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 0
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$const": "$a"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 10
+        },
+        {
+          "_id": 1,
+          "test": 10
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$const": "$x.$y"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 20
+        },
+        {
+          "_id": 1,
+          "test": 20
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$const": "$x..$y"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        },
+        {
+          "_id": 1,
+          "test": {
+            "$a": 1,
+            "$b..$c": 2
+          }
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$f"
+                },
+                "input": "$e"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 30
+        },
+        {
+          "_id": 1,
+          "test": 30
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "$foo"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.foo' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.foo'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$concat": [
+                  "$letterB",
+                  "a",
+                  "r"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$maybeStr"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.maybeStr' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.maybeStr'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$a"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$a.b"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.a.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a.b'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$CURRENT.a"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$x"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.x'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$missing"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.missing' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.missing'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$arr.0.1.2.x"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.arr.0.1.2.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.1.2.x'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$concat": [
+                  "b",
+                  "a",
+                  "r"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$concat": [
+                  {
+                    "$getField": {
+                      "$const": "$b"
+                    }
+                  },
+                  "a",
+                  "r"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$getField": {
+                  "$getField": {
+                    "$const": "$.1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "$c.d"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "$arr.0.0.0.b"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.arr.0.0.0.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.0.0.b'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$add": [
+                  1,
+                  2
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$mod": [
+                  5,
+                  10
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$month": "$$NOW"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$ne": [
+                  "$x",
+                  1
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$toDouble": "2.5"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$reverseArray": "$items"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$mergeObjects": [
+                  "$c",
+                  "$e"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": {
+                "$mergeObjects": [
+                  null,
+                  null
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "$$CURRENT.c.d"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": "$$ROOT.c.d"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$ROOT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$ROOT.c.d'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$toString": "$$NOW"
+              }
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument",
+        "code": 5654601
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$NOW"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$NOW' is a field path reference which is not allowed in this context. Did you mean {$literal: '$NOW'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$REMOVE"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$REMOVE' is a field path reference which is not allowed in this context. Did you mean {$literal: '$REMOVE'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$DESCEND"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Use of undefined variable: DESCEND",
+        "code": 17276
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$PRUNE"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Use of undefined variable: PRUNE",
+        "code": 17276
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$KEEP"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: Use of undefined variable: KEEP",
+        "code": 17276
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$USER_ROLES"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$USER_ROLES' is a field path reference which is not allowed in this context. Did you mean {$literal: '$USER_ROLES'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$SEARCH_META"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$SEARCH_META' is a field path reference which is not allowed in this context. Did you mean {$literal: '$SEARCH_META'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "test": {
+              "$getField": "$$CLUSTER_TIME"
+            }
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$CLUSTER_TIME' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CLUSTER_TIME'}?",
+        "code": 5654600
+      },
+      "success": false
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a.b",
+                "input": {
+                  "$const": {
+                    "a.b": "b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "b"
+        },
+        {
+          "_id": 1,
+          "test": "b"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": ".ab",
+                "input": {
+                  "$const": {
+                    ".ab": "b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "b"
+        },
+        {
+          "_id": 1,
+          "test": "b"
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "ab.",
+                "input": {
+                  "$const": {
+                    "ab.": "b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "b"
+        },
+        {
+          "_id": 1,
+          "test": "b"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a.b.c",
+                "input": {
+                  "$const": {
+                    "a.b.c": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a.b.c",
+                "input": {
+                  "a": {
+                    "b": {
+                      "c": 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "d",
+                "input": {
+                  "$getField": "c"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "x"
+        },
+        {
+          "_id": 1,
+          "test": "x"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a$b",
+                "input": {
+                  "a$b": "b"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": "b"
+        },
+        {
+          "_id": 1,
+          "test": "b"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a$b.b",
+                "input": {
+                  "$const": {
+                    "a$b.b": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "a$b.b"
+                },
+                "input": {
+                  "$const": {
+                    "a$b.b": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$b.b"
+                },
+                "input": {
+                  "$const": {
+                    "$b.b": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$b"
+                },
+                "input": {
+                  "$const": {
+                    "$b": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$.ab"
+                },
+                "input": {
+                  "$const": {
+                    "$.ab": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$$xz"
+                },
+                "input": {
+                  "$const": {
+                    "$$xz": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": null
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": null
+        },
+        {
+          "_id": 1,
+          "test": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "b": 2,
+                  "c": 3
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 3,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "a": null,
+                  "b": 2,
+                  "c": 3
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": null
+        },
+        {
+          "_id": 1,
+          "test": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$a"
+                },
+                "input": {
+                  "$const": {
+                    "$a": null,
+                    "b": 2,
+                    "c": 3
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": null
+        },
+        {
+          "_id": 1,
+          "test": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {}
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$const": "$v.."
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": null
+        },
+        {
+          "_id": 1,
+          "test": null
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "$const": "$u.."
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "doesNotExist2",
+                "input": {
+                  "$getField": "doesNotExist1"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "x",
+                "input": {
+                  "$getField": "doesNotExist"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": true
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "$getField": {
+                    "field": "b.c",
+                    "input": {
+                      "$const": {
+                        "b.c": {
+                          "a": 5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 5
+        },
+        {
+          "_id": 1,
+          "test": 5
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "x",
+                "input": {
+                  "$getField": {
+                    "field": "b.c",
+                    "input": {
+                      "$const": {
+                        "b.c": {
+                          "a": 5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": "a",
+                "input": {
+                  "$getField": {
+                    "field": "b.d",
+                    "input": {
+                      "$const": {
+                        "b.c": {
+                          "a": 5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0
+        },
+        {
+          "_id": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$a"
+                },
+                "input": {
+                  "$getField": {
+                    "$const": "$x..$y"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 1
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$b..$c"
+                },
+                "input": {
+                  "$getField": {
+                    "$const": "$x..$y"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 2
+        },
+        {
+          "_id": 1,
+          "test": 2
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "a$b"
+                },
+                "input": {
+                  "$arrayElemAt": [
+                    [
+                      {
+                        "$const": {
+                          "a$b": 1
+                        }
+                      },
+                      {
+                        "$const": {
+                          "a$b": 2
+                        }
+                      }
+                    ],
+                    0
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 1
+        },
+        {
+          "_id": 1,
+          "test": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "a.."
+                },
+                "input": {
+                  "$arrayElemAt": [
+                    [
+                      {
+                        "$const": {
+                          "a..": 1
+                        }
+                      },
+                      {
+                        "$const": {
+                          "a..": 2
+                        }
+                      }
+                    ],
+                    1
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 2
+        },
+        {
+          "_id": 1,
+          "test": 2
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$a"
+                },
+                "input": {
+                  "$arrayElemAt": [
+                    "$f",
+                    0
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 41
+        },
+        {
+          "_id": 1,
+          "test": 41
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$project": {
+            "_id": 1,
+            "test": {
+              "$getField": {
+                "field": {
+                  "$const": "$b.."
+                },
+                "input": {
+                  "$arrayElemAt": [
+                    "$f",
+                    1
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "test": 42
+        },
+        {
+          "_id": 1,
+          "test": 42
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$match": {
+            "$expr": {
+              "$eq": [
+                {
+                  "$getField": "_id"
+                },
+                {
+                  "$getField": ".$xz"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$project": {
+            "aa": {
+              "$getField": ".$xz"
+            },
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "aa": 0
+        },
+        {
+          "_id": 1,
+          "aa": 1
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$match": {
+            "$expr": {
+              "$ne": [
+                {
+                  "$getField": "_id"
+                },
+                {
+                  "$getField": ".$xz"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": [],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$match": {
+            "$expr": {
+              "$ne": [
+                {
+                  "$getField": "_id"
+                },
+                {
+                  "$getField": "a.b"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$project": {
+            "a": {
+              "$getField": "x"
+            },
+            "b": {
+              "$getField": {
+                "$const": "a.b"
+              }
+            }
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "a": 0,
+          "b": "bar"
+        },
+        {
+          "_id": 1,
+          "a": 1,
+          "b": "bar"
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$addFields": {
+            "aa": {
+              "$getField": {
+                "$const": "a.b"
+              }
+            }
+          }
+        },
+        {
+          "$project": {
+            "aa": 1,
+            "_id": 1
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "aa": "bar"
+        },
+        {
+          "_id": 1,
+          "aa": "bar"
+        }
+      ],
+      "duration": 1,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$bucket": {
+            "groupBy": {
+              "$getField": {
+                "$const": "a.b"
+              }
+            },
+            "boundaries": [
+              "aaa",
+              "bar",
+              "zzz"
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": "bar",
+          "count": 2
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$bucket": {
+            "groupBy": {
+              "$getField": "x"
+            },
+            "boundaries": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        }
+      ],
+      "result": [
+        {
+          "_id": 0,
+          "count": 1
+        },
+        {
+          "_id": 1,
+          "count": 1
+        }
+      ],
+      "duration": 2,
+      "success": true
+    },
+    {
+      "type": "aggregate",
+      "collection": "expression_get_field",
+      "pipeline": [
+        {
+          "$lookup": {
+            "let": {
+              "field": "$lookupField"
+            },
+            "from": "expression_get_field_lookup_test",
+            "pipeline": [
+              {
+                "$project": {
+                  "field": {
+                    "$getField": {
+                      "field": "$$field",
+                      "input": "$$CURRENT"
+                    }
+                  }
+                }
+              }
+            ],
+            "as": "result"
+          }
+        },
+        {
+          "$project": {
+            "result": 1
+          }
+        }
+      ],
+      "error": {
+        "message": "Invalid $project :: caused by :: '$field' is a field path reference which is not allowed in this context. Did you mean {$literal: '$field'}?",
+        "code": 5654600
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to be specified"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'input' to be specified"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got int"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got null"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField found an unknown argument: unknown"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got bool"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got object"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to type String, but got array"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.foo' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.foo'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.maybeStr' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.maybeStr'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.a.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a.b'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.a' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.a'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.x'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.missing' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.missing'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.arr.0.1.2.x' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.1.2.x'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.arr.0.0.0.b' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.arr.0.0.0.b'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CURRENT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CURRENT.c.d'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$ROOT.c.d' is a field path reference which is not allowed in this context. Did you mean {$literal: '$ROOT.c.d'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: $getField requires 'field' to evaluate to a constant, but got a non-constant argument"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$NOW' is a field path reference which is not allowed in this context. Did you mean {$literal: '$NOW'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$REMOVE' is a field path reference which is not allowed in this context. Did you mean {$literal: '$REMOVE'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Use of undefined variable: DESCEND"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Use of undefined variable: PRUNE"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: Use of undefined variable: KEEP"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$USER_ROLES' is a field path reference which is not allowed in this context. Did you mean {$literal: '$USER_ROLES'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$SEARCH_META' is a field path reference which is not allowed in this context. Did you mean {$literal: '$SEARCH_META'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$CLUSTER_TIME' is a field path reference which is not allowed in this context. Did you mean {$literal: '$CLUSTER_TIME'}?"
+    },
+    {
+      "operation": "aggregate",
+      "message": "Invalid $project :: caused by :: '$field' is a field path reference which is not allowed in this context. Did you mean {$literal: '$field'}?"
+    }
+  ]
+}

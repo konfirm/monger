@@ -1,0 +1,257 @@
+{
+  "source": "reverseArray.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/reverseArray.js",
+  "extractedAt": "2026-02-01T19:19:42.906Z",
+  "setup": {
+    "collections": {
+      "reverseArray": [
+        {
+          "nullField": null,
+          "embedded": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "singleElem": [
+            1
+          ],
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "num": 1,
+          "empty": []
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 15,
+      "type": "aggregate",
+      "collection": "reverseArray",
+      "pipeline": [
+        {
+          "$project": {
+            "reversed": {
+              "$reverseArray": {
+                "$literal": [
+                  1,
+                  2
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "documents": [
+        {
+          "nullField": null,
+          "embedded": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "singleElem": [
+            1
+          ],
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "num": 1,
+          "empty": []
+        }
+      ],
+      "timestamp": 1769973582721
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 28
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[2, 1]",
+      "line": 29
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 33
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[[1, 2]]",
+      "line": 34
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 38
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "null",
+      "line": 39
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 56
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[ [3, 4], [1, 2], ]",
+      "line": 57
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 64
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[ [3, 4], [1, 2], ]",
+      "line": 65
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 72
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "null",
+      "line": 73
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 77
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "null",
+      "line": 78
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 82
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "null",
+      "line": 83
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 87
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "null",
+      "line": 88
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 92
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[1]",
+      "line": 93
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 97
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[1]",
+      "line": 98
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 102
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[3, 2, 1]",
+      "line": 103
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 107
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[]",
+      "line": 108
+    },
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "output.length",
+      "line": 112
+    },
+    {
+      "type": "eq",
+      "actual": "output[0].reversed",
+      "expected": "[]",
+      "line": 113
+    }
+  ],
+  "meta": {
+    "totalOperations": 33,
+    "totalAssertions": 28,
+    "errors": 1
+  }
+}

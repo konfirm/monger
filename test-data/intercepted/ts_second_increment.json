@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/ts_second_increment.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/ts_second_increment.js",
+      "timestamp": 1769973928470
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "getSiblingDB",
+      "timestamp": 1769973928473
+    },
+    {
+      "id": 3,
+      "type": "test_error",
+      "error": {
+        "message": "db.getSiblingDB is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973928474
+    }
+  ],
+  "state": {
+    "collections": {},
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973928470,
+    "endTime": 1769973928474,
+    "totalOperations": 0
+  }
+}

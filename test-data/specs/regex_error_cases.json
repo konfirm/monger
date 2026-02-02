@@ -1,0 +1,29 @@
+{
+  "source": "regex_error_cases.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/regex_error_cases.js",
+  "extractedAt": "2026-02-01T19:19:40.996Z",
+  "setup": {
+    "collections": {
+      "regex_error_cases": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "commandWorked",
+      "result": "db.adminCommand({\"configureFailPoint\": \"disablePipelineOptimization\", \"mode\": \"alwaysOn\"}",
+      "line": 47
+    },
+    {
+      "type": "commandWorked",
+      "result": "db.adminCommand({\"configureFailPoint\": \"disablePipelineOptimization\", \"mode\": \"off\"}",
+      "line": 73
+    }
+  ],
+  "meta": {
+    "totalOperations": 6,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/regex_error_cases.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/regex_error_cases.js",
+      "timestamp": 1769973924282
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "regex_error_cases",
+      "timestamp": 1769973924286
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.regex_error_cases",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973924286
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.regex_error_cases.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973924286
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.regex_error_cases.drop",
+      "result": true,
+      "timestamp": 1769973924286
+    },
+    {
+      "id": 5,
+      "type": "test_error",
+      "error": {
+        "message": "executeAggregationTestCase is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973924287
+    }
+  ],
+  "state": {
+    "collections": {
+      "regex_error_cases": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973924282,
+    "endTime": 1769973924287,
+    "totalOperations": 1
+  }
+}

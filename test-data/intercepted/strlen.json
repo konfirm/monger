@@ -1,0 +1,253 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/strlen.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/strlen.js",
+      "timestamp": 1769973926966
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "substr",
+      "timestamp": 1769973926969
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973926969
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.substr.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973926969
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.substr.drop",
+      "result": true,
+      "timestamp": 1769973926970
+    },
+    {
+      "id": 5,
+      "type": "assert",
+      "condition": true,
+      "timestamp": 1769973926970
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "insert",
+      "valueType": "function",
+      "timestamp": 1769973926970
+    },
+    {
+      "id": 7,
+      "type": "function_call",
+      "path": "collection.substr.insert",
+      "target": "insert",
+      "arguments": [
+        {
+          "strField": "MyString",
+          "intField": 1,
+          "nullField": null,
+          "specialCharField": "é",
+          "specialCharField2": "匣6卜十戈大中金",
+          "specialCharField3": "i ♥ u"
+        }
+      ],
+      "timestamp": 1769973926970
+    },
+    {
+      "id": 8,
+      "type": "property_get",
+      "path": "collection.substr.insert.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973926971,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "collection.substr.insert.result",
+      "property": "nInserted",
+      "valueType": "number",
+      "timestamp": 1769973926971,
+      "value": 1
+    },
+    {
+      "id": 7,
+      "type": "function_return",
+      "path": "collection.substr.insert",
+      "result": {
+        "nInserted": 1
+      },
+      "timestamp": 1769973926971
+    },
+    {
+      "id": 11,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973926972,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "strLen": {
+              "$strLenCP": 1
+            }
+          }
+        }
+      ],
+      "expectedCode": 5155900,
+      "message": "$strLenCP requires a string argument.",
+      "timestamp": 1769973926972
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973926972,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 12,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "strLen": {
+              "$strLenCP": "$intField"
+            }
+          }
+        }
+      ],
+      "expectedCode": 5155900,
+      "message": "$strLenCP requires a string argument.",
+      "timestamp": 1769973926972
+    },
+    {
+      "id": 15,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973926972,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "strLen": {
+              "$strLenCP": "$nullField"
+            }
+          }
+        }
+      ],
+      "expectedCode": 5155900,
+      "message": "$strLenCP requires a string argument.",
+      "timestamp": 1769973926972
+    },
+    {
+      "id": 17,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "_name",
+      "valueType": "undefined",
+      "timestamp": 1769973926972,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 16,
+      "type": "assertErrorCode",
+      "collection": "unknown",
+      "pipeline": [
+        {
+          "$project": {
+            "strLen": {
+              "$strLenCP": "$b"
+            }
+          }
+        }
+      ],
+      "expectedCode": 5155900,
+      "message": "$strLenCP requires a string argument.",
+      "timestamp": 1769973926972
+    },
+    {
+      "id": 18,
+      "type": "property_get",
+      "path": "collection.substr",
+      "property": "runCommand",
+      "valueType": "undefined",
+      "timestamp": 1769973926972,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 19,
+      "type": "test_error",
+      "error": {
+        "message": "coll.runCommand is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973926972
+    }
+  ],
+  "state": {
+    "collections": {
+      "substr": [
+        {
+          "strField": "MyString",
+          "intField": 1,
+          "nullField": null,
+          "specialCharField": "é",
+          "specialCharField2": "匣6卜十戈大中金",
+          "specialCharField3": "i ♥ u"
+        }
+      ]
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926966,
+    "endTime": 1769973926972,
+    "totalOperations": 2
+  }
+}

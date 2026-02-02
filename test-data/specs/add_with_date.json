@@ -1,0 +1,28 @@
+{
+  "source": "add_with_date.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/add_with_date.js",
+  "extractedAt": "2026-02-01T19:18:51.461Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "1",
+      "expected": "resultArray.length, \"ERROR from \" + tojson(expr",
+      "line": 8
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({ _id: 0, decimalVal: NumberDecimal(\"819.5359123621083\"",
+      "line": 12
+    }
+  ],
+  "meta": {
+    "totalOperations": 3,
+    "totalAssertions": 2,
+    "errors": 1
+  }
+}

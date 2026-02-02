@@ -1,0 +1,8 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/arithmetic_constant_folding.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:55:52.297Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [],
+  "errors": []
+}

@@ -1,0 +1,72 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/strcasecmp.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/strcasecmp.js",
+      "timestamp": 1769973926702
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "jstests_aggregation_strcasecmp",
+      "timestamp": 1769973926706
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_strcasecmp",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973926706
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.jstests_aggregation_strcasecmp.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973926706
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.jstests_aggregation_strcasecmp.drop",
+      "result": true,
+      "timestamp": 1769973926706
+    },
+    {
+      "id": 5,
+      "type": "property_get",
+      "path": "collection.jstests_aggregation_strcasecmp",
+      "property": "save",
+      "valueType": "undefined",
+      "timestamp": 1769973926706,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "test_error",
+      "error": {
+        "message": "t.save is not a function",
+        "name": "TypeError"
+      },
+      "timestamp": 1769973926707
+    }
+  ],
+  "state": {
+    "collections": {
+      "jstests_aggregation_strcasecmp": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973926702,
+    "endTime": 1769973926707,
+    "totalOperations": 1
+  }
+}

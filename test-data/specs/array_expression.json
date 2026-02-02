@@ -1,0 +1,79 @@
+{
+  "source": "array_expression.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/array_expression.js",
+  "extractedAt": "2026-02-01T19:18:54.849Z",
+  "setup": {
+    "collections": {
+      "array_expr": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 14,
+      "type": "aggregate",
+      "collection": "array_expr",
+      "pipeline": [
+        {
+          "$project": {
+            "out": [
+              "$a",
+              "$b"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "timestamp": 1769973534662
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "expArray",
+      "line": 15
+    },
+    {
+      "type": "eq",
+      "actual": "result",
+      "expected": "[]",
+      "line": 29
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 8
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: inputs[0]}",
+      "line": 10
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({a: inputs[0], b: inputs[1]}",
+      "line": 12
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert({}",
+      "line": 27
+    }
+  ],
+  "meta": {
+    "totalOperations": 31,
+    "totalAssertions": 6,
+    "errors": 1
+  }
+}

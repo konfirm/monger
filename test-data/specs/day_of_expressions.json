@@ -1,0 +1,104 @@
+{
+  "source": "day_of_expressions.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/day_of_expressions.js",
+  "extractedAt": "2026-02-01T19:19:13.457Z",
+  "setup": {
+    "collections": {
+      "dayOfExpressions": [
+        {
+          "date": {
+            "$date": "1960-01-02 03:04:05Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1970-01-01 00:00:00.000Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1980-05-20 12:53:64.834Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1999-12-31 00:00:00.000Z"
+          }
+        }
+      ]
+    },
+    "inserts": []
+  },
+  "operations": [
+    {
+      "id": 39,
+      "type": "aggregate",
+      "collection": "dayOfExpressions",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "dayOfYear": {
+            "$dayOfYear": "$date"
+          },
+          "dayOfMonth": {
+            "$dayOfMonth": "$date"
+          },
+          "dayOfWeek": {
+            "$dayOfWeek": "$date"
+          }
+        }
+      },
+      "documents": [
+        {
+          "date": {
+            "$date": "1960-01-02 03:04:05Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1970-01-01 00:00:00.000Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1980-05-20 12:53:64.834Z"
+          }
+        },
+        {
+          "date": {
+            "$date": "1999-12-31 00:00:00.000Z"
+          }
+        }
+      ],
+      "timestamp": 1769973553272
+    }
+  ],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "res[0]",
+      "expected": "res[1]",
+      "line": 62
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {date: ISODate(\"1960-01-02 03:04:05Z\"",
+      "line": 13
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {_id: 1, date: new Timestamp(1341337661, 1",
+      "line": 45
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert([ {date: ISODate(\"2011-01-14\"",
+      "line": 68
+    }
+  ],
+  "meta": {
+    "totalOperations": 66,
+    "totalAssertions": 4,
+    "errors": 1
+  }
+}

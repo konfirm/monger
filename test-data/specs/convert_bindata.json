@@ -1,0 +1,18 @@
+{
+  "source": "convert_bindata.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/convert_bindata.js",
+  "extractedAt": "2026-02-01T19:19:03.423Z",
+  "setup": {
+    "collections": {
+      "expression_convert_bindata": []
+    },
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [],
+  "meta": {
+    "totalOperations": 18,
+    "totalAssertions": 0,
+    "errors": 1
+  }
+}

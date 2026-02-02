@@ -1,0 +1,36 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/day_of_expressions.js",
+  "mongoVersion": "7.0.8",
+  "executedAt": "2026-02-01T19:56:09.962Z",
+  "mongoUri": "mongodb://localhost:27017",
+  "operations": [
+    {
+      "type": "aggregate",
+      "collection": "dayOfExpressions",
+      "pipeline": {
+        "$project": {
+          "_id": 0,
+          "dayOfYear": {
+            "$dayOfYear": "$date"
+          },
+          "dayOfMonth": {
+            "$dayOfMonth": "$date"
+          },
+          "dayOfWeek": {
+            "$dayOfWeek": "$date"
+          }
+        }
+      },
+      "error": {
+        "message": "Argument \"pipeline\" must be an array of aggregation stages"
+      },
+      "success": false
+    }
+  ],
+  "errors": [
+    {
+      "operation": "aggregate",
+      "message": "Argument \"pipeline\" must be an array of aggregation stages"
+    }
+  ]
+}

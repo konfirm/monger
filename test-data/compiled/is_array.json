@@ -1,0 +1,73 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/is_array.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:04.060Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": {
+          "$isArray": "$x"
+        },
+        "context": {
+          "_id": 0,
+          "x": 0
+        },
+        "expected": [
+          {
+            "_id": 0,
+            "isArray": false
+          },
+          {
+            "_id": 1,
+            "isArray": false
+          },
+          {
+            "_id": 2,
+            "isArray": false
+          },
+          {
+            "_id": 3,
+            "isArray": false
+          },
+          {
+            "_id": 4,
+            "isArray": false
+          },
+          {
+            "_id": 5,
+            "isArray": false
+          },
+          {
+            "_id": 6,
+            "isArray": false
+          },
+          {
+            "_id": 7,
+            "isArray": false
+          },
+          {
+            "_id": 8,
+            "isArray": true
+          },
+          {
+            "_id": 9,
+            "isArray": true
+          },
+          {
+            "_id": 10,
+            "isArray": true
+          }
+        ],
+        "duration": 7
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 11,
+    "errors": 0
+  }
+}

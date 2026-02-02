@@ -1,0 +1,178 @@
+{
+  "source": "mongo/jstests/aggregation/expressions/convert_bindata.js",
+  "sequence": [
+    {
+      "id": 1,
+      "type": "test_start",
+      "file": "mongo/jstests/aggregation/expressions/convert_bindata.js",
+      "timestamp": 1769973913490
+    },
+    {
+      "id": 2,
+      "type": "db_access",
+      "property": "expression_convert_bindata",
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 3,
+      "type": "property_get",
+      "path": "collection.expression_convert_bindata",
+      "property": "drop",
+      "valueType": "function",
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 4,
+      "type": "function_call",
+      "path": "collection.expression_convert_bindata.drop",
+      "target": "drop",
+      "arguments": [],
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 4,
+      "type": "function_return",
+      "path": "collection.expression_convert_bindata.drop",
+      "result": true,
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 5,
+      "type": "function_call",
+      "path": "ISODate",
+      "target": "ISODate",
+      "arguments": [
+        "1970-01-01T00:00:00.001Z"
+      ],
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 6,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973913494,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "property_get",
+      "path": "ISODate.result",
+      "property": "$date",
+      "valueType": "string",
+      "timestamp": 1769973913494,
+      "value": "1970-01-01T00:00:00.001Z"
+    },
+    {
+      "id": 5,
+      "type": "function_return",
+      "path": "ISODate",
+      "result": {
+        "$date": "1970-01-01T00:00:00.001Z"
+      },
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 8,
+      "type": "function_call",
+      "path": "NumberInt",
+      "target": "NumberInt",
+      "arguments": [
+        1
+      ],
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 9,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973913494,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "property_get",
+      "path": "NumberInt.result",
+      "property": "$numberInt",
+      "valueType": "string",
+      "timestamp": 1769973913494,
+      "value": "1"
+    },
+    {
+      "id": 8,
+      "type": "function_return",
+      "path": "NumberInt",
+      "result": {
+        "$numberInt": "1"
+      },
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 11,
+      "type": "function_call",
+      "path": "NumberLong",
+      "target": "NumberLong",
+      "arguments": [
+        1
+      ],
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 12,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "toJSON",
+      "valueType": "undefined",
+      "timestamp": 1769973913494,
+      "value": {
+        "__undefined": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "property_get",
+      "path": "NumberLong.result",
+      "property": "$numberLong",
+      "valueType": "string",
+      "timestamp": 1769973913494,
+      "value": "1"
+    },
+    {
+      "id": 11,
+      "type": "function_return",
+      "path": "NumberLong",
+      "result": {
+        "$numberLong": "1"
+      },
+      "timestamp": 1769973913494
+    },
+    {
+      "id": 14,
+      "type": "test_error",
+      "error": {
+        "message": "NumberDecimal is not defined",
+        "name": "ReferenceError"
+      },
+      "timestamp": 1769973913495
+    }
+  ],
+  "state": {
+    "collections": {
+      "expression_convert_bindata": []
+    },
+    "globals": {},
+    "variables": {}
+  },
+  "meta": {
+    "startTime": 1769973913490,
+    "endTime": 1769973913495,
+    "totalOperations": 4
+  }
+}

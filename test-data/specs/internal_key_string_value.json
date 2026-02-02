@@ -1,0 +1,116 @@
+{
+  "source": "internal_key_string_value.js",
+  "fullPath": "mongo/jstests/aggregation/expressions/internal_key_string_value.js",
+  "extractedAt": "2026-02-01T19:19:26.240Z",
+  "setup": {
+    "collections": {},
+    "inserts": []
+  },
+  "operations": [],
+  "expectations": [
+    {
+      "type": "eq",
+      "actual": "results",
+      "expected": "[ {_id: 0, a: NumberInt(1",
+      "line": 22
+    },
+    {
+      "type": "eq",
+      "actual": "docs.length",
+      "expected": "results.length, results",
+      "line": 49
+    },
+    {
+      "type": "eq",
+      "actual": "docs.length",
+      "expected": "results.length, results",
+      "line": 66
+    },
+    {
+      "type": "eq",
+      "actual": "2",
+      "expected": "results.length, results",
+      "line": 81
+    },
+    {
+      "type": "eq",
+      "actual": "2",
+      "expected": "results.length, results",
+      "line": 100
+    },
+    {
+      "type": "eq",
+      "actual": "2",
+      "expected": "results.length, results",
+      "line": 125
+    },
+    {
+      "type": "eq",
+      "actual": "docs.length",
+      "expected": "results.length, results",
+      "line": 148
+    },
+    {
+      "type": "eq",
+      "actual": "2",
+      "expected": "results.length, results",
+      "line": 174
+    },
+    {
+      "type": "eq",
+      "actual": "docs.length",
+      "expected": "results.length, results",
+      "line": 197
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 17
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 46
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 63
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 78
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 90
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 111
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 134
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 160
+    },
+    {
+      "type": "commandWorked",
+      "result": "coll.insert(docs",
+      "line": 183
+    }
+  ],
+  "meta": {
+    "totalOperations": 2,
+    "totalAssertions": 18,
+    "errors": 1
+  }
+}

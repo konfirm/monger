@@ -1,0 +1,71 @@
+{
+  "operator": "unknown",
+  "description": "Test from MongoDB jstests",
+  "source": "mongo/jstests/aggregation/expressions/any_element_true.js",
+  "validatedAgainst": "7.0.8",
+  "extractedAt": "2026-02-01T20:17:03.977Z",
+  "tests": {
+    "happyPath": [
+      {
+        "description": "Aggregate operation 1",
+        "query": [
+          {
+            "$project": {
+              "_id": 0,
+              "result": {
+                "$anyElementTrue": {
+                  "$literal": [
+                    true,
+                    true
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "context": {
+          "_id": 0,
+          "allTrue": [
+            true,
+            true
+          ],
+          "someTrue": [
+            true,
+            false
+          ],
+          "noneTrue": [
+            0,
+            false
+          ],
+          "nonArray": 1,
+          "nullInput": [
+            null
+          ],
+          "undefinedInput": [
+            null
+          ],
+          "undefinedTrue": [
+            null,
+            true
+          ],
+          "nullTrue": [
+            null,
+            true
+          ],
+          "empty": []
+        },
+        "expected": [
+          {
+            "result": true
+          }
+        ],
+        "duration": 6
+      }
+    ]
+  },
+  "metadata": {
+    "totalOperations": 1,
+    "totalDocuments": 1,
+    "errors": 0
+  }
+}
