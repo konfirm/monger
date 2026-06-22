@@ -57,6 +57,25 @@ export function $geoWithin(query: GeoWithinQuery): Evaluator {
 	return within(query);
 }
 
+// @TODO: use this instead of the 'cartesian' distance from @konfirm/geojson
+//        as MongoDB $near legacy distance is in degrees (raw Euclidean on
+//        coordinate space), not the metre-converted cartesian formula
+function legacyDistance([x1, y1]: N2, [x2, y2]: N2): number {
+    return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+}
+
+// @TODO: GeoJSON $near and $nearSphere should use 'haversine' rather than
+//        'vincenty' — matches MongoDB's spherical model, never throws,
+//        3-4x faster, sufficient accuracy for proximity queries
+
+// @TODO: legacy $nearSphere $maxDistance is in radians, not degrees —
+//        convert haversine result (metres) by dividing by EARTH_RADIUS
+//        before comparison
+
+// @TODO: update tests — legacy $near expects degree-space distances,
+//        not the metre values currently hardcoded as 'direct'
+
+
 /**
  * Returns geospatial objects in proximity to a point.
  *

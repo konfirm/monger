@@ -1,15 +1,23 @@
-import type { Expression, ExpressionCompiler } from "../Expression";
+import {
+	type Expression,
+	type ExpressionCompiler,
+	type FieldReference,
+	isFieldReference,
+} from "../Expression";
 import {
 	not,
+	any,
 	isArray,
 	isNumber,
 	isString,
 	isArrayOfSize,
+	isArrayOfType,
 	isStrictStructure,
 	isUndefined,
 } from "@konfirm/guard";
 import { Evaluator } from "../../../Compiler";
-import { isInteger, isObject, type } from "../../../../BSON";
+import { isInteger, isObject } from "../../../../BSON";
+import { ErrorCode, MongerError } from "../../../../Error/MongerError";
 
 export type Operation = {
 	$arrayElemAt: Parameters<typeof $arrayElemAt>[0];
@@ -110,9 +118,9 @@ export function $arrayToObject<T extends Record<string, unknown>>(
 		const array = resolve(input) as Array<unknown>;
 
 		if (!isArray(array)) {
-			throw new Error(
-				`$arrayToObject requires an array input, found: ${typeof array}`,
-			);
+			throw new MongerError(ErrorCode.ARRAY_TO_OBJECT_REQUIRES_ARRAY, {
+				value: array,
+			});
 		}
 
 		if (isArray(array[0])) {
@@ -122,6 +130,7 @@ export function $arrayToObject<T extends Record<string, unknown>>(
 						return { [String(record[0])]: record[1] };
 					}
 
+					// throw new MongerError(40397, { size: record.length });
 					throw new Error(
 						`$arrayToObject requires an array of size 2 arrays, found array of size: ${record.length}`,
 					);
@@ -160,16 +169,25 @@ export function $arrayToObject<T extends Record<string, unknown>>(
 	};
 }
 
+type ConcatArrraysExpression = Array<Array<unknown> | FieldReference<string>>;
+
+const isArrayOrExpression = any(isArray, isFieldReference);
+const isConcatArraysExpression =
+	isArrayOfType<ConcatArrraysExpression>(isArrayOrExpression);
+
 /**
  * $concatArrays
  * Concatenates arrays to return the concatenated array.
- * @syntax { $concatArrays: <unknown> }
+ * @syntax { $concatArrays: Array<Array<unknown>|FieldReference<string>> }
  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/concatArrays
  */
 export function $concatArrays(query: unknown, compile: ExpressionCompiler) {
-	if (!isArray(query)) {
-		throw new Error("nu-uh");
+	if (!isConcatArraysExpression(query)) {
+		throw new MongerError(ErrorCode.CONCAT_ARRAYS_UNSUPPORTED_TYPE, {
+			value: query,
+		});
 	}
+
 	const compiled = query.map((value) => {
 		if (isArray(value)) {
 			return () => value;
@@ -180,19 +198,11 @@ export function $concatArrays(query: unknown, compile: ExpressionCompiler) {
 	return (input: any) => {
 		const result = compiled.map((get) => get(input));
 
-		const wrong = result.find((value) => !isArray(value));
-
-		if (wrong) {
-			// 28664
-			console.log({
-				code: 28664,
-				wrong,
-				type: type(wrong),
-				values: result,
+		const unsupported = result.find((value) => !isArray(value));
+		if (unsupported) {
+			throw new MongerError(ErrorCode.CONCAT_ARRAYS_UNSUPPORTED_TYPE, {
+				value: unsupported,
 			});
-			throw new Error(
-				`$concatArrays only supports arrays, not ${type(wrong)}`,
-			);
 		}
 		if (result.some((value) => value === null || value === undefined)) {
 			return null;
@@ -218,13 +228,13 @@ export function $concatArrays(query: unknown, compile: ExpressionCompiler) {
 //  */
 // export function $firstN(query: unknown) { }
 
-// /**
-//  * $in
-//  * Returns a boolean indicating whether a specified value is in an array.
-//  * @syntax { $in: <unknown> }
-//  * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/in
-//  */
-// export function $in(query: unknown) { }
+/**
+ * $in
+ * Returns a boolean indicating whether a specified value is in an array.
+ * @syntax { $in: <unknown> }
+ * @see    https://www.mongodb.com/docs/manual/reference/operator/aggregation/in
+ */
+// export function $in(query: unknown) {}
 
 // /**
 //  * $indexOfArray

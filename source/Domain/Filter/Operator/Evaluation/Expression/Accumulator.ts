@@ -65,7 +65,7 @@
 
 // New in version 5.2.
 
-// Available in $group, $setWindowFields and as an 
+// Available in $group, $setWindowFields and as an
 // expression.
 
 // $mergeObjects

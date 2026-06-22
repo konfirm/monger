@@ -1,17 +1,17 @@
-import { isStringWithPattern } from '@konfirm/guard';
-import { isObject } from '../../../BSON';
-import { accessor } from '../../../Field';
+import { isStringWithPattern } from "@konfirm/guard";
+import { isObject } from "../../../BSON";
+import { accessor } from "../../../Field";
 // import * as Accumulator from './Expression/Accumulator';
-import * as Arithmetic from './Expression/Arithmetic';
-import * as Array from './Expression/Array';
-import * as Boolean from './Expression/Boolean';
-import * as Comparison from './Expression/Comparison';
-import * as Conditional from './Expression/Conditional';
+import * as Arithmetic from "./Expression/Arithmetic";
+import * as Array from "./Expression/Array";
+import * as Boolean from "./Expression/Boolean";
+import * as Comparison from "./Expression/Comparison";
+import * as Conditional from "./Expression/Conditional";
 // import * as Custom from './Expression/Custom';
 // import * as DataSize from './Expression/DataSize';
 // import * as Date from './Expression/Date';
-import * as Literal from './Expression/Literal';
-import * as Misc from './Expression/Misc';
+import * as Literal from "./Expression/Literal";
+import * as Misc from "./Expression/Misc";
 // import * as Object from './Expression/Object';
 // import * as Set from './Expression/Set';
 // import * as String from './Expression/String';
@@ -33,18 +33,23 @@ const expressions = {
 const operators = Object.keys(expressions);
 
 type Expressions = typeof expressions;
-type IO<K extends keyof Expressions> = { input: Parameters<Expressions[K]>[0], output: ReturnType<Expressions[K]> };
+type IO<K extends keyof Expressions> = {
+	input: Parameters<Expressions[K]>[0];
+	output: ReturnType<Expressions[K]>;
+};
 type ExpressionIO = {
 	[K in keyof Expressions]: IO<K>;
-}
+};
 type ExpressionQuery = {
-	[K in keyof ExpressionIO]: ExpressionIO[K]['input'];
-}
+	[K in keyof ExpressionIO]: ExpressionIO[K]["input"];
+};
 
 export type Expression<T = unknown> = T;
 export type ExpressionResolver<T = any> = (input: any) => T;
 export type FieldReference<T extends string = string> = `$${T}`;
-export type ExpressionCompiler = <T = unknown>(query: Partial<ExpressionQuery> | FieldReference | unknown) => (input: any) => T;
+export type ExpressionCompiler = <T = unknown>(
+	query: Partial<ExpressionQuery> | FieldReference | unknown,
+) => (input: any) => T;
 
 /**
  * Type Guard for FieldReference types
@@ -52,7 +57,8 @@ export type ExpressionCompiler = <T = unknown>(query: Partial<ExpressionQuery> |
  * @param {*} input
  * @return {*}  {input is FieldReference}
  */
-const isFieldReference = isStringWithPattern<FieldReference>(/^\$[a-zA-Z0-9]+/);
+export const isFieldReference =
+	isStringWithPattern<FieldReference>(/^\$[a-zA-Z0-9]+/);
 
 /**
  * Type Guard for ExpressionQuery types
@@ -70,18 +76,25 @@ function isExpressionQuery(input: any): input is ExpressionQuery {
  * @param {(Partial<ExpressionQuery> | FieldReference | unknown)} query
  * @return {*}  {(input: any) => any}
  */
-function compile(query: Partial<ExpressionQuery> | FieldReference | unknown): (input: any) => any {
+function compile(
+	query: Partial<ExpressionQuery> | FieldReference | unknown,
+): (input: any) => any {
 	if (isExpressionQuery(query)) {
 		// TODO: allow for $comment
 		const keys = Object.keys(query);
-		const ops = keys.filter((key) => key in expressions).map((key) => {
-			const op = expressions[key as keyof typeof expressions] as (...args: Array<any>) => (v: any) => any;
-			const { [key as keyof typeof query]: value } = query;
+		const ops = keys
+			.filter((key) => key in expressions)
+			.map((key) => {
+				const op = expressions[key as keyof typeof expressions] as (
+					...args: Array<any>
+				) => (v: any) => any;
+				const { [key as keyof typeof query]: value } = query;
 
-			return op(value, compile);
-		});
+				return op(value, compile);
+			});
 
-		return (input: any) => ops.reduce((carry, operation) => operation(carry), input);
+		return (input: any) =>
+			ops.reduce((carry, operation) => operation(carry), input);
 	}
 
 	if (isFieldReference(query)) {
@@ -98,7 +111,9 @@ function compile(query: Partial<ExpressionQuery> | FieldReference | unknown): (i
  * @param {Partial<ExpressionQuery>} query
  * @return {*}  {ExpressionResolver}
  */
-export function expression(query: Partial<ExpressionQuery>): ExpressionResolver {
+export function expression(
+	query: Partial<ExpressionQuery>,
+): ExpressionResolver {
 	if (!isExpressionQuery(query)) {
 		throw new Error(`Invalid expression: ${JSON.stringify(query)}`);
 	}

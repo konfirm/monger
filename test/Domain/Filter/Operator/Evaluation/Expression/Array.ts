@@ -123,42 +123,60 @@ export const data: Array<TestRecord> = [
 			},
 		],
 	},
+	{
+		operator: "$concatArrays",
+		query: ["$colors", "$sizes"],
+		tests: [
+			{
+				output: ["Blue", "Green", "XL", "3XL"],
+				colors: ["Blue", "Green"],
+				sizes: ["XL", "3XL"],
+			},
+			{
+				error: /\$concatArrays only supports arrays, not bool\b/,
+				colors: [1, 2],
+				sizes: true,
+			},
+		],
+	},
 ];
 
 const operators = [...new Set(data.map(({ operator }) => operator))] as Array<
 	keyof typeof ArrayOps
 >;
 
-operators.forEach((op) => {
-	test(`Domain/Filter/Operator/Evaluation/Expression/Array - ${op}`, (t) => {
-		t.equal(
-			typeof ArrayOps[op],
-			"function",
-			`${op} is an exported function`,
-		);
+operators
+	// .filter((op) => op === "$concatArrays")
+	.forEach((op) => {
+		test(`Domain/Filter/Operator/Evaluation/Expression/Array - ${op}`, (t) => {
+			t.equal(
+				typeof ArrayOps[op],
+				"function",
+				`${op} is an exported function`,
+			);
 
-		data.filter(({ operator }) => operator === op).forEach(
-			({ query, tests }: any) => {
-				const compiled = (ArrayOps[op] as Function)(query, resolve);
+			data.filter(({ operator }) => operator === op).forEach(
+				({ query, tests }: any) => {
+					const compiled = (ArrayOps[op] as Function)(query, resolve);
 
-				tests.forEach(({ output, error, ...input }: any) => {
-					if (error) {
-						t.throws(
-							() => compiled(input),
-							error,
-							`{ ${op}: ${JSON.stringify(query)} } on ${JSON.stringify(input)} throws ${error}`,
-						);
-					} else {
-						t.deepEqual(
-							compiled(input),
-							output,
-							`{ ${op}: ${JSON.stringify(query)} } on ${JSON.stringify(input)} equals ${JSON.stringify(output)}`,
-						);
-					}
-				});
-			},
-		);
+					tests.forEach(({ output, error, ...input }: any) => {
+						if (error) {
+							t.throws(
+								() => compiled(input),
+								error,
+								`{ ${op}: ${JSON.stringify(query)} } on ${JSON.stringify(input)} throws ${error}`,
+							);
+						} else {
+							t.deepEqual(
+								compiled(input),
+								output,
+								`{ ${op}: ${JSON.stringify(query)} } on ${JSON.stringify(input)} equals ${JSON.stringify(output)}`,
+							);
+						}
+					});
+				},
+			);
 
-		t.end();
+			t.end();
+		});
 	});
-});
