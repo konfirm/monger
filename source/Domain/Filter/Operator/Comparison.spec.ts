@@ -1,0 +1,263 @@
+import { test } from 'node:test';
+import * as assert from 'node:assert/strict';
+import { each } from 'template-literal-each';
+import * as Comparison from './Comparison';
+
+test('Domain/Filter/Operator/Comparison - exports', () => {
+	const expected = ['$eq', '$gt', '$gte', '$in', '$lt', '$lte', '$ne', '$nin'];
+	const actual = Object.keys(Comparison);
+
+	assert.equal(actual.length, expected.length, `contains ${expected.length} keys`);
+	expected.forEach((key) => {
+		assert.equal(typeof Comparison[<keyof typeof Comparison>key], 'function', `contains function ${key}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $eq', () => {
+	const { $eq } = Comparison;
+
+	each`
+		query                         | input                         | matches
+		------------------------------|-------------------------------|---------
+		${true}                       | ${true}                       | yes
+		${true}                       | ${false}                      | no
+		${false}                      | ${true}                       | no
+		${false}                      | ${false}                      | yes
+		string                        | stri                          | no
+		string                        | string                        | yes
+		string                        | stringed                      | no
+		${1}                          | ${0}                          | no
+		${1}                          | ${1}                          | yes
+		${1}                          | ${2}                          | no
+		${[1, 2]}                     | ${[1, 2]}                     | yes
+		${[1, 2]}                     | ${[1, 2, 3]}                  | no
+		${[1, 2, 3]}                  | ${[1, 2]}                     | no
+		${[1, 2, 3]}                  | ${[1, 3, 2]}                  | no
+		${{ foo: 'bar' }}             | ${{ foo: 'bar' }}             | yes
+		${{ foo: 'bar', bar: 'baz' }} | ${{ foo: 'bar', bar: 'baz' }} | yes
+		${{ foo: 'bar', bar: 'baz' }} | ${{ bar: 'baz', foo: 'bar' }} | no
+		${/^bar/}                     | ${'bar'}                      | no
+		${/^bar/}                     | ${'barry'}                    | no
+		${/^bar/}                     | ${'Barry'}                    | no
+		${/^bar/i}                    | ${'Barry'}                    | no
+		${/^bar$/}                    | ${'Barry'}                    | no
+		${/^bar$/i}                   | ${'Barry'}                    | no
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $eq(query as Comparison.Operation['$eq']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${JSON.stringify(input)} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $ne', () => {
+	const { $ne } = Comparison;
+
+	each`
+		query                         | input                         | matches
+		------------------------------|-------------------------------|---------
+		${true}                       | ${true}                       | no
+		${true}                       | ${false}                      | yes
+		${false}                      | ${true}                       | yes
+		${false}                      | ${false}                      | no
+		string                        | stri                          | yes
+		string                        | string                        | no
+		string                        | stringed                      | yes
+		${1}                          | ${0}                          | yes
+		${1}                          | ${1}                          | no
+		${1}                          | ${2}                          | yes
+		${[1, 2]}                     | ${[1, 2]}                     | no
+		${[1, 2]}                     | ${[1, 2, 3]}                  | yes
+		${[1, 2, 3]}                  | ${[1, 2]}                     | yes
+		${[1, 2, 3]}                  | ${[1, 3, 2]}                  | yes
+		${{ foo: 'bar' }}             | ${{ foo: 'bar' }}             | no
+		${{ foo: 'bar', bar: 'baz' }} | ${{ foo: 'bar', bar: 'baz' }} | no
+		${{ foo: 'bar', bar: 'baz' }} | ${{ bar: 'baz', foo: 'bar' }} | yes
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $ne(query as Comparison.Operation['$ne']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+
+	// Unlike $eq, MongoDB rejects a RegExp operand for $ne outright —
+	// confirmed against mongo-catalog ground truth ("Can't have regex as
+	// arg to $ne.").
+	assert.throws(() => $ne(/^bar/ as unknown as Comparison.Operation['$ne']), /Can't have regex as arg to \$ne/, '$ne rejects a RegExp operand');
+});
+
+test('Domain/Filter/Operator/Comparison - $gt', () => {
+	const { $gt } = Comparison;
+
+	each`
+		query    | input    | matches
+		---------|----------|---------
+		${1}     | ${0}     | no
+		${1}     | ${1}     | no
+		${1}     | ${2}     | yes
+		one      | on       | no
+		one      | one      | no
+		one      | ones     | yes
+		${true}  | ${false} | no
+		${true}  | ${true}  | no
+		${false} | ${false} | no
+		${false} | ${true}  | yes
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $gt(query as Comparison.Operation['$gt']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $gte', () => {
+	const { $gte } = Comparison;
+
+	each`
+		query    | input    | matches
+		---------|----------|---------
+		${1}     | ${0}     | no
+		${1}     | ${1}     | yes
+		${1}     | ${2}     | yes
+		one      | on       | no
+		one      | one      | yes
+		one      | ones     | yes
+		${true}  | ${false} | no
+		${true}  | ${true}  | yes
+		${false} | ${false} | yes
+		${false} | ${true}  | yes
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $gte(query as Comparison.Operation['$gte']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $lt', () => {
+	const { $lt } = Comparison;
+
+	each`
+		query    | input    | matches
+		---------|----------|---------
+		${1}     | ${0}     | yes
+		${1}     | ${1}     | no
+		${1}     | ${2}     | no
+		one      | on       | yes
+		one      | one      | no
+		one      | ones     | no
+		${true}  | ${false} | yes
+		${true}  | ${true}  | no
+		${false} | ${false} | no
+		${false} | ${true}  | no
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $lt(query as Comparison.Operation['$lt']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $lte', () => {
+	const { $lte } = Comparison;
+
+	each`
+		query    | input    | matches
+		---------|----------|---------
+		${1}     | ${0}     | yes
+		${1}     | ${1}     | yes
+		${1}     | ${2}     | no
+		one      | on       | yes
+		one      | one      | yes
+		one      | ones     | no
+		${true}  | ${false} | yes
+		${true}  | ${true}  | yes
+		${false} | ${false} | yes
+		${false} | ${true}  | no
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $lte(query as Comparison.Operation['$lte']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $in', () => {
+	const { $in } = Comparison;
+
+	each`
+		query             | input    | matches
+		------------------|----------|---------
+		${[1, 2, 3]}      | ${0}     | no
+		${[1, 2, 3]}      | ${1}     | yes
+		${[1, 2, 3]}      | ${2}     | yes
+		${[1, 2, 3]}      | ${3}     | yes
+		${[1, 2, 3]}      | ${4}     | no
+		${['foo', 'bar']} | foo      | yes
+		${['foo', 'bar']} | bar      | yes
+		${['foo', 'bar']} | baz      | no
+		${[true]}         | ${true}  | yes
+		${[true]}         | ${false} | no
+		${[false]}        | ${true}  | no
+		${[false]}        | ${false} | yes
+		${[true, false]}  | ${false} | yes
+		${[true, false]}  | ${true}  | yes
+		${[/foo/, /^ba/]} | foo      | yes
+		${[/foo/, /^ba/]} | goo      | no
+		${[/foo/, /^ba/]} | bar      | yes
+		${[/foo/, /^ba/]} | baz      | yes
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $in(query as Comparison.Operation['$in']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});
+
+test('Domain/Filter/Operator/Comparison - $nin', () => {
+	const { $nin } = Comparison;
+
+	each`
+		query             | input    | matches
+		------------------|----------|---------
+		${[1, 2, 3]}      | ${0}     | yes
+		${[1, 2, 3]}      | ${1}     | no
+		${[1, 2, 3]}      | ${2}     | no
+		${[1, 2, 3]}      | ${3}     | no
+		${[1, 2, 3]}      | ${4}     | yes
+		${['foo', 'bar']} | foo      | no
+		${['foo', 'bar']} | bar      | no
+		${['foo', 'bar']} | baz      | yes
+		${[true]}         | ${true}  | no
+		${[true]}         | ${false} | yes
+		${[false]}        | ${true}  | yes
+		${[false]}        | ${false} | no
+		${[true, false]}  | ${false} | no
+		${[true, false]}  | ${true}  | no
+		${[/foo/, /^ba/]} | foo      | no
+		${[/foo/, /^ba/]} | goo      | yes
+		${[/foo/, /^ba/]} | bar      | no
+		${[/foo/, /^ba/]} | baz      | no
+	`((record) => {
+		const { query, input, matches } = record;
+		const compiled = $nin(query as Comparison.Operation['$nin']);
+		const isMatch = matches === 'yes';
+		const message = isMatch ? 'matches' : 'does not match'
+
+		assert.equal(compiled(input), matches === 'yes', `${input} ${message} ${JSON.stringify(query)}`);
+	});
+});

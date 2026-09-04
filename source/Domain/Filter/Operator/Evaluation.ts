@@ -1,8 +1,10 @@
-import type { Query, CompileStep, Evaluator } from '../Compiler';
+import { any, isString } from '@konfirm/guard';
+import { isRegex } from '../../BSON';
+import type { CompileStep, Evaluator, Query } from '../Compiler';
+import { expression } from './Evaluation/Expression';
+import { schema as jsonSchema } from './Evaluation/Schema';
 import type { TextSearchOptions } from './Evaluation/Text';
 import { Term } from './Evaluation/Text';
-import { schema as jsonSchema } from './Evaluation/Schema';
-import { expression } from './Evaluation/Expression';
 
 export type Operation = {
 	$expr: Parameters<typeof $expr>[0];
@@ -50,6 +52,8 @@ export function $mod(query: [number, number]): Evaluator {
 	return (input: unknown): boolean => Number(input) % divisor === remainder;
 }
 
+const isRegexQuery = any(isRegex, isString);
+
 /**
  * $regex
  * Selects documents where values match a specified regular expression.
@@ -59,6 +63,10 @@ export function $mod(query: [number, number]): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/regex/
  */
 export function $regex(query: RegExp | string, _: CompileStep, context: Partial<Query>): Evaluator {
+	if (!isRegexQuery(query)) {
+		throw new Error("$regex requires a string or RegExp");
+	}
+
 	const { $options: flags } = context as Operation;
 	const regex = flags || typeof query === 'string' ? new RegExp(String(query), flags && String(flags)) : query;
 

@@ -1,0 +1,87 @@
+{
+	"$near": {
+		"working": "not-started",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts"
+		],
+		"verified": 0.667
+	},
+	"$nearSphere": {
+		"working": "not-started",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts"
+		],
+		"verified": 0.867
+	},
+	"$geoWithin": {
+		"working": "not-started",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Within.spec.ts"
+		],
+		"verified": 0.71
+	},
+	"$geoIntersects": {
+		"working": "not-started",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts"
+		],
+		"verified": 0.444
+	},
+	"$eq": {
+		"working": "done",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 1
+	},
+	"$gt": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 1
+	},
+	"$gte": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 0.976
+	},
+	"$in": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 0.98
+	},
+	"$lt": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 1
+	},
+	"$lte": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 1
+	},
+	"$ne": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 0.979
+	},
+	"$nin": {
+		"working": "in-progress",
+		"files": [
+			"source/Domain/Filter/Operator/Comparison.spec.ts"
+		],
+		"verified": 1
+	}
+}

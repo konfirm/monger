@@ -9,6 +9,23 @@ import { accessor } from '../Field';
 import { isObject, isRegex } from '../BSON';
 
 
+// This shape is a pure per-document predicate: it can decide match/no-match
+// for one document, but structurally cannot know anything about its
+// surroundings — other documents, its position among them, or the scope it
+// was reached through. That's fine for the vast majority of operators, but
+// at least three known cases need exactly that and aren't implemented:
+// - $near/$nearSphere sort by distance as an intrinsic part of the query
+//   (confirmed via mongo-catalog ground truth, 2026-09) — needs a
+//   comparator/ranking alongside the boolean, not just true/false.
+// - $setWindowFields operators ($shift, $denseRank, $linearFill, ...) need
+//   access to *other documents* in a partition/window, not just the
+//   current one — Window.ts is still an unimplemented doc-comment stub.
+// - $let/$$ROOT/$$CURRENT need the outer document's scope to survive into
+//   a nested sub-expression's evaluation — Variable.ts is likewise still
+//   an unimplemented doc-comment stub.
+// All three are the same underlying limitation wearing different clothes.
+// Whichever gets tackled first will likely force a real change to this
+// type, not just a new Operator implementation.
 export type Evaluator<T = boolean> = (input: any) => T;
 export type CompileStep = (query: any) => Evaluator;
 export type FilterCompiler = (query: any, compile: CompileStep, context: Partial<Query>) => Evaluator;
@@ -53,6 +70,10 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private operation(name: K, query: T): Evaluator {
 		const { [name]: operation } = this.operators;
+
+		if (!operation && String(name).startsWith('$')) {
+			throw new Error(`Unrecognized operator: '${String(name)}'`);
+		}
 
 		return operation
 			? operation(query[name], (query) => this.compile(query), query)

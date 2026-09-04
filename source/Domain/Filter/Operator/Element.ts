@@ -1,5 +1,6 @@
 import type { Evaluator } from '../Compiler';
-import { is, isArray } from '../../BSON';
+import { is, isArray, isBSONAlias, isBSONID } from '../../BSON';
+import { any, isArrayOfType, isNumber, isString } from '@konfirm/guard';
 
 type TypeIdentifier = Parameters<typeof is>[0];
 
@@ -21,6 +22,15 @@ export function $exists(query: boolean): Evaluator {
 	return (input: any) => und(input) === exists;
 };
 
+function isTypeIdentifier(input: unknown): input is TypeIdentifier {
+	return isBSONID(input) || isBSONAlias(input);
+}
+
+const isTypeIdentifierValueOrArray = any<TypeIdentifier | Array<TypeIdentifier>>(
+	isTypeIdentifier,
+	isArrayOfType(isTypeIdentifier)
+);
+
 /**
  * $type
  * Selects documents if a field is of the specified type.
@@ -28,6 +38,10 @@ export function $exists(query: boolean): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/type/
  */
 export function $type(query: TypeIdentifier | Array<TypeIdentifier>): Evaluator {
+	if (!isTypeIdentifierValueOrArray(query)) {
+		throw new Error('"type must be represented as a number or a string');
+	}
+
 	const type = isArray(query) ? is(...(query as Array<TypeIdentifier>)) : is(query as TypeIdentifier);
 
 	return (input: unknown) => type(input);
