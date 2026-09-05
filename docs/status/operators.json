@@ -83,5 +83,33 @@
 			"source/Domain/Filter/Operator/Comparison.spec.ts"
 		],
 		"verified": 1
+	},
+	"$bitsAllClear": {
+		"working": "done",
+		"files": [
+			"source/Domain/Filter/Operator/Bitwise.spec.ts"
+		],
+		"verified": 1
+	},
+	"$bitsAllSet": {
+		"working": "done",
+		"files": [
+			"source/Domain/Filter/Operator/Bitwise.spec.ts"
+		],
+		"verified": 1
+	},
+	"$bitsAnyClear": {
+		"working": "done",
+		"files": [
+			"source/Domain/Filter/Operator/Bitwise.spec.ts"
+		],
+		"verified": 1
+	},
+	"$bitsAnySet": {
+		"working": "done",
+		"files": [
+			"source/Domain/Filter/Operator/Bitwise.spec.ts"
+		],
+		"verified": 1
 	}
 }

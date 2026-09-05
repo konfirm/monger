@@ -1,5 +1,7 @@
 import type { Evaluator } from '../Compiler';
-import { isArray } from '../../BSON';
+import { isArray, is } from '../../BSON';
+import { elementwise } from '../../Compare';
+import { isArrayOfType } from '@konfirm/guard';
 
 type BitMask = number;
 type BitPosition = Array<number>;
@@ -11,6 +13,39 @@ export type Operation = {
 	$bitsAnySet: Parameters<typeof $bitsAnySet>[0];
 };
 
+// Whole-number JS values only (BSON int/long)
+const isWholeNumber = is(16, 18);
+const isBitPosition = isArrayOfType<BitPosition>(isWholeNumber);
+
+// Both query forms (single bitmask, list of bit positions) reduce to one mask
+function toMask(name: string, query: BitMask | BitPosition): number {
+	if (isBitPosition(query)) {
+		return query.reduce((mask, position) => {
+			if (position < 0) {
+				throw new Error(`Failed to parse bit position. Expected a non-negative number in: ${name}: ${position}`);
+			}
+
+			return mask | (1 << position);
+		}, 0);
+	}
+
+	if ((query as BitMask) < 0) {
+		throw new Error(`Expected a non-negative number in: ${name}: ${query}`);
+	}
+
+	return query as BitMask;
+}
+
+function bits(
+	name: string,
+	query: BitMask | BitPosition,
+	matches: (value: number, mask: number) => boolean,
+): Evaluator {
+	const mask = toMask(name, query);
+
+	return elementwise((value) => isWholeNumber(value) && matches(Number(value), mask));
+}
+
 /**
  * $bitsAllClear
  * Matches numeric or binary values in which a set of bit positions all have a value of 0.
@@ -19,13 +54,7 @@ export type Operation = {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAllClear/
  */
 export function $bitsAllClear(query: BitMask | BitPosition): Evaluator {
-	if (isArray(query)) {
-		const shifted = (query as BitPosition).map((shift) => 1 << shift);
-
-		return (input: unknown): boolean => shifted.every((bit) => (Number(input) & bit) === 0);
-	}
-
-	return (input: unknown): boolean => (Number(input) & Number(query)) === 0;
+	return bits('$bitsAllClear', query, (value, mask) => (value & mask) === 0);
 }
 
 /**
@@ -36,12 +65,7 @@ export function $bitsAllClear(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAllSet/
  */
 export function $bitsAllSet(query: BitMask | BitPosition): Evaluator {
-	if (isArray(query)) {
-		return (input: unknown): boolean => (query as BitPosition)
-			.every((shift) => Number(input) & 1 << shift);
-	}
-
-	return (input: unknown): boolean => (Number(input) & Number(query)) === query;
+	return bits('$bitsAllSet', query, (value, mask) => (value & mask) === mask);
 }
 
 /**
@@ -52,12 +76,7 @@ export function $bitsAllSet(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAnyClear/
  */
 export function $bitsAnyClear(query: BitMask | BitPosition): Evaluator {
-	if (isArray(query)) {
-		return (input: unknown): boolean => (query as BitPosition)
-			.some((shift) => (Number(input) & 1 << shift) !== 1 << shift);
-	}
-
-	return (input: unknown): boolean => (Number(input) & Number(query)) !== query;
+	return bits('$bitsAnyClear', query, (value, mask) => (value & mask) !== mask);
 }
 
 /**
@@ -68,10 +87,5 @@ export function $bitsAnyClear(query: BitMask | BitPosition): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/bitsAnySet/
  */
 export function $bitsAnySet(query: BitMask | BitPosition): Evaluator {
-	if (isArray(query)) {
-		return (input: unknown): boolean => (query as BitPosition)
-			.some((shift) => (Number(input) & 1 << shift));
-	}
-
-	return (input: unknown): boolean => (Number(input) & Number(query)) !== 0;
+	return bits('$bitsAnySet', query, (value, mask) => (value & mask) !== 0);
 }
