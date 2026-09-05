@@ -15,7 +15,7 @@ const statusPath = resolve(root, 'docs', 'status', 'operators.json');
 const catalogRunner = 'source/Test/Catalog.spec.ts';
 
 type OperatorStatus = {
-	working: 'done' | 'in-progress' | 'not-started';
+	working: 'done' | 'hold' | 'doing' | 'planned';
 	files: Array<string>;
 	verified: number;
 };
@@ -25,8 +25,8 @@ type Oper = {
 	priority: number;
 } & OperatorStatus;
 const priorities: Array<OperatorStatus['working']> = process.argv.length > 2
-	? process.argv.slice(2).filter((value) => /^(?:done|in-progress|not-started)$/.test(value)) as Array<OperatorStatus['working']>
-	: ['done', 'in-progress'];
+	? process.argv.slice(2).filter((value) => /^(?:done|hold|doing|planned)$/.test(value)) as Array<OperatorStatus['working']>
+	: ['done', 'doing'];
 
 // Catalog.spec.ts test names: "$op[, $op] :: catalogFile :: id :: query"
 // Unit-spec test names: "Domain/Filter/Operator/Comparison - $op"
@@ -55,7 +55,7 @@ async function main() {
 	active.forEach(({ files: opFiles }) => opFiles.forEach((f) => files.add(f)));
 
 	// A "done" operator no longer needs its own line — fold it into its
-	// file's rollup instead. Still-in-progress operators keep their own
+	// file's rollup instead. Still-active operators keep their own
 	// line, since that's the one actually being steered by right now.
 	const isDone = (key: string): boolean =>
 		key.startsWith('$') && key.split(/,\s*/).every((op) => status[op]?.working === 'done');

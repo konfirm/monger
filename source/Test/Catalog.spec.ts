@@ -2,8 +2,8 @@
 // are actively being worked on, evaluates every vendored mongo-catalog
 // operation tagged with one of them against monger's real `filter`, and
 // writes a pass-rate back into the status file per operator. Operators left
-// at "not-started" are skipped entirely — turning this on for an operator
-// is a one-line change to the status file, not an edit here.
+// at "planned" or "hold" are skipped entirely — turning this on for an
+// operator is a one-line change to the status file, not an edit here.
 //
 // "Latest version's result" is a deliberate choice made here, not upstream:
 // mongo-catalog publishes the full version-range history it observed
@@ -21,7 +21,7 @@ const statusPath = resolve(__dirname, '..', '..', 'docs', 'status', 'operators.j
 const catalogDir = resolve(__dirname, 'catalog');
 
 type OperatorStatus = {
-	working: 'not-started' | 'in-progress' | 'done';
+	working: 'planned' | 'hold' | 'doing' | 'done';
 	files: Array<string>;
 	verified: number | null;
 };
@@ -41,7 +41,7 @@ type CatalogFile = {
 const status: Record<string, OperatorStatus> = JSON.parse(readFileSync(statusPath, 'utf8'));
 const active = new Set(
 	Object.entries(status)
-		.filter(([, s]) => s.working === 'in-progress' || s.working === 'done')
+		.filter(([, s]) => s.working === 'doing' || s.working === 'done')
 		.map(([operator]) => operator)
 );
 
