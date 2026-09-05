@@ -1,0 +1,2464 @@
+{
+	"catalog": "textRegex",
+	"collection": {
+		"records": [
+			{
+				"_id": 1,
+				"title": "Fast Brown Runner",
+				"description": "Brown paper bag lunch ideas for work",
+				"category": "guide",
+				"tags": [
+					"tutorial"
+				],
+				"manufacturer": "MongoDB Partners"
+			},
+			{
+				"_id": 2,
+				"title": "Quick Start Guide",
+				"description": "JavaScript: The Quick Way",
+				"category": "manual",
+				"tags": [
+					"quick",
+					"mongodb"
+				],
+				"manufacturer": "Lazy Dog Productions"
+			},
+			{
+				"_id": 3,
+				"title": "Quick Reference Card",
+				"description": "JavaScript: The Quick Way",
+				"category": "story",
+				"tags": [],
+				"manufacturer": "Brown Manufacturing"
+			},
+			{
+				"_id": 4,
+				"title": "JavaScript Programming",
+				"description": "A comprehensive guide to JavaScript programming",
+				"category": "story",
+				"tags": [
+					"brown"
+				],
+				"manufacturer": "Brown Manufacturing"
+			},
+			{
+				"_id": 5,
+				"title": "Fast Brown Runner",
+				"description": "Quick and Easy Recipes",
+				"category": "story",
+				"tags": [],
+				"manufacturer": "Tutorial Masters"
+			},
+			{
+				"_id": 6,
+				"title": "MongoDB Guide",
+				"description": "Brown shoes for formal occasions",
+				"category": "story",
+				"tags": [
+					"database"
+				],
+				"manufacturer": "Brown Manufacturing"
+			},
+			{
+				"_id": 7,
+				"title": "The Quick Solution",
+				"description": "A lazy afternoon reading guide",
+				"category": "manual",
+				"tags": [
+					"database"
+				],
+				"manufacturer": "Reference Works Ltd"
+			},
+			{
+				"_id": 8,
+				"title": "JavaScript Programming",
+				"description": "MongoDB in Action - A Practical Guide",
+				"category": "story",
+				"tags": [],
+				"manufacturer": "MongoDB Partners"
+			},
+			{
+				"_id": 9,
+				"title": "MongoDB Guide",
+				"description": "Learn MongoDB quickly with this tutorial",
+				"category": "story",
+				"tags": [],
+				"manufacturer": "Reference Works Ltd"
+			},
+			{
+				"_id": 10,
+				"title": "Brown Leather Shoes",
+				"description": "JavaScript: The Quick Way",
+				"category": "story",
+				"tags": [],
+				"manufacturer": "Lazy Dog Productions"
+			},
+			{
+				"_id": 11,
+				"title": "Quick Reference Card",
+				"description": "Brown paper bag lunch ideas for work",
+				"category": "guide",
+				"tags": [
+					"programming",
+					"brown"
+				],
+				"manufacturer": "Brown Manufacturing"
+			},
+			{
+				"_id": 12,
+				"title": "Brown Bag Lunch Ideas",
+				"description": "Quick and Easy Recipes",
+				"category": "reference",
+				"tags": [
+					"guide"
+				],
+				"manufacturer": "Programming Guides Co"
+			},
+			{
+				"_id": 13,
+				"title": "MongoDB Guide",
+				"description": "MongoDB in Action - A Practical Guide",
+				"category": "manual",
+				"tags": [
+					"programming"
+				],
+				"manufacturer": "Programming Guides Co"
+			},
+			{
+				"_id": 14,
+				"title": "The Quick Solution",
+				"description": "Quick and Easy Recipes",
+				"category": "guide",
+				"tags": [
+					"programming"
+				],
+				"manufacturer": "JavaScript Experts LLC"
+			},
+			{
+				"_id": 15,
+				"title": "MongoDB Guide",
+				"description": "JavaScript: The Quick Way",
+				"category": "tutorial",
+				"tags": [
+					"brown"
+				],
+				"manufacturer": "Programming Guides Co"
+			},
+			{
+				"_id": 16,
+				"title": "The Quick Brown Fox",
+				"description": "Quick and Easy Recipes",
+				"category": "guide",
+				"tags": [
+					"brown",
+					"database"
+				],
+				"manufacturer": "MongoDB Partners"
+			},
+			{
+				"_id": 17,
+				"title": "Brown Bag Lunch Ideas",
+				"description": "Quick and Easy Recipes",
+				"category": "story",
+				"tags": [
+					"javascript",
+					"tutorial"
+				],
+				"manufacturer": "Lazy Dog Productions"
+			},
+			{
+				"_id": 18,
+				"title": "Quick Start Guide",
+				"description": "Quick tips for better coding",
+				"category": "story",
+				"tags": [
+					"database",
+					"mongodb"
+				],
+				"manufacturer": "Brown Manufacturing"
+			},
+			{
+				"_id": 19,
+				"title": "Quick Reference Card",
+				"description": "A comprehensive guide to JavaScript programming",
+				"category": "guide",
+				"tags": [
+					"mongodb"
+				],
+				"manufacturer": "Lazy Dog Productions"
+			},
+			{
+				"_id": 20,
+				"title": "The Quick Solution",
+				"description": "Brown shoes for formal occasions",
+				"category": "guide",
+				"tags": [
+					"quick"
+				],
+				"manufacturer": "JavaScript Experts LLC"
+			},
+			{
+				"_id": 21,
+				"title": "The Quick Brown Fox",
+				"description": "JavaScript: The Quick Way",
+				"category": "reference",
+				"tags": [
+					"guide"
+				],
+				"manufacturer": "JavaScript Experts LLC"
+			},
+			{
+				"_id": 22,
+				"title": "JavaScript Programming",
+				"description": "JavaScript: The Quick Way",
+				"category": "guide",
+				"tags": [],
+				"manufacturer": "Quick Solutions Inc"
+			},
+			{
+				"_id": 23,
+				"title": "Fast Brown Runner",
+				"description": "MongoDB in Action - A Practical Guide",
+				"category": "manual",
+				"tags": [
+					"tutorial"
+				],
+				"manufacturer": "JavaScript Experts LLC"
+			},
+			{
+				"_id": 24,
+				"title": "Quick Start Guide",
+				"description": "A comprehensive guide to JavaScript programming",
+				"category": "guide",
+				"tags": [
+					"quick",
+					"mongodb",
+					"javascript"
+				],
+				"manufacturer": "Quick Solutions Inc"
+			},
+			{
+				"_id": 25,
+				"title": "Brown Bag Lunch Ideas",
+				"description": "A comprehensive guide to JavaScript programming",
+				"category": "tutorial",
+				"tags": [
+					"brown",
+					"database"
+				],
+				"manufacturer": "Quick Solutions Inc"
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "a0Y6YIK1SRre",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/^The/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						14,
+						16,
+						20,
+						21
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wOgycktagpmH",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/Quick/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						7,
+						11,
+						14,
+						16,
+						18,
+						19,
+						20,
+						21,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sQpXLwaYrZvk",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/Brown$/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c8ba4r1KL8gs",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/quick/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						5,
+						9,
+						10,
+						12,
+						14,
+						15,
+						16,
+						17,
+						18,
+						21,
+						22
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bW6mHKlVNczc",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/brown/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						11,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t7x7PVuU4LaI",
+			"query": {
+				"title": {
+					"$regex": "quick",
+					"$options": "i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						7,
+						11,
+						14,
+						16,
+						18,
+						19,
+						20,
+						21,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cK4TZnRvMnU3",
+			"query": {
+				"title": {
+					"$regex": "BROWN",
+					"$options": "i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						5,
+						10,
+						12,
+						16,
+						17,
+						21,
+						23,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mkL19RjZNh8l",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/^the/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mNYVfxpkXbwA",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/guide$/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						8,
+						13,
+						23
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tN9vAJfzxLYE",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/Quick.*Brown/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						16,
+						21
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e7JNmcKuhGLJ",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/quick.*brown/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q11BqVMwmKmx",
+			"query": {
+				"manufacturer": {
+					"$regex": "@RegExp/^Quick/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						22,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rx4X4vDkM3Ck",
+			"query": {
+				"manufacturer": {
+					"$regex": "@RegExp/LLC$/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						14,
+						20,
+						21,
+						23
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fgbd4wpTLadg",
+			"query": {
+				"manufacturer": {
+					"$regex": "@RegExp/Co$/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						12,
+						13,
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pEuP6wHVQTbS",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/[A-Z].*Quick/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						14,
+						16,
+						20,
+						21
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a6cPFKLPlHCh",
+			"query": {
+				"category": {
+					"$regex": "@RegExp/^[tg]/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						11,
+						14,
+						15,
+						16,
+						19,
+						20,
+						22,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oCIl9SxdyXEl",
+			"query": {
+				"category": {
+					"$regex": "@RegExp/e$/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						11,
+						12,
+						14,
+						16,
+						19,
+						20,
+						21,
+						22,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oTaTfYLWxC9T",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/Quick/",
+					"$options": "i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						7,
+						11,
+						14,
+						16,
+						18,
+						19,
+						20,
+						21,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cEs9HjEqJuU0",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/MongoDB/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						9,
+						13,
+						23
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m1mIDwkCSvdv",
+			"query": {
+				"description": {
+					"$regex": "@RegExp/JavaScript/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						10,
+						15,
+						19,
+						21,
+						22,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mOdhaguZGiQJ",
+			"query": {
+				"title": {
+					"$regex": "[invalid"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.5.13,3.6.6..3.6.23,4.0.1..4.1.7"
+				},
+				{
+					"error": {
+						"message": "Regular expression is invalid: missing terminating ] for character class",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..3.6.5,3.7.1..4.0.0"
+				},
+				{
+					"error": {
+						"message": "Regular expression is invalid: missing terminating ] for character class",
+						"code": 51091,
+						"type": "MongoServerError"
+					},
+					"versions": "4.1.9..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v64YlxNUp7pu",
+			"query": {
+				"title": {
+					"$regex": "pattern",
+					"$options": "xyz"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..5.0.33"
+				},
+				{
+					"error": {
+						"message": " invalid flag in regex options: y",
+						"code": 51108,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wqOQTXlfUBWO",
+			"query": {
+				"$text": {
+					"$search": "quick"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						9,
+						17,
+						2,
+						10,
+						18,
+						3,
+						11,
+						19,
+						12,
+						20,
+						5,
+						21,
+						14,
+						22,
+						7,
+						15,
+						16
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.0.12..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rspkMagRtiuj",
+			"query": {
+				"$text": {
+					"$search": "brown"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						17,
+						25,
+						10,
+						11,
+						4,
+						12,
+						20,
+						5,
+						21,
+						6,
+						15,
+						23,
+						16
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						6,
+						12,
+						17,
+						20,
+						16,
+						5,
+						25,
+						11,
+						1,
+						23,
+						15,
+						4,
+						21,
+						10
+					],
+					"versions": "3.0.12..3.2.21"
+				},
+				{
+					"documents": [
+						6,
+						12,
+						17,
+						20,
+						25,
+						1,
+						23,
+						11,
+						16,
+						5,
+						15,
+						4,
+						21,
+						10
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						16,
+						25,
+						11,
+						1,
+						15,
+						4,
+						23,
+						21,
+						10,
+						5,
+						20,
+						17,
+						12,
+						6
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aFQ6xJ80294M",
+			"query": {
+				"$text": {
+					"$search": "quick brown"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						24,
+						9,
+						17,
+						25,
+						2,
+						10,
+						18,
+						3,
+						11,
+						19,
+						4,
+						12,
+						20,
+						5,
+						21,
+						6,
+						14,
+						22,
+						7,
+						15,
+						23,
+						16
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						6,
+						22,
+						7,
+						18,
+						16,
+						21,
+						3,
+						14,
+						20,
+						24,
+						1,
+						2,
+						25,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9,
+						4,
+						23
+					],
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"documents": [
+						9,
+						10,
+						21,
+						4,
+						15,
+						23,
+						1,
+						24,
+						11,
+						25,
+						2,
+						5,
+						16,
+						20,
+						17,
+						12,
+						6,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						10,
+						21,
+						4,
+						15,
+						5,
+						16,
+						11,
+						23,
+						1,
+						24,
+						25,
+						2,
+						20,
+						17,
+						12,
+						6,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						16,
+						25,
+						11,
+						1,
+						15,
+						4,
+						23,
+						21,
+						10,
+						5,
+						20,
+						17,
+						12,
+						6,
+						2,
+						24,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rhxtsYYnwI38",
+			"query": {
+				"$text": {
+					"$search": "JavaScript programming"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						17,
+						2,
+						25,
+						10,
+						3,
+						11,
+						19,
+						4,
+						13,
+						21,
+						14,
+						22,
+						15,
+						8
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						11,
+						13,
+						14,
+						19,
+						24,
+						25,
+						2,
+						22,
+						4,
+						15,
+						17,
+						8,
+						21,
+						10,
+						3
+					],
+					"versions": "3.0.12..3.2.21"
+				},
+				{
+					"documents": [
+						11,
+						13,
+						14,
+						19,
+						17,
+						22,
+						4,
+						15,
+						24,
+						25,
+						2,
+						8,
+						21,
+						10,
+						3
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						24,
+						22,
+						4,
+						17,
+						8,
+						21,
+						15,
+						10,
+						3,
+						2,
+						25,
+						19,
+						14,
+						13,
+						11
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wv5XXldRL7Ru",
+			"query": {
+				"$text": {
+					"$search": "quick",
+					"$language": "en"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						9,
+						17,
+						2,
+						10,
+						18,
+						3,
+						11,
+						19,
+						12,
+						20,
+						5,
+						21,
+						14,
+						22,
+						7,
+						15,
+						16
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.0.12..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nLeHxthPae5Z",
+			"query": {
+				"$text": {
+					"$search": "guide",
+					"$language": "en"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						9,
+						2,
+						25,
+						18,
+						19,
+						4,
+						12,
+						13,
+						21,
+						6,
+						7,
+						15,
+						23,
+						8
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						8,
+						19,
+						23,
+						13,
+						24,
+						21,
+						12,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25
+					],
+					"versions": "3.0.12..3.2.21"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						8,
+						19,
+						23,
+						12,
+						21,
+						24,
+						13,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						13,
+						24,
+						21,
+						12,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25,
+						23,
+						19,
+						8,
+						7,
+						4
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m2WGbNIg3Gtw",
+			"query": {
+				"$text": {
+					"$search": "Quick",
+					"$caseSensitive": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bZSuYrI5ZsfM",
+			"query": {
+				"$text": {
+					"$search": "Quick",
+					"$caseSensitive": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dRRk7ouE2wIx",
+			"query": {
+				"$text": {
+					"$search": "BROWN",
+					"$caseSensitive": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [],
+					"versions": "3.2.6..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gZoipl5X5KYS",
+			"query": {
+				"$text": {
+					"$search": "BROWN",
+					"$caseSensitive": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						6,
+						12,
+						17,
+						20,
+						16,
+						5,
+						25,
+						11,
+						1,
+						23,
+						15,
+						4,
+						21,
+						10
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						6,
+						12,
+						17,
+						20,
+						25,
+						1,
+						23,
+						11,
+						16,
+						5,
+						15,
+						4,
+						21,
+						10
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						16,
+						25,
+						11,
+						1,
+						15,
+						4,
+						23,
+						21,
+						10,
+						5,
+						20,
+						17,
+						12,
+						6
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qGAMCPYhv6QX",
+			"query": {
+				"$text": {
+					"$search": "quick",
+					"$diacriticSensitive": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uobW2P0PJrcp",
+			"query": {
+				"$text": {
+					"$search": "quick",
+					"$diacriticSensitive": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						2,
+						24,
+						20,
+						14,
+						3,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						5,
+						10,
+						11,
+						12,
+						15,
+						17,
+						19,
+						14,
+						3,
+						24,
+						2,
+						20,
+						21,
+						16,
+						18,
+						7,
+						22
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						20,
+						24,
+						14,
+						21,
+						16,
+						3,
+						18,
+						7,
+						22,
+						19,
+						17,
+						15,
+						12,
+						11,
+						10,
+						5,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qLW5wMD09O8z",
+			"query": {
+				"$text": {
+					"$search": "guide",
+					"$language": "en",
+					"$caseSensitive": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						19,
+						24,
+						21,
+						12,
+						25
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						19,
+						12,
+						21,
+						24,
+						25
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						24,
+						21,
+						12,
+						25,
+						19,
+						7,
+						4
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ieDO7OQHh0rv",
+			"query": {
+				"$text": {
+					"$search": "guide",
+					"$language": "en",
+					"$caseSensitive": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						8,
+						19,
+						23,
+						13,
+						24,
+						21,
+						12,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						4,
+						7,
+						8,
+						19,
+						23,
+						12,
+						21,
+						24,
+						13,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						13,
+						24,
+						21,
+						12,
+						15,
+						9,
+						6,
+						18,
+						2,
+						25,
+						23,
+						19,
+						8,
+						7,
+						4
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "roVQWDOFBZRr",
+			"query": {
+				"$text": {
+					"$search": "quick brown",
+					"$caseSensitive": false,
+					"$diacriticSensitive": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$text",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue extra fields in $text",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						9,
+						10,
+						21,
+						4,
+						15,
+						23,
+						1,
+						24,
+						11,
+						25,
+						2,
+						5,
+						16,
+						20,
+						17,
+						12,
+						6,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19
+					],
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"documents": [
+						9,
+						10,
+						21,
+						4,
+						15,
+						5,
+						16,
+						11,
+						23,
+						1,
+						24,
+						25,
+						2,
+						20,
+						17,
+						12,
+						6,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19
+					],
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"documents": [
+						16,
+						25,
+						11,
+						1,
+						15,
+						4,
+						23,
+						21,
+						10,
+						5,
+						20,
+						17,
+						12,
+						6,
+						2,
+						24,
+						14,
+						3,
+						18,
+						7,
+						22,
+						19,
+						9
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iWQLMI6JwcU7",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/^$/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qzxWCHoatU15",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/.*/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fEFQ89Zt5WNj",
+			"query": {
+				"title": {
+					"$regex": "@RegExp/.+/"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wLGax0eaFBVA",
+			"query": {
+				"tags.0": {
+					"$regex": "@RegExp/java/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						17
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nKutOLvC7bOe",
+			"query": {
+				"tags.1": {
+					"$regex": "@RegExp/mongo/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						18,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kn1SbMS7YTj5",
+			"query": {
+				"tags": {
+					"$regex": "quick"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						20,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "k2oFehITBiTG",
+			"query": {
+				"tags": {
+					"$regex": "@RegExp/^java/i"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						17,
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,777 @@
+{
+	"catalog": "coverage_geo",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"status": "Abundant",
+				"age": {
+					"score": 209271.984375,
+					"rank": [
+						-92.90898701416783,
+						-75.02003547216432
+					],
+					"level": "Couple"
+				}
+			},
+			{
+				"_id": 1,
+				"status": "Double",
+				"age": {
+					"rank": [
+						-92.90898701416783,
+						-75.02003547216432
+					],
+					"level": "Couple",
+					"score": 209271.984375
+				}
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "pNb1N9XvEcKK",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoWithin": {
+								"$centerSphere": [
+									[
+										182.03531532305314,
+										3.705070368177687
+									],
+									5.145221550434281
+								]
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoWithin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $centerSphere: [ [ 182.0353153230531, 3.705070368177687 ], 5.145221550434281 ] } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue longitude/latitude is out of bounds, lng: 182.035 lat: 3.70507",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "longitude/latitude is out of bounds, lng: 182.035 lat: 3.70507",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "longitude/latitude is out of bounds, lng: 182.035 lat: 3.70507",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Longitude/latitude is out of bounds, lng: 182.035 lat: 3.70507",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dJw2XeGpJ1LC",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": "Couple",
+									"rank": [
+										-92.90898701416783,
+										-75.02003547216432
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: \"Couple\", rank: [ -92.90898701416783, -75.02003547216432 ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: \"Couple\", rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qf0GR6YJGMaZ",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoWithin": {
+								"$centerSphere": [
+									[
+										null,
+										null
+									],
+									null
+								]
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoWithin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $centerSphere: [ [ null, null ], null ] } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type null",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wPCHFzzVSRbE",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoWithin": {
+								"$centerSphere": [
+									[
+										"value",
+										"value"
+									],
+									"value"
+								]
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoWithin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $centerSphere: [ [ \"value\", \"value\" ], \"value\" ] } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uIZfXZEk25TJ",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoWithin": {
+								"$centerSphere": [
+									[
+										true,
+										true
+									],
+									true
+								]
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoWithin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $centerSphere: [ [ true, true ], true ] } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type bool",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oyBGpPLmhb6t",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": "Couple",
+									"rank": [
+										null,
+										null
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: \"Couple\", rank: [ null, null ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: \"Couple\", rank: [ null, null ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ null, null ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ null, null ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rbVSLpAIGXof",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": "Couple",
+									"rank": [
+										"value",
+										"value"
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: \"Couple\", rank: [ \"value\", \"value\" ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: \"Couple\", rank: [ \"value\", \"value\" ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ \"value\", \"value\" ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ \"value\", \"value\" ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mWwwNELOI7Zv",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": "Couple",
+									"rank": [
+										true,
+										true
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: \"Couple\", rank: [ true, true ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: \"Couple\", rank: [ true, true ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ true, true ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: \"Couple\", rank: [ true, true ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aWUXTRZyLZWh",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": null,
+									"rank": [
+										-92.90898701416783,
+										-75.02003547216432
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: null, rank: [ -92.90898701416783, -75.02003547216432 ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: null, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: null, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: null, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pQW5LIpULPLI",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": 42,
+									"rank": [
+										-92.90898701416783,
+										-75.02003547216432
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: 42, rank: [ -92.90898701416783, -75.02003547216432 ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bQ0PjPIx2PkN",
+			"query": {
+				"$or": [
+					{
+						"age": {
+							"$geoIntersects": {
+								"$geometry": {
+									"level": true,
+									"rank": [
+										-92.90898701416783,
+										-75.02003547216432
+									]
+								}
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$geoIntersects",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { level: true, rank: [ -92.90898701416783, -75.02003547216432 ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { level: true, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: true, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { level: true, rank: [ -92.90898701416783, -75.02003547216432 ] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		}
+	]
+}

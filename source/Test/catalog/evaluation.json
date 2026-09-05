@@ -1,0 +1,1839 @@
+{
+	"catalog": "evaluation",
+	"collection": {
+		"records": [
+			{
+				"_id": 1,
+				"name": "Alice",
+				"age": 27,
+				"active": false,
+				"status": "active",
+				"profile": {
+					"rating": 0,
+					"premium": false,
+					"balance": 225.79
+				},
+				"tags": [
+					"svelte",
+					"docker"
+				],
+				"stats": {
+					"loginCount": 6,
+					"failedLogins": 0
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2020-02-04T00:00:00.000Z"
+			},
+			{
+				"_id": 2,
+				"name": "Henry",
+				"age": 32,
+				"active": true,
+				"status": "active",
+				"profile": {
+					"rating": 5,
+					"premium": false,
+					"balance": 456.74
+				},
+				"tags": [
+					"javascript",
+					"sailfish"
+				],
+				"stats": {
+					"loginCount": 9,
+					"failedLogins": 0
+				},
+				"lastLogin": "@Date/2026-02-04T00:00:00.000Z",
+				"createdAt": "@Date/2023-07-18T00:00:00.000Z"
+			},
+			{
+				"_id": 3,
+				"name": "Ivy",
+				"age": 60,
+				"active": true,
+				"status": "active",
+				"profile": {
+					"rating": 3,
+					"premium": true,
+					"balance": 752.38
+				},
+				"tags": [],
+				"stats": {
+					"loginCount": 5,
+					"failedLogins": 1
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2022-05-13T00:00:00.000Z"
+			},
+			{
+				"_id": 4,
+				"name": "Ivy",
+				"age": 53,
+				"active": false,
+				"status": "pending",
+				"profile": {
+					"rating": 4.7,
+					"premium": true,
+					"balance": 686.36
+				},
+				"tags": [
+					"javascript",
+					"docker",
+					"design"
+				],
+				"stats": {
+					"loginCount": 30,
+					"failedLogins": 3
+				},
+				"lastLogin": "@Date/2026-02-04T00:00:00.000Z",
+				"createdAt": "@Date/2024-10-25T00:00:00.000Z"
+			},
+			{
+				"_id": 5,
+				"name": "Ivy",
+				"age": 47,
+				"active": false,
+				"status": "suspended",
+				"profile": {
+					"rating": 1.6,
+					"premium": true,
+					"balance": 571.81
+				},
+				"tags": [
+					"docker"
+				],
+				"stats": {
+					"loginCount": 25,
+					"failedLogins": 9
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2022-06-13T00:00:00.000Z"
+			},
+			{
+				"_id": 6,
+				"name": "Bob",
+				"age": 55,
+				"active": true,
+				"status": "deleted",
+				"profile": {
+					"rating": 3.6,
+					"premium": true,
+					"balance": 550.81
+				},
+				"tags": [
+					"ui"
+				],
+				"stats": {
+					"loginCount": 26,
+					"failedLogins": 1
+				},
+				"lastLogin": "@Date/2024-01-02T00:00:00.000Z",
+				"createdAt": "@Date/2020-01-03T00:00:00.000Z"
+			},
+			{
+				"_id": 7,
+				"name": "Ivy",
+				"age": 23,
+				"active": false,
+				"status": "deleted",
+				"profile": {
+					"rating": 4.1,
+					"premium": false,
+					"balance": 598.27
+				},
+				"tags": [
+					"design"
+				],
+				"stats": {
+					"loginCount": 9,
+					"failedLogins": 3
+				},
+				"lastLogin": "@Date/2026-02-04T00:00:00.000Z",
+				"createdAt": "@Date/2024-09-23T00:00:00.000Z"
+			},
+			{
+				"_id": 8,
+				"name": "Diana",
+				"age": 31,
+				"active": false,
+				"status": "active",
+				"profile": {
+					"rating": 3.6,
+					"premium": true,
+					"balance": 34.46
+				},
+				"tags": [
+					"linux"
+				],
+				"stats": {
+					"loginCount": 22,
+					"failedLogins": 3
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2021-04-09T00:00:00.000Z"
+			},
+			{
+				"_id": 9,
+				"name": "Alice",
+				"age": 59,
+				"active": false,
+				"status": "pending",
+				"profile": {
+					"rating": 3.1,
+					"premium": false,
+					"balance": 769.39
+				},
+				"tags": [],
+				"stats": {
+					"loginCount": 8,
+					"failedLogins": 10
+				},
+				"lastLogin": "@Date/2025-02-03T00:00:00.000Z",
+				"createdAt": "@Date/2025-11-26T00:00:00.000Z"
+			},
+			{
+				"_id": 10,
+				"name": "Frank",
+				"age": 42,
+				"active": true,
+				"status": "deleted",
+				"profile": {
+					"rating": 3.9,
+					"premium": false,
+					"balance": 889
+				},
+				"tags": [],
+				"stats": {
+					"loginCount": 19,
+					"failedLogins": 0
+				},
+				"lastLogin": "@Date/2024-01-02T00:00:00.000Z",
+				"createdAt": "@Date/2022-06-15T00:00:00.000Z"
+			},
+			{
+				"_id": 11,
+				"name": "Bob",
+				"age": 27,
+				"active": false,
+				"status": "active",
+				"profile": {
+					"rating": 1.3,
+					"premium": false,
+					"balance": 37.03
+				},
+				"tags": [
+					"css",
+					"security",
+					"cryptography"
+				],
+				"stats": {
+					"loginCount": 27,
+					"failedLogins": 2
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2024-09-23T00:00:00.000Z"
+			},
+			{
+				"_id": 12,
+				"name": "Ivy",
+				"age": 64,
+				"active": true,
+				"status": "pending",
+				"profile": {
+					"rating": 3.7,
+					"premium": false,
+					"balance": 677.81
+				},
+				"tags": [
+					"svelte"
+				],
+				"stats": {
+					"loginCount": 12,
+					"failedLogins": 9
+				},
+				"lastLogin": "@Date/2025-02-03T00:00:00.000Z",
+				"createdAt": "@Date/2021-03-06T00:00:00.000Z"
+			},
+			{
+				"_id": 13,
+				"name": "Alice",
+				"age": 59,
+				"active": true,
+				"status": "inactive",
+				"profile": {
+					"rating": 0,
+					"premium": false,
+					"balance": 319.7
+				},
+				"tags": [
+					"ui"
+				],
+				"stats": {
+					"loginCount": 8,
+					"failedLogins": 9
+				},
+				"lastLogin": "@Date/2025-02-03T00:00:00.000Z",
+				"createdAt": "@Date/2021-04-11T00:00:00.000Z"
+			},
+			{
+				"_id": 14,
+				"name": "Alice",
+				"age": 30,
+				"active": false,
+				"status": "pending",
+				"profile": {
+					"rating": 2,
+					"premium": false,
+					"balance": 15.73
+				},
+				"tags": [
+					"linux"
+				],
+				"stats": {
+					"loginCount": 24,
+					"failedLogins": 2
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2023-08-19T00:00:00.000Z"
+			},
+			{
+				"_id": 15,
+				"name": "Eve",
+				"age": 39,
+				"active": true,
+				"status": "pending",
+				"profile": {
+					"rating": 4.1,
+					"premium": false,
+					"balance": 704.35
+				},
+				"tags": [
+					"css"
+				],
+				"stats": {
+					"loginCount": 7,
+					"failedLogins": 9
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2022-06-14T00:00:00.000Z"
+			},
+			{
+				"_id": 16,
+				"name": "Charlie",
+				"age": 46,
+				"active": false,
+				"status": "deleted",
+				"profile": {
+					"rating": 4.6,
+					"premium": false,
+					"balance": 220.54
+				},
+				"tags": [
+					"linux"
+				],
+				"stats": {
+					"loginCount": 30,
+					"failedLogins": 4
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2022-05-13T00:00:00.000Z"
+			},
+			{
+				"_id": 17,
+				"name": "Grace",
+				"age": 56,
+				"active": true,
+				"status": "pending",
+				"profile": {
+					"rating": 1.5,
+					"premium": true,
+					"balance": 95.74
+				},
+				"tags": [
+					"svelte",
+					"ui",
+					"javascript"
+				],
+				"stats": {
+					"loginCount": 21,
+					"failedLogins": 6
+				},
+				"lastLogin": "@Date/2023-01-01T00:00:00.000Z",
+				"createdAt": "@Date/2020-02-05T00:00:00.000Z"
+			},
+			{
+				"_id": 18,
+				"name": "Frank",
+				"age": 40,
+				"active": true,
+				"status": "inactive",
+				"profile": {
+					"rating": 4.9,
+					"premium": true,
+					"balance": 424.38
+				},
+				"tags": [
+					"cryptography",
+					"html",
+					"linux",
+					"ui"
+				],
+				"stats": {
+					"loginCount": 6,
+					"failedLogins": 1
+				},
+				"lastLogin": "@Date/2026-02-04T00:00:00.000Z",
+				"createdAt": "@Date/2025-11-27T00:00:00.000Z"
+			},
+			{
+				"_id": 19,
+				"name": "Eve",
+				"age": 22,
+				"active": true,
+				"status": "pending",
+				"profile": {
+					"rating": 1.1,
+					"premium": true,
+					"balance": 635.79
+				},
+				"tags": [
+					"cryptography"
+				],
+				"stats": {
+					"loginCount": 19,
+					"failedLogins": 0
+				},
+				"lastLogin": "@Date/2026-02-04T00:00:00.000Z",
+				"createdAt": "@Date/2023-07-18T00:00:00.000Z"
+			},
+			{
+				"_id": 20,
+				"name": "Charlie",
+				"age": 28,
+				"active": true,
+				"status": "deleted",
+				"profile": {
+					"rating": 4.6,
+					"premium": false,
+					"balance": 246.46
+				},
+				"tags": [
+					"ui"
+				],
+				"stats": {
+					"loginCount": 26,
+					"failedLogins": 0
+				},
+				"lastLogin": "@Date/2024-01-02T00:00:00.000Z",
+				"createdAt": "@Date/2022-06-16T00:00:00.000Z"
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "kgNFORkpIP3q",
+			"query": {
+				"$expr": {
+					"$gt": [
+						"$age",
+						25
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bEmZFlFj1aGm",
+			"query": {
+				"$expr": {
+					"$eq": [
+						"$name",
+						"Alice"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						9,
+						13,
+						14
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mBHOU2RGbO5n",
+			"query": {
+				"$expr": {
+					"$gte": [
+						"$profile.rating",
+						4
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						4,
+						7,
+						15,
+						16,
+						18,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ivxr2BlSTEGb",
+			"query": {
+				"$expr": {
+					"$gt": [
+						{
+							"$multiply": [
+								"$age",
+								2
+							]
+						},
+						60
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rMp4IMMGE1Ty",
+			"query": {
+				"$expr": {
+					"$eq": [
+						{
+							"$add": [
+								"$profile.balance",
+								1000
+							]
+						},
+						2500.75
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a2DJN6KhJJ4n",
+			"query": {
+				"$expr": {
+					"$eq": [
+						{
+							"$toLower": [
+								"$status"
+							]
+						},
+						"active"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						8,
+						11
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v3ZjINiNoQbd",
+			"query": {
+				"$expr": {
+					"$gt": [
+						{
+							"$strLenCP": [
+								"$name"
+							]
+						},
+						4
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						8,
+						9,
+						10,
+						13,
+						14,
+						16,
+						17,
+						18,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jSzTP2b3BYva",
+			"query": {
+				"$expr": {
+					"$gt": [
+						{
+							"$size": [
+								"$tags"
+							]
+						},
+						2
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						4,
+						11,
+						17,
+						18
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sLmlnHKuZKQ9",
+			"query": {
+				"$expr": {
+					"$in": [
+						"javascript",
+						"$tags"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						4,
+						17
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wAABEIRq6G15",
+			"query": {
+				"$expr": {
+					"$gte": [
+						"$lastLogin",
+						"@Date/2023-01-01T00:00:00.000Z"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sxVyxugdzZCu",
+			"query": {
+				"$expr": {
+					"$eq": [
+						{
+							"$year": [
+								"$createdAt"
+							]
+						},
+						2023
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						14,
+						19
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "orVRlWwMpWNF",
+			"query": {
+				"$expr": {
+					"$cond": {
+						"if": {
+							"$gte": [
+								"$age",
+								18
+							]
+						},
+						"then": "adult",
+						"else": "minor"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vxDr2jD4R41s",
+			"query": {
+				"$expr": {
+					"$and": [
+						{
+							"$gte": [
+								"$age",
+								18
+							]
+						},
+						{
+							"$eq": [
+								"$active",
+								true
+							]
+						},
+						{
+							"$gt": [
+								{
+									"$size": [
+										"$tags"
+									]
+								},
+								1
+							]
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						2,
+						17,
+						18
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vPvBzyFpqqqf",
+			"query": {
+				"$expr": {
+					"$or": [
+						{
+							"$and": [
+								{
+									"$eq": [
+										"$profile.premium",
+										true
+									]
+								},
+								{
+									"$gte": [
+										"$profile.rating",
+										4.5
+									]
+								}
+							]
+						},
+						{
+							"$and": [
+								{
+									"$gte": [
+										"$stats.loginCount",
+										50
+									]
+								},
+								{
+									"$lt": [
+										"$stats.failedLogins",
+										5
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						4,
+						18
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "syyURM4g1ROt",
+			"query": {
+				"$expr": {
+					"$gt": [
+						"$age",
+						"twenty-five"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m6Wl6y5JGWhr",
+			"query": {
+				"$expr": {
+					"$eq": [
+						"$nonExistent",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wRhyQQxHOJOP",
+			"query": {
+				"$expr": {
+					"$add": [
+						"$age",
+						"invalid"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "$add only supports numeric or date types, not string",
+						"code": 16554,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.4.30"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: $add only supports numeric or date types, not string",
+						"code": 16554,
+						"type": "MongoServerError"
+					},
+					"versions": "5.0.0..6.0.9"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: $add only supports numeric or date types, not string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.10..6.0.28,7.0.5..7.0.40"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: only numbers and dates are allowed in an $add expression",
+						"code": 7157723,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..7.0.4"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $add only supports numeric or date types, not string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ixFVEytdRudd",
+			"query": {
+				"$expr": {
+					"$divide": [
+						"$age",
+						0
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "can't $divide by zero",
+						"code": 16608,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.4.30"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: can't $divide by zero",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: can't $divide by zero",
+						"code": 4848401,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..7.0.4"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mmVPLqDUCqDc",
+			"query": {
+				"$expr": {
+					"$size": "$name"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "The argument to $size must be an array, but was of type: string",
+						"code": 17124,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.4.30"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: The argument to $size must be an array, but was of type: string",
+						"code": 17124,
+						"type": "MongoServerError"
+					},
+					"versions": "5.0.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: The argument to $size must be an array, but was of type: string",
+						"code": 17124,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r9TRqMUdQYmb",
+			"query": {
+				"$expr": {
+					"$year": "$age"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "can't convert from BSON type int to Date",
+						"code": 16006,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.4.30"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command :: caused by :: can't convert from BSON type int to Date",
+						"code": 16006,
+						"type": "MongoServerError"
+					},
+					"versions": "5.0.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't convert from BSON type int to Date",
+						"code": 16006,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sJm5nEcDVPIi",
+			"query": {
+				"$expr": {
+					"$gt": [
+						null,
+						0
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ej0JQyPoPbK0",
+			"query": {
+				"$expr": {
+					"$size": []
+				}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "Expression $size takes exactly 1 arguments. 0 were passed in.",
+						"code": 16020,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vCiQzYTgGOPC",
+			"query": {
+				"$expr": {}
+			},
+			"operators": [
+				{
+					"operator": "$expr",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $expr",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.12"
+				},
+				{
+					"error": {
+						"message": "$expr is not allowed in this context",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		}
+	]
+}

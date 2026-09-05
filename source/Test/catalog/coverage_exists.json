@@ -1,0 +1,6069 @@
+{
+	"catalog": "coverage_exists",
+	"collection": {
+		"records": [
+			{
+				"_id": 0
+			},
+			{
+				"_id": 1,
+				"age": 6
+			},
+			{
+				"_id": 2,
+				"age": {
+					"score": 6
+				}
+			},
+			{
+				"_id": 3,
+				"age": {
+					"score": {
+						"rank": 6
+					}
+				}
+			},
+			{
+				"_id": 4,
+				"age": {
+					"score": {
+						"rank": {
+							"level": null
+						}
+					}
+				}
+			},
+			{
+				"_id": 5,
+				"count": 22,
+				"grade": 22
+			},
+			{
+				"_id": 6
+			},
+			{
+				"_id": 7,
+				"size": 16
+			},
+			{
+				"_id": 8,
+				"size": null
+			},
+			{
+				"_id": 9,
+				"scores": [
+					11
+				]
+			},
+			{
+				"_id": 10,
+				"ratings": [
+					26
+				]
+			},
+			{
+				"_id": 11,
+				"ratings": [
+					{}
+				]
+			},
+			{
+				"_id": 12,
+				"ratings": [
+					{
+						"weight": 27
+					},
+					{
+						"ratings": 26
+					}
+				]
+			},
+			{
+				"_id": 13,
+				"counts": [
+					3
+				]
+			},
+			{
+				"_id": 14,
+				"counts": [
+					{}
+				]
+			},
+			{
+				"_id": 15,
+				"counts": [
+					{
+						"height": 4
+					},
+					{
+						"counts": 3
+					}
+				]
+			},
+			{
+				"_id": 16,
+				"counts": [
+					[
+						3
+					]
+				]
+			},
+			{
+				"_id": 17,
+				"values": [
+					3
+				]
+			},
+			{
+				"_id": 18,
+				"values": [
+					{}
+				]
+			},
+			{
+				"_id": 19,
+				"values": [
+					{
+						"age": 4
+					},
+					{
+						"values": 3
+					}
+				]
+			},
+			{
+				"_id": 20,
+				"values": [
+					[
+						3
+					]
+				]
+			},
+			{
+				"_id": 21,
+				"values": [
+					[
+						[
+							3
+						]
+					]
+				]
+			},
+			{
+				"_id": 22,
+				"values": [
+					[
+						{
+							"age": 3
+						}
+					]
+				]
+			},
+			{
+				"_id": 23,
+				"points": [
+					31
+				]
+			},
+			{
+				"_id": 24,
+				"points": [
+					{}
+				]
+			},
+			{
+				"_id": 25,
+				"points": [
+					{
+						"score": 32
+					},
+					{
+						"points": 31
+					}
+				]
+			},
+			{
+				"_id": 26,
+				"points": [
+					[
+						31
+					]
+				]
+			},
+			{
+				"_id": 27,
+				"points": [
+					[
+						[
+							31
+						]
+					]
+				]
+			},
+			{
+				"_id": 28,
+				"points": [
+					[
+						{
+							"score": 31
+						}
+					]
+				]
+			},
+			{
+				"_id": 29,
+				"points": [
+					[],
+					[
+						{
+							"score": 31
+						}
+					]
+				]
+			},
+			{
+				"_id": 30,
+				"rank": {}
+			},
+			{
+				"_id": 31
+			},
+			{
+				"_id": 32,
+				"rankings": []
+			},
+			{
+				"_id": 33,
+				"indices": {
+					"0": 32
+				}
+			},
+			{
+				"_id": 34,
+				"indices": []
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "n7cC5EYB24jn",
+			"query": {
+				"age.score": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "egI0pVyZP2uM",
+			"query": {
+				"age.score.rank": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wwVwOaICvDsJ",
+			"query": {
+				"age.score.rank.level": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "o5ZmT8QfCDdL",
+			"query": {
+				"age.score": {
+					"$ne": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e10zRSJtbwRF",
+			"query": {
+				"age.score.rank": {
+					"$ne": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rAZ5O6MEDMam",
+			"query": {
+				"age.score.rank.level": {
+					"$ne": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wQqFTpVhAG5E",
+			"query": {
+				"age": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cS5x1uBF3Vg3",
+			"query": {
+				"age.score": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cIuBiPOxJSvV",
+			"query": {
+				"age.score.rank": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t4Nt0soSTs4i",
+			"query": {
+				"age.score.rank.level": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c5odCthIp6b0",
+			"query": {
+				"count": 22,
+				"grade": 22
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iNZ65b16njq1",
+			"query": {
+				"count": 22,
+				"grade": 22,
+				"step": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jEj3PtBHAPhX",
+			"query": {
+				"priority": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pVdRHNLSlRBE",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "laKIHOt286Zy",
+			"query": {
+				"priority": {},
+				"attempts": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hAMAxz4mZgYl",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": true
+				},
+				"quantity": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pwA2QI7cBGko",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": true
+				},
+				"quantity": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aCYKG8LAnSDT",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": true
+				},
+				"quantity": null
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u0I4VCUFuzi5",
+			"query": {
+				"count.grade": {
+					"$not": {
+						"$exists": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qBeCSXgC8hI3",
+			"query": {
+				"index": 16,
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jZXBVEhyw9N4",
+			"query": {
+				"index": 16,
+				"size": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nqK8eGy7YTOi",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wLuyHjL4KaOd",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": 16
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qmPASYpj3biD",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p23bOv9aM0rS",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rF7W9UgGsjHY",
+			"query": {
+				"index": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hKFQ9WI7MZfP",
+			"query": {
+				"size": {
+					"$exists": 16
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oQHKTqX5u700",
+			"query": {
+				"$and": [
+					{
+						"index": {
+							"$exists": false
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hZIV8qRQKOY3",
+			"query": {
+				"$or": [
+					{
+						"index": {
+							"$exists": false
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qMWcBJty6oYv",
+			"query": {
+				"$nor": [
+					{
+						"index": {
+							"$exists": true
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$nor",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..3.3.9"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "3.3.10..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p57TVpHEXHU5",
+			"query": {
+				"index.depth": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dqazZzgg7bV1",
+			"query": {
+				"size": {
+					"$exists": false
+				},
+				"index": {
+					"$ne": 21
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tIOBBbPmuaoX",
+			"query": {
+				"scores.0": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						9
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aqnAgstoyUVR",
+			"query": {
+				"ratings.ratings": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						12
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dsV2ViEFzVnn",
+			"query": {
+				"ratings.0.ratings": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uxCbmOnToX1Y",
+			"query": {
+				"counts.0.0": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						16
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wMEsLqz79SFi",
+			"query": {
+				"counts.0.0.0": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sCfVm4bL1KEn",
+			"query": {
+				"values.0.age": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						19,
+						22
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hAISKVIuCuYK",
+			"query": {
+				"points.0.0.score": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "o2dOIVGt0reg",
+			"query": {
+				"rank.level": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pHLEe3PxG1Ya",
+			"query": {
+				"rankings": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						32
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tPYHD1444DaY",
+			"query": {
+				"indices.0": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						33
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bf1FMHnF1kUf",
+			"query": {
+				"age": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qDl44bUZCm3Y",
+			"query": {
+				"age": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wNWQe08OZfc3",
+			"query": {
+				"age": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tOCu8DNnA3GZ",
+			"query": {
+				"age.score": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wK9dKyEv6Q3s",
+			"query": {
+				"age.score": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wEu6zzcOiBbl",
+			"query": {
+				"age.score": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "phl8tdEhTl9t",
+			"query": {
+				"age.score.rank": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "b6aZQuFq8QMX",
+			"query": {
+				"age.score.rank": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e1HOWsj9vWPe",
+			"query": {
+				"age.score.rank": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pFVts09YNUNT",
+			"query": {
+				"age.score.rank.level": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e4BCXeYsi2YM",
+			"query": {
+				"age.score.rank.level": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qHz3F9nVPFdU",
+			"query": {
+				"age.score.rank.level": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "turyTzPxFUWD",
+			"query": {
+				"count": null,
+				"grade": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pPxMlFxSDHUx",
+			"query": {
+				"count": "value",
+				"grade": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "onDDpg2RG1gU",
+			"query": {
+				"count": true,
+				"grade": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qyXf7rUCxwwb",
+			"query": {
+				"count": null,
+				"grade": null,
+				"step": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nhn5CBQYBfJ4",
+			"query": {
+				"count": "value",
+				"grade": "value",
+				"step": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uPhKKbDZ9XWj",
+			"query": {
+				"count": true,
+				"grade": true,
+				"step": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "espLpAmyGUSy",
+			"query": {
+				"count": 22,
+				"grade": 22,
+				"step": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gWrxVUC47aoI",
+			"query": {
+				"count": 22,
+				"grade": 22,
+				"step": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wLJ6D7VvGyDu",
+			"query": {
+				"count": 22,
+				"grade": 22,
+				"step": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r6QWTCvfpdIg",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kwbFwty9TRId",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t0EQfNBA5VTr",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iSwG6B8a20cX",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": null
+				},
+				"quantity": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ueF0TND4TDGl",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": 0
+				},
+				"quantity": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tD8vtKP4XzXH",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": "yes"
+				},
+				"quantity": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "l7J7yrXwAv7j",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": null
+				},
+				"quantity": null
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ty1RjEbExJxQ",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": 0
+				},
+				"quantity": null
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "odRFBGCQPnUl",
+			"query": {
+				"priority": {},
+				"attempts": {
+					"$exists": "yes"
+				},
+				"quantity": null
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oOrg5E1IEmdW",
+			"query": {
+				"count.grade": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qNvjmdmTiX3v",
+			"query": {
+				"count.grade": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "idl3kjz0KV09",
+			"query": {
+				"count.grade": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rAN4pMXWJ9Q2",
+			"query": {
+				"index": null,
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m9nQJFl71m1j",
+			"query": {
+				"index": "value",
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eMtRBvDTR0LV",
+			"query": {
+				"index": true,
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oRKLs3y1AOGg",
+			"query": {
+				"index": 16,
+				"size": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aIu2ZsjE2X6f",
+			"query": {
+				"index": 16,
+				"size": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qvhzd49eTx7l",
+			"query": {
+				"index": 16,
+				"size": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hX5lmHkGUBYy",
+			"query": {
+				"index": null,
+				"size": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gf8YODVqkCCl",
+			"query": {
+				"index": "value",
+				"size": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "h7rCLEGCJC1R",
+			"query": {
+				"index": true,
+				"size": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q1KYxNVFKPPR",
+			"query": {
+				"index": 16,
+				"size": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uHxjQP5ioiZ6",
+			"query": {
+				"index": 16,
+				"size": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vGiG1yLPyl6D",
+			"query": {
+				"index": 16,
+				"size": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "caw4jGl2fzjM",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aYQEQyfQw4IK",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cOom4relOVic",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oy5YysadT2cR",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": null
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vhLS9g4LF0xb",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": "value"
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sJMcRMJn6P2d",
+			"query": {
+				"index": {
+					"$exists": true
+				},
+				"size": true
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sqPquDINXMpf",
+			"query": {
+				"index": {
+					"$exists": null
+				},
+				"size": 16
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wgV8lfkMt6Og",
+			"query": {
+				"index": {
+					"$exists": 0
+				},
+				"size": 16
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "byRVPB2uBX5s",
+			"query": {
+				"index": {
+					"$exists": "yes"
+				},
+				"size": 16
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w0WSPvcmUREZ",
+			"query": {
+				"index": {
+					"$exists": null
+				},
+				"size": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v5ODqA4fBTFR",
+			"query": {
+				"index": {
+					"$exists": 0
+				},
+				"size": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mJQ3skBh5YHK",
+			"query": {
+				"index": {
+					"$exists": "yes"
+				},
+				"size": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q9xWiQtohWZB",
+			"query": {
+				"index": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nRMHG3ELEU0L",
+			"query": {
+				"index": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tPkRXHREvvfg",
+			"query": {
+				"index": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v0D4jNPeLXLa",
+			"query": {
+				"size": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "d6o70j7YUfTC",
+			"query": {
+				"size": {
+					"$exists": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tjgHMHVrEcpb",
+			"query": {
+				"size": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mjOWtDk751Yp",
+			"query": {
+				"$and": [
+					{
+						"index": {
+							"$exists": null
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qQryqVAEIMNt",
+			"query": {
+				"$and": [
+					{
+						"index": {
+							"$exists": 0
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tjttqKTFIR1p",
+			"query": {
+				"$and": [
+					{
+						"index": {
+							"$exists": "yes"
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "n7TqIcKx0XwQ",
+			"query": {
+				"$or": [
+					{
+						"index": {
+							"$exists": null
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eI06EF4hIa40",
+			"query": {
+				"$or": [
+					{
+						"index": {
+							"$exists": 0
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bqjVkExDRfE6",
+			"query": {
+				"$or": [
+					{
+						"index": {
+							"$exists": "yes"
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tED9OWL2ekF1",
+			"query": {
+				"$nor": [
+					{
+						"index": {
+							"$exists": null
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$nor",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jP74qNSFXdFg",
+			"query": {
+				"$nor": [
+					{
+						"index": {
+							"$exists": 0
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$nor",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eG0sfEKyVBmO",
+			"query": {
+				"$nor": [
+					{
+						"index": {
+							"$exists": "yes"
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$nor",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..3.3.9"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
+					"versions": "3.3.10..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rhRgfrvXYkFj",
+			"query": {
+				"index.depth": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pJ1gzE9Xy7j4",
+			"query": {
+				"index.depth": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c1xFGurN6o5L",
+			"query": {
+				"index.depth": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q6O43BvuEeev",
+			"query": {
+				"size": {
+					"$exists": false
+				},
+				"index": {
+					"$ne": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vNeXFKnZBaUi",
+			"query": {
+				"size": {
+					"$exists": false
+				},
+				"index": {
+					"$ne": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sJMLPhCmzyAQ",
+			"query": {
+				"size": {
+					"$exists": false
+				},
+				"index": {
+					"$ne": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r1z48Dhkk0W7",
+			"query": {
+				"size": {
+					"$exists": null
+				},
+				"index": {
+					"$ne": 21
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fMR9jqc1PWqw",
+			"query": {
+				"size": {
+					"$exists": 0
+				},
+				"index": {
+					"$ne": 21
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t0ruCWjfv6Ke",
+			"query": {
+				"size": {
+					"$exists": "yes"
+				},
+				"index": {
+					"$ne": 21
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mNiFuUnMV275",
+			"query": {
+				"scores.0": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "czSN7LPj84PO",
+			"query": {
+				"scores.0": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t2qqDWHkY7eD",
+			"query": {
+				"scores.0": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						9
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mBuRXQXBp15w",
+			"query": {
+				"ratings.ratings": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vj2VOWVfZIQA",
+			"query": {
+				"ratings.ratings": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "faDEI9meVFSX",
+			"query": {
+				"ratings.ratings": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						12
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pYMFhjm2rb9V",
+			"query": {
+				"ratings.0.ratings": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aSHYBpR2KFZn",
+			"query": {
+				"ratings.0.ratings": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wzuRnKgCSWRt",
+			"query": {
+				"ratings.0.ratings": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nRkWsCGZvfOa",
+			"query": {
+				"counts.0.0": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "onKODqNLXU1a",
+			"query": {
+				"counts.0.0": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q8xQvEOAP8m9",
+			"query": {
+				"counts.0.0": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						16
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wp2OeFkwxWpK",
+			"query": {
+				"counts.0.0.0": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wgA4IHux40mE",
+			"query": {
+				"counts.0.0.0": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fvweFLw1n70i",
+			"query": {
+				"counts.0.0.0": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vNz72BpsdYgh",
+			"query": {
+				"values.0.age": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20,
+						21,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rKvt3VP4kc95",
+			"query": {
+				"values.0.age": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20,
+						21,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tH9qWTHytAhv",
+			"query": {
+				"values.0.age": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						19,
+						22
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wW8OJncZPXLz",
+			"query": {
+				"points.0.0.score": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rQMWkGVVjGlx",
+			"query": {
+				"points.0.0.score": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tnyQWmtJRPYL",
+			"query": {
+				"points.0.0.score": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "usv2AAzYNEFE",
+			"query": {
+				"rank.level": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nUTqP37eGzSi",
+			"query": {
+				"rank.level": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "enqbmz4QpHy3",
+			"query": {
+				"rank.level": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wlCmugFF7yid",
+			"query": {
+				"rankings": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "d921VJLFTgPO",
+			"query": {
+				"rankings": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vhRtOVHAFN51",
+			"query": {
+				"rankings": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						32
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "scBFYYSOYGaI",
+			"query": {
+				"indices.0": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pYnBVTDkvO6U",
+			"query": {
+				"indices.0": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "h0JWEgvMEoeK",
+			"query": {
+				"indices.0": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						33
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rBtnGSgu2JO7",
+			"query": {
+				"step": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tAe7j3tsv3y9",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ozReU4P9cbIr",
+			"query": {
+				"step": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sUyOM6LMmc57",
+			"query": {
+				"step": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jIqfhGjuXJ9D",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aQMt0S6AN7PU",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hxf7RoJM5TL0",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		}
+	]
+}

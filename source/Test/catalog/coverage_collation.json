@@ -1,0 +1,29 @@
+{
+	"catalog": "coverage_collation",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"age": 19,
+				"status": "Abundant"
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "av4XSA7WB3JW",
+			"query": {
+				"age": 19
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		}
+	]
+}

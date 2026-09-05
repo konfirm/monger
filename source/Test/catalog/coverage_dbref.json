@@ -1,0 +1,402 @@
+{
+	"catalog": "coverage_dbref",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"age": 29,
+				"scores": [
+					{
+						"score": "Abundant",
+						"rank": {
+							"$proxy": "Couple"
+						}
+					}
+				]
+			},
+			{
+				"_id": 1,
+				"status": "Abundant",
+				"level": {
+					"$ref": "Couple",
+					"$id": 30
+				}
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "bvJFMKQaA0Qp",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"$ref": "Abundant",
+						"$id": {
+							"$proxy": "Double"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "mmIXNtlMGPjV",
+			"query": {
+				"level": {
+					"$ref": "Couple",
+					"$id": 30
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1
+					],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "mAcxmXOff8WI",
+			"query": {
+				"scores": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "onGtVPXrgQRn",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"$ref": null,
+						"$id": {
+							"$proxy": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "uxdT7Mo26dX4",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"$ref": 42,
+						"$id": {
+							"$proxy": 42
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "kr3ADwEId3Us",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"$ref": true,
+						"$id": {
+							"$proxy": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "uxh8SHXOH1a0",
+			"query": {
+				"level": {
+					"$ref": "Couple",
+					"$id": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "hYQSKF5fXoXn",
+			"query": {
+				"level": {
+					"$ref": "Couple",
+					"$id": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "oxGiPtE1fHY8",
+			"query": {
+				"level": {
+					"$ref": "Couple",
+					"$id": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "rqGLIFMHDVcf",
+			"query": {
+				"level": {
+					"$ref": null,
+					"$id": 30
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "uYBfjDETBFUj",
+			"query": {
+				"level": {
+					"$ref": 42,
+					"$id": 30
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		},
+		{
+			"id": "l3IgWLS5JGn8",
+			"query": {
+				"level": {
+					"$ref": true,
+					"$id": 30
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ref",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.7.2,3.7.5,3.7.7,4.0.1..4.0.28,4.1.2..8.3.8"
+				},
+				{
+					"error": {
+						"message": "connect ECONNREFUSED 127.0.0.1:27017",
+						"type": "MongoServerSelectionError"
+					},
+					"versions": "3.7.3,3.7.9,4.0.0,4.1.1"
+				}
+			]
+		}
+	]
+}

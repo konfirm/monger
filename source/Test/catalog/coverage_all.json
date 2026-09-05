@@ -1,0 +1,3085 @@
+{
+	"catalog": "coverage_all",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"scores": [
+					27,
+					28,
+					29
+				]
+			},
+			{
+				"_id": 1,
+				"scores": []
+			},
+			{
+				"_id": 2
+			},
+			{
+				"_id": 3,
+				"ratings": [
+					20,
+					21,
+					22
+				]
+			},
+			{
+				"_id": 4,
+				"ratings": []
+			},
+			{
+				"_id": 5
+			},
+			{
+				"_id": 6,
+				"ratings": [
+					[
+						21
+					]
+				]
+			},
+			{
+				"_id": 7,
+				"ratings": [
+					{
+						"age": [
+							29,
+							30
+						]
+					},
+					30
+				]
+			},
+			{
+				"_id": 8,
+				"counts": [
+					18,
+					19,
+					20
+				]
+			},
+			{
+				"_id": 9,
+				"counts": []
+			},
+			{
+				"_id": 10
+			},
+			{
+				"_id": 11,
+				"counts": [
+					[
+						19
+					]
+				]
+			},
+			{
+				"_id": 12,
+				"counts": [
+					{
+						"score": [
+							27,
+							28
+						]
+					},
+					28
+				]
+			},
+			{
+				"_id": 13,
+				"counts": {
+					"score": [
+						37,
+						47
+					]
+				}
+			},
+			{
+				"_id": 14,
+				"values": [
+					{
+						"rank": 38
+					},
+					{
+						"rank": 39
+					}
+				]
+			},
+			{
+				"_id": 15,
+				"points": [
+					18,
+					19
+				]
+			},
+			{
+				"_id": 16,
+				"tags": [
+					"Abundant",
+					"Couple",
+					"Double"
+				]
+			},
+			{
+				"_id": 17
+			},
+			{
+				"_id": 18
+			},
+			{
+				"_id": 19,
+				"name": 18
+			},
+			{
+				"_id": 20,
+				"name": [
+					17,
+					18
+				]
+			},
+			{
+				"_id": 21
+			},
+			{
+				"_id": 22,
+				"title": 7
+			},
+			{
+				"_id": 23,
+				"title": [
+					6,
+					7
+				]
+			},
+			{
+				"_id": 24,
+				"title": []
+			},
+			{
+				"_id": 25,
+				"rankings": [
+					{}
+				]
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "dScKkGZ5R5aB",
+			"query": {
+				"scores": {
+					"$all": [
+						27
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wkZoCH8uBInd",
+			"query": {
+				"scores": {
+					"$all": [
+						27,
+						28
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sOHvIlN1THbr",
+			"query": {
+				"scores": {
+					"$all": [
+						28,
+						28
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gnuGRrQgnlS8",
+			"query": {
+				"ratings.age": {
+					"$all": [
+						29
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nt5PuN0iCjTv",
+			"query": {
+				"counts.score": {
+					"$all": [
+						37,
+						47
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v8lVUgCRPV1E",
+			"query": {
+				"counts": {
+					"$all": []
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uctCQArWHvPX",
+			"query": {
+				"values.rank": {
+					"$in": [
+						38
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "j8IG6BDE1c3r",
+			"query": {
+				"values.rank": {
+					"$in": [
+						38,
+						39
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qxnZ0nlPDUsc",
+			"query": {
+				"values.rank": {
+					"$all": [
+						38,
+						39
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mEeo8asKAwIj",
+			"query": {
+				"points": {
+					"$in": [
+						18
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uShtrywtOCOG",
+			"query": {
+				"points": {
+					"$in": [
+						18,
+						19
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r4RpE5OtAbc6",
+			"query": {
+				"points": {
+					"$all": [
+						18,
+						19
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p0PNMHJ6xeaC",
+			"query": {
+				"tags": {
+					"$all": [
+						"Abundant",
+						"Each"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "seXNWGuvXDKL",
+			"query": {
+				"level": {
+					"$all": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dfqKFvOJNKfv",
+			"query": {
+				"level": {
+					"$not": {
+						"$all": [
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "ulesAgqFEIbl",
+			"query": {
+				"count": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"grade": null
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uSWX6Res68Ic",
+			"query": {
+				"name": {
+					"$all": [
+						[
+							17,
+							18
+						]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "n69K5MnPLOcy",
+			"query": {
+				"title": {
+					"$all": [
+						[]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ptOhuzQPLkEM",
+			"query": {
+				"step": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"priority": 13
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "j0BuDu1zIRRT",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"capacity": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wgInXwhUOvkx",
+			"query": {
+				"scores": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "b6jUq8qtF9ah",
+			"query": {
+				"scores": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u8JGxXJsUbgp",
+			"query": {
+				"scores": {
+					"$all": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w1Fzd81AaASH",
+			"query": {
+				"scores": {
+					"$all": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "j4BO9ZfXiX0J",
+			"query": {
+				"scores": {
+					"$all": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tv6ZNCpGSCqP",
+			"query": {
+				"scores": {
+					"$all": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fhXj35RLzXbA",
+			"query": {
+				"scores": {
+					"$all": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gw8xlP0bSSMF",
+			"query": {
+				"scores": {
+					"$all": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sEKVLHWiuTco",
+			"query": {
+				"ratings.age": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dd1OetMNrWVb",
+			"query": {
+				"ratings.age": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rwUHaFE6Hg1t",
+			"query": {
+				"ratings.age": {
+					"$all": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						5,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rcZWt0qMXQC0",
+			"query": {
+				"ratings.age": {
+					"$all": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wuPxP5TzEr3e",
+			"query": {
+				"ratings.age": {
+					"$all": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wuJuHMzJQ8Wg",
+			"query": {
+				"counts.score": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gPK1WXB2dT0R",
+			"query": {
+				"counts.score": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uTgLFYNfiYWC",
+			"query": {
+				"counts.score": {
+					"$all": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						10,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pqambNE7PWFS",
+			"query": {
+				"counts.score": {
+					"$all": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gmDrM2NHsTbS",
+			"query": {
+				"counts.score": {
+					"$all": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mEqDLDVH7qYV",
+			"query": {
+				"counts": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bKcjzPt21FYm",
+			"query": {
+				"counts": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nU5nqg4ZAl8S",
+			"query": {
+				"values.rank": {
+					"$in": "active"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tVFoDXVRYxhX",
+			"query": {
+				"values.rank": {
+					"$in": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vx9vzzzrsfYR",
+			"query": {
+				"values.rank": {
+					"$in": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vTn38dKk39YN",
+			"query": {
+				"values.rank": {
+					"$in": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tYKZjCHLsaUr",
+			"query": {
+				"values.rank": {
+					"$in": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pZwtNuqErJqG",
+			"query": {
+				"values.rank": {
+					"$in": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mlAmtInKzFaH",
+			"query": {
+				"values.rank": {
+					"$in": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oJH5W4uoUR60",
+			"query": {
+				"values.rank": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sVjAFXcMC71Y",
+			"query": {
+				"values.rank": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "k2y0X4YMsSwU",
+			"query": {
+				"values.rank": {
+					"$all": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qsaftDwcFUDF",
+			"query": {
+				"values.rank": {
+					"$all": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jLSY75eEKZyD",
+			"query": {
+				"values.rank": {
+					"$all": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v1T6SQsXE3VC",
+			"query": {
+				"points": {
+					"$in": "active"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "s9GS7cLBqOMb",
+			"query": {
+				"points": {
+					"$in": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "k3yZKAKEROXF",
+			"query": {
+				"points": {
+					"$in": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kxAmCiIzdJzS",
+			"query": {
+				"points": {
+					"$in": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tJ25JbFfGSgj",
+			"query": {
+				"points": {
+					"$in": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tHswNQyiw6Lk",
+			"query": {
+				"points": {
+					"$in": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dRa44YzI4h2m",
+			"query": {
+				"points": {
+					"$in": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dTpK26YbOVTx",
+			"query": {
+				"points": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iCADPvMR7OYk",
+			"query": {
+				"points": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u5RywwPhGiVn",
+			"query": {
+				"points": {
+					"$all": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oKVO5vIdeIUB",
+			"query": {
+				"points": {
+					"$all": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gXbvZAKpcSQU",
+			"query": {
+				"points": {
+					"$all": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "urDS7BBIUN4A",
+			"query": {
+				"tags": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v5yrhpepGGUw",
+			"query": {
+				"tags": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gCrXWsWyICND",
+			"query": {
+				"tags": {
+					"$all": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rKmKft9TE6do",
+			"query": {
+				"tags": {
+					"$all": [
+						42,
+						42
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eKNGHSYIM775",
+			"query": {
+				"tags": {
+					"$all": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "f7vuiXqBuvWU",
+			"query": {
+				"level": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sOalbtwjYOF2",
+			"query": {
+				"level": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qrs7qdCvqHPu",
+			"query": {
+				"level": {
+					"$not": {
+						"$all": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "uGnexDL4IrUa",
+			"query": {
+				"level": {
+					"$not": {
+						"$all": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "p6Vxvj6dW5B4",
+			"query": {
+				"count": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qQAYax7SZ9XX",
+			"query": {
+				"count": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ulUqlRIoVROn",
+			"query": {
+				"count": {
+					"$all": [
+						{
+							"$elemMatch": 42
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vpS8GXYu9RWj",
+			"query": {
+				"name": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aXCcpB2TL8LQ",
+			"query": {
+				"name": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uXYrAADwogCN",
+			"query": {
+				"name": {
+					"$all": [
+						[
+							null,
+							null
+						]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qWwThQKasEar",
+			"query": {
+				"name": {
+					"$all": [
+						[
+							"value",
+							"value"
+						]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hNADUCV69Hbd",
+			"query": {
+				"name": {
+					"$all": [
+						[
+							true,
+							true
+						]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rB9sl8upQ9F0",
+			"query": {
+				"title": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a67KoyzUJvHQ",
+			"query": {
+				"title": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cXzMgjkUzhRn",
+			"query": {
+				"step": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rGCHihIowIk2",
+			"query": {
+				"step": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ag3PDNfYMD4M",
+			"query": {
+				"step": {
+					"$all": [
+						{
+							"$elemMatch": 42
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tOGGG5Mj9H6N",
+			"query": {
+				"step": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"priority": null
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rHUHLY2XqQTX",
+			"query": {
+				"step": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"priority": "value"
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uCUFHHtzIRoq",
+			"query": {
+				"step": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"priority": true
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		}
+	]
+}

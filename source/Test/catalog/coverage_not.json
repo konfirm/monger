@@ -1,0 +1,6125 @@
+{
+	"catalog": "coverage_not",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"age": 23
+			},
+			{
+				"_id": 1
+			},
+			{
+				"_id": 2,
+				"name": "Abundant"
+			},
+			{
+				"_id": 3,
+				"name": 29
+			},
+			{
+				"_id": 4,
+				"name": [
+					"Abundant",
+					"Couple"
+				]
+			},
+			{
+				"_id": 5,
+				"name": [
+					{
+						"score": "Abundant"
+					}
+				]
+			},
+			{
+				"_id": 6,
+				"rank": 13,
+				"scores": [
+					14,
+					15,
+					16
+				]
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "ixxoRPKTAKzm",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": {
+							"$gt": "Abundant"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.563
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						4
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gTbQDJTVQuWY",
+			"query": {
+				"name": {
+					"$gt": "Abundant"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						4
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vgUlSqLo1kR0",
+			"query": {
+				"name": {
+					"$not": {
+						"$gt": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vxyP0FRZDeAJ",
+			"query": {
+				"name": {
+					"$not": {
+						"$ne": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						4
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eNKwDwlUCyiv",
+			"query": {
+				"name": {
+					"$not": {
+						"$gte": "Couple"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gte",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qXStH4yTKL7U",
+			"query": {
+				"name": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rLJsgzSkd2ij",
+			"query": {
+				"name": {
+					"$not": {
+						"$exists": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lC2LajwivH8H",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							"Abundant"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						3,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m0x88MaAWTe6",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							"Abundant",
+							"Couple"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						3,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t0R8Nw2cU39t",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": [
+							"Abundant"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						4
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lex400hHeFWl",
+			"query": {
+				"name": {
+					"$not": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot be empty",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a non-empty object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eZR0FTw2Kw3S",
+			"query": {
+				"name": {
+					"$not": {},
+					"$regex": "Abundant"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot be empty",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a non-empty object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sFYBToPFrCZR",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot have a regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot have a regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot have a regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.0.6,4.1.1..4.1.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						3,
+						5,
+						6
+					],
+					"versions": "4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				},
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "4.0.7..4.0.27,4.1.9..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "f2UqzHTIFGkw",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": "Double",
+						"$options": "Each"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot have a regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot have a regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot have a regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..4.0.6,4.1.1..4.1.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "4.0.28,4.1.13,4.2.24,4.4.30,5.0.33"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "4.0.7..4.0.27,4.1.9..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": " invalid flag in regex options: E",
+						"code": 51108,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vlbww1xwK0kA",
+			"query": {
+				"name": {
+					"$type": 30
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 30",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 30",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 30",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pVfV6POAHZLB",
+			"query": {
+				"name": {
+					"$not": {
+						"$type": 29
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 29",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 29",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 29",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uQUItNu70yh0",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "unTuO6p8taye",
+			"query": {
+				"name": {
+					"$not": "Abundant"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jDPwDvtr9cgi",
+			"query": {
+				"name": {
+					"$not": {
+						"$ref": "Either"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ref",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown operator: $ref",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "iW68AALs66bz",
+			"query": {
+				"name": {
+					"$not": {
+						"$options": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options needs a $regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sKt7GcnVmXs6",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": [
+							33,
+							29
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aIJ0eNCkWjLW",
+			"query": {
+				"name": {
+					"$mod": [
+						33,
+						30
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lvB5fohfh3bx",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": 20
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "fhLBwSdR3cSO",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							"Abundant",
+							"Couple"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "cWycUPEPEaDT",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							"Double"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "rnhsMu9hMaaH",
+			"query": {
+				"username": {
+					"$not": {
+						"$elemMatch": {
+							"age": "Abundant"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "uGZQDOrsHD23",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": {
+							"$gt": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.563
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "piH4vnbrS8AU",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": {
+							"$gt": 42
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.563
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kkBTbiFGAcPX",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": {
+							"$gt": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.563
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "n8BltCRnlPHX",
+			"query": {
+				"name": {
+					"$gt": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wQ3xFpS1lWiP",
+			"query": {
+				"name": {
+					"$gt": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kssYHPrKra93",
+			"query": {
+				"name": {
+					"$gt": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qIkJYjTz3LKR",
+			"query": {
+				"name": {
+					"$not": {
+						"$gt": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tDhfRezJLS98",
+			"query": {
+				"name": {
+					"$not": {
+						"$gt": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pDbzcWGiWWpx",
+			"query": {
+				"name": {
+					"$not": {
+						"$gt": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kTw1FPBNYUng",
+			"query": {
+				"name": {
+					"$not": {
+						"$ne": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gALiO3FkFwHZ",
+			"query": {
+				"name": {
+					"$not": {
+						"$ne": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qxwsZUGKu6er",
+			"query": {
+				"name": {
+					"$not": {
+						"$ne": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ne",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jhMw98MXgrzw",
+			"query": {
+				"name": {
+					"$not": {
+						"$gte": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gte",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ugscr8Agtk65",
+			"query": {
+				"name": {
+					"$not": {
+						"$gte": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gte",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uiMzypv8qcHo",
+			"query": {
+				"name": {
+					"$not": {
+						"$gte": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gte",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rAPXKoGkmwP2",
+			"query": {
+				"name": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qalgJVMuJVV1",
+			"query": {
+				"name": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nWINad1AWi3r",
+			"query": {
+				"name": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aNKhLH5XYF0t",
+			"query": {
+				"name": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "acSPSyOkMpOZ",
+			"query": {
+				"name": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r6PnDAgUGerP",
+			"query": {
+				"name": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uKHRgRVBjRom",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": "active"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vUvbDxODxYKl",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wiU2uWHqI8qV",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ilBklzxjxYV5",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fyHUfAcy38Zv",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							null,
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w4zjcGSs42zH",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							42,
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jmTqoAy4IZu7",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": [
+							true,
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hZbyxJKzSXZK",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": "deleted"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $nin needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nV7HVNQD2IC1",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": [
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "doSO9v0ahV8N",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": [
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rRGXvPGA23GE",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": [
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tJeUvQ1yVo94",
+			"query": {
+				"name": {
+					"$not": {},
+					"$regex": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot be empty",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a non-empty object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uJEMIhFTQ9dL",
+			"query": {
+				"name": {
+					"$not": {},
+					"$regex": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot be empty",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a non-empty object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iTDQiy6RAdXz",
+			"query": {
+				"name": {
+					"$not": {},
+					"$regex": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not cannot be empty",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not cannot be empty",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a non-empty object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fXzZXGtM0dHU",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lVb1LxbcqsF0",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sDo3hbOOuhdW",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ccwCEJf8n3X1",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": null,
+						"$options": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wvSyHOuwJNwm",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": 42,
+						"$options": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hwVA1Ox18Arc",
+			"query": {
+				"name": {
+					"$not": {
+						"$regex": true,
+						"$options": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$regex",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bNiT90d5E0Uw",
+			"query": {
+				"name": {
+					"$not": {
+						"$type": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "b4WOG0scjCzb",
+			"query": {
+				"name": {
+					"$not": {
+						"$type": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown string alias for $type: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown string alias for $type: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qEDAJGXMHeRz",
+			"query": {
+				"name": {
+					"$not": {
+						"$type": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pJy4SCCFBmul",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qf5ZdZGMUEoH",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r2FV1QcmKX6E",
+			"query": {
+				"name": {
+					"$not": {
+						"$not": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qLUQgQyYh1Q2",
+			"query": {
+				"name": {
+					"$not": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fuCEX4ki1l0m",
+			"query": {
+				"name": {
+					"$not": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vrhnWLtXl4Nf",
+			"query": {
+				"name": {
+					"$not": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$not needs a regex or a document",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$not argument must be a regex or an object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rVGMfDduCiLp",
+			"query": {
+				"name": {
+					"$not": {
+						"$ref": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ref",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown operator: $ref",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pOwizImgQSll",
+			"query": {
+				"name": {
+					"$not": {
+						"$ref": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ref",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown operator: $ref",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "taIoD3vpIc9L",
+			"query": {
+				"name": {
+					"$not": {
+						"$ref": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ref",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown operator: $ref",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "h4zMuzURRUgT",
+			"query": {
+				"name": {
+					"$not": {
+						"$options": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options needs a $regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dr6eT0AGLUfo",
+			"query": {
+				"name": {
+					"$not": {
+						"$options": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options needs a $regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oKsIMdWHvTVC",
+			"query": {
+				"name": {
+					"$not": {
+						"$options": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options needs a $regex",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options needs a $regex",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gRI2mX1QSdE8",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": "invalid"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, needs to be an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, needs to be an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, needs to be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tAgRDXYjiNRk",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": [
+							2
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p6AbLBr7PIEI",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": []
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qG9F6MXcNVwx",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": [
+							null,
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uSreLRvaD1FY",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": [
+							"value",
+							"value"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "h3ORxX5LFBso",
+			"query": {
+				"name": {
+					"$not": {
+						"$mod": [
+							true,
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$mod",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eBQQOJltKSUL",
+			"query": {
+				"name": {
+					"$mod": "invalid"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, needs to be an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, needs to be an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, needs to be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nl2QmvVPtVqm",
+			"query": {
+				"name": {
+					"$mod": [
+						2
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vVdsM1i9XX0B",
+			"query": {
+				"name": {
+					"$mod": []
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, not enough elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uqZCLQuJHeza",
+			"query": {
+				"name": {
+					"$mod": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lKxYduzz8D5D",
+			"query": {
+				"name": {
+					"$mod": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uVUrcO3ErwWI",
+			"query": {
+				"name": {
+					"$mod": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$mod",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue malformed mod, divisor not a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "malformed mod, divisor not a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fGgJQU3aVL1V",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": "large"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: \"large\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "dh0WcT5wNhTr",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": 2.5
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected an integer: $size: 2.5",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "gSyInXU9hV4p",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $size needs a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: null",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "tF5nYPFO2Dsk",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: \"value\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "w1rQsMOKIS3C",
+			"query": {
+				"title": {
+					"$not": {
+						"$size": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $size needs a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.32"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: true",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "k5EEuyEDmUOt",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "fJJY32ACGvRm",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "abUgA3BhwcX3",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							null,
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "pvqljlKuZUYK",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							42,
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "wGMzQAkqV2be",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							true,
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "igAyGpVM0slC",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "bNc5c9WF56Eo",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "iQoP9RbKuajC",
+			"query": {
+				"title": {
+					"$not": {
+						"$all": [
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "pAAdkzuD4sXE",
+			"query": {
+				"username": {
+					"$not": {
+						"$elemMatch": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "nNcXcCRifWLz",
+			"query": {
+				"username": {
+					"$not": {
+						"$elemMatch": {
+							"age": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "wVx9OQrudg5C",
+			"query": {
+				"username": {
+					"$not": {
+						"$elemMatch": {
+							"age": 42
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "fC8J1w2LIsZy",
+			"query": {
+				"username": {
+					"$not": {
+						"$elemMatch": {
+							"age": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "wOLvXe2TOZj9",
+			"query": {
+				"age": 23
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qZzABCAVY6XF",
+			"query": {
+				"age": {
+					"$ne": 23
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jENfzDFUAhQP",
+			"query": {
+				"age": {
+					"$in": [
+						23
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rPtvFqu8tSFj",
+			"query": {
+				"age": {
+					"$nin": [
+						23
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kxq1pMFo7ber",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": 30
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "twyupqcCsQey",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							"Abundant",
+							"Couple"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "crrMx9qUmeGu",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							"Either"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bec8u6mP4K7O",
+			"query": {
+				"name": {
+					"$not": {
+						"$elemMatch": {
+							"score": "Abundant"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oPhMQMO3PSk9",
+			"query": {
+				"name": {
+					"$not": {
+						"$ref": "Empty"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$ref",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown operator: $ref",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tHxQsXC8vnAw",
+			"query": {
+				"scores": {
+					"$not": {
+						"$gt": 19
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qYlS2PNwrT6y",
+			"query": {
+				"age": {
+					"$ne": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gWFjzWbGg8tK",
+			"query": {
+				"age": {
+					"$ne": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "twBeDuDWESF3",
+			"query": {
+				"age": {
+					"$in": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c3Y7n03i5ZZt",
+			"query": {
+				"age": {
+					"$in": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "awlADvXeWC8X",
+			"query": {
+				"age": {
+					"$nin": [
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wxntdksGpKek",
+			"query": {
+				"age": {
+					"$nin": [
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "udTnHEL23B9f",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": "large"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: \"large\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.28..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wFacG70XFVbq",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": 2.5
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected an integer: $size: 2.5",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.28..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p1ECCDlLNcZk",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: null",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.28..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kB4PAOvA2uYa",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: \"value\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.28..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nuXGCfKH8Ugt",
+			"query": {
+				"name": {
+					"$not": {
+						"$size": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: true",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.28..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qnGhFYCfSqSM",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dLaEBPtK6ZHz",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hPVRhVeBcgPy",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							null,
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w0uuzS7ZCczM",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							42,
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oTYA1sZzaVP8",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							true,
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rwA6cIE2qtKf",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							null
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oGDA4k1cfwUW",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							42
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hIHXZ5Lc4H6S",
+			"query": {
+				"name": {
+					"$not": {
+						"$all": [
+							true
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mxXMDNZRjU0t",
+			"query": {
+				"name": {
+					"$not": {
+						"$elemMatch": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r6wXIhqbBaSB",
+			"query": {
+				"name": {
+					"$not": {
+						"$elemMatch": {
+							"score": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pfqCpaVzqA8f",
+			"query": {
+				"name": {
+					"$not": {
+						"$elemMatch": {
+							"score": 42
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bhklZfQuLC4t",
+			"query": {
+				"name": {
+					"$not": {
+						"$elemMatch": {
+							"score": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mxAvbLGCch02",
+			"query": {
+				"scores": {
+					"$not": {
+						"$gt": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "goguJpkXubi9",
+			"query": {
+				"scores": {
+					"$not": {
+						"$gt": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vRBFQBRqJI5e",
+			"query": {
+				"scores": {
+					"$not": {
+						"$gt": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$gt",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		}
+	]
+}

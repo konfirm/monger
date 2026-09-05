@@ -1,0 +1,2661 @@
+{
+	"catalog": "geo",
+	"collection": {
+		"records": [
+			{
+				"_id": 1,
+				"name": "Point X",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.905097,
+						52.005589
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.900942,
+							52.000942
+						],
+						[
+							5.900941,
+							52.000941
+						],
+						[
+							5.900944,
+							52.000944
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.895095,
+								51.995096000000004
+							],
+							[
+								5.905095,
+								51.995096000000004
+							],
+							[
+								5.900095,
+								52.00509600000001
+							],
+							[
+								5.895095,
+								51.995096000000004
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.890742,
+					51.990742
+				]
+			},
+			{
+				"_id": 2,
+				"name": "Point X",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.893428,
+						51.992594
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.902596,
+							52.002596
+						],
+						[
+							5.90259,
+							52.00259
+						],
+						[
+							5.902588,
+							52.002588
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.894833,
+								51.99483300000001
+							],
+							[
+								5.904833,
+								51.99483300000001
+							],
+							[
+								5.899833,
+								52.00483300000001
+							],
+							[
+								5.894833,
+								51.99483300000001
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.904093,
+					52.004093
+				]
+			},
+			{
+				"_id": 3,
+				"name": "Location A",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.892781,
+						51.991938
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.895761,
+							51.995761
+						],
+						[
+							5.89576,
+							51.99576
+						],
+						[
+							5.895759,
+							51.995759
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.899961,
+								51.99996
+							],
+							[
+								5.909961,
+								51.99996
+							],
+							[
+								5.904961,
+								52.00996000000001
+							],
+							[
+								5.899961,
+								51.99996
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.894361,
+					51.994361
+				]
+			},
+			{
+				"_id": 4,
+				"name": "Point X",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.908215,
+						52.008717
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.90395,
+							52.00395
+						],
+						[
+							5.903946,
+							52.003946
+						],
+						[
+							5.903947,
+							52.003947
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.892817,
+								51.992822000000004
+							],
+							[
+								5.902817,
+								51.992822000000004
+							],
+							[
+								5.897817,
+								52.00282200000001
+							],
+							[
+								5.892817,
+								51.992822000000004
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.905431,
+					52.005431
+				]
+			},
+			{
+				"_id": 5,
+				"name": "Location B",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.899997,
+						51.998829
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.892807,
+							51.992807
+						],
+						[
+							5.892805,
+							51.992805
+						],
+						[
+							5.8928,
+							51.9928
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.891164,
+								51.991165
+							],
+							[
+								5.901164,
+								51.991165
+							],
+							[
+								5.896164,
+								52.00116500000001
+							],
+							[
+								5.891164,
+								51.991165
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.891508,
+					51.991508
+				]
+			},
+			{
+				"_id": 6,
+				"name": "Location C",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.898273,
+						51.99646
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.891161,
+							51.991161
+						],
+						[
+							5.891162,
+							51.991162
+						],
+						[
+							5.891163,
+							51.991163
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.891741,
+								51.991742
+							],
+							[
+								5.9017409999999995,
+								51.991742
+							],
+							[
+								5.896741,
+								52.00174200000001
+							],
+							[
+								5.891741,
+								51.991742
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.902414,
+					52.002414
+				]
+			},
+			{
+				"_id": 7,
+				"name": "Point Y",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.890008,
+						51.992053
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.903202,
+							52.003202
+						],
+						[
+							5.903203,
+							52.003203
+						],
+						[
+							5.903199,
+							52.003199
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.892045,
+								51.99204400000001
+							],
+							[
+								5.902045,
+								51.99204400000001
+							],
+							[
+								5.897045,
+								52.00204400000001
+							],
+							[
+								5.892045,
+								51.99204400000001
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.905427,
+					52.005427
+				]
+			},
+			{
+				"_id": 8,
+				"name": "Location B",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.901181,
+						52.000149
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.899591,
+							51.999591
+						],
+						[
+							5.899595,
+							51.999595
+						],
+						[
+							5.899593,
+							51.999593
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.895054,
+								51.995053000000006
+							],
+							[
+								5.905054,
+								51.995053000000006
+							],
+							[
+								5.900054,
+								52.00505300000001
+							],
+							[
+								5.895054,
+								51.995053000000006
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.901431,
+					52.001431
+				]
+			},
+			{
+				"_id": 9,
+				"name": "Location B",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.902482,
+						52.003091
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.892863,
+							51.992863
+						],
+						[
+							5.892862,
+							51.992862
+						],
+						[
+							5.89287,
+							51.99287
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.89161,
+								51.991609000000004
+							],
+							[
+								5.90161,
+								51.991609000000004
+							],
+							[
+								5.89661,
+								52.00160900000001
+							],
+							[
+								5.89161,
+								51.991609000000004
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.898132,
+					51.998132
+				]
+			},
+			{
+				"_id": 10,
+				"name": "Location C",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.897479,
+						51.995381
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.904272,
+							52.004272
+						],
+						[
+							5.904273,
+							52.004273
+						],
+						[
+							5.904274,
+							52.004274
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.899335,
+								51.999335
+							],
+							[
+								5.909335,
+								51.999335
+							],
+							[
+								5.904335,
+								52.00933500000001
+							],
+							[
+								5.899335,
+								51.999335
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.907187,
+					52.007187
+				]
+			},
+			{
+				"_id": 11,
+				"name": "Location C",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.90941,
+						52.00926
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.906601,
+							52.006601
+						],
+						[
+							5.906593,
+							52.006593
+						],
+						[
+							5.906594,
+							52.006594
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.893023,
+								51.993024000000005
+							],
+							[
+								5.903023,
+								51.993024000000005
+							],
+							[
+								5.898023,
+								52.00302400000001
+							],
+							[
+								5.893023,
+								51.993024000000005
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.90388,
+					52.00388
+				]
+			},
+			{
+				"_id": 12,
+				"name": "Location C",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.894891,
+						51.994389
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.897916,
+							51.997916
+						],
+						[
+							5.897915,
+							51.997915
+						],
+						[
+							5.897919,
+							51.997919
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.899672,
+								51.999671000000006
+							],
+							[
+								5.909672,
+								51.999671000000006
+							],
+							[
+								5.904672,
+								52.00967100000001
+							],
+							[
+								5.899672,
+								51.999671000000006
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.902033,
+					52.002033
+				]
+			},
+			{
+				"_id": 13,
+				"name": "Location A",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.897274,
+						51.997991
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.89043,
+							51.99043
+						],
+						[
+							5.890433,
+							51.990433
+						],
+						[
+							5.890432,
+							51.990432
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.896809,
+								51.99681
+							],
+							[
+								5.906809,
+								51.99681
+							],
+							[
+								5.901809,
+								52.00681000000001
+							],
+							[
+								5.896809,
+								51.99681
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.909402,
+					52.009402
+				]
+			},
+			{
+				"_id": 14,
+				"name": "Location A",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.90313,
+						52.002723
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.899587,
+							51.999587
+						],
+						[
+							5.899586,
+							51.999586
+						],
+						[
+							5.899575,
+							51.999575
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.890892,
+								51.990891000000005
+							],
+							[
+								5.900892,
+								51.990891000000005
+							],
+							[
+								5.895892,
+								52.00089100000001
+							],
+							[
+								5.890892,
+								51.990891000000005
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.904885,
+					52.004885
+				]
+			},
+			{
+				"_id": 15,
+				"name": "Point X",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.89787,
+						51.997659
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.907469,
+							52.007469
+						],
+						[
+							5.907473,
+							52.007473
+						],
+						[
+							5.907471,
+							52.007471
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.899381,
+								51.999383
+							],
+							[
+								5.909381,
+								51.999383
+							],
+							[
+								5.904381,
+								52.00938300000001
+							],
+							[
+								5.899381,
+								51.999383
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.905244,
+					52.005244
+				]
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "sNqoxs5JdS4n",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a2IrC4I8eE7e",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iXsAZgnIaXY4",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						8,
+						3,
+						10,
+						12,
+						13,
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rnOXE3hGtwBb",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						11,
+						1,
+						14,
+						9,
+						2,
+						3,
+						7,
+						10,
+						12,
+						5,
+						6,
+						8,
+						13,
+						15
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						4,
+						11,
+						1,
+						14,
+						9,
+						7,
+						3,
+						2,
+						10,
+						12,
+						6,
+						13,
+						15,
+						5,
+						8
+					],
+					"versions": "3.2.6..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jGjqzR9Qy8HS",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						13,
+						1,
+						5,
+						3,
+						9,
+						10,
+						4,
+						7,
+						15,
+						14,
+						2,
+						11,
+						6,
+						12
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						1,
+						5,
+						3,
+						9,
+						8,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						10,
+						13
+					],
+					"versions": "3.0.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wKkmx8Dm2136",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$center": [
+							[
+								5.9,
+								52
+							],
+							0.02
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						13,
+						1,
+						5,
+						3,
+						9,
+						10,
+						4,
+						7,
+						15,
+						14,
+						2,
+						11,
+						6,
+						12
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						1,
+						5,
+						3,
+						9,
+						8,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						10,
+						13
+					],
+					"versions": "3.0.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iv2pzraiBnmo",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$centerSphere": [
+							[
+								5.9,
+								52
+							],
+							0.01
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						13,
+						1,
+						5,
+						3,
+						9,
+						10,
+						4,
+						7,
+						15,
+						14,
+						2,
+						11,
+						6,
+						12
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						1,
+						5,
+						3,
+						9,
+						8,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						10,
+						13
+					],
+					"versions": "3.0.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "erzyShLLGMP4",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						1,
+						3,
+						9,
+						7,
+						15,
+						2,
+						12
+					],
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						1,
+						3,
+						9,
+						8,
+						12,
+						2,
+						15,
+						7
+					],
+					"versions": "3.0.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vW1FRAeKg65m",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mODNIEEIkdZd",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$maxDistance": 5000
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "d31CY5SIiZIT",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100,
+						"$maxDistance": 10000
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jOc28I97qbzZ",
+			"query": {
+				"legacyPoint": {
+					"$near": [
+						5.9,
+						52
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						9,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						3,
+						10,
+						5,
+						1,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "puFLObGoqRjj",
+			"query": {
+				"legacyPoint": {
+					"$near": [
+						5.9,
+						52
+					],
+					"$maxDistance": 0.02
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						9,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						3,
+						10,
+						5,
+						1,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jykBQEkxX5Yx",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "f1MGD7PO2h7T",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$maxDistance": 5000
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bEytUW8Sm36z",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100,
+						"$maxDistance": 10000
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iGOHXstxpae3",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[
+									5.89,
+									51.99
+								],
+								[
+									5.91,
+									52.01
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						10,
+						12,
+						15,
+						13,
+						1,
+						2,
+						4,
+						6,
+						7,
+						8,
+						9,
+						11,
+						5,
+						14
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						3,
+						12,
+						10,
+						15,
+						13,
+						1,
+						2,
+						8,
+						5,
+						6,
+						7,
+						9,
+						14,
+						4,
+						11
+					],
+					"versions": "3.2.6..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tH0HGRqBl0Y5",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.895,
+										51.995
+									],
+									[
+										5.905,
+										51.995
+									],
+									[
+										5.905,
+										52.005
+									],
+									[
+										5.895,
+										52.005
+									],
+									[
+										5.895,
+										51.995
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						10,
+						12,
+						15,
+						13,
+						1,
+						2,
+						4,
+						6,
+						7,
+						8,
+						9,
+						11,
+						5,
+						14
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						13,
+						10,
+						12,
+						15,
+						3,
+						1,
+						2,
+						8,
+						4,
+						11,
+						6,
+						7,
+						9,
+						5,
+						14
+					],
+					"versions": "3.2.6..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aYIwwKRBO8Ka",
+			"query": {
+				"line": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						11,
+						15,
+						4,
+						7,
+						10,
+						2,
+						5,
+						6,
+						9,
+						3,
+						1,
+						8,
+						12,
+						14,
+						13
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"documents": [
+						15,
+						11,
+						4,
+						10,
+						7,
+						2,
+						6,
+						5,
+						9,
+						3,
+						12,
+						8,
+						14,
+						1,
+						13
+					],
+					"versions": "3.2.6..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sIMUmQJ1Yz7O",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": [
+						5.9,
+						52
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						9,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						3,
+						10,
+						5,
+						1,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aTrq0hHIJMHa",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": [
+						5.9,
+						52
+					],
+					"$maxDistance": 0.01
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						8,
+						9,
+						12,
+						6,
+						11,
+						2,
+						14,
+						15,
+						7,
+						4,
+						3,
+						10,
+						5,
+						1,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sFHyzHZPTQqX",
+			"query": {
+				"point": {
+					"$near": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $geometry is required for geo near query",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.2.12"
+				},
+				{
+					"error": {
+						"message": "invalid point provided to geo near query: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.3.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aSXSuocIxk92",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": []
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$near requires a point, given { type: \"Polygon\", coordinates: [] }",
+						"code": 16885,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Expected geojson geometry with type Point, but got type Polygon",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ghKupmL2PvKM",
+			"query": {
+				"point": {
+					"$nearSphere": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $geometry is required for geo near query",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.2.12"
+				},
+				{
+					"error": {
+						"message": "invalid point provided to geo near query: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.3.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ahWkJUByKeYP",
+			"query": {
+				"point": {
+					"$geoIntersects": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: {} }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue geo query doesn't have any geometry",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "geo query doesn't have any geometry",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "geo query doesn't have any geometry",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oMsCykPdDXqx",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": []
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { type: \"Point\", coordinates: [] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uJeEYxwQKRVR",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								0
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { type: \"Point\", coordinates: [ 0 ] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.28"
+				},
+				{
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vTSn24UIzfqX",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.899,
+										51.999
+									],
+									[
+										5.901,
+										51.999
+									],
+									[
+										5.901,
+										52.001
+									],
+									[
+										5.899,
+										52.001
+									],
+									[
+										5.899,
+										51.999
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p9ImoBRFW5C8",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$center": [
+							[
+								5.9,
+								52
+							],
+							0
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jIR3gOROgKln",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$unknown": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $unknown: {} } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown geo specifier: $unknown: {}",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown geo specifier: $unknown: {}",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown geo specifier: $unknown: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sVks8cJ65GWo",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $geometry: {} } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: {}",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: {}",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ov5rymvzZ38V",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$box": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $box: {} } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must be an array or object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.16..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rIKzSyBDLWMX",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$center": [
+							1
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $center: [ 1 ] } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue Point must be an array or object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..6.0.15"
+				},
+				{
+					"error": {
+						"message": "Point must be an array or object, instead got type int",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.16..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "clGpfzsiUViE",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$center": "invalid"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $center: \"invalid\" } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown geo specifier: $center: \"invalid\"",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown geo specifier: $center: \"invalid\"",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown geo specifier: $center: \"invalid\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kCFR3SSeLZ5G",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Invalid",
+							"coordinates": []
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $geometry: { type: \"Invalid\", coordinates: [] } } }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12"
+				},
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "3.0.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		}
+	]
+}

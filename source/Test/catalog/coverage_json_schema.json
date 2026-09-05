@@ -1,0 +1,1006 @@
+{
+	"catalog": "coverage_json_schema",
+	"collection": {
+		"records": []
+	},
+	"operations": [
+		{
+			"id": "dopJNF8fMTLk",
+			"query": {
+				"$jsonSchema": {
+					"age": 25
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uD1VaWrV6QSH",
+			"query": {
+				"$jsonSchema": {
+					"age": "Abundant"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "g7gwRXr0Zaoj",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": {
+								"count": "Couple"
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aCGBvxjEXH48",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								24
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "boQ3U5o4rg20",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								{
+									"grade": "Couple"
+								}
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "d5REvB8zd71j",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"step": [
+								{}
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "doPBHYh8hRp0",
+			"query": {
+				"$jsonSchema": {
+					"age": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ukZwR5xLJX0B",
+			"query": {
+				"$jsonSchema": {
+					"age": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iQ2hH7iXoKkm",
+			"query": {
+				"$jsonSchema": {
+					"age": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oYWi9WkfXF7m",
+			"query": {
+				"$jsonSchema": {
+					"age": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: age",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mLDghECZP0XF",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": {
+								"count": null
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aPcgHWGPrOsE",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": {
+								"count": 42
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bCXBHgwItH6a",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": {
+								"count": true
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tNTU3OfjtsKw",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								null
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q26yMDoIMcPM",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								"value"
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "awzgS0h4QKVC",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								true
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nlmSpOMlSu75",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								{
+									"grade": null
+								}
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gWiNROPLKrW1",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								{
+									"grade": 42
+								}
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gQVlwDYFyDYE",
+			"query": {
+				"$jsonSchema": {
+					"score": {
+						"rank": {
+							"level": [
+								{
+									"grade": true
+								}
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$jsonSchema",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue unknown top level operator: $jsonSchema",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown top level operator: $jsonSchema",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown $jsonSchema keyword: score",
+						"code": 9,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		}
+	]
+}

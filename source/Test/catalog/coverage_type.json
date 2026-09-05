@@ -1,0 +1,1116 @@
+{
+	"catalog": "coverage_type",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"name": 21.1
+			},
+			{
+				"_id": 1,
+				"name": "Abundant"
+			},
+			{
+				"_id": 2,
+				"status": null
+			},
+			{
+				"_id": 3
+			},
+			{
+				"_id": 4,
+				"status": "Abundant"
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "ovj1QWgDEpWf",
+			"query": {
+				"name": {
+					"$type": 20
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 20",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 20",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 20",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "sJeJKBTFDMTI",
+			"query": {
+				"rank": {
+					"$not": {
+						"$type": "Each"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown string alias for $type: Each",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown string alias for $type: Each",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: Each",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: Each",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "qYgx2n9Dw1P6",
+			"query": {
+				"status": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "k0SAQtx2tJnC",
+			"query": {
+				"level": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "dQNUfVGuGr1A",
+			"query": {
+				"title": {
+					"$type": "Couple"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown string alias for $type: Couple",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown string alias for $type: Couple",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: Couple",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: Couple",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "rWAKnJKlO65g",
+			"query": {
+				"name": {
+					"$type": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sjF2ujGO7X6h",
+			"query": {
+				"name": {
+					"$type": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "unknown string alias for $type: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.10"
+				},
+				{
+					"error": {
+						"message": "Unknown string alias for $type: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.11"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lCaeFOhZ87Fk",
+			"query": {
+				"name": {
+					"$type": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rBQLSjMeCZaW",
+			"query": {
+				"rank": {
+					"$not": {
+						"$type": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "b2wx3i9NRXq9",
+			"query": {
+				"rank": {
+					"$not": {
+						"$type": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 42",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 42",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 42",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "ipvTJUXepz7m",
+			"query": {
+				"rank": {
+					"$not": {
+						"$type": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$type",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "vuwhS2GYqRWV",
+			"query": {
+				"status": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						3
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pA3X1127rY41",
+			"query": {
+				"status": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"versions": "2.6.12..3.3.14,3.4.0..3.4.23,3.5.5..3.6.22,3.7.1..4.0.27,4.1.1..4.1.12,4.2.0..4.2.23,4.4.0..4.4.29,5.0.0..5.0.32,6.0.1..6.0.27,7.0.0..7.0.39,8.0.0..8.0.28,8.2.1..8.2.11,8.3.0..8.3.7"
+				},
+				{
+					"documents": [
+						0,
+						1,
+						3
+					],
+					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pwXXYk4oW9VY",
+			"query": {
+				"status": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qTnECEaJAQWd",
+			"query": {
+				"title": {
+					"$type": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "esLUw1JGN9Rr",
+			"query": {
+				"title": {
+					"$type": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 42",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 42",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 42",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "q94Fo0qOiBS3",
+			"query": {
+				"title": {
+					"$type": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $type has to be a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.11"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.12,3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.7"
+				}
+			]
+		},
+		{
+			"id": "le7hgDNDD53o",
+			"query": {
+				"name": {
+					"$type": 21
+				}
+			},
+			"operators": [
+				{
+					"operator": "$type",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 21",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15,3.4.24"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 21",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 21",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dHuluMtQpX56",
+			"query": {
+				"name": {
+					"$regex": "Each",
+					"$type": 22
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Invalid numerical $type code: 22",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15,3.4.24"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 22",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "Invalid numerical type code: 22",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dQxmUe8ArA7i",
+			"query": {
+				"status": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mX46AOOMLPjH",
+			"query": {
+				"name": {
+					"$regex": "Each",
+					"$type": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15,3.4.24"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bo9bFRZWFuzq",
+			"query": {
+				"name": {
+					"$regex": "Each",
+					"$type": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "unknown string alias for $type: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15,3.4.24"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "Unknown type name alias: value",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cMBFErMCehcM",
+			"query": {
+				"name": {
+					"$regex": "Each",
+					"$type": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "argument to $type is not a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15,3.4.24"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoError"
+					},
+					"versions": "3.5.13"
+				},
+				{
+					"error": {
+						"message": "type must be represented as a number or a string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tkPAqpHGSDfx",
+			"query": {
+				"name": {
+					"$regex": null,
+					"$type": 22
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pFDed9QxHz7p",
+			"query": {
+				"name": {
+					"$regex": 42,
+					"$type": 22
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "o2iQPOWrwNT8",
+			"query": {
+				"name": {
+					"$regex": true,
+					"$type": 22
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2867 @@
+{
+	"catalog": "array",
+	"collection": {
+		"records": [
+			{
+				"_id": 1,
+				"name": "Diana",
+				"tags": [
+					"design",
+					"cryptography"
+				],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "math",
+						"score": 89
+					},
+					{
+						"subject": "english",
+						"score": 73
+					},
+					{
+						"subject": "history",
+						"score": 87
+					},
+					{
+						"subject": "math",
+						"score": 91
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 497,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 1157,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 546,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 287,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 1114,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 627,
+						"date": "@Date/2023-08-21T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 739,
+						"date": "@Date/2023-01-02T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 757,
+						"date": "@Date/2023-09-22T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 880,
+						"date": "@Date/2023-11-28T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 2,
+				"name": "Bob",
+				"tags": [
+					"python",
+					"javascript"
+				],
+				"permissions": [
+					"read",
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "english",
+						"score": 69
+					},
+					{
+						"subject": "math",
+						"score": 91
+					},
+					{
+						"subject": "science",
+						"score": 100
+					},
+					{
+						"subject": "science",
+						"score": 79
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 268,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 328,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 711,
+						"date": "@Date/2023-08-20T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"design"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 3,
+				"name": "Bob",
+				"tags": [],
+				"permissions": [
+					"execute"
+				],
+				"scores": [
+					{
+						"subject": "english",
+						"score": 80
+					},
+					{
+						"subject": "science",
+						"score": 85
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 994,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 1232,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 626,
+						"date": "@Date/2023-07-18T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 800,
+						"date": "@Date/2023-10-25T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1104,
+						"date": "@Date/2023-07-17T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1164,
+						"date": "@Date/2023-05-11T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 144,
+						"date": "@Date/2023-03-07T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"fullstack"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 4,
+				"name": "Alice",
+				"tags": [
+					"machine-learning",
+					"nodejs",
+					"design"
+				],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 67
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 389,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 526,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 99,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 605,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 1133,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1291,
+						"date": "@Date/2023-08-20T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 249,
+						"date": "@Date/2023-11-28T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 915,
+						"date": "@Date/2023-12-29T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 5,
+				"name": "Diana",
+				"tags": [
+					"javascript"
+				],
+				"permissions": [
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 76
+					},
+					{
+						"subject": "english",
+						"score": 98
+					},
+					{
+						"subject": "english",
+						"score": 72
+					},
+					{
+						"subject": "english",
+						"score": 85
+					},
+					{
+						"subject": "history",
+						"score": 75
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 959,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 1320,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 332,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 398,
+						"date": "@Date/2023-05-12T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1003,
+						"date": "@Date/2023-04-11T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1434,
+						"date": "@Date/2023-05-11T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"fullstack"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 6,
+				"name": "Diana",
+				"tags": [
+					"machine-learning",
+					"data-science"
+				],
+				"permissions": [
+					"execute",
+					"admin"
+				],
+				"scores": [
+					{
+						"subject": "history",
+						"score": 69
+					},
+					{
+						"subject": "math",
+						"score": 81
+					},
+					{
+						"subject": "science",
+						"score": 95
+					},
+					{
+						"subject": "science",
+						"score": 100
+					},
+					{
+						"subject": "english",
+						"score": 67
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Programming Guide",
+						"price": 399,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Programming Guide",
+						"price": 353,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 353,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 517,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1055,
+						"date": "@Date/2023-10-26T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"data"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 7,
+				"name": "Bob",
+				"tags": [
+					"design"
+				],
+				"permissions": [
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "math",
+						"score": 95
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 1282,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1455,
+						"date": "@Date/2023-11-29T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 99,
+						"date": "@Date/2023-10-26T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 583,
+						"date": "@Date/2023-01-01T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1252,
+						"date": "@Date/2023-10-25T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 812,
+						"date": "@Date/2023-03-07T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 8,
+				"name": "Bob",
+				"tags": [
+					"ui"
+				],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "history",
+						"score": 82
+					},
+					{
+						"subject": "english",
+						"score": 69
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 652,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 1211,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Programming Guide",
+						"price": 642,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 965,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 441,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1217,
+						"date": "@Date/2023-07-16T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 864,
+						"date": "@Date/2023-03-08T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 9,
+				"name": "Charlie",
+				"tags": [],
+				"permissions": [
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "math",
+						"score": 70
+					},
+					{
+						"subject": "science",
+						"score": 100
+					},
+					{
+						"subject": "english",
+						"score": 65
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 52,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1372,
+						"date": "@Date/2023-02-04T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1476,
+						"date": "@Date/2023-01-03T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1065,
+						"date": "@Date/2023-06-15T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 885,
+						"date": "@Date/2023-01-01T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 133,
+						"date": "@Date/2023-04-08T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"ux"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 10,
+				"name": "Diana",
+				"tags": [],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "math",
+						"score": 80
+					},
+					{
+						"subject": "english",
+						"score": 78
+					},
+					{
+						"subject": "english",
+						"score": 85
+					},
+					{
+						"subject": "english",
+						"score": 60
+					},
+					{
+						"subject": "science",
+						"score": 67
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 665,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 413,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 287,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 1094,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1472,
+						"date": "@Date/2023-07-17T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 577,
+						"date": "@Date/2023-01-02T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 11,
+				"name": "Eve",
+				"tags": [
+					"javascript",
+					"data-science",
+					"docker",
+					"ui"
+				],
+				"permissions": [
+					"write",
+					"admin",
+					"execute"
+				],
+				"scores": [
+					{
+						"subject": "english",
+						"score": 82
+					},
+					{
+						"subject": "science",
+						"score": 75
+					},
+					{
+						"subject": "english",
+						"score": 96
+					},
+					{
+						"subject": "history",
+						"score": 85
+					},
+					{
+						"subject": "english",
+						"score": 95
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 351,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Python Cookbook",
+						"price": 375,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 928,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 482,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Python Cookbook",
+						"price": 1459,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 610,
+						"date": "@Date/2023-02-04T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 948,
+						"date": "@Date/2023-12-30T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 195,
+						"date": "@Date/2023-01-01T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"frontend"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 12,
+				"name": "Bob",
+				"tags": [
+					"cryptography",
+					"javascript"
+				],
+				"permissions": [
+					"read"
+				],
+				"scores": [
+					{
+						"subject": "english",
+						"score": 68
+					},
+					{
+						"subject": "english",
+						"score": 97
+					},
+					{
+						"subject": "math",
+						"score": 89
+					},
+					{
+						"subject": "english",
+						"score": 60
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 1263,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 313,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 160,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 1197,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 922,
+						"date": "@Date/2023-07-18T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"ux"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 13,
+				"name": "Diana",
+				"tags": [
+					"data-science",
+					"design",
+					"mongodb",
+					"security"
+				],
+				"permissions": [
+					"admin",
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "english",
+						"score": 100
+					},
+					{
+						"subject": "math",
+						"score": 90
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 335,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Programming Guide",
+						"price": 290,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 609,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 1440,
+						"date": "@Date/2023-01-02T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 401,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 206,
+						"date": "@Date/2023-01-02T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1374,
+						"date": "@Date/2023-07-16T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"design"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 14,
+				"name": "Alice",
+				"tags": [
+					"javascript"
+				],
+				"permissions": [
+					"read",
+					"write"
+				],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 77
+					},
+					{
+						"subject": "science",
+						"score": 74
+					},
+					{
+						"subject": "science",
+						"score": 99
+					},
+					{
+						"subject": "history",
+						"score": 68
+					},
+					{
+						"subject": "history",
+						"score": 74
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 1125,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 1425,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1466,
+						"date": "@Date/2023-10-24T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 15,
+				"name": "Alice",
+				"tags": [
+					"fullstack"
+				],
+				"permissions": [
+					"execute"
+				],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 99
+					},
+					{
+						"subject": "math",
+						"score": 86
+					},
+					{
+						"subject": "english",
+						"score": 83
+					},
+					{
+						"subject": "math",
+						"score": 87
+					},
+					{
+						"subject": "english",
+						"score": 94
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 417,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 287,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 732,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Smartphone",
+						"price": 645,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 1427,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1448,
+						"date": "@Date/2023-03-07T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 444,
+						"date": "@Date/2023-10-25T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 19,
+						"date": "@Date/2023-12-30T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1165,
+						"date": "@Date/2023-06-14T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1363,
+						"date": "@Date/2023-12-31T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 16,
+				"name": "Bob",
+				"tags": [
+					"frontend",
+					"fullstack",
+					"typescript",
+					"docker",
+					"design"
+				],
+				"permissions": [
+					"execute",
+					"read"
+				],
+				"scores": [
+					{
+						"subject": "history",
+						"score": 60
+					},
+					{
+						"subject": "science",
+						"score": 97
+					},
+					{
+						"subject": "science",
+						"score": 81
+					},
+					{
+						"subject": "english",
+						"score": 60
+					},
+					{
+						"subject": "science",
+						"score": 62
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 1196,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 1275,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Programming Guide",
+						"price": 678,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 1214,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 1444,
+						"date": "@Date/2023-07-16T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1287,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1175,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1310,
+						"date": "@Date/2023-08-20T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 17,
+				"name": "Bob",
+				"tags": [
+					"docker",
+					"machine-learning"
+				],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "history",
+						"score": 92
+					},
+					{
+						"subject": "math",
+						"score": 82
+					},
+					{
+						"subject": "math",
+						"score": 60
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 707,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 1160,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 855,
+						"date": "@Date/2023-05-13T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 1012,
+						"date": "@Date/2023-05-12T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1079,
+						"date": "@Date/2023-08-21T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 465,
+						"date": "@Date/2023-12-30T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 18,
+				"name": "Alice",
+				"tags": [
+					"cryptography",
+					"backend",
+					"data-science",
+					"design"
+				],
+				"permissions": [],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 96
+					},
+					{
+						"subject": "english",
+						"score": 66
+					},
+					{
+						"subject": "english",
+						"score": 78
+					}
+				],
+				"products": [
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 293,
+						"inStock": false
+					},
+					{
+						"category": "electronics",
+						"name": "Smartphone",
+						"price": 1334,
+						"inStock": true
+					},
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 336,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 495,
+						"date": "@Date/2023-08-20T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1097,
+						"date": "@Date/2023-07-18T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 105,
+						"date": "@Date/2023-10-24T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 1024,
+						"date": "@Date/2023-08-20T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 500,
+						"date": "@Date/2023-12-30T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"frontend"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 19,
+				"name": "Eve",
+				"tags": [
+					"frontend",
+					"ui"
+				],
+				"permissions": [
+					"execute"
+				],
+				"scores": [
+					{
+						"subject": "science",
+						"score": 75
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Tablet",
+						"price": 426,
+						"inStock": true
+					}
+				],
+				"transactions": [
+					{
+						"type": "refund",
+						"amount": 1064,
+						"date": "@Date/2023-08-19T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 951,
+						"date": "@Date/2023-08-19T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 956,
+						"date": "@Date/2023-10-24T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 721,
+						"date": "@Date/2023-12-31T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": [
+						"backend"
+					]
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			},
+			{
+				"_id": 20,
+				"name": "Bob",
+				"tags": [
+					"docker"
+				],
+				"permissions": [
+					"admin",
+					"read"
+				],
+				"scores": [
+					{
+						"subject": "math",
+						"score": 70
+					},
+					{
+						"subject": "math",
+						"score": 88
+					}
+				],
+				"products": [
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 1186,
+						"inStock": true
+					},
+					{
+						"category": "electronics",
+						"name": "Laptop",
+						"price": 667,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Python Cookbook",
+						"price": 1404,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Tablet",
+						"price": 519,
+						"inStock": false
+					},
+					{
+						"category": "books",
+						"name": "Laptop",
+						"price": 1020,
+						"inStock": false
+					}
+				],
+				"transactions": [
+					{
+						"type": "purchase",
+						"amount": 866,
+						"date": "@Date/2023-07-18T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 882,
+						"date": "@Date/2023-05-11T00:00:00.000Z"
+					},
+					{
+						"type": "refund",
+						"amount": 190,
+						"date": "@Date/2023-10-26T00:00:00.000Z"
+					},
+					{
+						"type": "purchase",
+						"amount": 709,
+						"date": "@Date/2023-04-09T00:00:00.000Z"
+					}
+				],
+				"nested": {
+					"tags": []
+				},
+				"emptyArray": [],
+				"mixedArray": [
+					1,
+					"string",
+					true,
+					false,
+					null,
+					null,
+					{}
+				]
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "pGPwVZ5czHK0",
+			"query": {
+				"tags": {
+					"$all": [
+						"javascript",
+						"nodejs"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gryHtYljpHHb",
+			"query": {
+				"permissions": {
+					"$all": [
+						"read",
+						"write"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lZIIFIOKlq0N",
+			"query": {
+				"scores": {
+					"$all": [
+						80,
+						90
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pxvwFTgkxOVL",
+			"query": {
+				"nested.tags": {
+					"$all": [
+						"frontend",
+						"backend"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ntWA9QAxQbi9",
+			"query": {
+				"products": {
+					"$elemMatch": {
+						"category": "electronics",
+						"price": {
+							"$gt": 500
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						3,
+						4,
+						5,
+						6,
+						8,
+						10,
+						11,
+						14,
+						16,
+						18,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mGIMqlRCw7dX",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"subject": "math",
+						"score": {
+							"$gte": 85
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						7,
+						12,
+						13,
+						15,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "k2Fe2MuB3rst",
+			"query": {
+				"transactions": {
+					"$elemMatch": {
+						"type": "purchase",
+						"amount": {
+							"$lt": 100
+						},
+						"date": {
+							"$gte": "@Date/2023-01-01T00:00:00.000Z"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						15
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "slCh6wYLnWDj",
+			"query": {
+				"tags": {
+					"$size": 3
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wHHTIuVhr0FF",
+			"query": {
+				"permissions": {
+					"$size": 2
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						6,
+						13,
+						14,
+						16,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mJGflcWK08Qz",
+			"query": {
+				"scores": {
+					"$size": 4
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						12
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oHPKY2gPQYc8",
+			"query": {
+				"emptyArray": {
+					"$size": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lJXid7s26NOb",
+			"query": {
+				"$and": [
+					{
+						"tags": {
+							"$all": [
+								"javascript"
+							]
+						}
+					},
+					{
+						"tags": {
+							"$size": {
+								"$gte": 2
+							}
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				},
+				{
+					"operator": "$size",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $size needs a number",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size needs a number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a number in: $size: { $gte: 2 }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qMSEfIpw6Unk",
+			"query": {
+				"$or": [
+					{
+						"scores": {
+							"$elemMatch": {
+								"score": {
+									"$gte": 90
+								}
+							}
+						}
+					},
+					{
+						"permissions": {
+							"$all": [
+								"admin"
+							]
+						}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				},
+				{
+					"operator": "$all",
+					"score": 0.75
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						5,
+						6,
+						7,
+						9,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gksPqJOJr2cB",
+			"query": {
+				"tags": {
+					"$all": "javascript"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mMGN5eqFe06H",
+			"query": {
+				"permissions": {
+					"$elemMatch": "invalid"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a2vaKtW56SYq",
+			"query": {
+				"scores": {
+					"$size": -1
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$size may not be negative",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size may not be negative",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected a non-negative number in: $size: -1",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wvrdG1vzDdWA",
+			"query": {
+				"scores": {
+					"$size": 3.5
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$size must be a whole number",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..5.0.33"
+				},
+				{
+					"error": {
+						"message": "Failed to parse $size. Expected an integer: $size: 3.5",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wdJM9P2XNvAr",
+			"query": {
+				"nonExistent": {
+					"$size": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "udFRPNA5ZQXE",
+			"query": {
+				"mixedArray": {
+					"$elemMatch": {
+						"score": {
+							"$gt": "high"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wNF1QWtY5o36",
+			"query": {
+				"tags": {
+					"$all": []
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qLTBHHllwuY2",
+			"query": {
+				"tags": {
+					"$all": [
+						"nonexistent"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iwSJoX7f2ZJe",
+			"query": {
+				"scores": {
+					"$elemMatch": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sK2nLJ1LSbAR",
+			"query": {
+				"scores": {
+					"$size": 100
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ogVtVttDiD4T",
+			"query": {
+				"scores": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"score": {
+									"$gte": 90
+								}
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						5,
+						6,
+						7,
+						9,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r2x2VVgYHIng",
+			"query": {
+				"name": {
+					"$all": [
+						"Alice"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						14,
+						15,
+						18
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ihHnmjD0q6VL",
+			"query": {
+				"tags": {
+					"$all": [
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pMvVHI46wTQN",
+			"query": {
+				"tags": {
+					"$all": [
+						"javascript",
+						"javascript"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						5,
+						11,
+						12,
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qPQPMwLHotwo",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"$or": [
+							{
+								"score": {
+									"$lt": 65
+								}
+							},
+							{
+								"score": {
+									"$gt": 95
+								}
+							}
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "n6rn3drYtWYH",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"subject": {
+							"$exists": false
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qsiEDXET3Dyx",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"subject": {
+							"$regex": "^m"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						6,
+						7,
+						9,
+						10,
+						12,
+						13,
+						15,
+						17,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p6fqWwgOaXY9",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"score": {
+							"$not": {
+								"$gte": 80
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "brEHxAO5qArM",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$gt": "A"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e40PXGZQy01w",
+			"query": {
+				"permissions": {
+					"$size": 1
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						5,
+						7,
+						9,
+						12,
+						15,
+						19
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cBO8L7njB71n",
+			"query": {
+				"scores": {
+					"$size": 2
+				}
+			},
+			"operators": [
+				{
+					"operator": "$size",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						8,
+						13,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "suJZfJv62bth",
+			"query": {
+				"tags.0": "javascript"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						5,
+						11,
+						14
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kJkV8IdKpy0t",
+			"query": {
+				"scores.0.subject": "math"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						1,
+						7,
+						9,
+						10,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "j2LcEFzbd083",
+			"query": {
+				"scores.score": {
+					"$gte": 95
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2,
+						5,
+						6,
+						7,
+						9,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						18
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uyXmwLGoFqU2",
+			"query": {
+				"scores.subject": "math"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						6,
+						7,
+						9,
+						10,
+						12,
+						13,
+						15,
+						17,
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bW9B6QwnF5d1",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"subject": "math",
+						"score": {
+							"$gte": 90
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						7,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vW955KXRzaI8",
+			"query": {
+				"scores.subject": "math",
+				"scores.score": {
+					"$gte": 90
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						6,
+						7,
+						9,
+						12,
+						13,
+						15,
+						17
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		}
+	]
+}

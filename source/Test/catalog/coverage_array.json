@@ -1,0 +1,6239 @@
+{
+	"catalog": "coverage_array",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"scores": [
+					[
+						34,
+						35
+					]
+				]
+			},
+			{
+				"_id": 1,
+				"scores": [
+					[
+						"Abundant"
+					]
+				]
+			},
+			{
+				"_id": 2,
+				"ratings": [
+					[
+						4,
+						5
+					]
+				]
+			},
+			{
+				"_id": 3,
+				"ratings": [
+					4,
+					5
+				]
+			},
+			{
+				"_id": 4,
+				"age": 9,
+				"name": [
+					"Abundant",
+					"Couple",
+					"Double"
+				]
+			},
+			{
+				"_id": 5,
+				"age": 10,
+				"name": [
+					14,
+					14
+				]
+			},
+			{
+				"_id": 6,
+				"score": 25,
+				"title": [
+					26,
+					27
+				]
+			},
+			{
+				"_id": 7,
+				"score": 28,
+				"title": {
+					"rank": 30
+				}
+			},
+			{
+				"_id": 8,
+				"score": 29,
+				"title": [
+					{
+						"rank": 32
+					}
+				]
+			},
+			{
+				"_id": 9,
+				"score": 30,
+				"title": [
+					true,
+					false
+				]
+			},
+			{
+				"_id": 10,
+				"score": 31,
+				"title": 27
+			},
+			{
+				"_id": 11,
+				"score": 37,
+				"title": [
+					26,
+					true
+				]
+			},
+			{
+				"_id": 12,
+				"score": 38,
+				"title": [
+					true,
+					26
+				]
+			},
+			{
+				"_id": 13,
+				"score": 40,
+				"title": [
+					null
+				]
+			},
+			{
+				"_id": 14,
+				"score": 41,
+				"title": {}
+			},
+			{
+				"_id": 15,
+				"score": 42,
+				"title": [
+					{}
+				]
+			},
+			{
+				"_id": 16,
+				"score": 43,
+				"title": [
+					{},
+					28
+				]
+			},
+			{
+				"_id": 17,
+				"score": 44,
+				"title": [
+					28,
+					{}
+				]
+			},
+			{
+				"_id": 18,
+				"score": 49,
+				"title": true
+			},
+			{
+				"_id": 19,
+				"count": 17,
+				"grade": {
+					"step": [
+						21,
+						21
+					]
+				}
+			},
+			{
+				"_id": 20,
+				"counts": [
+					{
+						"0": 22
+					},
+					23
+				]
+			},
+			{
+				"_id": 21,
+				"values": [
+					{
+						"0": 39
+					},
+					40
+				]
+			},
+			{
+				"_id": 22,
+				"values": [
+					{
+						"0": {
+							"priority": 39
+						}
+					},
+					{
+						"priority": 40
+					}
+				]
+			},
+			{
+				"_id": 23,
+				"points": [
+					{
+						"0": 14
+					},
+					15
+				]
+			},
+			{
+				"_id": 24,
+				"points": [
+					{
+						"0": {
+							"capacity": 14
+						}
+					},
+					{
+						"capacity": 15
+					}
+				]
+			},
+			{
+				"_id": 25,
+				"points": [
+					{
+						"0": {
+							"capacity": 14
+						}
+					},
+					{}
+				]
+			},
+			{
+				"_id": 26,
+				"rankings": {
+					"0": 33
+				}
+			},
+			{
+				"_id": 27,
+				"rankings": [
+					33
+				]
+			},
+			{
+				"_id": 28,
+				"indices": [
+					{
+						"attempts": 9
+					}
+				]
+			},
+			{
+				"_id": 29,
+				"weights": []
+			},
+			{
+				"_id": 30,
+				"quantities": [
+					{},
+					{
+						"weight": 6
+					}
+				]
+			},
+			{
+				"_id": 31,
+				"levels": [
+					21,
+					{
+						"height": 17
+					}
+				]
+			},
+			{
+				"_id": 32,
+				"scores": [
+					{
+						"age": [
+							{
+								"score": 18,
+								"rank": 19
+							}
+						]
+					}
+				]
+			},
+			{
+				"_id": 33,
+				"ratings": [
+					{
+						"count": [
+							{
+								"grade": [
+									33
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"_id": 34,
+				"counts": [
+					{}
+				]
+			},
+			{
+				"_id": 35,
+				"values": [
+					[]
+				]
+			},
+			{
+				"_id": 36,
+				"points": [
+					{
+						"step": [
+							1,
+							3
+						]
+					}
+				]
+			},
+			{
+				"_id": 37,
+				"rankings": [
+					{
+						"priority": 25
+					}
+				]
+			},
+			{
+				"_id": 38,
+				"rankings": {
+					"priority": 25
+				}
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "uSGmTPG0fK6g",
+			"query": {
+				"scores": [
+					34,
+					35
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v2pqrBrH4QSG",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"0": "Abundant"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rKuK9cNRGXD4",
+			"query": {
+				"ratings": [
+					4,
+					5
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						3,
+						2
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t9XsGTrYnl48",
+			"query": {
+				"name.0": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "s1R2z1WQMQZH",
+			"query": {
+				"name": [
+					14,
+					14
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "woNvhr8lOtVW",
+			"query": {
+				"name": {
+					"$gte": [
+						10,
+						11
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mXBdRImVTnGh",
+			"query": {
+				"name": {
+					"$gte": 12,
+					"$lte": 14
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jRyqxvs46RYZ",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$gte": 12,
+						"$lte": 14
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sBPHQVAz1TdY",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$not": {
+							"$ne": 10
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kiBVNfqoyx2u",
+			"query": {
+				"title": {
+					"$lt": 27
+				}
+			},
+			"operators": [
+				{
+					"operator": "$lt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						6,
+						11,
+						12
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "br8OsNVGMR9y",
+			"query": {
+				"level": {
+					"$gte": 6
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lKHEXRZk675e",
+			"query": {
+				"grade.step": [
+					21,
+					21
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						19
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vDVGxzYfAJVE",
+			"query": {
+				"counts.0": 22
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						20
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w1V9Czgvvjk4",
+			"query": {
+				"values.0.priority": 39
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						22
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wiZttPiDp7G3",
+			"query": {
+				"points.0": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						23,
+						24,
+						25,
+						36
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qSPYODKmZ4IM",
+			"query": {
+				"points.0.capacity": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nai1PL1HU6rW",
+			"query": {
+				"rankings.0": 33
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						26,
+						27
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sOz8qsEAhMA4",
+			"query": {
+				"indices.quantity": 10
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sOPI32gDvYzb",
+			"query": {
+				"indices": {
+					"attempts": 9
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uAyr7Decj6TT",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": 9
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fBGAzFfYDXnS",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$gt": 10
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bvurAhvv26WU",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": 10
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pJ7FcZbQrZKF",
+			"query": {
+				"indices.attempts": 9
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fexHA6i0pZ9A",
+			"query": {
+				"indices.attempts": {
+					"$gt": 9
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "etJuxKgjPF0D",
+			"query": {
+				"indices": {
+					"$ne": 10,
+					"$elemMatch": {
+						"attempts": {
+							"$gt": 10
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gYcAJu1Tx608",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$lt": 10
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rEtB73S471TE",
+			"query": {
+				"indices": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$lt": 12
+								}
+							}
+						},
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$gt": 13
+								}
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tKRLA0FC7P00",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$gt": 12
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dOm6VDJX5EWL",
+			"query": {
+				"indices": {
+					"$all": [
+						9,
+						{
+							"$elemMatch": {
+								"attempts": 11
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ahFixETddKVW",
+			"query": {
+				"indices": {
+					"$all": [
+						{},
+						{
+							"$elemMatch": {
+								"attempts": 11
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sNKnFLZKkXDP",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": 9,
+						"depth": 10
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eMYOGdk2wqCY",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": 9,
+							"depth": 10
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r2IStDMKVnF1",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": {
+								"$ne": 9
+							},
+							"depth": 11
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oo0iqzNU322f",
+			"query": {
+				"indices.attempts": 9,
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$elemMatch": {
+								"depth": {
+									"$gte": 9
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wv7w56DebCsj",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$gte": 10,
+							"$lt": 12
+						},
+						"depth": 33
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tyA5KMOFxFR7",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"$or": [
+							{
+								"index": 10
+							},
+							{
+								"depth": 10
+							}
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wY6HRnQvXamH",
+			"query": {
+				"weights": []
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						29
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rKlj9MnrA7Vy",
+			"query": {
+				"weights": {
+					"$in": [
+						[]
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						29
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r0BHnVlutVoZ",
+			"query": {
+				"quantities.weight": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sgzM8N74vc7k",
+			"query": {
+				"quantities": {
+					"$elemMatch": {
+						"weight": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						30
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oXnPaUHAZDSL",
+			"query": {
+				"levels.height": 17
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						31
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uRjVQQvc7SJ2",
+			"query": {
+				"levels": {
+					"$elemMatch": {
+						"height": 17
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						31
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "alIEuMDtLJ03",
+			"query": {
+				"levels.height": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "epULRn9F524S",
+			"query": {
+				"levels": {
+					"$elemMatch": {
+						"height": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "scT8JtywLVhf",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": 18,
+								"rank": 19
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						32
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tQDAxajCebRM",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": 18,
+									"$lte": 18
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						32
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tYYpPGT9YYva",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": 18,
+									"$in": [
+										19
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u78eLQvIiUyS",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"rank": {
+							"$elemMatch": {
+								"level": {
+									"$lte": 18
+								}
+							}
+						},
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": 18
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pZSK07zcaD8c",
+			"query": {
+				"ratings": {
+					"$elemMatch": {
+						"count.grade": {
+							"$elemMatch": {
+								"$gte": 33,
+								"$lte": 33
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						33
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pnzSvUdwFgTx",
+			"query": {
+				"counts": {
+					"$elemMatch": {
+						"$gte": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						20,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uDCF9gWTu4pX",
+			"query": {
+				"values": {
+					"$elemMatch": {
+						"$in": [
+							[]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						35
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tuv6mhUy1Sc6",
+			"query": {
+				"points": {
+					"$elemMatch": {
+						"step": {
+							"$gte": 2,
+							"$lte": 2
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						36
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pvV2EBPUje8S",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": {
+							"$gte": 25
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						37
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p8yd3KTg3Wya",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": 25
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						37
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "puimFKTOLY2M",
+			"query": {
+				"scores": [
+					null,
+					null
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ngo0HQWNXaGs",
+			"query": {
+				"scores": [
+					"value",
+					"value"
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eLOnAvl9T4NP",
+			"query": {
+				"scores": [
+					true,
+					true
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cswmMfp1klSS",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"0": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						32
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fXnWT2A8VSAT",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"0": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wJm7N6jHA8q7",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"0": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uo8kw0kiKOvW",
+			"query": {
+				"ratings": [
+					null,
+					null
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oqe3EPySJFMw",
+			"query": {
+				"ratings": [
+					"value",
+					"value"
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "axvjRCNBW8WL",
+			"query": {
+				"ratings": [
+					true,
+					true
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eMD0NDNYBHB5",
+			"query": {
+				"name": [
+					null,
+					null
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dUDEAjkE4jCD",
+			"query": {
+				"name": [
+					"value",
+					"value"
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vYti64MqxYA3",
+			"query": {
+				"name": [
+					true,
+					true
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "h7YHvQdFFIno",
+			"query": {
+				"name": {
+					"$gte": [
+						null,
+						null
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hcqsJgz6CHEl",
+			"query": {
+				"name": {
+					"$gte": [
+						"value",
+						"value"
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uPNEvgsoAk8M",
+			"query": {
+				"name": {
+					"$gte": [
+						true,
+						true
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oRo8FxB6UJyd",
+			"query": {
+				"name": {
+					"$gte": null,
+					"$lte": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qnpMXs9X3env",
+			"query": {
+				"name": {
+					"$gte": "value",
+					"$lte": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qMM93WK2jYhP",
+			"query": {
+				"name": {
+					"$gte": true,
+					"$lte": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kHh9IjLu7VPW",
+			"query": {
+				"name": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uxySQtIkxU3F",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$gte": null,
+						"$lte": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "shByGZI76GXt",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$gte": "value",
+						"$lte": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c5fU06E91tak",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$gte": true,
+						"$lte": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mFJVgU4SNehr",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$not": {
+							"$ne": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vn8iR0ozPhYy",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$not": {
+							"$ne": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nJp0vTPDNRzW",
+			"query": {
+				"name": {
+					"$elemMatch": {
+						"$not": {
+							"$ne": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bAAsGLvGUZn2",
+			"query": {
+				"title": {
+					"$lt": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$lt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hM4nSIsytL1G",
+			"query": {
+				"title": {
+					"$lt": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$lt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				},
+				{
+					"documents": [
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ssNxJPADP80l",
+			"query": {
+				"title": {
+					"$lt": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$lt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						9
+					],
+					"versions": "2.6.12..8.3.8"
+				},
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rz9txhgupHHk",
+			"query": {
+				"level": {
+					"$gte": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tHHK4UmJPILl",
+			"query": {
+				"level": {
+					"$gte": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "drP8UYQOJLWU",
+			"query": {
+				"level": {
+					"$gte": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gte",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iadlSSOiAClJ",
+			"query": {
+				"grade.step": [
+					null,
+					null
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nFwCjOKcFraS",
+			"query": {
+				"grade.step": [
+					"value",
+					"value"
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r50rE1JNpNUC",
+			"query": {
+				"grade.step": [
+					true,
+					true
+				]
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p3s8NZZuMEV0",
+			"query": {
+				"counts.0": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ke1NrxpMPXKr",
+			"query": {
+				"counts.0": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wZ4MtNV3hxVG",
+			"query": {
+				"counts.0": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "eELJo2GVWifd",
+			"query": {
+				"values.0.priority": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aLk0DIMr84I5",
+			"query": {
+				"values.0.priority": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pFicC6KTHGn2",
+			"query": {
+				"values.0.priority": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qSd8F1poAGQA",
+			"query": {
+				"points.0": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lMmAvZ01ON4A",
+			"query": {
+				"points.0": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tvxO92qLOHrY",
+			"query": {
+				"points.0": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						23,
+						24,
+						25,
+						36
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gjIxhrpG6TJH",
+			"query": {
+				"points.0.capacity": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wLkLoslNS5aN",
+			"query": {
+				"points.0.capacity": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vbNy5LHxR3Wi",
+			"query": {
+				"points.0.capacity": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rT4jlkTowf5R",
+			"query": {
+				"rankings.0": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oNh6K9yS06rN",
+			"query": {
+				"rankings.0": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vrYbEExJrR8r",
+			"query": {
+				"rankings.0": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "icCaiwJ3f7Hh",
+			"query": {
+				"indices.quantity": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "s4P9HWu3O4a4",
+			"query": {
+				"indices.quantity": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kNFX5tVCcdgS",
+			"query": {
+				"indices.quantity": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a2uQzWhR7VQp",
+			"query": {
+				"indices": {
+					"attempts": null
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rewRiP24a3YO",
+			"query": {
+				"indices": {
+					"attempts": "value"
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p7kOFGs42Zhc",
+			"query": {
+				"indices": {
+					"attempts": true
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wymDPNgKqHak",
+			"query": {
+				"indices": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "mnTUAhL0tv4x",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tMbYostSy2Xu",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rWcV3PYTxnUp",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nsbUCHGC9b7l",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$gt": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nlWvFIp3wNp3",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$gt": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bVAjwsFffWUl",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$gt": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wm9UPGCRr0VD",
+			"query": {
+				"indices.attempts": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bTC8KKD5CXvu",
+			"query": {
+				"indices.attempts": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oKYJ21Isi1UE",
+			"query": {
+				"indices.attempts": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tgqNFqnvgi6V",
+			"query": {
+				"indices.attempts": {
+					"$gt": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "j6vWIBKIt90C",
+			"query": {
+				"indices.attempts": {
+					"$gt": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tOtVLgAVsuSm",
+			"query": {
+				"indices.attempts": {
+					"$gt": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "txUCYGRKHB7z",
+			"query": {
+				"indices": {
+					"$ne": 10,
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jyLi7hOIy0i1",
+			"query": {
+				"indices": {
+					"$ne": null,
+					"$elemMatch": {
+						"attempts": {
+							"$gt": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vLQt7pWNTe5n",
+			"query": {
+				"indices": {
+					"$ne": "value",
+					"$elemMatch": {
+						"attempts": {
+							"$gt": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uYnPQEvrzfM2",
+			"query": {
+				"indices": {
+					"$ne": true,
+					"$elemMatch": {
+						"attempts": {
+							"$gt": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uBXypIc37R1j",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$lt": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bQGHCbZHTlgI",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$lt": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "byEMWlVK0Obs",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"attempts": {
+							"$lt": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sPVIW16OcGST",
+			"query": {
+				"indices": {
+					"$all": "value"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tS0Fu8iiudS9",
+			"query": {
+				"indices": {
+					"$all": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $all needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tfsReC6uHNWf",
+			"query": {
+				"indices": {
+					"$all": [
+						{
+							"$elemMatch": 42
+						},
+						{
+							"$elemMatch": 42
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rQM8GplwCtQp",
+			"query": {
+				"indices": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$lt": null
+								}
+							}
+						},
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$gt": null
+								}
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c7Swd3dxZFYH",
+			"query": {
+				"indices": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$lt": "value"
+								}
+							}
+						},
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$gt": "value"
+								}
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hx4y9DOvpuZK",
+			"query": {
+				"indices": {
+					"$all": [
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$lt": true
+								}
+							}
+						},
+						{
+							"$elemMatch": {
+								"attempts": {
+									"$gt": true
+								}
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rFZkJFPjUnXy",
+			"query": {
+				"indices": {
+					"$all": [
+						9,
+						{
+							"$elemMatch": 42
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rjyfPmx4Dvi7",
+			"query": {
+				"indices": {
+					"$all": [
+						null,
+						{
+							"$elemMatch": {
+								"attempts": null
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u1RxIHdV1oyK",
+			"query": {
+				"indices": {
+					"$all": [
+						"value",
+						{
+							"$elemMatch": {
+								"attempts": "value"
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cSHT4YRaOd28",
+			"query": {
+				"indices": {
+					"$all": [
+						true,
+						{
+							"$elemMatch": {
+								"attempts": true
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bKJXrHXVW7OR",
+			"query": {
+				"indices": {
+					"$all": [
+						{},
+						{
+							"$elemMatch": 42
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iwNFvE2dngNs",
+			"query": {
+				"indices": {
+					"$all": [
+						{},
+						{
+							"$elemMatch": {
+								"attempts": null
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wImICKVrLWW1",
+			"query": {
+				"indices": {
+					"$all": [
+						{},
+						{
+							"$elemMatch": {
+								"attempts": "value"
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e7oxvSaQBxFO",
+			"query": {
+				"indices": {
+					"$all": [
+						{},
+						{
+							"$elemMatch": {
+								"attempts": true
+							}
+						}
+					]
+				}
+			},
+			"operators": [
+				{
+					"operator": "$all",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue no $ expressions in $all",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "no $ expressions in $all",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rqCTYrZuuYFJ",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": null,
+						"depth": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wjWBTTOtORdF",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": "value",
+						"depth": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aHXIOjZbHn8n",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": true,
+						"depth": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ucOKCzxzQTFi",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": 42
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pQdXztT11bgb",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": null,
+							"depth": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rTJOuu4KYCu6",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": "value",
+							"depth": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cJzUbORtpXTl",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": true,
+							"depth": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "q8AXPEGROTAL",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": {
+								"$ne": null
+							},
+							"depth": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qwZTQwIf9VIh",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": {
+								"$ne": "value"
+							},
+							"depth": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "toRbM15QB9UD",
+			"query": {
+				"indices": {
+					"$not": {
+						"$elemMatch": {
+							"index": {
+								"$ne": true
+							},
+							"depth": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$elemMatch",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vX71zuvLFb4a",
+			"query": {
+				"indices.attempts": 9,
+				"indices": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rxyahWXMUauy",
+			"query": {
+				"indices.attempts": null,
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$elemMatch": {
+								"depth": {
+									"$gte": null
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vIBOUbtUK18m",
+			"query": {
+				"indices.attempts": "value",
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$elemMatch": {
+								"depth": {
+									"$gte": "value"
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c2tFlLkyQ36G",
+			"query": {
+				"indices.attempts": true,
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$elemMatch": {
+								"depth": {
+									"$gte": true
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ttDyJATSPDDE",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$gte": null,
+							"$lt": null
+						},
+						"depth": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ffzfVjRyQQYX",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$gte": "value",
+							"$lt": "value"
+						},
+						"depth": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wlCQrcNeUjTq",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"index": {
+							"$gte": true,
+							"$lt": true
+						},
+						"depth": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pvA1VpR8Tf5p",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"$or": [
+							{
+								"index": null
+							},
+							{
+								"depth": null
+							}
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						28
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nIUt2UKYkVKw",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"$or": [
+							{
+								"index": "value"
+							},
+							{
+								"depth": "value"
+							}
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lqkkF6D7Ba6a",
+			"query": {
+				"indices": {
+					"$elemMatch": {
+						"$or": [
+							{
+								"index": true
+							},
+							{
+								"depth": true
+							}
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "m8QHySp766Jg",
+			"query": {
+				"weights": {
+					"$in": "active"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nNpcJI0Dps8c",
+			"query": {
+				"quantities": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "khr3aiiSuVHc",
+			"query": {
+				"levels.height": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w9NUl53NUmM1",
+			"query": {
+				"levels.height": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "r1UHJO87cVUe",
+			"query": {
+				"levels": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qNbllcLTZAl8",
+			"query": {
+				"levels": {
+					"$elemMatch": {
+						"height": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hXBYClI0hCUC",
+			"query": {
+				"levels": {
+					"$elemMatch": {
+						"height": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "p01JdNpIIdTs",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": null,
+								"rank": null
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lNueuIWQPJSB",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": "value",
+								"rank": "value"
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "u0MvyXEVTcas",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": true,
+								"rank": true
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bcD193F5rGxZ",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": null,
+									"$lte": null
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tsH8B4ZNn400",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": "value",
+									"$lte": "value"
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qbqP5izSUJXC",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": true,
+									"$lte": true
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "d2V8sPlvamlC",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": 18,
+									"$in": "active"
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cHVGNJIHg48f",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": null,
+									"$in": [
+										null
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fEyNj7iBtX7s",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": "value",
+									"$in": [
+										"value"
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rFhGihUk8FGI",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": true,
+									"$in": [
+										true
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rRsFPE8BxmNF",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"rank": {
+							"$elemMatch": {
+								"level": {
+									"$lte": null
+								}
+							}
+						},
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": null
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tOwGaF41teQi",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"rank": {
+							"$elemMatch": {
+								"level": {
+									"$lte": "value"
+								}
+							}
+						},
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": "value"
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "diFXRwMPeEJ4",
+			"query": {
+				"scores": {
+					"$elemMatch": {
+						"rank": {
+							"$elemMatch": {
+								"level": {
+									"$lte": true
+								}
+							}
+						},
+						"age": {
+							"$elemMatch": {
+								"score": {
+									"$gte": true
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "a0uZsVwoQH3S",
+			"query": {
+				"ratings": {
+					"$elemMatch": {
+						"count.grade": {
+							"$elemMatch": {
+								"$gte": null,
+								"$lte": null
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tqNT3tkH7BQ3",
+			"query": {
+				"ratings": {
+					"$elemMatch": {
+						"count.grade": {
+							"$elemMatch": {
+								"$gte": "value",
+								"$lte": "value"
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hf2DtXEwwnsu",
+			"query": {
+				"ratings": {
+					"$elemMatch": {
+						"count.grade": {
+							"$elemMatch": {
+								"$gte": true,
+								"$lte": true
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iW3zbaqHGn1L",
+			"query": {
+				"counts": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oy0DsLUERTWn",
+			"query": {
+				"values": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fUlPjkJQOaNE",
+			"query": {
+				"values": {
+					"$elemMatch": {
+						"$in": "active"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "o5VOKsM6NX7w",
+			"query": {
+				"points": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dRMs7qfMH3a8",
+			"query": {
+				"points": {
+					"$elemMatch": {
+						"step": {
+							"$gte": null,
+							"$lte": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						23,
+						24,
+						25
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "svCreXA9ROOK",
+			"query": {
+				"points": {
+					"$elemMatch": {
+						"step": {
+							"$gte": "value",
+							"$lte": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nsVuGueTaU0X",
+			"query": {
+				"points": {
+					"$elemMatch": {
+						"step": {
+							"$gte": true,
+							"$lte": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kQmXIoLfyRUg",
+			"query": {
+				"rankings": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nMUiCUgX52Ut",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": {
+							"$gte": null
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "stBHSCuDlW3v",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": {
+							"$gte": "value"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kBlsbIFHkuR1",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": {
+							"$gte": true
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rlACOyNPzcVZ",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "iKXVRE0Wp7BR",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": "value"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nqw9wYrB7QkE",
+			"query": {
+				"rankings": {
+					"$elemMatch": {
+						"priority": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		}
+	]
+}

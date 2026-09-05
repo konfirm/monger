@@ -1,0 +1,82 @@
+{
+	"catalog": "coverage_date",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"age": {
+					"score": 9,
+					"rank": 10
+				}
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "o51MIIEgbbYi",
+			"query": {
+				"age": {
+					"score": 9,
+					"rank": 10
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qnwHFKj6e8Lj",
+			"query": {
+				"age": {
+					"score": null,
+					"rank": null
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "abSi9qEAIvwp",
+			"query": {
+				"age": {
+					"score": "value",
+					"rank": "value"
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rKZLBvu25bqB",
+			"query": {
+				"age": {
+					"score": true,
+					"rank": true
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		}
+	]
+}
