@@ -72,5 +72,23 @@ describe("Domain/Filter/Operator/Array", () => {
 			${2}  | ${[1, 2]} | yes
 			${3}  | ${"foo"}  | no
 		`(compare(ArrayOp.$size));
+
+		it("rejects an invalid size argument", () => {
+			assert.throws(
+				() => ArrayOp.$size(-1),
+				/Expected a non-negative number in: \$size: -1/,
+				"$size rejects a negative number",
+			);
+			assert.throws(
+				() => ArrayOp.$size(2.5),
+				/Expected an integer: \$size: 2.5/,
+				"$size rejects a non-integer number",
+			);
+			assert.throws(
+				() => ArrayOp.$size("value" as never),
+				/Expected a number in: \$size: value/,
+				"$size rejects a non-numeric value",
+			);
+		});
 	});
 });

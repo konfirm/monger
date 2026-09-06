@@ -125,5 +125,26 @@
 			"source/Domain/Filter/Operator/Element.spec.ts"
 		],
 		"verified": 0.982
+	},
+	"$all": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Array.spec.ts"
+		],
+		"verified": 0.735
+	},
+	"$size": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Array.spec.ts"
+		],
+		"verified": 1
+	},
+	"$elemMatch": {
+		"working": "planned",
+		"files": [
+			"source/Domain/Filter/Operator/Array.spec.ts"
+		],
+		"verified": null
 	}
 }

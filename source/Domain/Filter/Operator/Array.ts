@@ -1,6 +1,6 @@
 import type { CompileStep, Evaluator, Query } from '../Compiler';
 import { deep } from '../../Compare';
-import { isArray } from '../../BSON';
+import { is, isArray } from '../../BSON';
 
 export type Operation = {
 	$all: Parameters<typeof $all>[0];
@@ -52,6 +52,29 @@ export function $elemMatch(query: Query, compile: CompileStep): Evaluator {
 		);
 }
 
+const isNumber = is(1, 16, 18);
+
+// Confirmed against a live MongoDB 8.2.9: wrong type, NaN, +/-Infinity,
+// non-integer, and negative are five distinct errors, checked in that
+// order — same shape as $type/Bitwise's validation, different wording.
+function assertValidSize(query: unknown): asserts query is number {
+	if (!isNumber(query)) {
+		throw new Error(`Failed to parse $size. Expected a number in: $size: ${query}`);
+	}
+	if (Number.isNaN(query)) {
+		throw new Error(`Failed to parse $size. Expected an integer, but found NaN in: $size: ${query}`);
+	}
+	if (!Number.isFinite(query)) {
+		throw new Error(`Failed to parse $size. Cannot represent as a 64-bit integer: $size: ${query}`);
+	}
+	if (!Number.isInteger(query)) {
+		throw new Error(`Failed to parse $size. Expected an integer: $size: ${query}`);
+	}
+	if ((query as number) < 0) {
+		throw new Error(`Failed to parse $size. Expected a non-negative number in: $size: ${query}`);
+	}
+}
+
 /**
  * $size
  * Matches if the array field is a specified size.
@@ -59,5 +82,7 @@ export function $elemMatch(query: Query, compile: CompileStep): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/size/
  */
 export function $size(query: number): Evaluator {
+	assertValidSize(query);
+
 	return (input: unknown) => isArray(input) && (input as Array<unknown>).length === query;
 }
