@@ -25,6 +25,10 @@ describe("Domain/Filter/Operator/Array", () => {
 	});
 
 	describe("$all", () => {
+		// $all can compile { $elemMatch: ... } clauses, same reasoning as
+		// $elemMatch itself above.
+		const $all = (query: never) => ArrayOp.$all(query, filter);
+
 		each`
 			query                       | input                                   | matches
 			----------------------------|-----------------------------------------|---------
@@ -42,7 +46,28 @@ describe("Domain/Filter/Operator/Array", () => {
 			${[{ foo: 1 }, { baz: 3 }]} | ${[{ foo: 1 }, { baz: 3 }]}             | yes
 			${[{ foo: 1 }, { baz: 3 }]} | ${[{ foo: 1 }, { bar: 2 }]}             | no
 			${[{ foo: 1 }, { baz: 3 }]} | ${[{ foo: 1 }, { bar: 2 }, { baz: 3 }]} | yes
-		`(compare(ArrayOp.$all));
+			${[]}                       | ${[1, 2]}                               | no
+			${[{ $elemMatch: { $gte: 10, $lt: 20 } }]}                    | ${[5, 15, 25]} | yes
+			${[{ $elemMatch: { $gte: 10, $lt: 20 } }]}                    | ${[5, 25]}     | no
+			${[{ $elemMatch: { $gte: 10 } }, { $elemMatch: { $lt: 5 } }]} | ${[15, 2]}     | yes
+			${[{ $elemMatch: { $gte: 10 } }, { $elemMatch: { $lt: 5 } }]} | ${[15]}        | no
+		`(compare($all));
+
+		it("rejects mixing plain values with $elemMatch clauses", () => {
+			assert.throws(
+				() => ArrayOp.$all([9, { $elemMatch: { attempts: 11 } }], filter),
+				/no \$ expressions in \$all/,
+				"$all rejects mixing styles",
+			);
+		});
+
+		it("rejects a non-object $elemMatch value", () => {
+			assert.throws(
+				() => ArrayOp.$all([{ $elemMatch: 42 }], filter),
+				/\$elemMatch needs an Object/,
+				"$all rejects a malformed $elemMatch clause",
+			);
+		});
 	});
 
 	describe("$elemMatch", () => {
