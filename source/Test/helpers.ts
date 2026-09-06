@@ -2,6 +2,12 @@ import * as assert from "node:assert/strict";
 import { it } from "node:test";
 
 export function pretty(value: unknown): string {
+	// JSON.stringify throws on bigint and stringifies symbol/function to
+	// undefined — neither is meaningful in a test title, so give them their
+	// own labels instead.
+	if (typeof value === 'symbol') return 'Symbol';
+	if (typeof value === 'bigint') return `BigInt(${value})`;
+	if (typeof value === 'function') return 'Function';
 	if (value instanceof RegExp) return value.toString();
 	if (value instanceof Date) return `Date(${value.toISOString()})`;
 	if (Array.isArray(value)) return `[${value.map(pretty).join(', ')}]`;

@@ -84,33 +84,24 @@ describe("Domain/Filter/Operator/Element", () => {
 			["long", BigInt(12345678900987654321)],
 		];
 
-		// pretty() throws on bigint and stringifies symbol/function to
-		// "undefined" — none of which are meaningful in a test title anyway.
-		function label(value: unknown): string {
-			if (typeof value === "symbol") return "Symbol";
-			if (typeof value === "bigint") return `BigInt(${value})`;
-			if (typeof value === "function") return "Function";
-			return pretty(value);
-		}
-
 		for (const [alias, input] of cases) {
 			const number = types[alias];
 			const never = keys.filter((key) => key !== alias);
 			const always = never.concat(alias);
 
-			it(`${label(input)} is ${alias}`, () => {
+			it(`${pretty(input)} is ${alias}`, () => {
 				assert.equal(Element.$type(alias)(input), true);
 			});
-			it(`${label(input)} is ${number}`, () => {
+			it(`${pretty(input)} is ${number}`, () => {
 				assert.equal(Element.$type(number)(input), true);
 			});
 			// $type examines array elements too
 			if (alias !== "array") {
-				it(`${label(input)} is not in ${pretty(never)}`, () => {
+				it(`${pretty(input)} is not in ${pretty(never)}`, () => {
 					assert.equal(Element.$type(never)(input), false);
 				});
 			}
-			it(`${label(input)} is in ${pretty(always)}`, () => {
+			it(`${pretty(input)} is in ${pretty(always)}`, () => {
 				assert.equal(Element.$type(always)(input), true);
 			});
 		}
