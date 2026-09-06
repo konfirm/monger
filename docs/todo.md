@@ -90,7 +90,7 @@ including `{}`) now require the candidate array element be a container
 too, e.g. `{"0": "value"}` against `[["value"]]`) rather than vacuously
 matching any element type. Took `verified` from 0.626 to 0.962.
 
-## `$elemMatch` operator-form double-unwraps array-shaped elements
+## `$elemMatch` operator-form double-unwraps array-shaped elements — resolved
 
 `{value: {$elemMatch: {$gt: 1}}}` incorrectly matches `value:
 [[1,2],[3,4]]` (confirmed wrong via docker: real MongoDB excludes it, same
@@ -105,20 +105,16 @@ Handing a candidate element straight to the compiled `$gt` and letting
 `elementwise()` unwrap it a second time (if that element happens to itself
 be an array) is the bug — real MongoDB never does a second unwrap.
 
-Not a local `Array.ts` fix: needs the comparison operators to distinguish
-"field-level compile" (elementwise-transparent) from "value-level compile"
-(strict, no unwrapping). The mechanism for this now exists —
-`Compiler.ts`'s `CompileContext` (`{ query, path }`, threaded through every
-operator call as the 3rd argument) already carries `path`, the ancestor
-chain of operator/field names (closest last, `[]` at the root) — added to
-resolve the `$ref`/`$id`/`$db` gap below, which turned out to be the same
-underlying blind spot. `$gt`/`$gte`/`$lt`/`$lte`/`$eq`/`$ne`/`$in`/`$nin`
-(all built on `elementwise()`) would each need to check
-`context.path[context.path.length - 1] === '$elemMatch'` and skip the
-unwrap when true, not just the two ($gt/$eq) caught by catalog fixtures so
-far (`nRrQZO1b91AC`, `lijSZRhzhG4S`, both `typeMatrix`-tagged). Parked
-because it touches every comparison operator at once — worth doing as one
-deliberate pass rather than fixing the two known failures piecemeal.
+Fixed: every comparison operator built on `elementwise()`
+(`$gt`/`$gte`/`$lt`/`$lte`/`$eq`/`$ne`/`$in`/`$nin`) now takes `context:
+CompileContext` as its 3rd argument (defaulted to `{query: {}, path: []}`
+so the existing direct-call unit tests, which only ever pass the first
+argument, keep working) and routes through a shared `scoped()` helper:
+elementwise-transparent normally, but the bare `predicate` directly
+(no unwrap) when `context.path[context.path.length - 1] === '$elemMatch'`.
+One shared helper, not a per-operator flag. Took `$elemMatch`'s verified
+score to 0.995 (only the already-tracked dot-notation gap left) and `$gt`
+to a clean 1.
 
 ## `$ref`/`$id`/`$db` (legacy DBRef keys) wrongly rejected as unknown operators — resolved
 

@@ -7,7 +7,7 @@ import {
 	isComparable,
 	type,
 } from "../../Compare";
-import type { Evaluator } from "../Compiler";
+import type { CompileContext, Evaluator } from "../Compiler";
 
 type Primitive = string | number | boolean;
 type Comparable = Primitive | Array<Comparable> | { [key: string]: Comparable };
@@ -23,15 +23,28 @@ export type Operation = {
 	$nin: Parameters<typeof $nin>[0];
 };
 
+// $elemMatch's operator-form is already one level of array unwrapping.
+// elementwise() would unwrap a *second* time if the element itself is an array,
+// mongo itself does not do this (se neither do we)
+function isElemMatchOperand({ path }: CompileContext): boolean {
+	return path[path.length - 1] === '$elemMatch';
+}
+
+function scoped(context: CompileContext, predicate: (value: unknown) => boolean): Evaluator {
+	return isElemMatchOperand(context) ? predicate : elementwise(predicate);
+}
+
 function predicate(
 	query: Primitive,
 	predicate: (value: number) => boolean,
+	context: CompileContext,
 ): Evaluator {
 	if (isRegex(query)) {
 		throw new Error("Can't have RegEx as arg to predicate over field");
 	}
 
-	return elementwise(
+	return scoped(
+		context,
 		(value) =>
 			isComparable(value, query) && predicate(bsonCompare(value, query)),
 	);
@@ -56,8 +69,8 @@ function noNestedOperator(query: Array<unknown>): void {
  * @syntax  { <field>: { $eq: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/eq/
  */
-export function $eq(query: RegExp | Comparable): Evaluator {
-	return elementwise((value) => deep(query, value, CompareMode.EXPLICIT));
+export function $eq(query: RegExp | Comparable, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
+	return scoped(context, (value) => deep(query, value, CompareMode.EXPLICIT));
 }
 
 /**
@@ -66,8 +79,8 @@ export function $eq(query: RegExp | Comparable): Evaluator {
  * @syntax  { <field>: { $gt: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/gt/
  */
-export function $gt(query: Primitive): Evaluator {
-	return predicate(query, (value) => value > 0);
+export function $gt(query: Primitive, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
+	return predicate(query, (value) => value > 0, context);
 }
 
 /**
@@ -76,8 +89,8 @@ export function $gt(query: Primitive): Evaluator {
  * @syntax  { <field>: { $gte: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/gte/
  */
-export function $gte(query: Primitive): Evaluator {
-	return predicate(query, (value) => value >= 0);
+export function $gte(query: Primitive, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
+	return predicate(query, (value) => value >= 0, context);
 }
 
 /**
@@ -86,13 +99,13 @@ export function $gte(query: Primitive): Evaluator {
  * @syntax  { <field>: { $in: [<value1>, <value2>, ...] } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/in/
  */
-export function $in(query: Array<unknown>): Evaluator {
+export function $in(query: Array<unknown>, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
 	if (!isArray(query)) {
 		throw new Error('$in requires an array');
 	}
 	noNestedOperator(query);
 
-	return elementwise((value) => query.some((q) => deep(q, value, CompareMode.MONGODB)));
+	return scoped(context, (value) => query.some((q) => deep(q, value, CompareMode.MONGODB)));
 }
 
 /**
@@ -101,8 +114,8 @@ export function $in(query: Array<unknown>): Evaluator {
  * @syntax  { <field>: { $lt: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/lt/
  */
-export function $lt(query: Primitive): Evaluator {
-	return predicate(query, (value) => value < 0);
+export function $lt(query: Primitive, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
+	return predicate(query, (value) => value < 0, context);
 }
 
 /**
@@ -111,8 +124,8 @@ export function $lt(query: Primitive): Evaluator {
  * @syntax  { <field>: { $lte: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/lte/
  */
-export function $lte(query: Primitive): Evaluator {
-	return predicate(query, (value) => value <= 0);
+export function $lte(query: Primitive, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
+	return predicate(query, (value) => value <= 0, context);
 }
 
 /**
@@ -121,12 +134,12 @@ export function $lte(query: Primitive): Evaluator {
  * @syntax  { <field>: { $ne: <value> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/ne/
  */
-export function $ne(query: Primitive): Evaluator {
+export function $ne(query: Primitive, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
 	if (isRegex(query)) {
 		throw new Error("Can't have regex as arg to $ne.");
 	}
 
-	const matches = elementwise((value) => deep(query, value, CompareMode.MONGODB));
+	const matches = scoped(context, (value) => deep(query, value, CompareMode.MONGODB));
 	return (input: unknown) => !matches(input);
 }
 
@@ -136,12 +149,12 @@ export function $ne(query: Primitive): Evaluator {
  * @syntax  { <field>: { $nin: [<value1>, <value2>, ...] } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/nin/
  */
-export function $nin(query: Array<unknown>): Evaluator {
+export function $nin(query: Array<unknown>, _compile?: unknown, context: CompileContext = { query: {}, path: [] }): Evaluator {
 	if (!isArray(query)) {
 		throw new Error('$nin requires an array');
 	}
 	noNestedOperator(query);
 
-	const matches = elementwise((value) => query.some((q) => deep(q, value, CompareMode.MONGODB)));
+	const matches = scoped(context, (value) => query.some((q) => deep(q, value, CompareMode.MONGODB)));
 	return (input: unknown) => !matches(input);
 }
