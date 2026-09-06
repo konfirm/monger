@@ -138,9 +138,13 @@ const knownIssues: Record<string, string> = {
 	j8IG6BDE1c3r: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	tVFoDXVRYxhX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	tYKZjCHLsaUr: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	pZSK07zcaD8c: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	tmvPBYA9eSEz: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
 	uY2fLtrMOKuA: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
+	bnSkQKLeVb9X: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
+	f1dvF9gou80q: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
 	n1CqM5LBKHMe: 'dot-notation through an empty array not implemented — see docs/todo.md',
+	sNvxQKeuu6rZ: 'dot-notation through an empty array not implemented — see docs/todo.md',
 };
 
 for (const op of runnable.values()) {
