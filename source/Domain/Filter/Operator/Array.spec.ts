@@ -1,28 +1,16 @@
 import * as assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { each } from "template-literal-each";
-import { compare } from "../../../Test/helpers";
+import { compare, exported } from "../../../Test/helpers";
 import { filter } from "../../Filter";
 import * as ArrayOp from "./Array";
 
 describe("Domain/Filter/Operator/Array", () => {
-	it("exports", () => {
-		const expected = ["$all", "$elemMatch", "$size"];
-		const actual = Object.keys(ArrayOp);
-
-		assert.equal(
-			actual.length,
-			expected.length,
-			`contains ${expected.length} keys`,
-		);
-		expected.forEach((key) => {
-			assert.equal(
-				typeof ArrayOp[<keyof typeof ArrayOp>key],
-				"function",
-				`contains function ${key}`,
-			);
-		});
-	});
+	it('exports', exported(ArrayOp, [
+		"$all",
+		"$elemMatch",
+		"$size",
+	]));
 
 	describe("$all", () => {
 		// $all can compile { $elemMatch: ... } clauses, same reasoning as

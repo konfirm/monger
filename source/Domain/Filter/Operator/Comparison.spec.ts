@@ -1,12 +1,11 @@
 import * as assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { each } from "template-literal-each";
-import { compare } from "../../../Test/helpers";
+import { compare, exported } from "../../../Test/helpers";
 import * as Comparison from "./Comparison";
 
 describe("Domain/Filter/Operator/Comparison", () => {
-	it("exports", () => {
-		const expected = [
+	it("exports", exported(Comparison, [
 			"$eq",
 			"$gt",
 			"$gte",
@@ -15,22 +14,7 @@ describe("Domain/Filter/Operator/Comparison", () => {
 			"$lte",
 			"$ne",
 			"$nin",
-		];
-		const actual = Object.keys(Comparison);
-
-		assert.equal(
-			actual.length,
-			expected.length,
-			`contains ${expected.length} keys`,
-		);
-		expected.forEach((key) => {
-			assert.equal(
-				typeof Comparison[<keyof typeof Comparison>key],
-				"function",
-				`contains function ${key}`,
-			);
-		});
-	});
+	]));
 
 	describe("$eq", () => {
 		each`

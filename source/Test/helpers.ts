@@ -38,3 +38,22 @@ export function compare(
 		});
 	};
 }
+
+export function exported(scope: Record<string, unknown>, expected: Array<keyof typeof scope>): () => void {
+	return () => {
+		const actual = Object.keys(scope);
+
+		assert.equal(
+			actual.length,
+			expected.length,
+			`contains ${expected.length} keys`,
+		);
+		expected.forEach((key) => {
+			assert.equal(
+				typeof scope[key],
+				"function",
+				`contains function ${key}`,
+			);
+		});
+	}
+}

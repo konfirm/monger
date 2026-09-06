@@ -1,32 +1,16 @@
 import * as assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { each } from "template-literal-each";
-import { compare } from "../../../Test/helpers";
+import { compare, exported } from "../../../Test/helpers";
 import * as Bitwise from "./Bitwise";
 
 describe("Domain/Filter/Operator/Bitwise", () => {
-	it("exports", () => {
-		const expected = [
+	it("exports", exported(Bitwise, [
 			"$bitsAllClear",
 			"$bitsAllSet",
 			"$bitsAnyClear",
 			"$bitsAnySet",
-		];
-		const actual = Object.keys(Bitwise);
-
-		assert.equal(
-			actual.length,
-			expected.length,
-			`contains ${expected.length} keys`,
-		);
-		expected.forEach((key) => {
-			assert.equal(
-				typeof Bitwise[<keyof typeof Bitwise>key],
-				"function",
-				`contains function ${key}`,
-			);
-		});
-	});
+	]));
 
 	describe("$bitsAllClear", () => {
 		each`
