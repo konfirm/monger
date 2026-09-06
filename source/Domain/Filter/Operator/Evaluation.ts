@@ -1,5 +1,5 @@
 import { any, isString } from '@konfirm/guard';
-import { isRegex } from '../../BSON';
+import { isArray, isNumber, isRegex } from '../../BSON';
 import type { CompileContext, CompileStep, Evaluator } from '../Compiler';
 import { expression } from './Evaluation/Expression';
 import { schema as jsonSchema } from './Evaluation/Schema';
@@ -47,9 +47,33 @@ export function $jsonSchema(...args: Parameters<typeof jsonSchema>): Evaluator {
  * @see     https://docs.mongodb.com/manual/reference/operator/query/mod/
  */
 export function $mod(query: [number, number]): Evaluator {
-	const [divisor, remainder] = query;
+	if (!isArray(query)) {
+		throw new Error('malformed mod, needs to be an array');
+	}
+	if (query.length < 2) {
+		throw new Error('malformed mod, not enough elements');
+	}
+	if (query.length > 2) {
+		throw new Error('malformed mod, too many elements');
+	}
 
-	return (input: unknown): boolean => Number(input) % divisor === remainder;
+	const [divisorQuery, remainderQuery] = query;
+
+	if (!isNumber(divisorQuery)) {
+		throw new Error('malformed mod, divisor not a number');
+	}
+	if (!isNumber(remainderQuery)) {
+		throw new Error('malformed mod, remainder not a number');
+	}
+
+	const divisor = Math.trunc(divisorQuery);
+	const remainder = Math.trunc(remainderQuery);
+
+	if (divisor === 0) {
+		throw new Error('divisor cannot be 0');
+	}
+
+	return (input: unknown): boolean => isNumber(input) && Math.trunc(input as number) % divisor === remainder;
 }
 
 const isRegexQuery = any(isRegex, isString);
