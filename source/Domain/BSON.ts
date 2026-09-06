@@ -183,3 +183,5 @@ export const isDate = is(9);
 export const isNULL = is(10);
 export const isRegex = is(11);
 export const isInteger = is(16);
+export const isNumber = is(1, 16, 18, 19);
+export const isContainer = is(3, 4);

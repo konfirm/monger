@@ -60,19 +60,28 @@ describe("Domain/Filter/Operator/Array", () => {
 
 	describe("$elemMatch", () => {
 		// $elemMatch needs to compile its own sub-query (e.g. {$gte, $lt}
-		// together) — reusing the real filter() as the compile step is both
-		// the simplest source of one and how it's actually used in practice.
+		// together)
 		const $elemMatch = (query: never) => ArrayOp.$elemMatch(query, filter);
 
 		each`
-			query                    | input          | matches
-			-------------------------|----------------|---------
-			${{ $gte: 10, $lt: 20 }} | ${[5, 15, 25]} | yes
-			${{ $gte: 10, $lt: 20 }} | ${[15, 25]}    | yes
-			${{ $gte: 10, $lt: 20 }} | ${[5, 25]}     | no
-			${{ $gte: 10, $lt: 20 }} | ${[5, 15]}     | yes
-			${{ $gte: 10, $lt: 20 }} | ${[15]}        | yes
-			${{ $gte: 10, $lt: 20 }} | ${[5]}         | no
+			query                             | input                 | matches
+			----------------------------------|-----------------------|---------
+			${{ $gte: 10, $lt: 20 }}          | ${[5, 15, 25]}        | yes
+			${{ $gte: 10, $lt: 20 }}          | ${[15, 25]}           | yes
+			${{ $gte: 10, $lt: 20 }}          | ${[5, 25]}            | no
+			${{ $gte: 10, $lt: 20 }}          | ${[5, 15]}            | yes
+			${{ $gte: 10, $lt: 20 }}          | ${[15]}               | yes
+			${{ $gte: 10, $lt: 20 }}          | ${[5]}                | no
+			${{}}                             | ${[{ a: 1 }]}         | yes
+			${{}}                             | ${[[1, 2], [3, 4]]}   | yes
+			${{}}                             | ${[9, 10]}            | no
+			${{}}                             | ${[null]}             | no
+			${{ height: null }}               | ${[9, 10]}            | no
+			${{ height: null }}               | ${[{ height: null }]} | yes
+			${{ height: { $exists: false } }} | ${[9, 10]}            | no
+			${{ height: { $exists: false } }} | ${[{ other: 1 }]}     | yes
+			${{ "0": "value" }}               | ${[["other"]]}        | no
+			${{ "0": "value" }}               | ${[["value"]]}        | yes
 		`(compare($elemMatch));
 
 		it("rejects a non-object query", () => {

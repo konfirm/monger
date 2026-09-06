@@ -1,10 +1,10 @@
 import { any, isNULL, isUndefined } from "@konfirm/guard";
-import { Decimal128 } from "mongodb";
 import {
 	type as getType,
 	is,
 	isArray,
 	isDate,
+	isNumber,
 	isObject,
 	isRegex,
 } from "./BSON";
@@ -74,9 +74,8 @@ export function isComparable(first: unknown, ...rest: A): boolean {
 	if (type(first, ...rest)) {
 		return true;
 	}
-	const isNumeric = is(1, 16, 18);
 
-	if (isNumeric(first) && rest.every(isNumeric)) {
+	if (isNumber(first) && rest.every(isNumber)) {
 		return true;
 	}
 
@@ -182,7 +181,7 @@ const bsonCompareRules: Array<CompareRule> = [
 	{
 		// Numbers (all numeric types)
 		// NaN equals NaN, but NaN never matches <, <=, >=, >
-		type: is(1, 16, 18, 19),
+		type: isNumber,
 		cmp: (a, b) => {
 			const [x, y] = [a as number, b as number];
 

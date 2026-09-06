@@ -1,4 +1,5 @@
-import { is, isArray, isObject } from '../../BSON';
+import { isStructure } from '@konfirm/guard';
+import { isArray, isContainer, isNumber, isObject } from '../../BSON';
 import { CompareMode, deep, elementwise } from '../../Compare';
 import type { CompileStep, Evaluator, Query } from '../Compiler';
 
@@ -10,11 +11,7 @@ export type Operation = {
 
 type ElemMatchClause = { $elemMatch: unknown };
 
-function isElemMatchClause(value: unknown): value is ElemMatchClause {
-	return isObject(value) && Object.keys(value as object).length === 1 && '$elemMatch' in (value as object);
-}
-
-const isNumber = is(1, 16, 18);
+const isElemMatchClause = isStructure<ElemMatchClause>({ $elemMatch: () => true });
 
 function assertValidSize(query: unknown): asserts query is number {
 	if (!isNumber(query)) {
@@ -105,13 +102,18 @@ export function $all(query: Array<unknown>, compile: CompileStep): Evaluator {
 export function $elemMatch(query: unknown, compile: CompileStep): Evaluator {
 	assertElemMatch(query);
 
-	const evaluate = Object.keys(query)
-		.map((key) => compile({ [key]: query[key as keyof Query] }))
+	const keys = Object.keys(query);
+	// keys without $-prefix mean they navigate into a field, which only makes
+	// sense against a container (object or array). MongoDB requires the element
+	// itself be a container then, even for an empty query (basically the
+	// "no operator key present" condition).
+	const requiresContainer = !keys.some((key) => key.startsWith('$'));
+	const evaluate = keys.map((key) => compile({ [key]: query[key as keyof Query] }))
 
 	return (input: unknown): boolean =>
 		isArray(input)
 		&& (input as Array<unknown>).some((value) =>
-			evaluate.every((evaluate) => evaluate(value))
+			(!requiresContainer || isContainer(value)) && evaluate.every((evaluate) => evaluate(value))
 		);
 }
 
