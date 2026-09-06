@@ -91,6 +91,14 @@ describe("Domain/Filter/Operator/Array", () => {
 			);
 		});
 
+		it("rejects $where nested inside $and", () => {
+			assert.throws(
+				() => ArrayOp.$elemMatch({ $and: [{ rank: 9 }, { $where: "this" }] } as never, filter),
+				/\$where can only be applied to the top-level document/,
+				"$elemMatch rejects $where nested inside $and",
+			);
+		});
+
 		it("rejects $text", () => {
 			assert.throws(
 				() => ArrayOp.$elemMatch({ $text: { $search: "foo" } } as never, filter),

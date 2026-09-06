@@ -34,22 +34,31 @@ function assertValidSize(query: unknown): asserts query is number {
 	}
 }
 
+const restrictedInElemMatch = ['$where', '$text', '$expr'];
+
+function assertNoRestrictedOperators(value: unknown): void {
+	if (isArray(value)) {
+		(value as Array<unknown>).forEach(assertNoRestrictedOperators);
+		return;
+	}
+	if (!isObject(value)) {
+		return;
+	}
+
+	Object.entries(value as object).forEach(([key, sub]) => {
+		if (restrictedInElemMatch.includes(key)) {
+			throw new Error(`${key} can only be applied to the top-level document`);
+		}
+		assertNoRestrictedOperators(sub);
+	});
+}
+
 function assertElemMatch(query: unknown): asserts query is Query {
 	if (!isObject(query)) {
 		throw new Error('$elemMatch needs an Object');
 	}
 
-	Object.keys(query as object).forEach((key) => {
-		if (key === '$where') {
-			throw new Error('$where can only be applied to the top-level document');
-		}
-		if (key === '$text') {
-			throw new Error('$text can only be applied to the top-level document');
-		}
-		if (key === '$expr') {
-			throw new Error('$expr can only be applied to the top-level document');
-		}
-	});
+	assertNoRestrictedOperators(query);
 }
 
 /**

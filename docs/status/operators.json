@@ -145,6 +145,6 @@
 		"files": [
 			"source/Domain/Filter/Operator/Array.spec.ts"
 		],
-		"verified": 0.857
+		"verified": 0.896
 	}
 }
