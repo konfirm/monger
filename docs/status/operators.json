@@ -124,7 +124,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Element.spec.ts"
 		],
-		"verified": 0.982
+		"verified": 1
 	},
 	"$all": {
 		"working": "doing",

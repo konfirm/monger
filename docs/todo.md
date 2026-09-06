@@ -203,3 +203,141 @@ operator with the same "claims a sibling key" need via one table entry
 rather than another bespoke filter. Deliberately not implemented yet —
 touches `Geospatial.ts`, which is being migrated separately; revisit once
 that work resumes.
+
+## Nested-object field values were being partially matched instead of literal-equality — resolved
+
+Was: `Compiler.ts`'s `condition()` recursed into *any* object-valued field
+condition as a set of independent sub-conditions (`{address: {city: "X"}}`
+compiled as "does address.city equal X", ignoring any other keys on
+address). Confirmed via docker this is wrong two ways: `{priority: {}}`
+matched *every* document (including ones with no `priority` field at all)
+since recursing into `{}` produces zero conditions, vacuously true; and
+`{address: {city: "X"}}` matched a superset object
+(`{city: "X", zip: "1"}`) that should have failed, since real MongoDB
+compares the whole value with deep equality when the object has no
+`$`-prefixed key, not a per-key partial match. `$eq` itself was already
+correct on both counts — the bug was `condition()` bypassing it whenever
+the value happened to be an object, rather than only bypassing it when
+the object is genuinely an operator expression (has at least one
+`$`-prefixed key). Fixed by gating on `hasOperatorKey` instead of
+`isObject`. Same underlying distinction as `$elemMatch`'s own field-form
+vs. operator-form split from earlier — turned out to be a compiler-wide
+rule, not an `$elemMatch`-specific one.
+
+## Mixing an operator key with a non-operator key in one object — order-dependent, not modeled
+
+While fixing the above, tried adding "an object with any `$`-prefixed key
+must have *only* `$`-prefixed keys, when nested" (mirroring
+`{$gt: 5, extra: 1}` throwing "unrecognized operator: extra", confirmed
+via docker). This caused a real regression against `coverage_elemmatch`
+fixtures like `{scores: {$elemMatch: {rank: {$elemMatch: {level: 16}},
+$or: [...]}}}}`, which mix a field key (`rank`) with `$or` and are
+expected to work, not throw.
+
+Further docker digging found the actual rule is **order-dependent**: the
+*first* key decides how the whole object is parsed.
+`{$exists: true, height: 9}` throws ("unknown operator: height"), but
+`{height: 9, $exists: true}` does not — same two keys, different order.
+Odder still, `$elemMatch`'s own parsing isn't consistent with an ordinary
+nested field on this: `{scores: {$elemMatch: {height: 9, $exists: true}}}`
+throws `"unknown top level operator: $exists"` (note: *top level*, despite
+being nested), while `{level: {height: 9, $exists: true}}` (plain nested
+field, not `$elemMatch`) does not throw at all. `$or`/`$and`/`$nor`
+(logical combinators) seem to freely mix with field keys regardless of
+position or order in every case tried; `$exists`/`$gt` (value-testing
+operators) are the ones with the order-dependent, `$elemMatch`-inconsistent
+behavior.
+
+Deliberately not modeled — reverted the attempted fix rather than leave a
+wrong generalization in place. Needs a proper dedicated investigation
+(probably: is it really "first key" or something about *which* operators
+count as combinators vs. value-testers; and why does `$elemMatch` parse
+differently from a plain nested field at all) before implementing
+anything here.
+
+## Implicit-equality queries were invisible to `Catalog.spec.ts` — resolved
+
+Was: mongo-catalog's own operator-classification (`findFieldOperator()`)
+only tags a field's operator when its value contains a `$`-prefixed key —
+a value with none (implicit equality, whether `{field: "x"}` or
+`{field: {...noOperatorKey}}`) gets `operators: []`. `Catalog.spec.ts`
+only ever ran operations with at least one tagged *active* operator, so
+every implicit-equality query in the entire catalog — not just the new
+`nestedEquality` one — was silently never exercised. Confirmed intended
+on mongo-catalog's side (implicit equality genuinely has no operator to
+tag); the fix belongs on Monger's side instead. Fixed: `Catalog.spec.ts`
+now treats `operators: []` as `[{operator: '$eq', score: 1}]` before the
+existing active/multi-operator filtering runs.
+
+This immediately surfaced ~34 previously-invisible dot-notation failures
+across `array`/`coverage_all`/`coverage_array`/`coverage_count`/
+`coverage_exists`/`coverage_find`/`coverage_regex` (all tagged into
+`knownIssues` under the general "array-of-subdocuments" gap rather than
+individually diagnosed to their exact sub-variant — not worth the time
+for a label that's purely for human legibility) — plus two genuinely new
+findings below.
+
+## Empty-object query against a nonexistent field matches everything — mongo-catalog collection bug, not Monger
+
+`{"invalid": {}}` (comparison.json, `eED8uGvPD09h`) and `{"price": {}}`
+(misc.json, `iKeSdyBbDy4j`) are both recorded as matching *every*
+document in their collection, even though neither collection has that
+field on any record at all. Confirmed via direct, repeated docker testing
+this session (see the `nestedEquality` catalog work) that real MongoDB
+does the opposite: `{field: {}}` only matches a document where `field` is
+*literally* `{}`, never a no-op. Two independent catalogs showing the
+identical wrong pattern rules out a one-off mistake — this is very likely
+a bug in mongo-catalog's own collection harness (possibly something
+treating an empty-object field value as equivalent to an empty top-level
+filter `{}` when actually querying live MongoDB), not something to "fix"
+in Monger. Needs looking at from the mongo-catalog side.
+
+## Null bytes in field names now rejected — resolved
+
+`Compiler.ts`'s `compile()` now throws `"key ... must not contain null
+bytes"` for any key (field name or operator) containing `\0`, at any
+nesting level — confirmed via mongo-catalog ground truth
+(`misc.json`'s `dMOJWM6DK84i`) that real MongoDB rejects this at every
+version. Only field-name/key validation is covered; whether a *value*
+containing a null byte is also restricted (and specifically, whether
+regex patterns have their own null-byte rejection — flagged as worth
+checking, real error messages seen for that case too) is a separate,
+not-yet-investigated question — likely a `typeMatrix`-style catalog
+addition once characterized.
+
+## `$type: "undefined"` — resolved for today, but revisit for version-aware emulation
+
+Was: `{value: {$type: "undefined"}}` incorrectly matched a document
+missing the `value` field entirely (`typeMatrix`'s `vONmVsXxWNZp`) — BSON
+type 6 ("undefined", deprecated) is structurally indistinguishable from a
+missing field once `Field.ts`'s `accessor()` resolves both to plain JS
+`undefined` via property access. Fixed in `Element.ts`'s `$type` by
+excluding `typeof value === 'undefined'` unconditionally, rather than
+touching the shared `isUndefined`/`is(6)` used pervasively elsewhere
+(`$exists`, `Field.ts`'s own missing-value tracking, Update operators,
+`Schema.ts`, `Expression/Conditional.ts`) for genuine missing-value
+detection — that usage is structurally load-bearing and must stay accurate.
+
+Pushed back on and confirmed empirically before accepting the "always
+false" fix: **this is a design choice in `Field.ts`, not a hard
+limitation** — `in`/`hasOwnProperty` could distinguish "key present with
+value `undefined`" from "key absent" perfectly well; `accessor()` just
+currently discards that distinction via plain destructuring. It doesn't
+matter *today* because no modern path can produce a genuinely-present
+BSON-undefined value to tell apart from "missing" in the first place:
+inserting `{value: undefined}` via the modern driver silently stores
+`value: null`, not type 6, and the `bson` library exposes no constructible
+"Undefined" sentinel at all (confirmed via a live insert test and
+inspecting `BSON`'s own exports). So the "always false" fix is correct for
+every case reachable through any current tooling, not just a shortcut.
+
+Matters for later: if Monger ever supports emulating a *specific* older
+MongoDB version, this stops being moot — older drivers may have actually
+permitted inserting genuine BSON-undefined values, and correctly matching
+legacy data collected under an old version could require telling "missing"
+apart from "present but undefined" again. That's the same underlying
+presence-vs-value distinction already needed for the dot-notation gap
+above (empty-array / non-document-scalar array traversal losing MongoDB
+distinctions by collapsing everything to `undefined`) — if `Field.ts`'s
+accessor ever gets a presence-aware rework for that, `$type: "undefined"`
+should be revisited to use it instead of the blunt exclusion.

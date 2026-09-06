@@ -59,7 +59,6 @@ describe("Domain/Filter/Operator/Element", () => {
 			string: 2,
 			object: 3,
 			array: 4,
-			undefined: 6,
 			bool: 8,
 			date: 9,
 			null: 10,
@@ -75,7 +74,6 @@ describe("Domain/Filter/Operator/Element", () => {
 			["string", "string"],
 			["object", { one: 1 }],
 			["array", [1, 2]],
-			["undefined", undefined],
 			["bool", true],
 			["date", new Date()],
 			["null", null],
@@ -116,5 +114,12 @@ describe("Domain/Filter/Operator/Element", () => {
 				assert.equal(Element.$type(always)(input), true);
 			});
 		}
+
+		// "undefined" (BSON type 6, deprecated) is excluded from the
+		// matrix above: $type: "undefined" will never match
+		it("never matches, not even a literal undefined value or a missing field", () => {
+			assert.equal(Element.$type("undefined")(undefined), false);
+			assert.equal(Element.$type(6)(undefined), false);
+		});
 	});
 });

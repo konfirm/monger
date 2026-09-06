@@ -88,5 +88,7 @@ export function $type(
 		? is(...(expanded as Array<TypeIdentifier>))
 		: is(expanded as TypeIdentifier);
 
-	return elementwise(type);
+	// the BSON `undefined` (deprecated type 6) is not implemented, so the
+	// behavior is on par with what mongo (since the deprecation) does
+	return elementwise((value) => typeof value !== 'undefined' && type(value));
 }
