@@ -1,5 +1,5 @@
 {
-	"generated": "2026-09-06T17:19:18.488Z",
+	"generated": "2026-09-06T17:47:53.312Z",
 	"latestCollectedVersion": "8.3.8",
 	"catalogs": [
 		{
@@ -225,6 +225,12 @@
 			"taggedOperations": 3
 		},
 		{
+			"catalog": "nullBytes",
+			"file": "nullBytes.json",
+			"operations": 9,
+			"taggedOperations": 2
+		},
+		{
 			"catalog": "textRegex",
 			"file": "textRegex.json",
 			"operations": 44,
@@ -238,10 +244,10 @@
 		}
 	],
 	"totals": {
-		"catalogs": 39,
+		"catalogs": 40,
 		"skippedCatalogs": 0,
-		"operations": 3450,
-		"taggedOperations": 3142
+		"operations": 3459,
+		"taggedOperations": 3144
 	},
 	"skipped": []
 }

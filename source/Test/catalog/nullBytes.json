@@ -1,0 +1,253 @@
+{
+	"catalog": "nullBytes",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"age": 10
+			},
+			{
+				"_id": 1,
+				"foo": {
+					"bar": "value"
+				}
+			},
+			{
+				"_id": 2,
+				"arr": [
+					{
+						"name": "value"
+					},
+					{
+						"name": "other"
+					}
+				]
+			},
+			{
+				"_id": 3,
+				"text": "value"
+			},
+			{
+				"_id": 4,
+				"text": "val\u0000ue"
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "aSDX9jR2TFOH",
+			"query": {
+				"a\u0000ge": 10
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "key a\u0000ge must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key a\u0000ge must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nRHHqpJ6sWdf",
+			"query": {
+				"fo\u0000o.bar": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "key fo\u0000o.bar must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key fo\u0000o.bar must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oXJPr5flxJIl",
+			"query": {
+				"foo.ba\u0000r": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "key foo.ba\u0000r must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key foo.ba\u0000r must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v1WOZtvOYgv8",
+			"query": {
+				"ar\u0000r.name": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "key ar\u0000r.name must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key ar\u0000r.name must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vAM1pvI0umyg",
+			"query": {
+				"arr.na\u0000me": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "key arr.na\u0000me must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key arr.na\u0000me must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nxpIYXEXkXBO",
+			"query": {
+				"age": {
+					"$gt\u0000": 5
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt\u0000",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "key $gt\u0000 must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "key $gt\u0000 must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ugiOwjXTgP42",
+			"query": {
+				"text": "val\u0000ue"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						4
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vnFUKyCLojQ1",
+			"query": {
+				"text": {
+					"$regex": "val\u0000ue"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Regular expression cannot contain an embedded null byte",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.15..3.5.13"
+				},
+				{
+					"error": {
+						"message": "Regular expression cannot contain an embedded null byte",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.23..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tP2OK6UEuFOS",
+			"query": {
+				"text": "@RegExp/val\u0000ue/"
+			},
+			"operators": [],
+			"results": [
+				{
+					"error": {
+						"message": "value val\u0000ue must not contain null bytes",
+						"type": "Error"
+					},
+					"versions": "3.3.15..4.4.30"
+				},
+				{
+					"error": {
+						"message": "value val\u0000ue must not contain null bytes",
+						"type": "BSONError"
+					},
+					"versions": "5.0.33..8.3.8"
+				}
+			]
+		}
+	]
+}
