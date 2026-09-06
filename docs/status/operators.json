@@ -111,5 +111,19 @@
 			"source/Domain/Filter/Operator/Bitwise.spec.ts"
 		],
 		"verified": 1
+	},
+	"$exists": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Element.spec.ts"
+		],
+		"verified": 0.873
+	},
+	"$type": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Element.spec.ts"
+		],
+		"verified": 0.821
 	}
 }

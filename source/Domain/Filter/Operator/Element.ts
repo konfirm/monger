@@ -1,25 +1,13 @@
-import type { Evaluator } from '../Compiler';
+import { any, isArrayOfType } from '@konfirm/guard';
 import { is, isArray, isBSONAlias, isBSONID } from '../../BSON';
-import { any, isArrayOfType, isNumber, isString } from '@konfirm/guard';
+import { elementwise } from '../../Compare';
+import type { Evaluator } from '../Compiler';
 
 type TypeIdentifier = Parameters<typeof is>[0];
 
 export type Operation = {
 	$exists: Parameters<typeof $exists>[0];
 	$type: Parameters<typeof $type>[0];
-};
-
-/**
- * $exists
- * Matches documents that have the specified field.
- * @syntax  { <field>: { $exists: <boolean> } }
- * @see     https://docs.mongodb.com/manual/reference/operator/query/exists/
- */
-export function $exists(query: boolean): Evaluator {
-	const und = (input: any): boolean => input === null || typeof input === 'undefined';
-	const exists = !query;
-
-	return (input: any) => und(input) === exists;
 };
 
 function isTypeIdentifier(input: unknown): input is TypeIdentifier {
@@ -30,6 +18,22 @@ const isTypeIdentifierValueOrArray = any<TypeIdentifier | Array<TypeIdentifier>>
 	isTypeIdentifier,
 	isArrayOfType(isTypeIdentifier)
 );
+
+/**
+ * $exists
+ * Matches documents that have the specified field.
+ * @syntax  { <field>: { $exists: <boolean> } }
+ * @see     https://docs.mongodb.com/manual/reference/operator/query/exists/
+ */
+export function $exists(query: boolean): Evaluator {
+	// A field explicitly set to null still exists
+	const missing = (input: any): boolean => typeof input === 'undefined';
+	// query isn't guaranteed to be a real boolean
+	// e.g. Mongo $exists:0 or $exists:"yes"
+	const shouldExist = Boolean(query);
+
+	return (input: unknown) => missing(input) !== shouldExist;
+};
 
 /**
  * $type
@@ -44,5 +48,5 @@ export function $type(query: TypeIdentifier | Array<TypeIdentifier>): Evaluator 
 
 	const type = isArray(query) ? is(...(query as Array<TypeIdentifier>)) : is(query as TypeIdentifier);
 
-	return (input: unknown) => type(input);
+	return elementwise(type);
 };
