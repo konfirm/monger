@@ -14,7 +14,12 @@ export type Operation = {
 };
 
 const isNumber = is(1, 16, 18);
-const isWholeNumber = is(16, 18);
+// Deliberately not is(16, 18): bitwise math only cares whether a value is
+// mathematically a whole number, not which specific BSON numeric subtype it
+// gets filed under — a mask like 100000000000 is a real, whole-number
+// double (see BSON.ts), not an int or a long, but it's still perfectly
+// valid here.
+const isWholeNumber = (v: unknown): boolean => (typeof v === 'number' && Number.isInteger(v)) || typeof v === 'bigint';
 const INT32_MAX = 2147483647;
 const NATIVE_LIMIT = 0x7fffffffn;
 const UNREACHABLE_BIT = 64;

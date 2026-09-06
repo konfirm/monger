@@ -124,6 +124,6 @@
 		"files": [
 			"source/Domain/Filter/Operator/Element.spec.ts"
 		],
-		"verified": 0.821
+		"verified": 0.839
 	}
 }
