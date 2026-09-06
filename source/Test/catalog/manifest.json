@@ -1,5 +1,5 @@
 {
-	"generated": "2026-09-06T01:10:49.098Z",
+	"generated": "2026-09-06T17:19:18.488Z",
 	"latestCollectedVersion": "8.3.8",
 	"catalogs": [
 		{
@@ -219,6 +219,12 @@
 			"taggedOperations": 45
 		},
 		{
+			"catalog": "nestedEquality",
+			"file": "nestedEquality.json",
+			"operations": 10,
+			"taggedOperations": 3
+		},
+		{
 			"catalog": "textRegex",
 			"file": "textRegex.json",
 			"operations": 44,
@@ -232,10 +238,10 @@
 		}
 	],
 	"totals": {
-		"catalogs": 38,
+		"catalogs": 39,
 		"skippedCatalogs": 0,
-		"operations": 3440,
-		"taggedOperations": 3139
+		"operations": 3450,
+		"taggedOperations": 3142
 	},
 	"skipped": []
 }

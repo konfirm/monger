@@ -1,0 +1,244 @@
+{
+	"catalog": "nestedEquality",
+	"collection": {
+		"records": [
+			{
+				"_id": 0
+			},
+			{
+				"_id": 1,
+				"field": {}
+			},
+			{
+				"_id": 2,
+				"field": {
+					"foo": 1
+				}
+			},
+			{
+				"_id": 3,
+				"field": {
+					"foo": 1,
+					"bar": 2
+				}
+			},
+			{
+				"_id": 4,
+				"field": {
+					"bar": 2
+				}
+			},
+			{
+				"_id": 5,
+				"field": {
+					"foo": 2
+				}
+			},
+			{
+				"_id": 6,
+				"field": "not-an-object"
+			},
+			{
+				"_id": 7,
+				"field": null
+			},
+			{
+				"_id": 8,
+				"field": []
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "meVwjDIGw1kB",
+			"query": {
+				"field": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						1
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pMtkmlla3YkT",
+			"query": {
+				"field": {
+					"foo": 1
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						2
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qA3dWAhHWQys",
+			"query": {
+				"field": {
+					"foo": 1,
+					"bar": 2
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						3
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cguI1LqSnKiv",
+			"query": {
+				"field": {
+					"bar": 2
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						4
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "b6Pqxs3JKSEW",
+			"query": {
+				"field": {
+					"foo": 2
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						5
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cRQSX6lUrHeM",
+			"query": {
+				"field": {
+					"$eq": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$eq",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kK7VKnQ4cm17",
+			"query": {
+				"field": {
+					"$eq": {
+						"foo": 1
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$eq",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "e7jtKhdmroGB",
+			"query": {
+				"field": {
+					"$eq": {
+						"foo": 1,
+						"bar": 2
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$eq",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3
+					],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rNNk5OBZoZRr",
+			"query": {
+				"field": {
+					"bar": {
+						"$gt": 0
+					},
+					"foo": 1
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oU5R0lJM98Hp",
+			"query": {
+				"field": {
+					"foo": 1,
+					"bar": {
+						"$gt": 0
+					}
+				}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		}
+	]
+}

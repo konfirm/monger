@@ -89,8 +89,14 @@ if (active.size) {
 		const data = deserialize<CatalogFile>(readFileSync(resolve(catalogDir, file), 'utf8'));
 
 		for (const op of data.operations) {
-			const maxScore = Math.max(...op.operators.map((t) => t.score));
-			const matched = op.operators
+			// A query with no $-prefixed key anywhere (implicit equality,
+			// e.g. {field: "x"} or {field: {}}) is intentionally left
+			// untagged by mongo-catalog's own classification — it's still
+			// exactly $eq, just implicit, so treat "no tag" as "$eq" here
+			// rather than that in mongo-catalog itself.
+			const operators = op.operators.length ? op.operators : [{ operator: '$eq', score: 1 }];
+			const maxScore = Math.max(...operators.map((t) => t.score));
+			const matched = operators
 				// during migration and refactoring on new findings for the real
 				// mongo behaviour we focus first on only the queries that have
 				// the operator we're after as primary (the top level one) this
@@ -99,7 +105,7 @@ if (active.size) {
 				.map(({ operator }) => operator)
 				.filter((op) => active.has(op))
 				;
-			if (!matched.length || op.operators.length > 1 || runnable.has(op.id)) {
+			if (!matched.length || operators.length > 1 || runnable.has(op.id)) {
 				continue;
 			}
 
@@ -139,6 +145,45 @@ const knownIssues: Record<string, string> = {
 	tVFoDXVRYxhX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	tYKZjCHLsaUr: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	pZSK07zcaD8c: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	// Newly surfaced once implicit-equality queries (operators: []) started
+	// being exercised at all (previously silently skipped) — same root
+	// cause as the ids above, not individually diagnosed to their exact
+	// sub-variant (array-of-subdocuments vs. non-document scalars vs.
+	// empty array) since the label is for human legibility only.
+	uyXmwLGoFqU2: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	gnuGRrQgnlS8: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	qxnZ0nlPDUsc: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	rwUHaFE6Hg1t: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	uTgLFYNfiYWC: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	k2y0X4YMsSwU: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	vDVGxzYfAJVE: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	w1V9Czgvvjk4: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	qSPYODKmZ4IM: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	pJ7FcZbQrZKF: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	oXnPaUHAZDSL: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	alIEuMDtLJ03: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	p3s8NZZuMEV0: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	eELJo2GVWifd: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	gjIxhrpG6TJH: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	wLkLoslNS5aN: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	vbNy5LHxR3Wi: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	rT4jlkTowf5R: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	wm9UPGCRr0VD: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	ixQ1xoDvowef: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	sPX2qU2BwZBH: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	aqnAgstoyUVR: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	sCfVm4bL1KEn: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	mBuRXQXBp15w: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	vj2VOWVfZIQA: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	faDEI9meVFSX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	vNz72BpsdYgh: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	rKvt3VP4kc95: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	tH9qWTHytAhv: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	aaE549KBoV1l: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	cpSLNjApVHcu: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	fG3xqaDWVJAg: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	tZGyeTLKzPFJ: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
+	mYBMFXAHuNfu: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
 	tmvPBYA9eSEz: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
 	uY2fLtrMOKuA: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
 	bnSkQKLeVb9X: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
