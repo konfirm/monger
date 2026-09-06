@@ -451,7 +451,8 @@
 						13,
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -473,7 +474,8 @@
 					"documents": [
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -505,7 +507,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -525,7 +528,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -548,7 +552,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -584,7 +589,8 @@
 						18,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -625,7 +631,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -658,7 +665,8 @@
 						16,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -697,7 +705,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -725,7 +734,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -758,7 +768,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -799,7 +810,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -831,7 +843,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -872,7 +885,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -913,7 +927,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -954,7 +969,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -988,7 +1004,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1024,7 +1041,8 @@
 						17,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1050,7 +1068,8 @@
 					"documents": [
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1078,7 +1097,8 @@
 						4,
 						17
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1117,7 +1137,8 @@
 						18,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1161,7 +1182,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1181,7 +1203,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1201,7 +1224,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1220,28 +1244,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $in needs an array",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$in needs an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$in needs an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1261,16 +1270,24 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
 		{
-			"id": "eED8uGvPD09h",
+			"id": "p1pDMqI5Lde0",
 			"query": {
-				"invalid": {}
+				"invalid": {
+					"$eq": "@Undefined/und"
+				}
 			},
-			"operators": [],
+			"operators": [
+				{
+					"operator": "$eq",
+					"score": 1
+				}
+			],
 			"results": [
 				{
 					"documents": [
@@ -1295,7 +1312,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		}

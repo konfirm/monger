@@ -213,11 +213,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -234,36 +231,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $nop",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $nop",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $nop",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown top level operator: $nop. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -280,36 +254,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $invalid",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $invalid",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $invalid",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown top level operator: $invalid. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -326,36 +277,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $unknown",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $unknown",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $unknown",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown top level operator: $unknown. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -374,36 +302,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$not needs a regex or a document",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$not needs a regex or a document",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$not argument must be a regex or an object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -422,36 +327,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$not needs a regex or a document",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$not needs a regex or a document",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$not argument must be a regex or an object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -470,36 +352,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$not needs a regex or a document",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$not needs a regex or a document",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$not argument must be a regex or an object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -518,44 +377,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue and needs an array",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "and needs an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$nor must be an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$nor argument must be an array",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -574,36 +402,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $or/$and/$nor entries need to be full objects",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$or/$and/$nor entries need to be full objects",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or/$and/$nor entries need to be full objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$nor argument's entries must be objects",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -630,60 +435,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
-					"error": {
-						"message": "$expr is not allowed in this context",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.5.13"
-				},
-				{
-					"error": {
-						"message": "can't $divide by zero",
-						"code": 16608,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command :: caused by :: can't $divide by zero",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command :: caused by :: can't $divide by zero",
-						"code": 4848401,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.4"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -710,60 +468,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
-					"error": {
-						"message": "$expr is not allowed in this context",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.5.13"
-				},
-				{
-					"error": {
-						"message": "$divide only supports numeric types, not string and int",
-						"code": 16609,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not string and int",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types",
-						"code": 7157719,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.4"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and int",
-						"code": 14,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -790,60 +501,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
-					"error": {
-						"message": "$expr is not allowed in this context",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.5.13"
-				},
-				{
-					"error": {
-						"message": "$divide only supports numeric types, not string and double",
-						"code": 16609,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not string and double",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types",
-						"code": 7157719,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.4"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and double",
-						"code": 14,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -870,60 +534,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
-					"error": {
-						"message": "$expr is not allowed in this context",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.5.13"
-				},
-				{
-					"error": {
-						"message": "$divide only supports numeric types, not bool and int",
-						"code": 16609,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not bool and int",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types",
-						"code": 7157719,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.4"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not bool and int",
-						"code": 14,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -950,60 +567,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
-					"error": {
-						"message": "$expr is not allowed in this context",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.5.13"
-				},
-				{
-					"error": {
-						"message": "$divide only supports numeric types, not bool and double",
-						"code": 16609,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not bool and double",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..6.0.28,7.0.5..7.0.40"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types",
-						"code": 7157719,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.4"
-				},
-				{
-					"error": {
-						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not bool and double",
-						"code": 14,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1030,32 +600,18 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $expr",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $expr",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.12"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$expr is not allowed in this context",
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.5.13"
+					"versions": "3.3.15..3.5.13"
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.23..8.3.8"
 				}
 			]
 		},
@@ -1068,7 +624,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1081,7 +638,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1094,7 +652,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1107,7 +666,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1127,7 +687,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1147,7 +708,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1170,7 +732,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1193,7 +756,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1206,7 +770,22 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lgtrsn1vji3R",
+			"query": {
+				"string": "@Undefined/und"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1226,16 +805,24 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
 		{
-			"id": "iKeSdyBbDy4j",
+			"id": "pcoyykD75R2w",
 			"query": {
-				"price": {}
+				"price": {
+					"$ne": "@Undefined/und"
+				}
 			},
-			"operators": [],
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
 			"results": [
 				{
 					"documents": [
@@ -1260,7 +847,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1280,23 +868,17 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..3.5.13,3.6.6..3.6.23,4.0.1..4.1.7"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..3.6.23,4.0.28"
 				},
 				{
-					"error": {
-						"message": "Regular expression is invalid: missing terminating ] for character class",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..3.6.5,3.7.1..4.0.0"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Regular expression is invalid: missing terminating ] for character class",
 						"code": 51091,
 						"type": "MongoServerError"
 					},
-					"versions": "4.1.9..8.3.8"
+					"versions": "3.7.9,4.1.13..8.3.8"
 				}
 			]
 		},
@@ -1316,31 +898,17 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..3.5.13,3.6.6..3.6.23,4.0.1..4.1.7"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..3.6.23,4.0.28"
 				},
 				{
-					"error": {
-						"message": "Regular expression is invalid: missing )",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..3.6.5,3.7.1..4.0.0"
-				},
-				{
-					"error": {
-						"message": "Regular expression is invalid: missing )",
-						"code": 51091,
-						"type": "MongoServerError"
-					},
-					"versions": "4.1.9..6.0.28"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Regular expression is invalid: missing closing parenthesis",
 						"code": 51091,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.0..8.3.8"
+					"versions": "3.7.9,4.1.13..8.3.8"
 				}
 			]
 		},
@@ -1361,15 +929,17 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..5.0.33"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..5.0.33"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": " invalid flag in regex options: y",
 						"code": 51108,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.28..8.3.8"
 				}
 			]
 		},
@@ -1390,15 +960,17 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..5.0.33"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..5.0.33"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": " invalid flag in regex options: y",
 						"code": 51108,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.28..8.3.8"
 				}
 			]
 		},
@@ -1420,28 +992,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue divisor cannot be 0",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "divisor cannot be 0",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "divisor cannot be 0",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1464,7 +1021,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1483,28 +1041,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue malformed mod, needs to be an array",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "malformed mod, needs to be an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "malformed mod, needs to be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1525,28 +1068,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "malformed mod, not enough elements",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "malformed mod, not enough elements",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1565,28 +1093,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue malformed mod, not enough elements",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "malformed mod, not enough elements",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "malformed mod, not enough elements",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1605,28 +1118,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $all needs an array",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$all needs an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$all needs an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1645,28 +1143,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$elemMatch needs an Object",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$elemMatch needs an Object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1685,32 +1168,13 @@
 			],
 			"results": [
 				{
-					"documents": [],
-					"versions": "2.6.12..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$size needs a number",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size needs a number",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a number in: $size: \"not a number\"",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1729,32 +1193,13 @@
 			],
 			"results": [
 				{
-					"documents": [],
-					"versions": "2.6.12..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$size may not be negative",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size may not be negative",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a non-negative number in: $size: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1773,32 +1218,13 @@
 			],
 			"results": [
 				{
-					"documents": [],
-					"versions": "2.6.12..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$size must be a whole number",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size must be a whole number",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected an integer: $size: 1.5",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1817,44 +1243,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown operator: $bitsAllClear",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "number cannot take a negative number: $bitsAllClear: -1",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.9"
-				},
-				{
-					"error": {
-						"message": "Expected a positive number in: $bitsAllClear: -1",
-						"code": 9,
-						"type": "MongoError"
-					},
-					"versions": "3.5.10..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Expected a positive number in: $bitsAllClear: -1",
-						"code": 9,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Expected a non-negative number in: $bitsAllClear: -1",
 						"code": 9,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1873,44 +1268,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown operator: $bitsAllSet",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "number cannot take a negative number: $bitsAllSet: -1",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.9"
-				},
-				{
-					"error": {
-						"message": "Expected a positive number in: $bitsAllSet: -1",
-						"code": 9,
-						"type": "MongoError"
-					},
-					"versions": "3.5.10..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Expected a positive number in: $bitsAllSet: -1",
-						"code": 9,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Expected a non-negative number in: $bitsAllSet: -1",
 						"code": 9,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1931,36 +1295,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown operator: $bitsAnyClear",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "bit positions must be >= 0 but got: 0: -1",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "bit positions must be >= 0 but got: 0: -1",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse bit position. Expected a non-negative number in: 0: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1981,36 +1322,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown operator: $bitsAnySet",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "bit positions must be >= 0 but got: 0: -1",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "bit positions must be >= 0 but got: 0: -1",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse bit position. Expected a non-negative number in: 0: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2033,36 +1351,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $not needs a regex or a document",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$not needs a regex or a document",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$not needs a regex or a document",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..7.0.40"
-				},
-				{
-					"error": {
-						"message": "$not argument must be a regex or an object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2084,7 +1379,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2104,28 +1400,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown operator: $invalid",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown operator: $invalid",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown operator: $invalid",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2143,36 +1424,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown top level operator: $unknown",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $unknown",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "unknown top level operator: $unknown",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..4.4.30"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown top level operator: $unknown. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "5.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2185,7 +1443,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2198,7 +1457,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2211,7 +1471,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2223,18 +1484,13 @@
 			"operators": [],
 			"results": [
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "key field\u0000with\u0000nulls must not contain null bytes",
-						"type": "Error"
-					},
-					"versions": "2.6.12..4.4.30"
-				},
-				{
-					"error": {
-						"message": "key field\u0000with\u0000nulls must not contain null bytes",
+						"code": "@Undefined/und",
 						"type": "BSONError"
 					},
-					"versions": "5.0.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		}

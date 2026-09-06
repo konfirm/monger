@@ -33,7 +33,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Comparison.spec.ts"
 		],
-		"verified": 0.945
+		"verified": 0.95
 	},
 	"$gt": {
 		"working": "done",

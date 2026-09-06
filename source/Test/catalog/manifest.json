@@ -1,5 +1,5 @@
 {
-	"generated": "2026-09-06T17:47:53.312Z",
+	"generated": "2026-09-06T20:55:34.802Z",
 	"latestCollectedVersion": "8.3.8",
 	"catalogs": [
 		{
@@ -18,7 +18,7 @@
 			"catalog": "comparison",
 			"file": "comparison.json",
 			"operations": 27,
-			"taggedOperations": 26
+			"taggedOperations": 27
 		},
 		{
 			"catalog": "coverage_all",
@@ -209,8 +209,8 @@
 		{
 			"catalog": "misc",
 			"file": "misc.json",
-			"operations": 52,
-			"taggedOperations": 41
+			"operations": 53,
+			"taggedOperations": 42
 		},
 		{
 			"catalog": "modulo",
@@ -246,8 +246,8 @@
 	"totals": {
 		"catalogs": 40,
 		"skippedCatalogs": 0,
-		"operations": 3459,
-		"taggedOperations": 3144
+		"operations": 3460,
+		"taggedOperations": 3146
 	},
 	"skipped": []
 }

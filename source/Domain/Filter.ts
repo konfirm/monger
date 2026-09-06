@@ -1,4 +1,4 @@
-import type { Query, Evaluator } from './Filter/Compiler';
+import type { Evaluator, Query } from './Filter/Compiler';
 import { Compiler as FilterCompiler } from './Filter/Compiler';
 import * as ArrayOps from './Filter/Operator/Array';
 import * as Bitwise from './Filter/Operator/Bitwise';

@@ -92,7 +92,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -158,7 +158,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -232,7 +232,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -310,7 +310,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -393,7 +393,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -475,7 +475,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -539,7 +539,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -614,7 +614,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -686,7 +686,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -765,7 +765,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -866,7 +866,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -943,7 +943,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1024,7 +1024,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1090,7 +1090,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1194,7 +1194,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1292,7 +1292,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1364,7 +1364,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1451,7 +1451,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1513,7 +1513,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			},
@@ -1601,7 +1601,7 @@
 					true,
 					false,
 					null,
-					null,
+					"@Undefined/und",
 					{}
 				]
 			}
@@ -1627,7 +1627,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1653,7 +1654,8 @@
 						2,
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1676,7 +1678,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1699,7 +1702,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1737,7 +1741,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1770,7 +1775,8 @@
 						15,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1801,7 +1807,8 @@
 						7,
 						15
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1823,7 +1830,8 @@
 					"documents": [
 						4
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1850,7 +1858,8 @@
 						16,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1874,7 +1883,8 @@
 						2,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1915,7 +1925,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -1955,36 +1966,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $size needs a number",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$size needs a number",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size needs a number",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a number in: $size: { $gte: 2 }",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2043,7 +2031,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2062,28 +2051,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $all needs an array",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$all needs an array",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$all needs an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2102,28 +2076,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$elemMatch needs an Object",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$elemMatch needs an Object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2142,32 +2101,13 @@
 			],
 			"results": [
 				{
-					"documents": [],
-					"versions": "2.6.12..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$size may not be negative",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size may not be negative",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a non-negative number in: $size: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2186,32 +2126,13 @@
 			],
 			"results": [
 				{
-					"documents": [],
-					"versions": "2.6.12..3.2.21"
-				},
-				{
-					"error": {
-						"message": "$size must be a whole number",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$size must be a whole number",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..5.0.33"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected an integer: $size: 3.5",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2231,7 +2152,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2255,7 +2177,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2275,7 +2198,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2297,7 +2221,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2338,7 +2263,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2358,7 +2284,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2401,7 +2328,8 @@
 						17,
 						18
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2428,7 +2356,8 @@
 						15,
 						18
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2450,7 +2379,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2479,7 +2409,8 @@
 						12,
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2526,7 +2457,8 @@
 						17,
 						18
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2550,7 +2482,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2586,7 +2519,8 @@
 						17,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2629,7 +2563,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2651,7 +2586,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2679,7 +2615,8 @@
 						15,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2704,7 +2641,8 @@
 						13,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2721,7 +2659,8 @@
 						11,
 						14
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2740,7 +2679,8 @@
 						10,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2773,7 +2713,8 @@
 						16,
 						18
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2798,7 +2739,8 @@
 						17,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2828,7 +2770,8 @@
 						7,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		},
@@ -2859,7 +2802,8 @@
 						15,
 						17
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.15..8.3.8"
 				}
 			]
 		}
