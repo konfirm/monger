@@ -1066,6 +1066,98 @@
 			]
 		},
 		{
+			"id": "eHaoCnERN88o",
+			"query": {
+				"$and": []
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $and/$or/$nor must be a nonempty array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$and/$or/$nor must be a nonempty array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$and/$or/$nor must be a nonempty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$and argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "gFBqvdyXBYvB",
+			"query": {
+				"$or": []
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $and/$or/$nor must be a nonempty array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$and/$or/$nor must be a nonempty array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$and/$or/$nor must be a nonempty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "i5yCEL2PW4gq",
 			"query": {
 				"$and": [
@@ -1258,6 +1350,60 @@
 						"type": "MongoServerError"
 					},
 					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vNKuJUMn27Fv",
+			"query": {
+				"$and": null
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue and needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "and needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.2.21"
+				},
+				{
+					"error": {
+						"message": "$and must be an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.3.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$and must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..7.0.40"
+				},
+				{
+					"error": {
+						"message": "$and argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.3.8"
 				}
 			]
 		},

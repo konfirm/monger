@@ -24,6 +24,45 @@
 					"versions": "2.6.12..8.3.8"
 				}
 			]
+		},
+		{
+			"id": "n7Yjt9EJsZjS",
+			"query": {
+				"age": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kHbAwuVM7WGB",
+			"query": {
+				"age": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aofomZDzIZ6T",
+			"query": {
+				"age": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
 		}
 	]
 }

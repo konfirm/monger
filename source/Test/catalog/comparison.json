@@ -1206,6 +1206,46 @@
 			]
 		},
 		{
+			"id": "sM1wGhIY8Nr8",
+			"query": {
+				"status": {
+					"$in": "active"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$in",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "o008YWqSLmT5",
 			"query": {
 				"age": {

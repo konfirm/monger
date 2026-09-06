@@ -236,6 +236,34 @@
 			]
 		},
 		{
+			"id": "n7Yjt9EJsZjS",
+			"query": {
+				"age": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "kfGZKcGZ72Sg",
 			"query": {
 				"age": {
@@ -252,21 +280,6 @@
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4
-					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						0
-					],
-					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
 				}
 			]
 		},
@@ -317,50 +330,6 @@
 						13
 					],
 					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4,
-						5,
-						6
-					],
-					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
-				},
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28
-					],
-					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
 				}
 			]
 		},
@@ -411,12 +380,6 @@
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						0
-					],
-					"versions": "3.3.15,3.4.24,3.5.13,3.6.23,3.7.9,4.0.28,4.1.13,4.2.24,4.4.30,5.0.33,6.0.28,7.0.40,8.0.29,8.2.12,8.3.8"
 				}
 			]
 		},
@@ -1016,12 +979,6 @@
 				{
 					"documents": [
 						12
-					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						6
 					],
 					"versions": "2.6.12..8.3.8"
 				}
@@ -1862,6 +1819,32 @@
 			]
 		},
 		{
+			"id": "kHbAwuVM7WGB",
+			"query": {
+				"age": "value"
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aofomZDzIZ6T",
+			"query": {
+				"age": true
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "nvwzwktRyIh3",
 			"query": {
 				"age": {
@@ -2066,39 +2049,6 @@
 						11,
 						12,
 						13
-					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28
 					],
 					"versions": "2.6.12..8.3.8"
 				}
@@ -3024,6 +2974,52 @@
 			]
 		},
 		{
+			"id": "uKHRgRVBjRom",
+			"query": {
+				"name": {
+					"$not": {
+						"$in": "active"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$in",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $in needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "d9VGkz4FfDRH",
 			"query": {
 				"name": {
@@ -3318,6 +3314,52 @@
 						13
 					],
 					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hZbyxJKzSXZK",
+			"query": {
+				"name": {
+					"$not": {
+						"$nin": "deleted"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$nin",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $nin needs an array",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
 				}
 			]
 		},

@@ -52,6 +52,14 @@ describe("Domain/Filter/Operator/Bitwise", () => {
 			${[0, 2]} | ${8}  | yes
 			${[200]}  | ${-5} | no
 			${[200]}  | ${5}  | yes
+			${[2, 100]}         | ${4}  | no
+			${[2, 100]}         | ${0}  | yes
+			${[2, 100]}         | ${-5} | no
+			${[2, 100]}         | ${-4} | no
+			${[2147483647]}     | ${4}  | yes
+			${[2147483647]}     | ${0}  | yes
+			${[2147483647]}     | ${-5} | no
+			${[2147483647]}     | ${-4} | no
 		`(compare(Bitwise.$bitsAllClear));
 	});
 
@@ -79,6 +87,14 @@ describe("Domain/Filter/Operator/Bitwise", () => {
 			${[0, 2]} | ${8}  | no
 			${[200]}  | ${-5} | yes
 			${[200]}  | ${5}  | no
+			${[2, 100]}         | ${4}  | no
+			${[2, 100]}         | ${0}  | no
+			${[2, 100]}         | ${-5} | no
+			${[2, 100]}         | ${-4} | yes
+			${[2147483647]}     | ${4}  | no
+			${[2147483647]}     | ${0}  | no
+			${[2147483647]}     | ${-5} | yes
+			${[2147483647]}     | ${-4} | yes
 		`(compare(Bitwise.$bitsAllSet));
 	});
 
@@ -106,6 +122,14 @@ describe("Domain/Filter/Operator/Bitwise", () => {
 			${[0, 2]} | ${8}  | yes
 			${[200]}  | ${-5} | no
 			${[200]}  | ${5}  | yes
+			${[2, 100]}         | ${4}  | yes
+			${[2, 100]}         | ${0}  | yes
+			${[2, 100]}         | ${-5} | yes
+			${[2, 100]}         | ${-4} | no
+			${[2147483647]}     | ${4}  | yes
+			${[2147483647]}     | ${0}  | yes
+			${[2147483647]}     | ${-5} | no
+			${[2147483647]}     | ${-4} | no
 		`(compare(Bitwise.$bitsAnyClear));
 	});
 
@@ -133,6 +157,26 @@ describe("Domain/Filter/Operator/Bitwise", () => {
 			${[0, 2]} | ${8}  | no
 			${[200]}  | ${-5} | yes
 			${[200]}  | ${5}  | no
+			${[2, 100]}         | ${4}  | yes
+			${[2, 100]}         | ${0}  | no
+			${[2, 100]}         | ${-5} | yes
+			${[2, 100]}         | ${-4} | yes
+			${[2147483647]}     | ${4}  | no
+			${[2147483647]}     | ${0}  | no
+			${[2147483647]}     | ${-5} | yes
+			${[2147483647]}     | ${-4} | yes
 		`(compare(Bitwise.$bitsAnySet));
+	});
+
+	it("rejects a bit position beyond INT32_MAX", () => {
+		assert.throws(
+			() => Bitwise.$bitsAllClear([2147483648]),
+			/Cannot represent 0: 2147483648 in an int/,
+			"$bitsAllClear rejects a position beyond INT32_MAX",
+		);
+		assert.doesNotThrow(
+			() => Bitwise.$bitsAllClear([2147483647]),
+			"$bitsAllClear accepts INT32_MAX itself",
+		);
 	});
 });

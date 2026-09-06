@@ -675,6 +675,57 @@
 			]
 		},
 		{
+			"id": "oOz0ewr8TCOK",
+			"query": {},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "sOz8qsEAhMA4",
 			"query": {
 				"indices.quantity": 10
@@ -1821,6 +1872,46 @@
 			]
 		},
 		{
+			"id": "mAcxmXOff8WI",
+			"query": {
+				"scores": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "cswmMfp1klSS",
 			"query": {
 				"scores": {
@@ -2375,12 +2466,6 @@
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						4
-					],
-					"versions": "2.6.12..8.3.8"
 				}
 			]
 		},
@@ -2402,10 +2487,6 @@
 					"documents": [
 						9
 					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [],
 					"versions": "2.6.12..8.3.8"
 				}
 			]
@@ -5732,6 +5813,46 @@
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "uNL3VVRMBOQa",
+			"query": {
+				"ratings": {
+					"$elemMatch": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$elemMatch",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $elemMatch needs an Object",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12..3.0.15"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.6..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
 				}
 			]
 		},

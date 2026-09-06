@@ -456,56 +456,6 @@
 			]
 		},
 		{
-			"id": "wQqFTpVhAG5E",
-			"query": {
-				"age": {
-					"$exists": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4
-					],
-					"versions": "2.6.12..8.3.8"
-				},
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20
-					],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
 			"id": "cS5x1uBF3Vg3",
 			"query": {
 				"age.score": {
@@ -575,6 +525,101 @@
 			]
 		},
 		{
+			"id": "n7Yjt9EJsZjS",
+			"query": {
+				"age": null
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kfGZKcGZ72Sg",
+			"query": {
+				"age": {
+					"$ne": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$ne",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wQqFTpVhAG5E",
+			"query": {
+				"age": {
+					"$exists": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "c5odCthIp6b0",
 			"query": {
 				"count": 22,
@@ -608,6 +653,171 @@
 			"results": [
 				{
 					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oOz0ewr8TCOK",
+			"query": {},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rBtnGSgu2JO7",
+			"query": {
+				"step": {
+					"$exists": false
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tAe7j3tsv3y9",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": true
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
 					"versions": "2.6.12..8.3.8"
 				}
 			]
@@ -841,32 +1051,6 @@
 			]
 		},
 		{
-			"id": "nqK8eGy7YTOi",
-			"query": {
-				"index": {
-					"$not": {
-						"$exists": false
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
 			"id": "wLuyHjL4KaOd",
 			"query": {
 				"index": {
@@ -944,6 +1128,32 @@
 				{
 					"operator": "$exists",
 					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "nqK8eGy7YTOi",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": false
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
 				}
 			],
 			"results": [
@@ -1577,135 +1787,6 @@
 			]
 		},
 		{
-			"id": "bf1FMHnF1kUf",
-			"query": {
-				"age": {
-					"$exists": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "qDl44bUZCm3Y",
-			"query": {
-				"age": {
-					"$exists": 0
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "wNWQe08OZfc3",
-			"query": {
-				"age": {
-					"$exists": "yes"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						1,
-						2,
-						3,
-						4
-					],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
 			"id": "tOCu8DNnA3GZ",
 			"query": {
 				"age.score": {
@@ -2099,6 +2180,135 @@
 			]
 		},
 		{
+			"id": "bf1FMHnF1kUf",
+			"query": {
+				"age": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "qDl44bUZCm3Y",
+			"query": {
+				"age": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wNWQe08OZfc3",
+			"query": {
+				"age": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						2,
+						3,
+						4
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "turyTzPxFUWD",
 			"query": {
 				"count": null,
@@ -2307,6 +2517,252 @@
 			"results": [
 				{
 					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ePZIkbaeM963",
+			"query": {
+				"step": {
+					"$exists": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "ozReU4P9cbIr",
+			"query": {
+				"step": {
+					"$exists": 0
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sUyOM6LMmc57",
+			"query": {
+				"step": {
+					"$exists": "yes"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$exists",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "jIqfhGjuXJ9D",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aQMt0S6AN7PU",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "hxf7RoJM5TL0",
+			"query": {
+				"step": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34
+					],
 					"versions": "2.6.12..8.3.8"
 				}
 			]
@@ -2921,120 +3377,6 @@
 			]
 		},
 		{
-			"id": "caw4jGl2fzjM",
-			"query": {
-				"index": {
-					"$not": {
-						"$exists": null
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "aYQEQyfQw4IK",
-			"query": {
-				"index": {
-					"$not": {
-						"$exists": 0
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "cOom4relOVic",
-			"query": {
-				"index": {
-					"$not": {
-						"$exists": "yes"
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34,
-						7
-					],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
 			"id": "oy5YysadT2cR",
 			"query": {
 				"index": {
@@ -3429,6 +3771,120 @@
 			"results": [
 				{
 					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "caw4jGl2fzjM",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": null
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "aYQEQyfQw4IK",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": 0
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "cOom4relOVic",
+			"query": {
+				"index": {
+					"$not": {
+						"$exists": "yes"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$not",
+					"score": 1
+				},
+				{
+					"operator": "$exists",
+					"score": 0.75
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						7
+					],
 					"versions": "2.6.12..8.3.8"
 				}
 			]
@@ -5754,314 +6210,6 @@
 						33
 					],
 					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "rBtnGSgu2JO7",
-			"query": {
-				"step": {
-					"$exists": false
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "tAe7j3tsv3y9",
-			"query": {
-				"step": {
-					"$not": {
-						"$exists": true
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "ozReU4P9cbIr",
-			"query": {
-				"step": {
-					"$exists": 0
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "sUyOM6LMmc57",
-			"query": {
-				"step": {
-					"$exists": "yes"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$exists",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "jIqfhGjuXJ9D",
-			"query": {
-				"step": {
-					"$not": {
-						"$exists": null
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "aQMt0S6AN7PU",
-			"query": {
-				"step": {
-					"$not": {
-						"$exists": 0
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "hxf7RoJM5TL0",
-			"query": {
-				"step": {
-					"$not": {
-						"$exists": "yes"
-					}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$not",
-					"score": 1
-				},
-				{
-					"operator": "$exists",
-					"score": 0.75
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						0,
-						1,
-						2,
-						3,
-						4,
-						5,
-						6,
-						7,
-						8,
-						9,
-						10,
-						11,
-						12,
-						13,
-						14,
-						15,
-						16,
-						17,
-						18,
-						19,
-						20,
-						21,
-						22,
-						23,
-						24,
-						25,
-						26,
-						27,
-						28,
-						29,
-						30,
-						31,
-						32,
-						33,
-						34
-					],
-					"versions": "3.3.15..8.3.8"
 				}
 			]
 		}

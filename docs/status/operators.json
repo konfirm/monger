@@ -40,7 +40,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Comparison.spec.ts"
 		],
-		"verified": 1
+		"verified": 0.951
 	},
 	"$gte": {
 		"working": "done",

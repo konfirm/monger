@@ -210,6 +210,20 @@
 			]
 		},
 		{
+			"id": "oOz0ewr8TCOK",
+			"query": {},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
 			"id": "pWBMyTrFq4MT",
 			"query": {
 				"ratings": {

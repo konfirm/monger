@@ -1,5 +1,5 @@
 {
-	"generated": "2026-09-05T11:20:26.520Z",
+	"generated": "2026-09-06T01:10:49.098Z",
 	"latestCollectedVersion": "8.3.8",
 	"catalogs": [
 		{
@@ -17,38 +17,38 @@
 		{
 			"catalog": "comparison",
 			"file": "comparison.json",
-			"operations": 26,
-			"taggedOperations": 25
+			"operations": 27,
+			"taggedOperations": 26
 		},
 		{
 			"catalog": "coverage_all",
 			"file": "coverage_all.json",
-			"operations": 89,
-			"taggedOperations": 89
+			"operations": 87,
+			"taggedOperations": 87
 		},
 		{
 			"catalog": "coverage_and",
 			"file": "coverage_and.json",
-			"operations": 283,
-			"taggedOperations": 278
+			"operations": 287,
+			"taggedOperations": 281
 		},
 		{
 			"catalog": "coverage_array",
 			"file": "coverage_array.json",
-			"operations": 200,
-			"taggedOperations": 153
+			"operations": 203,
+			"taggedOperations": 155
 		},
 		{
 			"catalog": "coverage_collation",
 			"file": "coverage_collation.json",
-			"operations": 1,
+			"operations": 4,
 			"taggedOperations": 0
 		},
 		{
 			"catalog": "coverage_count",
 			"file": "coverage_count.json",
-			"operations": 113,
-			"taggedOperations": 78
+			"operations": 102,
+			"taggedOperations": 67
 		},
 		{
 			"catalog": "coverage_date",
@@ -65,14 +65,14 @@
 		{
 			"catalog": "coverage_elemmatch",
 			"file": "coverage_elemmatch.json",
-			"operations": 29,
+			"operations": 30,
 			"taggedOperations": 29
 		},
 		{
 			"catalog": "coverage_exists",
 			"file": "coverage_exists.json",
-			"operations": 160,
-			"taggedOperations": 151
+			"operations": 164,
+			"taggedOperations": 153
 		},
 		{
 			"catalog": "coverage_expr",
@@ -83,7 +83,7 @@
 		{
 			"catalog": "coverage_find",
 			"file": "coverage_find.json",
-			"operations": 76,
+			"operations": 77,
 			"taggedOperations": 57
 		},
 		{
@@ -95,8 +95,8 @@
 		{
 			"catalog": "coverage_in_",
 			"file": "coverage_in_.json",
-			"operations": 407,
-			"taggedOperations": 391
+			"operations": 277,
+			"taggedOperations": 260
 		},
 		{
 			"catalog": "coverage_json_schema",
@@ -107,56 +107,62 @@
 		{
 			"catalog": "coverage_mod",
 			"file": "coverage_mod.json",
-			"operations": 29,
-			"taggedOperations": 29
+			"operations": 14,
+			"taggedOperations": 14
 		},
 		{
 			"catalog": "coverage_ne",
 			"file": "coverage_ne.json",
-			"operations": 77,
-			"taggedOperations": 77
+			"operations": 27,
+			"taggedOperations": 27
 		},
 		{
 			"catalog": "coverage_nin",
 			"file": "coverage_nin.json",
-			"operations": 99,
-			"taggedOperations": 98
+			"operations": 104,
+			"taggedOperations": 100
 		},
 		{
 			"catalog": "coverage_not",
 			"file": "coverage_not.json",
-			"operations": 147,
-			"taggedOperations": 146
+			"operations": 136,
+			"taggedOperations": 132
+		},
+		{
+			"catalog": "coverage_number",
+			"file": "coverage_number.json",
+			"operations": 1,
+			"taggedOperations": 0
 		},
 		{
 			"catalog": "coverage_or",
 			"file": "coverage_or.json",
-			"operations": 424,
+			"operations": 426,
 			"taggedOperations": 412
 		},
 		{
 			"catalog": "coverage_project",
 			"file": "coverage_project.json",
-			"operations": 96,
+			"operations": 101,
 			"taggedOperations": 8
 		},
 		{
 			"catalog": "coverage_regex",
 			"file": "coverage_regex.json",
-			"operations": 85,
-			"taggedOperations": 66
+			"operations": 69,
+			"taggedOperations": 54
 		},
 		{
 			"catalog": "coverage_sort",
 			"file": "coverage_sort.json",
-			"operations": 75,
-			"taggedOperations": 70
+			"operations": 55,
+			"taggedOperations": 48
 		},
 		{
 			"catalog": "coverage_type",
 			"file": "coverage_type.json",
-			"operations": 26,
-			"taggedOperations": 24
+			"operations": 16,
+			"taggedOperations": 15
 		},
 		{
 			"catalog": "coverage_where",
@@ -167,14 +173,14 @@
 		{
 			"catalog": "element",
 			"file": "element.json",
-			"operations": 39,
-			"taggedOperations": 39
+			"operations": 41,
+			"taggedOperations": 41
 		},
 		{
 			"catalog": "evaluation",
 			"file": "evaluation.json",
-			"operations": 23,
-			"taggedOperations": 23
+			"operations": 26,
+			"taggedOperations": 26
 		},
 		{
 			"catalog": "expr",
@@ -197,13 +203,13 @@
 		{
 			"catalog": "logical",
 			"file": "logical.json",
-			"operations": 19,
-			"taggedOperations": 19
+			"operations": 22,
+			"taggedOperations": 22
 		},
 		{
 			"catalog": "misc",
 			"file": "misc.json",
-			"operations": 51,
+			"operations": 52,
 			"taggedOperations": 41
 		},
 		{
@@ -221,15 +227,15 @@
 		{
 			"catalog": "typeMatrix",
 			"file": "typeMatrix.json",
-			"operations": 560,
-			"taggedOperations": 560
+			"operations": 612,
+			"taggedOperations": 612
 		}
 	],
 	"totals": {
-		"catalogs": 37,
+		"catalogs": 38,
 		"skippedCatalogs": 0,
-		"operations": 3614,
-		"taggedOperations": 3335
+		"operations": 3440,
+		"taggedOperations": 3139
 	},
 	"skipped": []
 }

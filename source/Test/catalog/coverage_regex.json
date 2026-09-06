@@ -45,242 +45,15 @@
 	},
 	"operations": [
 		{
-			"id": "uIIu4pIKRFN1",
+			"id": "oOEBBOlQaW1v",
 			"query": {
-				"status": {}
+				"age.score": {}
 			},
 			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "sMDOXNgBYVUr",
-			"query": {
-				"status": {
-					"$regex": "Double"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "pg15H7mJzYy7",
-			"query": {
-				"status": {
-					"$regex": "Couple",
-					"$options": "Much"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..5.0.32"
-				},
-				{
-					"error": {
-						"message": " invalid flag in regex options: M",
-						"code": 51108,
-						"type": "MongoServerError"
-					},
-					"versions": "6.0.1..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "umIMkuL5dVmQ",
-			"query": {
-				"status": {
-					"$options": "Much",
-					"$regex": "Couple"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..5.0.32"
-				},
-				{
-					"error": {
-						"message": " invalid flag in regex options: M",
-						"code": 51108,
-						"type": "MongoServerError"
-					},
-					"versions": "6.0.1..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "kzyJM1DM0KiO",
-			"query": {
-				"age": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "tJdQpNC1X2mN",
-			"query": {
-				"age": {
-					"$regex": "Neither",
-					"$gte": "Either"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "tvWCk1zesUyX",
-			"query": {
-				"age": {
-					"$gt": "Huge",
-					"$regex": "No"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "tMST7LOx2kUR",
-			"query": {
-				"status": {},
-				"rank": {},
-				"level": {},
-				"count": {},
-				"grade": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "fy6rJTsLX6z8",
-			"query": {
-				"$and": [
-					{
-						"status": {}
-					},
-					{
-						"status": {}
-					}
-				]
-			},
-			"operators": [
-				{
-					"operator": "$and",
-					"score": 1
-				}
-			],
 			"results": [
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "kH94yYv72tpF",
-			"query": {
-				"status": {},
-				"rank": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "sl28OdHj1QHT",
-			"query": {
-				"$or": [
-					{
-						"status": {}
-					},
-					{
-						"status": {}
-					}
-				]
-			},
-			"operators": [
-				{
-					"operator": "$or",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "d7vQhLLn3LFD",
-			"query": {
-				"step.priority": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "2.6.12..8.3.7"
 				}
 			]
 		},
@@ -316,9 +89,9 @@
 			]
 		},
 		{
-			"id": "tspJ88fHWQB0",
+			"id": "lqBycloGyGQV",
 			"query": {
-				"attempts": {
+				"level": {
 					"$regex": {}
 				}
 			},
@@ -335,7 +108,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -343,7 +116,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -351,7 +124,243 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.7"
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tYaAoM9MU3Rs",
+			"query": {
+				"status": {
+					"$regex": "Couple"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "byuKDlZLS9ko",
+			"query": {
+				"status": {
+					"$regex": "Abundant",
+					"$options": "Most"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2
+					],
+					"versions": "2.6.12..5.0.33"
+				},
+				{
+					"error": {
+						"message": " invalid flag in regex options: M",
+						"code": 51108,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "lR7LDSOz6IZ5",
+			"query": {
+				"status": {
+					"$options": "Most",
+					"$regex": "Abundant"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						2
+					],
+					"versions": "2.6.12..5.0.33"
+				},
+				{
+					"error": {
+						"message": " invalid flag in regex options: M",
+						"code": 51108,
+						"type": "MongoServerError"
+					},
+					"versions": "6.0.1..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "rj2FUF0xEoAx",
+			"query": {
+				"count": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "kWAwLFCzWCPI",
+			"query": {
+				"count": {
+					"$regex": "Much",
+					"$gte": "Each"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "tFdHqtZ0vWeX",
+			"query": {
+				"count": {
+					"$gt": "Heavy",
+					"$regex": "Neither"
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oOz0ewr8TCOK",
+			"query": {},
+			"operators": [],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "vULJwEkWyR5b",
+			"query": {
+				"status": {},
+				"step": {},
+				"priority": {},
+				"capacity": {},
+				"attempts": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "fy6rJTsLX6z8",
+			"query": {
+				"$and": [
+					{
+						"status": {}
+					},
+					{
+						"status": {}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$and",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "bMVt2lH2nTzD",
+			"query": {
+				"status": {},
+				"step": {}
+			},
+			"operators": [],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sl28OdHj1QHT",
+			"query": {
+				"$or": [
+					{
+						"status": {}
+					},
+					{
+						"status": {}
+					}
+				]
+			},
+			"operators": [
+				{
+					"operator": "$or",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"versions": "2.6.12..8.3.8"
 				}
 			]
 		},
@@ -636,618 +645,6 @@
 			]
 		},
 		{
-			"id": "stJYv9X4N77G",
-			"query": {
-				"status": {
-					"$regex": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "v7SmHHAVI4b4",
-			"query": {
-				"status": {
-					"$regex": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "b2G2vtRf0m7Q",
-			"query": {
-				"status": {
-					"$regex": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "sOAIXOEgjNRy",
-			"query": {
-				"status": {
-					"$regex": null,
-					"$options": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "oM2B7EBJcX3s",
-			"query": {
-				"status": {
-					"$regex": 42,
-					"$options": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "dEViPfzgSA9W",
-			"query": {
-				"status": {
-					"$regex": true,
-					"$options": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "piD2UKyMmEzi",
-			"query": {
-				"status": {
-					"$options": null,
-					"$regex": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $options has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "c0jhqsyE2G62",
-			"query": {
-				"status": {
-					"$options": 42,
-					"$regex": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $options has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "sESeTJV0jOLY",
-			"query": {
-				"status": {
-					"$options": true,
-					"$regex": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $options has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$options has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "vzTeVSqmtWt0",
-			"query": {
-				"age": {
-					"$regex": null,
-					"$gte": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "prqMUOw75RgX",
-			"query": {
-				"age": {
-					"$regex": 42,
-					"$gte": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "rKOaFKUPJmEq",
-			"query": {
-				"age": {
-					"$regex": true,
-					"$gte": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "eTU9IpYN9hXN",
-			"query": {
-				"age": {
-					"$gt": null,
-					"$regex": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "fnLvftiMo9bJ",
-			"query": {
-				"age": {
-					"$gt": 42,
-					"$regex": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
-			"id": "luOOHjByx6Ee",
-			"query": {
-				"age": {
-					"$gt": true,
-					"$regex": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $regex has to be a string",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.3.7"
-				}
-			]
-		},
-		{
 			"id": "oOVYLLAYr95a",
 			"query": {
 				"tags": {
@@ -1267,7 +664,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1275,7 +672,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1310,7 +707,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1318,7 +715,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1353,7 +750,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1361,7 +758,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1396,7 +793,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1404,7 +801,619 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "stJYv9X4N77G",
+			"query": {
+				"status": {
+					"$regex": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "v7SmHHAVI4b4",
+			"query": {
+				"status": {
+					"$regex": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "b2G2vtRf0m7Q",
+			"query": {
+				"status": {
+					"$regex": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sOAIXOEgjNRy",
+			"query": {
+				"status": {
+					"$regex": null,
+					"$options": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "oM2B7EBJcX3s",
+			"query": {
+				"status": {
+					"$regex": 42,
+					"$options": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dEViPfzgSA9W",
+			"query": {
+				"status": {
+					"$regex": true,
+					"$options": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "piD2UKyMmEzi",
+			"query": {
+				"status": {
+					"$options": null,
+					"$regex": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "c0jhqsyE2G62",
+			"query": {
+				"status": {
+					"$options": 42,
+					"$regex": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "sESeTJV0jOLY",
+			"query": {
+				"status": {
+					"$options": true,
+					"$regex": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $options has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$options has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wztOCnOXdTYy",
+			"query": {
+				"count": {
+					"$regex": null,
+					"$gte": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "wLROtdkXcK1f",
+			"query": {
+				"count": {
+					"$regex": 42,
+					"$gte": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "t0NWSwzMUrTx",
+			"query": {
+				"count": {
+					"$regex": true,
+					"$gte": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$regex",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "w1JdsZ3R8edK",
+			"query": {
+				"count": {
+					"$gt": null,
+					"$regex": null
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "pYBcpCQgxYlu",
+			"query": {
+				"count": {
+					"$gt": 42,
+					"$regex": 42
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "3.6.0..8.3.8"
+				}
+			]
+		},
+		{
+			"id": "dNxfZ2QpQPHM",
+			"query": {
+				"count": {
+					"$gt": true,
+					"$regex": true
+				}
+			},
+			"operators": [
+				{
+					"operator": "$gt",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"error": {
+						"message": "Can't canonicalize query: BadValue $regex has to be a string",
+						"code": 17287,
+						"type": "MongoError"
+					},
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"error": {
+						"message": "$regex has to be a string",
+						"code": 2,
+						"type": "MongoError"
+					},
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1436,7 +1445,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1444,7 +1453,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1551,7 +1560,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1559,7 +1568,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1591,7 +1600,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1599,7 +1608,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1700,7 +1709,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1708,7 +1717,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -1831,7 +1840,7 @@
 						"code": 17287,
 						"type": "MongoError"
 					},
-					"versions": "2.6.12..3.0.15"
+					"versions": "2.6.12,3.0.15"
 				},
 				{
 					"error": {
@@ -1839,7 +1848,7 @@
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.2.6..3.5.13"
+					"versions": "3.2.21..3.5.13"
 				},
 				{
 					"error": {
@@ -2008,417 +2017,6 @@
 				{
 					"documents": [],
 					"versions": "2.6.12..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "oOEBBOlQaW1v",
-			"query": {
-				"age.score": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "lqBycloGyGQV",
-			"query": {
-				"level": {
-					"$regex": {}
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "tYaAoM9MU3Rs",
-			"query": {
-				"status": {
-					"$regex": "Couple"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "byuKDlZLS9ko",
-			"query": {
-				"status": {
-					"$regex": "Abundant",
-					"$options": "Most"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						2
-					],
-					"versions": "3.3.15..5.0.33"
-				},
-				{
-					"error": {
-						"message": " invalid flag in regex options: M",
-						"code": 51108,
-						"type": "MongoServerError"
-					},
-					"versions": "6.0.28..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "lR7LDSOz6IZ5",
-			"query": {
-				"status": {
-					"$options": "Most",
-					"$regex": "Abundant"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [
-						2
-					],
-					"versions": "3.3.15..5.0.33"
-				},
-				{
-					"error": {
-						"message": " invalid flag in regex options: M",
-						"code": 51108,
-						"type": "MongoServerError"
-					},
-					"versions": "6.0.28..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "rj2FUF0xEoAx",
-			"query": {
-				"count": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "kWAwLFCzWCPI",
-			"query": {
-				"count": {
-					"$regex": "Much",
-					"$gte": "Each"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "tFdHqtZ0vWeX",
-			"query": {
-				"count": {
-					"$gt": "Heavy",
-					"$regex": "Neither"
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "vULJwEkWyR5b",
-			"query": {
-				"status": {},
-				"step": {},
-				"priority": {},
-				"capacity": {},
-				"attempts": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "bMVt2lH2nTzD",
-			"query": {
-				"status": {},
-				"step": {}
-			},
-			"operators": [],
-			"results": [
-				{
-					"documents": [],
-					"versions": "3.3.15..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "wztOCnOXdTYy",
-			"query": {
-				"count": {
-					"$regex": null,
-					"$gte": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "wLROtdkXcK1f",
-			"query": {
-				"count": {
-					"$regex": 42,
-					"$gte": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "t0NWSwzMUrTx",
-			"query": {
-				"count": {
-					"$regex": true,
-					"$gte": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$regex",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "w1JdsZ3R8edK",
-			"query": {
-				"count": {
-					"$gt": null,
-					"$regex": null
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "pYBcpCQgxYlu",
-			"query": {
-				"count": {
-					"$gt": 42,
-					"$regex": 42
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
-				}
-			]
-		},
-		{
-			"id": "dNxfZ2QpQPHM",
-			"query": {
-				"count": {
-					"$gt": true,
-					"$regex": true
-				}
-			},
-			"operators": [
-				{
-					"operator": "$gt",
-					"score": 1
-				}
-			],
-			"results": [
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.3.15..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$regex has to be a string",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.23..8.3.8"
 				}
 			]
 		}
