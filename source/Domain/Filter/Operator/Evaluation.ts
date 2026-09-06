@@ -1,6 +1,6 @@
 import { any, isString } from '@konfirm/guard';
 import { isRegex } from '../../BSON';
-import type { CompileStep, Evaluator, Query } from '../Compiler';
+import type { CompileContext, CompileStep, Evaluator } from '../Compiler';
 import { expression } from './Evaluation/Expression';
 import { schema as jsonSchema } from './Evaluation/Schema';
 import type { TextSearchOptions } from './Evaluation/Text';
@@ -62,12 +62,12 @@ const isRegexQuery = any(isRegex, isString);
  *          { <field>: { $regex: /pattern/<options> } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/regex/
  */
-export function $regex(query: RegExp | string, _: CompileStep, context: Partial<Query>): Evaluator {
+export function $regex(query: RegExp | string, _: CompileStep, context: CompileContext): Evaluator {
 	if (!isRegexQuery(query)) {
 		throw new Error("$regex requires a string or RegExp");
 	}
 
-	const { $options: flags } = context as Operation;
+	const { $options: flags } = context.query as Operation;
 	const regex = flags || typeof query === 'string' ? new RegExp(String(query), flags && String(flags)) : query;
 
 	return (input: unknown): boolean => regex.test(String(input));

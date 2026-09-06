@@ -108,12 +108,15 @@ export function $elemMatch(query: unknown, compile: CompileStep): Evaluator {
 	// itself be a container then, even for an empty query (basically the
 	// "no operator key present" condition).
 	const requiresContainer = !keys.some((key) => key.startsWith('$'));
-	const evaluate = keys.map((key) => compile({ [key]: query[key as keyof Query] }))
+	// compiled as one query object (not per-key) so sibling keys stay visible
+	// to each other — needed for e.g. $ref/$id, which are only recognized as
+	// literal DBRef fields when they co-occur in the same object.
+	const evaluate = compile(query);
 
 	return (input: unknown): boolean =>
 		isArray(input)
 		&& (input as Array<unknown>).some((value) =>
-			(!requiresContainer || isContainer(value)) && evaluate.every((evaluate) => evaluate(value))
+			(!requiresContainer || isContainer(value)) && evaluate(value)
 		);
 }
 
