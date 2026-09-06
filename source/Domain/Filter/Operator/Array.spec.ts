@@ -74,6 +74,38 @@ describe("Domain/Filter/Operator/Array", () => {
 			${{ $gte: 10, $lt: 20 }} | ${[15]}        | yes
 			${{ $gte: 10, $lt: 20 }} | ${[5]}         | no
 		`(compare($elemMatch));
+
+		it("rejects a non-object query", () => {
+			assert.throws(
+				() => ArrayOp.$elemMatch(42 as never, filter),
+				/\$elemMatch needs an Object/,
+				"$elemMatch rejects a non-object query",
+			);
+		});
+
+		it("rejects $where", () => {
+			assert.throws(
+				() => ArrayOp.$elemMatch({ $where: "this" } as never, filter),
+				/\$where can only be applied to the top-level document/,
+				"$elemMatch rejects $where",
+			);
+		});
+
+		it("rejects $text", () => {
+			assert.throws(
+				() => ArrayOp.$elemMatch({ $text: { $search: "foo" } } as never, filter),
+				/\$text can only be applied to the top-level document/,
+				"$elemMatch rejects $text",
+			);
+		});
+
+		it("rejects $expr", () => {
+			assert.throws(
+				() => ArrayOp.$elemMatch({ $expr: { $eq: ["$a", "$b"] } } as never, filter),
+				/\$expr can only be applied to the top-level document/,
+				"$elemMatch rejects $expr",
+			);
+		});
 	});
 
 	describe("$size", () => {

@@ -34,6 +34,24 @@ function assertValidSize(query: unknown): asserts query is number {
 	}
 }
 
+function assertElemMatch(query: unknown): asserts query is Query {
+	if (!isObject(query)) {
+		throw new Error('$elemMatch needs an Object');
+	}
+
+	Object.keys(query as object).forEach((key) => {
+		if (key === '$where') {
+			throw new Error('$where can only be applied to the top-level document');
+		}
+		if (key === '$text') {
+			throw new Error('$text can only be applied to the top-level document');
+		}
+		if (key === '$expr') {
+			throw new Error('$expr can only be applied to the top-level document');
+		}
+	});
+}
+
 /**
  * $all
  * Matches arrays that contain all elements specified in the query.
@@ -59,13 +77,7 @@ export function $all(query: Array<unknown>, compile: CompileStep): Evaluator {
 	}
 
 	if (elemMatchClauses.length) {
-		const evaluate = elemMatchClauses.map(({ $elemMatch: sub }) => {
-			if (!isObject(sub)) {
-				throw new Error('$elemMatch needs an Object');
-			}
-
-			return $elemMatch(sub as Query, compile);
-		});
+		const evaluate = elemMatchClauses.map(({ $elemMatch: sub }) => $elemMatch(sub, compile));
 
 		return (input: unknown): boolean => evaluate.every((evaluate) => evaluate(input));
 	}
@@ -81,7 +93,9 @@ export function $all(query: Array<unknown>, compile: CompileStep): Evaluator {
  * @syntax  { <field>: { $elemMatch: { <query1>, <query2>, ... } } }
  * @see     https://docs.mongodb.com/manual/reference/operator/query/elemMatch/
  */
-export function $elemMatch(query: Query, compile: CompileStep): Evaluator {
+export function $elemMatch(query: unknown, compile: CompileStep): Evaluator {
+	assertElemMatch(query);
+
 	const evaluate = Object.keys(query)
 		.map((key) => compile({ [key]: query[key as keyof Query] }))
 

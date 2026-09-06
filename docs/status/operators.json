@@ -54,7 +54,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Comparison.spec.ts"
 		],
-		"verified": 0.98
+		"verified": 1
 	},
 	"$lt": {
 		"working": "done",
@@ -75,7 +75,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Comparison.spec.ts"
 		],
-		"verified": 0.979
+		"verified": 1
 	},
 	"$nin": {
 		"working": "done",
@@ -131,7 +131,7 @@
 		"files": [
 			"source/Domain/Filter/Operator/Array.spec.ts"
 		],
-		"verified": 0.956
+		"verified": 1
 	},
 	"$size": {
 		"working": "doing",
@@ -141,10 +141,10 @@
 		"verified": 1
 	},
 	"$elemMatch": {
-		"working": "planned",
+		"working": "doing",
 		"files": [
 			"source/Domain/Filter/Operator/Array.spec.ts"
 		],
-		"verified": null
+		"verified": 0.857
 	}
 }
