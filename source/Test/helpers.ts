@@ -2,9 +2,8 @@ import * as assert from "node:assert/strict";
 import { it } from "node:test";
 
 export function pretty(value: unknown): string {
-	// JSON.stringify throws on bigint and stringifies symbol/function to
-	// undefined — neither is meaningful in a test title, so give them their
-	// own labels instead.
+	// JSON.stringify doesn't handle all the variables we'd like to present in
+	// unit test output, so we help it a bit
 	if (typeof value === 'symbol') return 'Symbol';
 	if (typeof value === 'bigint') return `BigInt(${value})`;
 	if (typeof value === 'function') return 'Function';
