@@ -66,6 +66,9 @@ export function $regex(query: RegExp | string, _: CompileStep, context: CompileC
 	if (!isRegexQuery(query)) {
 		throw new Error("$regex requires a string or RegExp");
 	}
+	if ((typeof query === 'string' ? query : query.source).includes('\0')) {
+		throw new Error('Regular expression cannot contain an embedded null byte');
+	}
 
 	const { $options: flags } = context.query as Operation;
 	const regex = flags || typeof query === 'string' ? new RegExp(String(query), flags && String(flags)) : query;

@@ -61,8 +61,15 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 
 	private condition(name: K, query: T, path: Array<string>): Evaluator {
 		const { [name]: value } = query;
-		// DBRef keys' own values are always compared literally
-		const asLiteral = !isObject(value) || DBRef.isKey(String(name));
+		// An object value is only an operator/condition expression if it has
+		// at least one $-prefixed key). Mixing a $ key with a non-$ key in the
+		// same object is its own, order-dependent mess ({$gt:5, extra:1} throws
+		// on "extra", but {extra:1, $gt:5} doesn't, and $elemMatch's own
+		// parsing isn't even consistent with plain nested fields on that),
+		// see docs/todo.md.
+		// DBRef keys' own values are always compared literally regardless.
+		const hasOperatorKey = isObject(value) && Object.keys(value as object).some((key) => key.startsWith('$'));
+		const asLiteral = !hasOperatorKey || DBRef.isKey(String(name));
 		const condition = asLiteral
 			? isRegex(value) ? { $regex: value } : { $eq: value }
 			: value;
@@ -94,11 +101,20 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 	}
 
 	compile(query: T, path: Array<string> = []): Evaluator {
-		const operation = Object.keys(query)
+		const keys = Object.keys(query)
 			// legacy $near supports sibling $min-/$maxDistance keys, which in turn should not be taken into consideration
 			// TODO: determine how to deal with these exceptions
-			.filter((key) => !['$minDistance', '$maxDistance'].includes(key) || !('$near' in query || '$nearSphere'))
-			.map((name) => this.operation(name as K, query, path));
+			.filter((key) => !['$minDistance', '$maxDistance'].includes(key) || !('$near' in query || '$nearSphere'));
+
+		// confirmed via mongo-catalog ground truth: real MongoDB rejects any
+		// key (field name or operator) containing a null byte, at every
+		// nesting level, not just the root document.
+		const invalidKey = keys.find((key) => key.includes('\0'));
+		if (invalidKey) {
+			throw new Error(`key ${invalidKey} must not contain null bytes`);
+		}
+
+		const operation = keys.map((name) => this.operation(name as K, query, path));
 
 		return (input: any) => operation.every((op) => op(input));
 	}
