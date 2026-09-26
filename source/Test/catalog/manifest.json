@@ -1,6 +1,6 @@
 {
-	"generated": "2026-09-06T20:55:34.802Z",
-	"latestCollectedVersion": "8.3.8",
+	"generated": "2026-09-23T06:57:33.271Z",
+	"latestCollectedVersion": "8.3.11",
 	"catalogs": [
 		{
 			"catalog": "array",
@@ -191,14 +191,32 @@
 		{
 			"catalog": "geo",
 			"file": "geo.json",
-			"operations": 35,
-			"taggedOperations": 35
+			"operations": 74,
+			"taggedOperations": 74
 		},
 		{
 			"catalog": "geoAntipodal",
 			"file": "geoAntipodal.json",
-			"operations": 31,
-			"taggedOperations": 31
+			"operations": 47,
+			"taggedOperations": 47
+		},
+		{
+			"catalog": "geoNearGeometry",
+			"file": "geoNearGeometry.json",
+			"operations": 58,
+			"taggedOperations": 58
+		},
+		{
+			"catalog": "geoNearMatrix",
+			"file": "geoNearMatrix.json",
+			"operations": 204,
+			"taggedOperations": 204
+		},
+		{
+			"catalog": "geoWithinIntersectsMatrix",
+			"file": "geoWithinIntersectsMatrix.json",
+			"operations": 60,
+			"taggedOperations": 60
 		},
 		{
 			"catalog": "logical",
@@ -244,10 +262,10 @@
 		}
 	],
 	"totals": {
-		"catalogs": 40,
+		"catalogs": 43,
 		"skippedCatalogs": 0,
-		"operations": 3460,
-		"taggedOperations": 3146
+		"operations": 3837,
+		"taggedOperations": 3523
 	},
 	"skipped": []
 }

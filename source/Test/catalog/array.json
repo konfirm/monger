@@ -1628,7 +1628,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1655,7 +1655,7 @@
 						14
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1679,7 +1679,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1703,7 +1703,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1742,7 +1742,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1776,7 +1776,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1808,7 +1808,7 @@
 						15
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1831,7 +1831,7 @@
 						4
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1859,7 +1859,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1884,7 +1884,7 @@
 						12
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1926,7 +1926,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1972,7 +1972,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2032,7 +2032,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2057,7 +2057,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2082,7 +2082,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2101,13 +2101,18 @@
 			],
 			"results": [
 				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.2.21"
+				},
+				{
 					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a non-negative number in: $size: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "3.3.6..8.3.11"
 				}
 			]
 		},
@@ -2126,13 +2131,18 @@
 			],
 			"results": [
 				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.2.21"
+				},
+				{
 					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected an integer: $size: 3.5",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "3.3.6..8.3.11"
 				}
 			]
 		},
@@ -2153,7 +2163,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2178,7 +2188,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2199,7 +2209,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2222,7 +2232,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2264,7 +2274,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2285,7 +2295,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2329,7 +2339,7 @@
 						18
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2357,7 +2367,7 @@
 						18
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2380,7 +2390,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2410,7 +2420,7 @@
 						14
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2458,7 +2468,7 @@
 						18
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2483,7 +2493,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2520,7 +2530,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2564,7 +2574,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2587,7 +2597,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2616,7 +2626,7 @@
 						19
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2642,7 +2652,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2660,7 +2670,7 @@
 						14
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2680,7 +2690,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2714,7 +2724,7 @@
 						18
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2740,7 +2750,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2771,7 +2781,7 @@
 						13
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2803,7 +2813,7 @@
 						17
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		}

@@ -1,0 +1,79 @@
+[
+	{
+		"reason": "dot-notation into array-of-subdocuments not implemented — see docs/todo.md",
+		"query": [
+			"j2LcEFzbd083", "vW955KXRzaI8", "uctCQArWHvPX", "j8IG6BDE1c3r",
+			"tVFoDXVRYxhX", "tYKZjCHLsaUr", "pZSK07zcaD8c", "uyXmwLGoFqU2",
+			"gnuGRrQgnlS8", "qxnZ0nlPDUsc", "rwUHaFE6Hg1t", "uTgLFYNfiYWC",
+			"k2y0X4YMsSwU", "vDVGxzYfAJVE", "w1V9Czgvvjk4", "qSPYODKmZ4IM",
+			"pJ7FcZbQrZKF", "oXnPaUHAZDSL", "alIEuMDtLJ03", "p3s8NZZuMEV0",
+			"eELJo2GVWifd", "gjIxhrpG6TJH", "wLkLoslNS5aN", "vbNy5LHxR3Wi",
+			"rT4jlkTowf5R", "wm9UPGCRr0VD", "ixQ1xoDvowef", "sPX2qU2BwZBH",
+			"aqnAgstoyUVR", "sCfVm4bL1KEn", "mBuRXQXBp15w", "vj2VOWVfZIQA",
+			"faDEI9meVFSX", "vNz72BpsdYgh", "rKvt3VP4kc95", "tH9qWTHytAhv",
+			"aaE549KBoV1l", "cpSLNjApVHcu", "fG3xqaDWVJAg", "tZGyeTLKzPFJ",
+			"mYBMFXAHuNfu"
+		],
+		"todo": true
+	},
+	{
+		"reason": "dot-notation through an array of non-document scalars not implemented — see docs/todo.md",
+		"query": ["bnSkQKLeVb9X", "f1dvF9gou80q"],
+		"todo": true
+	},
+	{
+		"reason": "dot-notation through an empty array not implemented — see docs/todo.md",
+		"query": ["sNvxQKeuu6rZ"],
+		"todo": true
+	},
+	{
+		"reason": "MongoDB throws 'Unable to find index for $geoNear query' if the required index type doesn't exist, Monger doesn't have such indices for $near/$nearSphere, so it evaluates the query as if the correct index is present, meaning it cannot throw such errors.",
+		"query": ["d0Dj8CqPwRxq", "wZSZbLEvmgyY"],
+		"expect": { "documents": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] }
+	},
+	{
+		"reason": "MongoDB throws 'Unable to find index for $geoNear query' if the required index type doesn't exist, Monger doesn't have such indices for $near/$nearSphere, so it evaluates the query as if the correct index is present, meaning it cannot throw such errors.",
+		"query": ["rNXCKVuGLZ4O", "bBLWN6OmOcZS"],
+		"expect": { "documents": [0, 1, 2, 3] }
+	},
+	{
+		"reason": "MongoDB throws 'Unable to find index for $geoNear query' if the required index type doesn't exist, Monger doesn't have such indices for $near/$nearSphere, so it evaluates the query as if the correct index is present, meaning it cannot throw such errors.",
+		"query": [
+			"c0qKaTE2k931", "nISdQKmPvUZI", "pkvz0BKyT1ii", "tU8Q4KXv65gr",
+			"aGMwNDG0OccO", "r9Q4I7usWyGN", "oWoJaW0INg8O", "rOOSAOkOTH6w",
+			"cNTKPoI4TbIM", "rJDdiCuOC60i", "njBSBTqzN0Ky", "u1pCyl3xbc2K",
+			"qtNEGXBNCQY9"
+		],
+		"expect": { "documents": [0, 1, 2, 3, 4, 5, 6, 7] }
+	},
+	{
+		"reason": "MongoDB throws 'Unable to find index for $geoNear query' if the required index type doesn't exist, Monger doesn't have such indices for $near/$nearSphere, so it evaluates the query as if the correct index is present, meaning it cannot throw such errors.",
+		"query": ["mUTQF859wKYD", "rKOCkWUgTJ69", "qLXyvdv6HW43", "vXfQ2hmVPZ5o"],
+		"expect": { "documents": [] }
+	},
+	{
+		"reason": "Monger doesn't implement the actual MongoDB legacy coordinate calculations, instead it promotes the legacy shapes to GeoJSON and as such basically becomes too accurate on the spherical distance. In order to match the legacy calculations better Monger uses an approximation of the real 2d map math, which works great (and cheap) but doesn't produce the same result for (quite literal) edge cases on the seam with a radius spanning about half the planet. The query searches from [-179.95, 10] for anything within ~20,091 km (3.15 radians). Doc 7, at [179, 70], is actually only ~6,680 km away (1.047 radians) so MongoDB matches it, but Monger doesn't. Using a smaller search radius (distance) further away from half the planet will resolve this for legacy coordinates, but the real fix is to use GeoJSON for coordinates.",
+		"query": ["i7xMnn1IWrc8"],
+		"expect": { "documents": [1, 4, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24] }
+	},
+	{
+		"reason": "$geoWithin polygon edge cases: a point sitting exactly on a polygon's boundary (a vertex or an edge) doesn't always get the same inside/outside answer as real MongoDB. Traced to @konfirm/geojson's intersect(), not monger's own code. Partially fixed by updating to geojson 2.2.0-beta.0 (2026-09-24, fixed geoAntipodal#30 — the reversed-winding equator-vertex case) but 3 remain: the forward-winding equator vertex, and two points sitting exactly on a meridian edge of a polar-wedge-shaped ring. See research/geojson-boundary-point-inclusion.md.",
+		"query": ["bzYR0u5eVGgB", "rWeWSiFPCV9f", "m2U0qZiSHRMz"],
+		"todo": true
+	},
+	{
+		"reason": "Legacy $polygon triangle mystery: monger's result matches an independently-computed, from-scratch planar point-in-triangle test exactly, but not real MongoDB's actual matched-document set, and no geometric model tried so far explains the disagreement. See research/legacy-polygon-triangle-mystery.md.",
+		"query": ["erzyShLLGMP4", "wqeV19aVmYbd"],
+		"todo": true
+	},
+	{
+		"reason": "Real MongoDB's legacy $polygon (2d index) sometimes excludes a point that sits exactly on one of the polygon's edges, but not consistently: axis-aligned edges and some diagonal slopes include the point, other diagonal slopes (including this one) exclude it. Tested reversing the polygon's winding and rotating which vertex the ring starts at — neither explains the pattern. Looks like a floating-point quirk in whatever edge-crossing check the legacy algorithm uses internally, not a describable geometric rule, and only ever matters when a point's coordinates land exactly on a polygon edge — not chased further.",
+		"query": ["uyWPoH8qV10L"],
+		"todo": true
+	},
+	{
+		"reason": "$geoIntersects: an overlapping/collinear LineString not detected as intersecting another LineString. Traced to @konfirm/geojson's intersect() (verified with standalone repros bypassing monger entirely), filed as konfirm/geojson#30. A related case (a line touching a query Polygon at exactly one vertex, filed as #31) was fixed upstream in 2.2.0-beta.4 — this one is still open. See research/geojson-linestring-intersect-edge-cases.md.",
+		"query": ["dMkIzHbrjKUg", "u2lf1lwYKklI"],
+		"todo": true
+	}
+]

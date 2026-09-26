@@ -1,32 +1,38 @@
 {
 	"$near": {
-		"working": "planned",
-		"files": [
-			"source/Domain/Filter/Operator/Geospatial.spec.ts"
-		],
-		"verified": 0.667
-	},
-	"$nearSphere": {
-		"working": "planned",
-		"files": [
-			"source/Domain/Filter/Operator/Geospatial.spec.ts"
-		],
-		"verified": 0.867
-	},
-	"$geoWithin": {
-		"working": "planned",
+		"working": "doing",
 		"files": [
 			"source/Domain/Filter/Operator/Geospatial.spec.ts",
-			"source/Domain/Filter/Operator/Geospatial/Within.spec.ts"
+			"source/Domain/Filter/Operator/Geospatial/Legacy.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Distance.spec.ts"
 		],
-		"verified": 0.71
+		"verified": 1
+	},
+	"$nearSphere": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Legacy.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Distance.spec.ts"
+		],
+		"verified": 1
+	},
+	"$geoWithin": {
+		"working": "doing",
+		"files": [
+			"source/Domain/Filter/Operator/Geospatial.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Within.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Legacy.spec.ts",
+			"source/Domain/Filter/Operator/Geospatial/Distance.spec.ts"
+		],
+		"verified": 0.927
 	},
 	"$geoIntersects": {
-		"working": "planned",
+		"working": "doing",
 		"files": [
 			"source/Domain/Filter/Operator/Geospatial.spec.ts"
 		],
-		"verified": 0.444
+		"verified": 0.946
 	},
 	"$eq": {
 		"working": "done",

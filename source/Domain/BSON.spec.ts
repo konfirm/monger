@@ -12,6 +12,7 @@ describe("Domain/BSON", () => {
 		"isBSONAlias",
 		"type",
 		"is",
+		"render",
 		"isArray",
 		"isObject",
 		"isUndefined",
@@ -70,6 +71,91 @@ describe("Domain/BSON", () => {
 		});
 		it("Symbol is symbol", () => {
 			assert.equal(BSON.type(Symbol()), "symbol");
+		});
+	});
+
+	// render() reproduces MongoDB's own internal BSON debug-print format —
+	// confirmed against real MongoDB (mongo-catalog's geoNearMatrix/
+	// geoNearGeometry catalogs + direct docker verification, 2026-09-19/20),
+	// not derived from documentation. See plans/bson-render.md for the full
+	// investigation and source citations. Several cases below are
+	// regression tests for two real bugs found while reviewing the merge of
+	// this rendering logic into BSON.ts's classifiers (2026-09-21): a plain
+	// classifiers.find() that (before being routed through detect()) let
+	// the unconditional "double" catch-all silently swallow every value
+	// ahead of its real classifier, and an Array#map(render) that (before
+	// being wrapped) silently passed the array index as the
+	// topLevelArrayAsObject parameter, corrupting every odd-indexed element.
+	describe("render", () => {
+		each`
+			input        | expected
+			-------------|----------
+			${null}      | ${'null'}
+			${NaN}       | ${'nan'}
+			${Infinity}  | ${'inf'}
+			${-Infinity} | ${'-inf'}
+			${3.14}      | ${'3.14'}
+			${0}         | ${'0'}
+			${true}      | ${'true'}
+			${false}     | ${'false'}
+			${''}        | ${'""'}
+			hello        | ${'"hello"'}
+			${/foo/}     | ${'/foo/'}
+			${/foo/gi}   | ${'/foo/gi'}
+			${{}}        | ${'{}'}
+			${[]}        | ${'[]'}
+		`(({ input, expected }: Record<string, unknown>) => {
+			it(`render(${pretty(input)}) is ${expected}`, () => {
+				assert.equal(BSON.render(input), expected);
+			});
+		});
+
+		it("Date renders as new Date(<epoch millis>) — confirmed against real MongoDB; not ISODate(...) or Date#toString(), both plausible-looking wrong guesses", () => {
+			const date = new Date("2026-09-20T12:00:00Z");
+
+			assert.equal(BSON.render(date), `new Date(${date.getTime()})`);
+		});
+
+		describe("objects and nested arrays", () => {
+			it("plain object with simple keys, unquoted", () => {
+				assert.equal(BSON.render({ x: 5.9, y: 52 }), "{ x: 5.9, y: 52 }");
+			});
+			it("nested array uses ordinary brackets, never the numeric-keyed object form", () => {
+				assert.equal(BSON.render({ coordinates: [5.9, 52] }), "{ coordinates: [ 5.9, 52 ] }");
+			});
+			it("array of arrays — every element renders consistently, not just index 0 (regression)", () => {
+				assert.equal(
+					BSON.render({ coordinates: [[1, 2], [3, 4], [5, 6], [7, 8]] }),
+					"{ coordinates: [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ] }",
+				);
+			});
+			it("deeply nested object", () => {
+				assert.equal(
+					BSON.render({ type: "Feature", geometry: { type: "Point", coordinates: [5.9, 52] }, properties: {} }),
+					'{ type: "Feature", geometry: { type: "Point", coordinates: [ 5.9, 52 ] }, properties: {} }',
+				);
+			});
+		});
+
+		describe("topLevelArrayAsObject", () => {
+			it("defaults to leaving a top-level array as an array", () => {
+				assert.equal(BSON.render([5.9, 52]), "[ 5.9, 52 ]");
+			});
+			it("explicit true renders a top-level array as a numeric-keyed object — confirmed MongoDB quirk specific to the $near/$nearSphere $geometry-echoing context, not assumed as render()'s general behavior", () => {
+				assert.equal(BSON.render([5.9, 52], true), "{ 0: 5.9, 1: 52 }");
+			});
+			it("explicit true on an empty array", () => {
+				assert.equal(BSON.render([], true), "{}");
+			});
+			it("true only affects the outermost value, not a nested array", () => {
+				assert.equal(BSON.render({ coordinates: [5.9, 52] }, true), "{ coordinates: [ 5.9, 52 ] }");
+			});
+			it("true on an array of arrays only converts the outer array — every element consistent, not just index 0 (regression)", () => {
+				assert.equal(
+					BSON.render([[5.9, 52], [5.91, 52.01]], true),
+					"{ 0: [ 5.9, 52 ], 1: [ 5.91, 52.01 ] }",
+				);
+			});
 		});
 	});
 

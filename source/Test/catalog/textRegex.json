@@ -273,7 +273,8 @@
 						20,
 						21
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -305,7 +306,8 @@
 						21,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -325,7 +327,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -359,7 +362,8 @@
 						21,
 						22
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -384,7 +388,8 @@
 						11,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -417,7 +422,8 @@
 						21,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -448,7 +454,8 @@
 						23,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -468,7 +475,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -493,7 +501,8 @@
 						13,
 						23
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -516,7 +525,8 @@
 						16,
 						21
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -536,7 +546,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -560,7 +571,8 @@
 						24,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -585,7 +597,8 @@
 						21,
 						23
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -609,7 +622,8 @@
 						13,
 						15
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -635,7 +649,8 @@
 						20,
 						21
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -666,7 +681,8 @@
 						24,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -697,7 +713,8 @@
 						22,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -730,7 +747,8 @@
 						21,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -755,7 +773,8 @@
 						13,
 						23
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -786,7 +805,8 @@
 						24,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -822,7 +842,16 @@
 						"code": 51091,
 						"type": "MongoServerError"
 					},
-					"versions": "4.1.9..8.3.8"
+					"versions": "4.1.9..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Regular expression is invalid: missing terminating ] for character class",
+						"code": 51091,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -851,7 +880,16 @@
 						"code": 51108,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": " invalid flag in regex options: y",
+						"code": 51108,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -959,7 +997,8 @@
 						5,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1051,7 +1090,8 @@
 						12,
 						6
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1207,7 +1247,8 @@
 						19,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1303,7 +1344,8 @@
 						13,
 						11
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1412,7 +1454,8 @@
 						5,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1509,7 +1552,8 @@
 						7,
 						4
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1600,7 +1644,8 @@
 						10,
 						5
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1694,7 +1739,8 @@
 						5,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1723,7 +1769,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.2.6..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..8.3.11"
 				}
 			]
 		},
@@ -1805,7 +1852,8 @@
 						12,
 						6
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1899,7 +1947,8 @@
 						5,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1993,7 +2042,8 @@
 						5,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2055,7 +2105,8 @@
 						7,
 						4
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2141,7 +2192,8 @@
 						7,
 						4
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2251,7 +2303,8 @@
 						19,
 						9
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2271,7 +2324,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2317,7 +2371,8 @@
 						24,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2363,7 +2418,8 @@
 						24,
 						25
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2385,7 +2441,8 @@
 					"documents": [
 						17
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2409,7 +2466,8 @@
 						18,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2433,7 +2491,8 @@
 						20,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2456,7 +2515,8 @@
 						17,
 						24
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		}

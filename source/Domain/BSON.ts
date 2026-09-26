@@ -47,22 +47,58 @@ type TypeClassifier = {
 	group: ECMAType | "unknown";
 	priority: number;
 	is: (input: unknown) => boolean;
+	render?: (input: unknown, render: (input: unknown) => string) => string;
 };
 type TypeIdentifier = TypeClassifier["id"] | TypeClassifier["alias"];
 
-const detectors: Array<TypeClassifier> = [
+const classifiers: Array<TypeClassifier> = [
 	// A number is always a double at the language level
 	// MongoDB promotes it to int32 when the value is an integer and fits
 	// the range
-	{ id: 1, alias: "double", group: "number", is: () => true, priority: 0 },
-	{ id: 2, alias: "string", group: "string", is: () => true, priority: 0 },
-	{ id: 3, alias: "object", group: "object", is: () => true, priority: 0 },
+	{
+		id: 1,
+		alias: "double",
+		group: "number",
+		is: () => true,
+		priority: 0,
+		render: (input) =>
+			Number.isNaN(input)
+				? "nan"
+				: input === Infinity
+					? "inf"
+					: input === -Infinity
+						? "-inf"
+						: String(input),
+	},
+	{
+		id: 2,
+		alias: "string",
+		group: "string",
+		is: () => true,
+		priority: 0,
+		render: (input) => JSON.stringify(input),
+	},
+	{
+		id: 3, alias: "object", group: "object", is: () => true, priority: 0, render: (input, render) => {
+			const inner = Object.entries(input as Record<string, unknown>).map(([key, value]) => `${key}: ${render(value)}`).join(', ');
+
+			return inner ? `{ ${inner} }` : '{}';
+	} },
 	{
 		id: 4,
 		alias: "array",
 		group: "object",
 		is: (v) => Array.isArray(v),
 		priority: 1,
+		render: (input, render) => {
+			// not .map(render) directly: Array#map's callback also receives
+			// (element, index, array), and render's 2nd parameter happens to
+			// be the topLevelArrayAsObject flag — a truthy index (1, 3, ...)
+			// would silently flip that flag on for that one element.
+			const inner = (input as Array<unknown>).map((value) => render(value)).join(', ');
+
+			return inner ? `[ ${inner} ]` : `[]`;
+		}
 	},
 	{ id: 5, alias: "binData", group: "unknown", is: () => false, priority: 1 },
 	{
@@ -71,6 +107,7 @@ const detectors: Array<TypeClassifier> = [
 		group: "undefined",
 		is: () => true,
 		priority: 0,
+		render: () => 'undefined',
 	},
 	{ id: 7, alias: "objectId", group: "unknown", is: () => false, priority: 1 },
 	{ id: 8, alias: "bool", group: "boolean", is: () => true, priority: 0 },
@@ -80,6 +117,7 @@ const detectors: Array<TypeClassifier> = [
 		group: "object",
 		is: (v) => v instanceof Date,
 		priority: 1,
+		render: (input) => `new Date(${Number(input)})`,
 	},
 	{
 		id: 10,
@@ -87,6 +125,7 @@ const detectors: Array<TypeClassifier> = [
 		group: "object",
 		is: (v) => v === null,
 		priority: 1,
+		render: () => "null",
 	},
 	{
 		id: 11,
@@ -140,17 +179,17 @@ const detectors: Array<TypeClassifier> = [
 	{ id: -1, alias: "minKey", group: "unknown", is: () => false, priority: 1 },
 	{ id: 127, alias: "maxKey", group: "unknown", is: () => false, priority: 1 },
 ];
-const ordered: Array<TypeClassifier> = detectors.sort(
+const ordered: Array<TypeClassifier> = classifiers.sort(
 	({ priority: one }, { priority: two }) =>
 		one > two ? -1 : Number(one < two),
 );
 
 export function isBSONID(...values: Array<unknown>): boolean {
-	return values.every((id) => detectors.some((det) => det.id === id));
+	return values.every((id) => classifiers.some((det) => det.id === id));
 }
 
 export function isBSONAlias(...values: Array<unknown>): boolean {
-	return values.every((alias) => detectors.some((det) => det.alias === alias));
+	return values.every((alias) => classifiers.some((det) => det.alias === alias));
 }
 
 function detect(value: unknown): TypeClassifier {
@@ -173,6 +212,23 @@ export function is(...type: Array<TypeIdentifier>): Evaluator {
 		type.indexOf(id) >= 0 || type.indexOf(alias) >= 0;
 
 	return (input: unknown): boolean => includes(detect(input));
+}
+
+export function render(input: unknown, topLevelArrayAsObject?: boolean): string {
+	if (topLevelArrayAsObject && Array.isArray(input)) {
+		return render(Object.fromEntries(input.map((value, index) => [index, value])), false);
+	}
+
+	// must go through detect() (group-filtered, priority-ordered), not a
+	// bare classifiers.find() — several is() predicates are unconditional
+	// catch-alls (double, string, undefined, bool, javascript, symbol,
+	// long) only ever safe to reach after that filtering narrows down to
+	// the matching typeof group first. A raw find() over classifiers in
+	// declaration order matches "double" (id 1, is: () => true) for
+	// almost anything, since it's declared before every other catch-all.
+	const { render: renderer = String } = detect(input) ?? {};
+
+	return renderer(input, render);
 }
 
 //  Common type detectors

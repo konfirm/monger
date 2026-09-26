@@ -9,10 +9,20 @@ type TestEvent = { type: string; data: any };
 
 const root = resolve(__dirname, '..');
 const statusPath = resolve(root, 'docs', 'status', 'operators.json');
-// Catalog.spec.ts is the generic ground-truth runner: it self-filters by
-// reading operators.json at test time, so (unlike the hand-written unit
-// test files) it's never declared under any single operator's `files`.
-const catalogRunner = 'source/Test/Catalog.spec.ts';
+// Files that never belong under any single operator's `files`, so the
+// normal per-operator discovery below would never find them at all — not
+// "always run regardless of status", just "always discoverable". Catalog.
+// spec.ts is the generic ground-truth runner, self-filtering by reading
+// operators.json at test time. BSON.spec.ts/Field.spec.ts are shared
+// infrastructure, not operators themselves — confirmed missing from every
+// operator's files array (2026-09-21), meaning they'd silently never run
+// via npm test/test:full otherwise, discovered only by chance when someone
+// invokes them directly.
+const alwaysInclude = [
+	'source/Test/Catalog.spec.ts',
+	'source/Domain/BSON.spec.ts',
+	'source/Domain/Field.spec.ts',
+];
 
 type OperatorStatus = {
 	working: 'done' | 'hold' | 'doing' | 'planned';
@@ -51,7 +61,7 @@ async function main() {
 		return;
 	}
 
-	const files = new Set<string>([catalogRunner]);
+	const files = new Set<string>(alwaysInclude);
 	active.forEach(({ files: opFiles }) => opFiles.forEach((f) => files.add(f)));
 
 	// A "done" operator no longer needs its own line — fold it into its

@@ -214,7 +214,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -237,7 +237,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -260,7 +260,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -283,7 +283,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -304,11 +304,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$not needs a regex or a document",
+						"message": "$not argument must be a regex or an object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -329,11 +329,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$not needs a regex or a document",
+						"message": "$not argument must be a regex or an object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -354,11 +354,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$not needs a regex or a document",
+						"message": "$not argument must be a regex or an object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -379,11 +379,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$nor must be an array",
+						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -404,11 +404,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$or/$and/$nor entries need to be full objects",
+						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -437,11 +437,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "Executor error during find command :: caused by :: can't $divide by zero",
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -470,11 +470,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not string and int",
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and int",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -503,11 +503,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not string and double",
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and double",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -536,11 +536,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not bool and int",
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not bool and int",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -569,11 +569,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "Executor error during find command :: caused by :: $divide only supports numeric types, not bool and double",
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not bool and double",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -602,16 +602,16 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$expr is not allowed in this context",
+						"message": "unknown top level operator: $expr",
 						"code": 2,
 						"type": "MongoError"
 					},
-					"versions": "3.3.15..3.5.13"
+					"versions": "2.6.12..3.5.13"
 				},
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.6.23..8.3.8"
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -625,7 +625,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -639,7 +639,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -653,7 +653,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -667,7 +667,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -688,7 +688,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -709,7 +709,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -733,7 +733,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -757,7 +757,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -771,7 +771,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -785,7 +785,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -806,7 +806,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -848,7 +848,7 @@
 						20
 					],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -869,7 +869,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..3.6.23,4.0.28"
+					"versions": "2.6.12..3.5.13,3.6.6..3.6.23,4.0.1..4.1.7"
 				},
 				{
 					"documents": "@Undefined/und",
@@ -878,7 +878,7 @@
 						"code": 51091,
 						"type": "MongoServerError"
 					},
-					"versions": "3.7.9,4.1.13..8.3.8"
+					"versions": "3.6.0..3.6.5,3.7.1..4.0.0,4.1.9..8.3.11"
 				}
 			]
 		},
@@ -899,7 +899,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..3.6.23,4.0.28"
+					"versions": "2.6.12..3.5.13,3.6.6..3.6.23,4.0.1..4.1.7"
 				},
 				{
 					"documents": "@Undefined/und",
@@ -908,7 +908,7 @@
 						"code": 51091,
 						"type": "MongoServerError"
 					},
-					"versions": "3.7.9,4.1.13..8.3.8"
+					"versions": "3.6.0..3.6.5,3.7.1..4.0.0,4.1.9..8.3.11"
 				}
 			]
 		},
@@ -930,7 +930,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..5.0.33"
+					"versions": "2.6.12..5.0.33"
 				},
 				{
 					"documents": "@Undefined/und",
@@ -939,7 +939,7 @@
 						"code": 51108,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.28..8.3.8"
+					"versions": "6.0.1..8.3.11"
 				}
 			]
 		},
@@ -961,7 +961,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..5.0.33"
+					"versions": "2.6.12..5.0.33"
 				},
 				{
 					"documents": "@Undefined/und",
@@ -970,7 +970,7 @@
 						"code": 51108,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.28..8.3.8"
+					"versions": "6.0.1..8.3.11"
 				}
 			]
 		},
@@ -998,7 +998,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1022,7 +1022,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1047,7 +1047,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1074,7 +1074,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1099,7 +1099,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1124,7 +1124,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1149,7 +1149,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1168,13 +1168,18 @@
 			],
 			"results": [
 				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.2.21"
+				},
+				{
 					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a number in: $size: \"not a number\"",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "3.3.6..8.3.11"
 				}
 			]
 		},
@@ -1193,13 +1198,18 @@
 			],
 			"results": [
 				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.2.21"
+				},
+				{
 					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected a non-negative number in: $size: -1",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "3.3.6..8.3.11"
 				}
 			]
 		},
@@ -1218,13 +1228,18 @@
 			],
 			"results": [
 				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.2.21"
+				},
+				{
 					"documents": "@Undefined/und",
 					"error": {
 						"message": "Failed to parse $size. Expected an integer: $size: 1.5",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "3.3.6..8.3.11"
 				}
 			]
 		},
@@ -1249,7 +1264,7 @@
 						"code": 9,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1274,7 +1289,7 @@
 						"code": 9,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1301,7 +1316,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1328,7 +1343,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1353,11 +1368,11 @@
 				{
 					"documents": "@Undefined/und",
 					"error": {
-						"message": "$not needs a regex or a document",
+						"message": "$not argument must be a regex or an object",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1380,7 +1395,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1406,7 +1421,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1430,7 +1445,7 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1444,7 +1459,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1458,7 +1473,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1472,7 +1487,7 @@
 				{
 					"documents": [],
 					"error": "@Undefined/und",
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1490,7 +1505,7 @@
 						"code": "@Undefined/und",
 						"type": "BSONError"
 					},
-					"versions": "3.3.15..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		}

@@ -1,13 +1,14 @@
+import { isObject, isRegex } from '../BSON';
+import { accessor } from '../Field';
+import * as DBRef from './DBRef';
 import type { Operation as ArrayOperation } from './Operator/Array';
 import type { Operation as BitwiseOperation } from './Operator/Bitwise';
 import type { Operation as ComparisonOperation } from './Operator/Comparison';
 import type { Operation as ElementOperation } from './Operator/Element';
 import type { Operation as EvaluationOperation } from './Operator/Evaluation';
-import type { Operation as LogicalOperation } from './Operator/Logical';
 import type { Operation as GeospatialOperation } from './Operator/Geospatial';
-import { accessor } from '../Field';
-import { isObject, isRegex } from '../BSON';
-import * as DBRef from './DBRef';
+import type { Operation as LogicalOperation } from './Operator/Logical';
+import * as SiblingKey from './SiblingKey';
 
 
 // This shape is a pure per-document predicate: it can decide match/no-match
@@ -92,6 +93,10 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 				return this.delegate(name, query, path);
 			}
 
+			if (SiblingKey.isClaimed(String(name), query)) {
+				return () => true;
+			}
+
 			throw new Error(`Unrecognized operator: '${String(name)}'`);
 		}
 
@@ -101,10 +106,7 @@ export class Compiler<T extends Partial<Query> = Partial<Query>, K extends keyof
 	}
 
 	compile(query: T, path: Array<string> = []): Evaluator {
-		const keys = Object.keys(query)
-			// legacy $near supports sibling $min-/$maxDistance keys, which in turn should not be taken into consideration
-			// TODO: determine how to deal with these exceptions
-			.filter((key) => !['$minDistance', '$maxDistance'].includes(key) || !('$near' in query || '$nearSphere'));
+		const keys = Object.keys(query);
 
 		// confirmed via mongo-catalog ground truth: real MongoDB rejects any
 		// key (field name or operator) containing a null byte, at every

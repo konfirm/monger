@@ -2,7 +2,7 @@ import type { Query } from './Compiler';
 
 // MongoDB's legacy DBRef convention: {$ref, $id, $db} identifies a document
 // in another collection/database. A document convention that Monger has no
-// concept of collections (let alone databases)
+// way to interpret, as it has no concept of collections (let alone databases)
 // the exact rules are position-dependent:
 // - top-level: $ref/$id/$db are each accepted individually as literal
 //   fields, no co-occurrence required.

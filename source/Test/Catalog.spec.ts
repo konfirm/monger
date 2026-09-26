@@ -12,6 +12,7 @@
 // MongoDB version did".
 
 import { after, test } from 'node:test';
+import * as assert from 'node:assert/strict';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { filter } from '../Domain/Filter';
@@ -19,6 +20,7 @@ import { deserialize } from './deserialize';
 
 const statusPath = resolve(__dirname, '..', '..', 'docs', 'status', 'operators.json');
 const catalogDir = resolve(__dirname, 'catalog');
+const overridesPath = resolve(__dirname, 'catalog-overrides.json');
 
 type OperatorStatus = {
 	working: 'planned' | 'hold' | 'doing' | 'done';
@@ -38,12 +40,63 @@ type CatalogFile = {
 	operations: Array<CatalogOperation>;
 };
 
-const status: Record<string, OperatorStatus> = JSON.parse(readFileSync(statusPath, 'utf8'));
-const active = new Set(
-	Object.entries(status)
-		.filter(([, s]) => s.working === 'doing' || s.working === 'done')
-		.map(([operator]) => operator)
-);
+// The outcome to diff monger's actual output against — either raw ground
+// truth (normalized down to this same shape) or a CatalogOverride's
+// `expect`. Normalizing both to one shape up front (rather than branching
+// on "is this ground truth or an override" throughout the comparison logic
+// below) is what keeps that logic a single path regardless of the source.
+type ExpectedOutcome = { error: true } | { documents: Array<number> };
+
+// A single entry can override many operations sharing one `reason` (e.g.
+// today's ~40 "dot-notation into array-of-subdocuments" cases) rather than
+// repeating the reason per id. `todo` and `expect` are independent, not
+// alternatives: `expect` decides *what* to compare against (ground truth by
+// default, this value if given); `todo` decides *how* a mismatch is
+// reported (hard failure by default, an expected/todo failure — with
+// surprise-pass visibility if it starts matching — if set). At least one of
+// the two must be set, or the entry does nothing and is a config mistake.
+type CatalogOverride = {
+	reason: string;
+	query: Array<string>;
+	todo?: boolean;
+	expect?: ExpectedOutcome;
+};
+
+function isExpectedOutcome(value: unknown): value is ExpectedOutcome {
+	return (
+		!!value && typeof value === 'object' &&
+		(('error' in value && (value as { error: unknown }).error === true) ||
+			('documents' in value && Array.isArray((value as { documents: unknown }).documents)))
+	);
+}
+
+function loadOverrides(): Map<string, CatalogOverride> {
+	const raw: Array<CatalogOverride> = JSON.parse(readFileSync(overridesPath, 'utf8'));
+	const byId = new Map<string, CatalogOverride>();
+
+	raw.forEach((entry, index) => {
+		if (!entry.reason || !entry.query?.length) {
+			throw new Error(`catalog-overrides.json[${index}]: "reason" and a non-empty "query" are required`);
+		}
+		if (!entry.todo && !entry.expect) {
+			throw new Error(`catalog-overrides.json[${index}] ("${entry.reason}"): needs "todo", "expect", or both — an override doing neither is a mistake, not a no-op`);
+		}
+		if (entry.expect && !isExpectedOutcome(entry.expect)) {
+			throw new Error(`catalog-overrides.json[${index}] ("${entry.reason}"): "expect" must be { documents: number[] } or { error: true }`);
+		}
+
+		entry.query.forEach((id) => {
+			if (byId.has(id)) {
+				throw new Error(`catalog-overrides.json: id "${id}" is claimed by more than one override entry`);
+			}
+			byId.set(id, entry);
+		});
+	});
+
+	return byId;
+}
+
+const overrides = loadOverrides();
 
 type Version = [number, number, number];
 
@@ -70,25 +123,47 @@ function latestResult(results: Array<CatalogResult>): CatalogResult {
 		compareVersions(highestVersionIn(current.versions), highestVersionIn(latest.versions)) > 0 ? current : latest
 	);
 }
+function outcomeOf(result: CatalogResult): ExpectedOutcome {
+	return result.error !== undefined ? { error: true } : { documents: result.documents ?? [] };
+}
+
+const status: Record<string, OperatorStatus> = JSON.parse(readFileSync(statusPath, 'utf8'));
+const active = new Set(
+	Object.entries(status)
+		.filter(([, s]) => s.working === 'doing' || s.working === 'done')
+		.map(([operator]) => operator)
+);
 
 type RunnableOperation = {
 	id: string;
 	catalog: string;
 	query: Record<string, unknown>;
 	records: Array<Record<string, unknown>>;
-	expected: CatalogResult;
+	expected: ExpectedOutcome;
 	operators: Array<string>;
 };
 
+// Every operation id seen across the catalog, active-filtered or not — used
+// to validate overrides reference something real. Kept separate from
+// `runnable` (the active-filtered subset actually under test) so an
+// override for an operator that's currently "planned"/"hold" doesn't get
+// wrongly flagged as stale just because nothing's exercising it this run.
+const allIds = new Set<string>();
 const runnable = new Map<string, RunnableOperation>();
 
-if (active.size) {
+{
 	const files = readdirSync(catalogDir).filter((f) => f.endsWith('.json') && f !== 'manifest.json');
 
 	for (const file of files) {
 		const data = deserialize<CatalogFile>(readFileSync(resolve(catalogDir, file), 'utf8'));
 
 		for (const op of data.operations) {
+			allIds.add(op.id);
+
+			if (!active.size) {
+				continue;
+			}
+
 			// A query with no $-prefixed key anywhere (implicit equality,
 			// e.g. {field: "x"} or {field: {}}) is intentionally left
 			// untagged by mongo-catalog's own classification — it's still
@@ -114,12 +189,22 @@ if (active.size) {
 				catalog: data.catalog,
 				query: op.query,
 				records: data.collection.records,
-				expected: latestResult(op.results),
+				expected: outcomeOf(latestResult(op.results)),
 				operators: matched,
 			});
 		}
 	}
 }
+
+test('Domain/Test/Catalog - overrides reference real operations', () => {
+	const stale = [...overrides.entries()].filter(([id]) => !allIds.has(id));
+
+	assert.deepEqual(
+		stale.map(([id, { reason }]) => `${id} ("${reason}")`),
+		[],
+		'catalog-overrides.json has entries whose id no longer matches any catalog operation — the query it pointed at changed or was removed, the override needs updating',
+	);
+});
 
 const tally = new Map<string, { pass: number; total: number }>();
 
@@ -134,69 +219,14 @@ function record(operators: Array<string>, passed: boolean): void {
 	}
 }
 
-// Known, already-diagnosed gaps unrelated to the operator they happen to be
-// tagged with — tracked in docs/todo.md rather than left as unexplained
-// noise in whichever operator's active run surfaces them.
-const knownIssues: Record<string, string> = {
-	j2LcEFzbd083: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	vW955KXRzaI8: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	uctCQArWHvPX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	j8IG6BDE1c3r: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	tVFoDXVRYxhX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	tYKZjCHLsaUr: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	pZSK07zcaD8c: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	// Newly surfaced once implicit-equality queries (operators: []) started
-	// being exercised at all (previously silently skipped) — same root
-	// cause as the ids above, not individually diagnosed to their exact
-	// sub-variant (array-of-subdocuments vs. non-document scalars vs.
-	// empty array) since the label is for human legibility only.
-	uyXmwLGoFqU2: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	gnuGRrQgnlS8: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	qxnZ0nlPDUsc: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	rwUHaFE6Hg1t: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	uTgLFYNfiYWC: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	k2y0X4YMsSwU: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	vDVGxzYfAJVE: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	w1V9Czgvvjk4: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	qSPYODKmZ4IM: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	pJ7FcZbQrZKF: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	oXnPaUHAZDSL: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	alIEuMDtLJ03: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	p3s8NZZuMEV0: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	eELJo2GVWifd: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	gjIxhrpG6TJH: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	wLkLoslNS5aN: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	vbNy5LHxR3Wi: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	rT4jlkTowf5R: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	wm9UPGCRr0VD: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	ixQ1xoDvowef: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	sPX2qU2BwZBH: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	aqnAgstoyUVR: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	sCfVm4bL1KEn: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	mBuRXQXBp15w: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	vj2VOWVfZIQA: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	faDEI9meVFSX: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	vNz72BpsdYgh: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	rKvt3VP4kc95: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	tH9qWTHytAhv: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	aaE549KBoV1l: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	cpSLNjApVHcu: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	fG3xqaDWVJAg: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	tZGyeTLKzPFJ: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	mYBMFXAHuNfu: 'dot-notation into array-of-subdocuments not implemented — see docs/todo.md',
-	tmvPBYA9eSEz: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
-	uY2fLtrMOKuA: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
-	bnSkQKLeVb9X: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
-	f1dvF9gou80q: 'dot-notation through an array of non-document scalars not implemented — see docs/todo.md',
-	n1CqM5LBKHMe: 'dot-notation through an empty array not implemented — see docs/todo.md',
-	sNvxQKeuu6rZ: 'dot-notation through an empty array not implemented — see docs/todo.md',
-};
-
 for (const op of runnable.values()) {
-	// todo, not skip: the body still runs, so a fixed knownIssue shows up as
+	const override = overrides.get(op.id);
+	const expected = override?.expect ?? op.expected;
+
+	// todo, not skip: the body still runs, so a fixed override shows up as
 	// a (still green) surprise pass instead of staying silently disabled.
-	test(`${op.operators.join(', ')} :: ${op.catalog} :: ${op.id} :: ${JSON.stringify(op.query)}`, { todo: knownIssues[op.id] }, () => {
-		const expectsError = op.expected.error !== undefined;
+	test(`${op.operators.join(', ')} :: ${op.catalog} :: ${op.id} :: ${JSON.stringify(op.query)}`, { todo: override?.todo ? override.reason : undefined }, () => {
+		const expectsError = 'error' in expected;
 		let failure: unknown = null;
 
 		try {
@@ -211,9 +241,8 @@ for (const op of runnable.values()) {
 				// (e.g. $near sorts by distance), and monger doesn't
 				// implement a query planner or sort guarantee to
 				// reproduce that — only whether the matched *set* agrees.
-				const expected = op.expected.documents ?? [];
-				const extra = matched.filter((id) => !expected.includes(id));
-				const missing = expected.filter((id) => !matched.includes(id));
+				const extra = matched.filter((id) => !expected.documents.includes(id));
+				const missing = expected.documents.filter((id) => !matched.includes(id));
 
 				if (extra.length || missing.length) {
 					const byId = new Map(op.records.map((r) => [r._id as number, r]));

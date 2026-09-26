@@ -128,7 +128,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -155,7 +156,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -204,12 +206,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -250,12 +261,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -298,12 +318,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -326,7 +355,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -352,7 +382,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -402,12 +433,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -449,12 +489,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -498,12 +547,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -529,7 +587,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -553,7 +612,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -574,7 +634,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -607,7 +668,8 @@
 						12,
 						1
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -708,12 +770,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -755,12 +826,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -804,12 +884,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -861,7 +950,8 @@
 						12,
 						1
 					],
-					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -943,7 +1033,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -968,7 +1059,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -993,7 +1085,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1006,7 +1099,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1034,7 +1128,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1096,7 +1191,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "geo $near must be top-level expr",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1132,7 +1236,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1168,7 +1273,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1204,7 +1310,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1240,7 +1347,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1268,7 +1376,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1302,7 +1411,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1334,7 +1444,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1366,7 +1477,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1401,7 +1513,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1434,7 +1547,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1468,7 +1582,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1502,7 +1617,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1536,7 +1652,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1570,7 +1687,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1604,7 +1722,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1638,7 +1757,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1689,7 +1809,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1739,7 +1860,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1788,7 +1910,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1891,12 +2014,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq 17\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq 17\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -1969,12 +2101,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
 						"code": 139,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
+						"code": 139,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -2050,12 +2191,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
 						"code": 139,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
+						"code": 139,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -2104,7 +2254,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2141,7 +2292,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2178,7 +2330,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2223,7 +2376,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2250,7 +2404,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2286,7 +2441,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2907,7 +3063,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2944,7 +3101,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2969,7 +3127,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -3031,7 +3190,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3069,7 +3229,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -3155,7 +3316,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -3217,7 +3379,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3244,7 +3407,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3273,7 +3437,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3302,7 +3467,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3333,7 +3499,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3374,7 +3541,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3413,7 +3581,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3448,7 +3617,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3491,7 +3661,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3534,7 +3705,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3577,7 +3749,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3633,7 +3806,7 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..7.0.40"
+					"versions": "2.6.12..7.0.43"
 				},
 				{
 					"documents": [
@@ -3650,7 +3823,8 @@
 						9,
 						1
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -3707,7 +3881,7 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..7.0.40"
+					"versions": "2.6.12..7.0.43"
 				},
 				{
 					"documents": [
@@ -3725,7 +3899,8 @@
 						0,
 						1
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -3782,7 +3957,7 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..7.0.40"
+					"versions": "2.6.12..7.0.43"
 				},
 				{
 					"documents": [
@@ -3800,7 +3975,8 @@
 						0,
 						1
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -3849,7 +4025,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3896,7 +4073,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3945,7 +4123,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3968,7 +4147,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4022,12 +4202,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4073,12 +4262,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4126,12 +4324,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4185,12 +4392,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4236,12 +4452,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4289,12 +4514,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4350,7 +4584,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4401,7 +4636,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4431,7 +4667,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4474,7 +4711,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4507,7 +4745,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4532,7 +4771,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4566,7 +4806,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4605,7 +4846,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4630,7 +4872,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4655,7 +4898,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4758,12 +5002,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4867,12 +5120,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq 18\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4905,7 +5167,8 @@
 					"documents": [
 						2
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4946,7 +5209,8 @@
 					"documents": [
 						2
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -4971,7 +5235,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5002,7 +5267,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5029,7 +5295,8 @@
 					"documents": [
 						3
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5056,7 +5323,8 @@
 					"documents": [
 						3
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5083,7 +5351,8 @@
 					"documents": [
 						4
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5111,7 +5380,8 @@
 						5,
 						6
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5145,7 +5415,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5178,7 +5449,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5209,7 +5481,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5248,7 +5521,8 @@
 						7,
 						8
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5287,7 +5561,8 @@
 					"documents": [
 						7
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5326,7 +5601,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5359,7 +5635,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5393,7 +5670,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -5463,7 +5741,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5485,7 +5764,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5524,7 +5804,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5549,7 +5830,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5574,7 +5856,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -5623,12 +5906,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5677,12 +5969,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5731,12 +6032,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5779,12 +6089,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5827,12 +6146,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5875,12 +6203,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5915,7 +6252,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.11,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.11,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -5986,7 +6324,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6009,7 +6348,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6049,7 +6389,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6075,7 +6416,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6101,7 +6443,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6151,12 +6494,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6206,12 +6558,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6261,12 +6622,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6316,12 +6686,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6371,12 +6750,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6426,12 +6814,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6473,12 +6870,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6520,12 +6926,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6567,12 +6982,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6616,12 +7040,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6665,12 +7098,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6714,12 +7156,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6763,12 +7214,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6812,12 +7272,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6861,12 +7330,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -6892,7 +7370,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6918,7 +7397,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6944,7 +7424,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6968,7 +7449,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -6992,7 +7474,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -7016,7 +7499,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -7047,7 +7531,8 @@
 						0,
 						1
 					],
-					"versions": "4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.2..8.3.11"
 				}
 			]
 		},
@@ -7068,7 +7553,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -7089,7 +7575,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -7119,7 +7606,8 @@
 						0,
 						1
 					],
-					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.9..4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.9..4.1.12,4.2.0,4.2.2..8.3.11"
 				}
 			]
 		},
@@ -7171,7 +7659,8 @@
 						0,
 						1
 					],
-					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -7259,7 +7748,8 @@
 						0,
 						1
 					],
-					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -7345,12 +7835,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7400,12 +7899,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7455,12 +7963,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7510,12 +8027,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7565,12 +8091,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7620,12 +8155,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7667,12 +8211,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7714,12 +8267,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7761,12 +8323,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7810,12 +8381,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7859,12 +8439,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7908,12 +8497,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -7957,12 +8555,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -8006,12 +8613,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -8055,12 +8671,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -8085,7 +8710,8 @@
 						0,
 						1
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.9..4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.9..4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -8146,7 +8772,8 @@
 						0,
 						1
 					],
-					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -8254,7 +8881,8 @@
 						0,
 						1
 					],
-					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.3.10..3.4.24,4.0.21..4.0.28,4.1.12,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -8342,7 +8970,8 @@
 						0,
 						1
 					],
-					"versions": "2.6.12..3.3.9,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.3.9,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -8380,7 +9009,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8411,7 +9041,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8448,7 +9079,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -8521,7 +9153,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8546,7 +9179,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8573,7 +9207,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8586,7 +9221,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8599,7 +9235,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8641,7 +9278,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8669,7 +9307,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8697,7 +9336,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -8759,7 +9399,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: null, 1: null }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -8829,7 +9478,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: \"value\", 1: \"value\" }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -8899,7 +9557,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: true, 1: true }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -8958,7 +9625,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -9004,7 +9680,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -9086,7 +9763,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9120,7 +9798,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9174,7 +9853,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -9220,7 +9908,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -9302,7 +9991,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9336,7 +10026,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9390,7 +10081,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -9436,7 +10136,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -9518,7 +10219,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9552,7 +10254,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9606,7 +10309,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -9652,7 +10364,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -9734,7 +10447,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9768,7 +10482,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9816,7 +10531,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -9860,7 +10584,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.7,4.1.10,4.1.11,4.2.1..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.7,4.1.10,4.1.11,4.2.1..8.3.11"
 				},
 				{
 					"documents": [
@@ -9940,7 +10665,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -9972,7 +10698,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10016,7 +10743,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -10096,7 +10824,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10128,7 +10857,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10171,7 +10901,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10203,7 +10934,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10235,7 +10967,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10312,7 +11045,8 @@
 						11,
 						12
 					],
-					"versions": "4.0.21..4.0.28,4.1.7,4.1.9,4.1.12,4.2.3..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "4.0.21..4.0.28,4.1.7,4.1.9,4.1.12,4.2.3..8.3.11"
 				},
 				{
 					"documents": [
@@ -10377,7 +11111,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10410,7 +11145,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10455,7 +11191,8 @@
 						10,
 						11
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.1,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.1,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -10536,7 +11273,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10569,7 +11307,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10612,7 +11351,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9..8.3.11"
 				},
 				{
 					"documents": [
@@ -10659,7 +11399,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10693,7 +11434,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10736,7 +11478,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..8.3.11"
 				},
 				{
 					"documents": [
@@ -10783,7 +11526,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10817,7 +11561,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -10876,7 +11621,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -10936,7 +11690,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -11000,7 +11755,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11051,7 +11807,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11110,7 +11867,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -11173,7 +11931,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11223,7 +11982,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11281,7 +12041,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -11343,7 +12104,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11392,7 +12154,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -11495,12 +12258,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq null\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq null\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -11603,12 +12375,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq \"value\"\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq \"value\"\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -11711,12 +12492,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq true\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq true\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -11776,7 +12566,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found null",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -11836,7 +12635,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found int",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -11896,7 +12704,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found bool",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -11942,7 +12759,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -11988,7 +12814,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12034,7 +12869,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12083,7 +12927,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12132,7 +12985,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12181,7 +13043,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12263,12 +13134,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
 						"code": 139,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: ReferenceError: Heavy is not defined :\n@:1:15\n",
+						"code": 139,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -12317,7 +13197,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12366,7 +13247,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12421,7 +13303,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12476,7 +13367,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12531,7 +13431,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$where got bad type",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12566,7 +13475,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12601,7 +13511,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12636,7 +13547,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12673,7 +13585,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12710,7 +13623,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12747,7 +13661,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12800,7 +13715,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12845,7 +13761,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12890,7 +13807,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -12941,7 +13859,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -12989,7 +13916,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -13023,7 +13951,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -13057,7 +13986,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -13685,7 +14615,8 @@
 						7,
 						8
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -14304,7 +15235,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -14923,7 +15855,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -14960,7 +15893,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -14997,7 +15931,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15020,7 +15955,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -15047,7 +15983,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15061,7 +15998,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15099,7 +16037,7 @@
 						10,
 						11
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.2.0,4.2.5..7.0.40"
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.2.0,4.2.5..7.0.43"
 				},
 				{
 					"documents": [
@@ -15163,7 +16101,8 @@
 						11,
 						12
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -15201,7 +16140,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -15287,7 +16227,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -15373,7 +16314,7 @@
 						10,
 						11
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.2.0,4.2.5..7.0.40"
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.2.0,4.2.5..7.0.43"
 				},
 				{
 					"documents": [
@@ -15437,7 +16378,8 @@
 						11,
 						12
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -15475,7 +16417,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -15561,7 +16504,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.2.5..8.3.11"
 				},
 				{
 					"documents": [
@@ -15632,7 +16576,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -15659,7 +16604,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15673,7 +16619,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15709,7 +16656,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -15749,7 +16697,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15776,7 +16725,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15819,7 +16769,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15848,7 +16799,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15877,7 +16829,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15920,7 +16873,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15949,7 +16903,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -15978,7 +16933,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16031,7 +16987,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16070,7 +17027,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16109,7 +17067,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16153,7 +17112,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -16201,7 +17161,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16236,7 +17197,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16288,7 +17250,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.7..4.1.11,4.2.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.7..4.1.11,4.2.0..8.3.11"
 				},
 				{
 					"documents": [
@@ -16344,7 +17307,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16387,7 +17351,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16430,7 +17395,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16487,7 +17453,7 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..7.0.40"
+					"versions": "2.6.12..7.0.43"
 				},
 				{
 					"documents": [
@@ -16505,7 +17471,8 @@
 						0,
 						1
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -16562,7 +17529,7 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..7.0.40"
+					"versions": "2.6.12..7.0.43"
 				},
 				{
 					"documents": [
@@ -16580,7 +17547,8 @@
 						0,
 						1
 					],
-					"versions": "8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "8.0.0..8.3.11"
 				}
 			]
 		},
@@ -16631,7 +17599,7 @@
 						10,
 						11
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.3..7.0.40"
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.9,4.1.11,4.2.0,4.2.3..7.0.43"
 				},
 				{
 					"documents": [
@@ -16639,7 +17607,8 @@
 						11,
 						9
 					],
-					"versions": "3.5.5..4.0.20,4.1.1..4.1.7,4.1.10,4.1.12,4.1.13,4.2.1,4.2.2,8.0.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.5.5..4.0.20,4.1.1..4.1.7,4.1.10,4.1.12,4.1.13,4.2.1,4.2.2,8.0.0..8.3.11"
 				}
 			]
 		},
@@ -16686,7 +17655,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16733,7 +17703,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16765,7 +17736,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.9,4.1.10,4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -16801,7 +17773,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16824,7 +17797,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -16878,12 +17852,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -16937,12 +17920,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -16996,12 +17988,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17055,12 +18056,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17114,12 +18124,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17173,12 +18192,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17224,12 +18252,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17275,12 +18312,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17326,12 +18372,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17379,12 +18434,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17432,12 +18496,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17485,12 +18558,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17538,12 +18620,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17591,12 +18682,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17644,12 +18744,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17703,12 +18812,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17762,12 +18880,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17821,12 +18948,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17880,12 +19016,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17939,12 +19084,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -17998,12 +19152,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18049,12 +19212,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18100,12 +19272,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18151,12 +19332,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18204,12 +19394,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18257,12 +19456,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18310,12 +19518,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18363,12 +19580,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18416,12 +19642,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18469,12 +19704,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$nor argument's entries must be objects",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$nor argument's entries must be objects",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -18542,7 +19786,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.7,4.1.9,4.1.11,4.1.13,4.2.3..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..3.4.24,4.0.21..4.0.28,4.1.7,4.1.9,4.1.11,4.1.13,4.2.3..8.3.11"
 				},
 				{
 					"documents": [
@@ -18646,7 +19891,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18702,7 +19948,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18765,7 +20012,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18814,7 +20062,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18863,7 +20112,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18905,7 +20155,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18933,7 +20184,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -18961,7 +20213,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19013,7 +20266,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.1.7..4.1.12,4.2.0,4.2.2..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.1.7..4.1.12,4.2.0,4.2.2..8.3.11"
 				},
 				{
 					"documents": [
@@ -19069,7 +20323,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19112,7 +20367,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19157,7 +20413,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19188,7 +20445,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19219,7 +20477,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19271,7 +20530,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -19305,7 +20573,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19339,7 +20608,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19373,7 +20643,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19424,7 +20695,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12,4.0.21..4.0.28,4.2.3..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12,4.0.21..4.0.28,4.2.3..8.3.11"
 				},
 				{
 					"documents": [
@@ -19511,7 +20783,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19550,7 +20823,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19586,7 +20860,8 @@
 						8,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19611,7 +20886,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19636,7 +20912,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -19739,12 +21016,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -19847,12 +21133,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -19955,12 +21250,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -20020,7 +21324,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found null",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20080,7 +21393,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found int",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20140,7 +21462,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found bool",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20244,12 +21575,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq null\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -20353,12 +21693,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq \"value\"\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -20462,12 +21811,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
 						"code": 291,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.5..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "error processing query: ns=MongoCatalog.CatalogCollectionTree: $or\n    $and\n        count $eq true\n        step $eq \"Great\"\n        TEXT : query=Heavily, language=english, caseSensitive=0, diacriticSensitive=0\n    step $eq {}\nSort: {}\nProj: {}\n planner returned error :: caused by :: No query solutions",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.5..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -20528,7 +21886,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found null",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20589,7 +21956,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found int",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20650,7 +22026,16 @@
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "\"$search\" had the wrong type. Expected string, found bool",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20698,7 +22083,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20742,7 +22136,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -20773,7 +22168,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -20804,7 +22200,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -20857,7 +22254,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -20909,7 +22315,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -20948,7 +22355,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -20987,7 +22395,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21012,7 +22421,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21037,7 +22447,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21062,7 +22473,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21110,7 +22522,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -21158,7 +22579,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$all needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -21202,7 +22632,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21233,7 +22664,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21264,7 +22696,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21302,7 +22735,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21327,7 +22761,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21352,7 +22787,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21390,7 +22826,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21415,7 +22852,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21440,7 +22878,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21478,7 +22917,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21503,7 +22943,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21528,7 +22969,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21565,7 +23007,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21590,7 +23033,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21615,7 +23059,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21649,7 +23094,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21683,7 +23129,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21717,7 +23164,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21764,7 +23212,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21797,7 +23246,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21830,7 +23280,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -21889,7 +23340,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: null, 1: null }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -21956,7 +23416,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: \"value\", 1: \"value\" }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -22023,7 +23492,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.2.12"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.2.12"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point provided to geo near query: { 0: true, 1: true }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				},
 				{
 					"error": {
@@ -22085,7 +23563,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -22133,7 +23620,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22169,7 +23657,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22205,7 +23694,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22258,7 +23748,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -22295,7 +23794,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22332,7 +23832,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22369,7 +23870,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22426,7 +23928,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$elemMatch needs an Object",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -22479,7 +23990,8 @@
 						11,
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22518,7 +24030,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -22557,7 +24070,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		}

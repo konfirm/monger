@@ -100,7 +100,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -134,7 +135,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -171,7 +173,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -209,7 +212,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -231,7 +235,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -259,7 +264,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -279,7 +285,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -292,7 +299,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -329,7 +337,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -357,7 +366,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -379,7 +389,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -422,7 +433,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -460,7 +472,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -489,7 +502,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -512,7 +526,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -556,7 +571,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -594,7 +610,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -623,7 +640,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -646,7 +664,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -690,7 +709,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -710,7 +730,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -751,7 +772,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -786,7 +808,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -812,7 +835,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -839,7 +863,8 @@
 					"documents": [
 						7
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -884,7 +909,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -923,7 +949,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -956,7 +983,8 @@
 					"documents": [
 						7
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -980,7 +1008,8 @@
 					"documents": [
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1022,7 +1051,8 @@
 						11,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1058,7 +1088,8 @@
 						11,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1088,7 +1119,8 @@
 					"documents": [
 						12
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1110,7 +1142,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1153,7 +1186,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1190,7 +1224,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1218,7 +1253,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1258,7 +1294,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1282,7 +1327,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1319,7 +1365,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1356,7 +1403,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1378,7 +1426,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1413,7 +1462,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1448,7 +1498,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1473,7 +1524,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1511,7 +1563,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1549,7 +1602,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1590,7 +1644,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1616,7 +1679,8 @@
 					"documents": [
 						0
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1655,7 +1719,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1694,7 +1759,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1734,7 +1800,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1770,7 +1845,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1792,7 +1868,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1814,7 +1891,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1827,7 +1905,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1840,7 +1919,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1880,7 +1960,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1926,7 +2015,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1966,7 +2064,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2012,7 +2119,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2050,7 +2166,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2088,7 +2205,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2126,7 +2244,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2155,7 +2274,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2184,7 +2304,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2213,7 +2334,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2236,7 +2358,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2259,7 +2382,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2282,7 +2406,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2326,7 +2451,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2370,7 +2496,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2414,7 +2541,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2452,7 +2580,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2490,7 +2619,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2519,7 +2649,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2548,7 +2679,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2571,7 +2703,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2594,7 +2727,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2638,7 +2772,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2682,7 +2817,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2722,7 +2858,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2768,7 +2913,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2808,7 +2962,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2854,7 +3017,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2894,7 +3066,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -2919,7 +3100,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2944,7 +3126,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2969,7 +3152,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3015,7 +3199,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3061,7 +3254,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3107,7 +3301,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3153,7 +3348,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3193,7 +3389,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3233,7 +3438,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3273,7 +3479,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3313,7 +3520,8 @@
 						12,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3359,7 +3567,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3390,7 +3607,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3421,7 +3639,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3452,7 +3671,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -3492,7 +3712,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3538,7 +3767,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$in needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3578,7 +3816,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -3624,7 +3871,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$nin needs an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		}

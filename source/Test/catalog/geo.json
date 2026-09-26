@@ -854,7 +854,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -882,7 +883,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -919,7 +921,8 @@
 						13,
 						15
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -983,6 +986,7 @@
 						13,
 						15
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12..3.0.15"
 				},
 				{
@@ -1003,7 +1007,8 @@
 						5,
 						8
 					],
-					"versions": "3.2.6..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..8.3.11"
 				}
 			]
 		},
@@ -1050,6 +1055,7 @@
 						6,
 						12
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12"
 				},
 				{
@@ -1070,7 +1076,8 @@
 						10,
 						13
 					],
-					"versions": "3.0.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.0.12..8.3.11"
 				}
 			]
 		},
@@ -1114,6 +1121,7 @@
 						6,
 						12
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12"
 				},
 				{
@@ -1134,7 +1142,8 @@
 						10,
 						13
 					],
-					"versions": "3.0.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.0.12..8.3.11"
 				}
 			]
 		},
@@ -1178,6 +1187,7 @@
 						6,
 						12
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12"
 				},
 				{
@@ -1198,7 +1208,8 @@
 						10,
 						13
 					],
-					"versions": "3.0.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.0.12..8.3.11"
 				}
 			]
 		},
@@ -1242,6 +1253,7 @@
 						2,
 						12
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12"
 				},
 				{
@@ -1255,7 +1267,8 @@
 						15,
 						7
 					],
-					"versions": "3.0.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.0.12..8.3.11"
 				}
 			]
 		},
@@ -1299,7 +1312,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1344,7 +1358,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1389,7 +1404,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1428,7 +1444,8 @@
 						1,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1468,7 +1485,8 @@
 						1,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1512,7 +1530,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1557,7 +1576,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1602,7 +1622,8 @@
 						4,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1652,6 +1673,7 @@
 						5,
 						14
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12..3.0.15"
 				},
 				{
@@ -1672,7 +1694,8 @@
 						4,
 						11
 					],
-					"versions": "3.2.6..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..8.3.11"
 				}
 			]
 		},
@@ -1736,6 +1759,7 @@
 						5,
 						14
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12..3.0.15"
 				},
 				{
@@ -1756,7 +1780,8 @@
 						5,
 						14
 					],
-					"versions": "3.2.6..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..8.3.11"
 				}
 			]
 		},
@@ -1820,6 +1845,7 @@
 						14,
 						13
 					],
+					"error": "@Undefined/und",
 					"versions": "2.6.12..3.0.15"
 				},
 				{
@@ -1840,7 +1866,8 @@
 						1,
 						13
 					],
-					"versions": "3.2.6..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.2.6..8.3.11"
 				}
 			]
 		},
@@ -1879,7 +1906,8 @@
 						1,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1919,7 +1947,8 @@
 						1,
 						13
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1938,36 +1967,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $geometry is required for geo near query",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$geometry is required for geo near query",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$geometry is required for geo near query",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.2.12"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "invalid point provided to geo near query: {}",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.3.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1991,52 +1997,13 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "$near requires a point, given { type: \"Polygon\", coordinates: [] }",
-						"code": 16885,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..6.0.28"
-				},
-				{
-					"error": {
-						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Point must only contain numeric elements, instead got type missing",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "7.0.0..7.0.40"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [] }  Expected geojson geometry with type Point, but got type Polygon",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2055,36 +2022,1027 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue $geometry is required for geo near query",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "$geometry is required for geo near query",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "$geometry is required for geo near query",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..8.2.12"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "invalid point provided to geo near query: {}",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.3.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "dk5BCy3pVp2A",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "d0Dj8CqPwRxq",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unable to find index for $geoNear query",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "qUCmXYN76iFy",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						5,
+						13,
+						15,
+						14,
+						9,
+						6,
+						10,
+						1,
+						12,
+						2,
+						3,
+						7,
+						4,
+						11
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wZSZbLEvmgyY",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						},
+						"$minDistance": 100
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unable to find index for $geoNear query",
+						"code": 291,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "fuorHkOLhRYC",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": [
+							5.9,
+							52
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$near requires geojson point, given { 0: 5.9, 1: 52 }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "iqakG9b5E6aA",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": [
+							5.9,
+							52
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$near requires geojson point, given { 0: 5.9, 1: 52 }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "t1AOzzxx1VqO",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": [
+							5.9,
+							52
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$near requires geojson point, given { 0: 5.9, 1: 52 }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wMYIkrKSUQUp",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": [
+							5.9,
+							52
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$near requires geojson point, given { 0: 5.9, 1: 52 }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "t5LZcZD0Mpzd",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: [ 5.88, 51.98 ], 1: [ 5.92, 51.98 ], 2: [ 5.92, 52.02 ] }  Point must only contain numeric elements, instead got type array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "hvL98upmS2Qa",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: [ 5.88, 51.98 ], 1: [ 5.92, 51.98 ], 2: [ 5.92, 52.02 ] }  Point must only contain numeric elements, instead got type array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "i4cbMeJzVpTC",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: [ 5.88, 51.98 ], 1: [ 5.92, 51.98 ], 2: [ 5.92, 52.02 ] }  Point must only contain numeric elements, instead got type array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "cNytJMKB90Pd",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": [
+							[
+								5.88,
+								51.98
+							],
+							[
+								5.92,
+								51.98
+							],
+							[
+								5.92,
+								52.02
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: [ 5.88, 51.98 ], 1: [ 5.92, 51.98 ], 2: [ 5.92, 52.02 ] }  Point must only contain numeric elements, instead got type array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "lKUxVDfS3TOj",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									5.91,
+									52.01
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"MultiPoint\", coordinates: [ [ 5.9, 52 ], [ 5.91, 52.01 ] ] }  Expected geojson geometry with type Point, but got type MultiPoint",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rS1PzYB58vE1",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									5.91,
+									52.01
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"MultiPoint\", coordinates: [ [ 5.9, 52 ], [ 5.91, 52.01 ] ] }  Expected geojson geometry with type Point, but got type MultiPoint",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "sZPNdRdMCeDX",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									5.91,
+									52.01
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"MultiPoint\", coordinates: [ [ 5.9, 52 ], [ 5.91, 52.01 ] ] }  Expected geojson geometry with type Point, but got type MultiPoint",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "bE0AHVYcW9eS",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									5.91,
+									52.01
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"MultiPoint\", coordinates: [ [ 5.9, 52 ], [ 5.91, 52.01 ] ] }  Expected geojson geometry with type Point, but got type MultiPoint",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "w1Ts3ZfKnaIx",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [ [ [ 5.88, 51.98 ], [ 5.92, 51.98 ], [ 5.92, 52.02 ], [ 5.88, 51.98 ] ] ] }  Expected geojson geometry with type Point, but got type Polygon",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "a3hRg0ldCe2o",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [ [ [ 5.88, 51.98 ], [ 5.92, 51.98 ], [ 5.92, 52.02 ], [ 5.88, 51.98 ] ] ] }  Expected geojson geometry with type Point, but got type Polygon",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "w2X9WLwXPu9D",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [ [ [ 5.88, 51.98 ], [ 5.92, 51.98 ], [ 5.92, 52.02 ], [ 5.88, 51.98 ] ] ] }  Expected geojson geometry with type Point, but got type Polygon",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "pHl99FYsmO1m",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.88,
+										51.98
+									],
+									[
+										5.92,
+										51.98
+									],
+									[
+										5.92,
+										52.02
+									],
+									[
+										5.88,
+										51.98
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { type: \"Polygon\", coordinates: [ [ [ 5.88, 51.98 ], [ 5.92, 51.98 ], [ 5.92, 52.02 ], [ 5.88, 51.98 ] ] ] }  Expected geojson geometry with type Point, but got type Polygon",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wBDz9Cutfetk",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": "not-a-geometry"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "lPt8qsOUlcWa",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": "not-a-geometry"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "uZnB2VarQvbT",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": "not-a-geometry"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rYjPCpQOId4z",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": "not-a-geometry"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "$geometry is required for geo near query",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wFoKnxqv23w8",
+			"query": {
+				"point": {
+					"$near": {
+						"$geometry": [
+							5.9
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: 5.9 }  Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rPYmrm8SNZ7E",
+			"query": {
+				"legacyPoint": {
+					"$near": {
+						"$geometry": [
+							5.9
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$near",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: 5.9 }  Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "pYyYmuHz3Tfy",
+			"query": {
+				"point": {
+					"$nearSphere": {
+						"$geometry": [
+							5.9
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: 5.9 }  Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "a1GtYaINOctO",
+			"query": {
+				"legacyPoint": {
+					"$nearSphere": {
+						"$geometry": [
+							5.9
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$nearSphere",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "invalid point in geo near query $geometry argument: { 0: 5.9 }  Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2103,36 +3061,38 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: {} }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue geo query doesn't have any geometry",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "geo query doesn't have any geometry",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "geo query doesn't have any geometry",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rNX8uL4hPyMp",
+			"query": {
+				"legacyPoint": {
+					"$geoIntersects": {}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "geo query doesn't have any geometry",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2156,44 +3116,43 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { type: \"Point\", coordinates: [] } } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..6.0.28"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Point must only contain numeric elements, instead got type missing",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "tBnaJLbvxDYg",
+			"query": {
+				"legacyPoint": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": []
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2219,44 +3178,45 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoIntersects: { $geometry: { type: \"Point\", coordinates: [ 0 ] } } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue Point must only contain numeric elements",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Point must only contain numeric elements",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..6.0.28"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Point must only contain numeric elements, instead got type missing",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "7.0.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "kA7LkOxjmbn3",
+			"query": {
+				"legacyPoint": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								0
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2304,7 +3264,86 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "os7YgdcRTTTu",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.899,
+										51.999
+									],
+									[
+										5.901,
+										51.999
+									],
+									[
+										5.901,
+										52.001
+									],
+									[
+										5.899,
+										52.001
+									],
+									[
+										5.899,
+										51.999
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "nfDUBxCbxNHt",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$center": [
+							[
+								5.9,
+								52
+							],
+							0
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2332,7 +3371,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2353,36 +3393,40 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $unknown: {} } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown geo specifier: $unknown: {}",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown geo specifier: $unknown: {}",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown geo specifier: $unknown: {}",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "lNnpWdVzhRXZ",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$unknown": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown geo specifier: $unknown: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2403,36 +3447,40 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $geometry: {} } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: {}",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown GeoJSON type: {}",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown GeoJSON type: {}",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rppNvGYZTUYj",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$geometry": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown GeoJSON type: {}",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2453,44 +3501,40 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $box: {} } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue Point must be an array or object",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "Point must be an array or object",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Point must be an array or object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..6.0.15"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Point must be an array or object, instead got type missing",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.16..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "aKkTcD3FQo2l",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": {}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must be an array or object, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2513,44 +3557,42 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $center: [ 1 ] } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue Point must be an array or object",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "Point must be an array or object",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
-					"error": {
-						"message": "Point must be an array or object",
-						"code": 2,
-						"type": "MongoServerError"
-					},
-					"versions": "3.6.0..6.0.15"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Point must be an array or object, instead got type int",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.16..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "kBGPEzpHaWQ4",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$center": [
+							1
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must be an array or object, instead got type int",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2571,36 +3613,40 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $center: \"invalid\" } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown geo specifier: $center: \"invalid\"",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown geo specifier: $center: \"invalid\"",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown geo specifier: $center: \"invalid\"",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rq239PdeGlzi",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$center": "invalid"
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown geo specifier: $center: \"invalid\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -2624,36 +3670,43 @@
 			],
 			"results": [
 				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue bad geo query: { $geoWithin: { $geometry: { type: \"Invalid\", coordinates: [] } } }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "2.6.12"
-				},
-				{
-					"error": {
-						"message": "Can't canonicalize query: BadValue unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
-						"code": 17287,
-						"type": "MongoError"
-					},
-					"versions": "3.0.12..3.0.15"
-				},
-				{
-					"error": {
-						"message": "unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
-						"code": 2,
-						"type": "MongoError"
-					},
-					"versions": "3.2.6..3.5.13"
-				},
-				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "eFgCzb9ZocfQ",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Invalid",
+							"coordinates": []
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown GeoJSON type: { type: \"Invalid\", coordinates: [] }",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		}

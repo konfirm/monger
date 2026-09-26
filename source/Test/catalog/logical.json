@@ -463,7 +463,8 @@
 						8,
 						11
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -497,7 +498,8 @@
 						4,
 						18
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -534,7 +536,8 @@
 						2,
 						17
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -575,7 +578,8 @@
 						2,
 						3
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -616,7 +620,8 @@
 						12,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -650,7 +655,8 @@
 						17,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -693,7 +699,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -734,7 +741,8 @@
 						18,
 						19
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -782,7 +790,8 @@
 						18,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -838,7 +847,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown top level operator: $not. If you are trying to negate an entire expression, use $nor.",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -894,7 +912,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown top level operator: $not. If you are trying to negate an entire expression, use $nor.",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -952,7 +979,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown top level operator: $not. If you are trying to negate an entire expression, use $nor.",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1061,7 +1097,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown top level operator: $not. If you are trying to negate an entire expression, use $nor.",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1102,12 +1147,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$and argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$and argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -1148,12 +1202,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be a non-empty array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be a non-empty array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -1194,7 +1257,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1235,7 +1299,8 @@
 						19,
 						20
 					],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1263,7 +1328,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1291,7 +1357,8 @@
 			"results": [
 				{
 					"documents": [],
-					"versions": "2.6.12..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
 				}
 			]
 		},
@@ -1349,7 +1416,16 @@
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "6.0.1..8.3.8"
+					"versions": "6.0.1..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "unknown top level operator: $not. If you are trying to negate an entire expression, use $nor.",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -1398,12 +1474,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$and argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$and argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -1452,12 +1537,21 @@
 					"versions": "3.6.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "$or argument must be an array",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "$or argument must be an array",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		}

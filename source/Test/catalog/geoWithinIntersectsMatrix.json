@@ -1,0 +1,3453 @@
+{
+	"catalog": "geoWithinIntersectsMatrix",
+	"collection": {
+		"records": [
+			{
+				"_id": 0,
+				"name": "Record 0",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.9,
+						52
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.9,
+							52
+						],
+						[
+							5.91,
+							52.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.890000000000001,
+								51.99
+							],
+							[
+								5.91,
+								51.99
+							],
+							[
+								5.91,
+								52.01
+							],
+							[
+								5.890000000000001,
+								52.01
+							],
+							[
+								5.890000000000001,
+								51.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.9,
+					52
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						5.9,
+						52
+					]
+				}
+			},
+			{
+				"_id": 1,
+				"name": "Record 1",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						6.9,
+						53
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							6.9,
+							53
+						],
+						[
+							6.91,
+							53.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								6.890000000000001,
+								52.99
+							],
+							[
+								6.91,
+								52.99
+							],
+							[
+								6.91,
+								53.01
+							],
+							[
+								6.890000000000001,
+								53.01
+							],
+							[
+								6.890000000000001,
+								52.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					6.9,
+					53
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						6.9,
+						53
+					]
+				}
+			},
+			{
+				"_id": 2,
+				"name": "Record 2",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						10.9,
+						57
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							10.9,
+							57
+						],
+						[
+							10.91,
+							57.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								10.89,
+								56.99
+							],
+							[
+								10.91,
+								56.99
+							],
+							[
+								10.91,
+								57.01
+							],
+							[
+								10.89,
+								57.01
+							],
+							[
+								10.89,
+								56.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					10.9,
+					57
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						10.9,
+						57
+					]
+				}
+			},
+			{
+				"_id": 3,
+				"name": "Record 3",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						25.9,
+						72
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							25.9,
+							72
+						],
+						[
+							25.91,
+							72.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								25.889999999999997,
+								71.99
+							],
+							[
+								25.91,
+								71.99
+							],
+							[
+								25.91,
+								72.01
+							],
+							[
+								25.889999999999997,
+								72.01
+							],
+							[
+								25.889999999999997,
+								71.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					25.9,
+					72
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						25.9,
+						72
+					]
+				}
+			},
+			{
+				"_id": 4,
+				"name": "Record 4",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						16.9,
+						63
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							16.9,
+							63
+						],
+						[
+							16.91,
+							63.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								16.889999999999997,
+								62.99
+							],
+							[
+								16.91,
+								62.99
+							],
+							[
+								16.91,
+								63.01
+							],
+							[
+								16.889999999999997,
+								63.01
+							],
+							[
+								16.889999999999997,
+								62.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					16.9,
+					63
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						16.9,
+						63
+					]
+				}
+			},
+			{
+				"_id": 5,
+				"name": "Record 5",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						10.9,
+						72
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							10.9,
+							72
+						],
+						[
+							10.91,
+							72.01
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								10.89,
+								71.99
+							],
+							[
+								10.91,
+								71.99
+							],
+							[
+								10.91,
+								72.01
+							],
+							[
+								10.89,
+								72.01
+							],
+							[
+								10.89,
+								71.99
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					10.9,
+					72
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						10.9,
+						72
+					]
+				}
+			},
+			{
+				"_id": 6,
+				"name": "Record 6",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.905,
+						52.005
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.905,
+							52.005
+						],
+						[
+							5.915,
+							52.015
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.8950000000000005,
+								51.995000000000005
+							],
+							[
+								5.915,
+								51.995000000000005
+							],
+							[
+								5.915,
+								52.015
+							],
+							[
+								5.8950000000000005,
+								52.015
+							],
+							[
+								5.8950000000000005,
+								51.995000000000005
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.905,
+					52.005
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						5.905,
+						52.005
+					]
+				}
+			},
+			{
+				"_id": 7,
+				"name": "Record 7",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						5.8950000000000005,
+						51.995
+					]
+				},
+				"line": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							5.8950000000000005,
+							51.995
+						],
+						[
+							5.905,
+							52.004999999999995
+						]
+					]
+				},
+				"polygon": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[
+								5.885000000000001,
+								51.985
+							],
+							[
+								5.905,
+								51.985
+							],
+							[
+								5.905,
+								52.004999999999995
+							],
+							[
+								5.885000000000001,
+								52.004999999999995
+							],
+							[
+								5.885000000000001,
+								51.985
+							]
+						]
+					]
+				},
+				"legacyPoint": [
+					5.8950000000000005,
+					51.995
+				],
+				"unindexedPoint": {
+					"type": "Point",
+					"coordinates": [
+						5.8950000000000005,
+						51.995
+					]
+				}
+			}
+		]
+	},
+	"operations": [
+		{
+			"id": "fHOnObjVJg3L",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "kBbSsplQwSdZ",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "o6nZVJbuC8pG",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "MultiPolygon",
+							"coordinates": [
+								[
+									[
+										[
+											5.9,
+											52
+										],
+										[
+											7.9,
+											52
+										],
+										[
+											7.9,
+											54
+										],
+										[
+											5.9,
+											54
+										],
+										[
+											5.9,
+											52
+										]
+									]
+								],
+								[
+									[
+										[
+											15.899999999999999,
+											62
+										],
+										[
+											17.9,
+											62
+										],
+										[
+											17.9,
+											64
+										],
+										[
+											15.899999999999999,
+											64
+										],
+										[
+											15.899999999999999,
+											62
+										]
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "rlzEjpwwcTcn",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPolygon",
+							"coordinates": [
+								[
+									[
+										[
+											5.9,
+											52
+										],
+										[
+											7.9,
+											52
+										],
+										[
+											7.9,
+											54
+										],
+										[
+											5.9,
+											54
+										],
+										[
+											5.9,
+											52
+										]
+									]
+								],
+								[
+									[
+										[
+											15.899999999999999,
+											62
+										],
+										[
+											17.9,
+											62
+										],
+										[
+											17.9,
+											64
+										],
+										[
+											15.899999999999999,
+											64
+										],
+										[
+											15.899999999999999,
+											62
+										]
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "ncIMLGd77Nrw",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "MultiPolygon",
+							"coordinates": [
+								[
+									[
+										[
+											-170,
+											0
+										],
+										[
+											-160,
+											0
+										],
+										[
+											-150,
+											0
+										],
+										[
+											-170,
+											80
+										],
+										[
+											-170,
+											0
+										]
+									]
+								],
+								[
+									[
+										[
+											5.9,
+											52
+										],
+										[
+											7.9,
+											52
+										],
+										[
+											7.9,
+											54
+										],
+										[
+											5.9,
+											54
+										],
+										[
+											5.9,
+											52
+										]
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "hKpWWkCIfZTt",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop must have at least 3 different vertices, 0 unique vertices were provided: [ [ 5.9, 52 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wJaBi0WBVnE9",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop must have at least 3 different vertices, 0 unique vertices were provided: [ [ 5.9, 52 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "eYM0AJyugeS3",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Polygon must have at least 3 points, instead got 1 vertices",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "jK7FlYSLF9WS",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "fYEmAlv8NTaY",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "q6QINLPHElG9",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							],
+							[
+								6.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Polygon must have at least 3 points, instead got 2 vertices",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "dUy6oXCEVLdC",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ], [ 6.9, 53 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "glQbTMllQUxz",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ], [ 6.9, 53 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wqeV19aVmYbd",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							],
+							[
+								6.9,
+								52
+							],
+							[
+								6.9,
+								53
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "tGRAsc5jV0e9",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										5.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ], [ 6.9, 53 ], [ 5.9, 53 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "lVArX6XjmRPZ",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										5.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Loop is not closed, first vertex does not equal last vertex: [ [ 5.9, 52 ], [ 6.9, 52 ], [ 6.9, 53 ], [ 5.9, 53 ] ]",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "clNYrWPbNRWC",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							],
+							[
+								6.9,
+								52
+							],
+							[
+								6.9,
+								53
+							],
+							[
+								5.9,
+								53
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						0,
+						6,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "3.0.15..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "ptzc71KixdXT",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										5.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "oJY8IdB26VLU",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										52
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										5.9,
+										52
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "uyWPoH8qV10L",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							],
+							[
+								5.9,
+								52
+							],
+							[
+								6.9,
+								52
+							],
+							[
+								6.9,
+								53
+							],
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "ptRICWamLnff",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							],
+							"crs": "not-a-real-crs"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "GeoJSON CRS must be an object, instead got type string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "tTg7IvE25YGJ",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							],
+							"crs": {
+								"type": "name",
+								"properties": {
+									"name": "not-a-real-crs"
+								}
+							}
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Unknown CRS name: not-a-real-crs",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "fNEQEQOPEDZh",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							],
+							"extra": "nope"
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						7,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "bWUxQmYUsP2j",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": []
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must be an array or object, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wm8C84stPZUP",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must be an array or object, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "vNLWMWlH26qD",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								52
+							],
+							[
+								6.9,
+								53
+							],
+							[
+								7.9,
+								54
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						0,
+						6,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "3.0.15..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "lWQYSlLDoNam",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9
+							],
+							[
+								6.9,
+								53
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type missing",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "vYHrZHxz1OJj",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								"not-a-number"
+							],
+							[
+								6.9,
+								53
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Point must only contain numeric elements, instead got type string",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "oCoZoOfFeKTJ",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								52
+							],
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "cqD7Xs2CDKxI",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								6.9,
+								52
+							],
+							[
+								5.9,
+								53
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						0,
+						6,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "3.0.15..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "oJWCcHE8fbjr",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								53
+							],
+							[
+								6.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						0,
+						6,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "3.0.15..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "uxWgL0pI8hTL",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								6.9,
+								53
+							],
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12"
+				},
+				{
+					"documents": [
+						0,
+						6,
+						1
+					],
+					"error": "@Undefined/und",
+					"versions": "3.0.15..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "oQOiNzoOORVQ",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$center": [
+							[
+								5.9,
+								52
+							],
+							"1000"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Radius must be a non-negative number: \"1000\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "o2ZCxGIpheWa",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$centerSphere": [
+							[
+								5.9,
+								52
+							],
+							"0.01"
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Radius must be a non-negative number: \"0.01\"",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "ryRHissR8ZRW",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								52
+							],
+							[
+								15.9,
+								62
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "tdRL9aQMj4TQ",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$polygon": [
+							[
+								5.9,
+								52
+							],
+							[
+								15.9,
+								52
+							],
+							[
+								15.9,
+								62
+							],
+							[
+								5.9,
+								62
+							],
+							[
+								5.9,
+								52
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "sGqUxjz5wnMZ",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$center": [
+							[
+								10.9,
+								57
+							],
+							10
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						4,
+						6,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "jzsJ1SKPixSB",
+			"query": {
+				"point": {
+					"$geoWithin": {
+						"$centerSphere": [
+							[
+								10.9,
+								57
+							],
+							0.5
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						3,
+						5,
+						2,
+						4,
+						1,
+						6,
+						7,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "vxYO6uT1TXQm",
+			"query": {
+				"legacyPoint": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "aA2IJzNZI0Im",
+			"query": {
+				"legacyPoint": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "pEsyTWg1RWAU",
+			"query": {
+				"unindexedPoint": {
+					"$geoWithin": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "mM2rXoUnyVVZ",
+			"query": {
+				"unindexedPoint": {
+					"$geoWithin": {
+						"$box": [
+							[
+								5.9,
+								52
+							],
+							[
+								15.9,
+								62
+							]
+						]
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoWithin",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						2,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "wxAEXoKQxYci",
+			"query": {
+				"unindexedPoint": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										15.9,
+										52
+									],
+									[
+										15.9,
+										62
+									],
+									[
+										5.9,
+										62
+									],
+									[
+										5.9,
+										52
+									]
+								],
+								[
+									[
+										8.9,
+										55
+									],
+									[
+										12.9,
+										55
+									],
+									[
+										12.9,
+										59
+									],
+									[
+										8.9,
+										59
+									],
+									[
+										8.9,
+										55
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						1,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "sNqoxs5JdS4n",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "uMw3XYu2GLX1",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "qv5XRpXJ6dgQ",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "vJzWV7KZoEid",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiLineString",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										53
+									]
+								],
+								[
+									[
+										7.9,
+										52
+									],
+									[
+										8.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "s2hJmEY8KaTM",
+			"query": {
+				"point": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						7,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "a2IrC4I8eE7e",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "pyTwrswtUEbk",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "dMkIzHbrjKUg",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "u2lf1lwYKklI",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiLineString",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										53
+									]
+								],
+								[
+									[
+										7.9,
+										52
+									],
+									[
+										8.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "ft5ILOSH94O1",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						0,
+						6,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "d8QJ1Y70JomR",
+			"query": {
+				"line": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPolygon",
+							"coordinates": [
+								[
+									[
+										[
+											5.9,
+											52
+										],
+										[
+											7.9,
+											52
+										],
+										[
+											7.9,
+											54
+										],
+										[
+											5.9,
+											54
+										],
+										[
+											5.9,
+											52
+										]
+									]
+								],
+								[
+									[
+										[
+											15.899999999999999,
+											62
+										],
+										[
+											17.9,
+											62
+										],
+										[
+											17.9,
+											64
+										],
+										[
+											15.899999999999999,
+											64
+										],
+										[
+											15.899999999999999,
+											62
+										]
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						1,
+						0,
+						6,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "iXsAZgnIaXY4",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Point",
+							"coordinates": [
+								5.9,
+								52
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						7,
+						0,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"documents": [
+						0,
+						7,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "3.2.21..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "qNVlTIrLreYf",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPoint",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						7,
+						0,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12,3.0.15"
+				},
+				{
+					"documents": [
+						1,
+						0,
+						7,
+						6
+					],
+					"error": "@Undefined/und",
+					"versions": "3.2.21..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "sN3QVE59OEUF",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[
+									5.9,
+									52
+								],
+								[
+									6.9,
+									53
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "j7pChxEoEUT6",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiLineString",
+							"coordinates": [
+								[
+									[
+										5.9,
+										52
+									],
+									[
+										6.9,
+										53
+									]
+								],
+								[
+									[
+										7.9,
+										52
+									],
+									[
+										8.9,
+										53
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "djuFFS1fWWcU",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "Polygon",
+							"coordinates": [
+								[
+									[
+										4.9,
+										51
+									],
+									[
+										6.9,
+										51
+									],
+									[
+										6.9,
+										53
+									],
+									[
+										4.9,
+										53
+									],
+									[
+										4.9,
+										51
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						1,
+						6,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		},
+		{
+			"id": "nDYI9BHVNqVy",
+			"query": {
+				"polygon": {
+					"$geoIntersects": {
+						"$geometry": {
+							"type": "MultiPolygon",
+							"coordinates": [
+								[
+									[
+										[
+											5.9,
+											52
+										],
+										[
+											7.9,
+											52
+										],
+										[
+											7.9,
+											54
+										],
+										[
+											5.9,
+											54
+										],
+										[
+											5.9,
+											52
+										]
+									]
+								],
+								[
+									[
+										[
+											15.899999999999999,
+											62
+										],
+										[
+											17.9,
+											62
+										],
+										[
+											17.9,
+											64
+										],
+										[
+											15.899999999999999,
+											64
+										],
+										[
+											15.899999999999999,
+											62
+										]
+									]
+								]
+							]
+						}
+					}
+				}
+			},
+			"operators": [
+				{
+					"operator": "$geoIntersects",
+					"score": 1
+				}
+			],
+			"results": [
+				{
+					"documents": [
+						4,
+						1,
+						6,
+						0,
+						7
+					],
+					"error": "@Undefined/und",
+					"versions": "2.6.12..8.3.11"
+				}
+			]
+		}
+	]
+}

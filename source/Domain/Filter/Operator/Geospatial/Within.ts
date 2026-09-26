@@ -1,7 +1,9 @@
-import { distance, intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Polygon, Position } from "@konfirm/geojson";
+import { exceedsHemisphere, intersect, isGeoJSON, isMultiPolygon, isPolygon, MultiPolygon, Point, Polygon, Position } from "@konfirm/geojson";
 import { Evaluator } from "../../Compiler";
-import { isLegacy, isLegacyBox, isLegacyPoint, isLegacyPolygon, LegacyBox, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
+import { cartesianDegrees, haversine, MONGO_SPHERE_RADIUS } from "./Distance";
+import { isLegacy, isLegacyBox, isLegacyPoint, isLegacyPolygon, LegacyBox, legacyBoxToGeoJSON, LegacyPolygon, legacyToGeoJSON } from "./Legacy";
 import { is } from '../../../BSON';
+import { hasStrictWindingCRS, validateCRS } from "./Winding";
 
 type GeoWithinOptions = {
     $geometry?: Polygon | MultiPolygon;
@@ -37,7 +39,16 @@ function $geometry({ $geometry }: GeoWithinGeometry): Evaluator {
         throw new Error(`$within not supported with provided geometry ${JSON.stringify($geometry)}`);
     }
 
-    return (input: any) => (isGeoJSON(input) && intersect(input, $geometry) || (isLegacy(input) && intersect(legacyToGeoJSON(input), $geometry)));
+    validateCRS($geometry);
+
+    const strictWinding = isPolygon($geometry) && hasStrictWindingCRS($geometry);
+    const matches = (point: any) => {
+        const result = intersect(point, $geometry);
+
+        return strictWinding && exceedsHemisphere($geometry.coordinates[0]) ? !result : result;
+    };
+
+    return (input: any) => (isGeoJSON(input) && matches(input) || (isLegacy(input) && matches(legacyToGeoJSON(input))));
 }
 
 /**
@@ -51,9 +62,25 @@ function $box({ $box }: GeoWithinBox): Evaluator {
         throw new Error('Point must be an array or object');
     }
 
-    const evaluate = $geometry({ $geometry: legacyToGeoJSON($box) } as GeoWithinGeometry);
-
-    return (input: any) => isLegacy(input) && evaluate(legacyToGeoJSON(input));
+    // $geometry's own returned evaluator already accepts either a GeoJSON-
+    // or legacy-shaped document field internally (confirmed via
+    // mongo-catalog ground truth, geoWithinIntersectsMatrix, 2026-09-22:
+    // real MongoDB matches a GeoJSON-shaped field against a legacy $box
+    // query just fine) — wrapping it in an isLegacy(input)-only gate here
+    // was both redundant and wrong: it excluded GeoJSON input, and even if
+    // it hadn't, legacyToGeoJSON(input) below would throw on GeoJSON input
+    // anyway (it only accepts Legacy shapes).
+    //
+    // Deliberately legacyBoxToGeoJSON(), not the generic legacyToGeoJSON():
+    // a $box with more than 2 corners is a valid LegacyPolygon shape too
+    // (isLegacyPolygon accepts 3+ points same as isLegacyBox does), and
+    // legacyToGeoJSON()'s generic dispatch checks isLegacyPolygon first —
+    // so a 3+-corner $box would silently get converted into the polygon
+    // connecting all its points instead of the rectangle from just the
+    // first 2 (confirmed via ground truth, geoWithinIntersectsMatrix,
+    // 2026-09-24). $box's own compiler already knows it's a box; it
+    // shouldn't go through shape-guessing at all.
+    return $geometry({ $geometry: legacyBoxToGeoJSON($box) } as GeoWithinGeometry);
 }
 
 /**
@@ -66,9 +93,9 @@ function $polygon({ $polygon }: GeoWithinPolygon): Evaluator {
     if (!isLegacyPolygon($polygon)) {
         throw new Error('Polygon must have at least 3 points');
     }
-    const evaluate = $geometry({ $geometry: legacyToGeoJSON($polygon) } as GeoWithinGeometry);
-
-    return (input: any) => isLegacy(input) && evaluate(legacyToGeoJSON(input));
+    // see $box's matching comment above — $geometry's evaluator already
+    // handles both shapes, no wrapper needed.
+    return $geometry({ $geometry: legacyToGeoJSON($polygon) } as GeoWithinGeometry);
 }
 
 /**
@@ -88,9 +115,15 @@ function $center({ $center }: GeoWithinCenter): Evaluator {
     if (!isNumber(radius) || radius < 0) {
         throw new Error('radius must be a non-negative number');
     }
-    const point = legacyToGeoJSON(center);
+    const { coordinates: origin } = <Point>legacyToGeoJSON(center);
 
-    return (input: any) => isLegacyPoint(input) && distance(point, legacyToGeoJSON(input), 'cartesian') <= radius;
+    // confirmed via mongo-catalog ground truth (geoWithinIntersectsMatrix,
+    // 2026-09-22): real MongoDB matches a GeoJSON-shaped field against a
+    // legacy $center query too — mirrors $centerSphere's existing
+    // dual-shape pattern just below, which already does this correctly.
+    return (input: any) =>
+        (isGeoJSON(input) && cartesianDegrees(origin, (<Point>input).coordinates) <= radius) ||
+        (isLegacyPoint(input) && cartesianDegrees(origin, (<Point>legacyToGeoJSON(input)).coordinates) <= radius);
 }
 
 /**
@@ -110,9 +143,10 @@ function $centerSphere({ $centerSphere }: GeoWithinCenterSphere): Evaluator {
     if (!isNumber(radius) || radius < 0) {
         throw new Error('radius must be a non-negative number');
     }
-    const point = legacyToGeoJSON(centerSphere);
+    const point = <Point>legacyToGeoJSON(centerSphere);
+    const maxMetres = radius * MONGO_SPHERE_RADIUS;
 
-    return (input: any) => (isGeoJSON(input) && distance(point, input, 'cartesian') <= radius) || (isLegacy(input) && distance(point, legacyToGeoJSON(input), 'cartesian') <= radius);
+    return (input: any) => (isGeoJSON(input) && haversine(point, input) <= maxMetres) || (isLegacy(input) && haversine(point, <Point>legacyToGeoJSON(input)) <= maxMetres);
 }
 
 const compilers = { $geometry, $box, $polygon, $center, $centerSphere };

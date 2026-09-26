@@ -6,6 +6,9 @@ export function pretty(value: unknown): string {
 	// unit test output, so we help it a bit
 	if (typeof value === 'symbol') return 'Symbol';
 	if (typeof value === 'bigint') return `BigInt(${value})`;
+	// JSON.stringify(NaN/Infinity/-Infinity) is "null" — indistinguishable
+	// from the real `null`, which would mislabel any test using these
+	if (typeof value === 'number' && !Number.isFinite(value)) return String(value);
 	if (typeof value === 'function') return 'Function';
 	if (value instanceof RegExp) return value.toString();
 	if (value instanceof Date) return `Date(${value.toISOString()})`;

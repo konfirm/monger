@@ -411,7 +411,8 @@
 						22,
 						23
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -471,7 +472,8 @@
 						22,
 						23
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -532,7 +534,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -593,7 +596,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -640,7 +644,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -713,7 +718,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -783,7 +789,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -853,7 +860,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -923,7 +931,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -993,7 +1002,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1060,7 +1070,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1133,7 +1144,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1207,7 +1219,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1280,7 +1293,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1354,7 +1368,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1424,7 +1439,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1494,7 +1510,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1564,7 +1581,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1637,7 +1655,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1710,7 +1729,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1783,7 +1803,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1853,7 +1874,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1923,7 +1945,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -1993,7 +2016,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2063,7 +2087,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2107,7 +2132,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2177,7 +2203,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2245,7 +2272,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2289,7 +2317,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2359,7 +2388,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2430,7 +2460,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2503,7 +2534,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2565,12 +2597,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's argument must be a positive number, but is -38",
 						"code": 28758,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's argument must be a positive number, but is -38",
+						"code": 28758,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -2638,7 +2679,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2708,7 +2750,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2752,7 +2795,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2825,7 +2869,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2899,7 +2944,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -2973,7 +3019,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3046,7 +3093,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3119,7 +3167,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3192,7 +3241,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3262,7 +3312,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3332,7 +3383,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3399,12 +3451,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $sqrt's argument must be greater than or equal to 0",
 						"code": 28714,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $sqrt's argument must be greater than or equal to 0",
+						"code": 28714,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -3477,7 +3538,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3550,7 +3612,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3623,7 +3686,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3693,7 +3757,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3737,7 +3802,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3807,7 +3873,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3871,7 +3938,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -3938,7 +4006,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -4008,12 +4077,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4083,12 +4161,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
 						"code": 2,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: can't $divide by zero",
+						"code": 2,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4158,12 +4245,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and int",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $divide only supports numeric types, not string and int",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4219,7 +4315,16 @@
 						"code": 28766,
 						"type": "MongoServerError"
 					},
-					"versions": "4.1.4..8.3.8"
+					"versions": "4.1.4..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Failed to optimize expression :: caused by :: $ln's argument must be a positive number, but is 0",
+						"code": 28766,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -4275,7 +4380,16 @@
 						"code": 28766,
 						"type": "MongoServerError"
 					},
-					"versions": "4.1.4..8.3.8"
+					"versions": "4.1.4..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Failed to optimize expression :: caused by :: $ln's argument must be a positive number, but is -1",
+						"code": 28766,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -4331,7 +4445,16 @@
 						"code": 28714,
 						"type": "MongoServerError"
 					},
-					"versions": "4.1.4..8.3.8"
+					"versions": "4.1.4..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Failed to optimize expression :: caused by :: $sqrt's argument must be greater than or equal to 0",
+						"code": 28714,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -4393,12 +4516,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's base must be a positive number not equal to 1, but is 0",
 						"code": 28759,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's base must be a positive number not equal to 1, but is 0",
+						"code": 28759,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4460,12 +4592,21 @@
 					"versions": "5.0.0..7.0.40"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's base must be a positive number not equal to 1, but is -1",
 						"code": 28759,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $log's base must be a positive number not equal to 1, but is -1",
+						"code": 28759,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4509,7 +4650,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -4579,7 +4721,8 @@
 						24,
 						25
 					],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -4629,7 +4772,16 @@
 						"code": 16020,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Expression $divide takes exactly 2 arguments. 1 were passed in.",
+						"code": 16020,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -4679,7 +4831,16 @@
 						"code": 16020,
 						"type": "MongoServerError"
 					},
-					"versions": "3.6.0..8.3.8"
+					"versions": "3.6.0..7.0.40,8.0.0..8.0.29,8.2.1..8.3.8"
+				},
+				{
+					"documents": "@Undefined/und",
+					"error": {
+						"message": "Expression $log takes exactly 2 arguments. 1 were passed in.",
+						"code": 16020,
+						"type": "MongoServerError"
+					},
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
 				}
 			]
 		},
@@ -4746,12 +4907,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $abs only supports numeric types, not string",
 						"code": 28765,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $abs only supports numeric types, not string",
+						"code": 28765,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4818,12 +4988,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $abs only supports numeric types, not bool",
 						"code": 28765,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $abs only supports numeric types, not bool",
+						"code": 28765,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4901,12 +5080,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $add only supports numeric or date types, not string",
 						"code": 14,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $add only supports numeric or date types, not string",
+						"code": 14,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -4973,12 +5161,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $ceil only supports numeric types, not string",
 						"code": 28765,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $ceil only supports numeric types, not string",
+						"code": 28765,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5045,12 +5242,21 @@
 					"versions": "7.0.0..7.0.4"
 				},
 				{
+					"documents": "@Undefined/und",
 					"error": {
 						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $ln only supports numeric types, not string",
 						"code": 28765,
 						"type": "MongoServerError"
 					},
-					"versions": "8.0.0..8.3.8"
+					"versions": "7.0.41,7.0.43,8.0.30,8.0.32,8.3.9,8.3.11"
+				},
+				{
+					"error": {
+						"message": "Executor error during find command: MongoCatalog.CatalogCollection :: caused by :: $ln only supports numeric types, not string",
+						"code": 28765,
+						"type": "MongoServerError"
+					},
+					"versions": "8.0.0..8.0.29,8.2.1..8.3.8"
 				}
 			]
 		},
@@ -5094,7 +5300,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -5141,7 +5348,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		},
@@ -5185,7 +5393,8 @@
 				},
 				{
 					"documents": [],
-					"versions": "3.6.0..8.3.8"
+					"error": "@Undefined/und",
+					"versions": "3.6.0..8.3.11"
 				}
 			]
 		}

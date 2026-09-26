@@ -1,9 +1,10 @@
-import { GeoJSON, isStrictPosition, Position } from "@konfirm/geojson";
+import { GeoJSON, isStrictPosition, Polygon, Position } from "@konfirm/geojson";
+import { all, any, isArrayOfSize, isArrayOfType } from "@konfirm/guard";
 
 export type LegacyPointArray = Position;
 export type LegacyPointObject = { [key: string]: number };
 export type LegacyPoint = LegacyPointArray | LegacyPointObject;
-export type LegacyBox = [LegacyPoint, LegacyPoint];
+export type LegacyBox = [LegacyPoint, LegacyPoint, ...Array<LegacyPoint>];
 export type LegacyPolygon = [LegacyPoint, LegacyPoint, LegacyPoint, ...Array<LegacyPoint>];
 export type Legacy = LegacyPoint | LegacyBox | LegacyPolygon;
 
@@ -13,7 +14,7 @@ export type Legacy = LegacyPoint | LegacyBox | LegacyPolygon;
  * @param {*} input
  * @return {*}  {input is LegacyPointArray}
  */
-export function isLegacyPointArray(input: any): input is LegacyPointArray {
+export function isLegacyPointArray(input: unknown): input is LegacyPointArray {
     return isStrictPosition(input);
 }
 
@@ -23,9 +24,9 @@ export function isLegacyPointArray(input: any): input is LegacyPointArray {
  * @param {*} input
  * @return {*}  {input is LegacyPointObject}
  */
-export function isLegacyPointObject(input: any): input is LegacyPointObject {
-    if (typeof input === 'object' && !Array.isArray(input)) {
-        const keys = Object.keys(input);
+export function isLegacyPointObject(input: unknown): input is LegacyPointObject {
+    if (input && typeof input === 'object' && !Array.isArray(input)) {
+        const keys = Object.keys(input) as Array<keyof typeof input>;
 
         return keys.length >= 2 && keys.every((key) => typeof input[key] === 'number');
     }
@@ -39,9 +40,7 @@ export function isLegacyPointObject(input: any): input is LegacyPointObject {
  * @param {*} input
  * @return {*}  {input is LegacyPoint}
  */
-export function isLegacyPoint(input: any): input is LegacyPoint {
-    return isLegacyPointArray(input) || isLegacyPointObject(input);
-}
+export const isLegacyPoint = any<LegacyPoint>(isLegacyPointArray, isLegacyPointObject);
 
 /**
  * Type guard for LegacyBox
@@ -49,9 +48,12 @@ export function isLegacyPoint(input: any): input is LegacyPoint {
  * @param {*} input
  * @return {*}  {input is LegacyBox}
  */
-export function isLegacyBox(input: any): input is LegacyBox {
-    return Array.isArray(input) && input.length === 2 && input.every(isLegacyPoint);
-}
+// confirmed via mongo-catalog ground truth (geoWithinIntersectsMatrix,
+// 2026-09-22): a $box array with more than 2 elements is not an error —
+// real MongoDB uses the first 2 and ignores the rest (getLegacyBoxCoordinates
+// below already does exactly that via .slice(0, 2); the bug was this guard
+// rejecting anything but exactly 2 before ever reaching it).
+export const isLegacyBox = all<LegacyBox>(isArrayOfSize(2), isArrayOfType(isLegacyPoint));
 
 /**
  * Type guard for LegacyPolygon
@@ -59,9 +61,7 @@ export function isLegacyBox(input: any): input is LegacyBox {
  * @param {*} input
  * @return {*}  {input is LegacyPolygon}
  */
-export function isLegacyPolygon(input: any): input is LegacyPolygon {
-    return Array.isArray(input) && input.length >= 3 && input.every(isLegacyPoint);
-}
+export const isLegacyPolygon = all<LegacyPolygon>(isArrayOfSize(3), isArrayOfType(isLegacyPoint));
 
 /**
  * Type guard for any legacy shape
@@ -69,9 +69,7 @@ export function isLegacyPolygon(input: any): input is LegacyPolygon {
  * @param {*} input
  * @return {*}  {input is Legacy}
  */
-export function isLegacy(input: any): input is Legacy {
-    return isLegacyPoint(input) || isLegacyBox(input) || isLegacyPolygon(input);
-}
+export const isLegacy = any<Legacy>(isLegacyPoint, isLegacyBox, isLegacyPolygon);
 
 /**
  * Convert legacy coordinates into GeoJSON Positions
@@ -118,6 +116,22 @@ function getLegacyPolygonCoordinates(input: LegacyPolygon): [Position, Position,
  * @param {Legacy} legacy
  * @return {*}  {GeoJSON}
  */
+/**
+ * Convert a legacy $box's two (or more, extras ignored) corner points into
+ * the GeoJSON rectangle they describe.
+ *
+ * @param {LegacyBox} box
+ * @return {*}  {Polygon}
+ */
+export function legacyBoxToGeoJSON(box: LegacyBox): Polygon {
+    const sort = (...values: Array<number>): Array<number> => values.sort((a, b) => a < b ? -1 : Number(a > b));
+    const [[lonA, latA], [lonB, latB]] = getLegacyBoxCoordinates(box);
+    const [lonMin, lonMax] = sort(lonA, lonB);
+    const [latMin, latMax] = sort(latA, latB);
+
+    return { type: 'Polygon', coordinates: [[[lonMin, latMin], [lonMin, latMax], [lonMax, latMax], [lonMax, latMin], [lonMin, latMin]]] };
+}
+
 export function legacyToGeoJSON(legacy: Legacy): GeoJSON {
     if (isLegacyPoint(legacy)) {
         return { type: 'Point', coordinates: getLegacyPointCoordinates(legacy) };
@@ -126,12 +140,7 @@ export function legacyToGeoJSON(legacy: Legacy): GeoJSON {
         return { type: 'Polygon', coordinates: [getLegacyPolygonCoordinates(legacy)] };
     }
     if (isLegacyBox(legacy)) {
-        const sort = (...values: Array<number>): Array<number> => values.sort((a, b) => a < b ? -1 : Number(a > b));
-        const [[lonA, latA], [lonB, latB]] = getLegacyBoxCoordinates(legacy);
-        const [lonMin, lonMax] = sort(lonA, lonB);
-        const [latMin, latMax] = sort(latA, latB);
-
-        return { type: 'Polygon', coordinates: [[[lonMin, latMin], [lonMin, latMax], [lonMax, latMax], [lonMax, latMin], [lonMin, latMin]]] };
+        return legacyBoxToGeoJSON(legacy);
     }
 
     throw new Error('not a legacy coordinate format');
